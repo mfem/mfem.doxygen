@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">linearform.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="linearform_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,19 +84,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a><a class="code" href="classLinearForm.html">00016</a> <span class="keyword">class </span><a class="code" href="classLinearForm.html" title="Class for linear form - Vector with asociated FE space and LFIntegrators.">LinearForm</a> : <span class="keyword">public</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">private</span>:
-<a name="l00020"></a>00020    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * fes;
+<a name="l00020"></a><a class="code" href="classLinearForm.html#a74342d6279378d213765a4554262b5bd">00020</a>    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * <a class="code" href="classLinearForm.html#a74342d6279378d213765a4554262b5bd" title="FE space on which LF lives.">fes</a>;
 <a name="l00021"></a>00021 
-<a name="l00023"></a>00023    <a class="code" href="classArray.html">Array&lt;LinearFormIntegrator*&gt;</a> dlfi;
+<a name="l00023"></a><a class="code" href="classLinearForm.html#a5d68a13b8589eb5b3ccfdc8f6c1345be">00023</a>    <a class="code" href="classArray.html">Array&lt;LinearFormIntegrator*&gt;</a> <a class="code" href="classLinearForm.html#a5d68a13b8589eb5b3ccfdc8f6c1345be" title="Set of Domain Integrators to be applied.">dlfi</a>;
 <a name="l00024"></a>00024 
-<a name="l00026"></a>00026    <a class="code" href="classArray.html">Array&lt;LinearFormIntegrator*&gt;</a> blfi;
+<a name="l00026"></a><a class="code" href="classLinearForm.html#ace716ac716d19a7ac39477605594d4fd">00026</a>    <a class="code" href="classArray.html">Array&lt;LinearFormIntegrator*&gt;</a> <a class="code" href="classLinearForm.html#ace716ac716d19a7ac39477605594d4fd" title="Set of Boundary Integrators to be applied.">blfi</a>;
 <a name="l00027"></a>00027 
-<a name="l00029"></a>00029    <a class="code" href="classArray.html">Array&lt;LinearFormIntegrator*&gt;</a> flfi;
+<a name="l00029"></a><a class="code" href="classLinearForm.html#ac5861ebf4fb1573ba0d0de537c01609e">00029</a>    <a class="code" href="classArray.html">Array&lt;LinearFormIntegrator*&gt;</a> <a class="code" href="classLinearForm.html#ac5861ebf4fb1573ba0d0de537c01609e" title="Set of Boundary Face Integrators to be applied.">flfi</a>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 <span class="keyword">public</span>:
 <a name="l00033"></a><a class="code" href="classLinearForm.html#af29f3017b830634507a658caaee2108b">00033</a>    <a class="code" href="classLinearForm.html#af29f3017b830634507a658caaee2108b" title="Creates linear form associated with FE space *f.">LinearForm</a> (<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * f) : <a class="code" href="classVector.html" title="Vector data type.">Vector</a> (f -&gt; GetVSize())
-<a name="l00034"></a>00034    { fes = f; };
+<a name="l00034"></a>00034    { <a class="code" href="classLinearForm.html#a74342d6279378d213765a4554262b5bd" title="FE space on which LF lives.">fes</a> = f; };
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * GetFES() { <span class="keywordflow">return</span> fes; };
+<a name="l00036"></a><a class="code" href="classLinearForm.html#aca7bea9465b642ee6483c3e9a313b236">00036</a>    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * <a class="code" href="classLinearForm.html#aca7bea9465b642ee6483c3e9a313b236">GetFES</a>() { <span class="keywordflow">return</span> <a class="code" href="classLinearForm.html#a74342d6279378d213765a4554262b5bd" title="FE space on which LF lives.">fes</a>; };
 <a name="l00037"></a>00037 
 <a name="l00039"></a>00039    <span class="keywordtype">void</span> <a class="code" href="classLinearForm.html#a0b849c99b22b44eae997f8873980b572" title="Adds new Domain Integrator.">AddDomainIntegrator</a> (<a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a> * lfi);
 <a name="l00040"></a>00040 
@@ -105,9 +106,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00046"></a>00046 
 <a name="l00048"></a>00048    <span class="keywordtype">void</span> <a class="code" href="classLinearForm.html#a437089aebfb53747b3579dbb75cfc756" title="Assembles the linear form i.e. sums over all domain/bdr integrators.">Assemble</a>();
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050    <span class="keywordtype">void</span> Update() { <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(fes -&gt; GetVSize()); };
+<a name="l00050"></a><a class="code" href="classLinearForm.html#aea9c75b065c14c10d3eb30da485cde51">00050</a>    <span class="keywordtype">void</span> <a class="code" href="classLinearForm.html#aea9c75b065c14c10d3eb30da485cde51">Update</a>() { <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classLinearForm.html#a74342d6279378d213765a4554262b5bd" title="FE space on which LF lives.">fes</a> -&gt; GetVSize()); };
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052    <span class="keywordtype">void</span> Update(<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * f) { fes = f; <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(f -&gt; GetVSize()); };
+<a name="l00052"></a><a class="code" href="classLinearForm.html#a46b6aefc332de97ac9012577af4aa56b">00052</a>    <span class="keywordtype">void</span> <a class="code" href="classLinearForm.html#a46b6aefc332de97ac9012577af4aa56b">Update</a>(<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> * f) { <a class="code" href="classLinearForm.html#a74342d6279378d213765a4554262b5bd" title="FE space on which LF lives.">fes</a> = f; <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(f -&gt; GetVSize()); };
 <a name="l00053"></a>00053 
 <a name="l00055"></a>00055    <a class="code" href="classLinearForm.html#afc0376e14848175ec99fb65cf2183f20" title="Destroys linear form.">~LinearForm</a>();
 <a name="l00056"></a>00056 };
@@ -120,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

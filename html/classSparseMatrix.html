@@ -60,7 +60,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">SparseMatrix Class Reference</div>  </div>
 </div>
@@ -89,153 +91,745 @@ Collaboration diagram for SparseMatrix:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab99a7430f44629203eab2eab3df57428"></a><!-- doxytag: member="SparseMatrix::SparseMatrix" ref="ab99a7430f44629203eab2eab3df57428" args="(int nrows, int ncols=0)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ab99a7430f44629203eab2eab3df57428">SparseMatrix</a> (int nrows, int ncols=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates sparse matrix. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09d4f913f0a22395f86c7999689a2f23"></a><!-- doxytag: member="SparseMatrix::SparseMatrix" ref="a09d4f913f0a22395f86c7999689a2f23" args="(int *i, int *j, double *data, int m, int n)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>SparseMatrix</b> (int *i, int *j, double *data, int m, int n)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e76f22cecc10b89a4f1c30bc9b2f39c"></a><!-- doxytag: member="SparseMatrix::GetI" ref="a5e76f22cecc10b89a4f1c30bc9b2f39c" args="() const " -->
-int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5e76f22cecc10b89a4f1c30bc9b2f39c">GetI</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the array I. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad00134d53ef613399af89213f5fadbd2"></a><!-- doxytag: member="SparseMatrix::GetJ" ref="ad00134d53ef613399af89213f5fadbd2" args="() const " -->
-int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ad00134d53ef613399af89213f5fadbd2">GetJ</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the array J. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac62d784d911f9ac660a7679b216c1e98"></a><!-- doxytag: member="SparseMatrix::GetData" ref="ac62d784d911f9ac660a7679b216c1e98" args="() const " -->
-double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ac62d784d911f9ac660a7679b216c1e98">GetData</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return element data. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae084bdd7933d590f232eb9aad5862811"></a><!-- doxytag: member="SparseMatrix::Width" ref="ae084bdd7933d590f232eb9aad5862811" args="() const " -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ae084bdd7933d590f232eb9aad5862811">Width</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of columns. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb7ff153e00ee62363b487907bd255d2"></a><!-- doxytag: member="SparseMatrix::RowSize" ref="abb7ff153e00ee62363b487907bd255d2" args="(int i)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#abb7ff153e00ee62363b487907bd255d2">RowSize</a> (int i)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements in row i. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3057ad02e2ac53dbe8acda4e29b1ec9c"></a><!-- doxytag: member="SparseMatrix::Elem" ref="a3057ad02e2ac53dbe8acda4e29b1ec9c" args="(int i, int j)" -->
-virtual double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a3057ad02e2ac53dbe8acda4e29b1ec9c">Elem</a> (int i, int j)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to a_{ij}. Index i, j = 0 .. size-1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae57e2afa21cb843e1369ea44c4fe24fc"></a><!-- doxytag: member="SparseMatrix::Elem" ref="ae57e2afa21cb843e1369ea44c4fe24fc" args="(int i, int j) const " -->
-virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ae57e2afa21cb843e1369ea44c4fe24fc">Elem</a> (int i, int j) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to a_{ij}. Index i, j = 0 .. size-1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adac58ccc8d557aee28acfb9e26ecd360"></a><!-- doxytag: member="SparseMatrix::operator()" ref="adac58ccc8d557aee28acfb9e26ecd360" args="(int i, int j)" -->
-double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#adac58ccc8d557aee28acfb9e26ecd360">operator()</a> (int i, int j)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to A[i][j]. Index i, j = 0 .. size-1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f22966b232c26eeef795ba6a413a131"></a><!-- doxytag: member="SparseMatrix::operator()" ref="a8f22966b232c26eeef795ba6a413a131" args="(int i, int j) const " -->
-const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8f22966b232c26eeef795ba6a413a131">operator()</a> (int i, int j) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to A[i][j]. Index i, j = 0 .. size-1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbe89d2f313c2f4fbb2675de6f840e8e"></a><!-- doxytag: member="SparseMatrix::Mult" ref="afbe89d2f313c2f4fbb2675de6f840e8e" args="(const Vector &amp;x, Vector &amp;y) const " -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#afbe89d2f313c2f4fbb2675de6f840e8e">Mult</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMatrix.html" title="Abstract data type matrix.">Matrix</a> vector multiplication. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a317854352aa83a9fab16c95e804fab50"></a><!-- doxytag: member="SparseMatrix::AddMult" ref="a317854352aa83a9fab16c95e804fab50" args="(const Vector &amp;x, Vector &amp;y, const double a=1.0) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a317854352aa83a9fab16c95e804fab50">AddMult</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y, const double a=1.0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">y += A * x (default) or y += a * A * x <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e7d3a5506baa2d3e1982520792d2027"></a><!-- doxytag: member="SparseMatrix::MultTranspose" ref="a8e7d3a5506baa2d3e1982520792d2027" args="(const Vector &amp;x, Vector &amp;y) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8e7d3a5506baa2d3e1982520792d2027">MultTranspose</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a vector with the transposed matrix. y = At * x. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1743b0c451cb4895ed062c7d9c7ae82a"></a><!-- doxytag: member="SparseMatrix::AddMultTranspose" ref="a1743b0c451cb4895ed062c7d9c7ae82a" args="(const Vector &amp;x, Vector &amp;y, const double a=1.0) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a1743b0c451cb4895ed062c7d9c7ae82a">AddMultTranspose</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y, const double a=1.0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">y += At * x (default) or y += a * At * x <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4679048beece7e7a5606104b623a12fb"></a><!-- doxytag: member="SparseMatrix::PartMult" ref="a4679048beece7e7a5606104b623a12fb" args="(const Array&lt; int &gt; &amp;rows, const Vector &amp;x, Vector &amp;y)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PartMult</b> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a657fa4a65a1052b5454192a69614f430"></a><!-- doxytag: member="SparseMatrix::InnerProduct" ref="a657fa4a65a1052b5454192a69614f430" args="(const Vector &amp;x, const Vector &amp;y) const " -->
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a657fa4a65a1052b5454192a69614f430">InnerProduct</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, const <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute y^t A x. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad39f3b257c21afff15f752f7db07a9a6"></a><!-- doxytag: member="SparseMatrix::Inverse" ref="ad39f3b257c21afff15f752f7db07a9a6" args="() const " -->
-virtual <a class="el" href="classMatrixInverse.html">MatrixInverse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ad39f3b257c21afff15f752f7db07a9a6">Inverse</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to approximation of the matrix inverse. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8589b25659a74ddb438a977fad2bdf89"></a><!-- doxytag: member="SparseMatrix::EliminateRow" ref="a8589b25659a74ddb438a977fad2bdf89" args="(int row, const double sol, Vector &amp;rhs)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8589b25659a74ddb438a977fad2bdf89">EliminateRow</a> (int row, const double sol, <a class="el" href="classVector.html">Vector</a> &amp;rhs)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminates a column from the transpose matrix. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a875c1a4782f4b4b79b2b666ac6906957"></a><!-- doxytag: member="SparseMatrix::EliminateRow" ref="a875c1a4782f4b4b79b2b666ac6906957" args="(int row)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EliminateRow</b> (int row)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d25669d52ed594816c77340f4adc527"></a><!-- doxytag: member="SparseMatrix::EliminateCol" ref="a9d25669d52ed594816c77340f4adc527" args="(int col)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EliminateCol</b> (int col)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab45bc6662c8a9589c49eccb452f77b22"></a><!-- doxytag: member="SparseMatrix::EliminateCols" ref="ab45bc6662c8a9589c49eccb452f77b22" args="(Array&lt; int &gt; &amp;cols, Vector *x=NULL, Vector *b=NULL)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ab45bc6662c8a9589c49eccb452f77b22">EliminateCols</a> (<a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, <a class="el" href="classVector.html">Vector</a> *x=NULL, <a class="el" href="classVector.html">Vector</a> *b=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate all columns 'i' for which cols[i] != 0. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ab99a7430f44629203eab2eab3df57428">SparseMatrix</a> (int nrows, int ncols=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates sparse matrix.  <a href="#ab99a7430f44629203eab2eab3df57428"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a09d4f913f0a22395f86c7999689a2f23">SparseMatrix</a> (int *i, int *j, double *data, int m, int n)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5e76f22cecc10b89a4f1c30bc9b2f39c">GetI</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the array I.  <a href="#a5e76f22cecc10b89a4f1c30bc9b2f39c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ad00134d53ef613399af89213f5fadbd2">GetJ</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the array J.  <a href="#ad00134d53ef613399af89213f5fadbd2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ac62d784d911f9ac660a7679b216c1e98">GetData</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return element data.  <a href="#ac62d784d911f9ac660a7679b216c1e98"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ae084bdd7933d590f232eb9aad5862811">Width</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of columns.  <a href="#ae084bdd7933d590f232eb9aad5862811"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#abb7ff153e00ee62363b487907bd255d2">RowSize</a> (int i)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements in row i.  <a href="#abb7ff153e00ee62363b487907bd255d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a3057ad02e2ac53dbe8acda4e29b1ec9c">Elem</a> (int i, int j)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to a_{ij}. Index i, j = 0 .. size-1.  <a href="#a3057ad02e2ac53dbe8acda4e29b1ec9c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ae57e2afa21cb843e1369ea44c4fe24fc">Elem</a> (int i, int j) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to a_{ij}. Index i, j = 0 .. size-1.  <a href="#ae57e2afa21cb843e1369ea44c4fe24fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#adac58ccc8d557aee28acfb9e26ecd360">operator()</a> (int i, int j)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to A[i][j]. Index i, j = 0 .. size-1.  <a href="#adac58ccc8d557aee28acfb9e26ecd360"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8f22966b232c26eeef795ba6a413a131">operator()</a> (int i, int j) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to A[i][j]. Index i, j = 0 .. size-1.  <a href="#a8f22966b232c26eeef795ba6a413a131"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#afbe89d2f313c2f4fbb2675de6f840e8e">Mult</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMatrix.html" title="Abstract data type matrix.">Matrix</a> vector multiplication.  <a href="#afbe89d2f313c2f4fbb2675de6f840e8e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a317854352aa83a9fab16c95e804fab50">AddMult</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y, const double a=1.0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">y += A * x (default) or y += a * A * x  <a href="#a317854352aa83a9fab16c95e804fab50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8e7d3a5506baa2d3e1982520792d2027">MultTranspose</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a vector with the transposed matrix. y = At * x.  <a href="#a8e7d3a5506baa2d3e1982520792d2027"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a1743b0c451cb4895ed062c7d9c7ae82a">AddMultTranspose</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y, const double a=1.0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">y += At * x (default) or y += a * At * x  <a href="#a1743b0c451cb4895ed062c7d9c7ae82a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a4679048beece7e7a5606104b623a12fb">PartMult</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a657fa4a65a1052b5454192a69614f430">InnerProduct</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, const <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute y^t A x.  <a href="#a657fa4a65a1052b5454192a69614f430"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classMatrixInverse.html">MatrixInverse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ad39f3b257c21afff15f752f7db07a9a6">Inverse</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to approximation of the matrix inverse.  <a href="#ad39f3b257c21afff15f752f7db07a9a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8589b25659a74ddb438a977fad2bdf89">EliminateRow</a> (int row, const double sol, <a class="el" href="classVector.html">Vector</a> &amp;rhs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminates a column from the transpose matrix.  <a href="#a8589b25659a74ddb438a977fad2bdf89"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a875c1a4782f4b4b79b2b666ac6906957">EliminateRow</a> (int row)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a9d25669d52ed594816c77340f4adc527">EliminateCol</a> (int col)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ab45bc6662c8a9589c49eccb452f77b22">EliminateCols</a> (<a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, <a class="el" href="classVector.html">Vector</a> *x=NULL, <a class="el" href="classVector.html">Vector</a> *b=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate all columns 'i' for which cols[i] != 0.  <a href="#ab45bc6662c8a9589c49eccb452f77b22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#abe56a3a5835d5e43422856e38d81468c">EliminateRowCol</a> (int rc, const double sol, <a class="el" href="classVector.html">Vector</a> &amp;rhs, int d=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cec504beab046882cc3003e15af5e12"></a><!-- doxytag: member="SparseMatrix::EliminateRowCol" ref="a9cec504beab046882cc3003e15af5e12" args="(int rc, int d=0)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EliminateRowCol</b> (int rc, int d=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25592cf2f89a59cda9526fbd11f370eb"></a><!-- doxytag: member="SparseMatrix::EliminateRowCol" ref="a25592cf2f89a59cda9526fbd11f370eb" args="(int rc, SparseMatrix &amp;Ae, int d=0)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EliminateRowCol</b> (int rc, <a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;Ae, int d=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5023491f21309b419541bff0aa808ce"></a><!-- doxytag: member="SparseMatrix::SetDiagIdentity" ref="af5023491f21309b419541bff0aa808ce" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#af5023491f21309b419541bff0aa808ce">SetDiagIdentity</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If a row contains only one diag entry of zero, set it to 1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a107231b520d9cb2013e18b9b3b95dbeb"></a><!-- doxytag: member="SparseMatrix::EliminateZeroRows" ref="a107231b520d9cb2013e18b9b3b95dbeb" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a107231b520d9cb2013e18b9b3b95dbeb">EliminateZeroRows</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If a row contains only zeros, set its diagonal to 1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4fa7dc0f828e148aa9f44529c425968"></a><!-- doxytag: member="SparseMatrix::Gauss_Seidel_forw" ref="ac4fa7dc0f828e148aa9f44529c425968" args="(const Vector &amp;x, Vector &amp;y) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ac4fa7dc0f828e148aa9f44529c425968">Gauss_Seidel_forw</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gauss-Seidel forward and backward iterations over a vector x. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9e0152ff889ba37103dad6b09f18cee"></a><!-- doxytag: member="SparseMatrix::Gauss_Seidel_back" ref="af9e0152ff889ba37103dad6b09f18cee" args="(const Vector &amp;x, Vector &amp;y) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Gauss_Seidel_back</b> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ee8e94532203fa22f20e6cd7fc29e9d"></a><!-- doxytag: member="SparseMatrix::GetJacobiScaling" ref="a3ee8e94532203fa22f20e6cd7fc29e9d" args="() const " -->
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a3ee8e94532203fa22f20e6cd7fc29e9d">GetJacobiScaling</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine appropriate scaling for Jacobi iteration. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a9cec504beab046882cc3003e15af5e12">EliminateRowCol</a> (int rc, int d=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a25592cf2f89a59cda9526fbd11f370eb">EliminateRowCol</a> (int rc, <a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;Ae, int d=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#af5023491f21309b419541bff0aa808ce">SetDiagIdentity</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If a row contains only one diag entry of zero, set it to 1.  <a href="#af5023491f21309b419541bff0aa808ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a107231b520d9cb2013e18b9b3b95dbeb">EliminateZeroRows</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If a row contains only zeros, set its diagonal to 1.  <a href="#a107231b520d9cb2013e18b9b3b95dbeb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ac4fa7dc0f828e148aa9f44529c425968">Gauss_Seidel_forw</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gauss-Seidel forward and backward iterations over a vector x.  <a href="#ac4fa7dc0f828e148aa9f44529c425968"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#af9e0152ff889ba37103dad6b09f18cee">Gauss_Seidel_back</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, <a class="el" href="classVector.html">Vector</a> &amp;y) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a3ee8e94532203fa22f20e6cd7fc29e9d">GetJacobiScaling</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine appropriate scaling for Jacobi iteration.  <a href="#a3ee8e94532203fa22f20e6cd7fc29e9d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8590cc5120b808abfab4b387e2d25bb6">Jacobi</a> (const <a class="el" href="classVector.html">Vector</a> &amp;b, const <a class="el" href="classVector.html">Vector</a> &amp;x0, <a class="el" href="classVector.html">Vector</a> &amp;x1, double sc) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a18b29db31ff4d0d6bfdcdfcc5e7c9dfc">Jacobi2</a> (const <a class="el" href="classVector.html">Vector</a> &amp;b, const <a class="el" href="classVector.html">Vector</a> &amp;x0, <a class="el" href="classVector.html">Vector</a> &amp;x1, double sc=1.0) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a2b0c0939262509d162f1429de0e4219f">Finalize</a> (int skip_zeros=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefe1a3dfb125473d61639cbe168bfee4"></a><!-- doxytag: member="SparseMatrix::Finalized" ref="aefe1a3dfb125473d61639cbe168bfee4" args="()" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Finalized</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33a0fff41addcfd2ebfc9cda553073ed"></a><!-- doxytag: member="SparseMatrix::GetSubMatrix" ref="a33a0fff41addcfd2ebfc9cda553073ed" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, DenseMatrix &amp;subm)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GetSubMatrix</b> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79159d35fce2ca7afdf0e76e2c17626a"></a><!-- doxytag: member="SparseMatrix::Set" ref="a79159d35fce2ca7afdf0e76e2c17626a" args="(const int i, const int j, const double a)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (const int i, const int j, const double a)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78895a268ea4b73a32491ddc8cc6949a"></a><!-- doxytag: member="SparseMatrix::Add" ref="a78895a268ea4b73a32491ddc8cc6949a" args="(const int i, const int j, const double a)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Add</b> (const int i, const int j, const double a)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae046589d5576d57677bf72944275d9c4"></a><!-- doxytag: member="SparseMatrix::SetSubMatrix" ref="ae046589d5576d57677bf72944275d9c4" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, const DenseMatrix &amp;subm, int skip_zeros=1)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSubMatrix</b> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm, int skip_zeros=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62058ca18c02ccacca263b565c59c1e5"></a><!-- doxytag: member="SparseMatrix::SetSubMatrixTranspose" ref="a62058ca18c02ccacca263b565c59c1e5" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, const DenseMatrix &amp;subm, int skip_zeros=1)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSubMatrixTranspose</b> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm, int skip_zeros=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8422b73960a20cf03a009f8ae61c93d9"></a><!-- doxytag: member="SparseMatrix::AddSubMatrix" ref="a8422b73960a20cf03a009f8ae61c93d9" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, const DenseMatrix &amp;subm, int skip_zeros=1)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddSubMatrix</b> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm, int skip_zeros=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d5fcaf05e953bbde2761b28639fcb26"></a><!-- doxytag: member="SparseMatrix::AddRow" ref="a4d5fcaf05e953bbde2761b28639fcb26" args="(const int row, const Array&lt; int &gt; &amp;cols, const Vector &amp;srow)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddRow</b> (const int row, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classVector.html">Vector</a> &amp;srow)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab732a999e0792acc989fbd3db79989b6"></a><!-- doxytag: member="SparseMatrix::ScaleRow" ref="ab732a999e0792acc989fbd3db79989b6" args="(const int row, const double scale)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ScaleRow</b> (const int row, const double scale)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#aefe1a3dfb125473d61639cbe168bfee4">Finalized</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a33a0fff41addcfd2ebfc9cda553073ed">GetSubMatrix</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a79159d35fce2ca7afdf0e76e2c17626a">Set</a> (const int i, const int j, const double a)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a78895a268ea4b73a32491ddc8cc6949a">Add</a> (const int i, const int j, const double a)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ae046589d5576d57677bf72944275d9c4">SetSubMatrix</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm, int skip_zeros=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a62058ca18c02ccacca263b565c59c1e5">SetSubMatrixTranspose</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm, int skip_zeros=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8422b73960a20cf03a009f8ae61c93d9">AddSubMatrix</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;rows, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;subm, int skip_zeros=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a4d5fcaf05e953bbde2761b28639fcb26">AddRow</a> (const int row, const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classVector.html">Vector</a> &amp;srow)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ab732a999e0792acc989fbd3db79989b6">ScaleRow</a> (const int row, const double scale)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a70efb32c3f95f2e901e572568c608241">operator+=</a> (<a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;B)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d7823127621873c96954eed275318b5"></a><!-- doxytag: member="SparseMatrix::operator=" ref="a8d7823127621873c96954eed275318b5" args="(double a)" -->
-<a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (double a)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f41461d34f7c3e5057c14150a6db41f"></a><!-- doxytag: member="SparseMatrix::Print" ref="a5f41461d34f7c3e5057c14150a6db41f" args="(ostream &amp;out=cout, int width=4) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5f41461d34f7c3e5057c14150a6db41f">Print</a> (ostream &amp;out=cout, int width=4) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix to stream out. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71aea6923c3484f8f0dd58ec53000cd0"></a><!-- doxytag: member="SparseMatrix::PrintMatlab" ref="a71aea6923c3484f8f0dd58ec53000cd0" args="(ostream &amp;out=cout) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a71aea6923c3484f8f0dd58ec53000cd0">PrintMatlab</a> (ostream &amp;out=cout) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix in matlab format. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e4a63e716be96fc1f1f59fbf1d5584d"></a><!-- doxytag: member="SparseMatrix::PrintMM" ref="a2e4a63e716be96fc1f1f59fbf1d5584d" args="(ostream &amp;out=cout) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a2e4a63e716be96fc1f1f59fbf1d5584d">PrintMM</a> (ostream &amp;out=cout) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix in <a class="el" href="classMatrix.html" title="Abstract data type matrix.">Matrix</a> Market sparse format. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81935a8cfe0d85dfa1c2ba956e89470e"></a><!-- doxytag: member="SparseMatrix::PrintCSR" ref="a81935a8cfe0d85dfa1c2ba956e89470e" args="(ostream &amp;out) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a81935a8cfe0d85dfa1c2ba956e89470e">PrintCSR</a> (ostream &amp;out) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix to stream out in hypre_CSRMatrix format. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a477860180070d2ac7e6de55d0a37b4"></a><!-- doxytag: member="SparseMatrix::PrintCSR2" ref="a1a477860180070d2ac7e6de55d0a37b4" args="(ostream &amp;out) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a1a477860180070d2ac7e6de55d0a37b4">PrintCSR2</a> (ostream &amp;out) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a sparse matrix to stream out in CSR format. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8307c21d2e9c494c5ddd4169ba374b2f"></a><!-- doxytag: member="SparseMatrix::Walk" ref="a8307c21d2e9c494c5ddd4169ba374b2f" args="(int &amp;i, int &amp;j, double &amp;a)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8307c21d2e9c494c5ddd4169ba374b2f">Walk</a> (int &amp;i, int &amp;j, double &amp;a)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Walks the sparse matrix. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adef95bea46f03ebb2ea8dff5ea68a2f3"></a><!-- doxytag: member="SparseMatrix::IsSymmetric" ref="adef95bea46f03ebb2ea8dff5ea68a2f3" args="() const " -->
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#adef95bea46f03ebb2ea8dff5ea68a2f3">IsSymmetric</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns max_{i,j} |(i,j)-(j,i)| for a finalized matrix. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e9c713413f07798fa6f8e252810b5ec"></a><!-- doxytag: member="SparseMatrix::Symmetrize" ref="a4e9c713413f07798fa6f8e252810b5ec" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a4e9c713413f07798fa6f8e252810b5ec">Symmetrize</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">(*this) = 1/2 ((*this) + (*this)^t) <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37f9fbf3b31951231a5656206df5edee"></a><!-- doxytag: member="SparseMatrix::NumNonZeroElems" ref="a37f9fbf3b31951231a5656206df5edee" args="() const " -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a37f9fbf3b31951231a5656206df5edee">NumNonZeroElems</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of the nonzero elements in the matrix. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afee53dc894d7c4bb84e0530512d246af"></a><!-- doxytag: member="SparseMatrix::CountSmallElems" ref="afee53dc894d7c4bb84e0530512d246af" args="(double tol)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#afee53dc894d7c4bb84e0530512d246af">CountSmallElems</a> (double tol)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of entries with |a_ij| &lt; tol. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb3a7dfb8f38ef901edefc2a39695a19"></a><!-- doxytag: member="SparseMatrix::LoseData" ref="adb3a7dfb8f38ef901edefc2a39695a19" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#adb3a7dfb8f38ef901edefc2a39695a19">LoseData</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if data has been stolen. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d93890df585cae1602c07b2cbcce923"></a><!-- doxytag: member="SparseMatrix::~SparseMatrix" ref="a5d93890df585cae1602c07b2cbcce923" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5d93890df585cae1602c07b2cbcce923">~SparseMatrix</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys sparse matrix. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8d7823127621873c96954eed275318b5">operator=</a> (double a)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5f41461d34f7c3e5057c14150a6db41f">Print</a> (ostream &amp;out=cout, int <a class="el" href="classSparseMatrix.html#a6b2a7770fcfba3711aa7d34b2907d676">width</a>=4) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix to stream out.  <a href="#a5f41461d34f7c3e5057c14150a6db41f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a71aea6923c3484f8f0dd58ec53000cd0">PrintMatlab</a> (ostream &amp;out=cout) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix in matlab format.  <a href="#a71aea6923c3484f8f0dd58ec53000cd0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a2e4a63e716be96fc1f1f59fbf1d5584d">PrintMM</a> (ostream &amp;out=cout) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix in <a class="el" href="classMatrix.html" title="Abstract data type matrix.">Matrix</a> Market sparse format.  <a href="#a2e4a63e716be96fc1f1f59fbf1d5584d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a81935a8cfe0d85dfa1c2ba956e89470e">PrintCSR</a> (ostream &amp;out) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix to stream out in hypre_CSRMatrix format.  <a href="#a81935a8cfe0d85dfa1c2ba956e89470e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a1a477860180070d2ac7e6de55d0a37b4">PrintCSR2</a> (ostream &amp;out) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a sparse matrix to stream out in CSR format.  <a href="#a1a477860180070d2ac7e6de55d0a37b4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a8307c21d2e9c494c5ddd4169ba374b2f">Walk</a> (int &amp;i, int &amp;j, double &amp;a)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Walks the sparse matrix.  <a href="#a8307c21d2e9c494c5ddd4169ba374b2f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#adef95bea46f03ebb2ea8dff5ea68a2f3">IsSymmetric</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns max_{i,j} |(i,j)-(j,i)| for a finalized matrix.  <a href="#adef95bea46f03ebb2ea8dff5ea68a2f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a4e9c713413f07798fa6f8e252810b5ec">Symmetrize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">(*this) = 1/2 ((*this) + (*this)^t)  <a href="#a4e9c713413f07798fa6f8e252810b5ec"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a37f9fbf3b31951231a5656206df5edee">NumNonZeroElems</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of the nonzero elements in the matrix.  <a href="#a37f9fbf3b31951231a5656206df5edee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#afee53dc894d7c4bb84e0530512d246af">CountSmallElems</a> (double tol)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of entries with |a_ij| &lt; tol.  <a href="#afee53dc894d7c4bb84e0530512d246af"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#adb3a7dfb8f38ef901edefc2a39695a19">LoseData</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if data has been stolen.  <a href="#adb3a7dfb8f38ef901edefc2a39695a19"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5d93890df585cae1602c07b2cbcce923">~SparseMatrix</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys sparse matrix.  <a href="#a5d93890df585cae1602c07b2cbcce923"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a9218c94f79d593ab940124c9ca419627">SearchRow</a> (const int row, const int col)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a0d67caec7561f1f7f2209b1d0bd3ae5e">_Add_</a> (const int row, const int col, const double a)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a09b05ca7781e0ad4ac4cb0071950253c">_Set_</a> (const int row, const int col, const double a)</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#aef5200f6b8c9415e4d6945dcf6f983b8">I</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ae5fde907382e6da8d36f87310d72a25d">J</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a6b2a7770fcfba3711aa7d34b2907d676">width</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a500b51a05935cdceff3fa7a870ecc457">A</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The nonzero entries in the Sparse matrix with size I[size].  <a href="#a500b51a05935cdceff3fa7a870ecc457"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRowNode.html">RowNode</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a9dcdd51c6b3b2456cce121646bcaa913">Rows</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Data type sparse matrix. </p>
 
 <p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00030">30</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab99a7430f44629203eab2eab3df57428"></a><!-- doxytag: member="SparseMatrix::SparseMatrix" ref="ab99a7430f44629203eab2eab3df57428" args="(int nrows, int ncols=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SparseMatrix::SparseMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nrows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ncols</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Creates sparse matrix. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00021">21</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09d4f913f0a22395f86c7999689a2f23"></a><!-- doxytag: member="SparseMatrix::SparseMatrix" ref="a09d4f913f0a22395f86c7999689a2f23" args="(int *i, int *j, double *data, int m, int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SparseMatrix::SparseMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00058">58</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d93890df585cae1602c07b2cbcce923"></a><!-- doxytag: member="SparseMatrix::~SparseMatrix" ref="a5d93890df585cae1602c07b2cbcce923" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SparseMatrix::~SparseMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Destroys sparse matrix. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01097">1097</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a0d67caec7561f1f7f2209b1d0bd3ae5e"></a><!-- doxytag: member="SparseMatrix::_Add_" ref="a0d67caec7561f1f7f2209b1d0bd3ae5e" args="(const int row, const int col, const double a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::_Add_ </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00049">49</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00241">SearchRow()</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00792">Add()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00909">AddRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00739">AddSubMatrix()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l00960">operator+=()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09b05ca7781e0ad4ac4cb0071950253c"></a><!-- doxytag: member="SparseMatrix::_Set_" ref="a09b05ca7781e0ad4ac4cb0071950253c" args="(const int row, const int col, const double a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::_Set_ </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00051">51</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00241">SearchRow()</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00773">Set()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00811">SetSubMatrix()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l00840">SetSubMatrixTranspose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78895a268ea4b73a32491ddc8cc6949a"></a><!-- doxytag: member="SparseMatrix::Add" ref="a78895a268ea4b73a32491ddc8cc6949a" args="(const int i, const int j, const double a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Add </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00792">792</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00049">_Add_()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00536">EliminateRowCol()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a317854352aa83a9fab16c95e804fab50"></a><!-- doxytag: member="SparseMatrix::AddMult" ref="a317854352aa83a9fab16c95e804fab50" args="(const Vector &amp;x, Vector &amp;y, const double a=1.0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::AddMult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>y += A * x (default) or y += a * A * x </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00104">104</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="vector_8hpp_source.html#l00069">Vector::GetData()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="vector_8hpp_source.html#l00065">Vector::Size()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8cpp_source.html#l00266">BilinearForm::EliminateVDofsInRHS()</a>, <a class="el" href="bilinearform_8hpp_source.html#l00082">BilinearForm::FullAddMult()</a>, <a class="el" href="bilinearform_8hpp_source.html#l00076">BilinearForm::FullMult()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l00098">Mult()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1743b0c451cb4895ed062c7d9c7ae82a"></a><!-- doxytag: member="SparseMatrix::AddMultTranspose" ref="a1743b0c451cb4895ed062c7d9c7ae82a" args="(const Vector &amp;x, Vector &amp;y, const double a=1.0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::AddMultTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>y += At * x (default) or y += a * At * x </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00173">173</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="vector_8hpp_source.html#l00069">Vector::GetData()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="vector_8hpp_source.html#l00065">Vector::Size()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00167">MultTranspose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d5fcaf05e953bbde2761b28639fcb26"></a><!-- doxytag: member="SparseMatrix::AddRow" ref="a4d5fcaf05e953bbde2761b28639fcb26" args="(const int row, const Array&lt; int &gt; &amp;cols, const Vector &amp;srow)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::AddRow </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>srow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00909">909</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00049">_Add_()</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8422b73960a20cf03a009f8ae61c93d9"></a><!-- doxytag: member="SparseMatrix::AddSubMatrix" ref="a8422b73960a20cf03a009f8ae61c93d9" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, const DenseMatrix &amp;subm, int skip_zeros=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::AddSubMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>subm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_zeros</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00739">739</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00049">_Add_()</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8cpp_source.html#l00125">BilinearForm::AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afee53dc894d7c4bb84e0530512d246af"></a><!-- doxytag: member="SparseMatrix::CountSmallElems" ref="afee53dc894d7c4bb84e0530512d246af" args="(double tol)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SparseMatrix::CountSmallElems </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Count the number of entries with |a_ij| &lt; tol. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00337">337</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3057ad02e2ac53dbe8acda4e29b1ec9c"></a><!-- doxytag: member="SparseMatrix::Elem" ref="a3057ad02e2ac53dbe8acda4e29b1ec9c" args="(int i, int j)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double &amp; SparseMatrix::Elem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns reference to a_{ij}. Index i, j = 0 .. size-1. </p>
+
+<p>Implements <a class="el" href="classMatrix.html#a0e08946a59ee8adc8ffc4abf6ffe6985">Matrix</a>.</p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00047">47</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8cpp_source.html#l00057">operator()()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae57e2afa21cb843e1369ea44c4fe24fc"></a><!-- doxytag: member="SparseMatrix::Elem" ref="ae57e2afa21cb843e1369ea44c4fe24fc" args="(int i, int j) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double &amp; SparseMatrix::Elem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns constant reference to a_{ij}. Index i, j = 0 .. size-1. </p>
+
+<p>Implements <a class="el" href="classMatrix.html#a3c8a5b31015eb02ea94d89cca6bd0e79">Matrix</a>.</p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00052">52</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8cpp_source.html#l00057">operator()()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d25669d52ed594816c77340f4adc527"></a><!-- doxytag: member="SparseMatrix::EliminateCol" ref="a9d25669d52ed594816c77340f4adc527" args="(int col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateCol </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00403">403</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab45bc6662c8a9589c49eccb452f77b22"></a><!-- doxytag: member="SparseMatrix::EliminateCols" ref="ab45bc6662c8a9589c49eccb452f77b22" args="(Array&lt; int &gt; &amp;cols, Vector *x=NULL, Vector *b=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateCols </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>x</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>b</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Eliminate all columns 'i' for which cols[i] != 0. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00416">416</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8589b25659a74ddb438a977fad2bdf89"></a><!-- doxytag: member="SparseMatrix::EliminateRow" ref="a8589b25659a74ddb438a977fad2bdf89" args="(int row, const double sol, Vector &amp;rhs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateRow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>sol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Eliminates a column from the transpose matrix. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00368">368</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a875c1a4782f4b4b79b2b666ac6906957"></a><!-- doxytag: member="SparseMatrix::EliminateRow" ref="a875c1a4782f4b4b79b2b666ac6906957" args="(int row)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateRow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00387">387</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9cec504beab046882cc3003e15af5e12"></a><!-- doxytag: member="SparseMatrix::EliminateRowCol" ref="a9cec504beab046882cc3003e15af5e12" args="(int rc, int d=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateRowCol </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00499">499</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abe56a3a5835d5e43422856e38d81468c"></a><!-- doxytag: member="SparseMatrix::EliminateRowCol" ref="abe56a3a5835d5e43422856e38d81468c" args="(int rc, const double sol, Vector &amp;rhs, int d=0)" -->
 <div class="memitem">
 <div class="memproto">
@@ -276,6 +870,67 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 <p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00433">433</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25592cf2f89a59cda9526fbd11f370eb"></a><!-- doxytag: member="SparseMatrix::EliminateRowCol" ref="a25592cf2f89a59cda9526fbd11f370eb" args="(int rc, SparseMatrix &amp;Ae, int d=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateRowCol </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>Ae</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00536">536</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8cpp_source.html#l00792">Add()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a107231b520d9cb2013e18b9b3b95dbeb"></a><!-- doxytag: member="SparseMatrix::EliminateZeroRows" ref="a107231b520d9cb2013e18b9b3b95dbeb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::EliminateZeroRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>If a row contains only zeros, set its diagonal to 1. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00586">586</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2b0c0939262509d162f1429de0e4219f"></a><!-- doxytag: member="SparseMatrix::Finalize" ref="a2b0c0939262509d162f1429de0e4219f" args="(int skip_zeros=1)" -->
@@ -297,6 +952,302 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Reimplemented from <a class="el" href="classMatrix.html#a4f211419d7db6889be2efadcab8f4c95">Matrix</a>.</p>
 
 <p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00248">248</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aefe1a3dfb125473d61639cbe168bfee4"></a><!-- doxytag: member="SparseMatrix::Finalized" ref="aefe1a3dfb125473d61639cbe168bfee4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SparseMatrix::Finalized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00147">147</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9e0152ff889ba37103dad6b09f18cee"></a><!-- doxytag: member="SparseMatrix::Gauss_Seidel_back" ref="af9e0152ff889ba37103dad6b09f18cee" args="(const Vector &amp;x, Vector &amp;y) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Gauss_Seidel_back </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00635">635</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="vector_8hpp_source.html#l00069">Vector::GetData()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4fa7dc0f828e148aa9f44529c425968"></a><!-- doxytag: member="SparseMatrix::Gauss_Seidel_forw" ref="ac4fa7dc0f828e148aa9f44529c425968" args="(const Vector &amp;x, Vector &amp;y) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Gauss_Seidel_forw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gauss-Seidel forward and backward iterations over a vector x. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00605">605</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="vector_8hpp_source.html#l00069">Vector::GetData()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac62d784d911f9ac660a7679b216c1e98"></a><!-- doxytag: member="SparseMatrix::GetData" ref="ac62d784d911f9ac660a7679b216c1e98" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* SparseMatrix::GetData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return element data. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00067">67</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l01176">Mult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01125">SparseMatrixFunction()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01134">Transpose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e76f22cecc10b89a4f1c30bc9b2f39c"></a><!-- doxytag: member="SparseMatrix::GetI" ref="a5e76f22cecc10b89a4f1c30bc9b2f39c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* SparseMatrix::GetI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the array I. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00063">63</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l01176">Mult()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01134">Transpose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad00134d53ef613399af89213f5fadbd2"></a><!-- doxytag: member="SparseMatrix::GetJ" ref="ad00134d53ef613399af89213f5fadbd2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* SparseMatrix::GetJ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the array J. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00065">65</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l01176">Mult()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01134">Transpose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ee8e94532203fa22f20e6cd7fc29e9d"></a><!-- doxytag: member="SparseMatrix::GetJacobiScaling" ref="a3ee8e94532203fa22f20e6cd7fc29e9d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SparseMatrix::GetJacobiScaling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Determine appropriate scaling for Jacobi iteration. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00666">666</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="gmres_8cpp_source.html#l00078">norm()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33a0fff41addcfd2ebfc9cda553073ed"></a><!-- doxytag: member="SparseMatrix::GetSubMatrix" ref="a33a0fff41addcfd2ebfc9cda553073ed" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, DenseMatrix &amp;subm)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::GetSubMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>subm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00871">871</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a657fa4a65a1052b5454192a69614f430"></a><!-- doxytag: member="SparseMatrix::InnerProduct" ref="a657fa4a65a1052b5454192a69614f430" args="(const Vector &amp;x, const Vector &amp;y) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SparseMatrix::InnerProduct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compute y^t A x. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00229">229</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8hpp_source.html#l00136">BilinearForm::FullInnerProduct()</a>, and <a class="el" href="bilinearform_8hpp_source.html#l00085">BilinearForm::InnerProduct()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad39f3b257c21afff15f752f7db07a9a6"></a><!-- doxytag: member="SparseMatrix::Inverse" ref="ad39f3b257c21afff15f752f7db07a9a6" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatrixInverse.html">MatrixInverse</a> * SparseMatrix::Inverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns a pointer to approximation of the matrix inverse. </p>
+
+<p>Implements <a class="el" href="classMatrix.html#a27c54a4164ba326fe03513d70ba35880">Matrix</a>.</p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00363">363</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adef95bea46f03ebb2ea8dff5ea68a2f3"></a><!-- doxytag: member="SparseMatrix::IsSymmetric" ref="adef95bea46f03ebb2ea8dff5ea68a2f3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SparseMatrix::IsSymmetric </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns max_{i,j} |(i,j)-(j,i)| for a finalized matrix. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00292">292</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
 
 </div>
 </div>
@@ -340,6 +1291,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 <p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00694">694</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a18b29db31ff4d0d6bfdcdfcc5e7c9dfc"></a><!-- doxytag: member="SparseMatrix::Jacobi2" ref="a18b29db31ff4d0d6bfdcdfcc5e7c9dfc" args="(const Vector &amp;b, const Vector &amp;x0, Vector &amp;x1, double sc=1.0) const " -->
@@ -382,6 +1335,196 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 <p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00718">718</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="gmres_8cpp_source.html#l00078">norm()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb3a7dfb8f38ef901edefc2a39695a19"></a><!-- doxytag: member="SparseMatrix::LoseData" ref="adb3a7dfb8f38ef901edefc2a39695a19" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::LoseData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Call this if data has been stolen. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00205">205</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afbe89d2f313c2f4fbb2675de6f840e8e"></a><!-- doxytag: member="SparseMatrix::Mult" ref="afbe89d2f313c2f4fbb2675de6f840e8e" args="(const Vector &amp;x, Vector &amp;y) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Mult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="classMatrix.html" title="Abstract data type matrix.">Matrix</a> vector multiplication. </p>
+
+<p>Implements <a class="el" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57">Operator</a>.</p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00098">98</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8cpp_source.html#l00104">AddMult()</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8hpp_source.html#l00076">BilinearForm::FullMult()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e7d3a5506baa2d3e1982520792d2027"></a><!-- doxytag: member="SparseMatrix::MultTranspose" ref="a8e7d3a5506baa2d3e1982520792d2027" args="(const Vector &amp;x, Vector &amp;y) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::MultTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Multiply a vector with the transposed matrix. y = At * x. </p>
+
+<p>Reimplemented from <a class="el" href="classOperator.html#ad38dab0a04b3ddb6f0013e8ab227a5c6">Operator</a>.</p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00167">167</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8cpp_source.html#l00173">AddMultTranspose()</a>.</p>
+
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l03781">Mesh::UpdateNodes()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37f9fbf3b31951231a5656206df5edee"></a><!-- doxytag: member="SparseMatrix::NumNonZeroElems" ref="a37f9fbf3b31951231a5656206df5edee" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SparseMatrix::NumNonZeroElems </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the number of the nonzero elements in the matrix. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00329">329</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l01031">PrintMM()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01125">SparseMatrixFunction()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01134">Transpose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adac58ccc8d557aee28acfb9e26ecd360"></a><!-- doxytag: member="SparseMatrix::operator()" ref="adac58ccc8d557aee28acfb9e26ecd360" args="(int i, int j)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double &amp; SparseMatrix::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns reference to A[i][j]. Index i, j = 0 .. size-1. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00057">57</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00047">Elem()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f22966b232c26eeef795ba6a413a131"></a><!-- doxytag: member="SparseMatrix::operator()" ref="a8f22966b232c26eeef795ba6a413a131" args="(int i, int j) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double &amp; SparseMatrix::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns reference to A[i][j]. Index i, j = 0 .. size-1. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00078">78</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a70efb32c3f95f2e901e572568c608241"></a><!-- doxytag: member="SparseMatrix::operator+=" ref="a70efb32c3f95f2e901e572568c608241" args="(SparseMatrix &amp;B)" -->
@@ -402,6 +1545,597 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 <p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00960">960</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00049">_Add_()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d7823127621873c96954eed275318b5"></a><!-- doxytag: member="SparseMatrix::operator=" ref="a8d7823127621873c96954eed275318b5" args="(double a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp; SparseMatrix::operator= </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00983">983</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4679048beece7e7a5606104b623a12fb"></a><!-- doxytag: member="SparseMatrix::PartMult" ref="a4679048beece7e7a5606104b623a12fb" args="(const Array&lt; int &gt; &amp;rows, const Vector &amp;x, Vector &amp;y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::PartMult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00208">208</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8cpp_source.html#l00266">BilinearForm::EliminateVDofsInRHS()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f41461d34f7c3e5057c14150a6db41f"></a><!-- doxytag: member="SparseMatrix::Print" ref="a5f41461d34f7c3e5057c14150a6db41f" args="(ostream &amp;out=cout, int width=4) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Print </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code>cout</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prints matrix to stream out. </p>
+
+<p>Reimplemented from <a class="el" href="classMatrix.html#a378d523c50f4b2b46f3badfec9fc55b9">Matrix</a>.</p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00997">997</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81935a8cfe0d85dfa1c2ba956e89470e"></a><!-- doxytag: member="SparseMatrix::PrintCSR" ref="a81935a8cfe0d85dfa1c2ba956e89470e" args="(ostream &amp;out) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::PrintCSR </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prints matrix to stream out in hypre_CSRMatrix format. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01048">1048</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a477860180070d2ac7e6de55d0a37b4"></a><!-- doxytag: member="SparseMatrix::PrintCSR2" ref="a1a477860180070d2ac7e6de55d0a37b4" args="(ostream &amp;out) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::PrintCSR2 </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prints a sparse matrix to stream out in CSR format. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01072">1072</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71aea6923c3484f8f0dd58ec53000cd0"></a><!-- doxytag: member="SparseMatrix::PrintMatlab" ref="a71aea6923c3484f8f0dd58ec53000cd0" args="(ostream &amp;out=cout) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::PrintMatlab </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code>cout</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prints matrix in matlab format. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01018">1018</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e4a63e716be96fc1f1f59fbf1d5584d"></a><!-- doxytag: member="SparseMatrix::PrintMM" ref="a2e4a63e716be96fc1f1f59fbf1d5584d" args="(ostream &amp;out=cout) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::PrintMM </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code>cout</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prints matrix in <a class="el" href="classMatrix.html" title="Abstract data type matrix.">Matrix</a> Market sparse format. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01031">1031</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="sparsemat_8cpp_source.html#l00329">NumNonZeroElems()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb7ff153e00ee62363b487907bd255d2"></a><!-- doxytag: member="SparseMatrix::RowSize" ref="abb7ff153e00ee62363b487907bd255d2" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SparseMatrix::RowSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the number of elements in row i. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00034">34</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab732a999e0792acc989fbd3db79989b6"></a><!-- doxytag: member="SparseMatrix::ScaleRow" ref="ab732a999e0792acc989fbd3db79989b6" args="(const int row, const double scale)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::ScaleRow </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00938">938</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9218c94f79d593ab940124c9ca419627"></a><!-- doxytag: member="SparseMatrix::SearchRow" ref="a9218c94f79d593ab940124c9ca419627" args="(const int row, const int col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double &amp; SparseMatrix::SearchRow </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00241">241</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00025">RowNode::Column</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00024">RowNode::Prev</a>, <a class="el" href="sparsemat_8hpp_source.html#l00042">Rows</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00026">RowNode::Value</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8hpp_source.html#l00049">_Add_()</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00051">_Set_()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79159d35fce2ca7afdf0e76e2c17626a"></a><!-- doxytag: member="SparseMatrix::Set" ref="a79159d35fce2ca7afdf0e76e2c17626a" args="(const int i, const int j, const double a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Set </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00773">773</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00051">_Set_()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5023491f21309b419541bff0aa808ce"></a><!-- doxytag: member="SparseMatrix::SetDiagIdentity" ref="af5023491f21309b419541bff0aa808ce" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::SetDiagIdentity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>If a row contains only one diag entry of zero, set it to 1. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00579">579</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae046589d5576d57677bf72944275d9c4"></a><!-- doxytag: member="SparseMatrix::SetSubMatrix" ref="ae046589d5576d57677bf72944275d9c4" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, const DenseMatrix &amp;subm, int skip_zeros=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::SetSubMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>subm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_zeros</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00811">811</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00051">_Set_()</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62058ca18c02ccacca263b565c59c1e5"></a><!-- doxytag: member="SparseMatrix::SetSubMatrixTranspose" ref="a62058ca18c02ccacca263b565c59c1e5" args="(const Array&lt; int &gt; &amp;rows, const Array&lt; int &gt; &amp;cols, const DenseMatrix &amp;subm, int skip_zeros=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::SetSubMatrixTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>subm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_zeros</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00840">840</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00051">_Set_()</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>, <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e9c713413f07798fa6f8e252810b5ec"></a><!-- doxytag: member="SparseMatrix::Symmetrize" ref="a4e9c713413f07798fa6f8e252810b5ec" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SparseMatrix::Symmetrize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>(*this) = 1/2 ((*this) + (*this)^t) </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00313">313</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00040">A</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">I</a>, <a class="el" href="sparsemat_8hpp_source.html#l00037">J</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8307c21d2e9c494c5ddd4169ba374b2f"></a><!-- doxytag: member="SparseMatrix::Walk" ref="a8307c21d2e9c494c5ddd4169ba374b2f" args="(int &amp;i, int &amp;j, double &amp;a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SparseMatrix::Walk </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Walks the sparse matrix. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae084bdd7933d590f232eb9aad5862811"></a><!-- doxytag: member="SparseMatrix::Width" ref="ae084bdd7933d590f232eb9aad5862811" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SparseMatrix::Width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the number of columns. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00069">69</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>References <a class="el" href="sparsemat_8hpp_source.html#l00037">width</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l01176">Mult()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01134">Transpose()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a500b51a05935cdceff3fa7a870ecc457"></a><!-- doxytag: member="SparseMatrix::A" ref="a500b51a05935cdceff3fa7a870ecc457" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* <a class="el" href="classSparseMatrix.html#a500b51a05935cdceff3fa7a870ecc457">SparseMatrix::A</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The nonzero entries in the Sparse matrix with size I[size]. </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00040">40</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00792">Add()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00104">AddMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00173">AddMultTranspose()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00337">CountSmallElems()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00433">EliminateRowCol()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00586">EliminateZeroRows()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00248">Finalize()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00147">Finalized()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00635">Gauss_Seidel_back()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00605">Gauss_Seidel_forw()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00067">GetData()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00666">GetJacobiScaling()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00229">InnerProduct()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00292">IsSymmetric()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00694">Jacobi()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00718">Jacobi2()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00205">LoseData()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00329">NumNonZeroElems()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00057">operator()()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00983">operator=()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00208">PartMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00997">Print()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01048">PrintCSR()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01072">PrintCSR2()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01018">PrintMatlab()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01031">PrintMM()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00938">ScaleRow()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00241">SearchRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00773">Set()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00579">SetDiagIdentity()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00021">SparseMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00313">Symmetrize()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01097">~SparseMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef5200f6b8c9415e4d6945dcf6f983b8"></a><!-- doxytag: member="SparseMatrix::I" ref="aef5200f6b8c9415e4d6945dcf6f983b8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* <a class="el" href="classSparseMatrix.html#aef5200f6b8c9415e4d6945dcf6f983b8">SparseMatrix::I</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Arrays for the connectivity information in the CSR storage. I is of size "size+1", J is of size the number of nonzero entries in the Sparse matrix (actually stored I[size]) </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00037">37</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00104">AddMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00173">AddMultTranspose()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00337">CountSmallElems()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00433">EliminateRowCol()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00586">EliminateZeroRows()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00248">Finalize()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00635">Gauss_Seidel_back()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00605">Gauss_Seidel_forw()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00063">GetI()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00666">GetJacobiScaling()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00229">InnerProduct()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00292">IsSymmetric()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00694">Jacobi()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00718">Jacobi2()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00205">LoseData()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00329">NumNonZeroElems()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00057">operator()()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00983">operator=()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00208">PartMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00997">Print()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01048">PrintCSR()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01072">PrintCSR2()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01018">PrintMatlab()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01031">PrintMM()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00034">RowSize()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00938">ScaleRow()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00241">SearchRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00579">SetDiagIdentity()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00021">SparseMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00313">Symmetrize()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01097">~SparseMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5fde907382e6da8d36f87310d72a25d"></a><!-- doxytag: member="SparseMatrix::J" ref="ae5fde907382e6da8d36f87310d72a25d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * <a class="el" href="classSparseMatrix.html#ae5fde907382e6da8d36f87310d72a25d">SparseMatrix::J</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00037">37</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00104">AddMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00173">AddMultTranspose()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00433">EliminateRowCol()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00586">EliminateZeroRows()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00248">Finalize()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00635">Gauss_Seidel_back()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00605">Gauss_Seidel_forw()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00065">GetJ()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00666">GetJacobiScaling()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00229">InnerProduct()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00292">IsSymmetric()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00694">Jacobi()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00718">Jacobi2()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00205">LoseData()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00057">operator()()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00208">PartMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00997">Print()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01048">PrintCSR()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01072">PrintCSR2()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01018">PrintMatlab()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01031">PrintMM()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00241">SearchRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00021">SparseMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00313">Symmetrize()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01097">~SparseMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9dcdd51c6b3b2456cce121646bcaa913"></a><!-- doxytag: member="SparseMatrix::Rows" ref="a9dcdd51c6b3b2456cce121646bcaa913" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRowNode.html">RowNode</a>** <a class="el" href="classSparseMatrix.html#a9dcdd51c6b3b2456cce121646bcaa913">SparseMatrix::Rows</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00042">42</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00104">AddMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00173">AddMultTranspose()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00909">AddRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00337">CountSmallElems()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00403">EliminateCol()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00416">EliminateCols()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00368">EliminateRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00433">EliminateRowCol()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00248">Finalize()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00871">GetSubMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00229">InnerProduct()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00960">operator+=()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00983">operator=()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00034">RowSize()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00938">ScaleRow()</a>, <a class="el" href="sparsemat_8hpp_source.html#l00241">SearchRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00021">SparseMatrix()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01097">~SparseMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b2a7770fcfba3711aa7d34b2907d676"></a><!-- doxytag: member="SparseMatrix::width" ref="a6b2a7770fcfba3711aa7d34b2907d676" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classSparseMatrix.html#a6b2a7770fcfba3711aa7d34b2907d676">SparseMatrix::width</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00037">37</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsemat_8cpp_source.html#l00792">Add()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00104">AddMult()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00173">AddMultTranspose()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00909">AddRow()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00739">AddSubMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00871">GetSubMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00057">operator()()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00960">operator+=()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01072">PrintCSR2()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01031">PrintMM()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00773">Set()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00811">SetSubMatrix()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00840">SetSubMatrixTranspose()</a>, <a class="el" href="sparsemat_8cpp_source.html#l00021">SparseMatrix()</a>, and <a class="el" href="sparsemat_8hpp_source.html#l00069">Width()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -414,7 +2148,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -423,7 +2157,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:07 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:05 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

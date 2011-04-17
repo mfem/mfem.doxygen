@@ -3,4 +3,3 @@ html: doxy.conf
 
 clean:
 	rm -rf html* *~
-

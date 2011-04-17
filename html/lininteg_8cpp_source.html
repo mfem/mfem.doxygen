@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lininteg.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="lininteg_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -79,12 +80,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;math.h&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;fem.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="fem_8hpp.html">fem.hpp</a>&quot;</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keywordtype">void</span> <a class="code" href="classLinearFormIntegrator.html#aec810d793069ed72a610d2a5d9262861">LinearFormIntegrator::AssembleRHSElementVect</a>(
+<a name="l00016"></a><a class="code" href="classLinearFormIntegrator.html#aa76f400ef1c918f28f8648f6b5732573">00016</a> <span class="keywordtype">void</span> <a class="code" href="classLinearFormIntegrator.html#aec810d793069ed72a610d2a5d9262861">LinearFormIntegrator::AssembleRHSElementVect</a>(
 <a name="l00017"></a>00017    <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el, <a class="code" href="classFaceElementTransformations.html">FaceElementTransformations</a> &amp;Tr, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elvect)
 <a name="l00018"></a>00018 {
-<a name="l00019"></a>00019    mfem_error(<span class="stringliteral">&quot;LinearFormIntegrator::AssembleRHSElementVect(...)&quot;</span>);
+<a name="l00019"></a>00019    <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a>(<span class="stringliteral">&quot;LinearFormIntegrator::AssembleRHSElementVect(...)&quot;</span>);
 <a name="l00020"></a>00020 }
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
@@ -94,36 +95,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027    <span class="keywordtype">int</span> dof = el.<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);       <span class="comment">// vector of size dof</span>
+<a name="l00029"></a>00029    <a class="code" href="classDomainLFIntegrator.html#aecb396095c93c4109a1182bb9d9932f5">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);       <span class="comment">// vector of size dof</span>
 <a name="l00030"></a>00030    elvect.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
 <a name="l00031"></a>00031    elvect = 0;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *ir;
-<a name="l00034"></a>00034    <span class="keywordflow">if</span> (IntRule)
+<a name="l00034"></a>00034    <span class="keywordflow">if</span> (<a class="code" href="classDomainLFIntegrator.html#a73ff386b2640947cca1e4d1deac843ef">IntRule</a>)
 <a name="l00035"></a>00035    {
-<a name="l00036"></a>00036       ir = IntRule;
+<a name="l00036"></a>00036       ir = <a class="code" href="classDomainLFIntegrator.html#a73ff386b2640947cca1e4d1deac843ef">IntRule</a>;
 <a name="l00037"></a>00037    }
 <a name="l00038"></a>00038    <span class="keywordflow">else</span>
 <a name="l00039"></a>00039    {
 <a name="l00040"></a>00040       <span class="comment">// ir = &amp;IntRules.Get(el.GetGeomType(),</span>
 <a name="l00041"></a>00041       <span class="comment">//                    oa * el.GetOrder() + ob + Tr.OrderW());</span>
-<a name="l00042"></a>00042       ir = &amp;IntRules.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), oa * el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + ob);
+<a name="l00042"></a>00042       ir = &amp;<a class="code" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91" title="A global object with all integration rules (defined in intrules.cpp)">IntRules</a>.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), <a class="code" href="classDomainLFIntegrator.html#aa3d8bde4a99acc9e8f625a028655a47f">oa</a> * el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + <a class="code" href="classDomainLFIntegrator.html#af95e4da25a285f8fb4303e314082f830">ob</a>);
 <a name="l00043"></a>00043    }
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir-&gt;<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
 <a name="l00046"></a>00046    {
 <a name="l00047"></a>00047       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir-&gt;<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049       Tr.SetIntPoint (&amp;ip);
-<a name="l00050"></a>00050       <span class="keywordtype">double</span> val = Tr.Weight() * Q.Eval(Tr, ip);
+<a name="l00049"></a>00049       Tr.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a> (&amp;ip);
+<a name="l00050"></a>00050       <span class="keywordtype">double</span> val = Tr.<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>() * <a class="code" href="classDomainLFIntegrator.html#a4de1079963b469a064b2b65dd39e32c8">Q</a>.<a class="code" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Eval</a>(Tr, ip);
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, shape);
+<a name="l00052"></a>00052       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, <a class="code" href="classDomainLFIntegrator.html#aecb396095c93c4109a1182bb9d9932f5">shape</a>);
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054       add(elvect, ip.weight * val, shape, elvect);
+<a name="l00054"></a>00054       <a class="code" href="vector_8cpp.html#afab8821f67b068fd29c8dee586a16020">add</a>(elvect, ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * val, <a class="code" href="classDomainLFIntegrator.html#aecb396095c93c4109a1182bb9d9932f5">shape</a>, elvect);
 <a name="l00055"></a>00055    }
 <a name="l00056"></a>00056 }
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">inline</span> <span class="keywordtype">double</span> sqr(<span class="keywordtype">double</span> x)
+<a name="l00058"></a><a class="code" href="lininteg_8cpp.html#a22f4e97ed7ca9e188dc4e074a1b2e5a7">00058</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="lininteg_8cpp.html#a22f4e97ed7ca9e188dc4e074a1b2e5a7">sqr</a>(<span class="keywordtype">double</span> x)
 <a name="l00059"></a>00059 {
 <a name="l00060"></a>00060    <span class="keywordflow">return</span> x * x;
 <a name="l00061"></a>00061 }
@@ -133,58 +134,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00065"></a>00065 {
 <a name="l00066"></a>00066    <span class="keywordtype">int</span> dof  = el.<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);        <span class="comment">// vector of size dof</span>
+<a name="l00068"></a>00068    <a class="code" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);        <span class="comment">// vector of size dof</span>
 <a name="l00069"></a>00069    elvect.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
 <a name="l00070"></a>00070    elvect = 0.0;
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072    <span class="keywordtype">int</span> intorder = oa * el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + ob;  <span class="comment">// &lt;----------</span>
-<a name="l00073"></a>00073    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = IntRules.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), intorder);
+<a name="l00072"></a>00072    <span class="keywordtype">int</span> intorder = <a class="code" href="classBoundaryLFIntegrator.html#a7f40d189c68afb13232e7e16f362d1f5">oa</a> * el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + <a class="code" href="classBoundaryLFIntegrator.html#aad05167ad4d37ddc4e5fcf9254ad82ec">ob</a>;  <span class="comment">// &lt;----------</span>
+<a name="l00073"></a>00073    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = <a class="code" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91" title="A global object with all integration rules (defined in intrules.cpp)">IntRules</a>.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), intorder);
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
 <a name="l00076"></a>00076    {
 <a name="l00077"></a>00077       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079       Tr.SetIntPoint (&amp;ip);
-<a name="l00080"></a>00080       <span class="keywordtype">double</span> val = Tr.Weight() * Q.Eval(Tr, ip);
+<a name="l00079"></a>00079       Tr.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a> (&amp;ip);
+<a name="l00080"></a>00080       <span class="keywordtype">double</span> val = Tr.<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>() * <a class="code" href="classBoundaryLFIntegrator.html#a626b741ed346999a3aed921680173a85">Q</a>.<a class="code" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Eval</a>(Tr, ip);
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, shape);
+<a name="l00082"></a>00082       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, <a class="code" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">shape</a>);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084       add(elvect, ip.weight * val, shape, elvect);
+<a name="l00084"></a>00084       <a class="code" href="vector_8cpp.html#afab8821f67b068fd29c8dee586a16020">add</a>(elvect, ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * val, <a class="code" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">shape</a>, elvect);
 <a name="l00085"></a>00085    }
 <a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
 <a name="l00088"></a><a class="code" href="classVectorDomainLFIntegrator.html#a82be01a4bd0471800e04f0e929da45b0">00088</a> <span class="keywordtype">void</span> <a class="code" href="classVectorDomainLFIntegrator.html#a82be01a4bd0471800e04f0e929da45b0">VectorDomainLFIntegrator::AssembleRHSElementVect</a>(
 <a name="l00089"></a>00089    <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elvect)
 <a name="l00090"></a>00090 {
-<a name="l00091"></a>00091    <span class="keywordtype">int</span> vdim = Q.<a class="code" href="classVectorCoefficient.html#a40d2281e54de4ff6bbc327f570f2f76c" title="Returns dimension of the vector.">GetVDim</a>();
+<a name="l00091"></a>00091    <span class="keywordtype">int</span> vdim = <a class="code" href="classVectorDomainLFIntegrator.html#ad73f54f1ab2e99b06c43b423cb2adb3d">Q</a>.<a class="code" href="classVectorCoefficient.html#a40d2281e54de4ff6bbc327f570f2f76c" title="Returns dimension of the vector.">GetVDim</a>();
 <a name="l00092"></a>00092    <span class="keywordtype">int</span> dof  = el.<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094    <span class="keywordtype">double</span> val,cf;
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);       <span class="comment">// vector of size dof</span>
+<a name="l00096"></a>00096    <a class="code" href="classVectorDomainLFIntegrator.html#aa2baf49a577b43d918ba08bad9fdbe41">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);       <span class="comment">// vector of size dof</span>
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098    elvect.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof * vdim);
 <a name="l00099"></a>00099    elvect = 0.0;
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101    <span class="keywordtype">int</span> intorder = el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + 1;
-<a name="l00102"></a>00102    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = IntRules.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), intorder);
+<a name="l00102"></a>00102    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = <a class="code" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91" title="A global object with all integration rules (defined in intrules.cpp)">IntRules</a>.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), intorder);
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
 <a name="l00105"></a>00105    {
 <a name="l00106"></a>00106       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108       Tr.SetIntPoint (&amp;ip);
-<a name="l00109"></a>00109       val = Tr.Weight();
+<a name="l00108"></a>00108       Tr.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a> (&amp;ip);
+<a name="l00109"></a>00109       val = Tr.<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>();
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, shape);
-<a name="l00112"></a>00112       Q.Eval (Qvec, Tr, ip);
+<a name="l00111"></a>00111       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, <a class="code" href="classVectorDomainLFIntegrator.html#aa2baf49a577b43d918ba08bad9fdbe41">shape</a>);
+<a name="l00112"></a>00112       <a class="code" href="classVectorDomainLFIntegrator.html#ad73f54f1ab2e99b06c43b423cb2adb3d">Q</a>.<a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">Eval</a> (<a class="code" href="classVectorDomainLFIntegrator.html#add901c78642dc142a9ce16f909b8e808">Qvec</a>, Tr, ip);
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; vdim; k++)
 <a name="l00115"></a>00115       {
-<a name="l00116"></a>00116          cf = val * Qvec(k);
+<a name="l00116"></a>00116          cf = val * <a class="code" href="classVectorDomainLFIntegrator.html#add901c78642dc142a9ce16f909b8e808">Qvec</a>(k);
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 0; s &lt; dof; s++)
-<a name="l00119"></a>00119             elvect(dof*k+s) += ip.weight * cf * shape(s);
+<a name="l00119"></a>00119             elvect(dof*k+s) += ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * cf * <a class="code" href="classVectorDomainLFIntegrator.html#aa2baf49a577b43d918ba08bad9fdbe41">shape</a>(s);
 <a name="l00120"></a>00120       }
 <a name="l00121"></a>00121    }
 <a name="l00122"></a>00122 }
@@ -192,29 +193,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00124"></a><a class="code" href="classVectorBoundaryLFIntegrator.html#ae02a1bd878501d693e7646a07aeeb018">00124</a> <span class="keywordtype">void</span> <a class="code" href="classVectorBoundaryLFIntegrator.html#ae02a1bd878501d693e7646a07aeeb018">VectorBoundaryLFIntegrator::AssembleRHSElementVect</a>(
 <a name="l00125"></a>00125    <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elvect)
 <a name="l00126"></a>00126 {
-<a name="l00127"></a>00127    <span class="keywordtype">int</span> vdim = Q.<a class="code" href="classVectorCoefficient.html#a40d2281e54de4ff6bbc327f570f2f76c" title="Returns dimension of the vector.">GetVDim</a>();
+<a name="l00127"></a>00127    <span class="keywordtype">int</span> vdim = <a class="code" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">Q</a>.<a class="code" href="classVectorCoefficient.html#a40d2281e54de4ff6bbc327f570f2f76c" title="Returns dimension of the vector.">GetVDim</a>();
 <a name="l00128"></a>00128    <span class="keywordtype">int</span> dof  = el.<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
-<a name="l00131"></a>00131    vec.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(vdim);
+<a name="l00130"></a>00130    <a class="code" href="classVectorBoundaryLFIntegrator.html#a181fd09688920aafba0fc383bf5005ab">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
+<a name="l00131"></a>00131    <a class="code" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">vec</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(vdim);
 <a name="l00132"></a>00132 
 <a name="l00133"></a>00133    elvect.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof * vdim);
 <a name="l00134"></a>00134    elvect = 0.0;
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136    <span class="keywordtype">int</span> intorder = el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + 1;
-<a name="l00137"></a>00137    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = IntRules.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), intorder);
+<a name="l00137"></a>00137    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = <a class="code" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91" title="A global object with all integration rules (defined in intrules.cpp)">IntRules</a>.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), intorder);
 <a name="l00138"></a>00138 
 <a name="l00139"></a>00139    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
 <a name="l00140"></a>00140    {
 <a name="l00141"></a>00141       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143       Q.Eval(vec, Tr, ip);
-<a name="l00144"></a>00144       Tr.SetIntPoint (&amp;ip);
-<a name="l00145"></a>00145       vec *= Tr.Weight() * ip.weight;
-<a name="l00146"></a>00146       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, shape);
+<a name="l00143"></a>00143       <a class="code" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">Q</a>.<a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">Eval</a>(<a class="code" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">vec</a>, Tr, ip);
+<a name="l00144"></a>00144       Tr.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a> (&amp;ip);
+<a name="l00145"></a>00145       <a class="code" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">vec</a> *= Tr.<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>() * ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a>;
+<a name="l00146"></a>00146       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a>(ip, <a class="code" href="classVectorBoundaryLFIntegrator.html#a181fd09688920aafba0fc383bf5005ab">shape</a>);
 <a name="l00147"></a>00147       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; vdim; k++)
 <a name="l00148"></a>00148          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 0; s &lt; dof; s++)
-<a name="l00149"></a>00149             elvect(dof*k+s) += vec(k) * shape(s);
+<a name="l00149"></a>00149             elvect(dof*k+s) += <a class="code" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">vec</a>(k) * <a class="code" href="classVectorBoundaryLFIntegrator.html#a181fd09688920aafba0fc383bf5005ab">shape</a>(s);
 <a name="l00150"></a>00150    }
 <a name="l00151"></a>00151 }
 <a name="l00152"></a>00152 
@@ -224,26 +225,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00156"></a>00156    <span class="keywordtype">int</span> dof = el.<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00157"></a>00157    <span class="keywordtype">int</span> dim = el.<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>();
 <a name="l00158"></a>00158 
-<a name="l00159"></a>00159    vshape.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(dof,dim);
-<a name="l00160"></a>00160    vec.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dim);
+<a name="l00159"></a>00159    <a class="code" href="classVectorFEDomainLFIntegrator.html#ada89fe39a087916a279ffb4e2170aeb8">vshape</a>.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(dof,dim);
+<a name="l00160"></a>00160    <a class="code" href="classVectorFEDomainLFIntegrator.html#a274de5f7355277caac816c37518d87e7">vec</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dim);
 <a name="l00161"></a>00161 
 <a name="l00162"></a>00162    elvect.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
 <a name="l00163"></a>00163    elvect = 0.0;
 <a name="l00164"></a>00164 
-<a name="l00165"></a>00165    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = IntRules.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(),
+<a name="l00165"></a>00165    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = <a class="code" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91" title="A global object with all integration rules (defined in intrules.cpp)">IntRules</a>.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(),
 <a name="l00166"></a>00166                                             el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + 1);
 <a name="l00167"></a>00167 
 <a name="l00168"></a>00168    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
 <a name="l00169"></a>00169    {
 <a name="l00170"></a>00170       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172       Tr.SetIntPoint (&amp;ip);
-<a name="l00173"></a>00173       el.<a class="code" href="classFiniteElement.html#a06703623cb0917534007a824c31a4932">CalcVShape</a>(Tr, vshape);
+<a name="l00172"></a>00172       Tr.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a> (&amp;ip);
+<a name="l00173"></a>00173       el.<a class="code" href="classFiniteElement.html#a06703623cb0917534007a824c31a4932">CalcVShape</a>(Tr, <a class="code" href="classVectorFEDomainLFIntegrator.html#ada89fe39a087916a279ffb4e2170aeb8">vshape</a>);
 <a name="l00174"></a>00174 
-<a name="l00175"></a>00175       QF.Eval (vec, Tr, ip);
-<a name="l00176"></a>00176       vec *= ip.weight * Tr.Weight();
+<a name="l00175"></a>00175       <a class="code" href="classVectorFEDomainLFIntegrator.html#af3df5c3a9876e8200f9cd74d7aeb04c4">QF</a>.<a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">Eval</a> (<a class="code" href="classVectorFEDomainLFIntegrator.html#a274de5f7355277caac816c37518d87e7">vec</a>, Tr, ip);
+<a name="l00176"></a>00176       <a class="code" href="classVectorFEDomainLFIntegrator.html#a274de5f7355277caac816c37518d87e7">vec</a> *= ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * Tr.<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>();
 <a name="l00177"></a>00177 
-<a name="l00178"></a>00178       vshape.<a class="code" href="classDenseMatrix.html#ae89e2638dc1b276d21ff583b1f743d82" title="y += A.x">AddMult</a> (vec, elvect);
+<a name="l00178"></a>00178       <a class="code" href="classVectorFEDomainLFIntegrator.html#ada89fe39a087916a279ffb4e2170aeb8">vshape</a>.<a class="code" href="classDenseMatrix.html#ae89e2638dc1b276d21ff583b1f743d82" title="y += A.x">AddMult</a> (<a class="code" href="classVectorFEDomainLFIntegrator.html#a274de5f7355277caac816c37518d87e7">vec</a>, elvect);
 <a name="l00179"></a>00179    }
 <a name="l00180"></a>00180 }
 <a name="l00181"></a>00181 
@@ -254,39 +255,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00186"></a>00186    <span class="keywordtype">int</span> dim = el.<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>()+1;
 <a name="l00187"></a>00187    <span class="keywordtype">int</span> dof = el.<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00188"></a>00188 
-<a name="l00189"></a>00189    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (dof);
-<a name="l00190"></a>00190    nor.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (dim);
+<a name="l00189"></a>00189    <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a22fb3a7387714d746374ad47b1db7a63">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (dof);
+<a name="l00190"></a>00190    <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (dim);
 <a name="l00191"></a>00191    elvect.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (dim*dof);
 <a name="l00192"></a>00192 
 <a name="l00193"></a>00193    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *ir;
 <a name="l00194"></a>00194 
-<a name="l00195"></a>00195    <span class="keywordflow">if</span> (!IntRule)
-<a name="l00196"></a>00196       ir = &amp;IntRules.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + 1);
+<a name="l00195"></a>00195    <span class="keywordflow">if</span> (!<a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a4c1075490995ec582d24187e163f6dfb">IntRule</a>)
+<a name="l00196"></a>00196       ir = &amp;<a class="code" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91" title="A global object with all integration rules (defined in intrules.cpp)">IntRules</a>.<a class="code" href="classIntegrationRules.html#aa5b4970204521a45154e5dcdb1bebad6" title="Returns an integration rule for given GeomType and Order.">Get</a>(el.<a class="code" href="classFiniteElement.html#a8caaed67db81823e321edc08203c31f5" title="Returns the geometry type:">GetGeomType</a>(), el.<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() + 1);
 <a name="l00197"></a>00197    <span class="keywordflow">else</span>
-<a name="l00198"></a>00198       ir = IntRule;
+<a name="l00198"></a>00198       ir = <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a4c1075490995ec582d24187e163f6dfb">IntRule</a>;
 <a name="l00199"></a>00199 
 <a name="l00200"></a>00200    elvect = 0.0;
 <a name="l00201"></a>00201    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir-&gt;<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
 <a name="l00202"></a>00202    {
 <a name="l00203"></a>00203       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir-&gt;<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
-<a name="l00204"></a>00204       Tr.SetIntPoint (&amp;ip);
+<a name="l00204"></a>00204       Tr.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a> (&amp;ip);
 <a name="l00205"></a>00205       <span class="keyword">const</span> <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;Jac = Tr.<a class="code" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">Jacobian</a>();
 <a name="l00206"></a>00206       <span class="keywordflow">if</span> (dim == 2)
 <a name="l00207"></a>00207       {
-<a name="l00208"></a>00208          nor(0) = -Jac (1,0);
-<a name="l00209"></a>00209          nor(1) =  Jac (0,0);
+<a name="l00208"></a>00208          <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>(0) = -Jac (1,0);
+<a name="l00209"></a>00209          <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>(1) =  Jac (0,0);
 <a name="l00210"></a>00210       }
 <a name="l00211"></a>00211       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dim == 3)
 <a name="l00212"></a>00212       {
-<a name="l00213"></a>00213          nor(0) = Jac (1,0) * Jac (2,1) - Jac (2,0) * Jac (1,1);
-<a name="l00214"></a>00214          nor(1) = Jac (2,0) * Jac (0,1) - Jac (0,0) * Jac (2,1);
-<a name="l00215"></a>00215          nor(2) = Jac (0,0) * Jac (1,1) - Jac (1,0) * Jac (0,1);
+<a name="l00213"></a>00213          <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>(0) = Jac (1,0) * Jac (2,1) - Jac (2,0) * Jac (1,1);
+<a name="l00214"></a>00214          <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>(1) = Jac (2,0) * Jac (0,1) - Jac (0,0) * Jac (2,1);
+<a name="l00215"></a>00215          <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>(2) = Jac (0,0) * Jac (1,1) - Jac (1,0) * Jac (0,1);
 <a name="l00216"></a>00216       }
-<a name="l00217"></a>00217       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a> (ip, shape);
-<a name="l00218"></a>00218       nor *= Sign * ip.weight * F -&gt; Eval (Tr, ip);
+<a name="l00217"></a>00217       el.<a class="code" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">CalcShape</a> (ip, <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a22fb3a7387714d746374ad47b1db7a63">shape</a>);
+<a name="l00218"></a>00218       <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a> *= <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#acd9dc19f85ec77e67a7a340c52c0f777">Sign</a> * ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#ab225db4acb356e02ec121bbce80470b8">F</a> -&gt; Eval (Tr, ip);
 <a name="l00219"></a>00219       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; dof; j++)
 <a name="l00220"></a>00220          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; dim; k++)
-<a name="l00221"></a>00221             elvect(dof*k+j) += nor(k) * shape(j);
+<a name="l00221"></a>00221             elvect(dof*k+j) += <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>(k) * <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a22fb3a7387714d746374ad47b1db7a63">shape</a>(j);
 <a name="l00222"></a>00222    }
 <a name="l00223"></a>00223 }
 </pre></div></div>
@@ -296,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -305,7 +306,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">fespace.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="fespace_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -86,14 +87,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a><a class="code" href="classOrdering.html">00020</a> <span class="keyword">class </span><a class="code" href="classOrdering.html">Ordering</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8">00026</a>    <span class="keyword">enum</span> <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8">Type</a> { byNODES, byVDIM };
+<a name="l00026"></a><a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8">00026</a>    <span class="keyword">enum</span> <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8">Type</a> { <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8a4c0f58e61480fb4ce67b96175571dd78">byNODES</a>, <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8aaf0d6502f86edb15f545927a104917fb">byVDIM</a> };
 <a name="l00027"></a>00027 };
 <a name="l00028"></a>00028 
-<a name="l00030"></a>00030 <span class="keyword">typedef</span> <span class="keywordtype">int</span> RefinementType;
+<a name="l00030"></a><a class="code" href="fespace_8hpp.html#adb1e2e9695b9d4228f43e156d91616dc">00030</a> <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="fespace_8hpp.html#adb1e2e9695b9d4228f43e156d91616dc" title="Type of refinement (int, a tree, etc.)">RefinementType</a>;
 <a name="l00031"></a>00031 
 <a name="l00033"></a><a class="code" href="classRefinementData.html">00033</a> <span class="keyword">class </span><a class="code" href="classRefinementData.html" title="Data kept for every type of refinement.">RefinementData</a> {
 <a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00036"></a><a class="code" href="classRefinementData.html#a0b921b3556dac8e128ee625d55626616">00036</a>    RefinementType <a class="code" href="classRefinementData.html#a0b921b3556dac8e128ee625d55626616" title="Refinement type.">type</a>;
+<a name="l00036"></a><a class="code" href="classRefinementData.html#a0b921b3556dac8e128ee625d55626616">00036</a>    <a class="code" href="fespace_8hpp.html#adb1e2e9695b9d4228f43e156d91616dc" title="Type of refinement (int, a tree, etc.)">RefinementType</a> <a class="code" href="classRefinementData.html#a0b921b3556dac8e128ee625d55626616" title="Refinement type.">type</a>;
 <a name="l00038"></a><a class="code" href="classRefinementData.html#a55d6c7365cd22a25ccf57c333a3092a7">00038</a>    <span class="keywordtype">int</span> <a class="code" href="classRefinementData.html#a55d6c7365cd22a25ccf57c333a3092a7" title="Number of the fine elements.">num_fine_elems</a>;
 <a name="l00040"></a><a class="code" href="classRefinementData.html#abc2daaad3c74933c7ecb6b3c248b7d28">00040</a>    <span class="keywordtype">int</span> <a class="code" href="classRefinementData.html#abc2daaad3c74933c7ecb6b3c248b7d28" title="Number of the fine dofs on the coarse element (fc)">num_fine_dofs</a>;
 <a name="l00042"></a><a class="code" href="classRefinementData.html#a68eda7c992070def5031ac59e60b777a">00042</a>    <a class="code" href="classTable.html">Table</a> * <a class="code" href="classRefinementData.html#a68eda7c992070def5031ac59e60b777a" title="(local dofs of) fine element &lt;-&gt; fine dofs on the coarse element">fl_to_fc</a>;
@@ -113,31 +114,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00062"></a>00062 
 <a name="l00066"></a><a class="code" href="classFiniteElementSpace.html#ac957565b80aa77524c285e365f374ba8">00066</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#ac957565b80aa77524c285e365f374ba8">ordering</a>;
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068    <span class="keyword">const</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *fec;
-<a name="l00069"></a>00069    <span class="keywordtype">int</span> nvdofs, nedofs, nfdofs, nbdofs;
-<a name="l00070"></a>00070    <span class="keywordtype">int</span> *fdofs, *bdofs;
+<a name="l00068"></a><a class="code" href="classFiniteElementSpace.html#a76383f67555102ed45076a7a68c5ac3f">00068</a>    <span class="keyword">const</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *<a class="code" href="classFiniteElementSpace.html#a76383f67555102ed45076a7a68c5ac3f">fec</a>;
+<a name="l00069"></a><a class="code" href="classFiniteElementSpace.html#acaf2f1d8782617ae3d8339f9f2605885">00069</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#acaf2f1d8782617ae3d8339f9f2605885">nvdofs</a>, <a class="code" href="classFiniteElementSpace.html#a9e1f9e016a3d4c6729281376730901ea">nedofs</a>, <a class="code" href="classFiniteElementSpace.html#a665a102163b3e5a011704a5de70c9e5e">nfdofs</a>, <a class="code" href="classFiniteElementSpace.html#ae541af750abfd4c66dcbabaaa7527bbd">nbdofs</a>;
+<a name="l00070"></a><a class="code" href="classFiniteElementSpace.html#ac881b1fbf560ee8ea3ebd055425259e3">00070</a>    <span class="keywordtype">int</span> *<a class="code" href="classFiniteElementSpace.html#ac881b1fbf560ee8ea3ebd055425259e3">fdofs</a>, *<a class="code" href="classFiniteElementSpace.html#a40aa5f0d3e32a809611f8c4aa4f3c9b7">bdofs</a>;
 <a name="l00071"></a>00071 
 <a name="l00073"></a><a class="code" href="classFiniteElementSpace.html#a90ca94ca567ec4c5268b3b8b5914d6b7">00073</a>    <a class="code" href="classArray.html">Array&lt;RefinementData *&gt;</a> <a class="code" href="classFiniteElementSpace.html#a90ca94ca567ec4c5268b3b8b5914d6b7" title="Collection of currently known refinement data.">RefData</a>;
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075    <a class="code" href="classTable.html">Table</a> *elem_dof;
-<a name="l00076"></a>00076    <a class="code" href="classArray.html">Array&lt;int&gt;</a> dof_elem_array, dof_ldof_array;
+<a name="l00075"></a><a class="code" href="classFiniteElementSpace.html#a0203e19bd51e97aeda5f7f480bf5fa47">00075</a>    <a class="code" href="classTable.html">Table</a> *<a class="code" href="classFiniteElementSpace.html#a0203e19bd51e97aeda5f7f480bf5fa47">elem_dof</a>;
+<a name="l00076"></a><a class="code" href="classFiniteElementSpace.html#afbad728795f80743448319bf7ca28de0">00076</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classFiniteElementSpace.html#adc71597438f494a2795eabd8f77a0ebe">dof_elem_array</a>, <a class="code" href="classFiniteElementSpace.html#afbad728795f80743448319bf7ca28de0">dof_ldof_array</a>;
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078    <span class="keywordtype">void</span> Constructor();
-<a name="l00079"></a>00079    <span class="keywordtype">void</span> Destructor();   <span class="comment">// does not destroy &#39;RefData&#39;</span>
+<a name="l00078"></a>00078    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a909098cea60aa107399f735f712acb6d">Constructor</a>();
+<a name="l00079"></a>00079    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a16fc84604477286f90e02ac09983c5ba">Destructor</a>();   <span class="comment">// does not destroy &#39;RefData&#39;</span>
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081    <span class="comment">/* Create a FE space stealing all data (except RefData) from the</span>
 <a name="l00082"></a>00082 <span class="comment">      given FE space. This is used in SaveUpdate() */</span>
-<a name="l00083"></a>00083    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a>(<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> &amp;);
+<a name="l00083"></a>00083    <a class="code" href="classFiniteElementSpace.html#aadbf65827dc129fbac92dd6707316a20">FiniteElementSpace</a>(<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> &amp;);
 <a name="l00084"></a>00084 
-<a name="l00086"></a>00086    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ad83a87aff3f220f26ec365c856ddd2fc" title="Constructs new refinement data using coarse element k as a template.">ConstructRefinementData</a> (<span class="keywordtype">int</span> k, <span class="keywordtype">int</span> cdofs, RefinementType type);
+<a name="l00086"></a>00086    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ad83a87aff3f220f26ec365c856ddd2fc" title="Constructs new refinement data using coarse element k as a template.">ConstructRefinementData</a> (<span class="keywordtype">int</span> k, <span class="keywordtype">int</span> cdofs, <a class="code" href="fespace_8hpp.html#adb1e2e9695b9d4228f43e156d91616dc" title="Type of refinement (int, a tree, etc.)">RefinementType</a> type);
 <a name="l00087"></a>00087 
 <a name="l00089"></a>00089    <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> * <a class="code" href="classFiniteElementSpace.html#a74f7c93cb082fe3d8b81e9f5f82c1c89" title="Generates the local interpolation matrix for coarse element k.">LocalInterpolation</a> (<span class="keywordtype">int</span> k, <span class="keywordtype">int</span> cdofs,
-<a name="l00090"></a>00090                                      RefinementType type,
+<a name="l00090"></a>00090                                      <a class="code" href="fespace_8hpp.html#adb1e2e9695b9d4228f43e156d91616dc" title="Type of refinement (int, a tree, etc.)">RefinementType</a> type,
 <a name="l00091"></a>00091                                      <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;rows);
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093 <span class="keyword">public</span>:
-<a name="l00094"></a>00094    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a>(<a class="code" href="classMesh.html">Mesh</a> *m, <span class="keyword">const</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *f,
-<a name="l00095"></a>00095                       <span class="keywordtype">int</span> dim = 1, <span class="keywordtype">int</span> order = Ordering::byNODES);
+<a name="l00094"></a>00094    <a class="code" href="classFiniteElementSpace.html#aadbf65827dc129fbac92dd6707316a20">FiniteElementSpace</a>(<a class="code" href="classMesh.html">Mesh</a> *m, <span class="keyword">const</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *f,
+<a name="l00095"></a>00095                       <span class="keywordtype">int</span> dim = 1, <span class="keywordtype">int</span> order = <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8a4c0f58e61480fb4ce67b96175571dd78">Ordering::byNODES</a>);
 <a name="l00096"></a>00096 
 <a name="l00098"></a><a class="code" href="classFiniteElementSpace.html#af94936ea008e6e1f7b6600a627164582">00098</a>    <span class="keyword">inline</span> <a class="code" href="classMesh.html">Mesh</a> * <a class="code" href="classFiniteElementSpace.html#af94936ea008e6e1f7b6600a627164582" title="Returns the mesh.">GetMesh</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a>; };
 <a name="l00099"></a>00099 
@@ -145,15 +146,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00102"></a>00102 
 <a name="l00104"></a><a class="code" href="classFiniteElementSpace.html#ae293470899299c43e748d098e0a0e9f8">00104</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#ae293470899299c43e748d098e0a0e9f8" title="Returns number of degrees of freedom.">GetNDofs</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a1c04d0c8a930cb1692f64c4fed44af46" title="Number of degrees of freedom. Number of unknowns are ndofs*vdim.">ndofs</a>; };
 <a name="l00105"></a>00105 
-<a name="l00106"></a>00106    <span class="keyword">inline</span> <span class="keywordtype">int</span> GetVSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a789248de25a86b346066a7787b1cdf5f" title="Vector dimension (number of unknowns per degree of freedom).">vdim</a> * <a class="code" href="classFiniteElementSpace.html#a1c04d0c8a930cb1692f64c4fed44af46" title="Number of degrees of freedom. Number of unknowns are ndofs*vdim.">ndofs</a>; };
+<a name="l00106"></a><a class="code" href="classFiniteElementSpace.html#aa2c0e931af3bfbb8bb31bc4907fd4771">00106</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#aa2c0e931af3bfbb8bb31bc4907fd4771">GetVSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a789248de25a86b346066a7787b1cdf5f" title="Vector dimension (number of unknowns per degree of freedom).">vdim</a> * <a class="code" href="classFiniteElementSpace.html#a1c04d0c8a930cb1692f64c4fed44af46" title="Number of degrees of freedom. Number of unknowns are ndofs*vdim.">ndofs</a>; };
 <a name="l00107"></a>00107 
 <a name="l00109"></a><a class="code" href="classFiniteElementSpace.html#ab3972257e40fd5d09a64b5a27c6e98fa">00109</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#ab3972257e40fd5d09a64b5a27c6e98fa" title="Return the ordering method.">GetOrdering</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#ac957565b80aa77524c285e365f374ba8">ordering</a>; };
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111    <span class="keyword">const</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *FEColl()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> fec; };
+<a name="l00111"></a><a class="code" href="classFiniteElementSpace.html#ac9ccdb3a012740b7e4a3f638947d0390">00111</a>    <span class="keyword">const</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *<a class="code" href="classFiniteElementSpace.html#ac9ccdb3a012740b7e4a3f638947d0390">FEColl</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a76383f67555102ed45076a7a68c5ac3f">fec</a>; };
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113    <span class="keywordtype">int</span> GetNVDofs()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> nvdofs; }
-<a name="l00114"></a>00114    <span class="keywordtype">int</span> GetNEDofs()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> nedofs; }
-<a name="l00115"></a>00115    <span class="keywordtype">int</span> GetNFDofs()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> nfdofs; }
+<a name="l00113"></a><a class="code" href="classFiniteElementSpace.html#a9b7c509c1adfe6551838411747d5a99a">00113</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#a9b7c509c1adfe6551838411747d5a99a">GetNVDofs</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#acaf2f1d8782617ae3d8339f9f2605885">nvdofs</a>; }
+<a name="l00114"></a><a class="code" href="classFiniteElementSpace.html#ac416614b12471652339737d7e83533ba">00114</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#ac416614b12471652339737d7e83533ba">GetNEDofs</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a9e1f9e016a3d4c6729281376730901ea">nedofs</a>; }
+<a name="l00115"></a><a class="code" href="classFiniteElementSpace.html#a6befe0bfebd3942c5761b8f7884ee378">00115</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#a6befe0bfebd3942c5761b8f7884ee378">GetNFDofs</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a665a102163b3e5a011704a5de70c9e5e">nfdofs</a>; }
 <a name="l00116"></a>00116 
 <a name="l00118"></a><a class="code" href="classFiniteElementSpace.html#a7278e71e8b2f68d4ed25f5f60e52acea">00118</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#a7278e71e8b2f68d4ed25f5f60e52acea" title="Returns number of elements in the mesh.">GetNE</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a> -&gt; <a class="code" href="classFiniteElementSpace.html#a7278e71e8b2f68d4ed25f5f60e52acea" title="Returns number of elements in the mesh.">GetNE</a>(); };
 <a name="l00119"></a>00119 
@@ -176,9 +177,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00143"></a><a class="code" href="classFiniteElementSpace.html#af1f18a3bd389fbd2126242211861b28b">00143</a>    <a class="code" href="classElementTransformation.html">ElementTransformation</a> * <a class="code" href="classFiniteElementSpace.html#af1f18a3bd389fbd2126242211861b28b" title="Returns ElementTransformation for the i&#39;th boundary element.">GetBdrElementTransformation</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span>
 <a name="l00144"></a>00144 <span class="keyword">   </span>{ <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a> -&gt; <a class="code" href="classFiniteElementSpace.html#af1f18a3bd389fbd2126242211861b28b" title="Returns ElementTransformation for the i&#39;th boundary element.">GetBdrElementTransformation</a>(i); };
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146    <span class="keywordtype">int</span> GetAttribute(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a> -&gt; GetAttribute(i); };
+<a name="l00146"></a><a class="code" href="classFiniteElementSpace.html#a2300885afbd951fbc29bbb1f347badf8">00146</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#a2300885afbd951fbc29bbb1f347badf8">GetAttribute</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a> -&gt; <a class="code" href="classFiniteElementSpace.html#a2300885afbd951fbc29bbb1f347badf8">GetAttribute</a>(i); };
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148    <span class="keywordtype">int</span> GetBdrAttribute(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a> -&gt; GetBdrAttribute(i); };
+<a name="l00148"></a><a class="code" href="classFiniteElementSpace.html#ac78bcea6605db1c088b86cbf302d66ee">00148</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#ac78bcea6605db1c088b86cbf302d66ee">GetBdrAttribute</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#a7d135150d5b911e245dd6786ffb7a76b" title="The mesh that FE space lives on.">mesh</a> -&gt; <a class="code" href="classFiniteElementSpace.html#ac78bcea6605db1c088b86cbf302d66ee">GetBdrAttribute</a>(i); };
 <a name="l00149"></a>00149 
 <a name="l00151"></a>00151    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a4fce9de11b5e9a7e541850017e97e189" title="Returns indexes of degrees of freedom in array dofs for i&#39;th element.">GetElementDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00152"></a>00152 
@@ -188,17 +189,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00159"></a>00159 
 <a name="l00162"></a>00162    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a202f19d6886a01bf0dbc343d8b9e4ea5">GetEdgeDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00163"></a>00163 
-<a name="l00164"></a>00164    <span class="keywordtype">void</span> GetElementInteriorDofs (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
+<a name="l00164"></a>00164    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ab08c8b56b2d9e6727eb76c49122e2365">GetElementInteriorDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00165"></a>00165 
-<a name="l00166"></a>00166    <span class="keywordtype">void</span> GetEdgeInteriorDofs (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
+<a name="l00166"></a>00166    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a76fc799f75603481b54a86ab58183bf8">GetEdgeInteriorDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00167"></a>00167 
-<a name="l00168"></a>00168    <span class="keywordtype">void</span> DofsToVDofs (<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
+<a name="l00168"></a>00168    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a63878019dbf570017682644afd699171">DofsToVDofs</a> (<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00169"></a>00169 
-<a name="l00170"></a>00170    <span class="keywordtype">void</span> DofsToVDofs (<span class="keywordtype">int</span> vd, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
+<a name="l00170"></a>00170    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a63878019dbf570017682644afd699171">DofsToVDofs</a> (<span class="keywordtype">int</span> vd, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172    <span class="keywordtype">int</span> DofToVDof (<span class="keywordtype">int</span> dof, <span class="keywordtype">int</span> vd) <span class="keyword">const</span>;
+<a name="l00172"></a>00172    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#ab4b84d50639ec8b919a37eb207914456">DofToVDof</a> (<span class="keywordtype">int</span> dof, <span class="keywordtype">int</span> vd) <span class="keyword">const</span>;
 <a name="l00173"></a>00173 
-<a name="l00174"></a>00174    <span class="keyword">static</span> <span class="keywordtype">void</span> AdjustVDofs (<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;vdofs);
+<a name="l00174"></a>00174    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a62761dd2ab30d1001da8248463b350f7">AdjustVDofs</a> (<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;vdofs);
 <a name="l00175"></a>00175 
 <a name="l00177"></a>00177    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a5a940d53000fa449cce79fd614b46da8" title="Returns indexes of degrees of freedom in array dofs for i&#39;th element.">GetElementVDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00178"></a>00178 
@@ -208,18 +209,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00184"></a>00184 
 <a name="l00186"></a>00186    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a38f8d85f0ae620a98b2afa7875c8998e" title="Returns indexes of degrees of freedom for i&#39;th edge.">GetEdgeVDofs</a> (<span class="keywordtype">int</span> iE, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00187"></a>00187 
-<a name="l00188"></a>00188    <span class="keywordtype">void</span> GetElementInteriorVDofs (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;vdofs) <span class="keyword">const</span>;
+<a name="l00188"></a>00188    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ab095371c7d684897885f3a578aea9d81">GetElementInteriorVDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;vdofs) <span class="keyword">const</span>;
 <a name="l00189"></a>00189 
-<a name="l00190"></a>00190    <span class="keywordtype">void</span> GetEdgeInteriorVDofs (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;vdofs) <span class="keyword">const</span>;
+<a name="l00190"></a>00190    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a59a48634767b73d4b5651391cf609c2a">GetEdgeInteriorVDofs</a> (<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;vdofs) <span class="keyword">const</span>;
 <a name="l00191"></a>00191 
-<a name="l00192"></a>00192    <span class="keywordtype">void</span> BuildElementToDofTable();
+<a name="l00192"></a>00192    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ace510c171061e99021acba12448b0fae">BuildElementToDofTable</a>();
 <a name="l00193"></a>00193 
-<a name="l00194"></a>00194    <span class="keywordtype">void</span> BuildDofToArrays();
+<a name="l00194"></a>00194    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a3b90e71af1a4c189bbeae4136ffb738e">BuildDofToArrays</a>();
 <a name="l00195"></a>00195 
-<a name="l00196"></a>00196    <span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;GetElementToDofTable()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *elem_dof; }
+<a name="l00196"></a><a class="code" href="classFiniteElementSpace.html#a7661b46a32b0e0109c0c5708cce6f8d0">00196</a>    <span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;<a class="code" href="classFiniteElementSpace.html#a7661b46a32b0e0109c0c5708cce6f8d0">GetElementToDofTable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<a class="code" href="classFiniteElementSpace.html#a0203e19bd51e97aeda5f7f480bf5fa47">elem_dof</a>; }
 <a name="l00197"></a>00197 
-<a name="l00198"></a>00198    <span class="keywordtype">int</span> GetElementForDof  (<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> dof_elem_array[i]; }
-<a name="l00199"></a>00199    <span class="keywordtype">int</span> GetLocalDofForDof (<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> dof_ldof_array[i]; }
+<a name="l00198"></a><a class="code" href="classFiniteElementSpace.html#a971f0a58f2476138b4c6a7d23dac49af">00198</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#a971f0a58f2476138b4c6a7d23dac49af">GetElementForDof</a>  (<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#adc71597438f494a2795eabd8f77a0ebe">dof_elem_array</a>[i]; }
+<a name="l00199"></a><a class="code" href="classFiniteElementSpace.html#aeb32f56f78025b80f5ad4ae4ba06677d">00199</a>    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementSpace.html#aeb32f56f78025b80f5ad4ae4ba06677d">GetLocalDofForDof</a> (<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classFiniteElementSpace.html#afbad728795f80743448319bf7ca28de0">dof_ldof_array</a>[i]; }
 <a name="l00200"></a>00200 
 <a name="l00202"></a>00202    <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> * <a class="code" href="classFiniteElementSpace.html#a7a8dec8bcc5939e787ea03ae2ca8e53f" title="Returns pointer to the FiniteElement associated with i&#39;th element.">GetFE</a> (<span class="keywordtype">int</span> i) <span class="keyword">const</span>;
 <a name="l00203"></a>00203 
@@ -231,7 +232,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00219"></a>00219    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ac29565bd4bef7076eb37ddf7957360b0" title="Determine the boundary degrees of freedom.">GetEssentialVDofs</a>(<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;bdr_attr_is_ess,
 <a name="l00220"></a>00220                                   <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;ess_dofs);
 <a name="l00221"></a>00221 
-<a name="l00222"></a>00222    <span class="keywordtype">void</span> EliminateEssentialBCFromGRM (<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> *cfes,
+<a name="l00222"></a>00222    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a1d0d34dad5d58a5809f9e01440987f23">EliminateEssentialBCFromGRM</a> (<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> *cfes,
 <a name="l00223"></a>00223                                      <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;bdr_attr_is_ess,
 <a name="l00224"></a>00224                                      <a class="code" href="classSparseMatrix.html" title="Data type sparse matrix.">SparseMatrix</a> *R);
 <a name="l00225"></a>00225 
@@ -245,12 +246,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00238"></a>00238 
 <a name="l00242"></a>00242    <a class="code" href="classSparseMatrix.html" title="Data type sparse matrix.">SparseMatrix</a> * <a class="code" href="classFiniteElementSpace.html#a5ec0202256018e69159a8d74d96f5ce3">H2L_GlobalRestrictionMatrix</a> (<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> *lfes);
 <a name="l00243"></a>00243 
-<a name="l00244"></a>00244    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update();
+<a name="l00244"></a>00244    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#a769a0a364a8c5d7a01ffc296ddbeba66">Update</a>();
 <a name="l00246"></a>00246    <span class="keyword">virtual</span> <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> *<a class="code" href="classFiniteElementSpace.html#acf580bdee77d13f4bbb78e596d8be316" title="Return a copy of the current FE space and update.">SaveUpdate</a>();
 <a name="l00247"></a>00247 
-<a name="l00248"></a>00248    <span class="keywordtype">void</span> Save (ostream &amp;out) <span class="keyword">const</span>;
+<a name="l00248"></a>00248    <span class="keywordtype">void</span> <a class="code" href="classFiniteElementSpace.html#ae1ccc002ea98f96020d4fc5721b6977c">Save</a> (ostream &amp;out) <span class="keyword">const</span>;
 <a name="l00249"></a>00249 
-<a name="l00250"></a>00250    <span class="keyword">virtual</span> ~<a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a>();
+<a name="l00250"></a>00250    <span class="keyword">virtual</span> <a class="code" href="classFiniteElementSpace.html#a512efc0bcc012c477021c0897ec35220">~FiniteElementSpace</a>();
 <a name="l00251"></a>00251 };
 <a name="l00252"></a>00252 
 <a name="l00253"></a>00253 <span class="preprocessor">#endif</span>
@@ -261,7 +262,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -270,7 +271,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

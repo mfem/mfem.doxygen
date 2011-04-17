@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">pbilinearform.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="pbilinearform_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,18 +84,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a><a class="code" href="classParBilinearForm.html">00016</a> <span class="keyword">class </span><a class="code" href="classParBilinearForm.html" title="Class for parallel bilinear form.">ParBilinearForm</a> : <span class="keyword">public</span> <a class="code" href="classBilinearForm.html">BilinearForm</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">protected</span>:
-<a name="l00019"></a>00019    <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pfes;
+<a name="l00019"></a><a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">00019</a>    <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *<a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a>;
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a>00022    <a class="code" href="classParBilinearForm.html" title="Class for parallel bilinear form.">ParBilinearForm</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf)
-<a name="l00023"></a>00023       : <a class="code" href="classBilinearForm.html">BilinearForm</a>(pf) { pfes = pf; }
+<a name="l00022"></a><a class="code" href="classParBilinearForm.html#af7ea71cfc426f735b78aa6a9d992a6c7">00022</a>    <a class="code" href="classParBilinearForm.html#af7ea71cfc426f735b78aa6a9d992a6c7">ParBilinearForm</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf)
+<a name="l00023"></a>00023       : <a class="code" href="classBilinearForm.html">BilinearForm</a>(pf) { <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a> = pf; }
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025    <a class="code" href="classParBilinearForm.html" title="Class for parallel bilinear form.">ParBilinearForm</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf, <a class="code" href="classParBilinearForm.html" title="Class for parallel bilinear form.">ParBilinearForm</a> *bf)
-<a name="l00026"></a>00026       : <a class="code" href="classBilinearForm.html">BilinearForm</a>(pf, bf) { pfes = pf; }
+<a name="l00025"></a><a class="code" href="classParBilinearForm.html#af63cd1700a93ce0333ebb0153d317262">00025</a>    <a class="code" href="classParBilinearForm.html#af7ea71cfc426f735b78aa6a9d992a6c7">ParBilinearForm</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf, <a class="code" href="classParBilinearForm.html" title="Class for parallel bilinear form.">ParBilinearForm</a> *bf)
+<a name="l00026"></a>00026       : <a class="code" href="classBilinearForm.html">BilinearForm</a>(pf, bf) { <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a> = pf; }
 <a name="l00027"></a>00027 
 <a name="l00029"></a>00029    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classParBilinearForm.html#a028c3d4bac0b104a20d4dbaf0a123b13" title="Returns the matrix assembled on the true dofs, i.e. P^t A P.">ParallelAssemble</a>();
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031    <span class="keyword">virtual</span> ~<a class="code" href="classParBilinearForm.html" title="Class for parallel bilinear form.">ParBilinearForm</a>() { }
+<a name="l00031"></a><a class="code" href="classParBilinearForm.html#a8d4a4470d2350b705bdeef5cb9893efb">00031</a>    <span class="keyword">virtual</span> <a class="code" href="classParBilinearForm.html#a8d4a4470d2350b705bdeef5cb9893efb">~ParBilinearForm</a>() { }
 <a name="l00032"></a>00032 };
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="preprocessor">#endif</span>
@@ -105,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

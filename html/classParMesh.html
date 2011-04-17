@@ -61,7 +61,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">ParMesh Class Reference</div>  </div>
 </div>
@@ -90,61 +92,493 @@ Collaboration diagram for ParMesh:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae862283cab8dd7857acc923572b4b8c7"></a><!-- doxytag: member="ParMesh::ParMesh" ref="ae862283cab8dd7857acc923572b4b8c7" args="(MPI_Comm comm, Mesh &amp;mesh, int *partitioning_=NULL, int part_method=1)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>ParMesh</b> (MPI_Comm comm, <a class="el" href="classMesh.html">Mesh</a> &amp;mesh, int *partitioning_=NULL, int part_method=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71fc1b1cb00f15b8ecbd0e7914fae4e9"></a><!-- doxytag: member="ParMesh::GetComm" ref="a71fc1b1cb00f15b8ecbd0e7914fae4e9" args="()" -->
-MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><b>GetComm</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e73e13b7eccc84ae94c81e158831b63"></a><!-- doxytag: member="ParMesh::GetNRanks" ref="a3e73e13b7eccc84ae94c81e158831b63" args="()" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNRanks</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ed42b7b77736fe58aaf300531cbbd68"></a><!-- doxytag: member="ParMesh::GetMyRank" ref="a6ed42b7b77736fe58aaf300531cbbd68" args="()" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMyRank</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac24f718f58975ee802ebd86c02c410b4"></a><!-- doxytag: member="ParMesh::GetNGroups" ref="ac24f718f58975ee802ebd86c02c410b4" args="()" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNGroups</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4e58f8df50370fb220740b58a4b6f95"></a><!-- doxytag: member="ParMesh::GroupNVertices" ref="ad4e58f8df50370fb220740b58a4b6f95" args="(int group)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GroupNVertices</b> (int group)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adad92bfeb3ed21f1f1d52df7e6f9025c"></a><!-- doxytag: member="ParMesh::GroupNEdges" ref="adad92bfeb3ed21f1f1d52df7e6f9025c" args="(int group)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GroupNEdges</b> (int group)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a5bf7aecf0b65c3b0be36e37f7604d1"></a><!-- doxytag: member="ParMesh::GroupNFaces" ref="a8a5bf7aecf0b65c3b0be36e37f7604d1" args="(int group)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GroupNFaces</b> (int group)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94eb264912e3fcca9fdb16e6b0083096"></a><!-- doxytag: member="ParMesh::GroupVertex" ref="a94eb264912e3fcca9fdb16e6b0083096" args="(int group, int i)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GroupVertex</b> (int group, int i)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53add0cd48917b2d9bd5d2ef7ab3a48b"></a><!-- doxytag: member="ParMesh::GroupEdge" ref="a53add0cd48917b2d9bd5d2ef7ab3a48b" args="(int group, int i, int &amp;edge, int &amp;o)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GroupEdge</b> (int group, int i, int &amp;edge, int &amp;o)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f8b0965f4cfdf03a78e2366a169d1e0"></a><!-- doxytag: member="ParMesh::GroupFace" ref="a4f8b0965f4cfdf03a78e2366a169d1e0" args="(int group, int i, int &amp;face, int &amp;o)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GroupFace</b> (int group, int i, int &amp;face, int &amp;o)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8655fadf1cf12d0fdf0581a30586555d"></a><!-- doxytag: member="ParMesh::LocalRefinement" ref="a8655fadf1cf12d0fdf0581a30586555d" args="(const Array&lt; int &gt; &amp;marked_el, int type=3)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a8655fadf1cf12d0fdf0581a30586555d">LocalRefinement</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;marked_el, int type=3)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine the marked elements. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45a930ffadc9accf8a51120b71be145b"></a><!-- doxytag: member="ParMesh::RefineGroups" ref="a45a930ffadc9accf8a51120b71be145b" args="(const DSTable &amp;v_to_v, int *middle)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a45a930ffadc9accf8a51120b71be145b">RefineGroups</a> (const <a class="el" href="classDSTable.html">DSTable</a> &amp;v_to_v, int *middle)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the groups after tet refinement. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d2e70099e2a93e016a72c983170f12c"></a><!-- doxytag: member="ParMesh::QuadUniformRefinement" ref="a5d2e70099e2a93e016a72c983170f12c" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a5d2e70099e2a93e016a72c983170f12c">QuadUniformRefinement</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine quadrilateral mesh. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a688f4b3de989effeb49368b6f42e02bb"></a><!-- doxytag: member="ParMesh::HexUniformRefinement" ref="a688f4b3de989effeb49368b6f42e02bb" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a688f4b3de989effeb49368b6f42e02bb">HexUniformRefinement</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine a hexahedral mesh. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ae862283cab8dd7857acc923572b4b8c7">ParMesh</a> (MPI_Comm comm, <a class="el" href="classMesh.html">Mesh</a> &amp;mesh, int *partitioning_=NULL, int part_method=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a71fc1b1cb00f15b8ecbd0e7914fae4e9">GetComm</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a3e73e13b7eccc84ae94c81e158831b63">GetNRanks</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a6ed42b7b77736fe58aaf300531cbbd68">GetMyRank</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ac24f718f58975ee802ebd86c02c410b4">GetNGroups</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ad4e58f8df50370fb220740b58a4b6f95">GroupNVertices</a> (int group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#adad92bfeb3ed21f1f1d52df7e6f9025c">GroupNEdges</a> (int group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a8a5bf7aecf0b65c3b0be36e37f7604d1">GroupNFaces</a> (int group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a94eb264912e3fcca9fdb16e6b0083096">GroupVertex</a> (int group, int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a53add0cd48917b2d9bd5d2ef7ab3a48b">GroupEdge</a> (int group, int i, int &amp;edge, int &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a4f8b0965f4cfdf03a78e2366a169d1e0">GroupFace</a> (int group, int i, int &amp;face, int &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a8655fadf1cf12d0fdf0581a30586555d">LocalRefinement</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;marked_el, int type=3)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine the marked elements.  <a href="#a8655fadf1cf12d0fdf0581a30586555d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a45a930ffadc9accf8a51120b71be145b">RefineGroups</a> (const <a class="el" href="classDSTable.html">DSTable</a> &amp;v_to_v, int *middle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the groups after tet refinement.  <a href="#a45a930ffadc9accf8a51120b71be145b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a5d2e70099e2a93e016a72c983170f12c">QuadUniformRefinement</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine quadrilateral mesh.  <a href="#a5d2e70099e2a93e016a72c983170f12c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a688f4b3de989effeb49368b6f42e02bb">HexUniformRefinement</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine a hexahedral mesh.  <a href="#a688f4b3de989effeb49368b6f42e02bb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a3c472a39a051bbe424befd897b5f88d4">Print</a> (ostream &amp;out=cout) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ae63858c93985cd3f7ca9442f5b5a1016">PrintAsOne</a> (ostream &amp;out=cout)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3196dbedcfe61b31a16f745600bbccba"></a><!-- doxytag: member="ParMesh::PrintAsOneXG" ref="a3196dbedcfe61b31a16f745600bbccba" args="(ostream &amp;out=cout)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a3196dbedcfe61b31a16f745600bbccba">PrintAsOneXG</a> (ostream &amp;out=cout)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Old mesh format (Netgen/Truegrid) version of 'PrintAsOne'. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a3196dbedcfe61b31a16f745600bbccba">PrintAsOneXG</a> (ostream &amp;out=cout)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Old mesh format (Netgen/Truegrid) version of 'PrintAsOne'.  <a href="#a3196dbedcfe61b31a16f745600bbccba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a9a2bbf59ca7f3b04c6eaba2be49f09f6">~ParMesh</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTable.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a005e585d25ac55e5e80334a32f1398e9">group_lproc</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14cb44979b1958352bd4e5a5ed141e6a"></a><!-- doxytag: member="ParMesh::groupmaster_lproc" ref="a14cb44979b1958352bd4e5a5ed141e6a" args="" -->
-<a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>groupmaster_lproc</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af83e3392bd10d6d00b40d19ad7d383e5"></a><!-- doxytag: member="ParMesh::lproc_proc" ref="af83e3392bd10d6d00b40d19ad7d383e5" args="" -->
-<a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lproc_proc</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae71223d09dd935d715728219e104b4dd"></a><!-- doxytag: member="ParMesh::group_mgroup" ref="ae71223d09dd935d715728219e104b4dd" args="" -->
-<a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ae71223d09dd935d715728219e104b4dd">group_mgroup</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">for each group gives the group number in the master <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a14cb44979b1958352bd4e5a5ed141e6a">groupmaster_lproc</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#af83e3392bd10d6d00b40d19ad7d383e5">lproc_proc</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ae71223d09dd935d715728219e104b4dd">group_mgroup</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">for each group gives the group number in the master  <a href="#ae71223d09dd935d715728219e104b4dd"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a1efe007c098ea917fd60fc66e483d791">GetEdgeSplittings</a> (<a class="el" href="classElement.html">Element</a> *edge, const <a class="el" href="classDSTable.html">DSTable</a> &amp;v_to_v, int *middle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a number(0-1) identifying how the given edge has been split.  <a href="#a1efe007c098ea917fd60fc66e483d791"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ac82d4c9fa2aed76e4da5b3a5b31ef386">GetFaceSplittings</a> (<a class="el" href="classElement.html">Element</a> *face, const <a class="el" href="classDSTable.html">DSTable</a> &amp;v_to_v, int *middle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a number(0-4) identifying how the given face has been split.  <a href="#ac82d4c9fa2aed76e4da5b3a5b31ef386"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#ad608ff659abbc014c109fb9efc5f96a9">MyComm</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a24bb003631b621de6dddda724ad2b2be">NRanks</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a76cbeed32ca00bee28de61c70357fc0f">MyRank</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; <a class="el" href="classElement.html">Element</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a746d9277ce1a9600e34bb5bd11dad360">shared_edges</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; <a class="el" href="classElement.html">Element</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#af510a677800bda0cfc01f2a0c5267f42">shared_faces</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTable.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4">group_svert</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared objects in each group.  <a href="#a98d7f99f669588c8c1cc01d645212df4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTable.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a7e4572b358c7caf1ed3712ae0f1dc3c5">group_sedge</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTable.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a0cdde89641cfde3aef041ba340830ac4">group_sface</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a242ad4a7afee5fac2a7c7cf6aae622f6">svert_lvert</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared to local index mapping.  <a href="#a242ad4a7afee5fac2a7c7cf6aae622f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a69af9f5e7aa5e18312f77bf78cd4d2ee">sedge_ledge</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParMesh.html#a55ae84625d518dce2b8b39653c80372d">sface_lface</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for parallel meshes. </p>
 
 <p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00016">16</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae862283cab8dd7857acc923572b4b8c7"></a><!-- doxytag: member="ParMesh::ParMesh" ref="ae862283cab8dd7857acc923572b4b8c7" args="(MPI_Comm comm, Mesh &amp;mesh, int *partitioning_=NULL, int part_method=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParMesh::ParMesh </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMesh.html">Mesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>partitioning_</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>part_method</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a2bbf59ca7f3b04c6eaba2be49f09f6"></a><!-- doxytag: member="ParMesh::~ParMesh" ref="a9a2bbf59ca7f3b04c6eaba2be49f09f6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ParMesh::~ParMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a71fc1b1cb00f15b8ecbd0e7914fae4e9"></a><!-- doxytag: member="ParMesh::GetComm" ref="a71fc1b1cb00f15b8ecbd0e7914fae4e9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MPI_Comm ParMesh::GetComm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00044">44</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00019">MyComm</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1efe007c098ea917fd60fc66e483d791"></a><!-- doxytag: member="ParMesh::GetEdgeSplittings" ref="a1efe007c098ea917fd60fc66e483d791" args="(Element *edge, const DSTable &amp;v_to_v, int *middle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GetEdgeSplittings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classElement.html">Element</a> *&#160;</td>
+          <td class="paramname"><em>edge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDSTable.html">DSTable</a> &amp;&#160;</td>
+          <td class="paramname"><em>v_to_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>middle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a number(0-1) identifying how the given edge has been split. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac82d4c9fa2aed76e4da5b3a5b31ef386"></a><!-- doxytag: member="ParMesh::GetFaceSplittings" ref="ac82d4c9fa2aed76e4da5b3a5b31ef386" args="(Element *face, const DSTable &amp;v_to_v, int *middle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GetFaceSplittings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classElement.html">Element</a> *&#160;</td>
+          <td class="paramname"><em>face</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDSTable.html">DSTable</a> &amp;&#160;</td>
+          <td class="paramname"><em>v_to_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>middle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return a number(0-4) identifying how the given face has been split. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6ed42b7b77736fe58aaf300531cbbd68"></a><!-- doxytag: member="ParMesh::GetMyRank" ref="a6ed42b7b77736fe58aaf300531cbbd68" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GetMyRank </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00046">46</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00020">MyRank</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac24f718f58975ee802ebd86c02c410b4"></a><!-- doxytag: member="ParMesh::GetNGroups" ref="ac24f718f58975ee802ebd86c02c410b4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GetNGroups </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00060">60</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00054">group_lproc</a>, and <a class="el" href="table_8hpp_source.html#l00062">Table::Size()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e73e13b7eccc84ae94c81e158831b63"></a><!-- doxytag: member="ParMesh::GetNRanks" ref="a3e73e13b7eccc84ae94c81e158831b63" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GetNRanks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00045">45</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00020">NRanks</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53add0cd48917b2d9bd5d2ef7ab3a48b"></a><!-- doxytag: member="ParMesh::GroupEdge" ref="a53add0cd48917b2d9bd5d2ef7ab3a48b" args="(int group, int i, int &amp;edge, int &amp;o)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParMesh::GroupEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>edge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f8b0965f4cfdf03a78e2366a169d1e0"></a><!-- doxytag: member="ParMesh::GroupFace" ref="a4f8b0965f4cfdf03a78e2366a169d1e0" args="(int group, int i, int &amp;face, int &amp;o)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParMesh::GroupFace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>face</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adad92bfeb3ed21f1f1d52df7e6f9025c"></a><!-- doxytag: member="ParMesh::GroupNEdges" ref="adad92bfeb3ed21f1f1d52df7e6f9025c" args="(int group)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GroupNEdges </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00064">64</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00027">group_sedge</a>, and <a class="el" href="table_8hpp_source.html#l00078">Table::RowSize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a5bf7aecf0b65c3b0be36e37f7604d1"></a><!-- doxytag: member="ParMesh::GroupNFaces" ref="a8a5bf7aecf0b65c3b0be36e37f7604d1" args="(int group)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GroupNFaces </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00065">65</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00028">group_sface</a>, and <a class="el" href="table_8hpp_source.html#l00078">Table::RowSize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4e58f8df50370fb220740b58a4b6f95"></a><!-- doxytag: member="ParMesh::GroupNVertices" ref="ad4e58f8df50370fb220740b58a4b6f95" args="(int group)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GroupNVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00063">63</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="pmesh_8hpp_source.html#l00026">group_svert</a>, and <a class="el" href="table_8hpp_source.html#l00078">Table::RowSize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94eb264912e3fcca9fdb16e6b0083096"></a><!-- doxytag: member="ParMesh::GroupVertex" ref="a94eb264912e3fcca9fdb16e6b0083096" args="(int group, int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParMesh::GroupVertex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00067">67</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>References <a class="el" href="table_8hpp_source.html#l00083">Table::GetI()</a>, <a class="el" href="table_8hpp_source.html#l00084">Table::GetJ()</a>, <a class="el" href="pmesh_8hpp_source.html#l00026">group_svert</a>, and <a class="el" href="pmesh_8hpp_source.html#l00031">svert_lvert</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a688f4b3de989effeb49368b6f42e02bb"></a><!-- doxytag: member="ParMesh::HexUniformRefinement" ref="a688f4b3de989effeb49368b6f42e02bb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ParMesh::HexUniformRefinement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Refine a hexahedral mesh. </p>
+
+<p>Reimplemented from <a class="el" href="classMesh.html#a1e0ed1f055405b716493563c3a8c4f25">Mesh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8655fadf1cf12d0fdf0581a30586555d"></a><!-- doxytag: member="ParMesh::LocalRefinement" ref="a8655fadf1cf12d0fdf0581a30586555d" args="(const Array&lt; int &gt; &amp;marked_el, int type=3)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ParMesh::LocalRefinement </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>marked_el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Refine the marked elements. </p>
+
+<p>Reimplemented from <a class="el" href="classMesh.html#ac300dab0ee12bf05020313df7280c247">Mesh</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3c472a39a051bbe424befd897b5f88d4"></a><!-- doxytag: member="ParMesh::Print" ref="a3c472a39a051bbe424befd897b5f88d4" args="(ostream &amp;out=cout) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -181,6 +615,76 @@ Public Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Write the mesh to the stream 'out' on Process 0 in a form suitable for visualization: the mesh is written as a disjoint mesh and the shared boundary is added to the actual boundary; both the element and boundary attributes are set to the precessor number. </p>
 
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3196dbedcfe61b31a16f745600bbccba"></a><!-- doxytag: member="ParMesh::PrintAsOneXG" ref="a3196dbedcfe61b31a16f745600bbccba" args="(ostream &amp;out=cout)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParMesh::PrintAsOneXG </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code>cout</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Old mesh format (Netgen/Truegrid) version of 'PrintAsOne'. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5d2e70099e2a93e016a72c983170f12c"></a><!-- doxytag: member="ParMesh::QuadUniformRefinement" ref="a5d2e70099e2a93e016a72c983170f12c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ParMesh::QuadUniformRefinement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Refine quadrilateral mesh. </p>
+
+<p>Reimplemented from <a class="el" href="classMesh.html#a5e142b0914c0319cf4fa559caf82bba8">Mesh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a45a930ffadc9accf8a51120b71be145b"></a><!-- doxytag: member="ParMesh::RefineGroups" ref="a45a930ffadc9accf8a51120b71be145b" args="(const DSTable &amp;v_to_v, int *middle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParMesh::RefineGroups </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDSTable.html">DSTable</a> &amp;&#160;</td>
+          <td class="paramname"><em>v_to_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>middle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update the groups after tet refinement. </p>
+
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
@@ -203,6 +707,238 @@ Public Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00054">54</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00060">GetNGroups()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae71223d09dd935d715728219e104b4dd"></a><!-- doxytag: member="ParMesh::group_mgroup" ref="ae71223d09dd935d715728219e104b4dd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;int&gt; <a class="el" href="classParMesh.html#ae71223d09dd935d715728219e104b4dd">ParMesh::group_mgroup</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>for each group gives the group number in the master </p>
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00058">58</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e4572b358c7caf1ed3712ae0f1dc3c5"></a><!-- doxytag: member="ParMesh::group_sedge" ref="a7e4572b358c7caf1ed3712ae0f1dc3c5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTable.html">Table</a> <a class="el" href="classParMesh.html#a7e4572b358c7caf1ed3712ae0f1dc3c5">ParMesh::group_sedge</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00027">27</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00064">GroupNEdges()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cdde89641cfde3aef041ba340830ac4"></a><!-- doxytag: member="ParMesh::group_sface" ref="a0cdde89641cfde3aef041ba340830ac4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTable.html">Table</a> <a class="el" href="classParMesh.html#a0cdde89641cfde3aef041ba340830ac4">ParMesh::group_sface</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00028">28</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00065">GroupNFaces()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98d7f99f669588c8c1cc01d645212df4"></a><!-- doxytag: member="ParMesh::group_svert" ref="a98d7f99f669588c8c1cc01d645212df4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTable.html">Table</a> <a class="el" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4">ParMesh::group_svert</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Shared objects in each group. </p>
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00026">26</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00063">GroupNVertices()</a>, and <a class="el" href="pmesh_8hpp_source.html#l00067">GroupVertex()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a14cb44979b1958352bd4e5a5ed141e6a"></a><!-- doxytag: member="ParMesh::groupmaster_lproc" ref="a14cb44979b1958352bd4e5a5ed141e6a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;int&gt; <a class="el" href="classParMesh.html#a14cb44979b1958352bd4e5a5ed141e6a">ParMesh::groupmaster_lproc</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00055">55</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af83e3392bd10d6d00b40d19ad7d383e5"></a><!-- doxytag: member="ParMesh::lproc_proc" ref="af83e3392bd10d6d00b40d19ad7d383e5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;int&gt; <a class="el" href="classParMesh.html#af83e3392bd10d6d00b40d19ad7d383e5">ParMesh::lproc_proc</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00056">56</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad608ff659abbc014c109fb9efc5f96a9"></a><!-- doxytag: member="ParMesh::MyComm" ref="ad608ff659abbc014c109fb9efc5f96a9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MPI_Comm <a class="el" href="classParMesh.html#ad608ff659abbc014c109fb9efc5f96a9">ParMesh::MyComm</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00019">19</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00044">GetComm()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76cbeed32ca00bee28de61c70357fc0f"></a><!-- doxytag: member="ParMesh::MyRank" ref="a76cbeed32ca00bee28de61c70357fc0f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classParMesh.html#a76cbeed32ca00bee28de61c70357fc0f">ParMesh::MyRank</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00020">20</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00046">GetMyRank()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a24bb003631b621de6dddda724ad2b2be"></a><!-- doxytag: member="ParMesh::NRanks" ref="a24bb003631b621de6dddda724ad2b2be" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classParMesh.html#a24bb003631b621de6dddda724ad2b2be">ParMesh::NRanks</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00020">20</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00045">GetNRanks()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69af9f5e7aa5e18312f77bf78cd4d2ee"></a><!-- doxytag: member="ParMesh::sedge_ledge" ref="a69af9f5e7aa5e18312f77bf78cd4d2ee" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;int&gt; <a class="el" href="classParMesh.html#a69af9f5e7aa5e18312f77bf78cd4d2ee">ParMesh::sedge_ledge</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00032">32</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55ae84625d518dce2b8b39653c80372d"></a><!-- doxytag: member="ParMesh::sface_lface" ref="a55ae84625d518dce2b8b39653c80372d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;int&gt; <a class="el" href="classParMesh.html#a55ae84625d518dce2b8b39653c80372d">ParMesh::sface_lface</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00033">33</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a746d9277ce1a9600e34bb5bd11dad360"></a><!-- doxytag: member="ParMesh::shared_edges" ref="a746d9277ce1a9600e34bb5bd11dad360" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;<a class="el" href="classElement.html">Element</a> *&gt; <a class="el" href="classParMesh.html#a746d9277ce1a9600e34bb5bd11dad360">ParMesh::shared_edges</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00022">22</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af510a677800bda0cfc01f2a0c5267f42"></a><!-- doxytag: member="ParMesh::shared_faces" ref="af510a677800bda0cfc01f2a0c5267f42" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;<a class="el" href="classElement.html">Element</a> *&gt; <a class="el" href="classParMesh.html#af510a677800bda0cfc01f2a0c5267f42">ParMesh::shared_faces</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00023">23</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a242ad4a7afee5fac2a7c7cf6aae622f6"></a><!-- doxytag: member="ParMesh::svert_lvert" ref="a242ad4a7afee5fac2a7c7cf6aae622f6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;int&gt; <a class="el" href="classParMesh.html#a242ad4a7afee5fac2a7c7cf6aae622f6">ParMesh::svert_lvert</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Shared to local index mapping. </p>
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00031">31</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="pmesh_8hpp_source.html#l00067">GroupVertex()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -214,7 +950,7 @@ Public Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -223,7 +959,7 @@ Public Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

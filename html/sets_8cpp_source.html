@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">sets.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="sets_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -77,108 +78,108 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00009"></a>00009 <span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span>
 <a name="l00010"></a>00010 <span class="comment">// Software Foundation) version 2.1 dated February 1999.</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;array.hpp&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;table.hpp&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;sets.hpp&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="array_8hpp.html">array.hpp</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="table_8hpp.html">table.hpp</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="sets_8hpp.html">sets.hpp</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 IntegerSet::IntegerSet(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
+<a name="l00017"></a><a class="code" href="classIntegerSet.html#a3a70e4d771af34cf8495e97ceca4aef8">00017</a> <a class="code" href="classIntegerSet.html#a7d347a080cc8f68df765a3301e7f1c1b">IntegerSet::IntegerSet</a>(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
 <a name="l00018"></a>00018    : me(s.me.Size())
 <a name="l00019"></a>00019 {
-<a name="l00020"></a>00020    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; me.Size(); i++)
-<a name="l00021"></a>00021       me[i] = s.me[i];
+<a name="l00020"></a>00020    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
+<a name="l00021"></a>00021       <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i] = s.<a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i];
 <a name="l00022"></a>00022 }
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keywordtype">int</span> IntegerSet::operator== (<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
+<a name="l00025"></a><a class="code" href="classIntegerSet.html#adefb6f026a6e2c6afbce5fef92d7f92e">00025</a> <span class="keywordtype">int</span> <a class="code" href="classIntegerSet.html#adefb6f026a6e2c6afbce5fef92d7f92e">IntegerSet::operator== </a>(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
 <a name="l00026"></a>00026 {
-<a name="l00027"></a>00027    <span class="keywordflow">if</span> (me.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>() != s.me.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>())
+<a name="l00027"></a>00027    <span class="keywordflow">if</span> (<a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>() != s.<a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>())
 <a name="l00028"></a>00028       <span class="keywordflow">return</span> 0;
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; me.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
-<a name="l00031"></a>00031       <span class="keywordflow">if</span> (me[i] != s.me[i])
+<a name="l00030"></a>00030    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
+<a name="l00031"></a>00031       <span class="keywordflow">if</span> (<a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i] != s.<a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i])
 <a name="l00032"></a>00032          <span class="keywordflow">return</span> 0;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034    <span class="keywordflow">return</span> 1;
 <a name="l00035"></a>00035 }
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keywordtype">int</span> IntegerSet::PickRandomElement()
+<a name="l00037"></a><a class="code" href="classIntegerSet.html#a53bec6490f56dd2aae93079c8d222637">00037</a> <span class="keywordtype">int</span> <a class="code" href="classIntegerSet.html#a53bec6490f56dd2aae93079c8d222637">IntegerSet::PickRandomElement</a>()
 <a name="l00038"></a>00038 {
-<a name="l00039"></a>00039    <span class="keywordtype">int</span> i, size = me.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>();
+<a name="l00039"></a>00039    <span class="keywordtype">int</span> i, size = <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>();
 <a name="l00040"></a>00040    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> seed = 0;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042    <span class="keywordflow">for</span> (i = 0; i &lt; size; i++)
-<a name="l00043"></a>00043       seed += me[i];
+<a name="l00043"></a>00043       seed += <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i];
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045    srand(seed);
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047    <span class="keywordflow">return</span> me[rand()/(RAND_MAX/size)];
+<a name="l00047"></a>00047    <span class="keywordflow">return</span> <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[rand()/(RAND_MAX/size)];
 <a name="l00048"></a>00048 }
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keywordtype">void</span> IntegerSet::Recreate(<span class="keyword">const</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">int</span> *p)
+<a name="l00050"></a><a class="code" href="classIntegerSet.html#a8f40220c5ea9c2e61c7ec62e34805d92">00050</a> <span class="keywordtype">void</span> <a class="code" href="classIntegerSet.html#a8f40220c5ea9c2e61c7ec62e34805d92">IntegerSet::Recreate</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">int</span> *p)
 <a name="l00051"></a>00051 {
 <a name="l00052"></a>00052    <span class="keywordtype">int</span> i, j;
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054    me.<a class="code" href="classArray.html#a471447bf48b64b0b7a08d15994fbbc97" title="Change logical size of the array, keep existing entries.">SetSize</a>(n);
+<a name="l00054"></a>00054    <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a471447bf48b64b0b7a08d15994fbbc97" title="Change logical size of the array, keep existing entries.">SetSize</a>(n);
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)
-<a name="l00057"></a>00057       me[i] = p[i];
+<a name="l00057"></a>00057       <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i] = p[i];
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059    me.<a class="code" href="classArray.html#aae7102f125db37e0f82bec16ba56c65b" title="Sorts the array.">Sort</a>();
+<a name="l00059"></a>00059    <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#aae7102f125db37e0f82bec16ba56c65b" title="Sorts the array.">Sort</a>();
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061    <span class="keywordflow">for</span> (j = 0, i = 1; i &lt; n; i++)
-<a name="l00062"></a>00062       <span class="keywordflow">if</span> (me[i] != me[j])
-<a name="l00063"></a>00063          me[++j] = me[i];
+<a name="l00062"></a>00062       <span class="keywordflow">if</span> (<a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i] != <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[j])
+<a name="l00063"></a>00063          <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[++j] = <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>[i];
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065    me.<a class="code" href="classArray.html#a471447bf48b64b0b7a08d15994fbbc97" title="Change logical size of the array, keep existing entries.">SetSize</a>(j+1);
+<a name="l00065"></a>00065    <a class="code" href="classIntegerSet.html#a733b5535da757c4fcf751193d9ea1ad9">me</a>.<a class="code" href="classArray.html#a471447bf48b64b0b7a08d15994fbbc97" title="Change logical size of the array, keep existing entries.">SetSize</a>(j+1);
 <a name="l00066"></a>00066 }
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keywordtype">int</span> ListOfIntegerSets::Insert(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
+<a name="l00069"></a><a class="code" href="classListOfIntegerSets.html#ab1d80195ce4c95b5cbb06228408dfa4f">00069</a> <span class="keywordtype">int</span> <a class="code" href="classListOfIntegerSets.html#ab1d80195ce4c95b5cbb06228408dfa4f">ListOfIntegerSets::Insert</a>(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
 <a name="l00070"></a>00070 {
-<a name="l00071"></a>00071    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; TheList.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
-<a name="l00072"></a>00072       <span class="keywordflow">if</span> (*TheList[i] == s)
+<a name="l00071"></a>00071    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
+<a name="l00072"></a>00072       <span class="keywordflow">if</span> (*<a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>[i] == s)
 <a name="l00073"></a>00073          <span class="keywordflow">return</span> i;
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075    TheList.<a class="code" href="classArray.html#a7ac8a5aaf7d0e001ed9079a432706368" title="Append element to array, resize if necessary.">Append</a>(<span class="keyword">new</span> <a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a>(s));
+<a name="l00075"></a>00075    <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>.<a class="code" href="classArray.html#a7ac8a5aaf7d0e001ed9079a432706368" title="Append element to array, resize if necessary.">Append</a>(<span class="keyword">new</span> <a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a>(s));
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077    <span class="keywordflow">return</span> TheList.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>()-1;
+<a name="l00077"></a>00077    <span class="keywordflow">return</span> <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>()-1;
 <a name="l00078"></a>00078 }
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keywordtype">int</span> ListOfIntegerSets::Lookup(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
+<a name="l00080"></a><a class="code" href="classListOfIntegerSets.html#a6264a38eb359e406b0d22b6077765cad">00080</a> <span class="keywordtype">int</span> <a class="code" href="classListOfIntegerSets.html#a6264a38eb359e406b0d22b6077765cad">ListOfIntegerSets::Lookup</a>(<a class="code" href="classIntegerSet.html" title="A set of integers.">IntegerSet</a> &amp;s)
 <a name="l00081"></a>00081 {
-<a name="l00082"></a>00082    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; TheList.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
-<a name="l00083"></a>00083       <span class="keywordflow">if</span> (*TheList[i] == s)
+<a name="l00082"></a>00082    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
+<a name="l00083"></a>00083       <span class="keywordflow">if</span> (*<a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>[i] == s)
 <a name="l00084"></a>00084          <span class="keywordflow">return</span> i;
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086    mfem_error(<span class="stringliteral">&quot;ListOfIntegerSets::Lookup ()&quot;</span>);
+<a name="l00086"></a>00086    <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a>(<span class="stringliteral">&quot;ListOfIntegerSets::Lookup ()&quot;</span>);
 <a name="l00087"></a>00087    <span class="keywordflow">return</span> -1;
 <a name="l00088"></a>00088 }
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="keywordtype">void</span> ListOfIntegerSets::AsTable(<a class="code" href="classTable.html">Table</a> &amp; t)
+<a name="l00090"></a><a class="code" href="classListOfIntegerSets.html#a2f3b307cb3948f570d203d379b8a15ad">00090</a> <span class="keywordtype">void</span> <a class="code" href="classListOfIntegerSets.html#a2f3b307cb3948f570d203d379b8a15ad">ListOfIntegerSets::AsTable</a>(<a class="code" href="classTable.html">Table</a> &amp; t)
 <a name="l00091"></a>00091 {
 <a name="l00092"></a>00092    <span class="keywordtype">int</span> i;
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094    t.<a class="code" href="classTable.html#a75289f7cdb7ed235541ee750859020c6" title="Next 7 methods are used together with the default constructor.">MakeI</a>(Size());
+<a name="l00094"></a>00094    t.<a class="code" href="classTable.html#a75289f7cdb7ed235541ee750859020c6" title="Next 7 methods are used together with the default constructor.">MakeI</a>(<a class="code" href="classListOfIntegerSets.html#ae59ec67fb47821f5e009a10ff1f0a3f3">Size</a>());
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096    <span class="keywordflow">for</span> (i = 0; i &lt; Size(); i++)
-<a name="l00097"></a>00097       t.AddColumnsInRow(i, TheList[i] -&gt; Size());
+<a name="l00096"></a>00096    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classListOfIntegerSets.html#ae59ec67fb47821f5e009a10ff1f0a3f3">Size</a>(); i++)
+<a name="l00097"></a>00097       t.<a class="code" href="classTable.html#a1e626fa0acf9c2f5c6304827cf322d36">AddColumnsInRow</a>(i, <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>[i] -&gt; Size());
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099    t.MakeJ();
+<a name="l00099"></a>00099    t.<a class="code" href="classTable.html#a95e0e7ae9aeb7b3bd3fb4b9e1a213fa4">MakeJ</a>();
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101    <span class="keywordflow">for</span> (i = 0; i &lt; Size(); i++)
+<a name="l00101"></a>00101    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classListOfIntegerSets.html#ae59ec67fb47821f5e009a10ff1f0a3f3">Size</a>(); i++)
 <a name="l00102"></a>00102    {
-<a name="l00103"></a>00103       <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;row = *TheList[i];
-<a name="l00104"></a>00104       t.AddConnections(i, row.<a class="code" href="classArray.html#a0c0c54158556b26b60cfaec6284c0893" title="Returns the data.">GetData</a>(), row.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>());
+<a name="l00103"></a>00103       <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;row = *<a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>[i];
+<a name="l00104"></a>00104       t.<a class="code" href="classTable.html#ad0bc0a43ad307cd2d6d6bfe57ecd6d04">AddConnections</a>(i, row.<a class="code" href="classArray.html#a0c0c54158556b26b60cfaec6284c0893" title="Returns the data.">GetData</a>(), row.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>());
 <a name="l00105"></a>00105    }
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107    t.ShiftUpI();
+<a name="l00107"></a>00107    t.<a class="code" href="classTable.html#a5fe0c074ae63dfca5e4272c24a85da3e">ShiftUpI</a>();
 <a name="l00108"></a>00108 }
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110 ListOfIntegerSets::~ListOfIntegerSets()
+<a name="l00110"></a><a class="code" href="classListOfIntegerSets.html#a8fd868e494105e6fae3795d67eabf969">00110</a> <a class="code" href="classListOfIntegerSets.html#a8fd868e494105e6fae3795d67eabf969">ListOfIntegerSets::~ListOfIntegerSets</a>()
 <a name="l00111"></a>00111 {
-<a name="l00112"></a>00112    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; TheList.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
-<a name="l00113"></a>00113       <span class="keyword">delete</span> TheList[i];
+<a name="l00112"></a>00112    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>.<a class="code" href="classArray.html#a1800462052b7d06f99f29eba9da74ba9" title="Logical size of the array.">Size</a>(); i++)
+<a name="l00113"></a>00113       <span class="keyword">delete</span> <a class="code" href="classListOfIntegerSets.html#ad3a548083440013c7717cea03dd177e1">TheList</a>[i];
 <a name="l00114"></a>00114 }
 </pre></div></div>
 </div>
@@ -187,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -196,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

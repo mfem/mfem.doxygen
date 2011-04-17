@@ -90,37 +90,232 @@ Collaboration diagram for Matrix:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7389f8977f7b1f46b339dab286c55389"></a><!-- doxytag: member="Matrix::Matrix" ref="a7389f8977f7b1f46b339dab286c55389" args="(int s)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a7389f8977f7b1f46b339dab286c55389">Matrix</a> (int s)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates matrix of width s. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e08946a59ee8adc8ffc4abf6ffe6985"></a><!-- doxytag: member="Matrix::Elem" ref="a0e08946a59ee8adc8ffc4abf6ffe6985" args="(int i, int j)=0" -->
-virtual double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a0e08946a59ee8adc8ffc4abf6ffe6985">Elem</a> (int i, int j)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to a_{ij}. Index i, j = 0 .. size-1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c8a5b31015eb02ea94d89cca6bd0e79"></a><!-- doxytag: member="Matrix::Elem" ref="a3c8a5b31015eb02ea94d89cca6bd0e79" args="(int i, int j) const =0" -->
-virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a3c8a5b31015eb02ea94d89cca6bd0e79">Elem</a> (int i, int j) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to a_{ij}. Index i, j = 0 .. size-1. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27c54a4164ba326fe03513d70ba35880"></a><!-- doxytag: member="Matrix::Inverse" ref="a27c54a4164ba326fe03513d70ba35880" args="() const =0" -->
-virtual <a class="el" href="classMatrixInverse.html">MatrixInverse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a27c54a4164ba326fe03513d70ba35880">Inverse</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to (approximation) of the matrix inverse. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f211419d7db6889be2efadcab8f4c95"></a><!-- doxytag: member="Matrix::Finalize" ref="a4f211419d7db6889be2efadcab8f4c95" args="(int)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a4f211419d7db6889be2efadcab8f4c95">Finalize</a> (int)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalizes the matrix initialization. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a378d523c50f4b2b46f3badfec9fc55b9"></a><!-- doxytag: member="Matrix::Print" ref="a378d523c50f4b2b46f3badfec9fc55b9" args="(ostream &amp;out=cout, int width=4) const " -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a378d523c50f4b2b46f3badfec9fc55b9">Print</a> (ostream &amp;out=cout, int width=4) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix to stream out. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8d10e89f7b47ab95a341d70df651554"></a><!-- doxytag: member="Matrix::~Matrix" ref="ac8d10e89f7b47ab95a341d70df651554" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ac8d10e89f7b47ab95a341d70df651554">~Matrix</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys matrix. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a7389f8977f7b1f46b339dab286c55389">Matrix</a> (int s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates matrix of width s.  <a href="#a7389f8977f7b1f46b339dab286c55389"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a0e08946a59ee8adc8ffc4abf6ffe6985">Elem</a> (int i, int j)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to a_{ij}. Index i, j = 0 .. size-1.  <a href="#a0e08946a59ee8adc8ffc4abf6ffe6985"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a3c8a5b31015eb02ea94d89cca6bd0e79">Elem</a> (int i, int j) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to a_{ij}. Index i, j = 0 .. size-1.  <a href="#a3c8a5b31015eb02ea94d89cca6bd0e79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classMatrixInverse.html">MatrixInverse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a27c54a4164ba326fe03513d70ba35880">Inverse</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to (approximation) of the matrix inverse.  <a href="#a27c54a4164ba326fe03513d70ba35880"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a4f211419d7db6889be2efadcab8f4c95">Finalize</a> (int)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalizes the matrix initialization.  <a href="#a4f211419d7db6889be2efadcab8f4c95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a378d523c50f4b2b46f3badfec9fc55b9">Print</a> (ostream &amp;out=cout, int width=4) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix to stream out.  <a href="#a378d523c50f4b2b46f3badfec9fc55b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ac8d10e89f7b47ab95a341d70df651554">~Matrix</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys matrix.  <a href="#ac8d10e89f7b47ab95a341d70df651554"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae390a52e29bdbc6c946aadb0ba74f918"></a><!-- doxytag: member="Matrix::MatrixInverse" ref="ae390a52e29bdbc6c946aadb0ba74f918" args="" -->
-class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ae390a52e29bdbc6c946aadb0ba74f918">MatrixInverse</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ae390a52e29bdbc6c946aadb0ba74f918">MatrixInverse</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Abstract data type matrix. </p>
 
 <p>Definition at line <a class="el" href="matrix_8hpp_source.html#l00023">23</a> of file <a class="el" href="matrix_8hpp_source.html">matrix.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7389f8977f7b1f46b339dab286c55389"></a><!-- doxytag: member="Matrix::Matrix" ref="a7389f8977f7b1f46b339dab286c55389" args="(int s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Creates matrix of width s. </p>
+
+<p>Definition at line <a class="el" href="matrix_8hpp_source.html#l00028">28</a> of file <a class="el" href="matrix_8hpp_source.html">matrix.hpp</a>.</p>
+
+<p>References <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8d10e89f7b47ab95a341d70df651554"></a><!-- doxytag: member="Matrix::~Matrix" ref="ac8d10e89f7b47ab95a341d70df651554" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Matrix::~Matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Destroys matrix. </p>
+
+<p>Definition at line <a class="el" href="matrix_8hpp_source.html#l00046">46</a> of file <a class="el" href="matrix_8hpp_source.html">matrix.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a0e08946a59ee8adc8ffc4abf6ffe6985"></a><!-- doxytag: member="Matrix::Elem" ref="a0e08946a59ee8adc8ffc4abf6ffe6985" args="(int i, int j)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double&amp; Matrix::Elem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns reference to a_{ij}. Index i, j = 0 .. size-1. </p>
+
+<p>Implemented in <a class="el" href="classBilinearForm.html#a8bccc630fe324b555a09dba707ed9a5d">BilinearForm</a>, <a class="el" href="classMixedBilinearForm.html#a89b64764851889542c7c1e82c208d70f">MixedBilinearForm</a>, <a class="el" href="classDenseMatrix.html#a036fdb032ac4b42ce8035aa124cab698">DenseMatrix</a>, and <a class="el" href="classSparseMatrix.html#a3057ad02e2ac53dbe8acda4e29b1ec9c">SparseMatrix</a>.</p>
+
+<p>Referenced by <a class="el" href="sparsesmoothers_8cpp_source.html#l00044">DSmoother::Mult()</a>, and <a class="el" href="matrix_8cpp_source.html#l00019">Print()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c8a5b31015eb02ea94d89cca6bd0e79"></a><!-- doxytag: member="Matrix::Elem" ref="a3c8a5b31015eb02ea94d89cca6bd0e79" args="(int i, int j) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const double&amp; Matrix::Elem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns constant reference to a_{ij}. Index i, j = 0 .. size-1. </p>
+
+<p>Implemented in <a class="el" href="classBilinearForm.html#aafeec51fe51a57503ddce38af1e7e3fd">BilinearForm</a>, <a class="el" href="classMixedBilinearForm.html#add8e974383d5426a4ab6dbfe4a2905e6">MixedBilinearForm</a>, <a class="el" href="classDenseMatrix.html#a2479596fe4e185d59163d09274a1d116">DenseMatrix</a>, and <a class="el" href="classSparseMatrix.html#ae57e2afa21cb843e1369ea44c4fe24fc">SparseMatrix</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f211419d7db6889be2efadcab8f4c95"></a><!-- doxytag: member="Matrix::Finalize" ref="a4f211419d7db6889be2efadcab8f4c95" args="(int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Matrix::Finalize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Finalizes the matrix initialization. </p>
+
+<p>Reimplemented in <a class="el" href="classBilinearForm.html#aac30a883274e8a56984658e399e2a9a7">BilinearForm</a>, <a class="el" href="classMixedBilinearForm.html#aa065ade61cec1afb281a8443eb759d64">MixedBilinearForm</a>, and <a class="el" href="classSparseMatrix.html#a2b0c0939262509d162f1429de0e4219f">SparseMatrix</a>.</p>
+
+<p>Definition at line <a class="el" href="matrix_8hpp_source.html#l00040">40</a> of file <a class="el" href="matrix_8hpp_source.html">matrix.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27c54a4164ba326fe03513d70ba35880"></a><!-- doxytag: member="Matrix::Inverse" ref="a27c54a4164ba326fe03513d70ba35880" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classMatrixInverse.html">MatrixInverse</a>* Matrix::Inverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns a pointer to (approximation) of the matrix inverse. </p>
+
+<p>Implemented in <a class="el" href="classBilinearForm.html#a59ce4c33ac3f1110760ca1230b38a7c8">BilinearForm</a>, <a class="el" href="classMixedBilinearForm.html#a12a767fd2a92d0bfab360c8a69568876">MixedBilinearForm</a>, <a class="el" href="classDenseMatrix.html#ae618148364920b2f36493766d61dcfb4">DenseMatrix</a>, and <a class="el" href="classSparseMatrix.html#ad39f3b257c21afff15f752f7db07a9a6">SparseMatrix</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a378d523c50f4b2b46f3badfec9fc55b9"></a><!-- doxytag: member="Matrix::Print" ref="a378d523c50f4b2b46f3badfec9fc55b9" args="(ostream &amp;out=cout, int width=4) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::Print </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code>cout</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prints matrix to stream out. </p>
+
+<p>Reimplemented in <a class="el" href="classDenseMatrix.html#a121686877262cd82f5396ed541493dc6">DenseMatrix</a>, and <a class="el" href="classSparseMatrix.html#a5f41461d34f7c3e5057c14150a6db41f">SparseMatrix</a>.</p>
+
+<p>Definition at line <a class="el" href="matrix_8cpp_source.html#l00019">19</a> of file <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+<p>References <a class="el" href="classMatrix.html#a0e08946a59ee8adc8ffc4abf6ffe6985">Elem()</a>, and <a class="el" href="operator_8hpp_source.html#l00021">Operator::size</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" id="ae390a52e29bdbc6c946aadb0ba74f918"></a><!-- doxytag: member="Matrix::MatrixInverse" ref="ae390a52e29bdbc6c946aadb0ba74f918" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classMatrixInverse.html">MatrixInverse</a><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="matrix_8hpp_source.html#l00025">25</a> of file <a class="el" href="matrix_8hpp_source.html">matrix.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="matrix_8hpp_source.html">matrix.hpp</a></li>
 <li><a class="el" href="matrix_8cpp_source.html">matrix.cpp</a></li>
 </ul>
@@ -130,7 +325,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -139,7 +334,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

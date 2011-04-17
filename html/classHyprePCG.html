@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">HyprePCG Class Reference</div>  </div>
 </div>
@@ -89,40 +90,338 @@ Collaboration diagram for HyprePCG:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32fb41f878f624d4c0c85b85a8de0729"></a><!-- doxytag: member="HyprePCG::HyprePCG" ref="a32fb41f878f624d4c0c85b85a8de0729" args="(HypreParMatrix &amp;_A)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>HyprePCG</b> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;_A)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb4c1fe6a3addccb48bf8524cc0c2bec"></a><!-- doxytag: member="HyprePCG::SetTol" ref="acb4c1fe6a3addccb48bf8524cc0c2bec" args="(double tol)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTol</b> (double tol)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba8948cc7f5bb22438db30bc3a9abf64"></a><!-- doxytag: member="HyprePCG::SetMaxIter" ref="aba8948cc7f5bb22438db30bc3a9abf64" args="(int max_iter)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMaxIter</b> (int max_iter)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedf1b14e744d87c5bd6259c8a4d8b7e8"></a><!-- doxytag: member="HyprePCG::SetLogging" ref="aedf1b14e744d87c5bd6259c8a4d8b7e8" args="(int logging)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLogging</b> (int logging)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcde200456322e7e51e7c9ac6276a6d2"></a><!-- doxytag: member="HyprePCG::SetPrintLevel" ref="afcde200456322e7e51e7c9ac6276a6d2" args="(int print_lvl)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPrintLevel</b> (int print_lvl)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e8a3ab4eca497899cc105d2088edb95"></a><!-- doxytag: member="HyprePCG::SetPreconditioner" ref="a9e8a3ab4eca497899cc105d2088edb95" args="(HypreSolver &amp;precond)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a9e8a3ab4eca497899cc105d2088edb95">SetPreconditioner</a> (<a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;precond)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hypre solver to be used as a preconditioner. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0762b854807403bfc25a36c3126476d8"></a><!-- doxytag: member="HyprePCG::SetZeroInintialIterate" ref="a0762b854807403bfc25a36c3126476d8" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8">SetZeroInintialIterate</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">non-hypre setting <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0ff17c0202202ac737bf483f94b52bd"></a><!-- doxytag: member="HyprePCG::operator HYPRE_Solver" ref="ae0ff17c0202202ac737bf483f94b52bd" args="() const " -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd">operator HYPRE_Solver</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The typecast to HYPRE_Solver returns the internal pcg_solver. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12cdbf1bcc5ffb1abbc259a76bf56e0c"></a><!-- doxytag: member="HyprePCG::SetupFcn" ref="a12cdbf1bcc5ffb1abbc259a76bf56e0c" args="() const " -->
-virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c">SetupFcn</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">PCG Setup function. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a857deae792f5985f07f6f5911ef5f492"></a><!-- doxytag: member="HyprePCG::SolveFcn" ref="a857deae792f5985f07f6f5911ef5f492" args="() const " -->
-virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492">SolveFcn</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">PCG Solve function. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaded11183cc28d5a43268e43570c78ba"></a><!-- doxytag: member="HyprePCG::Mult" ref="aaded11183cc28d5a43268e43570c78ba" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba">Mult</a> (const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax=b with hypre's PCG. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a32fb41f878f624d4c0c85b85a8de0729">HyprePCG</a> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;_A)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#acb4c1fe6a3addccb48bf8524cc0c2bec">SetTol</a> (double tol)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#aba8948cc7f5bb22438db30bc3a9abf64">SetMaxIter</a> (int max_iter)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#aedf1b14e744d87c5bd6259c8a4d8b7e8">SetLogging</a> (int logging)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#afcde200456322e7e51e7c9ac6276a6d2">SetPrintLevel</a> (int print_lvl)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a9e8a3ab4eca497899cc105d2088edb95">SetPreconditioner</a> (<a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;precond)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hypre solver to be used as a preconditioner.  <a href="#a9e8a3ab4eca497899cc105d2088edb95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8">SetZeroInintialIterate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">non-hypre setting  <a href="#a0762b854807403bfc25a36c3126476d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd">operator HYPRE_Solver</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The typecast to HYPRE_Solver returns the internal pcg_solver.  <a href="#ae0ff17c0202202ac737bf483f94b52bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c">SetupFcn</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">PCG Setup function.  <a href="#a12cdbf1bcc5ffb1abbc259a76bf56e0c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492">SolveFcn</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">PCG Solve function.  <a href="#a857deae792f5985f07f6f5911ef5f492"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba">Mult</a> (const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax=b with hypre's PCG.  <a href="#aaded11183cc28d5a43268e43570c78ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a350b2485a39c995323e37847ddb2351e">~HyprePCG</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a7814b70afc23b2b53497bf183dc040a7">print_level</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">use_zero_initial_iterate</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">HYPRE_Solver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">pcg_solver</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>PCG solver in hypre. </p>
 
 <p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00219">219</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a32fb41f878f624d4c0c85b85a8de0729"></a><!-- doxytag: member="HyprePCG::HyprePCG" ref="a32fb41f878f624d4c0c85b85a8de0729" args="(HypreParMatrix &amp;_A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HyprePCG::HyprePCG </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>_A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a350b2485a39c995323e37847ddb2351e"></a><!-- doxytag: member="HyprePCG::~HyprePCG" ref="a350b2485a39c995323e37847ddb2351e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HyprePCG::~HyprePCG </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aaded11183cc28d5a43268e43570c78ba"></a><!-- doxytag: member="HyprePCG::Mult" ref="aaded11183cc28d5a43268e43570c78ba" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void HyprePCG::Mult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Solve Ax=b with hypre's PCG. </p>
+
+<p>Reimplemented from <a class="el" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd">HypreSolver</a>.</p>
+
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0ff17c0202202ac737bf483f94b52bd"></a><!-- doxytag: member="HyprePCG::operator HYPRE_Solver" ref="ae0ff17c0202202ac737bf483f94b52bd" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HyprePCG::operator HYPRE_Solver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The typecast to HYPRE_Solver returns the internal pcg_solver. </p>
+
+<p>Implements <a class="el" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd">HypreSolver</a>.</p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00240">240</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>References <a class="el" href="hypre_8hpp_source.html#l00223">pcg_solver</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aedf1b14e744d87c5bd6259c8a4d8b7e8"></a><!-- doxytag: member="HyprePCG::SetLogging" ref="aedf1b14e744d87c5bd6259c8a4d8b7e8" args="(int logging)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetLogging </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>logging</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aba8948cc7f5bb22438db30bc3a9abf64"></a><!-- doxytag: member="HyprePCG::SetMaxIter" ref="aba8948cc7f5bb22438db30bc3a9abf64" args="(int max_iter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetMaxIter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e8a3ab4eca497899cc105d2088edb95"></a><!-- doxytag: member="HyprePCG::SetPreconditioner" ref="a9e8a3ab4eca497899cc105d2088edb95" args="(HypreSolver &amp;precond)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetPreconditioner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;&#160;</td>
+          <td class="paramname"><em>precond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the hypre solver to be used as a preconditioner. </p>
+
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afcde200456322e7e51e7c9ac6276a6d2"></a><!-- doxytag: member="HyprePCG::SetPrintLevel" ref="afcde200456322e7e51e7c9ac6276a6d2" args="(int print_lvl)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetPrintLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>print_lvl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb4c1fe6a3addccb48bf8524cc0c2bec"></a><!-- doxytag: member="HyprePCG::SetTol" ref="acb4c1fe6a3addccb48bf8524cc0c2bec" args="(double tol)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetTol </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12cdbf1bcc5ffb1abbc259a76bf56e0c"></a><!-- doxytag: member="HyprePCG::SetupFcn" ref="a12cdbf1bcc5ffb1abbc259a76bf56e0c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HYPRE_PtrToParSolverFcn HyprePCG::SetupFcn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>PCG Setup function. </p>
+
+<p>Implements <a class="el" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218">HypreSolver</a>.</p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00243">243</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0762b854807403bfc25a36c3126476d8"></a><!-- doxytag: member="HyprePCG::SetZeroInintialIterate" ref="a0762b854807403bfc25a36c3126476d8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetZeroInintialIterate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>non-hypre setting </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00237">237</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>References <a class="el" href="hypre_8hpp_source.html#l00222">use_zero_initial_iterate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a857deae792f5985f07f6f5911ef5f492"></a><!-- doxytag: member="HyprePCG::SolveFcn" ref="a857deae792f5985f07f6f5911ef5f492" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HYPRE_PtrToParSolverFcn HyprePCG::SolveFcn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>PCG Solve function. </p>
+
+<p>Implements <a class="el" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59">HypreSolver</a>.</p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00246">246</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="afe8418d6e4b0548be4c2c9139c9f8de9"></a><!-- doxytag: member="HyprePCG::pcg_solver" ref="afe8418d6e4b0548be4c2c9139c9f8de9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HYPRE_Solver <a class="el" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">HyprePCG::pcg_solver</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00223">223</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00240">operator HYPRE_Solver()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7814b70afc23b2b53497bf183dc040a7"></a><!-- doxytag: member="HyprePCG::print_level" ref="a7814b70afc23b2b53497bf183dc040a7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classHyprePCG.html#a7814b70afc23b2b53497bf183dc040a7">HyprePCG::print_level</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00222">222</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f9057e03342230474176e94dfe3e48c"></a><!-- doxytag: member="HyprePCG::use_zero_initial_iterate" ref="a7f9057e03342230474176e94dfe3e48c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">HyprePCG::use_zero_initial_iterate</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00222">222</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00237">SetZeroInintialIterate()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="hypre_8hpp_source.html">hypre.hpp</a></li>
 </ul>
 </div>
@@ -131,7 +430,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -140,7 +439,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

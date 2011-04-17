@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">vector.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="vector_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -89,19 +90,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">protected</span>:
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025    <span class="keywordtype">int</span> size, allocsize;
-<a name="l00026"></a>00026    <span class="keywordtype">double</span> * data;
+<a name="l00025"></a><a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">00025</a>    <span class="keywordtype">int</span> <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a>, <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a>;
+<a name="l00026"></a><a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">00026</a>    <span class="keywordtype">double</span> * <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>;
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a>00029 
-<a name="l00031"></a><a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">00031</a>    <a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5" title="Default constructor for Vector. Sets size = 0 and data = NULL.">Vector</a> () { allocsize = size = 0; data = 0; };
+<a name="l00031"></a><a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">00031</a>    <a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5" title="Default constructor for Vector. Sets size = 0 and data = NULL.">Vector</a> () { <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = 0; <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = 0; };
 <a name="l00032"></a>00032 
 <a name="l00034"></a>00034    <a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5" title="Default constructor for Vector. Sets size = 0 and data = NULL.">Vector</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;);
 <a name="l00035"></a>00035 
 <a name="l00037"></a>00037    <a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5" title="Default constructor for Vector. Sets size = 0 and data = NULL.">Vector</a> (<span class="keywordtype">int</span> s);
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039    <a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5" title="Default constructor for Vector. Sets size = 0 and data = NULL.">Vector</a> (<span class="keywordtype">double</span> *_data, <span class="keywordtype">int</span> _size)
-<a name="l00040"></a>00040    { data = _data; size = _size; allocsize = -size; }
+<a name="l00039"></a><a class="code" href="classVector.html#ab44987cccb5537b3215916045c0e4d2e">00039</a>    <a class="code" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5" title="Default constructor for Vector. Sets size = 0 and data = NULL.">Vector</a> (<span class="keywordtype">double</span> *_data, <span class="keywordtype">int</span> _size)
+<a name="l00040"></a>00040    { <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = _data; <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = _size; <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = -<a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a>; }
 <a name="l00041"></a>00041 
 <a name="l00043"></a>00043    <span class="keywordtype">void</span> <a class="code" href="classVector.html#ab81369435143fa2e5898c36542fffee2" title="Reads a vector from multpile files.">Load</a> (istream ** in, <span class="keywordtype">int</span> np, <span class="keywordtype">int</span> * dim);
 <a name="l00044"></a>00044 
@@ -111,26 +112,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00050"></a>00050 
 <a name="l00052"></a>00052    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<span class="keywordtype">int</span> s);
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054    <span class="keywordtype">void</span> SetData(<span class="keywordtype">double</span> *d) { data = d; }
+<a name="l00054"></a><a class="code" href="classVector.html#a8796799b2ea1faf5b551a5a751b47ddb">00054</a>    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a8796799b2ea1faf5b551a5a751b47ddb">SetData</a>(<span class="keywordtype">double</span> *d) { <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = d; }
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056    <span class="keywordtype">void</span> SetDataAndSize(<span class="keywordtype">double</span> *d, <span class="keywordtype">int</span> s)
-<a name="l00057"></a>00057    { data = d; size = s; allocsize = -s; }
+<a name="l00056"></a><a class="code" href="classVector.html#a35f720a71ee87fb26053c9b02f280d20">00056</a>    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a35f720a71ee87fb26053c9b02f280d20">SetDataAndSize</a>(<span class="keywordtype">double</span> *d, <span class="keywordtype">int</span> s)
+<a name="l00057"></a>00057    { <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = d; <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = s; <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = -s; }
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059    <span class="keywordtype">void</span> MakeDataOwner() { allocsize = abs(allocsize); }
+<a name="l00059"></a><a class="code" href="classVector.html#ac3164e4177dd29acc086cf4e6940c992">00059</a>    <span class="keywordtype">void</span> <a class="code" href="classVector.html#ac3164e4177dd29acc086cf4e6940c992">MakeDataOwner</a>() { <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = abs(<a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a>); }
 <a name="l00060"></a>00060 
 <a name="l00062"></a>00062    <span class="keywordtype">void</span> <a class="code" href="classVector.html#ae75d1f4cbfd1efc49ebf6724063724bd" title="Destroy a vector.">Destroy</a>();
 <a name="l00063"></a>00063 
-<a name="l00065"></a><a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1">00065</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1" title="Returns the size of the vector.">Size</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> size;};
+<a name="l00065"></a><a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1">00065</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1" title="Returns the size of the vector.">Size</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a>;};
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067    <span class="comment">// double *GetData() { return data; }</span>
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069    <span class="keyword">inline</span> <span class="keywordtype">double</span> *GetData()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> data; }
+<a name="l00069"></a><a class="code" href="classVector.html#a789ef615634287c103a2fb111de8cab9">00069</a>    <span class="keyword">inline</span> <span class="keywordtype">double</span> *<a class="code" href="classVector.html#a789ef615634287c103a2fb111de8cab9">GetData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>; }
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071    <span class="keyword">inline</span> operator double *() { <span class="keywordflow">return</span> data; }
+<a name="l00071"></a><a class="code" href="classVector.html#a9f7a7bf58c89b44fa3ad6a672283f0d9">00071</a>    <span class="keyword">inline</span> <a class="code" href="classVector.html#a9f7a7bf58c89b44fa3ad6a672283f0d9">operator double *</a>() { <span class="keywordflow">return</span> <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>; }
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073    <span class="keyword">inline</span> operator const double *()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> data; }
+<a name="l00073"></a><a class="code" href="classVector.html#a3f40965433c868daea477655d86e36a6">00073</a>    <span class="keyword">inline</span> <a class="code" href="classVector.html#a3f40965433c868daea477655d86e36a6">operator const double *</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>; }
 <a name="l00074"></a>00074 
-<a name="l00076"></a><a class="code" href="classVector.html#ad549043dedd5cc99e3e983edc87a4fdc">00076</a>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVector.html#ad549043dedd5cc99e3e983edc87a4fdc" title="Changes the ownership of the the data.">StealData</a>(<span class="keywordtype">double</span> **p) { *p = data; data = 0; size = 0; }
+<a name="l00076"></a><a class="code" href="classVector.html#ad549043dedd5cc99e3e983edc87a4fdc">00076</a>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVector.html#ad549043dedd5cc99e3e983edc87a4fdc" title="Changes the ownership of the the data.">StealData</a>(<span class="keywordtype">double</span> **p) { *p = <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>; <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = 0; <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = 0; }
 <a name="l00077"></a>00077 
 <a name="l00079"></a>00079    <span class="keywordtype">double</span> &amp; <a class="code" href="classVector.html#a5428234e3ce7d13818b9277b5a9e1c38" title="Sets value in vector. Index i = 0 .. size-1.">Elem</a> (<span class="keywordtype">int</span> i);
 <a name="l00080"></a>00080 
@@ -140,29 +141,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00086"></a>00086 
 <a name="l00088"></a>00088    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; <a class="code" href="classVector.html#a6b861245b8846a75965bc37365db25e6" title="Sets value in vector. Index i = 0 .. size-1.">operator() </a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090    <span class="keywordtype">double</span> operator*(<span class="keyword">const</span> <span class="keywordtype">double</span> *) <span class="keyword">const</span>;
+<a name="l00090"></a>00090    <span class="keywordtype">double</span> <a class="code" href="classVector.html#aef3838faacfc534d337abd31f61cb20d">operator*</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *) <span class="keyword">const</span>;
 <a name="l00091"></a>00091 
-<a name="l00093"></a>00093    <span class="keywordtype">double</span> operator*(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; v) <span class="keyword">const</span>;
+<a name="l00093"></a>00093    <span class="keywordtype">double</span> <a class="code" href="classVector.html#aef3838faacfc534d337abd31f61cb20d">operator*</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; v) <span class="keyword">const</span>;
 <a name="l00094"></a>00094 
 <a name="l00096"></a>00096    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#ae48c467a9f65d60e2f7455aba4ca1239" title="Redefine &#39;=&#39; for vector = vector.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v);
 <a name="l00097"></a>00097 
 <a name="l00099"></a>00099    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#ae48c467a9f65d60e2f7455aba4ca1239" title="Redefine &#39;=&#39; for vector = vector.">operator=</a>(<span class="keywordtype">double</span> value);
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; operator*=(<span class="keywordtype">double</span> c);
+<a name="l00101"></a>00101    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#a2d70c04ca23ca7b3de43dd5fada83302">operator*=</a>(<span class="keywordtype">double</span> c);
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; operator/=(<span class="keywordtype">double</span> c);
+<a name="l00103"></a>00103    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#a22d89ac025a3f884fde979bd0f61201d">operator/=</a>(<span class="keywordtype">double</span> c);
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; operator-=(<span class="keywordtype">double</span> c);
+<a name="l00105"></a>00105    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#a7dac9d980f660cf828dd85958cb36f0a">operator-=</a>(<span class="keywordtype">double</span> c);
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; operator-=(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v);
+<a name="l00107"></a>00107    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#a7dac9d980f660cf828dd85958cb36f0a">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v);
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; operator+=(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v);
+<a name="l00109"></a>00109    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#ac83a958cb5d93428528e40394c5257a6">operator+=</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v);
 <a name="l00110"></a>00110 
 <a name="l00112"></a>00112    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#a7928366c4fbc6c190936f2a56bf5c65c" title="(*this) += a * Va">Add</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> a, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;Va);
 <a name="l00113"></a>00113 
 <a name="l00115"></a>00115    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; <a class="code" href="classVector.html#ad58cf5e1a91a290dc8598cc174eb36d4" title="(*this) = a * x">Set</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> a, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x);
 <a name="l00116"></a>00116 
-<a name="l00117"></a>00117    <span class="keywordtype">void</span> SetVector (<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v, <span class="keywordtype">int</span> offset);
+<a name="l00117"></a>00117    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a3b1032cbd82bb8e09f7e6e9697a16493">SetVector</a> (<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;v, <span class="keywordtype">int</span> offset);
 <a name="l00118"></a>00118 
 <a name="l00120"></a>00120    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a228564f705700c2dc1f743b197aa41e8" title="(*this) = -(*this)">Neg</a>();
 <a name="l00121"></a>00121 
@@ -182,9 +183,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00142"></a>00142    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classVector.html#a667c85b165c4e78a35fed438f5ddd70b" title="Do v = v1 - v2.">subtract</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> a, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x,
 <a name="l00143"></a>00143                         <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;y, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;z);
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145    <span class="keywordtype">void</span> GetSubVector(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elemvect) <span class="keyword">const</span>;
+<a name="l00145"></a>00145    <span class="keywordtype">void</span> <a class="code" href="classVector.html#ab9f417235f435b9cafc1c7caf99ea2f6">GetSubVector</a>(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elemvect) <span class="keyword">const</span>;
 <a name="l00146"></a>00146 
-<a name="l00147"></a>00147    <span class="keywordtype">void</span> SetSubVector(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elemvect);
+<a name="l00147"></a>00147    <span class="keywordtype">void</span> <a class="code" href="classVector.html#ac5ba98844eb09dc0a74e34f9a77da564">SetSubVector</a>(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elemvect);
 <a name="l00148"></a>00148 
 <a name="l00150"></a>00150    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a73271245854a00bd978aba7e8a6a8961" title="Add (element) subvector to the vector.">AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp; dofs, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; elemvect);
 <a name="l00151"></a>00151    <span class="keywordtype">void</span> <a class="code" href="classVector.html#a73271245854a00bd978aba7e8a6a8961" title="Add (element) subvector to the vector.">AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp; dofs, <span class="keyword">const</span> <span class="keywordtype">double</span> a,
@@ -211,66 +212,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00182"></a>00182 {
 <a name="l00183"></a>00183    <span class="keywordflow">if</span> (s &gt; 0)
 <a name="l00184"></a>00184    {
-<a name="l00185"></a>00185       allocsize = size = s;
-<a name="l00186"></a>00186       data = <span class="keyword">new</span> <span class="keywordtype">double</span>[s];
+<a name="l00185"></a>00185       <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = s;
+<a name="l00186"></a>00186       <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = <span class="keyword">new</span> <span class="keywordtype">double</span>[s];
 <a name="l00187"></a>00187    }
 <a name="l00188"></a>00188    <span class="keywordflow">else</span>
 <a name="l00189"></a>00189    {
-<a name="l00190"></a>00190       allocsize = size = 0;
-<a name="l00191"></a>00191       data = NULL;
+<a name="l00190"></a>00190       <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = 0;
+<a name="l00191"></a>00191       <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = NULL;
 <a name="l00192"></a>00192    }
 <a name="l00193"></a>00193 }
 <a name="l00194"></a>00194 
 <a name="l00195"></a><a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a">00195</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">Vector::SetSize</a>(<span class="keywordtype">int</span> s)
 <a name="l00196"></a>00196 {
-<a name="l00197"></a>00197    <span class="keywordflow">if</span> (s == size)
+<a name="l00197"></a>00197    <span class="keywordflow">if</span> (s == <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a>)
 <a name="l00198"></a>00198       <span class="keywordflow">return</span>;
-<a name="l00199"></a>00199    <span class="keywordflow">if</span> (s &lt;= abs(allocsize))
+<a name="l00199"></a>00199    <span class="keywordflow">if</span> (s &lt;= abs(<a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a>))
 <a name="l00200"></a>00200    {
-<a name="l00201"></a>00201       size = s;
+<a name="l00201"></a>00201       <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = s;
 <a name="l00202"></a>00202       <span class="keywordflow">return</span>;
 <a name="l00203"></a>00203    }
-<a name="l00204"></a>00204    <span class="keywordflow">if</span> (allocsize &gt; 0)
-<a name="l00205"></a>00205       <span class="keyword">delete</span> [] data;
-<a name="l00206"></a>00206    allocsize = size = s;
-<a name="l00207"></a>00207    data = <span class="keyword">new</span> <span class="keywordtype">double</span>[s];
+<a name="l00204"></a>00204    <span class="keywordflow">if</span> (<a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> &gt; 0)
+<a name="l00205"></a>00205       <span class="keyword">delete</span> [] <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>;
+<a name="l00206"></a>00206    <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = s;
+<a name="l00207"></a>00207    <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = <span class="keyword">new</span> <span class="keywordtype">double</span>[s];
 <a name="l00208"></a>00208 }
 <a name="l00209"></a>00209 
 <a name="l00210"></a><a class="code" href="classVector.html#ae75d1f4cbfd1efc49ebf6724063724bd">00210</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVector.html#ae75d1f4cbfd1efc49ebf6724063724bd" title="Destroy a vector.">Vector::Destroy</a>()
 <a name="l00211"></a>00211 {
-<a name="l00212"></a>00212    <span class="keywordflow">if</span> (allocsize &gt; 0)
-<a name="l00213"></a>00213       <span class="keyword">delete</span> [] data;
-<a name="l00214"></a>00214    allocsize = size = 0;
-<a name="l00215"></a>00215    data = NULL;
+<a name="l00212"></a>00212    <span class="keywordflow">if</span> (<a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> &gt; 0)
+<a name="l00213"></a>00213       <span class="keyword">delete</span> [] <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>;
+<a name="l00214"></a>00214    <a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> = <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a> = 0;
+<a name="l00215"></a>00215    <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> = NULL;
 <a name="l00216"></a>00216 }
 <a name="l00217"></a>00217 
 <a name="l00218"></a><a class="code" href="classVector.html#a6b861245b8846a75965bc37365db25e6">00218</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> &amp; <a class="code" href="classVector.html#a6b861245b8846a75965bc37365db25e6" title="Sets value in vector. Index i = 0 .. size-1.">Vector::operator() </a>(<span class="keywordtype">int</span> i)
 <a name="l00219"></a>00219 {
 <a name="l00220"></a>00220 <span class="preprocessor">#ifdef MFEM_DEBUG</span>
-<a name="l00221"></a>00221 <span class="preprocessor"></span>   <span class="keywordflow">if</span> (data == 0 || i &lt; 0 || i &gt;= size)
-<a name="l00222"></a>00222       mfem_error (<span class="stringliteral">&quot;Vector::operator()&quot;</span>);
+<a name="l00221"></a>00221 <span class="preprocessor"></span>   <span class="keywordflow">if</span> (<a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> == 0 || i &lt; 0 || i &gt;= <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a>)
+<a name="l00222"></a>00222       <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a> (<span class="stringliteral">&quot;Vector::operator()&quot;</span>);
 <a name="l00223"></a>00223 <span class="preprocessor">#endif</span>
 <a name="l00224"></a>00224 <span class="preprocessor"></span>
-<a name="l00225"></a>00225    <span class="keywordflow">return</span> data[i];
+<a name="l00225"></a>00225    <span class="keywordflow">return</span> <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>[i];
 <a name="l00226"></a>00226 }
 <a name="l00227"></a>00227 
 <a name="l00228"></a><a class="code" href="classVector.html#a747f215fb1fb99dde12cf7872a5eca2d">00228</a> <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; <a class="code" href="classVector.html#a6b861245b8846a75965bc37365db25e6" title="Sets value in vector. Index i = 0 .. size-1.">Vector::operator() </a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span>
 <a name="l00229"></a>00229 <span class="keyword"></span>{
 <a name="l00230"></a>00230 <span class="preprocessor">#ifdef MFEM_DEBUG</span>
-<a name="l00231"></a>00231 <span class="preprocessor"></span>   <span class="keywordflow">if</span> (data == 0 || i &lt; 0 || i &gt;= size)
-<a name="l00232"></a>00232       mfem_error (<span class="stringliteral">&quot;Vector::operator() const&quot;</span>);
+<a name="l00231"></a>00231 <span class="preprocessor"></span>   <span class="keywordflow">if</span> (<a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a> == 0 || i &lt; 0 || i &gt;= <a class="code" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a>)
+<a name="l00232"></a>00232       <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a> (<span class="stringliteral">&quot;Vector::operator() const&quot;</span>);
 <a name="l00233"></a>00233 <span class="preprocessor">#endif</span>
 <a name="l00234"></a>00234 <span class="preprocessor"></span>
-<a name="l00235"></a>00235    <span class="keywordflow">return</span> data[i];
+<a name="l00235"></a>00235    <span class="keywordflow">return</span> <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>[i];
 <a name="l00236"></a>00236 }
 <a name="l00237"></a>00237 
 <a name="l00238"></a><a class="code" href="classVector.html#a2eb3c49587a4f12cade7895ccb73f6a0">00238</a> <span class="keyword">inline</span> <a class="code" href="classVector.html#a2eb3c49587a4f12cade7895ccb73f6a0" title="Destroys vector.">Vector::~Vector</a>()
 <a name="l00239"></a>00239 {
-<a name="l00240"></a>00240    <span class="keywordflow">if</span> (allocsize &gt; 0)
-<a name="l00241"></a>00241       <span class="keyword">delete</span> [] data;
+<a name="l00240"></a>00240    <span class="keywordflow">if</span> (<a class="code" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a> &gt; 0)
+<a name="l00241"></a>00241       <span class="keyword">delete</span> [] <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>;
 <a name="l00242"></a>00242 }
 <a name="l00243"></a>00243 
-<a name="l00244"></a>00244 <span class="keyword">inline</span> <span class="keywordtype">double</span> Distance(<span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keyword">const</span> <span class="keywordtype">double</span> *y, <span class="keyword">const</span> <span class="keywordtype">int</span> n)
+<a name="l00244"></a><a class="code" href="vector_8hpp.html#a3c281960864cd3797a0cb68c037f348d">00244</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="vector_8hpp.html#a3c281960864cd3797a0cb68c037f348d">Distance</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keyword">const</span> <span class="keywordtype">double</span> *y, <span class="keyword">const</span> <span class="keywordtype">int</span> n)
 <a name="l00245"></a>00245 {
 <a name="l00246"></a>00246    <span class="keywordtype">double</span> d = 0.0;
 <a name="l00247"></a>00247 
@@ -288,7 +289,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -297,7 +298,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

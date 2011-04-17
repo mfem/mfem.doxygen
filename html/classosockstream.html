@@ -60,7 +60,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">osockstream Class Reference</div>  </div>
 </div>
@@ -75,6 +77,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#a258ab36ed7bc5b163a97d3416b461165">osockstream</a> (int port, const char *hostname)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">send</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#a655534fb7352e118b101c8a7834d3f4f">~osockstream</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#a55d108982f6311c9d38bc66d057b23da">call_socket</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#a03865512e36a74a456e43f5b6a1e7ea2">send_through_socket</a> (int s, const char *Buf, int size)</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#acd1805865a75e6ca62a736124e6da78f">portnum</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">sent</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a> [128]</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Data type for output socket stream class. The class is used as client to send data to a server on a specified port number. One object of the class can be used for one time send of data to the server. The user writes in the stream, as in any other output stream and when the data is ready to be send function <a class="el" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">send()</a> has to be executed. Otherwise (if not executed) the destructor will send the data. </p>
@@ -109,6 +120,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="osockstream_8cpp_source.html#l00024">24</a> of file <a class="el" href="osockstream_8cpp_source.html">osockstream.cpp</a>.</p>
 
+<p>References <a class="el" href="osockstream_8hpp_source.html#l00028">machine</a>, <a class="el" href="osockstream_8hpp_source.html#l00027">portnum</a>, and <a class="el" href="osockstream_8hpp_source.html#l00027">sent</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a655534fb7352e118b101c8a7834d3f4f"></a><!-- doxytag: member="osockstream::~osockstream" ref="a655534fb7352e118b101c8a7834d3f4f" args="()" -->
@@ -128,11 +141,33 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="osockstream_8cpp_source.html#l00127">127</a> of file <a class="el" href="osockstream_8cpp_source.html">osockstream.cpp</a>.</p>
 
-<p>References <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>.</p>
+<p>References <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>, and <a class="el" href="osockstream_8hpp_source.html#l00027">sent</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a55d108982f6311c9d38bc66d057b23da"></a><!-- doxytag: member="osockstream::call_socket" ref="a55d108982f6311c9d38bc66d057b23da" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int osockstream::call_socket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="osockstream_8cpp_source.html#l00041">41</a> of file <a class="el" href="osockstream_8cpp_source.html">osockstream.cpp</a>.</p>
+
+<p>References <a class="el" href="osockstream_8hpp_source.html#l00028">machine</a>, and <a class="el" href="osockstream_8hpp_source.html#l00027">portnum</a>.</p>
+
+<p>Referenced by <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa4d87572e4f499c07d8003210bcf20ef"></a><!-- doxytag: member="osockstream::send" ref="aa4d87572e4f499c07d8003210bcf20ef" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -150,7 +185,98 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="osockstream_8cpp_source.html#l00086">86</a> of file <a class="el" href="osockstream_8cpp_source.html">osockstream.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="osockstream_8cpp_source.html#l00127">~osockstream()</a>.</p>
+<p>References <a class="el" href="osockstream_8cpp_source.html#l00041">call_socket()</a>, <a class="el" href="osockstream_8hpp_source.html#l00028">machine</a>, <a class="el" href="osockstream_8hpp_source.html#l00027">portnum</a>, <a class="el" href="osockstream_8cpp_source.html#l00064">send_through_socket()</a>, and <a class="el" href="osockstream_8hpp_source.html#l00027">sent</a>.</p>
+
+<p>Referenced by <a class="el" href="ex1_8cpp_source.html#l00027">main()</a>, and <a class="el" href="osockstream_8cpp_source.html#l00127">~osockstream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03865512e36a74a456e43f5b6a1e7ea2"></a><!-- doxytag: member="osockstream::send_through_socket" ref="a03865512e36a74a456e43f5b6a1e7ea2" args="(int s, const char *Buf, int size)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int osockstream::send_through_socket </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>Buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="osockstream_8cpp_source.html#l00064">64</a> of file <a class="el" href="osockstream_8cpp_source.html">osockstream.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a1f2fbeb94bff1c5178d5e04c1a52c937"></a><!-- doxytag: member="osockstream::machine" ref="a1f2fbeb94bff1c5178d5e04c1a52c937" args="[128]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char <a class="el" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">osockstream::machine</a>[128]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="osockstream_8hpp_source.html#l00028">28</a> of file <a class="el" href="osockstream_8hpp_source.html">osockstream.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="osockstream_8cpp_source.html#l00041">call_socket()</a>, <a class="el" href="osockstream_8cpp_source.html#l00024">osockstream()</a>, and <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd1805865a75e6ca62a736124e6da78f"></a><!-- doxytag: member="osockstream::portnum" ref="acd1805865a75e6ca62a736124e6da78f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classosockstream.html#acd1805865a75e6ca62a736124e6da78f">osockstream::portnum</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="osockstream_8hpp_source.html#l00027">27</a> of file <a class="el" href="osockstream_8hpp_source.html">osockstream.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="osockstream_8cpp_source.html#l00041">call_socket()</a>, <a class="el" href="osockstream_8cpp_source.html#l00024">osockstream()</a>, and <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a180a9d010e2d84a0f034e7df88e714c1"></a><!-- doxytag: member="osockstream::sent" ref="a180a9d010e2d84a0f034e7df88e714c1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">osockstream::sent</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="osockstream_8hpp_source.html#l00027">27</a> of file <a class="el" href="osockstream_8hpp_source.html">osockstream.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="osockstream_8cpp_source.html#l00024">osockstream()</a>, <a class="el" href="osockstream_8cpp_source.html#l00086">send()</a>, and <a class="el" href="osockstream_8cpp_source.html#l00127">~osockstream()</a>.</p>
 
 </div>
 </div>
@@ -164,7 +290,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -173,7 +299,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">mem_alloc.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="mem__alloc_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -85,27 +86,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00017"></a><a class="code" href="classStackPart.html">00017</a> <span class="keyword">class </span><a class="code" href="classStackPart.html">StackPart</a>
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a>00020    <a class="code" href="classStackPart.html">StackPart&lt;Elem, Num&gt;</a> *Prev;
-<a name="l00021"></a>00021    Elem Elements[Num];
+<a name="l00020"></a><a class="code" href="classStackPart.html#a635dc12dfd2a1bacb8891bbf053c2349">00020</a>    <a class="code" href="classStackPart.html">StackPart&lt;Elem, Num&gt;</a> *<a class="code" href="classStackPart.html#a635dc12dfd2a1bacb8891bbf053c2349">Prev</a>;
+<a name="l00021"></a><a class="code" href="classStackPart.html#a0125d30f00375922fcc52e689b7094e0">00021</a>    Elem <a class="code" href="classStackPart.html#a0125d30f00375922fcc52e689b7094e0">Elements</a>[Num];
 <a name="l00022"></a>00022 };
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
 <a name="l00025"></a><a class="code" href="classStack.html">00025</a> <span class="keyword">class </span><a class="code" href="classStack.html">Stack</a>
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">private</span>:
-<a name="l00028"></a>00028    <a class="code" href="classStackPart.html">StackPart &lt;Elem, Num&gt;</a> *TopPart, *TopFreePart;
-<a name="l00029"></a>00029    <span class="keywordtype">int</span> UsedInTop, SSize;
+<a name="l00028"></a><a class="code" href="classStack.html#aab9cf1f2a3c880d822a99273f9a3410c">00028</a>    <a class="code" href="classStackPart.html">StackPart &lt;Elem, Num&gt;</a> *<a class="code" href="classStack.html#aab9cf1f2a3c880d822a99273f9a3410c">TopPart</a>, *<a class="code" href="classStack.html#a2ac1a58546b3bfbb9733b11821dca478">TopFreePart</a>;
+<a name="l00029"></a><a class="code" href="classStack.html#af7b91b8d6099f525f12fedce38fd77d1">00029</a>    <span class="keywordtype">int</span> <a class="code" href="classStack.html#af7b91b8d6099f525f12fedce38fd77d1">UsedInTop</a>, <a class="code" href="classStack.html#ac0d0e4ab482e30365f1eff29bc2931d3">SSize</a>;
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a>00031    <a class="code" href="classStack.html">Stack</a>() { TopPart = TopFreePart = NULL; UsedInTop = Num; SSize = 0; };
-<a name="l00032"></a>00032    <span class="keywordtype">int</span> Size() { <span class="keywordflow">return</span> SSize; };
-<a name="l00033"></a>00033    <span class="keywordtype">void</span> Push (Elem E);
-<a name="l00034"></a>00034    Elem Pop();
-<a name="l00035"></a>00035    <span class="keywordtype">void</span> Clear();
-<a name="l00036"></a>00036    ~<a class="code" href="classStack.html">Stack</a>() { Clear(); };
+<a name="l00031"></a><a class="code" href="classStack.html#a969cb51d934d2384bee37a4418ffa9b6">00031</a>    <a class="code" href="classStack.html#a969cb51d934d2384bee37a4418ffa9b6">Stack</a>() { <a class="code" href="classStack.html#aab9cf1f2a3c880d822a99273f9a3410c">TopPart</a> = <a class="code" href="classStack.html#a2ac1a58546b3bfbb9733b11821dca478">TopFreePart</a> = NULL; <a class="code" href="classStack.html#af7b91b8d6099f525f12fedce38fd77d1">UsedInTop</a> = Num; <a class="code" href="classStack.html#ac0d0e4ab482e30365f1eff29bc2931d3">SSize</a> = 0; };
+<a name="l00032"></a><a class="code" href="classStack.html#ac18a29d6175db3bfcf7480c99593e024">00032</a>    <span class="keywordtype">int</span> <a class="code" href="classStack.html#ac18a29d6175db3bfcf7480c99593e024">Size</a>() { <span class="keywordflow">return</span> <a class="code" href="classStack.html#ac0d0e4ab482e30365f1eff29bc2931d3">SSize</a>; };
+<a name="l00033"></a>00033    <span class="keywordtype">void</span> <a class="code" href="classStack.html#aace06313a185eea5479010ba36de86c4">Push</a> (Elem E);
+<a name="l00034"></a>00034    Elem <a class="code" href="classStack.html#a862475d08dd6370838d3fb3ebed565a4">Pop</a>();
+<a name="l00035"></a>00035    <span class="keywordtype">void</span> <a class="code" href="classStack.html#a0d7dceb938166efc932b0c7fe3d9d8d8">Clear</a>();
+<a name="l00036"></a><a class="code" href="classStack.html#a3c556b5bf4dec6b5cb3ca723930b628d">00036</a>    <a class="code" href="classStack.html#a3c556b5bf4dec6b5cb3ca723930b628d">~Stack</a>() { <a class="code" href="classStack.html#a0d7dceb938166efc932b0c7fe3d9d8d8">Clear</a>(); };
 <a name="l00037"></a>00037 };
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
-<a name="l00040"></a>00040 <span class="keywordtype">void</span> <a class="code" href="classStack.html">Stack &lt;Elem, Num&gt;::Push</a> (Elem E)
+<a name="l00040"></a><a class="code" href="classStack.html#aace06313a185eea5479010ba36de86c4">00040</a> <span class="keywordtype">void</span> <a class="code" href="classStack.html">Stack &lt;Elem, Num&gt;::Push</a> (Elem E)
 <a name="l00041"></a>00041 {
 <a name="l00042"></a>00042    <a class="code" href="classStackPart.html">StackPart &lt;Elem, Num&gt;</a> *aux;
 <a name="l00043"></a>00043    <span class="keywordflow">if</span> (UsedInTop == Num)
@@ -114,31 +115,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00046"></a>00046          aux = <span class="keyword">new</span> <a class="code" href="classStackPart.html">StackPart &lt;Elem, Num&gt;</a>;
 <a name="l00047"></a>00047       <span class="keywordflow">else</span>
 <a name="l00048"></a>00048          TopFreePart = (aux = TopFreePart)-&gt;Prev;
-<a name="l00049"></a>00049       aux-&gt;Prev = TopPart;
+<a name="l00049"></a>00049       aux-&gt;<a class="code" href="classStackPart.html#a635dc12dfd2a1bacb8891bbf053c2349">Prev</a> = TopPart;
 <a name="l00050"></a>00050       TopPart = aux;
 <a name="l00051"></a>00051       UsedInTop = 0;
 <a name="l00052"></a>00052    }
-<a name="l00053"></a>00053    TopPart-&gt;Elements[UsedInTop++] = E;
+<a name="l00053"></a>00053    TopPart-&gt;<a class="code" href="classStackPart.html#a0125d30f00375922fcc52e689b7094e0">Elements</a>[UsedInTop++] = E;
 <a name="l00054"></a>00054    SSize++;
 <a name="l00055"></a>00055 }
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
-<a name="l00058"></a>00058 Elem <a class="code" href="classStack.html">Stack &lt;Elem, Num&gt;::Pop</a>()
+<a name="l00058"></a><a class="code" href="classStack.html#a862475d08dd6370838d3fb3ebed565a4">00058</a> Elem <a class="code" href="classStack.html">Stack &lt;Elem, Num&gt;::Pop</a>()
 <a name="l00059"></a>00059 {
 <a name="l00060"></a>00060    <a class="code" href="classStackPart.html">StackPart &lt;Elem, Num&gt;</a> *aux;
 <a name="l00061"></a>00061    <span class="keywordflow">if</span> (UsedInTop == 0)
 <a name="l00062"></a>00062    {
 <a name="l00063"></a>00063       TopPart = (aux = TopPart)-&gt;Prev;
-<a name="l00064"></a>00064       aux-&gt;Prev = TopFreePart;
+<a name="l00064"></a>00064       aux-&gt;<a class="code" href="classStackPart.html#a635dc12dfd2a1bacb8891bbf053c2349">Prev</a> = TopFreePart;
 <a name="l00065"></a>00065       TopFreePart = aux;
 <a name="l00066"></a>00066       UsedInTop = Num;
 <a name="l00067"></a>00067    }
 <a name="l00068"></a>00068    SSize--;
-<a name="l00069"></a>00069    <span class="keywordflow">return</span> TopPart-&gt;Elements[--UsedInTop];
+<a name="l00069"></a>00069    <span class="keywordflow">return</span> TopPart-&gt;<a class="code" href="classStackPart.html#a0125d30f00375922fcc52e689b7094e0">Elements</a>[--UsedInTop];
 <a name="l00070"></a>00070 }
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
-<a name="l00073"></a>00073 <span class="keywordtype">void</span> <a class="code" href="classStack.html">Stack &lt;Elem, Num&gt;::Clear</a>()
+<a name="l00073"></a><a class="code" href="classStack.html#a0d7dceb938166efc932b0c7fe3d9d8d8">00073</a> <span class="keywordtype">void</span> <a class="code" href="classStack.html">Stack &lt;Elem, Num&gt;::Clear</a>()
 <a name="l00074"></a>00074 {
 <a name="l00075"></a>00075    <a class="code" href="classStackPart.html">StackPart &lt;Elem, Num&gt;</a> *aux;
 <a name="l00076"></a>00076    <span class="keywordflow">while</span> (TopPart != NULL)
@@ -160,27 +161,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00092"></a><a class="code" href="classMemAllocNode.html">00092</a> <span class="keyword">class </span><a class="code" href="classMemAllocNode.html">MemAllocNode</a>
 <a name="l00093"></a>00093 {
 <a name="l00094"></a>00094 <span class="keyword">public</span>:
-<a name="l00095"></a>00095    <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a> *Prev;
-<a name="l00096"></a>00096    Elem Elements[Num];
+<a name="l00095"></a><a class="code" href="classMemAllocNode.html#a0b9b88b009c9874308961931e1cfa214">00095</a>    <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a> *<a class="code" href="classMemAllocNode.html#a0b9b88b009c9874308961931e1cfa214">Prev</a>;
+<a name="l00096"></a><a class="code" href="classMemAllocNode.html#a1ebeff7ab620a6c42890538dd37f905b">00096</a>    Elem <a class="code" href="classMemAllocNode.html#a1ebeff7ab620a6c42890538dd37f905b">Elements</a>[Num];
 <a name="l00097"></a>00097 };
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
 <a name="l00100"></a><a class="code" href="classMemAlloc.html">00100</a> <span class="keyword">class </span><a class="code" href="classMemAlloc.html">MemAlloc</a>
 <a name="l00101"></a>00101 {
 <a name="l00102"></a>00102 <span class="keyword">private</span>:
-<a name="l00103"></a>00103    <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a> *Last;
-<a name="l00104"></a>00104    <span class="keywordtype">int</span> AllocatedInLast;
-<a name="l00105"></a>00105    <a class="code" href="classStack.html">Stack &lt;Elem *, Num&gt;</a> UsedMem;
+<a name="l00103"></a><a class="code" href="classMemAlloc.html#a4e73c0820309fd9cca81518c8484ffa2">00103</a>    <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a> *<a class="code" href="classMemAlloc.html#a4e73c0820309fd9cca81518c8484ffa2">Last</a>;
+<a name="l00104"></a><a class="code" href="classMemAlloc.html#a82899b00a1c0245c430943270e46af0e">00104</a>    <span class="keywordtype">int</span> <a class="code" href="classMemAlloc.html#a82899b00a1c0245c430943270e46af0e">AllocatedInLast</a>;
+<a name="l00105"></a><a class="code" href="classMemAlloc.html#ac68bc69d02f973bfdd3f0f720e588bd1">00105</a>    <a class="code" href="classStack.html">Stack &lt;Elem *, Num&gt;</a> <a class="code" href="classMemAlloc.html#ac68bc69d02f973bfdd3f0f720e588bd1">UsedMem</a>;
 <a name="l00106"></a>00106 <span class="keyword">public</span>:
-<a name="l00107"></a>00107    <a class="code" href="classMemAlloc.html">MemAlloc</a>() { Last = NULL; AllocatedInLast = Num; };
-<a name="l00108"></a>00108    Elem *Alloc();
-<a name="l00109"></a>00109    <span class="keywordtype">void</span> Free (Elem *);
-<a name="l00110"></a>00110    <span class="keywordtype">void</span> Clear();
-<a name="l00111"></a>00111    ~<a class="code" href="classMemAlloc.html">MemAlloc</a>() { Clear(); };
+<a name="l00107"></a><a class="code" href="classMemAlloc.html#aecbb55017564dd5b7bbd8c6bb642afac">00107</a>    <a class="code" href="classMemAlloc.html#aecbb55017564dd5b7bbd8c6bb642afac">MemAlloc</a>() { <a class="code" href="classMemAlloc.html#a4e73c0820309fd9cca81518c8484ffa2">Last</a> = NULL; <a class="code" href="classMemAlloc.html#a82899b00a1c0245c430943270e46af0e">AllocatedInLast</a> = Num; };
+<a name="l00108"></a>00108    Elem *<a class="code" href="classMemAlloc.html#a33600971a790b26ffcd5b204c143ac13">Alloc</a>();
+<a name="l00109"></a>00109    <span class="keywordtype">void</span> <a class="code" href="classMemAlloc.html#a243f450988b87a091ba0c749a417c8e5">Free</a> (Elem *);
+<a name="l00110"></a>00110    <span class="keywordtype">void</span> <a class="code" href="classMemAlloc.html#aa3656facd63b172ee4947b3017353af5">Clear</a>();
+<a name="l00111"></a><a class="code" href="classMemAlloc.html#a471e2c7f04188291b3e4116f8701f23c">00111</a>    <a class="code" href="classMemAlloc.html#a471e2c7f04188291b3e4116f8701f23c">~MemAlloc</a>() { <a class="code" href="classMemAlloc.html#aa3656facd63b172ee4947b3017353af5">Clear</a>(); };
 <a name="l00112"></a>00112 };
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
-<a name="l00115"></a>00115 Elem *<a class="code" href="classMemAlloc.html">MemAlloc &lt;Elem, Num&gt;::Alloc</a>()
+<a name="l00115"></a><a class="code" href="classMemAlloc.html#a33600971a790b26ffcd5b204c143ac13">00115</a> Elem *<a class="code" href="classMemAlloc.html">MemAlloc &lt;Elem, Num&gt;::Alloc</a>()
 <a name="l00116"></a>00116 {
 <a name="l00117"></a>00117    <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a> *aux;
 <a name="l00118"></a>00118    <span class="keywordflow">if</span> (UsedMem.Size() &gt; 0)
@@ -189,25 +190,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00121"></a>00121    {
 <a name="l00122"></a>00122       aux = Last;
 <a name="l00123"></a>00123       Last = <span class="keyword">new</span> <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a>;
-<a name="l00124"></a>00124       Last-&gt;Prev = aux;
+<a name="l00124"></a>00124       Last-&gt;<a class="code" href="classMemAllocNode.html#a0b9b88b009c9874308961931e1cfa214">Prev</a> = aux;
 <a name="l00125"></a>00125       AllocatedInLast = 0;
 <a name="l00126"></a>00126    }
 <a name="l00127"></a>00127    <span class="keywordflow">return</span> &amp;(Last-&gt;Elements[AllocatedInLast++]);
 <a name="l00128"></a>00128 }
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
-<a name="l00131"></a>00131 <span class="keywordtype">void</span> <a class="code" href="classMemAlloc.html">MemAlloc &lt;Elem, Num&gt;::Free</a> (Elem *E)
+<a name="l00131"></a><a class="code" href="classMemAlloc.html#a243f450988b87a091ba0c749a417c8e5">00131</a> <span class="keywordtype">void</span> <a class="code" href="classMemAlloc.html">MemAlloc &lt;Elem, Num&gt;::Free</a> (Elem *E)
 <a name="l00132"></a>00132 {
 <a name="l00133"></a>00133    UsedMem.Push (E);
 <a name="l00134"></a>00134 }
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Elem, <span class="keywordtype">int</span> Num&gt;
-<a name="l00137"></a>00137 <span class="keywordtype">void</span> <a class="code" href="classMemAlloc.html">MemAlloc &lt;Elem, Num&gt;::Clear</a>()
+<a name="l00137"></a><a class="code" href="classMemAlloc.html#aa3656facd63b172ee4947b3017353af5">00137</a> <span class="keywordtype">void</span> <a class="code" href="classMemAlloc.html">MemAlloc &lt;Elem, Num&gt;::Clear</a>()
 <a name="l00138"></a>00138 {
 <a name="l00139"></a>00139    <a class="code" href="classMemAllocNode.html">MemAllocNode &lt;Elem, Num&gt;</a> *aux;
 <a name="l00140"></a>00140    <span class="keywordflow">while</span> (Last != NULL)
 <a name="l00141"></a>00141    {
-<a name="l00142"></a>00142       aux = Last-&gt;Prev;
+<a name="l00142"></a>00142       aux = Last-&gt;<a class="code" href="classMemAllocNode.html#a0b9b88b009c9874308961931e1cfa214">Prev</a>;
 <a name="l00143"></a>00143       <span class="keyword">delete</span> Last;
 <a name="l00144"></a>00144       Last = aux;
 <a name="l00145"></a>00145    }
@@ -224,7 +225,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -233,7 +234,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

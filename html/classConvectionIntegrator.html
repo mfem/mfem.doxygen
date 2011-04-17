@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">ConvectionIntegrator Class Reference</div>  </div>
 </div>
@@ -89,17 +90,206 @@ Collaboration diagram for ConvectionIntegrator:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1583cec33fa998ff64fa40fa8c61d8d"></a><!-- doxytag: member="ConvectionIntegrator::ConvectionIntegrator" ref="ae1583cec33fa998ff64fa40fa8c61d8d" args="(VectorCoefficient &amp;q)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConvectionIntegrator</b> (<a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;q)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fd7be29801eb41e3acc9e84f9dd7bfe"></a><!-- doxytag: member="ConvectionIntegrator::AssembleElementMatrix" ref="a1fd7be29801eb41e3acc9e84f9dd7bfe" args="(const FiniteElement &amp;, ElementTransformation &amp;, DenseMatrix &amp;)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#a1fd7be29801eb41e3acc9e84f9dd7bfe">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#ae1583cec33fa998ff64fa40fa8c61d8d">ConvectionIntegrator</a> (<a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;q)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#a1fd7be29801eb41e3acc9e84f9dd7bfe">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat.  <a href="#a1fd7be29801eb41e3acc9e84f9dd7bfe"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#af6ec09a3e82e21fafb8842c622d57f8b">dshape</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#a7091672430b5ba220af6041b997d5137">invdfdx</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#ae1da488a945fc5e00225b749b889f1b6">shape</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#abbdce0396bca8a47df594fd619aff2f2">vec1</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#af749d55d620ef78b94c7414e7e70e9ab">vec2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#ae72c99cc2935b552a5a180e7929c9c6b">BdFidxT</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConvectionIntegrator.html#a21492b93d3f97f0875632943a369a69c">Q</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>(q . grad u, v) </p>
 
 <p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00150">150</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae1583cec33fa998ff64fa40fa8c61d8d"></a><!-- doxytag: member="ConvectionIntegrator::ConvectionIntegrator" ref="ae1583cec33fa998ff64fa40fa8c61d8d" args="(VectorCoefficient &amp;q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConvectionIntegrator::ConvectionIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00159">159</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1fd7be29801eb41e3acc9e84f9dd7bfe"></a><!-- doxytag: member="ConvectionIntegrator::AssembleElementMatrix" ref="a1fd7be29801eb41e3acc9e84f9dd7bfe" args="(const FiniteElement &amp;, ElementTransformation &amp;, DenseMatrix &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConvectionIntegrator::AssembleElementMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>Trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>elmat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat. </p>
+
+<p>Reimplemented from <a class="el" href="classBilinearFormIntegrator.html#adf3480ea4fb587b2a7853b6531ecb912">BilinearFormIntegrator</a>.</p>
+
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00289">289</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8cpp_source.html#l01385">AddMultVWt()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00156">BdFidxT</a>, <a class="el" href="classFiniteElement.html#a4ee7f132abb6b65544a58392159ee02f">FiniteElement::CalcDShape()</a>, <a class="el" href="densemat_8cpp_source.html#l01159">CalcInverse()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00153">dshape</a>, <a class="el" href="coefficient_8cpp_source.html#l00049">VectorCoefficient::Eval()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00050">FiniteElement::GetDim()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="bilininteg_8hpp_source.html#l00154">invdfdx</a>, <a class="el" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">ElementTransformation::Jacobian()</a>, <a class="el" href="densemat_8cpp_source.html#l01063">DenseMatrix::Mult</a>, <a class="el" href="bilininteg_8hpp_source.html#l00157">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00155">shape</a>, <a class="el" href="bilininteg_8hpp_source.html#l00155">vec1</a>, <a class="el" href="bilininteg_8hpp_source.html#l00155">vec2</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>, and <a class="el" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">ElementTransformation::Weight()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ae72c99cc2935b552a5a180e7929c9c6b"></a><!-- doxytag: member="ConvectionIntegrator::BdFidxT" ref="ae72c99cc2935b552a5a180e7929c9c6b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classConvectionIntegrator.html#ae72c99cc2935b552a5a180e7929c9c6b">ConvectionIntegrator::BdFidxT</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00156">156</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6ec09a3e82e21fafb8842c622d57f8b"></a><!-- doxytag: member="ConvectionIntegrator::dshape" ref="af6ec09a3e82e21fafb8842c622d57f8b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classConvectionIntegrator.html#af6ec09a3e82e21fafb8842c622d57f8b">ConvectionIntegrator::dshape</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00153">153</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7091672430b5ba220af6041b997d5137"></a><!-- doxytag: member="ConvectionIntegrator::invdfdx" ref="a7091672430b5ba220af6041b997d5137" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classConvectionIntegrator.html#a7091672430b5ba220af6041b997d5137">ConvectionIntegrator::invdfdx</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00154">154</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21492b93d3f97f0875632943a369a69c"></a><!-- doxytag: member="ConvectionIntegrator::Q" ref="a21492b93d3f97f0875632943a369a69c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a>&amp; <a class="el" href="classConvectionIntegrator.html#a21492b93d3f97f0875632943a369a69c">ConvectionIntegrator::Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00157">157</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1da488a945fc5e00225b749b889f1b6"></a><!-- doxytag: member="ConvectionIntegrator::shape" ref="ae1da488a945fc5e00225b749b889f1b6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classConvectionIntegrator.html#ae1da488a945fc5e00225b749b889f1b6">ConvectionIntegrator::shape</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00155">155</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abbdce0396bca8a47df594fd619aff2f2"></a><!-- doxytag: member="ConvectionIntegrator::vec1" ref="abbdce0396bca8a47df594fd619aff2f2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classConvectionIntegrator.html#abbdce0396bca8a47df594fd619aff2f2">ConvectionIntegrator::vec1</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00155">155</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af749d55d620ef78b94c7414e7e70e9ab"></a><!-- doxytag: member="ConvectionIntegrator::vec2" ref="af749d55d620ef78b94c7414e7e70e9ab" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classConvectionIntegrator.html#af749d55d620ef78b94c7414e7e70e9ab">ConvectionIntegrator::vec2</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00155">155</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00289">AssembleElementMatrix()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a></li>
 <li><a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a></li>
 </ul>
@@ -109,7 +299,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,7 +308,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

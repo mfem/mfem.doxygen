@@ -90,42 +90,274 @@ Collaboration diagram for HypreSolver:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad55c394919b16b0e995d35ef68042ebf"></a><!-- doxytag: member="HypreSolver::HypreSolver" ref="ad55c394919b16b0e995d35ef68042ebf" args="(HypreParMatrix *_A)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>HypreSolver</b> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *_A)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4205de991f93697ea62eb5a29dae3cdd"></a><!-- doxytag: member="HypreSolver::operator HYPRE_Solver" ref="a4205de991f93697ea62eb5a29dae3cdd" args="() const =0" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd">operator HYPRE_Solver</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Typecast to HYPRE_Solver -- return the solver. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d88449fc278c7faa6eacb476550d218"></a><!-- doxytag: member="HypreSolver::SetupFcn" ref="a0d88449fc278c7faa6eacb476550d218" args="() const =0" -->
-virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218">SetupFcn</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">hypre's internal Setup function <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0acb48a83e99e048e5db6af4b8974b59"></a><!-- doxytag: member="HypreSolver::SolveFcn" ref="a0acb48a83e99e048e5db6af4b8974b59" args="() const =0" -->
-virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59">SolveFcn</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">hypre's internal Solve function <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a873629c6575abc84d70e4f5a649652fd"></a><!-- doxytag: member="HypreSolver::Mult" ref="a873629c6575abc84d70e4f5a649652fd" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd">Mult</a> (const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the linear system Ax=b. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad418f2a3752db07ef33668b0d7b63c7c"></a><!-- doxytag: member="HypreSolver::Mult" ref="ad418f2a3752db07ef33668b0d7b63c7c" args="(const Vector &amp;b, Vector &amp;x) const " -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#ad418f2a3752db07ef33668b0d7b63c7c">Mult</a> (const <a class="el" href="classVector.html">Vector</a> &amp;b, <a class="el" href="classVector.html">Vector</a> &amp;x) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classOperator.html" title="Abstract operator.">Operator</a> application. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a3c23584085442dea23813430bfdb8319">HypreSolver</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#ad55c394919b16b0e995d35ef68042ebf">HypreSolver</a> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *_A)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd">operator HYPRE_Solver</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Typecast to HYPRE_Solver -- return the solver.  <a href="#a4205de991f93697ea62eb5a29dae3cdd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218">SetupFcn</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">hypre's internal Setup function  <a href="#a0d88449fc278c7faa6eacb476550d218"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59">SolveFcn</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">hypre's internal Solve function  <a href="#a0acb48a83e99e048e5db6af4b8974b59"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd">Mult</a> (const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the linear system Ax=b.  <a href="#a873629c6575abc84d70e4f5a649652fd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#ad418f2a3752db07ef33668b0d7b63c7c">Mult</a> (const <a class="el" href="classVector.html">Vector</a> &amp;b, <a class="el" href="classVector.html">Vector</a> &amp;x) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classOperator.html" title="Abstract operator.">Operator</a> application.  <a href="#ad418f2a3752db07ef33668b0d7b63c7c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#aeb844a18d8f54a0e2b0e6c34c26e9cda">~HypreSolver</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48bf10954d2874da3406265e80d04a7e"></a><!-- doxytag: member="HypreSolver::A" ref="a48bf10954d2874da3406265e80d04a7e" args="" -->
-<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e">A</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The linear system matrix. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad82d7436fd5856f7ce287a431db5d541"></a><!-- doxytag: member="HypreSolver::B" ref="ad82d7436fd5856f7ce287a431db5d541" args="" -->
-<a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#ad82d7436fd5856f7ce287a431db5d541">B</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Right-hand side and solution vector. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03c3ad9e98feebbb28ff5f07dc688478"></a><!-- doxytag: member="HypreSolver::X" ref="a03c3ad9e98feebbb28ff5f07dc688478" args="" -->
-<a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>X</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e3d0a9756127924a0dfde6dc6ce9862"></a><!-- doxytag: member="HypreSolver::setup_called" ref="a8e3d0a9756127924a0dfde6dc6ce9862" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862">setup_called</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Was hypre's Setup function called already? <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e">A</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The linear system matrix.  <a href="#a48bf10954d2874da3406265e80d04a7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#ad82d7436fd5856f7ce287a431db5d541">B</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Right-hand side and solution vector.  <a href="#ad82d7436fd5856f7ce287a431db5d541"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a03c3ad9e98feebbb28ff5f07dc688478">X</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862">setup_called</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Was hypre's Setup function called already?  <a href="#a8e3d0a9756127924a0dfde6dc6ce9862"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Abstract class for hypre's solvers and preconditioners. </p>
 
 <p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00186">186</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3c23584085442dea23813430bfdb8319"></a><!-- doxytag: member="HypreSolver::HypreSolver" ref="a3c23584085442dea23813430bfdb8319" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HypreSolver::HypreSolver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad55c394919b16b0e995d35ef68042ebf"></a><!-- doxytag: member="HypreSolver::HypreSolver" ref="ad55c394919b16b0e995d35ef68042ebf" args="(HypreParMatrix *_A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HypreSolver::HypreSolver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td>
+          <td class="paramname"><em>_A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeb844a18d8f54a0e2b0e6c34c26e9cda"></a><!-- doxytag: member="HypreSolver::~HypreSolver" ref="aeb844a18d8f54a0e2b0e6c34c26e9cda" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HypreSolver::~HypreSolver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a873629c6575abc84d70e4f5a649652fd"></a><!-- doxytag: member="HypreSolver::Mult" ref="a873629c6575abc84d70e4f5a649652fd" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void HypreSolver::Mult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Solve the linear system Ax=b. </p>
+
+<p>Reimplemented in <a class="el" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba">HyprePCG</a>, and <a class="el" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c">HypreGMRES</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad418f2a3752db07ef33668b0d7b63c7c"></a><!-- doxytag: member="HypreSolver::Mult" ref="ad418f2a3752db07ef33668b0d7b63c7c" args="(const Vector &amp;b, Vector &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void HypreSolver::Mult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="classOperator.html" title="Abstract operator.">Operator</a> application. </p>
+
+<p>Implements <a class="el" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57">Operator</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4205de991f93697ea62eb5a29dae3cdd"></a><!-- doxytag: member="HypreSolver::operator HYPRE_Solver" ref="a4205de991f93697ea62eb5a29dae3cdd" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HypreSolver::operator HYPRE_Solver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Typecast to HYPRE_Solver -- return the solver. </p>
+
+<p>Implemented in <a class="el" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd">HyprePCG</a>, <a class="el" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65">HypreGMRES</a>, <a class="el" href="classHypreIdentity.html#ab2868a313b1eedc9d9f7675705442eeb">HypreIdentity</a>, <a class="el" href="classHypreDiagScale.html#a3a3e1ba3568ffe955b8b37d6e208d9b5">HypreDiagScale</a>, <a class="el" href="classHypreParaSails.html#a99dfef2c13f82fef2371fd7347783409">HypreParaSails</a>, <a class="el" href="classHypreBoomerAMG.html#a8ee4f32952c019aeb918b3a004e65e62">HypreBoomerAMG</a>, and <a class="el" href="classHypreAMS.html#a64adcf9793cefe7008ec527fbe7d39e8">HypreAMS</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d88449fc278c7faa6eacb476550d218"></a><!-- doxytag: member="HypreSolver::SetupFcn" ref="a0d88449fc278c7faa6eacb476550d218" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HYPRE_PtrToParSolverFcn HypreSolver::SetupFcn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>hypre's internal Setup function </p>
+
+<p>Implemented in <a class="el" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c">HyprePCG</a>, <a class="el" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2">HypreGMRES</a>, <a class="el" href="classHypreIdentity.html#a8514386c1ad7f6838ae0f4769d9cbe23">HypreIdentity</a>, <a class="el" href="classHypreDiagScale.html#a260d5b2937a6d03f5f5df84fee7a2dc9">HypreDiagScale</a>, <a class="el" href="classHypreParaSails.html#a5c8335c097e3aa0fc2f2e452f9e96edc">HypreParaSails</a>, <a class="el" href="classHypreBoomerAMG.html#a6b300c47b1a5cf2e70fdd75e568aac49">HypreBoomerAMG</a>, and <a class="el" href="classHypreAMS.html#a2759ca3ecbf66f4109be192998e73812">HypreAMS</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0acb48a83e99e048e5db6af4b8974b59"></a><!-- doxytag: member="HypreSolver::SolveFcn" ref="a0acb48a83e99e048e5db6af4b8974b59" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HYPRE_PtrToParSolverFcn HypreSolver::SolveFcn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>hypre's internal Solve function </p>
+
+<p>Implemented in <a class="el" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492">HyprePCG</a>, <a class="el" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10">HypreGMRES</a>, <a class="el" href="classHypreIdentity.html#a64e15502e2e8095a66ed04cd6bb3dfbd">HypreIdentity</a>, <a class="el" href="classHypreDiagScale.html#a886a658059d9f68115fe0106281d6f55">HypreDiagScale</a>, <a class="el" href="classHypreParaSails.html#a14cb92a138f4934526d091e3c1262748">HypreParaSails</a>, <a class="el" href="classHypreBoomerAMG.html#ac639899217dc8a9980b9bc3c4deb960e">HypreBoomerAMG</a>, and <a class="el" href="classHypreAMS.html#abac0b4c546d2523e0f4fc44b2789aadb">HypreAMS</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a48bf10954d2874da3406265e80d04a7e"></a><!-- doxytag: member="HypreSolver::A" ref="a48bf10954d2874da3406265e80d04a7e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a>* <a class="el" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e">HypreSolver::A</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The linear system matrix. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00190">190</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad82d7436fd5856f7ce287a431db5d541"></a><!-- doxytag: member="HypreSolver::B" ref="ad82d7436fd5856f7ce287a431db5d541" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParVector.html">HypreParVector</a>* <a class="el" href="classHypreSolver.html#ad82d7436fd5856f7ce287a431db5d541">HypreSolver::B</a><code> [mutable, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Right-hand side and solution vector. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00193">193</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e3d0a9756127924a0dfde6dc6ce9862"></a><!-- doxytag: member="HypreSolver::setup_called" ref="a8e3d0a9756127924a0dfde6dc6ce9862" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862">HypreSolver::setup_called</a><code> [mutable, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Was hypre's Setup function called already? </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00196">196</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03c3ad9e98feebbb28ff5f07dc688478"></a><!-- doxytag: member="HypreSolver::X" ref="a03c3ad9e98feebbb28ff5f07dc688478" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParVector.html">HypreParVector</a> * <a class="el" href="classHypreSolver.html#a03c3ad9e98feebbb28ff5f07dc688478">HypreSolver::X</a><code> [mutable, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00193">193</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="hypre_8hpp_source.html">hypre.hpp</a></li>
 </ul>
 </div>
@@ -134,7 +366,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -143,7 +375,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

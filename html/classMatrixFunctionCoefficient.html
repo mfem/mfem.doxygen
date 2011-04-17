@@ -60,12 +60,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">MatrixFunctionCoefficient Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="MatrixFunctionCoefficient" --><!-- doxytag: inherits="MatrixCoefficient" --><div class="dynheader">
+<!-- doxytag: class="MatrixFunctionCoefficient" --><!-- doxytag: inherits="MatrixCoefficient" -->
+<p><code>#include &lt;<a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for MatrixFunctionCoefficient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMatrixFunctionCoefficient__inherit__graph.png" border="0" usemap="#MatrixFunctionCoefficient_inherit__map" alt="Inheritance graph"/></div>
@@ -84,15 +87,143 @@ Collaboration diagram for MatrixFunctionCoefficient:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a484478cbe1acda18e93f1f6bdf45a103"></a><!-- doxytag: member="MatrixFunctionCoefficient::MatrixFunctionCoefficient" ref="a484478cbe1acda18e93f1f6bdf45a103" args="(int dim, void(*F)(const Vector &amp;, DenseMatrix &amp;))" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>MatrixFunctionCoefficient</b> (int dim, void(*F)(const <a class="el" href="classVector.html">Vector</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;))</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae4b3e1d1d5482af44f0850ce4baaf56"></a><!-- doxytag: member="MatrixFunctionCoefficient::Eval" ref="aae4b3e1d1d5482af44f0850ce4baaf56" args="(DenseMatrix &amp;K, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Eval</b> (<a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;K, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrixFunctionCoefficient.html#a484478cbe1acda18e93f1f6bdf45a103">MatrixFunctionCoefficient</a> (int dim, void(*F)(const <a class="el" href="classVector.html">Vector</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrixFunctionCoefficient.html#aae4b3e1d1d5482af44f0850ce4baaf56">Eval</a> (<a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;K, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrixFunctionCoefficient.html#abc3055941d8a5501244b43d6c2c8c842">~MatrixFunctionCoefficient</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrixFunctionCoefficient.html#a8637a48cfcdce2b0c40e580087292f59">Function</a> )(const <a class="el" href="classVector.html">Vector</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrixFunctionCoefficient.html#a98f851ffb9b16b24e26166adcab6bf32">transip</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00281">281</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a484478cbe1acda18e93f1f6bdf45a103"></a><!-- doxytag: member="MatrixFunctionCoefficient::MatrixFunctionCoefficient" ref="a484478cbe1acda18e93f1f6bdf45a103" args="(int dim, void(*F)(const Vector &amp;, DenseMatrix &amp;))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MatrixFunctionCoefficient::MatrixFunctionCoefficient </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(const <a class="el" href="classVector.html">Vector</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;)&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00288">288</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+<p>References <a class="el" href="coefficient_8hpp_source.html#l00284">Function</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc3055941d8a5501244b43d6c2c8c842"></a><!-- doxytag: member="MatrixFunctionCoefficient::~MatrixFunctionCoefficient" ref="abc3055941d8a5501244b43d6c2c8c842" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual MatrixFunctionCoefficient::~MatrixFunctionCoefficient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00295">295</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aae4b3e1d1d5482af44f0850ce4baaf56"></a><!-- doxytag: member="MatrixFunctionCoefficient::Eval" ref="aae4b3e1d1d5482af44f0850ce4baaf56" args="(DenseMatrix &amp;K, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatrixFunctionCoefficient::Eval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classMatrixCoefficient.html#aed69c0dc41b418ee57e45e7c49045890">MatrixCoefficient</a>.</p>
+
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00109">109</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">ElementTransformation::Transform()</a>, <a class="el" href="coefficient_8hpp_source.html#l00285">transip</a>, and <a class="el" href="coefficient_8hpp_source.html#l00268">MatrixCoefficient::vdim</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a8637a48cfcdce2b0c40e580087292f59"></a><!-- doxytag: member="MatrixFunctionCoefficient::Function" ref="a8637a48cfcdce2b0c40e580087292f59" args=")(const Vector &amp;, DenseMatrix &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="classMatrixFunctionCoefficient.html#a8637a48cfcdce2b0c40e580087292f59">MatrixFunctionCoefficient::Function</a>)(const <a class="el" href="classVector.html">Vector</a> &amp;, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;)<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00284">284</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="coefficient_8hpp_source.html#l00288">MatrixFunctionCoefficient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98f851ffb9b16b24e26166adcab6bf32"></a><!-- doxytag: member="MatrixFunctionCoefficient::transip" ref="a98f851ffb9b16b24e26166adcab6bf32" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classMatrixFunctionCoefficient.html#a98f851ffb9b16b24e26166adcab6bf32">MatrixFunctionCoefficient::transip</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00285">285</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="coefficient_8cpp_source.html#l00109">Eval()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a></li>
 <li><a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a></li>
 </ul>
@@ -102,7 +233,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Eval</b> (<a 
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,7 +242,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Eval</b> (<a 
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">pmesh.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="pmesh_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,47 +84,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a><a class="code" href="classParMesh.html">00016</a> <span class="keyword">class </span><a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> : <span class="keyword">public</span> <a class="code" href="classMesh.html">Mesh</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">private</span>:
-<a name="l00019"></a>00019    MPI_Comm MyComm;
-<a name="l00020"></a>00020    <span class="keywordtype">int</span> NRanks, MyRank;
+<a name="l00019"></a><a class="code" href="classParMesh.html#ad608ff659abbc014c109fb9efc5f96a9">00019</a>    MPI_Comm <a class="code" href="classParMesh.html#ad608ff659abbc014c109fb9efc5f96a9">MyComm</a>;
+<a name="l00020"></a><a class="code" href="classParMesh.html#a24bb003631b621de6dddda724ad2b2be">00020</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#a24bb003631b621de6dddda724ad2b2be">NRanks</a>, <a class="code" href="classParMesh.html#a76cbeed32ca00bee28de61c70357fc0f">MyRank</a>;
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022    <a class="code" href="classArray.html">Array&lt;Element *&gt;</a> shared_edges;
-<a name="l00023"></a>00023    <a class="code" href="classArray.html">Array&lt;Element *&gt;</a> shared_faces;
+<a name="l00022"></a><a class="code" href="classParMesh.html#a746d9277ce1a9600e34bb5bd11dad360">00022</a>    <a class="code" href="classArray.html">Array&lt;Element *&gt;</a> <a class="code" href="classParMesh.html#a746d9277ce1a9600e34bb5bd11dad360">shared_edges</a>;
+<a name="l00023"></a><a class="code" href="classParMesh.html#af510a677800bda0cfc01f2a0c5267f42">00023</a>    <a class="code" href="classArray.html">Array&lt;Element *&gt;</a> <a class="code" href="classParMesh.html#af510a677800bda0cfc01f2a0c5267f42">shared_faces</a>;
 <a name="l00024"></a>00024 
-<a name="l00026"></a>00026    <a class="code" href="classTable.html">Table</a> group_svert;
-<a name="l00027"></a>00027    <a class="code" href="classTable.html">Table</a> group_sedge;
-<a name="l00028"></a>00028    <a class="code" href="classTable.html">Table</a> group_sface;
+<a name="l00026"></a><a class="code" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4">00026</a>    <a class="code" href="classTable.html">Table</a> <a class="code" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4" title="Shared objects in each group.">group_svert</a>;
+<a name="l00027"></a><a class="code" href="classParMesh.html#a7e4572b358c7caf1ed3712ae0f1dc3c5">00027</a>    <a class="code" href="classTable.html">Table</a> <a class="code" href="classParMesh.html#a7e4572b358c7caf1ed3712ae0f1dc3c5">group_sedge</a>;
+<a name="l00028"></a><a class="code" href="classParMesh.html#a0cdde89641cfde3aef041ba340830ac4">00028</a>    <a class="code" href="classTable.html">Table</a> <a class="code" href="classParMesh.html#a0cdde89641cfde3aef041ba340830ac4">group_sface</a>;
 <a name="l00029"></a>00029 
-<a name="l00031"></a>00031    <a class="code" href="classArray.html">Array&lt;int&gt;</a> svert_lvert;
-<a name="l00032"></a>00032    <a class="code" href="classArray.html">Array&lt;int&gt;</a> sedge_ledge;
-<a name="l00033"></a>00033    <a class="code" href="classArray.html">Array&lt;int&gt;</a> sface_lface;
+<a name="l00031"></a><a class="code" href="classParMesh.html#a242ad4a7afee5fac2a7c7cf6aae622f6">00031</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParMesh.html#a242ad4a7afee5fac2a7c7cf6aae622f6" title="Shared to local index mapping.">svert_lvert</a>;
+<a name="l00032"></a><a class="code" href="classParMesh.html#a69af9f5e7aa5e18312f77bf78cd4d2ee">00032</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParMesh.html#a69af9f5e7aa5e18312f77bf78cd4d2ee">sedge_ledge</a>;
+<a name="l00033"></a><a class="code" href="classParMesh.html#a55ae84625d518dce2b8b39653c80372d">00033</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParMesh.html#a55ae84625d518dce2b8b39653c80372d">sface_lface</a>;
 <a name="l00034"></a>00034 
-<a name="l00036"></a>00036    <span class="keywordtype">int</span> GetEdgeSplittings(<a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *edge, <span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;v_to_v, <span class="keywordtype">int</span> *middle);
-<a name="l00038"></a>00038    <span class="keywordtype">int</span> GetFaceSplittings(<a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *face, <span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;v_to_v, <span class="keywordtype">int</span> *middle);
+<a name="l00036"></a>00036    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#a1efe007c098ea917fd60fc66e483d791" title="Return a number(0-1) identifying how the given edge has been split.">GetEdgeSplittings</a>(<a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *edge, <span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;v_to_v, <span class="keywordtype">int</span> *middle);
+<a name="l00038"></a>00038    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#ac82d4c9fa2aed76e4da5b3a5b31ef386" title="Return a number(0-4) identifying how the given face has been split.">GetFaceSplittings</a>(<a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *face, <span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;v_to_v, <span class="keywordtype">int</span> *middle);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">public</span>:
-<a name="l00041"></a>00041    <a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a>(MPI_Comm comm, <a class="code" href="classMesh.html">Mesh</a> &amp;mesh, <span class="keywordtype">int</span> *partitioning_ = NULL,
+<a name="l00041"></a>00041    <a class="code" href="classParMesh.html#ae862283cab8dd7857acc923572b4b8c7">ParMesh</a>(MPI_Comm comm, <a class="code" href="classMesh.html">Mesh</a> &amp;mesh, <span class="keywordtype">int</span> *partitioning_ = NULL,
 <a name="l00042"></a>00042            <span class="keywordtype">int</span> part_method = 1);
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044    MPI_Comm GetComm() { <span class="keywordflow">return</span> MyComm; }
-<a name="l00045"></a>00045    <span class="keywordtype">int</span> GetNRanks() { <span class="keywordflow">return</span> NRanks; }
-<a name="l00046"></a>00046    <span class="keywordtype">int</span> GetMyRank() { <span class="keywordflow">return</span> MyRank; }
+<a name="l00044"></a><a class="code" href="classParMesh.html#a71fc1b1cb00f15b8ecbd0e7914fae4e9">00044</a>    MPI_Comm <a class="code" href="classParMesh.html#a71fc1b1cb00f15b8ecbd0e7914fae4e9">GetComm</a>() { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#ad608ff659abbc014c109fb9efc5f96a9">MyComm</a>; }
+<a name="l00045"></a><a class="code" href="classParMesh.html#a3e73e13b7eccc84ae94c81e158831b63">00045</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#a3e73e13b7eccc84ae94c81e158831b63">GetNRanks</a>() { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a24bb003631b621de6dddda724ad2b2be">NRanks</a>; }
+<a name="l00046"></a><a class="code" href="classParMesh.html#a6ed42b7b77736fe58aaf300531cbbd68">00046</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#a6ed42b7b77736fe58aaf300531cbbd68">GetMyRank</a>() { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a76cbeed32ca00bee28de61c70357fc0f">MyRank</a>; }
 <a name="l00047"></a>00047 
 <a name="l00054"></a><a class="code" href="classParMesh.html#a005e585d25ac55e5e80334a32f1398e9">00054</a>    <a class="code" href="classTable.html">Table</a> <a class="code" href="classParMesh.html#a005e585d25ac55e5e80334a32f1398e9">group_lproc</a>;
-<a name="l00055"></a>00055    <a class="code" href="classArray.html">Array&lt;int&gt;</a> groupmaster_lproc;
-<a name="l00056"></a>00056    <a class="code" href="classArray.html">Array&lt;int&gt;</a> lproc_proc;
+<a name="l00055"></a><a class="code" href="classParMesh.html#a14cb44979b1958352bd4e5a5ed141e6a">00055</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParMesh.html#a14cb44979b1958352bd4e5a5ed141e6a">groupmaster_lproc</a>;
+<a name="l00056"></a><a class="code" href="classParMesh.html#af83e3392bd10d6d00b40d19ad7d383e5">00056</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParMesh.html#af83e3392bd10d6d00b40d19ad7d383e5">lproc_proc</a>;
 <a name="l00058"></a><a class="code" href="classParMesh.html#ae71223d09dd935d715728219e104b4dd">00058</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParMesh.html#ae71223d09dd935d715728219e104b4dd" title="for each group gives the group number in the master">group_mgroup</a>;
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060    <span class="keywordtype">int</span> GetNGroups() { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a005e585d25ac55e5e80334a32f1398e9">group_lproc</a>.<a class="code" href="classTable.html#aebd928bf244520ae94bd2867044b1ae2" title="Returns the number of TYPE I elements.">Size</a>(); }
+<a name="l00060"></a><a class="code" href="classParMesh.html#ac24f718f58975ee802ebd86c02c410b4">00060</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#ac24f718f58975ee802ebd86c02c410b4">GetNGroups</a>() { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a005e585d25ac55e5e80334a32f1398e9">group_lproc</a>.<a class="code" href="classTable.html#aebd928bf244520ae94bd2867044b1ae2" title="Returns the number of TYPE I elements.">Size</a>(); }
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062    <span class="comment">// next 6 methods do not work for the &#39;local&#39; group 0</span>
-<a name="l00063"></a>00063    <span class="keywordtype">int</span> GroupNVertices(<span class="keywordtype">int</span> group) { <span class="keywordflow">return</span> group_svert.RowSize(group-1); }
-<a name="l00064"></a>00064    <span class="keywordtype">int</span> GroupNEdges(<span class="keywordtype">int</span> group)    { <span class="keywordflow">return</span> group_sedge.RowSize(group-1); }
-<a name="l00065"></a>00065    <span class="keywordtype">int</span> GroupNFaces(<span class="keywordtype">int</span> group)    { <span class="keywordflow">return</span> group_sface.RowSize(group-1); }
+<a name="l00063"></a><a class="code" href="classParMesh.html#ad4e58f8df50370fb220740b58a4b6f95">00063</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#ad4e58f8df50370fb220740b58a4b6f95">GroupNVertices</a>(<span class="keywordtype">int</span> group) { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4" title="Shared objects in each group.">group_svert</a>.<a class="code" href="classTable.html#aa545ece6d05545a66cf42810e158c489">RowSize</a>(group-1); }
+<a name="l00064"></a><a class="code" href="classParMesh.html#adad92bfeb3ed21f1f1d52df7e6f9025c">00064</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#adad92bfeb3ed21f1f1d52df7e6f9025c">GroupNEdges</a>(<span class="keywordtype">int</span> group)    { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a7e4572b358c7caf1ed3712ae0f1dc3c5">group_sedge</a>.<a class="code" href="classTable.html#aa545ece6d05545a66cf42810e158c489">RowSize</a>(group-1); }
+<a name="l00065"></a><a class="code" href="classParMesh.html#a8a5bf7aecf0b65c3b0be36e37f7604d1">00065</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#a8a5bf7aecf0b65c3b0be36e37f7604d1">GroupNFaces</a>(<span class="keywordtype">int</span> group)    { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a0cdde89641cfde3aef041ba340830ac4">group_sface</a>.<a class="code" href="classTable.html#aa545ece6d05545a66cf42810e158c489">RowSize</a>(group-1); }
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067    <span class="keywordtype">int</span> GroupVertex(<span class="keywordtype">int</span> group, <span class="keywordtype">int</span> i)
-<a name="l00068"></a>00068    { <span class="keywordflow">return</span> svert_lvert[group_svert.GetJ()[group_svert.GetI()[group-1]+i]]; }
-<a name="l00069"></a>00069    <span class="keywordtype">void</span> GroupEdge(<span class="keywordtype">int</span> group, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> &amp;edge, <span class="keywordtype">int</span> &amp;o);
-<a name="l00070"></a>00070    <span class="keywordtype">void</span> GroupFace(<span class="keywordtype">int</span> group, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> &amp;face, <span class="keywordtype">int</span> &amp;o);
+<a name="l00067"></a><a class="code" href="classParMesh.html#a94eb264912e3fcca9fdb16e6b0083096">00067</a>    <span class="keywordtype">int</span> <a class="code" href="classParMesh.html#a94eb264912e3fcca9fdb16e6b0083096">GroupVertex</a>(<span class="keywordtype">int</span> group, <span class="keywordtype">int</span> i)
+<a name="l00068"></a>00068    { <span class="keywordflow">return</span> <a class="code" href="classParMesh.html#a242ad4a7afee5fac2a7c7cf6aae622f6" title="Shared to local index mapping.">svert_lvert</a>[<a class="code" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4" title="Shared objects in each group.">group_svert</a>.<a class="code" href="classTable.html#a3dc46885dc380faf9aabc62e23a55ba8">GetJ</a>()[<a class="code" href="classParMesh.html#a98d7f99f669588c8c1cc01d645212df4" title="Shared objects in each group.">group_svert</a>.<a class="code" href="classTable.html#af3cf9697d71afed14f9b2997f7a5ee84">GetI</a>()[group-1]+i]]; }
+<a name="l00069"></a>00069    <span class="keywordtype">void</span> <a class="code" href="classParMesh.html#a53add0cd48917b2d9bd5d2ef7ab3a48b">GroupEdge</a>(<span class="keywordtype">int</span> group, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> &amp;edge, <span class="keywordtype">int</span> &amp;o);
+<a name="l00070"></a>00070    <span class="keywordtype">void</span> <a class="code" href="classParMesh.html#a4f8b0965f4cfdf03a78e2366a169d1e0">GroupFace</a>(<span class="keywordtype">int</span> group, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> &amp;face, <span class="keywordtype">int</span> &amp;o);
 <a name="l00071"></a>00071 
 <a name="l00073"></a>00073    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classParMesh.html#a8655fadf1cf12d0fdf0581a30586555d" title="Refine the marked elements.">LocalRefinement</a>(<span class="keyword">const</span> <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;marked_el, <span class="keywordtype">int</span> type = 3);
 <a name="l00074"></a>00074 
@@ -139,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00094"></a>00094 
 <a name="l00096"></a>00096    <span class="keywordtype">void</span> <a class="code" href="classParMesh.html#a3196dbedcfe61b31a16f745600bbccba" title="Old mesh format (Netgen/Truegrid) version of &#39;PrintAsOne&#39;.">PrintAsOneXG</a>(ostream &amp;out = cout);
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098    <span class="keyword">virtual</span> ~<a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a>();
+<a name="l00098"></a>00098    <span class="keyword">virtual</span> <a class="code" href="classParMesh.html#a9a2bbf59ca7f3b04c6eaba2be49f09f6">~ParMesh</a>();
 <a name="l00099"></a>00099 };
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 <span class="preprocessor">#endif</span>
@@ -150,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -159,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

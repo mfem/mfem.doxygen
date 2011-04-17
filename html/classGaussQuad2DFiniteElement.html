@@ -60,7 +60,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">GaussQuad2DFiniteElement Class Reference</div>  </div>
 </div>
@@ -89,14 +91,44 @@ Collaboration diagram for GaussQuad2DFiniteElement:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#a23e23a334295ee69e9bc234a1429c7b3">GaussQuad2DFiniteElement</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#a27affe23b77cc6396b096c9d3c84168b">CalcShape</a> (const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip, <a class="el" href="classVector.html">Vector</a> &amp;shape) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#ad72ca53cc6646772258f6b1724627e07">CalcDShape</a> (const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;dshape) const </td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#a84dea6df3e600561b527e3ae0de627b3">A</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#a94970bccfc4ec49e0fd11a8ff5335724">D</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#a418e4aede25a2185293afa74896df049">pol</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaussQuad2DFiniteElement.html#a02aa7cc19f21f5c31d92022acf1b25db">p</a> [2]</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for quadratic FE on triangle with nodes at the "Gaussian" points. </p>
 
 <p>Definition at line <a class="el" href="fe_8hpp_source.html#l00359">359</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a23e23a334295ee69e9bc234a1429c7b3"></a><!-- doxytag: member="GaussQuad2DFiniteElement::GaussQuad2DFiniteElement" ref="a23e23a334295ee69e9bc234a1429c7b3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GaussQuad2DFiniteElement::GaussQuad2DFiniteElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l00557">557</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="fe_8hpp_source.html#l00363">A</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="densemat_8cpp_source.html#l00346">DenseMatrix::Invert()</a>, <a class="el" href="fe_8hpp_source.html#l00036">FiniteElement::Nodes</a>, <a class="el" href="fe_8hpp_source.html#l00362">p</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ad72ca53cc6646772258f6b1724627e07"></a><!-- doxytag: member="GaussQuad2DFiniteElement::CalcDShape" ref="ad72ca53cc6646772258f6b1724627e07" args="(const IntegrationPoint &amp;ip, DenseMatrix &amp;dshape) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -126,6 +158,8 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="classFiniteElement.html#a4ee7f132abb6b65544a58392159ee02f">FiniteElement</a>.</p>
 
 <p>Definition at line <a class="el" href="fe_8cpp_source.html#l00601">601</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="fe_8hpp_source.html#l00363">A</a>, <a class="el" href="fe_8hpp_source.html#l00364">D</a>, <a class="el" href="table_8cpp_source.html#l00291">Mult()</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
 
 </div>
 </div>
@@ -159,7 +193,78 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fe_8cpp_source.html#l00587">587</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8cpp_source.html#l01063">DenseMatrix::Mult</a>.</p>
+<p>References <a class="el" href="fe_8hpp_source.html#l00363">A</a>, <a class="el" href="densemat_8cpp_source.html#l01063">DenseMatrix::Mult</a>, <a class="el" href="fe_8hpp_source.html#l00365">pol</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a84dea6df3e600561b527e3ae0de627b3"></a><!-- doxytag: member="GaussQuad2DFiniteElement::A" ref="a84dea6df3e600561b527e3ae0de627b3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classGaussQuad2DFiniteElement.html#a84dea6df3e600561b527e3ae0de627b3">GaussQuad2DFiniteElement::A</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00363">363</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l00601">CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l00587">CalcShape()</a>, and <a class="el" href="fe_8cpp_source.html#l00557">GaussQuad2DFiniteElement()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94970bccfc4ec49e0fd11a8ff5335724"></a><!-- doxytag: member="GaussQuad2DFiniteElement::D" ref="a94970bccfc4ec49e0fd11a8ff5335724" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classGaussQuad2DFiniteElement.html#a94970bccfc4ec49e0fd11a8ff5335724">GaussQuad2DFiniteElement::D</a><code> [mutable, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00364">364</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l00601">CalcDShape()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02aa7cc19f21f5c31d92022acf1b25db"></a><!-- doxytag: member="GaussQuad2DFiniteElement::p" ref="a02aa7cc19f21f5c31d92022acf1b25db" args="[2]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="classGaussQuad2DFiniteElement.html#a02aa7cc19f21f5c31d92022acf1b25db">GaussQuad2DFiniteElement::p</a><code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Initial value:</b><div class="fragment"><pre class="fragment">
+{ 0.0915762135097707434595714634022015, 0.445948490915964886318329253883051 }
+</pre></div>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00362">362</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l00557">GaussQuad2DFiniteElement()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a418e4aede25a2185293afa74896df049"></a><!-- doxytag: member="GaussQuad2DFiniteElement::pol" ref="a418e4aede25a2185293afa74896df049" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classGaussQuad2DFiniteElement.html#a418e4aede25a2185293afa74896df049">GaussQuad2DFiniteElement::pol</a><code> [mutable, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00365">365</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l00587">CalcShape()</a>.</p>
 
 </div>
 </div>
@@ -173,7 +278,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -182,7 +287,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

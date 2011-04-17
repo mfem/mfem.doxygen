@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">pgridfunc.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="pgridfunc_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -79,51 +80,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#ifdef MFEM_USE_MPI</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;fem.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="fem_8hpp.html">fem.hpp</a>&quot;</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 ParGridFunction::ParGridFunction(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf, <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *gf)
+<a name="l00016"></a>00016 <a class="code" href="classParGridFunction.html#aafc31379b534360ecf4ce703341329f1">ParGridFunction::ParGridFunction</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf, <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *gf)
 <a name="l00017"></a>00017 {
-<a name="l00018"></a>00018    <a class="code" href="classGridFunction.html#a97f8788b41034fd1d0f7766ac433d639" title="FE space on which grid function lives.">fes</a> = pfes = pf;
-<a name="l00019"></a>00019    SetDataAndSize(gf-&gt;GetData(), gf-&gt;<a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1" title="Returns the size of the vector.">Size</a>());
+<a name="l00018"></a>00018    <a class="code" href="classGridFunction.html#a97f8788b41034fd1d0f7766ac433d639" title="FE space on which grid function lives.">fes</a> = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> = pf;
+<a name="l00019"></a>00019    <a class="code" href="classVector.html#a35f720a71ee87fb26053c9b02f280d20">SetDataAndSize</a>(gf-&gt;<a class="code" href="classVector.html#a789ef615634287c103a2fb111de8cab9">GetData</a>(), gf-&gt;<a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1" title="Returns the size of the vector.">Size</a>());
 <a name="l00020"></a>00020 }
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 ParGridFunction::ParGridFunction(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *tv)
+<a name="l00022"></a>00022 <a class="code" href="classParGridFunction.html#aafc31379b534360ecf4ce703341329f1">ParGridFunction::ParGridFunction</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *pf, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *tv)
 <a name="l00023"></a>00023    : <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a>(pf), pfes(pf)
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025    Distribute(tv);
 <a name="l00026"></a>00026 }
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028 ParGridFunction::ParGridFunction(<a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> *pmesh, <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *gf)
+<a name="l00028"></a>00028 <a class="code" href="classParGridFunction.html#aafc31379b534360ecf4ce703341329f1">ParGridFunction::ParGridFunction</a>(<a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> *pmesh, <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *gf)
 <a name="l00029"></a>00029 {
 <a name="l00030"></a>00030    <span class="comment">// duplicate the FiniteElementCollection from &#39;gf&#39;</span>
-<a name="l00031"></a>00031    <a class="code" href="classGridFunction.html#a39ec0db7dc3a8a8723e765eeb46e4fe4" title="Used when the grid function is read from a file.">fec</a> = FiniteElementCollection::New(gf-&gt;FESpace()-&gt;FEColl()-&gt;Name());
-<a name="l00032"></a>00032    <a class="code" href="classGridFunction.html#a97f8788b41034fd1d0f7766ac433d639" title="FE space on which grid function lives.">fes</a> = pfes = <span class="keyword">new</span> <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>(pmesh, <a class="code" href="classGridFunction.html#a39ec0db7dc3a8a8723e765eeb46e4fe4" title="Used when the grid function is read from a file.">fec</a>, gf-&gt;FESpace()-&gt;<a class="code" href="classFiniteElementSpace.html#ac3f3af363d6517a14ebff84accad4f36" title="Returns vector dimension.">GetVDim</a>(),
-<a name="l00033"></a>00033                                           gf-&gt;FESpace()-&gt;<a class="code" href="classFiniteElementSpace.html#ab3972257e40fd5d09a64b5a27c6e98fa" title="Return the ordering method.">GetOrdering</a>());
-<a name="l00034"></a>00034    <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(pfes-&gt;GetVSize());
+<a name="l00031"></a>00031    <a class="code" href="classGridFunction.html#a39ec0db7dc3a8a8723e765eeb46e4fe4" title="Used when the grid function is read from a file.">fec</a> = <a class="code" href="classFiniteElementCollection.html#a7bcffc57f1a8728c36b1804371fa28cc">FiniteElementCollection::New</a>(gf-&gt;<a class="code" href="classGridFunction.html#a6b31d45d8ab7917db5e1173686ed2968">FESpace</a>()-&gt;<a class="code" href="classFiniteElementSpace.html#ac9ccdb3a012740b7e4a3f638947d0390">FEColl</a>()-&gt;<a class="code" href="classFiniteElementCollection.html#a705e3ef9aaea9992777d2aa6ccba7516">Name</a>());
+<a name="l00032"></a>00032    <a class="code" href="classGridFunction.html#a97f8788b41034fd1d0f7766ac433d639" title="FE space on which grid function lives.">fes</a> = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> = <span class="keyword">new</span> <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>(pmesh, <a class="code" href="classGridFunction.html#a39ec0db7dc3a8a8723e765eeb46e4fe4" title="Used when the grid function is read from a file.">fec</a>, gf-&gt;<a class="code" href="classGridFunction.html#a6b31d45d8ab7917db5e1173686ed2968">FESpace</a>()-&gt;<a class="code" href="classFiniteElementSpace.html#ac3f3af363d6517a14ebff84accad4f36" title="Returns vector dimension.">GetVDim</a>(),
+<a name="l00033"></a>00033                                           gf-&gt;<a class="code" href="classGridFunction.html#a6b31d45d8ab7917db5e1173686ed2968">FESpace</a>()-&gt;<a class="code" href="classFiniteElementSpace.html#ab3972257e40fd5d09a64b5a27c6e98fa" title="Return the ordering method.">GetOrdering</a>());
+<a name="l00034"></a>00034    <a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classFiniteElementSpace.html#aa2c0e931af3bfbb8bb31bc4907fd4771">GetVSize</a>());
 <a name="l00035"></a>00035 }
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keywordtype">void</span> <a class="code" href="classParGridFunction.html#ac33a416e96f3c9fa7eaad14b101dd8a2">ParGridFunction::Distribute</a>(<a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *tv)
 <a name="l00038"></a>00038 {
-<a name="l00039"></a>00039    <span class="keywordtype">int</span>  nproc   = pfes-&gt;GetNRanks();
-<a name="l00040"></a>00040    <span class="keywordtype">int</span> *dof_off = pfes-&gt;GetDofOffsets();
+<a name="l00039"></a>00039    <span class="keywordtype">int</span>  nproc   = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#af3bb56da3aa74118f09cb39a2459eb6f">GetNRanks</a>();
+<a name="l00040"></a>00040    <span class="keywordtype">int</span> *dof_off = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a803693dc975ace96da8d8daab926f514">GetDofOffsets</a>();
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042    <span class="comment">// vector on (all) dofs</span>
 <a name="l00043"></a>00043    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *v;
 <a name="l00044"></a>00044    <span class="keywordflow">if</span> (HYPRE_AssumedPartitionCheck())
-<a name="l00045"></a>00045       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[2], data, dof_off);
+<a name="l00045"></a>00045       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[2], <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, dof_off);
 <a name="l00046"></a>00046    <span class="keywordflow">else</span>
-<a name="l00047"></a>00047       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[nproc], data, dof_off);
+<a name="l00047"></a>00047       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[nproc], <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, dof_off);
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049    pfes-&gt;<a class="code" href="classParFiniteElementSpace.html#aef050d1bb1c2239e4e31085e3a8d5b67" title="The dof-to-true dof interpolation matrix.">Dof_TrueDof_Matrix</a>()-&gt;<a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(*tv, *v);
+<a name="l00049"></a>00049    <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aef050d1bb1c2239e4e31085e3a8d5b67" title="The dof-to-true dof interpolation matrix.">Dof_TrueDof_Matrix</a>()-&gt;<a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(*tv, *v);
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051    <span class="keyword">delete</span> v;
 <a name="l00052"></a>00052 }
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054 <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> * <a class="code" href="classParGridFunction.html#ad3fa7ded69008079ba6f691016633afe" title="Returns the vector averaged on the true dofs.">ParGridFunction::ParallelAverage</a>()
 <a name="l00055"></a>00055 {
-<a name="l00056"></a>00056    <span class="keywordtype">int</span>  nproc    = pfes-&gt;GetNRanks();
-<a name="l00057"></a>00057    <span class="keywordtype">int</span> *dof_off  = pfes-&gt;GetDofOffsets();
-<a name="l00058"></a>00058    <span class="keywordtype">int</span> *tdof_off = pfes-&gt;GetTrueDofOffsets();
+<a name="l00056"></a>00056    <span class="keywordtype">int</span>  nproc    = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#af3bb56da3aa74118f09cb39a2459eb6f">GetNRanks</a>();
+<a name="l00057"></a>00057    <span class="keywordtype">int</span> *dof_off  = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a803693dc975ace96da8d8daab926f514">GetDofOffsets</a>();
+<a name="l00058"></a>00058    <span class="keywordtype">int</span> *tdof_off = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>();
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060    <span class="comment">// vector on true dofs</span>
 <a name="l00061"></a>00061    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *tv;
@@ -135,42 +136,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00067"></a>00067    <span class="comment">// vector on (all) dofs</span>
 <a name="l00068"></a>00068    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *v;
 <a name="l00069"></a>00069    <span class="keywordflow">if</span> (HYPRE_AssumedPartitionCheck())
-<a name="l00070"></a>00070       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[2], data, dof_off);
+<a name="l00070"></a>00070       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[2], <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, dof_off);
 <a name="l00071"></a>00071    <span class="keywordflow">else</span>
-<a name="l00072"></a>00072       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[nproc], data, dof_off);
+<a name="l00072"></a>00072       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[nproc], <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, dof_off);
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074    pfes-&gt;<a class="code" href="classParFiniteElementSpace.html#aef050d1bb1c2239e4e31085e3a8d5b67" title="The dof-to-true dof interpolation matrix.">Dof_TrueDof_Matrix</a>()-&gt;<a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(*v, *tv);
+<a name="l00074"></a>00074    <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aef050d1bb1c2239e4e31085e3a8d5b67" title="The dof-to-true dof interpolation matrix.">Dof_TrueDof_Matrix</a>()-&gt;<a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(*v, *tv);
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076    <span class="keyword">delete</span> v;
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078    pfes-&gt;<a class="code" href="classParFiniteElementSpace.html#a848b6e7a2824c64d08ae6ae1b9e8fcc9" title="Scale a vector in the range of P.">DivideByGroupSize</a>(*tv);
+<a name="l00078"></a>00078    <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a848b6e7a2824c64d08ae6ae1b9e8fcc9" title="Scale a vector in the range of P.">DivideByGroupSize</a>(*tv);
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080    <span class="keywordflow">return</span> tv;
 <a name="l00081"></a>00081 }
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="keywordtype">double</span> ParGridFunction::ComputeL2Error(<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> *exsol[],
+<a name="l00083"></a>00083 <span class="keywordtype">double</span> <a class="code" href="classParGridFunction.html#af856549e3cf85558c95c2136d3eb6420">ParGridFunction::ComputeL2Error</a>(<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> *exsol[],
 <a name="l00084"></a>00084                                        <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *irs[])<span class="keyword"> const</span>
 <a name="l00085"></a>00085 <span class="keyword"></span>{
 <a name="l00086"></a>00086    <span class="keywordtype">double</span> lerr, gerr;
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088    lerr = GridFunction::ComputeL2Error(exsol, irs);
+<a name="l00088"></a>00088    lerr = <a class="code" href="classParGridFunction.html#af856549e3cf85558c95c2136d3eb6420">GridFunction::ComputeL2Error</a>(exsol, irs);
 <a name="l00089"></a>00089    lerr *= lerr;
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091    MPI_Allreduce(&amp;lerr, &amp;gerr, 1, MPI_DOUBLE, MPI_SUM, pfes-&gt;GetComm());
+<a name="l00091"></a>00091    MPI_Allreduce(&amp;lerr, &amp;gerr, 1, MPI_DOUBLE, MPI_SUM, <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aa139180f9ccbf2f391e8f17741bfa6d5">GetComm</a>());
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093    <span class="keywordflow">return</span> sqrt(gerr);
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096 <span class="keywordtype">double</span> ParGridFunction::ComputeL2Error(<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;exsol,
+<a name="l00096"></a>00096 <span class="keywordtype">double</span> <a class="code" href="classParGridFunction.html#af856549e3cf85558c95c2136d3eb6420">ParGridFunction::ComputeL2Error</a>(<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;exsol,
 <a name="l00097"></a>00097                                        <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *irs[],
 <a name="l00098"></a>00098                                        <a class="code" href="classArray.html">Array&lt;int&gt;</a> *elems)<span class="keyword"> const</span>
 <a name="l00099"></a>00099 <span class="keyword"></span>{
 <a name="l00100"></a>00100    <span class="keywordtype">double</span> lerr, gerr;
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102    lerr = GridFunction::ComputeL2Error(exsol, irs, elems);
+<a name="l00102"></a>00102    lerr = <a class="code" href="classParGridFunction.html#af856549e3cf85558c95c2136d3eb6420">GridFunction::ComputeL2Error</a>(exsol, irs, elems);
 <a name="l00103"></a>00103    lerr *= lerr;
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105    MPI_Allreduce(&amp;lerr, &amp;gerr, 1, MPI_DOUBLE, MPI_SUM, pfes-&gt;GetComm());
+<a name="l00105"></a>00105    MPI_Allreduce(&amp;lerr, &amp;gerr, 1, MPI_DOUBLE, MPI_SUM, <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aa139180f9ccbf2f391e8f17741bfa6d5">GetComm</a>());
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107    <span class="keywordflow">return</span> sqrt(gerr);
 <a name="l00108"></a>00108 }
@@ -183,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00115"></a>00115    MPI_Status status;
 <a name="l00116"></a>00116    <span class="keywordtype">int</span> MyRank, NRanks;
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118    MyComm = pfes -&gt; GetComm();
+<a name="l00118"></a>00118    MyComm = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; GetComm();
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120    MPI_Comm_size(MyComm, &amp;NRanks);
 <a name="l00121"></a>00121    MPI_Comm_rank(MyComm, &amp;MyRank);
@@ -195,15 +196,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00127"></a>00127    <span class="keywordtype">int</span> *nfdofs = <span class="keyword">new</span> <span class="keywordtype">int</span>[NRanks];
 <a name="l00128"></a>00128    <span class="keywordtype">int</span> *nrdofs = <span class="keyword">new</span> <span class="keywordtype">int</span>[NRanks];
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130    values[0] = data;
-<a name="l00131"></a>00131    nv[0]     = pfes -&gt; GetVSize();
-<a name="l00132"></a>00132    nvdofs[0] = pfes -&gt; GetNVDofs();
-<a name="l00133"></a>00133    nedofs[0] = pfes -&gt; GetNEDofs();
-<a name="l00134"></a>00134    nfdofs[0] = pfes -&gt; GetNFDofs();
+<a name="l00130"></a>00130    values[0] = <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>;
+<a name="l00131"></a>00131    nv[0]     = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; GetVSize();
+<a name="l00132"></a>00132    nvdofs[0] = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; GetNVDofs();
+<a name="l00133"></a>00133    nedofs[0] = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; GetNEDofs();
+<a name="l00134"></a>00134    nfdofs[0] = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; GetNFDofs();
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136    <span class="keywordflow">if</span> (MyRank == 0)
 <a name="l00137"></a>00137    {
-<a name="l00138"></a>00138       pfes -&gt; <a class="code" href="classGridFunction.html#ae2af8548e4278fe4278246fd7ebd11fe" title="Save the GridFunction to an output stream.">Save</a>(out);
+<a name="l00138"></a>00138       <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; <a class="code" href="classGridFunction.html#ae2af8548e4278fe4278246fd7ebd11fe" title="Save the GridFunction to an output stream.">Save</a>(out);
 <a name="l00139"></a>00139       out &lt;&lt; endl;
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141       <span class="keywordflow">for</span> (p = 1; p &lt; NRanks; p++)
@@ -216,12 +217,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00148"></a>00148          MPI_Recv(values[p], nv[p], MPI_DOUBLE, p, 460, MyComm, &amp;status);
 <a name="l00149"></a>00149       }
 <a name="l00150"></a>00150 
-<a name="l00151"></a>00151       <span class="keywordtype">int</span> vdim = pfes -&gt; GetVDim();
+<a name="l00151"></a>00151       <span class="keywordtype">int</span> vdim = <a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a> -&gt; GetVDim();
 <a name="l00152"></a>00152 
 <a name="l00153"></a>00153       <span class="keywordflow">for</span> (p = 0; p &lt; NRanks; p++)
 <a name="l00154"></a>00154          nrdofs[p] = nv[p]/vdim - nvdofs[p] - nedofs[p] - nfdofs[p];
 <a name="l00155"></a>00155 
-<a name="l00156"></a>00156       <span class="keywordflow">if</span> (pfes-&gt;<a class="code" href="classFiniteElementSpace.html#ab3972257e40fd5d09a64b5a27c6e98fa" title="Return the ordering method.">GetOrdering</a>() == Ordering::byNODES)
+<a name="l00156"></a>00156       <span class="keywordflow">if</span> (<a class="code" href="classParGridFunction.html#ad91082a2181c971efe13fbfa8708e4c4">pfes</a>-&gt;<a class="code" href="classFiniteElementSpace.html#ab3972257e40fd5d09a64b5a27c6e98fa" title="Return the ordering method.">GetOrdering</a>() == <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8a4c0f58e61480fb4ce67b96175571dd78">Ordering::byNODES</a>)
 <a name="l00157"></a>00157       {
 <a name="l00158"></a>00158          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; vdim; d++)
 <a name="l00159"></a>00159          {
@@ -277,7 +278,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00209"></a>00209       MPI_Send(&amp;nvdofs[0], 1, MPI_INT, 0, 456, MyComm);
 <a name="l00210"></a>00210       MPI_Send(&amp;nedofs[0], 1, MPI_INT, 0, 457, MyComm);
 <a name="l00211"></a>00211       MPI_Send(&amp;nfdofs[0], 1, MPI_INT, 0, 458, MyComm);
-<a name="l00212"></a>00212       MPI_Send(data, nv[0], MPI_DOUBLE, 0, 460, MyComm);
+<a name="l00212"></a>00212       MPI_Send(<a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, nv[0], MPI_DOUBLE, 0, 460, MyComm);
 <a name="l00213"></a>00213    }
 <a name="l00214"></a>00214 
 <a name="l00215"></a>00215    <span class="keyword">delete</span> [] values;
@@ -296,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -305,7 +306,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

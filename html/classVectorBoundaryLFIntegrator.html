@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">VectorBoundaryLFIntegrator Class Reference</div>  </div>
 </div>
@@ -86,16 +87,42 @@ Collaboration diagram for VectorBoundaryLFIntegrator:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a080f8a86f9349132af8d312bb724b4a3"></a><!-- doxytag: member="VectorBoundaryLFIntegrator::VectorBoundaryLFIntegrator" ref="a080f8a86f9349132af8d312bb724b4a3" args="(VectorCoefficient &amp;QG)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorBoundaryLFIntegrator.html#a080f8a86f9349132af8d312bb724b4a3">VectorBoundaryLFIntegrator</a> (<a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QG)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a boundary integrator with a given <a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> QG. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorBoundaryLFIntegrator.html#a080f8a86f9349132af8d312bb724b4a3">VectorBoundaryLFIntegrator</a> (<a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QG)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a boundary integrator with a given <a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> QG.  <a href="#a080f8a86f9349132af8d312bb724b4a3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorBoundaryLFIntegrator.html#ae02a1bd878501d693e7646a07aeeb018">AssembleRHSElementVect</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr, <a class="el" href="classVector.html">Vector</a> &amp;elvect)</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorBoundaryLFIntegrator.html#a181fd09688920aafba0fc383bf5005ab">shape</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">vec</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">Q</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for boundary integration of L(v) := (g, v), where f=(f1,...,fn) and v=(v1,...,vn). </p>
 
 <p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00099">99</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a080f8a86f9349132af8d312bb724b4a3"></a><!-- doxytag: member="VectorBoundaryLFIntegrator::VectorBoundaryLFIntegrator" ref="a080f8a86f9349132af8d312bb724b4a3" args="(VectorCoefficient &amp;QG)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorBoundaryLFIntegrator::VectorBoundaryLFIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>QG</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructs a boundary integrator with a given <a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> QG. </p>
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00107">107</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ae02a1bd878501d693e7646a07aeeb018"></a><!-- doxytag: member="VectorBoundaryLFIntegrator::AssembleRHSElementVect" ref="ae02a1bd878501d693e7646a07aeeb018" args="(const FiniteElement &amp;el, ElementTransformation &amp;Tr, Vector &amp;elvect)" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +159,59 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="lininteg_8cpp_source.html#l00124">124</a> of file <a class="el" href="lininteg_8cpp_source.html">lininteg.cpp</a>.</p>
 
-<p>References <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="coefficient_8hpp_source.html#l00177">VectorCoefficient::GetVDim()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, and <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>.</p>
+<p>References <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="coefficient_8cpp_source.html#l00049">VectorCoefficient::Eval()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="coefficient_8hpp_source.html#l00177">VectorCoefficient::GetVDim()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="lininteg_8hpp_source.html#l00103">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="lininteg_8hpp_source.html#l00102">shape</a>, <a class="el" href="lininteg_8hpp_source.html#l00102">vec</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>, and <a class="el" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">ElementTransformation::Weight()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="aabd33429e41b635dc0b9a153c9583262"></a><!-- doxytag: member="VectorBoundaryLFIntegrator::Q" ref="aabd33429e41b635dc0b9a153c9583262" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a>&amp; <a class="el" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">VectorBoundaryLFIntegrator::Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00103">103</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00124">AssembleRHSElementVect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a181fd09688920aafba0fc383bf5005ab"></a><!-- doxytag: member="VectorBoundaryLFIntegrator::shape" ref="a181fd09688920aafba0fc383bf5005ab" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classVectorBoundaryLFIntegrator.html#a181fd09688920aafba0fc383bf5005ab">VectorBoundaryLFIntegrator::shape</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00102">102</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00124">AssembleRHSElementVect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3801b3ba5ddf04e6b25acef14a972c7d"></a><!-- doxytag: member="VectorBoundaryLFIntegrator::vec" ref="a3801b3ba5ddf04e6b25acef14a972c7d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">VectorBoundaryLFIntegrator::vec</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00102">102</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00124">AssembleRHSElementVect()</a>.</p>
 
 </div>
 </div>
@@ -146,7 +225,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -155,7 +234,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:07 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:05 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

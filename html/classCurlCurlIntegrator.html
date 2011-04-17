@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">CurlCurlIntegrator Class Reference</div>  </div>
 </div>
@@ -89,18 +90,154 @@ Collaboration diagram for CurlCurlIntegrator:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae88227ce6c2f7f98b5012e6a6c281a96"></a><!-- doxytag: member="CurlCurlIntegrator::CurlCurlIntegrator" ref="ae88227ce6c2f7f98b5012e6a6c281a96" args="(Coefficient &amp;q)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#ae88227ce6c2f7f98b5012e6a6c281a96">CurlCurlIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;q)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a bilinear form integrator for Nedelec elements. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e7768ecc12e339d37338176a160950c"></a><!-- doxytag: member="CurlCurlIntegrator::AssembleElementMatrix" ref="a2e7768ecc12e339d37338176a160950c" args="(const FiniteElement &amp;el, ElementTransformation &amp;Trans, DenseMatrix &amp;elmat)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#a2e7768ecc12e339d37338176a160950c">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#a38e22885b217412918ec4c9a84280835">CurlCurlIntegrator</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#ae88227ce6c2f7f98b5012e6a6c281a96">CurlCurlIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;q)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a bilinear form integrator for Nedelec elements.  <a href="#ae88227ce6c2f7f98b5012e6a6c281a96"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#a2e7768ecc12e339d37338176a160950c">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat.  <a href="#a2e7768ecc12e339d37338176a160950c"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#a0feead4d04b10bde11df4da27fd6bc43">Curlshape</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#a94ee777358499c907c2d598483ad0eaa">Curlshape_dFt</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoefficient.html">Coefficient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlCurlIntegrator.html#a7815b94da57648384e635b004c1b55a9">Q</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Integrator for (curl u, curl v) for Nedelec elements. </p>
 
 <p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00249">249</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a38e22885b217412918ec4c9a84280835"></a><!-- doxytag: member="CurlCurlIntegrator::CurlCurlIntegrator" ref="a38e22885b217412918ec4c9a84280835" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CurlCurlIntegrator::CurlCurlIntegrator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00256">256</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00253">Q</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae88227ce6c2f7f98b5012e6a6c281a96"></a><!-- doxytag: member="CurlCurlIntegrator::CurlCurlIntegrator" ref="ae88227ce6c2f7f98b5012e6a6c281a96" args="(Coefficient &amp;q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CurlCurlIntegrator::CurlCurlIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoefficient.html">Coefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construct a bilinear form integrator for Nedelec elements. </p>
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00258">258</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a2e7768ecc12e339d37338176a160950c"></a><!-- doxytag: member="CurlCurlIntegrator::AssembleElementMatrix" ref="a2e7768ecc12e339d37338176a160950c" args="(const FiniteElement &amp;el, ElementTransformation &amp;Trans, DenseMatrix &amp;elmat)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurlCurlIntegrator::AssembleElementMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>Trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>elmat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat. </p>
+
+<p>Reimplemented from <a class="el" href="classBilinearFormIntegrator.html#adf3480ea4fb587b2a7853b6531ecb912">BilinearFormIntegrator</a>.</p>
+
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00473">473</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8cpp_source.html#l01325">AddMult_a_AAt()</a>, <a class="el" href="fe_8cpp_source.html#l00045">FiniteElement::CalcCurlShape()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00050">FiniteElement::GetDim()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">ElementTransformation::Jacobian()</a>, <a class="el" href="densemat_8cpp_source.html#l01266">MultABt()</a>, <a class="el" href="fe_8hpp_source.html#l00021">FunctionSpace::Pk</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="fe_8hpp_source.html#l00062">FiniteElement::Space()</a>, <a class="el" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">ElementTransformation::Weight()</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a0feead4d04b10bde11df4da27fd6bc43"></a><!-- doxytag: member="CurlCurlIntegrator::Curlshape" ref="a0feead4d04b10bde11df4da27fd6bc43" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classCurlCurlIntegrator.html#a0feead4d04b10bde11df4da27fd6bc43">CurlCurlIntegrator::Curlshape</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00252">252</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94ee777358499c907c2d598483ad0eaa"></a><!-- doxytag: member="CurlCurlIntegrator::Curlshape_dFt" ref="a94ee777358499c907c2d598483ad0eaa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classCurlCurlIntegrator.html#a94ee777358499c907c2d598483ad0eaa">CurlCurlIntegrator::Curlshape_dFt</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00252">252</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7815b94da57648384e635b004c1b55a9"></a><!-- doxytag: member="CurlCurlIntegrator::Q" ref="a7815b94da57648384e635b004c1b55a9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoefficient.html">Coefficient</a>* <a class="el" href="classCurlCurlIntegrator.html#a7815b94da57648384e635b004c1b55a9">CurlCurlIntegrator::Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00253">253</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8hpp_source.html#l00256">CurlCurlIntegrator()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a></li>
 <li><a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a></li>
 </ul>
@@ -110,7 +247,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,7 +256,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

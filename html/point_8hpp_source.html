@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">point.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="point_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,33 +84,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a><a class="code" href="classPoint.html">00016</a> <span class="keyword">class </span><a class="code" href="classPoint.html" title="Data type point element.">Point</a> : <span class="keyword">public</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">protected</span>:
-<a name="l00019"></a>00019    <span class="keywordtype">int</span> indices[1];
+<a name="l00019"></a><a class="code" href="classPoint.html#afa54f52680f36082bd7380f4e060afb0">00019</a>    <span class="keywordtype">int</span> <a class="code" href="classPoint.html#afa54f52680f36082bd7380f4e060afb0">indices</a>[1];
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023    <a class="code" href="classPoint.html" title="Data type point element.">Point</a>() : <a class="code" href="classElement.html#afef2a487e1fc90d875d38bb6dbeda2d5" title="Default element constructor.">Element</a>(Geometry::POINT) {}
+<a name="l00023"></a><a class="code" href="classPoint.html#ad92f2337b839a94ce97dcdb439b4325a">00023</a>    <a class="code" href="classPoint.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a>() : <a class="code" href="classElement.html" title="Abstract data type element.">Element</a>(<a class="code" href="classGeometry.html">Geometry</a>::<a class="code" href="classElement.html#a009a3be4c3a037a72e292b2464c9cbc5add1527bebceb912964080b60b7dc312a">POINT</a>) {}
 <a name="l00024"></a>00024 
-<a name="l00026"></a>00026    <a class="code" href="classPoint.html" title="Data type point element.">Point</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> *ind, <span class="keywordtype">int</span> attr = -1 );
+<a name="l00026"></a>00026    <a class="code" href="classPoint.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> *ind, <span class="keywordtype">int</span> attr = -1 );
 <a name="l00027"></a>00027 
-<a name="l00029"></a><a class="code" href="classPoint.html#a57787fc11ba551045e53e7f74d0148d8">00029</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classPoint.html#a57787fc11ba551045e53e7f74d0148d8" title="Return element&#39;s type.">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Element::POINT; }
+<a name="l00029"></a><a class="code" href="classPoint.html#a57787fc11ba551045e53e7f74d0148d8">00029</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classPoint.html#a57787fc11ba551045e53e7f74d0148d8" title="Return element&#39;s type.">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classElement.html#a009a3be4c3a037a72e292b2464c9cbc5add1527bebceb912964080b60b7dc312a">Element::POINT</a>; }
 <a name="l00030"></a>00030 
-<a name="l00032"></a>00032    <span class="keyword">virtual</span> <span class="keywordtype">void</span> GetVertices( <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;v ) <span class="keyword">const</span>;
+<a name="l00032"></a>00032    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPoint.html#a1a18744f87ff20f40650554b9fdb83ed">GetVertices</a>( <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;v ) <span class="keyword">const</span>;
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * GetVertices () { <span class="keywordflow">return</span> indices; };
+<a name="l00034"></a><a class="code" href="classPoint.html#a1a18744f87ff20f40650554b9fdb83ed">00034</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classPoint.html#a1a18744f87ff20f40650554b9fdb83ed">GetVertices</a> () { <span class="keywordflow">return</span> <a class="code" href="classPoint.html#afa54f52680f36082bd7380f4e060afb0">indices</a>; };
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036    <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetNVertices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; };
+<a name="l00036"></a><a class="code" href="classPoint.html#a8b81b5ba07ca3b74a7f72b1ae85c82ca">00036</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classPoint.html#a8b81b5ba07ca3b74a7f72b1ae85c82ca">GetNVertices</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; };
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038    <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetNEdges()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(0); }
+<a name="l00038"></a><a class="code" href="classPoint.html#ab02039f92a27156e44408e982ab9fd8e">00038</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classPoint.html#ab02039f92a27156e44408e982ab9fd8e">GetNEdges</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(0); }
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *GetEdgeVertices(<span class="keywordtype">int</span> ei)<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(NULL); }
+<a name="l00040"></a><a class="code" href="classPoint.html#abbe97235ad6b70bfd5d96507070cb2a9">00040</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classPoint.html#abbe97235ad6b70bfd5d96507070cb2a9">GetEdgeVertices</a>(<span class="keywordtype">int</span> ei)<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(NULL); }
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042    <span class="keyword">virtual</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *Duplicate()<span class="keyword"> const</span>
-<a name="l00043"></a>00043 <span class="keyword">   </span>{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classPoint.html" title="Data type point element.">Point</a> (indices, <a class="code" href="classElement.html#a2bb0522ba1a53ca06b079700c53834e1" title="Element&#39;s attribute (specifying material property, etc).">attribute</a>); };
+<a name="l00042"></a><a class="code" href="classPoint.html#ad0c5d239cfd6fc0db88c2c9ad4e099ae">00042</a>    <span class="keyword">virtual</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *<a class="code" href="classPoint.html#ad0c5d239cfd6fc0db88c2c9ad4e099ae">Duplicate</a>()<span class="keyword"> const</span>
+<a name="l00043"></a>00043 <span class="keyword">   </span>{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classPoint.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a> (<a class="code" href="classPoint.html#afa54f52680f36082bd7380f4e060afb0">indices</a>, <a class="code" href="classElement.html#a2bb0522ba1a53ca06b079700c53834e1" title="Element&#39;s attribute (specifying material property, etc).">attribute</a>); };
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045    <span class="keyword">virtual</span> ~<a class="code" href="classPoint.html" title="Data type point element.">Point</a>() { }
+<a name="l00045"></a><a class="code" href="classPoint.html#a364091762d6aa1aa5983d36fd7d8b6d5">00045</a>    <span class="keyword">virtual</span> <a class="code" href="classPoint.html#a364091762d6aa1aa5983d36fd7d8b6d5">~Point</a>() { }
 <a name="l00046"></a>00046 };
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="keyword">extern</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> PointFE;
+<a name="l00048"></a>00048 <span class="keyword">extern</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> <a class="code" href="point_8cpp.html#af8b00fd2a6f5ca27f7eba27cf8c6a35b">PointFE</a>;
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 <span class="preprocessor">#endif</span>
 </pre></div></div>
@@ -119,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

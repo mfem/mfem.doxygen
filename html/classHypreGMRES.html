@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">HypreGMRES Class Reference</div>  </div>
 </div>
@@ -89,42 +90,346 @@ Collaboration diagram for HypreGMRES:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85b8e2660c10e0b65bc41f1fea9e4dc1"></a><!-- doxytag: member="HypreGMRES::HypreGMRES" ref="a85b8e2660c10e0b65bc41f1fea9e4dc1" args="(HypreParMatrix &amp;_A)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>HypreGMRES</b> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;_A)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86e97797376ca4adf4fe34a4c9379103"></a><!-- doxytag: member="HypreGMRES::SetTol" ref="a86e97797376ca4adf4fe34a4c9379103" args="(double tol)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTol</b> (double tol)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa79b69b547271595df306dc91d5bfe5e"></a><!-- doxytag: member="HypreGMRES::SetMaxIter" ref="aa79b69b547271595df306dc91d5bfe5e" args="(int max_iter)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMaxIter</b> (int max_iter)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a2c9bb81408839b09abe1ef8c29334c"></a><!-- doxytag: member="HypreGMRES::SetKDim" ref="a6a2c9bb81408839b09abe1ef8c29334c" args="(int dim)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetKDim</b> (int dim)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a482cc77f3be37d337796a43b79b399e4"></a><!-- doxytag: member="HypreGMRES::SetLogging" ref="a482cc77f3be37d337796a43b79b399e4" args="(int logging)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLogging</b> (int logging)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a137a47455c0762c55c85322e5bdd24b9"></a><!-- doxytag: member="HypreGMRES::SetPrintLevel" ref="a137a47455c0762c55c85322e5bdd24b9" args="(int print_lvl)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPrintLevel</b> (int print_lvl)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6635c24ada49fd26b321a95e856a48c7"></a><!-- doxytag: member="HypreGMRES::SetPreconditioner" ref="a6635c24ada49fd26b321a95e856a48c7" args="(HypreSolver &amp;precond)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a6635c24ada49fd26b321a95e856a48c7">SetPreconditioner</a> (<a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;precond)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hypre solver to be used as a preconditioner. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cc2b4e8bc5fb96a5c97c6bc24eb35c2"></a><!-- doxytag: member="HypreGMRES::SetZeroInintialIterate" ref="a4cc2b4e8bc5fb96a5c97c6bc24eb35c2" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2">SetZeroInintialIterate</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">non-hypre setting <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c91636d4e6289c40601efa04beb6c65"></a><!-- doxytag: member="HypreGMRES::operator HYPRE_Solver" ref="a8c91636d4e6289c40601efa04beb6c65" args="() const " -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65">operator HYPRE_Solver</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The typecast to HYPRE_Solver returns the internal gmres_solver. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e4bccfe05ac4ff69ec408bde192df2"></a><!-- doxytag: member="HypreGMRES::SetupFcn" ref="a59e4bccfe05ac4ff69ec408bde192df2" args="() const " -->
-virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2">SetupFcn</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">GMRES Setup function. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6573638420f68b23f18e5e410850ff10"></a><!-- doxytag: member="HypreGMRES::SolveFcn" ref="a6573638420f68b23f18e5e410850ff10" args="() const " -->
-virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10">SolveFcn</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">GMRES Solve function. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f877a8e3242e9a4dfaa9eecdc97438c"></a><!-- doxytag: member="HypreGMRES::Mult" ref="a1f877a8e3242e9a4dfaa9eecdc97438c" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c">Mult</a> (const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax=b with hypre's GMRES. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a85b8e2660c10e0b65bc41f1fea9e4dc1">HypreGMRES</a> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;_A)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a86e97797376ca4adf4fe34a4c9379103">SetTol</a> (double tol)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#aa79b69b547271595df306dc91d5bfe5e">SetMaxIter</a> (int max_iter)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a6a2c9bb81408839b09abe1ef8c29334c">SetKDim</a> (int dim)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a482cc77f3be37d337796a43b79b399e4">SetLogging</a> (int logging)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a137a47455c0762c55c85322e5bdd24b9">SetPrintLevel</a> (int print_lvl)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a6635c24ada49fd26b321a95e856a48c7">SetPreconditioner</a> (<a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;precond)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hypre solver to be used as a preconditioner.  <a href="#a6635c24ada49fd26b321a95e856a48c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2">SetZeroInintialIterate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">non-hypre setting  <a href="#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65">operator HYPRE_Solver</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The typecast to HYPRE_Solver returns the internal gmres_solver.  <a href="#a8c91636d4e6289c40601efa04beb6c65"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2">SetupFcn</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">GMRES Setup function.  <a href="#a59e4bccfe05ac4ff69ec408bde192df2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10">SolveFcn</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">GMRES Solve function.  <a href="#a6573638420f68b23f18e5e410850ff10"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c">Mult</a> (const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax=b with hypre's GMRES.  <a href="#a1f877a8e3242e9a4dfaa9eecdc97438c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a137b9315da70b3379afde976ce213522">~HypreGMRES</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a65b89d5ec20e21a5e9438c108eabbf04">print_level</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">use_zero_initial_iterate</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">HYPRE_Solver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">gmres_solver</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>GMRES solver in hypre. </p>
 
 <p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00257">257</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a85b8e2660c10e0b65bc41f1fea9e4dc1"></a><!-- doxytag: member="HypreGMRES::HypreGMRES" ref="a85b8e2660c10e0b65bc41f1fea9e4dc1" args="(HypreParMatrix &amp;_A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HypreGMRES::HypreGMRES </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>_A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a137b9315da70b3379afde976ce213522"></a><!-- doxytag: member="HypreGMRES::~HypreGMRES" ref="a137b9315da70b3379afde976ce213522" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HypreGMRES::~HypreGMRES </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1f877a8e3242e9a4dfaa9eecdc97438c"></a><!-- doxytag: member="HypreGMRES::Mult" ref="a1f877a8e3242e9a4dfaa9eecdc97438c" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void HypreGMRES::Mult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Solve Ax=b with hypre's GMRES. </p>
+
+<p>Reimplemented from <a class="el" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd">HypreSolver</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c91636d4e6289c40601efa04beb6c65"></a><!-- doxytag: member="HypreGMRES::operator HYPRE_Solver" ref="a8c91636d4e6289c40601efa04beb6c65" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HypreGMRES::operator HYPRE_Solver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The typecast to HYPRE_Solver returns the internal gmres_solver. </p>
+
+<p>Implements <a class="el" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd">HypreSolver</a>.</p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00279">279</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>References <a class="el" href="hypre_8hpp_source.html#l00261">gmres_solver</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a2c9bb81408839b09abe1ef8c29334c"></a><!-- doxytag: member="HypreGMRES::SetKDim" ref="a6a2c9bb81408839b09abe1ef8c29334c" args="(int dim)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetKDim </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a482cc77f3be37d337796a43b79b399e4"></a><!-- doxytag: member="HypreGMRES::SetLogging" ref="a482cc77f3be37d337796a43b79b399e4" args="(int logging)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetLogging </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>logging</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa79b69b547271595df306dc91d5bfe5e"></a><!-- doxytag: member="HypreGMRES::SetMaxIter" ref="aa79b69b547271595df306dc91d5bfe5e" args="(int max_iter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetMaxIter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6635c24ada49fd26b321a95e856a48c7"></a><!-- doxytag: member="HypreGMRES::SetPreconditioner" ref="a6635c24ada49fd26b321a95e856a48c7" args="(HypreSolver &amp;precond)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetPreconditioner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;&#160;</td>
+          <td class="paramname"><em>precond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the hypre solver to be used as a preconditioner. </p>
+
+</div>
+</div>
+<a class="anchor" id="a137a47455c0762c55c85322e5bdd24b9"></a><!-- doxytag: member="HypreGMRES::SetPrintLevel" ref="a137a47455c0762c55c85322e5bdd24b9" args="(int print_lvl)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetPrintLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>print_lvl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86e97797376ca4adf4fe34a4c9379103"></a><!-- doxytag: member="HypreGMRES::SetTol" ref="a86e97797376ca4adf4fe34a4c9379103" args="(double tol)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetTol </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a59e4bccfe05ac4ff69ec408bde192df2"></a><!-- doxytag: member="HypreGMRES::SetupFcn" ref="a59e4bccfe05ac4ff69ec408bde192df2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HYPRE_PtrToParSolverFcn HypreGMRES::SetupFcn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>GMRES Setup function. </p>
+
+<p>Implements <a class="el" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218">HypreSolver</a>.</p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00282">282</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cc2b4e8bc5fb96a5c97c6bc24eb35c2"></a><!-- doxytag: member="HypreGMRES::SetZeroInintialIterate" ref="a4cc2b4e8bc5fb96a5c97c6bc24eb35c2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreGMRES::SetZeroInintialIterate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>non-hypre setting </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00276">276</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>References <a class="el" href="hypre_8hpp_source.html#l00260">use_zero_initial_iterate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6573638420f68b23f18e5e410850ff10"></a><!-- doxytag: member="HypreGMRES::SolveFcn" ref="a6573638420f68b23f18e5e410850ff10" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual HYPRE_PtrToParSolverFcn HypreGMRES::SolveFcn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>GMRES Solve function. </p>
+
+<p>Implements <a class="el" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59">HypreSolver</a>.</p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00285">285</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ae1be31a79b029a94c7df5458bdebed0f"></a><!-- doxytag: member="HypreGMRES::gmres_solver" ref="ae1be31a79b029a94c7df5458bdebed0f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HYPRE_Solver <a class="el" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">HypreGMRES::gmres_solver</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00261">261</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00279">operator HYPRE_Solver()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65b89d5ec20e21a5e9438c108eabbf04"></a><!-- doxytag: member="HypreGMRES::print_level" ref="a65b89d5ec20e21a5e9438c108eabbf04" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classHypreGMRES.html#a65b89d5ec20e21a5e9438c108eabbf04">HypreGMRES::print_level</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00260">260</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f26623991c62cac2108994722843d90"></a><!-- doxytag: member="HypreGMRES::use_zero_initial_iterate" ref="a4f26623991c62cac2108994722843d90" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">HypreGMRES::use_zero_initial_iterate</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00260">260</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00276">SetZeroInintialIterate()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="hypre_8hpp_source.html">hypre.hpp</a></li>
 </ul>
 </div>
@@ -133,7 +438,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -142,7 +447,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

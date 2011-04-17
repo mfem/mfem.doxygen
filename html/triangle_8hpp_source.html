@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">triangle.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="triangle_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,16 +84,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a><a class="code" href="classTriangle.html">00016</a> <span class="keyword">class </span><a class="code" href="classTriangle.html" title="Data type triangle element.">Triangle</a> : <span class="keyword">public</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">protected</span>:
-<a name="l00019"></a>00019    <span class="keywordtype">int</span> indices[3];
-<a name="l00020"></a>00020    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> edges[3][2];
+<a name="l00019"></a><a class="code" href="classTriangle.html#a60133115d2c12abba077fd00ebef015a">00019</a>    <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#a60133115d2c12abba077fd00ebef015a">indices</a>[3];
+<a name="l00020"></a><a class="code" href="classTriangle.html#a54a7dfacf8ae325ad986be0125d91205">00020</a>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#a54a7dfacf8ae325ad986be0125d91205">edges</a>[3][2];
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024    <a class="code" href="classTriangle.html" title="Data type triangle element.">Triangle</a>() : <a class="code" href="classElement.html#afef2a487e1fc90d875d38bb6dbeda2d5" title="Default element constructor.">Element</a>(Geometry::TRIANGLE) { }
+<a name="l00024"></a><a class="code" href="classTriangle.html#aaefe4ed500c07918d30c6f0e286332c5">00024</a>    <a class="code" href="classTriangle.html#aaefe4ed500c07918d30c6f0e286332c5">Triangle</a>() : <a class="code" href="classElement.html" title="Abstract data type element.">Element</a>(<a class="code" href="classGeometry.html">Geometry</a>::<a class="code" href="classElement.html#a009a3be4c3a037a72e292b2464c9cbc5a37f41642ce475fe5b4a22550ef798560">TRIANGLE</a>) { }
 <a name="l00025"></a>00025 
-<a name="l00027"></a>00027    <a class="code" href="classTriangle.html" title="Data type triangle element.">Triangle</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> *ind, <span class="keywordtype">int</span> attr = 1);
+<a name="l00027"></a>00027    <a class="code" href="classTriangle.html#aaefe4ed500c07918d30c6f0e286332c5">Triangle</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> *ind, <span class="keywordtype">int</span> attr = 1);
 <a name="l00028"></a>00028 
-<a name="l00030"></a>00030    <a class="code" href="classTriangle.html" title="Data type triangle element.">Triangle</a>(<span class="keywordtype">int</span> ind1, <span class="keywordtype">int</span> ind2, <span class="keywordtype">int</span> ind3, <span class="keywordtype">int</span> attr = 1);
+<a name="l00030"></a>00030    <a class="code" href="classTriangle.html#aaefe4ed500c07918d30c6f0e286332c5">Triangle</a>(<span class="keywordtype">int</span> ind1, <span class="keywordtype">int</span> ind2, <span class="keywordtype">int</span> ind3, <span class="keywordtype">int</span> attr = 1);
 <a name="l00031"></a>00031 
 <a name="l00033"></a>00033    <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#a54d9bac2ff9684a9bed04678757cd493" title="Return 1 if the element needs refinement in order to get conforming mesh.">NeedRefinement</a>(<a class="code" href="classDSTable.html">DSTable</a> &amp;v_to_v, <span class="keywordtype">int</span> *middle) <span class="keyword">const</span>;
 <a name="l00034"></a>00034 
@@ -102,25 +103,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00042"></a>00042 
 <a name="l00044"></a>00044    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTriangle.html#acae475ba16acd5bc3983e47ddf1993d1">MarkEdge</a>(<span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;v_to_v, <span class="keyword">const</span> <span class="keywordtype">int</span> *length);
 <a name="l00045"></a>00045 
-<a name="l00047"></a><a class="code" href="classTriangle.html#aa7f9576a96b37a3b9bd429338aa1865b">00047</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#aa7f9576a96b37a3b9bd429338aa1865b" title="Return element&#39;s type.">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Element::TRIANGLE; }
+<a name="l00047"></a><a class="code" href="classTriangle.html#aa7f9576a96b37a3b9bd429338aa1865b">00047</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#aa7f9576a96b37a3b9bd429338aa1865b" title="Return element&#39;s type.">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classElement.html#a009a3be4c3a037a72e292b2464c9cbc5a37f41642ce475fe5b4a22550ef798560">Element::TRIANGLE</a>; }
 <a name="l00048"></a>00048 
-<a name="l00050"></a>00050    <span class="keyword">virtual</span> <span class="keywordtype">void</span> GetVertices(<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;v) <span class="keyword">const</span>;
+<a name="l00050"></a>00050    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTriangle.html#ad7180e56c3750e683a9c56472e81d3b9">GetVertices</a>(<a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;v) <span class="keyword">const</span>;
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052    <span class="keyword">virtual</span> <span class="keywordtype">int</span> *GetVertices() { <span class="keywordflow">return</span> indices; }
+<a name="l00052"></a><a class="code" href="classTriangle.html#ad7180e56c3750e683a9c56472e81d3b9">00052</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> *<a class="code" href="classTriangle.html#ad7180e56c3750e683a9c56472e81d3b9">GetVertices</a>() { <span class="keywordflow">return</span> <a class="code" href="classTriangle.html#a60133115d2c12abba077fd00ebef015a">indices</a>; }
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054    <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetNVertices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 3; }
+<a name="l00054"></a><a class="code" href="classTriangle.html#a37489191eb29dbfefea5ee9ac8c5cb5c">00054</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#a37489191eb29dbfefea5ee9ac8c5cb5c">GetNVertices</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 3; }
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056    <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetNEdges()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(3); }
+<a name="l00056"></a><a class="code" href="classTriangle.html#a3f7e98fc632870efa0686e69f62ba058">00056</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTriangle.html#a3f7e98fc632870efa0686e69f62ba058">GetNEdges</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(3); }
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *GetEdgeVertices(<span class="keywordtype">int</span> ei)<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(edges[ei]); }
+<a name="l00058"></a><a class="code" href="classTriangle.html#ab23a9adf7eada9864a42eec849921038">00058</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classTriangle.html#ab23a9adf7eada9864a42eec849921038">GetEdgeVertices</a>(<span class="keywordtype">int</span> ei)<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(<a class="code" href="classTriangle.html#a54a7dfacf8ae325ad986be0125d91205">edges</a>[ei]); }
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060    <span class="keyword">virtual</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *Duplicate()<span class="keyword"> const</span>
-<a name="l00061"></a>00061 <span class="keyword">   </span>{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classTriangle.html" title="Data type triangle element.">Triangle</a>(indices, <a class="code" href="classElement.html#a2bb0522ba1a53ca06b079700c53834e1" title="Element&#39;s attribute (specifying material property, etc).">attribute</a>); }
+<a name="l00060"></a><a class="code" href="classTriangle.html#a22c71f6ca5f895a5c79fb21661bcc294">00060</a>    <span class="keyword">virtual</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *<a class="code" href="classTriangle.html#a22c71f6ca5f895a5c79fb21661bcc294">Duplicate</a>()<span class="keyword"> const</span>
+<a name="l00061"></a>00061 <span class="keyword">   </span>{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classTriangle.html#aaefe4ed500c07918d30c6f0e286332c5">Triangle</a>(<a class="code" href="classTriangle.html#a60133115d2c12abba077fd00ebef015a">indices</a>, <a class="code" href="classElement.html#a2bb0522ba1a53ca06b079700c53834e1" title="Element&#39;s attribute (specifying material property, etc).">attribute</a>); }
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063    <span class="keyword">virtual</span> ~<a class="code" href="classTriangle.html" title="Data type triangle element.">Triangle</a>() { }
+<a name="l00063"></a><a class="code" href="classTriangle.html#a81dbbf1be60e083d3d92be4d0291b3b5">00063</a>    <span class="keyword">virtual</span> <a class="code" href="classTriangle.html#a81dbbf1be60e083d3d92be4d0291b3b5">~Triangle</a>() { }
 <a name="l00064"></a>00064 };
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="keyword">extern</span> <a class="code" href="classLinear2DFiniteElement.html" title="Class for linear FE on triangle.">Linear2DFiniteElement</a> TriangleFE;
+<a name="l00066"></a>00066 <span class="keyword">extern</span> <a class="code" href="classLinear2DFiniteElement.html" title="Class for linear FE on triangle.">Linear2DFiniteElement</a> <a class="code" href="triangle_8cpp.html#abf2f17c1acdb13ea5cab5a9dc3804baa">TriangleFE</a>;
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 <span class="preprocessor">#endif</span>
 </pre></div></div>
@@ -130,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -139,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

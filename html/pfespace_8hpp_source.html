@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">pfespace.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="pfespace_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,39 +84,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a><a class="code" href="classParFiniteElementSpace.html">00016</a> <span class="keyword">class </span><a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">private</span>:
-<a name="l00020"></a>00020    MPI_Comm MyComm;
-<a name="l00021"></a>00021    <span class="keywordtype">int</span> NRanks, MyRank;
+<a name="l00020"></a><a class="code" href="classParFiniteElementSpace.html#ad1f69f464b90b4f574cea282ceab8c41">00020</a>    MPI_Comm <a class="code" href="classParFiniteElementSpace.html#ad1f69f464b90b4f574cea282ceab8c41" title="MPI data.">MyComm</a>;
+<a name="l00021"></a><a class="code" href="classParFiniteElementSpace.html#aa59cdc23595cecc35f599db066fe778d">00021</a>    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#aa59cdc23595cecc35f599db066fe778d">NRanks</a>, <a class="code" href="classParFiniteElementSpace.html#a54e3fbf715a2bce6aee288c4d897f31e">MyRank</a>;
 <a name="l00022"></a>00022 
-<a name="l00024"></a>00024    <a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> *pmesh;
+<a name="l00024"></a><a class="code" href="classParFiniteElementSpace.html#a96929a80465ebb93fbb2ef2cc4415665">00024</a>    <a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> *<a class="code" href="classParFiniteElementSpace.html#a96929a80465ebb93fbb2ef2cc4415665" title="Parallel mesh.">pmesh</a>;
 <a name="l00025"></a>00025 
-<a name="l00027"></a>00027    <span class="keywordtype">int</span> ltdof_size;
+<a name="l00027"></a><a class="code" href="classParFiniteElementSpace.html#a1257bfa2f8a5852a6f19891d9dec7e35">00027</a>    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#a1257bfa2f8a5852a6f19891d9dec7e35" title="Number of true dofs in this processor (local true dofs).">ltdof_size</a>;
 <a name="l00028"></a>00028 
-<a name="l00030"></a>00030    <a class="code" href="classArray.html">Array&lt;int&gt;</a> ldof_group;
+<a name="l00030"></a><a class="code" href="classParFiniteElementSpace.html#a7c4c3989d08d2cc4f6f3b3474929e9b6">00030</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParFiniteElementSpace.html#a7c4c3989d08d2cc4f6f3b3474929e9b6" title="The group of each local dof.">ldof_group</a>;
 <a name="l00031"></a>00031 
-<a name="l00033"></a>00033    <a class="code" href="classArray.html">Array&lt;int&gt;</a> ldof_ltdof;
+<a name="l00033"></a><a class="code" href="classParFiniteElementSpace.html#abda8fb81b1b4b6b09c0bedcb0f65c40a">00033</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParFiniteElementSpace.html#abda8fb81b1b4b6b09c0bedcb0f65c40a" title="For a local dof: the local true dof number in the master of its group.">ldof_ltdof</a>;
 <a name="l00034"></a>00034 
-<a name="l00036"></a>00036    <a class="code" href="classArray.html">Array&lt;int&gt;</a> dof_offsets;
+<a name="l00036"></a><a class="code" href="classParFiniteElementSpace.html#af21e143b29a2c76f639b5018fa94bc5b">00036</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParFiniteElementSpace.html#af21e143b29a2c76f639b5018fa94bc5b" title="Offsets for the dofs in each processor in global numbering.">dof_offsets</a>;
 <a name="l00037"></a>00037 
-<a name="l00039"></a>00039    <a class="code" href="classArray.html">Array&lt;int&gt;</a> tdof_offsets;
+<a name="l00039"></a><a class="code" href="classParFiniteElementSpace.html#a00a9f7bb6b98f0dfa2b409912982e987">00039</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParFiniteElementSpace.html#a00a9f7bb6b98f0dfa2b409912982e987" title="Offsets for the true dofs in each processor in global numbering.">tdof_offsets</a>;
 <a name="l00040"></a>00040 
-<a name="l00042"></a>00042    <a class="code" href="classArray.html">Array&lt;int&gt;</a> ldof_sign;
+<a name="l00042"></a><a class="code" href="classParFiniteElementSpace.html#ac8cab176d4f0a56c869bca624f613dc4">00042</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classParFiniteElementSpace.html#ac8cab176d4f0a56c869bca624f613dc4" title="The sign of the basis functions at the local dofs.">ldof_sign</a>;
 <a name="l00043"></a>00043 
-<a name="l00045"></a>00045    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *P;
+<a name="l00045"></a><a class="code" href="classParFiniteElementSpace.html#adf39b4b8bf053fe0132b5b827259f40f">00045</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classParFiniteElementSpace.html#adf39b4b8bf053fe0132b5b827259f40f" title="The matrix P (interpolation from true dof to dof).">P</a>;
 <a name="l00046"></a>00046 
-<a name="l00049"></a>00049    <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> &amp;pf);
+<a name="l00049"></a>00049    <a class="code" href="classParFiniteElementSpace.html#a5970b102b70a22eed9153252a8a43e8d">ParFiniteElementSpace</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> &amp;pf);
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="keyword">public</span>:
-<a name="l00052"></a>00052    <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>(<a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> *pm, <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *f,
-<a name="l00053"></a>00053                          <span class="keywordtype">int</span> dim = 1, <span class="keywordtype">int</span> order = Ordering::byNODES);
+<a name="l00052"></a>00052    <a class="code" href="classParFiniteElementSpace.html#a5970b102b70a22eed9153252a8a43e8d">ParFiniteElementSpace</a>(<a class="code" href="classParMesh.html" title="Class for parallel meshes.">ParMesh</a> *pm, <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *f,
+<a name="l00053"></a>00053                          <span class="keywordtype">int</span> dim = 1, <span class="keywordtype">int</span> order = <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8a4c0f58e61480fb4ce67b96175571dd78">Ordering::byNODES</a>);
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055    MPI_Comm GetComm() { <span class="keywordflow">return</span> MyComm; }
-<a name="l00056"></a>00056    <span class="keywordtype">int</span> GetNRanks() { <span class="keywordflow">return</span> NRanks; }
-<a name="l00057"></a>00057    <span class="keywordtype">int</span> GetMyRank() { <span class="keywordflow">return</span> MyRank; }
+<a name="l00055"></a><a class="code" href="classParFiniteElementSpace.html#aa139180f9ccbf2f391e8f17741bfa6d5">00055</a>    MPI_Comm <a class="code" href="classParFiniteElementSpace.html#aa139180f9ccbf2f391e8f17741bfa6d5">GetComm</a>() { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#ad1f69f464b90b4f574cea282ceab8c41" title="MPI data.">MyComm</a>; }
+<a name="l00056"></a><a class="code" href="classParFiniteElementSpace.html#af3bb56da3aa74118f09cb39a2459eb6f">00056</a>    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#af3bb56da3aa74118f09cb39a2459eb6f">GetNRanks</a>() { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#aa59cdc23595cecc35f599db066fe778d">NRanks</a>; }
+<a name="l00057"></a><a class="code" href="classParFiniteElementSpace.html#ac17a9c5680e465d75e8bc1e26e5c7c18">00057</a>    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#ac17a9c5680e465d75e8bc1e26e5c7c18">GetMyRank</a>() { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#a54e3fbf715a2bce6aee288c4d897f31e">MyRank</a>; }
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059    <span class="keywordtype">int</span> TrueVSize()          { <span class="keywordflow">return</span> ltdof_size; }
-<a name="l00060"></a>00060    <span class="keywordtype">int</span> *GetDofOffsets()     { <span class="keywordflow">return</span> dof_offsets; }
-<a name="l00061"></a>00061    <span class="keywordtype">int</span> *GetTrueDofOffsets() { <span class="keywordflow">return</span> tdof_offsets; }
-<a name="l00062"></a>00062    <span class="keywordtype">int</span> GetDofSign(<span class="keywordtype">int</span> i)    { <span class="keywordflow">return</span> ldof_sign[i]; }
+<a name="l00059"></a><a class="code" href="classParFiniteElementSpace.html#a3e1b91a7bc861cf5457f3635bc304941">00059</a>    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#a3e1b91a7bc861cf5457f3635bc304941">TrueVSize</a>()          { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#a1257bfa2f8a5852a6f19891d9dec7e35" title="Number of true dofs in this processor (local true dofs).">ltdof_size</a>; }
+<a name="l00060"></a><a class="code" href="classParFiniteElementSpace.html#a803693dc975ace96da8d8daab926f514">00060</a>    <span class="keywordtype">int</span> *<a class="code" href="classParFiniteElementSpace.html#a803693dc975ace96da8d8daab926f514">GetDofOffsets</a>()     { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#af21e143b29a2c76f639b5018fa94bc5b" title="Offsets for the dofs in each processor in global numbering.">dof_offsets</a>; }
+<a name="l00061"></a><a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">00061</a>    <span class="keywordtype">int</span> *<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>() { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#a00a9f7bb6b98f0dfa2b409912982e987" title="Offsets for the true dofs in each processor in global numbering.">tdof_offsets</a>; }
+<a name="l00062"></a><a class="code" href="classParFiniteElementSpace.html#a10e46348e6d3c5ac368d1d1449970a93">00062</a>    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#a10e46348e6d3c5ac368d1d1449970a93">GetDofSign</a>(<span class="keywordtype">int</span> i)    { <span class="keywordflow">return</span> <a class="code" href="classParFiniteElementSpace.html#ac8cab176d4f0a56c869bca624f613dc4" title="The sign of the basis functions at the local dofs.">ldof_sign</a>[i]; }
 <a name="l00063"></a>00063 
 <a name="l00065"></a>00065    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classParFiniteElementSpace.html#af7017413548b468bbff868957aaf0e32" title="Returns indexes of degrees of freedom in array dofs for i&#39;th element.">GetElementDofs</a>(<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;dofs) <span class="keyword">const</span>;
 <a name="l00066"></a>00066 
@@ -135,14 +136,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00088"></a>00088    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#a48cd2c79673b97dbb62c1e39dcd17849">GetLocalTDofNumber</a>(<span class="keywordtype">int</span> ldof);
 <a name="l00090"></a>00090    <span class="keywordtype">int</span> <a class="code" href="classParFiniteElementSpace.html#aa3554b373a52386d80f7e1a439abcd03" title="Returns the global tdof number of the given local degree of freedom.">GetGlobalTDofNumber</a>(<span class="keywordtype">int</span> ldof);
 <a name="l00091"></a>00091 
-<a name="l00092"></a>00092    <span class="keywordtype">void</span> Lose_Dof_TrueDof_Matrix();
-<a name="l00093"></a>00093    <span class="keywordtype">void</span> LoseDofOffsets() { dof_offsets.<a class="code" href="classArray.html#a6504668e4c714c312d80dd9c5e0437b1" title="NULL-ifies the data.">LoseData</a>(); }
-<a name="l00094"></a>00094    <span class="keywordtype">void</span> LoseTrueDofOffsets() { tdof_offsets.<a class="code" href="classArray.html#a6504668e4c714c312d80dd9c5e0437b1" title="NULL-ifies the data.">LoseData</a>(); }
+<a name="l00092"></a>00092    <span class="keywordtype">void</span> <a class="code" href="classParFiniteElementSpace.html#acef97b719388a6e16a85bd12472397ad">Lose_Dof_TrueDof_Matrix</a>();
+<a name="l00093"></a><a class="code" href="classParFiniteElementSpace.html#ad35ce69522422f51c5aad4ac79d6e913">00093</a>    <span class="keywordtype">void</span> <a class="code" href="classParFiniteElementSpace.html#ad35ce69522422f51c5aad4ac79d6e913">LoseDofOffsets</a>() { <a class="code" href="classParFiniteElementSpace.html#af21e143b29a2c76f639b5018fa94bc5b" title="Offsets for the dofs in each processor in global numbering.">dof_offsets</a>.<a class="code" href="classArray.html#a6504668e4c714c312d80dd9c5e0437b1" title="NULL-ifies the data.">LoseData</a>(); }
+<a name="l00094"></a><a class="code" href="classParFiniteElementSpace.html#a6349165968e61f6da549b160cf30cb7e">00094</a>    <span class="keywordtype">void</span> <a class="code" href="classParFiniteElementSpace.html#a6349165968e61f6da549b160cf30cb7e">LoseTrueDofOffsets</a>() { <a class="code" href="classParFiniteElementSpace.html#a00a9f7bb6b98f0dfa2b409912982e987" title="Offsets for the true dofs in each processor in global numbering.">tdof_offsets</a>.<a class="code" href="classArray.html#a6504668e4c714c312d80dd9c5e0437b1" title="NULL-ifies the data.">LoseData</a>(); }
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update();
+<a name="l00096"></a>00096    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classParFiniteElementSpace.html#ab7350abe21d23d12fdc2b22151e28c6a">Update</a>();
 <a name="l00098"></a>00098    <span class="keyword">virtual</span> <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> *<a class="code" href="classParFiniteElementSpace.html#a52fd01ab630e470713411c138c5cf8de" title="Return a copy of the current FE space and update.">SaveUpdate</a>();
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100    <span class="keyword">virtual</span> ~<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>() { <span class="keywordflow">if</span> (P) <span class="keyword">delete</span> P; }
+<a name="l00100"></a><a class="code" href="classParFiniteElementSpace.html#af8d9398417952fc341aaecca94e626b3">00100</a>    <span class="keyword">virtual</span> <a class="code" href="classParFiniteElementSpace.html#af8d9398417952fc341aaecca94e626b3">~ParFiniteElementSpace</a>() { <span class="keywordflow">if</span> (<a class="code" href="classParFiniteElementSpace.html#adf39b4b8bf053fe0132b5b827259f40f" title="The matrix P (interpolation from true dof to dof).">P</a>) <span class="keyword">delete</span> <a class="code" href="classParFiniteElementSpace.html#adf39b4b8bf053fe0132b5b827259f40f" title="The matrix P (interpolation from true dof to dof).">P</a>; }
 <a name="l00101"></a>00101 };
 <a name="l00102"></a>00102 
 <a name="l00103"></a>00103 <span class="preprocessor">#endif</span>
@@ -153,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -162,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">osockstream.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="osockstream_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -77,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00009"></a>00009 <span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span>
 <a name="l00010"></a>00010 <span class="comment">// Software Foundation) version 2.1 dated February 1999.</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;osockstream.hpp&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="osockstream_8hpp.html">osockstream.hpp</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
@@ -94,31 +95,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027    <span class="keywordtype">int</span> n;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029    sent = 0;
-<a name="l00030"></a>00030    portnum = port;
+<a name="l00029"></a>00029    <a class="code" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">sent</a> = 0;
+<a name="l00030"></a>00030    <a class="code" href="classosockstream.html#acd1805865a75e6ca62a736124e6da78f">portnum</a> = port;
 <a name="l00031"></a>00031    n = strlen(hostname);
 <a name="l00032"></a>00032    <span class="keywordflow">if</span> (n &gt;= 128)
 <a name="l00033"></a>00033    {
-<a name="l00034"></a>00034       strncpy(machine, hostname, 127);
-<a name="l00035"></a>00035       machine[127] = <span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00034"></a>00034       strncpy(<a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a>, hostname, 127);
+<a name="l00035"></a>00035       <a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a>[127] = <span class="charliteral">&#39;\0&#39;</span>;
 <a name="l00036"></a>00036    }
 <a name="l00037"></a>00037    <span class="keywordflow">else</span>
-<a name="l00038"></a>00038       strcpy(machine, hostname);
+<a name="l00038"></a>00038       strcpy(<a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a>, hostname);
 <a name="l00039"></a>00039 }
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keywordtype">int</span> osockstream::call_socket()
+<a name="l00041"></a><a class="code" href="classosockstream.html#a55d108982f6311c9d38bc66d057b23da">00041</a> <span class="keywordtype">int</span> <a class="code" href="classosockstream.html#a55d108982f6311c9d38bc66d057b23da">osockstream::call_socket</a>()
 <a name="l00042"></a>00042 {
 <a name="l00043"></a>00043    <span class="keyword">struct </span>sockaddr_in  sa;
 <a name="l00044"></a>00044    <span class="keyword">struct </span>hostent     *hp;
 <a name="l00045"></a>00045    <span class="keywordtype">int</span> s;
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047    <span class="keywordflow">if</span> ( (hp= gethostbyname(machine)) == NULL )
+<a name="l00047"></a>00047    <span class="keywordflow">if</span> ( (hp= gethostbyname(<a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a>)) == NULL )
 <a name="l00048"></a>00048       <span class="keywordflow">return</span>(-1);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050    memset(&amp;sa,0,<span class="keyword">sizeof</span>(sa));
 <a name="l00051"></a>00051    memcpy((<span class="keywordtype">char</span> *)&amp;sa.sin_addr,hp-&gt;h_addr,hp-&gt;h_length); <span class="comment">/* set address */</span>
 <a name="l00052"></a>00052    sa.sin_family= hp-&gt;h_addrtype;
-<a name="l00053"></a>00053    sa.sin_port= htons((u_short)portnum);
+<a name="l00053"></a>00053    sa.sin_port= htons((u_short)<a class="code" href="classosockstream.html#acd1805865a75e6ca62a736124e6da78f">portnum</a>);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055    <span class="keywordflow">if</span> ((s= socket(hp-&gt;h_addrtype,SOCK_STREAM,0)) &lt; 0)   <span class="comment">/* get socket */</span>
 <a name="l00056"></a>00056       <span class="keywordflow">return</span>(-2);
@@ -129,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00061"></a>00061    <span class="keywordflow">return</span>(s);
 <a name="l00062"></a>00062 }
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keywordtype">int</span> osockstream::send_through_socket(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">char</span> *Buf, <span class="keywordtype">int</span> size)
+<a name="l00064"></a><a class="code" href="classosockstream.html#a03865512e36a74a456e43f5b6a1e7ea2">00064</a> <span class="keywordtype">int</span> <a class="code" href="classosockstream.html#a03865512e36a74a456e43f5b6a1e7ea2">osockstream::send_through_socket</a>(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">char</span> *Buf, <span class="keywordtype">int</span> size)
 <a name="l00065"></a>00065 {
 <a name="l00066"></a>00066    <span class="keywordtype">int</span> bcount = 0; <span class="comment">/* counts bytes read */</span>
 <a name="l00067"></a>00067    <span class="keywordtype">int</span> br     = 0; <span class="comment">/* bytes read this pass */</span>
@@ -156,31 +157,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00088"></a>00088    <span class="keywordtype">int</span> sock, size, ierr = 0;
 <a name="l00089"></a>00089    <span class="keyword">const</span> <span class="keywordtype">char</span> *Buf;
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091    <span class="keywordflow">if</span> (sent)
+<a name="l00091"></a>00091    <span class="keywordflow">if</span> (<a class="code" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">sent</a>)
 <a name="l00092"></a>00092       <span class="keywordflow">return</span> (-1); <span class="comment">// Data already sent</span>
-<a name="l00093"></a>00093    sent = 1;
-<a name="l00094"></a>00094    <span class="keywordflow">switch</span> ( sock = call_socket() )
+<a name="l00093"></a>00093    <a class="code" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">sent</a> = 1;
+<a name="l00094"></a>00094    <span class="keywordflow">switch</span> ( sock = <a class="code" href="classosockstream.html#a55d108982f6311c9d38bc66d057b23da">call_socket</a>() )
 <a name="l00095"></a>00095    {
 <a name="l00096"></a>00096    <span class="keywordflow">case</span> -1:
-<a name="l00097"></a>00097       cerr &lt;&lt; <span class="stringliteral">&quot;Unknown host: &quot;</span> &lt;&lt; machine &lt;&lt; endl;
+<a name="l00097"></a>00097       cerr &lt;&lt; <span class="stringliteral">&quot;Unknown host: &quot;</span> &lt;&lt; <a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a> &lt;&lt; endl;
 <a name="l00098"></a>00098       ierr = -2; <span class="keywordflow">break</span>;
 <a name="l00099"></a>00099    <span class="keywordflow">case</span> -2:
 <a name="l00100"></a>00100       cerr &lt;&lt; <span class="stringliteral">&quot;Unable to establish socket on the local machine&quot;</span> &lt;&lt; endl;
 <a name="l00101"></a>00101       ierr = -3; <span class="keywordflow">break</span>;
 <a name="l00102"></a>00102    <span class="keywordflow">case</span> -3:
-<a name="l00103"></a>00103       cerr &lt;&lt; <span class="stringliteral">&quot;Unable to connect to port &quot;</span> &lt;&lt; portnum &lt;&lt; <span class="stringliteral">&quot; on &quot;</span>
-<a name="l00104"></a>00104            &lt;&lt; machine &lt;&lt; endl;
+<a name="l00103"></a>00103       cerr &lt;&lt; <span class="stringliteral">&quot;Unable to connect to port &quot;</span> &lt;&lt; <a class="code" href="classosockstream.html#acd1805865a75e6ca62a736124e6da78f">portnum</a> &lt;&lt; <span class="stringliteral">&quot; on &quot;</span>
+<a name="l00104"></a>00104            &lt;&lt; <a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a> &lt;&lt; endl;
 <a name="l00105"></a>00105       ierr = -4; <span class="keywordflow">break</span>;
 <a name="l00106"></a>00106    <span class="keywordflow">default</span>:
 <a name="l00107"></a>00107    {
 <a name="l00108"></a>00108       <span class="keywordtype">string</span> my_str (str());
 <a name="l00109"></a>00109       Buf = my_str.c_str();
 <a name="l00110"></a>00110       size = my_str.size();
-<a name="l00111"></a>00111       <span class="keywordflow">switch</span> ( send_through_socket(sock, Buf, size) )
+<a name="l00111"></a>00111       <span class="keywordflow">switch</span> ( <a class="code" href="classosockstream.html#a03865512e36a74a456e43f5b6a1e7ea2">send_through_socket</a>(sock, Buf, size) )
 <a name="l00112"></a>00112       {
 <a name="l00113"></a>00113       <span class="keywordflow">case</span> -1:
-<a name="l00114"></a>00114          cerr &lt;&lt; <span class="stringliteral">&quot;Error sending data to port &quot;</span> &lt;&lt; portnum &lt;&lt; <span class="stringliteral">&quot; on &quot;</span>
-<a name="l00115"></a>00115               &lt;&lt; machine &lt;&lt; endl;
+<a name="l00114"></a>00114          cerr &lt;&lt; <span class="stringliteral">&quot;Error sending data to port &quot;</span> &lt;&lt; <a class="code" href="classosockstream.html#acd1805865a75e6ca62a736124e6da78f">portnum</a> &lt;&lt; <span class="stringliteral">&quot; on &quot;</span>
+<a name="l00115"></a>00115               &lt;&lt; <a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">machine</a> &lt;&lt; endl;
 <a name="l00116"></a>00116          ierr = -5; <span class="keywordflow">break</span>;
 <a name="l00117"></a>00117       <span class="keywordflow">default</span>:
 <a name="l00118"></a>00118          <span class="keywordflow">break</span>;
@@ -194,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00126"></a>00126 
 <a name="l00127"></a><a class="code" href="classosockstream.html#a655534fb7352e118b101c8a7834d3f4f">00127</a> <a class="code" href="classosockstream.html#a655534fb7352e118b101c8a7834d3f4f">osockstream::~osockstream</a>()
 <a name="l00128"></a>00128 {
-<a name="l00129"></a>00129    <span class="keywordflow">if</span> (!sent)
+<a name="l00129"></a>00129    <span class="keywordflow">if</span> (!<a class="code" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">sent</a>)
 <a name="l00130"></a>00130       <a class="code" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">send</a>();
 <a name="l00131"></a>00131 }
 <a name="l00132"></a>00132 
@@ -205,7 +206,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -214,7 +215,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

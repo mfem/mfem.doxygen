@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">cgsolver.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="cgsolver_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -79,13 +80,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;iomanip&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;vector.hpp&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;matrix.hpp&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;sparsemat.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="vector_8hpp.html">vector.hpp</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="matrix_8hpp.html">matrix.hpp</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="sparsemat_8hpp.html">sparsemat.hpp</a>&quot;</span>
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 <span class="comment">// Conjugate Gradient solver</span>
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="keywordtype">void</span> CG( <span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;A, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x,
+<a name="l00020"></a><a class="code" href="solvers_8hpp.html#af51d4d71614bc06ff75391de7c097d49">00020</a> <span class="keywordtype">void</span> <a class="code" href="cgsolver_8cpp.html#af51d4d71614bc06ff75391de7c097d49">CG</a>( <span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;A, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x,
 <a name="l00021"></a>00021          <span class="keywordtype">int</span> print_iter=0, <span class="keywordtype">int</span> max_num_iter=1000,
 <a name="l00022"></a>00022          <span class="keywordtype">double</span> RTOLERANCE=10e-12, <span class="keywordtype">double</span> ATOLERANCE=10e-24){
 <a name="l00023"></a>00023 
@@ -94,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00026"></a>00026    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> r(dim), d(dim), Ad(dim);
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028    A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>( x, r);
-<a name="l00029"></a>00029    subtract( b, r, r);                         <span class="comment">// r = b - A x</span>
+<a name="l00029"></a>00029    <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>( b, r, r);                         <span class="comment">// r = b - A x</span>
 <a name="l00030"></a>00030    d = r;
 <a name="l00031"></a>00031    nom0 = nom = r * r;
 <a name="l00032"></a>00032 
@@ -121,8 +122,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00053"></a>00053    <span class="keywordflow">for</span>(i = 1; i&lt;max_num_iter ;i++) {
 <a name="l00054"></a>00054       alpha= nom/den;                           <span class="comment">// alpha = (r_o,r_o)/(Ar_o,r_o)</span>
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056       add(x, alpha, d, x);                      <span class="comment">//   x =   x + alpha * d</span>
-<a name="l00057"></a>00057       add(r, -alpha, Ad, r);                    <span class="comment">// r_n = r_o - alpha * Ad</span>
+<a name="l00056"></a>00056       <a class="code" href="vector_8cpp.html#afab8821f67b068fd29c8dee586a16020">add</a>(x, alpha, d, x);                      <span class="comment">//   x =   x + alpha * d</span>
+<a name="l00057"></a>00057       <a class="code" href="vector_8cpp.html#afab8821f67b068fd29c8dee586a16020">add</a>(r, -alpha, Ad, r);                    <span class="comment">// r_n = r_o - alpha * Ad</span>
 <a name="l00058"></a>00058       betanom = r*r;                            <span class="comment">// betanom = (r_o, r_o)</span>
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060       <span class="keywordflow">if</span> (print_iter == 1)
@@ -141,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00073"></a>00073       }
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075       beta = betanom/nom;                       <span class="comment">// beta = (r_n,r_n)/(r_o,r_o)</span>
-<a name="l00076"></a>00076       add(r, beta, d, d);                       <span class="comment">//    d = r_n + beta * d</span>
+<a name="l00076"></a>00076       <a class="code" href="vector_8cpp.html#afab8821f67b068fd29c8dee586a16020">add</a>(r, beta, d, d);                       <span class="comment">//    d = r_n + beta * d</span>
 <a name="l00077"></a>00077       A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(d, Ad);                            <span class="comment">//   Ad = A d</span>
 <a name="l00078"></a>00078       den = d * Ad;                             <span class="comment">//  den = (d , A d)</span>
 <a name="l00079"></a>00079       <span class="keywordflow">if</span> (den &lt;= 0.0)
@@ -167,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -176,7 +177,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

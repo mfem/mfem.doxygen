@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">geom.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="geom_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -83,62 +84,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a><a class="code" href="classGeometry.html">00022</a> <span class="keyword">class </span><a class="code" href="classGeometry.html">Geometry</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a>00025    <span class="keyword">enum</span> Type { POINT, SEGMENT, TRIANGLE, SQUARE, TETRAHEDRON, CUBE };
+<a name="l00025"></a><a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942">00025</a>    <span class="keyword">enum</span> <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942">Type</a> { <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942a410b024c33dddc256cde201aa4a29309">POINT</a>, <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942aecc350b144d8875079df9d9b5edf3e71">SEGMENT</a>, <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942afc86149722fa2788c0e28612ac4cf26f">TRIANGLE</a>, <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942ad3f2f72cd796b2f9ce061629986a3096">SQUARE</a>, <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942acf5234aa19902300904058fd597f522f">TETRAHEDRON</a>, <a class="code" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942ac8111fdbaab3a0d0f6473fe6526edb12">CUBE</a> };
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NumGeom = 6;
+<a name="l00027"></a><a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">00027</a>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a> = 6;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NumBdrArray[];
+<a name="l00029"></a><a class="code" href="classGeometry.html#aafbebec38a437426b32787da94476ef4">00029</a>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classGeometry.html#aafbebec38a437426b32787da94476ef4">NumBdrArray</a>[];
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 <span class="keyword">private</span>:
-<a name="l00032"></a>00032    <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *GeomVert[NumGeom];
-<a name="l00033"></a>00033    <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> GeomCenter[NumGeom];
-<a name="l00034"></a>00034    <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> *PerfGeomToGeomJac[NumGeom];
+<a name="l00032"></a><a class="code" href="classGeometry.html#aed97b0498bb1feb66784274709902e3a">00032</a>    <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *<a class="code" href="classGeometry.html#aed97b0498bb1feb66784274709902e3a">GeomVert</a>[<a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>];
+<a name="l00033"></a><a class="code" href="classGeometry.html#a60f1f9ec84494131c75465014d28df78">00033</a>    <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> <a class="code" href="classGeometry.html#a60f1f9ec84494131c75465014d28df78">GeomCenter</a>[<a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>];
+<a name="l00034"></a><a class="code" href="classGeometry.html#a980b428e3b7a113bfd5d95cdc9f7345b">00034</a>    <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> *<a class="code" href="classGeometry.html#a980b428e3b7a113bfd5d95cdc9f7345b">PerfGeomToGeomJac</a>[<a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>];
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">public</span>:
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038    <a class="code" href="classGeometry.html">Geometry</a>();
+<a name="l00038"></a>00038    <a class="code" href="classGeometry.html#a4c301c163c63d21ed08c17b0f4e131d3">Geometry</a>();
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040    ~<a class="code" href="classGeometry.html">Geometry</a>();
+<a name="l00040"></a>00040    <a class="code" href="classGeometry.html#ad55e832122ab3a2833dcaa6507867678">~Geometry</a>();
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *GetVertices(<span class="keywordtype">int</span> GeomType);
-<a name="l00043"></a>00043    <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;GetCenter(<span class="keywordtype">int</span> GeomType)
-<a name="l00044"></a>00044    { <span class="keywordflow">return</span> GeomCenter[GeomType]; }
+<a name="l00042"></a>00042    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *<a class="code" href="classGeometry.html#a4407e25da37e80f210318cffa972836c">GetVertices</a>(<span class="keywordtype">int</span> GeomType);
+<a name="l00043"></a><a class="code" href="classGeometry.html#aaa919e8cd6baac67ec0898f4d7fadc26">00043</a>    <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;<a class="code" href="classGeometry.html#aaa919e8cd6baac67ec0898f4d7fadc26">GetCenter</a>(<span class="keywordtype">int</span> GeomType)
+<a name="l00044"></a>00044    { <span class="keywordflow">return</span> <a class="code" href="classGeometry.html#a60f1f9ec84494131c75465014d28df78">GeomCenter</a>[GeomType]; }
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046    <span class="keywordtype">void</span> GetPerfPointMat (<span class="keywordtype">int</span> GeomType, <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;pm);
-<a name="l00047"></a>00047    <span class="keywordtype">void</span> JacToPerfJac(<span class="keywordtype">int</span> GeomType, <span class="keyword">const</span> <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;J,
+<a name="l00046"></a>00046    <span class="keywordtype">void</span> <a class="code" href="classGeometry.html#adea91bccc970393cb7caba0f3a670ba5">GetPerfPointMat</a> (<span class="keywordtype">int</span> GeomType, <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;pm);
+<a name="l00047"></a>00047    <span class="keywordtype">void</span> <a class="code" href="classGeometry.html#a2cd48d9fe088b1eb0074cd60b80b5e31">JacToPerfJac</a>(<span class="keywordtype">int</span> GeomType, <span class="keyword">const</span> <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;J,
 <a name="l00048"></a>00048                      <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;PJ) <span class="keyword">const</span>;
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050    <span class="keywordtype">int</span> NumBdr (<span class="keywordtype">int</span> GeomType) { <span class="keywordflow">return</span> NumBdrArray[GeomType]; }
+<a name="l00050"></a><a class="code" href="classGeometry.html#a4e71ae8511299890efef9d692dd7f881">00050</a>    <span class="keywordtype">int</span> <a class="code" href="classGeometry.html#a4e71ae8511299890efef9d692dd7f881">NumBdr</a> (<span class="keywordtype">int</span> GeomType) { <span class="keywordflow">return</span> <a class="code" href="classGeometry.html#aafbebec38a437426b32787da94476ef4">NumBdrArray</a>[GeomType]; }
 <a name="l00051"></a>00051 };
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="keyword">extern</span> <a class="code" href="classGeometry.html">Geometry</a> Geometries;
+<a name="l00053"></a>00053 <span class="keyword">extern</span> <a class="code" href="classGeometry.html">Geometry</a> <a class="code" href="geom_8cpp.html#a63ba6a9fe969f5faa64d753f582011ca">Geometries</a>;
 <a name="l00054"></a>00054 
 <a name="l00055"></a><a class="code" href="classRefinedGeometry.html">00055</a> <span class="keyword">class </span><a class="code" href="classRefinedGeometry.html">RefinedGeometry</a>
 <a name="l00056"></a>00056 {
 <a name="l00057"></a>00057 <span class="keyword">public</span>:
-<a name="l00058"></a>00058    <span class="keywordtype">int</span> Times, ETimes;
-<a name="l00059"></a>00059    <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> RefPts;
-<a name="l00060"></a>00060    <a class="code" href="classArray.html">Array&lt;int&gt;</a> RefGeoms, RefEdges;
+<a name="l00058"></a><a class="code" href="classRefinedGeometry.html#a1143f8314d460ca0d57bccf8ac77793c">00058</a>    <span class="keywordtype">int</span> <a class="code" href="classRefinedGeometry.html#a1143f8314d460ca0d57bccf8ac77793c">Times</a>, <a class="code" href="classRefinedGeometry.html#a42869a8ff7771fc8e5a30f96bdef0505">ETimes</a>;
+<a name="l00059"></a><a class="code" href="classRefinedGeometry.html#af6f36034cf79ddc40f769b47a774f289">00059</a>    <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> <a class="code" href="classRefinedGeometry.html#af6f36034cf79ddc40f769b47a774f289">RefPts</a>;
+<a name="l00060"></a><a class="code" href="classRefinedGeometry.html#ae0f6507a75d4b1ecc752acf547a2fa9f">00060</a>    <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classRefinedGeometry.html#ae0f6507a75d4b1ecc752acf547a2fa9f">RefGeoms</a>, <a class="code" href="classRefinedGeometry.html#a300737b2ecb0ab9b968532885d839404">RefEdges</a>;
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062    <a class="code" href="classRefinedGeometry.html">RefinedGeometry</a> (<span class="keywordtype">int</span> NPts, <span class="keywordtype">int</span> NRefG, <span class="keywordtype">int</span> NRefE) :
-<a name="l00063"></a>00063       RefPts (NPts), RefGeoms (NRefG), RefEdges (NRefE) { }
+<a name="l00062"></a><a class="code" href="classRefinedGeometry.html#a3f616b9c591ab50661ecdf11c3b772dc">00062</a>    <a class="code" href="classRefinedGeometry.html#a3f616b9c591ab50661ecdf11c3b772dc">RefinedGeometry</a> (<span class="keywordtype">int</span> NPts, <span class="keywordtype">int</span> NRefG, <span class="keywordtype">int</span> NRefE) :
+<a name="l00063"></a>00063       <a class="code" href="classRefinedGeometry.html#af6f36034cf79ddc40f769b47a774f289">RefPts</a> (NPts), <a class="code" href="classRefinedGeometry.html#ae0f6507a75d4b1ecc752acf547a2fa9f">RefGeoms</a> (NRefG), <a class="code" href="classRefinedGeometry.html#a300737b2ecb0ab9b968532885d839404">RefEdges</a> (NRefE) { }
 <a name="l00064"></a>00064 };
 <a name="l00065"></a>00065 
 <a name="l00066"></a><a class="code" href="classGeometryRefiner.html">00066</a> <span class="keyword">class </span><a class="code" href="classGeometryRefiner.html">GeometryRefiner</a>
 <a name="l00067"></a>00067 {
 <a name="l00068"></a>00068 <span class="keyword">private</span>:
-<a name="l00069"></a>00069    <a class="code" href="classRefinedGeometry.html">RefinedGeometry</a> *RGeom[Geometry::NumGeom];
-<a name="l00070"></a>00070    <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *IntPts[Geometry::NumGeom];
+<a name="l00069"></a><a class="code" href="classGeometryRefiner.html#a753ffc127516de66f70984296ada1b92">00069</a>    <a class="code" href="classRefinedGeometry.html">RefinedGeometry</a> *<a class="code" href="classGeometryRefiner.html#a753ffc127516de66f70984296ada1b92">RGeom</a>[<a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">Geometry::NumGeom</a>];
+<a name="l00070"></a><a class="code" href="classGeometryRefiner.html#a3e2cf653234f982ce28057242041c32f">00070</a>    <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *<a class="code" href="classGeometryRefiner.html#a3e2cf653234f982ce28057242041c32f">IntPts</a>[<a class="code" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">Geometry::NumGeom</a>];
 <a name="l00071"></a>00071 <span class="keyword">public</span>:
-<a name="l00072"></a>00072    <a class="code" href="classGeometryRefiner.html">GeometryRefiner</a>();
+<a name="l00072"></a>00072    <a class="code" href="classGeometryRefiner.html#ad5d506a4ea0b7ec884b03931a7e1de4a">GeometryRefiner</a>();
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074    <a class="code" href="classRefinedGeometry.html">RefinedGeometry</a> *Refine (<span class="keywordtype">int</span> Geom, <span class="keywordtype">int</span> Times, <span class="keywordtype">int</span> ETimes = 1);
-<a name="l00075"></a>00075    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *RefineInterior(<span class="keywordtype">int</span> Geom, <span class="keywordtype">int</span> Times);
+<a name="l00074"></a>00074    <a class="code" href="classRefinedGeometry.html">RefinedGeometry</a> *<a class="code" href="classGeometryRefiner.html#aec9facd034b43097cfd97de17c9353c1">Refine</a> (<span class="keywordtype">int</span> Geom, <span class="keywordtype">int</span> Times, <span class="keywordtype">int</span> ETimes = 1);
+<a name="l00075"></a>00075    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *<a class="code" href="classGeometryRefiner.html#ad38de8e023b52d142626e67bf8fd3010">RefineInterior</a>(<span class="keywordtype">int</span> Geom, <span class="keywordtype">int</span> Times);
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077    ~<a class="code" href="classGeometryRefiner.html">GeometryRefiner</a>();
+<a name="l00077"></a>00077    <a class="code" href="classGeometryRefiner.html#a3118e398ee90f7165a8176a22bdbffde">~GeometryRefiner</a>();
 <a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keyword">extern</span> <a class="code" href="classGeometryRefiner.html">GeometryRefiner</a> GlobGeometryRefiner;
+<a name="l00080"></a>00080 <span class="keyword">extern</span> <a class="code" href="classGeometryRefiner.html">GeometryRefiner</a> <a class="code" href="geom_8cpp.html#ad986236e1e3d0bc2a5585a66ce44076e">GlobGeometryRefiner</a>;
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082 <span class="preprocessor">#endif</span>
 </pre></div></div>
@@ -148,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -157,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">BoundaryLFIntegrator Class Reference</div>  </div>
 </div>
@@ -89,16 +90,59 @@ Collaboration diagram for BoundaryLFIntegrator:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46618f3c0957e1b601c1f3888b40817f"></a><!-- doxytag: member="BoundaryLFIntegrator::BoundaryLFIntegrator" ref="a46618f3c0957e1b601c1f3888b40817f" args="(Coefficient &amp;QG, int a=1, int b=1)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#a46618f3c0957e1b601c1f3888b40817f">BoundaryLFIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;QG, int a=1, int b=1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a boundary integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> QG. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#a46618f3c0957e1b601c1f3888b40817f">BoundaryLFIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;QG, int a=1, int b=1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a boundary integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> QG.  <a href="#a46618f3c0957e1b601c1f3888b40817f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#afc25ca942f01cd749d91b9534bd2dab8">AssembleRHSElementVect</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr, <a class="el" href="classVector.html">Vector</a> &amp;elvect)</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">shape</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoefficient.html">Coefficient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#a626b741ed346999a3aed921680173a85">Q</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#a7f40d189c68afb13232e7e16f362d1f5">oa</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoundaryLFIntegrator.html#aad05167ad4d37ddc4e5fcf9254ad82ec">ob</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for boundary integration L(v) := (g, v) </p>
 
 <p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00057">57</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a46618f3c0957e1b601c1f3888b40817f"></a><!-- doxytag: member="BoundaryLFIntegrator::BoundaryLFIntegrator" ref="a46618f3c0957e1b601c1f3888b40817f" args="(Coefficient &amp;QG, int a=1, int b=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BoundaryLFIntegrator::BoundaryLFIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoefficient.html">Coefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>QG</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructs a boundary integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> QG. </p>
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00064">64</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="afc25ca942f01cd749d91b9534bd2dab8"></a><!-- doxytag: member="BoundaryLFIntegrator::AssembleRHSElementVect" ref="afc25ca942f01cd749d91b9534bd2dab8" args="(const FiniteElement &amp;el, ElementTransformation &amp;Tr, Vector &amp;elvect)" -->
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +179,76 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="lininteg_8cpp_source.html#l00063">63</a> of file <a class="el" href="lininteg_8cpp_source.html">lininteg.cpp</a>.</p>
 
-<p>References <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, and <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>.</p>
+<p>References <a class="el" href="vector_8cpp_source.html#l00202">add()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Coefficient::Eval()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="lininteg_8hpp_source.html#l00061">oa</a>, <a class="el" href="lininteg_8hpp_source.html#l00061">ob</a>, <a class="el" href="lininteg_8hpp_source.html#l00060">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="lininteg_8hpp_source.html#l00059">shape</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>, and <a class="el" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">ElementTransformation::Weight()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a7f40d189c68afb13232e7e16f362d1f5"></a><!-- doxytag: member="BoundaryLFIntegrator::oa" ref="a7f40d189c68afb13232e7e16f362d1f5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classBoundaryLFIntegrator.html#a7f40d189c68afb13232e7e16f362d1f5">BoundaryLFIntegrator::oa</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00061">61</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00063">AssembleRHSElementVect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad05167ad4d37ddc4e5fcf9254ad82ec"></a><!-- doxytag: member="BoundaryLFIntegrator::ob" ref="aad05167ad4d37ddc4e5fcf9254ad82ec" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classBoundaryLFIntegrator.html#aad05167ad4d37ddc4e5fcf9254ad82ec">BoundaryLFIntegrator::ob</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00061">61</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00063">AssembleRHSElementVect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a626b741ed346999a3aed921680173a85"></a><!-- doxytag: member="BoundaryLFIntegrator::Q" ref="a626b741ed346999a3aed921680173a85" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoefficient.html">Coefficient</a>&amp; <a class="el" href="classBoundaryLFIntegrator.html#a626b741ed346999a3aed921680173a85">BoundaryLFIntegrator::Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00060">60</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00063">AssembleRHSElementVect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43dea58b5e4c362aeed4a57e2143b1ba"></a><!-- doxytag: member="BoundaryLFIntegrator::shape" ref="a43dea58b5e4c362aeed4a57e2143b1ba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector.html">Vector</a> <a class="el" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">BoundaryLFIntegrator::shape</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00059">59</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00063">AssembleRHSElementVect()</a>.</p>
 
 </div>
 </div>
@@ -149,7 +262,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -158,7 +271,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

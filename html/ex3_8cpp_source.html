@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ex3.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//                                MFEM Example 3</span>
+<a href="ex3_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//                                MFEM Example 3</span>
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">// Compile with: make ex3</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -93,13 +94,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00025"></a>00025 <span class="comment">//               We recommend viewing examples 1-2 before viewing this example.</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &lt;fstream&gt;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;mfem.hpp&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="mfem_8hpp.html">mfem.hpp</a>&quot;</span>
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="comment">// Exact solution, E, and r.h.s., f. See below for implementation.</span>
-<a name="l00031"></a>00031 <span class="keywordtype">void</span> E_exact(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;);
-<a name="l00032"></a>00032 <span class="keywordtype">void</span> f_exact(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;);
+<a name="l00031"></a>00031 <span class="keywordtype">void</span> <a class="code" href="ex3_8cpp.html#aa6f1342f53fcd8c0a85ad93139050d09">E_exact</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;);
+<a name="l00032"></a>00032 <span class="keywordtype">void</span> <a class="code" href="ex3_8cpp.html#abce637d59336957447664c67e099c122">f_exact</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;);
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keywordtype">int</span> main (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
+<a name="l00034"></a><a class="code" href="ex3_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">00034</a> <span class="keywordtype">int</span> <a class="code" href="ex1_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
 <a name="l00035"></a>00035 {
 <a name="l00036"></a>00036    <a class="code" href="classMesh.html">Mesh</a> *mesh;
 <a name="l00037"></a>00037 
@@ -131,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00063"></a>00063    <span class="comment">//    elements.</span>
 <a name="l00064"></a>00064    {
 <a name="l00065"></a>00065       <span class="keywordtype">int</span> ref_levels =
-<a name="l00066"></a>00066          (int)floor(log(50000./mesh-&gt;<a class="code" href="classMesh.html#ab6b8177d6bde4dffb5a03d4944cf4465" title="Returns number of elements.">GetNE</a>())/log(2.)/mesh-&gt;Dimension());
+<a name="l00066"></a>00066          (int)floor(log(50000./mesh-&gt;<a class="code" href="classMesh.html#ab6b8177d6bde4dffb5a03d4944cf4465" title="Returns number of elements.">GetNE</a>())/log(2.)/mesh-&gt;<a class="code" href="classMesh.html#a06b6803b50a04ee6961c455b5af90b6b">Dimension</a>());
 <a name="l00067"></a>00067       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; ref_levels; l++)
 <a name="l00068"></a>00068          mesh-&gt;<a class="code" href="classMesh.html#a505a259c9b93ea0515834c5e162770bb">UniformRefinement</a>();
 <a name="l00069"></a>00069    }
@@ -145,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00077"></a>00077    <span class="comment">//    of the FEM linear system, which in this case is (f,phi_i) where f is</span>
 <a name="l00078"></a>00078    <span class="comment">//    given by the function f_exact and phi_i are the basis functions in the</span>
 <a name="l00079"></a>00079    <span class="comment">//    finite element fespace.</span>
-<a name="l00080"></a>00080    <a class="code" href="classVectorFunctionCoefficient.html">VectorFunctionCoefficient</a> f(3, f_exact);
+<a name="l00080"></a>00080    <a class="code" href="classVectorFunctionCoefficient.html">VectorFunctionCoefficient</a> f(3, <a class="code" href="ex3_8cpp.html#abce637d59336957447664c67e099c122">f_exact</a>);
 <a name="l00081"></a>00081    <a class="code" href="classLinearForm.html" title="Class for linear form - Vector with asociated FE space and LFIntegrators.">LinearForm</a> *b = <span class="keyword">new</span> <a class="code" href="classLinearForm.html" title="Class for linear form - Vector with asociated FE space and LFIntegrators.">LinearForm</a>(fespace);
 <a name="l00082"></a>00082    b-&gt;<a class="code" href="classLinearForm.html#a0b849c99b22b44eae997f8873980b572" title="Adds new Domain Integrator.">AddDomainIntegrator</a>(<span class="keyword">new</span> <a class="code" href="classVectorFEDomainLFIntegrator.html" title=" for VectorFiniteElements (Nedelec, Raviart-Thomas)">VectorFEDomainLFIntegrator</a>(f));
 <a name="l00083"></a>00083    b-&gt;<a class="code" href="classLinearForm.html#a437089aebfb53747b3579dbb75cfc756" title="Assembles the linear form i.e. sums over all domain/bdr integrators.">Assemble</a>();
@@ -156,8 +157,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00088"></a>00088    <span class="comment">//    when eliminating the non-homogenious boundary condition to modify the</span>
 <a name="l00089"></a>00089    <span class="comment">//    r.h.s. vector b.</span>
 <a name="l00090"></a>00090    <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> x(fespace);
-<a name="l00091"></a>00091    <a class="code" href="classVectorFunctionCoefficient.html">VectorFunctionCoefficient</a> E(3, E_exact);
-<a name="l00092"></a>00092    x.ProjectCoefficient(E);
+<a name="l00091"></a>00091    <a class="code" href="classVectorFunctionCoefficient.html">VectorFunctionCoefficient</a> E(3, <a class="code" href="ex3_8cpp.html#aa6f1342f53fcd8c0a85ad93139050d09">E_exact</a>);
+<a name="l00092"></a>00092    x.<a class="code" href="classGridFunction.html#a50744ccc377d74b1bc45a99d9b3ec97c">ProjectCoefficient</a>(E);
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094    <span class="comment">// 6. Set up the bilinear form corresponding to the EM diffusion operator</span>
 <a name="l00095"></a>00095    <span class="comment">//    curl muinv curl + sigma I, by adding the curl-curl and the mass domain</span>
@@ -171,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00103"></a>00103    a-&gt;<a class="code" href="classBilinearForm.html#a6f8314cbad524a2f5337cd61c893c8a4" title="Adds new Domain Integrator.">AddDomainIntegrator</a>(<span class="keyword">new</span> <a class="code" href="classCurlCurlIntegrator.html" title="Integrator for (curl u, curl v) for Nedelec elements.">CurlCurlIntegrator</a>(*muinv));
 <a name="l00104"></a>00104    a-&gt;<a class="code" href="classBilinearForm.html#a6f8314cbad524a2f5337cd61c893c8a4" title="Adds new Domain Integrator.">AddDomainIntegrator</a>(<span class="keyword">new</span> <a class="code" href="classVectorFEMassIntegrator.html" title="Integrator for (Q u, v) for VectorFiniteElements.">VectorFEMassIntegrator</a>(sigma));
 <a name="l00105"></a>00105    a-&gt;<a class="code" href="classBilinearForm.html#a6038ab7ee17df230cc2adbfd9efad7fa" title="Assembles the form i.e. sums over all domain/bdr integrators.">Assemble</a>();
-<a name="l00106"></a>00106    <a class="code" href="classArray.html">Array&lt;int&gt;</a> ess_bdr(mesh-&gt;bdr_attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
+<a name="l00106"></a>00106    <a class="code" href="classArray.html">Array&lt;int&gt;</a> ess_bdr(mesh-&gt;<a class="code" href="classMesh.html#a75b0cbf767e0aa0be448358e7ded06a9">bdr_attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
 <a name="l00107"></a>00107    ess_bdr = 1;
 <a name="l00108"></a>00108    a-&gt;<a class="code" href="classBilinearForm.html#a6ac96bd6f400477b7cfa62eb78797bc6">EliminateEssentialBC</a>(ess_bdr, x, *b);
 <a name="l00109"></a>00109    a-&gt;<a class="code" href="classBilinearForm.html#aac30a883274e8a56984658e399e2a9a7" title="Finalizes the matrix initialization.">Finalize</a>();
@@ -181,10 +182,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00113"></a>00113    <span class="comment">//    solve the system Ax=b with PCG.</span>
 <a name="l00114"></a>00114    <a class="code" href="classGSSmoother.html" title="Data type for symmetric Gauss-Seidel smoother of sparse matrix.">GSSmoother</a> M(A);
 <a name="l00115"></a>00115    x = 0.0;
-<a name="l00116"></a>00116    PCG(A, M, *b, x, 1, 500, 1e-12, 0.0);
+<a name="l00116"></a>00116    <a class="code" href="pcgsolver_8cpp.html#a57e0d245394f20d4be2f3b27dba69354">PCG</a>(A, M, *b, x, 1, 500, 1e-12, 0.0);
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118    <span class="comment">// 8. Compute and print the L^2 norm of the error.</span>
-<a name="l00119"></a>00119    cout &lt;&lt; <span class="stringliteral">&quot;\n|| E_h - E ||_{L^2} = &quot;</span> &lt;&lt; x.ComputeL2Error(E) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; endl;
+<a name="l00119"></a>00119    cout &lt;&lt; <span class="stringliteral">&quot;\n|| E_h - E ||_{L^2} = &quot;</span> &lt;&lt; x.<a class="code" href="classGridFunction.html#a5cb8d1781f8d3890bf14180a458ecfbb">ComputeL2Error</a>(E) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; endl;
 <a name="l00120"></a>00120 
 <a name="l00121"></a>00121    <span class="comment">// 9. In order to visualize the solution, we first represent it in the space</span>
 <a name="l00122"></a>00122    <span class="comment">//    of linear discontinuous vector finite elements. The representation in</span>
@@ -192,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00124"></a>00124    <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *dfec = <span class="keyword">new</span> <a class="code" href="classLinearDiscont3DFECollection.html">LinearDiscont3DFECollection</a>;
 <a name="l00125"></a>00125    <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a> *dfespace = <span class="keyword">new</span> <a class="code" href="classFiniteElementSpace.html" title="Abstract finite element space.">FiniteElementSpace</a>(mesh, dfec, 3);
 <a name="l00126"></a>00126    <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> dx(dfespace);
-<a name="l00127"></a>00127    x.ProjectVectorFieldOn(dx);
+<a name="l00127"></a>00127    x.<a class="code" href="classGridFunction.html#a1b0b25ba8f79342edd08714eae0ed032">ProjectVectorFieldOn</a>(dx);
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129    <span class="comment">// 10. Save the refined mesh and the solution. This output can be viewed</span>
 <a name="l00130"></a>00130    <span class="comment">//     later using GLVis: &quot;glvis -m refined.mesh -g sol.gf&quot;.</span>
@@ -202,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00134"></a>00134       mesh-&gt;<a class="code" href="classMesh.html#a51eb9fd8380dce9e0c7803163f0cce4f" title="Print the mesh to the given stream using the default MFEM mesh format.">Print</a>(mesh_ofs);
 <a name="l00135"></a>00135       ofstream sol_ofs(<span class="stringliteral">&quot;sol.gf&quot;</span>);
 <a name="l00136"></a>00136       sol_ofs.precision(8);
-<a name="l00137"></a>00137       dx.Save(sol_ofs);
+<a name="l00137"></a>00137       dx.<a class="code" href="classGridFunction.html#ae2af8548e4278fe4278246fd7ebd11fe" title="Save the GridFunction to an output stream.">Save</a>(sol_ofs);
 <a name="l00138"></a>00138    }
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140    <span class="comment">// 11. (Optional) Send the solution by socket to a GLVis server.</span>
@@ -212,8 +213,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00144"></a>00144    sol_sock &lt;&lt; <span class="stringliteral">&quot;vfem3d_gf_data\n&quot;</span>;
 <a name="l00145"></a>00145    sol_sock.precision(8);
 <a name="l00146"></a>00146    mesh-&gt;<a class="code" href="classMesh.html#a51eb9fd8380dce9e0c7803163f0cce4f" title="Print the mesh to the given stream using the default MFEM mesh format.">Print</a>(sol_sock);
-<a name="l00147"></a>00147    dx.Save(sol_sock);
-<a name="l00148"></a>00148    sol_sock.send();
+<a name="l00147"></a>00147    dx.<a class="code" href="classGridFunction.html#ae2af8548e4278fe4278246fd7ebd11fe" title="Save the GridFunction to an output stream.">Save</a>(sol_sock);
+<a name="l00148"></a>00148    sol_sock.<a class="code" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">send</a>();
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150    <span class="comment">// 12. Free the used memory.</span>
 <a name="l00151"></a>00151    <span class="keyword">delete</span> dfespace;
@@ -230,20 +231,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00162"></a>00162 }
 <a name="l00163"></a>00163 
 <a name="l00164"></a>00164 <span class="comment">// A parameter for the exact solution.</span>
-<a name="l00165"></a>00165 <span class="keyword">const</span> <span class="keywordtype">double</span> kappa = M_PI;
+<a name="l00165"></a><a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">00165</a> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> = M_PI;
 <a name="l00166"></a>00166 
-<a name="l00167"></a>00167 <span class="keywordtype">void</span> E_exact(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;E)
+<a name="l00167"></a><a class="code" href="ex3_8cpp.html#aa6f1342f53fcd8c0a85ad93139050d09">00167</a> <span class="keywordtype">void</span> <a class="code" href="ex3_8cpp.html#aa6f1342f53fcd8c0a85ad93139050d09">E_exact</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;E)
 <a name="l00168"></a>00168 {
-<a name="l00169"></a>00169    E(0) = sin(kappa * x(1));
-<a name="l00170"></a>00170    E(1) = sin(kappa * x(2));
-<a name="l00171"></a>00171    E(2) = sin(kappa * x(0));
+<a name="l00169"></a>00169    E(0) = sin(<a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * x(1));
+<a name="l00170"></a>00170    E(1) = sin(<a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * x(2));
+<a name="l00171"></a>00171    E(2) = sin(<a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * x(0));
 <a name="l00172"></a>00172 }
 <a name="l00173"></a>00173 
-<a name="l00174"></a>00174 <span class="keywordtype">void</span> f_exact(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;f)
+<a name="l00174"></a><a class="code" href="ex3_8cpp.html#abce637d59336957447664c67e099c122">00174</a> <span class="keywordtype">void</span> <a class="code" href="ex3_8cpp.html#abce637d59336957447664c67e099c122">f_exact</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;f)
 <a name="l00175"></a>00175 {
-<a name="l00176"></a>00176    f(0) = (1. + kappa * kappa) * sin(kappa * x(1));
-<a name="l00177"></a>00177    f(1) = (1. + kappa * kappa) * sin(kappa * x(2));
-<a name="l00178"></a>00178    f(2) = (1. + kappa * kappa) * sin(kappa * x(0));
+<a name="l00176"></a>00176    f(0) = (1. + <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a>) * sin(<a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * x(1));
+<a name="l00177"></a>00177    f(1) = (1. + <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a>) * sin(<a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * x(2));
+<a name="l00178"></a>00178    f(2) = (1. + <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * <a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a>) * sin(<a class="code" href="ex3_8cpp.html#ae4015e7b36314901a960f03d51097ce9">kappa</a> * x(0));
 <a name="l00179"></a>00179 }
 </pre></div></div>
 </div>
@@ -252,7 +253,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -261,7 +262,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

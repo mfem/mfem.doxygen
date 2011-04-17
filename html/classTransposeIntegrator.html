@@ -60,12 +60,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">TransposeIntegrator Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="TransposeIntegrator" --><!-- doxytag: inherits="BilinearFormIntegrator" --><div class="dynheader">
+<!-- doxytag: class="TransposeIntegrator" --><!-- doxytag: inherits="BilinearFormIntegrator" -->
+<p><code>#include &lt;<a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for TransposeIntegrator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTransposeIntegrator__inherit__graph.png" border="0" usemap="#TransposeIntegrator_inherit__map" alt="Inheritance graph"/></div>
@@ -84,17 +87,114 @@ Collaboration diagram for TransposeIntegrator:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa11291dde9ac29a56faa8cef630c67a1"></a><!-- doxytag: member="TransposeIntegrator::TransposeIntegrator" ref="aa11291dde9ac29a56faa8cef630c67a1" args="(BilinearFormIntegrator *_bfi, int _own_bfi=1)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>TransposeIntegrator</b> (<a class="el" href="classBilinearFormIntegrator.html">BilinearFormIntegrator</a> *_bfi, int _own_bfi=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af653d3906b24ffcc4ba983140a3b6793"></a><!-- doxytag: member="TransposeIntegrator::AssembleElementMatrix" ref="af653d3906b24ffcc4ba983140a3b6793" args="(const FiniteElement &amp;el, ElementTransformation &amp;Trans, DenseMatrix &amp;elmat)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#af653d3906b24ffcc4ba983140a3b6793">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#aa11291dde9ac29a56faa8cef630c67a1">TransposeIntegrator</a> (<a class="el" href="classBilinearFormIntegrator.html">BilinearFormIntegrator</a> *_bfi, int _own_bfi=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#af653d3906b24ffcc4ba983140a3b6793">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat.  <a href="#af653d3906b24ffcc4ba983140a3b6793"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#acc5324f88f12d36d2e66fca73b208f76">AssembleElementMatrix2</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;trial_fe, const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;test_fe, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#a0702b0e0c0b015dce68df258f429d762">~TransposeIntegrator</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#ae5966ff48ac361ee39d32f1e3b498c0a">own_bfi</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBilinearFormIntegrator.html">BilinearFormIntegrator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#a53ea7426cda662335eef780dae082003">bfi</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransposeIntegrator.html#a7288373851e80f753189197d9731617c">bfi_elmat</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00046">46</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa11291dde9ac29a56faa8cef630c67a1"></a><!-- doxytag: member="TransposeIntegrator::TransposeIntegrator" ref="aa11291dde9ac29a56faa8cef630c67a1" args="(BilinearFormIntegrator *_bfi, int _own_bfi=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransposeIntegrator::TransposeIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBilinearFormIntegrator.html">BilinearFormIntegrator</a> *&#160;</td>
+          <td class="paramname"><em>_bfi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_own_bfi</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00055">55</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00050">bfi</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00049">own_bfi</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0702b0e0c0b015dce68df258f429d762"></a><!-- doxytag: member="TransposeIntegrator::~TransposeIntegrator" ref="a0702b0e0c0b015dce68df258f429d762" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual TransposeIntegrator::~TransposeIntegrator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00065">65</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00050">bfi</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00049">own_bfi</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="af653d3906b24ffcc4ba983140a3b6793"></a><!-- doxytag: member="TransposeIntegrator::AssembleElementMatrix" ref="af653d3906b24ffcc4ba983140a3b6793" args="(const FiniteElement &amp;el, ElementTransformation &amp;Trans, DenseMatrix &amp;elmat)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TransposeIntegrator::AssembleElementMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>Trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>elmat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat. </p>
+
+<p>Reimplemented from <a class="el" href="classBilinearFormIntegrator.html#adf3480ea4fb587b2a7853b6531ecb912">BilinearFormIntegrator</a>.</p>
+
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00042">42</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00050">bfi</a>, <a class="el" href="bilininteg_8hpp_source.html#l00052">bfi_elmat</a>, and <a class="el" href="densemat_8cpp_source.html#l00725">DenseMatrix::Transpose()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acc5324f88f12d36d2e66fca73b208f76"></a><!-- doxytag: member="TransposeIntegrator::AssembleElementMatrix2" ref="acc5324f88f12d36d2e66fca73b208f76" args="(const FiniteElement &amp;trial_fe, const FiniteElement &amp;test_fe, ElementTransformation &amp;Trans, DenseMatrix &amp;elmat)" -->
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +237,59 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00050">50</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8cpp_source.html#l00725">DenseMatrix::Transpose()</a>.</p>
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00050">bfi</a>, <a class="el" href="bilininteg_8hpp_source.html#l00052">bfi_elmat</a>, and <a class="el" href="densemat_8cpp_source.html#l00725">DenseMatrix::Transpose()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a53ea7426cda662335eef780dae082003"></a><!-- doxytag: member="TransposeIntegrator::bfi" ref="a53ea7426cda662335eef780dae082003" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBilinearFormIntegrator.html">BilinearFormIntegrator</a>* <a class="el" href="classTransposeIntegrator.html#a53ea7426cda662335eef780dae082003">TransposeIntegrator::bfi</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00050">50</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00042">AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00050">AssembleElementMatrix2()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00055">TransposeIntegrator()</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00065">~TransposeIntegrator()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7288373851e80f753189197d9731617c"></a><!-- doxytag: member="TransposeIntegrator::bfi_elmat" ref="a7288373851e80f753189197d9731617c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> <a class="el" href="classTransposeIntegrator.html#a7288373851e80f753189197d9731617c">TransposeIntegrator::bfi_elmat</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00052">52</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00042">AssembleElementMatrix()</a>, and <a class="el" href="bilininteg_8cpp_source.html#l00050">AssembleElementMatrix2()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5966ff48ac361ee39d32f1e3b498c0a"></a><!-- doxytag: member="TransposeIntegrator::own_bfi" ref="ae5966ff48ac361ee39d32f1e3b498c0a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classTransposeIntegrator.html#ae5966ff48ac361ee39d32f1e3b498c0a">TransposeIntegrator::own_bfi</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00049">49</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8hpp_source.html#l00055">TransposeIntegrator()</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00065">~TransposeIntegrator()</a>.</p>
 
 </div>
 </div>
@@ -151,7 +303,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -160,7 +312,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:07 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:05 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

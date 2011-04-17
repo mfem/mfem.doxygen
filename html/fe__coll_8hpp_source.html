@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">fe_coll.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="fe__coll_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -84,454 +85,454 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
 <a name="l00018"></a>00018    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00019"></a>00019    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span> = 0;
+<a name="l00019"></a>00019    <a class="code" href="classFiniteElementCollection.html#a7d635a700ecdb259a21e54399f0c2d75">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span> = 0;
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span> = 0;
+<a name="l00021"></a>00021    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classFiniteElementCollection.html#abdf2413cbf2640a90f3af4a247e5dea3">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span> = 0;
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span> = 0;
+<a name="l00023"></a>00023    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classFiniteElementCollection.html#a67d56ef98ced102ee763257d64e1d414">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span> = 0;
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Undefined&quot;</span>; };
+<a name="l00025"></a><a class="code" href="classFiniteElementCollection.html#a705e3ef9aaea9992777d2aa6ccba7516">00025</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classFiniteElementCollection.html#a705e3ef9aaea9992777d2aa6ccba7516">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Undefined&quot;</span>; };
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027    <span class="keywordtype">int</span> HasFaceDofs (<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00027"></a>00027    <span class="keywordtype">int</span> <a class="code" href="classFiniteElementCollection.html#a6d47dfc2f75815815690f91296691915">HasFaceDofs</a> (<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029    <span class="keyword">virtual</span> ~<a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>() { };
+<a name="l00029"></a><a class="code" href="classFiniteElementCollection.html#a2f1464ef08f89aa446dfa3d1d876e860">00029</a>    <span class="keyword">virtual</span> <a class="code" href="classFiniteElementCollection.html#a2f1464ef08f89aa446dfa3d1d876e860">~FiniteElementCollection</a>() { };
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031    <span class="keyword">static</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *New(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
+<a name="l00031"></a>00031    <span class="keyword">static</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a> *<a class="code" href="classFiniteElementCollection.html#a7bcffc57f1a8728c36b1804371fa28cc">New</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
 <a name="l00032"></a>00032 };
 <a name="l00033"></a>00033 
 <a name="l00034"></a><a class="code" href="classLinearFECollection.html">00034</a> <span class="keyword">class </span><a class="code" href="classLinearFECollection.html">LinearFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00035"></a>00035 {
 <a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> PointFE;
-<a name="l00038"></a>00038    <span class="keyword">const</span> <a class="code" href="classLinear1DFiniteElement.html" title="Class for linear FE on interval.">Linear1DFiniteElement</a> SegmentFE;
-<a name="l00039"></a>00039    <span class="keyword">const</span> <a class="code" href="classLinear2DFiniteElement.html" title="Class for linear FE on triangle.">Linear2DFiniteElement</a> TriangleFE;
-<a name="l00040"></a>00040    <span class="keyword">const</span> <a class="code" href="classBiLinear2DFiniteElement.html" title="Class for bilinear FE on quadrilateral.">BiLinear2DFiniteElement</a> QuadrilateralFE;
-<a name="l00041"></a>00041    <span class="keyword">const</span> <a class="code" href="classLinear3DFiniteElement.html" title="Class for linear FE on tetrahedron.">Linear3DFiniteElement</a> TetrahedronFE;
-<a name="l00042"></a>00042    <span class="keyword">const</span> <a class="code" href="classTriLinear3DFiniteElement.html" title="Class for tri-linear FE on cube.">TriLinear3DFiniteElement</a> ParallelepipedFE;
+<a name="l00037"></a><a class="code" href="classLinearFECollection.html#ac426d5bbc400db0e85a5dbd120ab18e7">00037</a>    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> <a class="code" href="classLinearFECollection.html#ac426d5bbc400db0e85a5dbd120ab18e7">PointFE</a>;
+<a name="l00038"></a><a class="code" href="classLinearFECollection.html#a97d4bd18edd98a626d657c8919168dba">00038</a>    <span class="keyword">const</span> <a class="code" href="classLinear1DFiniteElement.html" title="Class for linear FE on interval.">Linear1DFiniteElement</a> <a class="code" href="classLinearFECollection.html#a97d4bd18edd98a626d657c8919168dba">SegmentFE</a>;
+<a name="l00039"></a><a class="code" href="classLinearFECollection.html#adec07300c1301f5acc975ec2285f10d2">00039</a>    <span class="keyword">const</span> <a class="code" href="classLinear2DFiniteElement.html" title="Class for linear FE on triangle.">Linear2DFiniteElement</a> <a class="code" href="classLinearFECollection.html#adec07300c1301f5acc975ec2285f10d2">TriangleFE</a>;
+<a name="l00040"></a><a class="code" href="classLinearFECollection.html#ad07a582929b2b3b5df2332a4544b3d8d">00040</a>    <span class="keyword">const</span> <a class="code" href="classBiLinear2DFiniteElement.html" title="Class for bilinear FE on quadrilateral.">BiLinear2DFiniteElement</a> <a class="code" href="classLinearFECollection.html#ad07a582929b2b3b5df2332a4544b3d8d">QuadrilateralFE</a>;
+<a name="l00041"></a><a class="code" href="classLinearFECollection.html#a31fbd75d084c50ad515ee6dac25ea403">00041</a>    <span class="keyword">const</span> <a class="code" href="classLinear3DFiniteElement.html" title="Class for linear FE on tetrahedron.">Linear3DFiniteElement</a> <a class="code" href="classLinearFECollection.html#a31fbd75d084c50ad515ee6dac25ea403">TetrahedronFE</a>;
+<a name="l00042"></a><a class="code" href="classLinearFECollection.html#af3722e7c622ca0a923eea4655b4a32c4">00042</a>    <span class="keyword">const</span> <a class="code" href="classTriLinear3DFiniteElement.html" title="Class for tri-linear FE on cube.">TriLinear3DFiniteElement</a> <a class="code" href="classLinearFECollection.html#af3722e7c622ca0a923eea4655b4a32c4">ParallelepipedFE</a>;
 <a name="l00043"></a>00043 <span class="keyword">public</span>:
-<a name="l00044"></a>00044    <a class="code" href="classLinearFECollection.html">LinearFECollection</a>() { };
+<a name="l00044"></a><a class="code" href="classLinearFECollection.html#a7860c7a3f2a1a1bcbd92e0a123985677">00044</a>    <a class="code" href="classLinearFECollection.html#a7860c7a3f2a1a1bcbd92e0a123985677">LinearFECollection</a>() { };
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00047"></a>00047    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00047"></a>00047    <a class="code" href="classLinearFECollection.html#a9df07d455dd1c2f22546ad223949e046">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00049"></a>00049    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classLinearFECollection.html#a5e12f10d9ea64d02557839ff610d866f">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00051"></a>00051    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classLinearFECollection.html#af0666f10606d988b608203e9a4e944a7">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Linear&quot;</span>; };
+<a name="l00053"></a><a class="code" href="classLinearFECollection.html#a9865dd4922328f784ef3847410613506">00053</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classLinearFECollection.html#a9865dd4922328f784ef3847410613506">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Linear&quot;</span>; };
 <a name="l00054"></a>00054 };
 <a name="l00055"></a>00055 
 <a name="l00056"></a><a class="code" href="classQuadraticFECollection.html">00056</a> <span class="keyword">class </span><a class="code" href="classQuadraticFECollection.html">QuadraticFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00057"></a>00057 {
 <a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> PointFE;
-<a name="l00060"></a>00060    <span class="keyword">const</span> <a class="code" href="classQuad1DFiniteElement.html" title="Class for quadratic FE on interval.">Quad1DFiniteElement</a> SegmentFE;
-<a name="l00061"></a>00061    <span class="keyword">const</span> <a class="code" href="classQuad2DFiniteElement.html" title="Class for quadratic FE on triangle.">Quad2DFiniteElement</a> TriangleFE;
-<a name="l00062"></a>00062    <span class="keyword">const</span> <a class="code" href="classBiQuad2DFiniteElement.html" title="Class for bi-quadratic FE on quadrilateral.">BiQuad2DFiniteElement</a> QuadrilateralFE;
-<a name="l00063"></a>00063    <span class="keyword">const</span> <a class="code" href="classQuadratic3DFiniteElement.html" title="Class for quadratic FE on tetrahedron.">Quadratic3DFiniteElement</a> TetrahedronFE;
-<a name="l00064"></a>00064    <span class="keyword">const</span> <a class="code" href="classLagrangeHexFiniteElement.html" title="Tensor products of 1D FEs (only degree 2 is functional)">LagrangeHexFiniteElement</a> ParallelepipedFE;
+<a name="l00059"></a><a class="code" href="classQuadraticFECollection.html#a24a80d4b6ec1f9792e275739e5bf6d50">00059</a>    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> <a class="code" href="classQuadraticFECollection.html#a24a80d4b6ec1f9792e275739e5bf6d50">PointFE</a>;
+<a name="l00060"></a><a class="code" href="classQuadraticFECollection.html#a2aff02b6775d2b529239a7dd6baef8fc">00060</a>    <span class="keyword">const</span> <a class="code" href="classQuad1DFiniteElement.html" title="Class for quadratic FE on interval.">Quad1DFiniteElement</a> <a class="code" href="classQuadraticFECollection.html#a2aff02b6775d2b529239a7dd6baef8fc">SegmentFE</a>;
+<a name="l00061"></a><a class="code" href="classQuadraticFECollection.html#a50b177d08de32dfaaac6419f01ba98ef">00061</a>    <span class="keyword">const</span> <a class="code" href="classQuad2DFiniteElement.html" title="Class for quadratic FE on triangle.">Quad2DFiniteElement</a> <a class="code" href="classQuadraticFECollection.html#a50b177d08de32dfaaac6419f01ba98ef">TriangleFE</a>;
+<a name="l00062"></a><a class="code" href="classQuadraticFECollection.html#ada5537e761c903e3ac3c598d7678d8d0">00062</a>    <span class="keyword">const</span> <a class="code" href="classBiQuad2DFiniteElement.html" title="Class for bi-quadratic FE on quadrilateral.">BiQuad2DFiniteElement</a> <a class="code" href="classQuadraticFECollection.html#ada5537e761c903e3ac3c598d7678d8d0">QuadrilateralFE</a>;
+<a name="l00063"></a><a class="code" href="classQuadraticFECollection.html#a4a87ef792edef9be17f30ffc4fcc42e8">00063</a>    <span class="keyword">const</span> <a class="code" href="classQuadratic3DFiniteElement.html" title="Class for quadratic FE on tetrahedron.">Quadratic3DFiniteElement</a> <a class="code" href="classQuadraticFECollection.html#a4a87ef792edef9be17f30ffc4fcc42e8">TetrahedronFE</a>;
+<a name="l00064"></a><a class="code" href="classQuadraticFECollection.html#adb40ad35159bde785281bcbb7c4e5827">00064</a>    <span class="keyword">const</span> <a class="code" href="classLagrangeHexFiniteElement.html" title="Tensor products of 1D FEs (only degree 2 is functional)">LagrangeHexFiniteElement</a> <a class="code" href="classQuadraticFECollection.html#adb40ad35159bde785281bcbb7c4e5827">ParallelepipedFE</a>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">public</span>:
-<a name="l00067"></a>00067    <a class="code" href="classQuadraticFECollection.html">QuadraticFECollection</a>() : ParallelepipedFE(2) { };
+<a name="l00067"></a><a class="code" href="classQuadraticFECollection.html#afa5ad1bd96ed74aed029d4368a5dbaa1">00067</a>    <a class="code" href="classQuadraticFECollection.html#afa5ad1bd96ed74aed029d4368a5dbaa1">QuadraticFECollection</a>() : <a class="code" href="classQuadraticFECollection.html#adb40ad35159bde785281bcbb7c4e5827">ParallelepipedFE</a>(2) { };
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00070"></a>00070    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00070"></a>00070    <a class="code" href="classQuadraticFECollection.html#a53063e7028bc9376c3a87e5110b0f5cc">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00072"></a>00072    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classQuadraticFECollection.html#a9ca7dbfb4efd800e83ec416954e8e676">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00074"></a>00074    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classQuadraticFECollection.html#a8cf0fd8391ab49b834f53264cffa94e5">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Quadratic&quot;</span>; };
+<a name="l00076"></a><a class="code" href="classQuadraticFECollection.html#a96e87746ff002880806eb3c4b8d6e116">00076</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classQuadraticFECollection.html#a96e87746ff002880806eb3c4b8d6e116">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Quadratic&quot;</span>; };
 <a name="l00077"></a>00077 };
 <a name="l00078"></a>00078 
 <a name="l00079"></a><a class="code" href="classQuadraticPosFECollection.html">00079</a> <span class="keyword">class </span><a class="code" href="classQuadraticPosFECollection.html">QuadraticPosFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00080"></a>00080 {
 <a name="l00081"></a>00081 <span class="keyword">private</span>:
-<a name="l00082"></a>00082    <span class="keyword">const</span> <a class="code" href="classQuadPos1DFiniteElement.html">QuadPos1DFiniteElement</a>   SegmentFE;
-<a name="l00083"></a>00083    <span class="keyword">const</span> <a class="code" href="classBiQuadPos2DFiniteElement.html">BiQuadPos2DFiniteElement</a> QuadrilateralFE;
+<a name="l00082"></a><a class="code" href="classQuadraticPosFECollection.html#ab9484e9ca67528894d9f25fec66ea8bb">00082</a>    <span class="keyword">const</span> <a class="code" href="classQuadPos1DFiniteElement.html">QuadPos1DFiniteElement</a>   <a class="code" href="classQuadraticPosFECollection.html#ab9484e9ca67528894d9f25fec66ea8bb">SegmentFE</a>;
+<a name="l00083"></a><a class="code" href="classQuadraticPosFECollection.html#a36335f4e096a648126f829344d7eb061">00083</a>    <span class="keyword">const</span> <a class="code" href="classBiQuadPos2DFiniteElement.html">BiQuadPos2DFiniteElement</a> <a class="code" href="classQuadraticPosFECollection.html#a36335f4e096a648126f829344d7eb061">QuadrilateralFE</a>;
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085 <span class="keyword">public</span>:
-<a name="l00086"></a>00086    <a class="code" href="classQuadraticPosFECollection.html">QuadraticPosFECollection</a>() { };
+<a name="l00086"></a><a class="code" href="classQuadraticPosFECollection.html#aa28bfbbb94d5695b1dc5c1add258d8be">00086</a>    <a class="code" href="classQuadraticPosFECollection.html#aa28bfbbb94d5695b1dc5c1add258d8be">QuadraticPosFECollection</a>() { };
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00089"></a>00089    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00089"></a>00089    <a class="code" href="classQuadraticPosFECollection.html#a107546e353c1e94b021aec6dd01aa438">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00091"></a>00091    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classQuadraticPosFECollection.html#a831734b140d0e9381a6ab8277fe5b7b2">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00093"></a>00093    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classQuadraticPosFECollection.html#a9983502e1f97b8931ee1f6745ace53b9">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticPos&quot;</span>; };
+<a name="l00095"></a><a class="code" href="classQuadraticPosFECollection.html#aabe27144789252c7304cb7365920f367">00095</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classQuadraticPosFECollection.html#aabe27144789252c7304cb7365920f367">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticPos&quot;</span>; };
 <a name="l00096"></a>00096 };
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098 
 <a name="l00099"></a><a class="code" href="classCubicFECollection.html">00099</a> <span class="keyword">class </span><a class="code" href="classCubicFECollection.html">CubicFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00100"></a>00100 {
 <a name="l00101"></a>00101 <span class="keyword">private</span>:
-<a name="l00102"></a>00102    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> PointFE;
-<a name="l00103"></a>00103    <span class="keyword">const</span> <a class="code" href="classCubic1DFiniteElement.html">Cubic1DFiniteElement</a> SegmentFE;
-<a name="l00104"></a>00104    <span class="keyword">const</span> <a class="code" href="classCubic2DFiniteElement.html">Cubic2DFiniteElement</a> TriangleFE;
-<a name="l00105"></a>00105    <span class="keyword">const</span> <a class="code" href="classBiCubic2DFiniteElement.html">BiCubic2DFiniteElement</a> QuadrilateralFE;
-<a name="l00106"></a>00106    <span class="keyword">const</span> <a class="code" href="classCubic3DFiniteElement.html" title="Class for cubic FE on tetrahedron.">Cubic3DFiniteElement</a> TetrahedronFE;
-<a name="l00107"></a>00107    <span class="keyword">const</span> <a class="code" href="classLagrangeHexFiniteElement.html" title="Tensor products of 1D FEs (only degree 2 is functional)">LagrangeHexFiniteElement</a> ParallelepipedFE;
+<a name="l00102"></a><a class="code" href="classCubicFECollection.html#acd920e8f0440bc46975c9bc5a0b6b38c">00102</a>    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> <a class="code" href="classCubicFECollection.html#acd920e8f0440bc46975c9bc5a0b6b38c">PointFE</a>;
+<a name="l00103"></a><a class="code" href="classCubicFECollection.html#adc5430c1f254d6cc85fc1ecf4a9053b2">00103</a>    <span class="keyword">const</span> <a class="code" href="classCubic1DFiniteElement.html">Cubic1DFiniteElement</a> <a class="code" href="classCubicFECollection.html#adc5430c1f254d6cc85fc1ecf4a9053b2">SegmentFE</a>;
+<a name="l00104"></a><a class="code" href="classCubicFECollection.html#af3883b640c8614da77de81bbd0807b92">00104</a>    <span class="keyword">const</span> <a class="code" href="classCubic2DFiniteElement.html">Cubic2DFiniteElement</a> <a class="code" href="classCubicFECollection.html#af3883b640c8614da77de81bbd0807b92">TriangleFE</a>;
+<a name="l00105"></a><a class="code" href="classCubicFECollection.html#a169e534a32811099842e25a439ad5a67">00105</a>    <span class="keyword">const</span> <a class="code" href="classBiCubic2DFiniteElement.html">BiCubic2DFiniteElement</a> <a class="code" href="classCubicFECollection.html#a169e534a32811099842e25a439ad5a67">QuadrilateralFE</a>;
+<a name="l00106"></a><a class="code" href="classCubicFECollection.html#a3edfe5418768ee7088ae62e05c2a6f3b">00106</a>    <span class="keyword">const</span> <a class="code" href="classCubic3DFiniteElement.html" title="Class for cubic FE on tetrahedron.">Cubic3DFiniteElement</a> <a class="code" href="classCubicFECollection.html#a3edfe5418768ee7088ae62e05c2a6f3b">TetrahedronFE</a>;
+<a name="l00107"></a><a class="code" href="classCubicFECollection.html#a6e64f6bd7bb3850ea079cf0428c5656c">00107</a>    <span class="keyword">const</span> <a class="code" href="classLagrangeHexFiniteElement.html" title="Tensor products of 1D FEs (only degree 2 is functional)">LagrangeHexFiniteElement</a> <a class="code" href="classCubicFECollection.html#a6e64f6bd7bb3850ea079cf0428c5656c">ParallelepipedFE</a>;
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109 <span class="keyword">public</span>:
-<a name="l00110"></a>00110    <a class="code" href="classCubicFECollection.html">CubicFECollection</a>() : ParallelepipedFE(3) { };
+<a name="l00110"></a><a class="code" href="classCubicFECollection.html#a1cf3ac9fecee389f87295dfedf0f5261">00110</a>    <a class="code" href="classCubicFECollection.html#a1cf3ac9fecee389f87295dfedf0f5261">CubicFECollection</a>() : <a class="code" href="classCubicFECollection.html#a6e64f6bd7bb3850ea079cf0428c5656c">ParallelepipedFE</a>(3) { };
 <a name="l00111"></a>00111 
 <a name="l00112"></a>00112    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00113"></a>00113    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00113"></a>00113    <a class="code" href="classCubicFECollection.html#ac53afbdadcacf90015a24973bbd58d7d">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00114"></a>00114 
-<a name="l00115"></a>00115    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00115"></a>00115    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classCubicFECollection.html#ace3506753280430833bd1d1acc8744ea">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00116"></a>00116 
-<a name="l00117"></a>00117    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00117"></a>00117    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classCubicFECollection.html#a6cccea12834d994d9b766a48afc4782b">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00118"></a>00118 
-<a name="l00119"></a>00119    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Cubic&quot;</span>; };
+<a name="l00119"></a><a class="code" href="classCubicFECollection.html#a310c00a87cbee18cd3757709f9392542">00119</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classCubicFECollection.html#a310c00a87cbee18cd3757709f9392542">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Cubic&quot;</span>; };
 <a name="l00120"></a>00120 };
 <a name="l00121"></a>00121 
 <a name="l00122"></a><a class="code" href="classCrouzeixRaviartFECollection.html">00122</a> <span class="keyword">class </span><a class="code" href="classCrouzeixRaviartFECollection.html">CrouzeixRaviartFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00123"></a>00123 {
 <a name="l00124"></a>00124 <span class="keyword">private</span>:
-<a name="l00125"></a>00125    <span class="keyword">const</span> <a class="code" href="classP0SegmentFiniteElement.html">P0SegmentFiniteElement</a> SegmentFE;
-<a name="l00126"></a>00126    <span class="keyword">const</span> <a class="code" href="classCrouzeixRaviartFiniteElement.html" title="Crouzeix-Raviart finite element on triangle.">CrouzeixRaviartFiniteElement</a> TriangleFE;
-<a name="l00127"></a>00127    <span class="keyword">const</span> <a class="code" href="classCrouzeixRaviartQuadFiniteElement.html" title="Crouzeix-Raviart finite element on quadrilateral.">CrouzeixRaviartQuadFiniteElement</a> QuadrilateralFE;
+<a name="l00125"></a><a class="code" href="classCrouzeixRaviartFECollection.html#a3d49dbcce5ce416e93b19cf10edc639a">00125</a>    <span class="keyword">const</span> <a class="code" href="classP0SegmentFiniteElement.html">P0SegmentFiniteElement</a> <a class="code" href="classCrouzeixRaviartFECollection.html#a3d49dbcce5ce416e93b19cf10edc639a">SegmentFE</a>;
+<a name="l00126"></a><a class="code" href="classCrouzeixRaviartFECollection.html#a0e4a1fc67e40c537ada93e9356fb9172">00126</a>    <span class="keyword">const</span> <a class="code" href="classCrouzeixRaviartFiniteElement.html" title="Crouzeix-Raviart finite element on triangle.">CrouzeixRaviartFiniteElement</a> <a class="code" href="classCrouzeixRaviartFECollection.html#a0e4a1fc67e40c537ada93e9356fb9172">TriangleFE</a>;
+<a name="l00127"></a><a class="code" href="classCrouzeixRaviartFECollection.html#ab767cb44aeb6ac099ba8abe0bf1c6cfc">00127</a>    <span class="keyword">const</span> <a class="code" href="classCrouzeixRaviartQuadFiniteElement.html" title="Crouzeix-Raviart finite element on quadrilateral.">CrouzeixRaviartQuadFiniteElement</a> <a class="code" href="classCrouzeixRaviartFECollection.html#ab767cb44aeb6ac099ba8abe0bf1c6cfc">QuadrilateralFE</a>;
 <a name="l00128"></a>00128 <span class="keyword">public</span>:
-<a name="l00129"></a>00129    <a class="code" href="classCrouzeixRaviartFECollection.html">CrouzeixRaviartFECollection</a>() : SegmentFE(1) { };
+<a name="l00129"></a><a class="code" href="classCrouzeixRaviartFECollection.html#a296e8374c869c1086a355f008bf202b9">00129</a>    <a class="code" href="classCrouzeixRaviartFECollection.html#a296e8374c869c1086a355f008bf202b9">CrouzeixRaviartFECollection</a>() : <a class="code" href="classCrouzeixRaviartFECollection.html#a3d49dbcce5ce416e93b19cf10edc639a">SegmentFE</a>(1) { };
 <a name="l00130"></a>00130 
 <a name="l00131"></a>00131    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00132"></a>00132    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00132"></a>00132    <a class="code" href="classCrouzeixRaviartFECollection.html#a925cbd562d123bfaf0f38491bc0cf03c">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00134"></a>00134    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classCrouzeixRaviartFECollection.html#ae3026571b8046f6c26a60db48be88a72">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00135"></a>00135 
-<a name="l00136"></a>00136    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00136"></a>00136    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classCrouzeixRaviartFECollection.html#afc5f8af7d1c93fb6b2387dbdab8a3da2">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00137"></a>00137 
-<a name="l00138"></a>00138    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;CrouzeixRaviart&quot;</span>; };
+<a name="l00138"></a><a class="code" href="classCrouzeixRaviartFECollection.html#a89bd10bd2b9fdde9610c0ec3f2bd1243">00138</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classCrouzeixRaviartFECollection.html#a89bd10bd2b9fdde9610c0ec3f2bd1243">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;CrouzeixRaviart&quot;</span>; };
 <a name="l00139"></a>00139 };
 <a name="l00140"></a>00140 
 <a name="l00141"></a><a class="code" href="classRT0__2DFECollection.html">00141</a> <span class="keyword">class </span><a class="code" href="classRT0__2DFECollection.html">RT0_2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00142"></a>00142 {
 <a name="l00143"></a>00143 <span class="keyword">private</span>:
-<a name="l00144"></a>00144    <span class="keyword">const</span> <a class="code" href="classP0SegmentFiniteElement.html">P0SegmentFiniteElement</a> SegmentFE; <span class="comment">// normal component on edge</span>
-<a name="l00145"></a>00145    <span class="keyword">const</span> <a class="code" href="classRT0TriangleFiniteElement.html">RT0TriangleFiniteElement</a> TriangleFE;
-<a name="l00146"></a>00146    <span class="keyword">const</span> <a class="code" href="classRT0QuadFiniteElement.html">RT0QuadFiniteElement</a> QuadrilateralFE;
+<a name="l00144"></a><a class="code" href="classRT0__2DFECollection.html#ab611efb4827effabf2e4ed1d914e95b7">00144</a>    <span class="keyword">const</span> <a class="code" href="classP0SegmentFiniteElement.html">P0SegmentFiniteElement</a> <a class="code" href="classRT0__2DFECollection.html#ab611efb4827effabf2e4ed1d914e95b7">SegmentFE</a>; <span class="comment">// normal component on edge</span>
+<a name="l00145"></a><a class="code" href="classRT0__2DFECollection.html#ae9e084c62b77a9c497d064401526ee01">00145</a>    <span class="keyword">const</span> <a class="code" href="classRT0TriangleFiniteElement.html">RT0TriangleFiniteElement</a> <a class="code" href="classRT0__2DFECollection.html#ae9e084c62b77a9c497d064401526ee01">TriangleFE</a>;
+<a name="l00146"></a><a class="code" href="classRT0__2DFECollection.html#a4515a61d08c411b5e41ae6a17f2e3970">00146</a>    <span class="keyword">const</span> <a class="code" href="classRT0QuadFiniteElement.html">RT0QuadFiniteElement</a> <a class="code" href="classRT0__2DFECollection.html#a4515a61d08c411b5e41ae6a17f2e3970">QuadrilateralFE</a>;
 <a name="l00147"></a>00147 <span class="keyword">public</span>:
-<a name="l00148"></a>00148    <a class="code" href="classRT0__2DFECollection.html">RT0_2DFECollection</a>() : SegmentFE(0) { };
+<a name="l00148"></a><a class="code" href="classRT0__2DFECollection.html#a7ea307bce82f09e7afff0306638f806f">00148</a>    <a class="code" href="classRT0__2DFECollection.html#a7ea307bce82f09e7afff0306638f806f">RT0_2DFECollection</a>() : <a class="code" href="classRT0__2DFECollection.html#ab611efb4827effabf2e4ed1d914e95b7">SegmentFE</a>(0) { };
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00151"></a>00151    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00151"></a>00151    <a class="code" href="classRT0__2DFECollection.html#adc1e84f157debd49276603a22100b220">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00152"></a>00152 
-<a name="l00153"></a>00153    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00153"></a>00153    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classRT0__2DFECollection.html#a7d1c4801eac44bef8ec2e6a734bddbff">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00154"></a>00154 
-<a name="l00155"></a>00155    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00155"></a>00155    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classRT0__2DFECollection.html#a1f4cf9a3fb61575035c9794b81c1f97c">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00156"></a>00156 };
 <a name="l00157"></a>00157 
 <a name="l00158"></a><a class="code" href="classRT1__2DFECollection.html">00158</a> <span class="keyword">class </span><a class="code" href="classRT1__2DFECollection.html">RT1_2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00159"></a>00159 {
 <a name="l00160"></a>00160 <span class="keyword">private</span>:
-<a name="l00161"></a>00161    <span class="keyword">const</span> <a class="code" href="classP1SegmentFiniteElement.html" title="Linear 1D element with nodes 1/3 and 2/3 (trace of RT1)">P1SegmentFiniteElement</a> SegmentFE; <span class="comment">// normal component on edge</span>
-<a name="l00162"></a>00162    <span class="keyword">const</span> <a class="code" href="classRT1TriangleFiniteElement.html">RT1TriangleFiniteElement</a> TriangleFE;
+<a name="l00161"></a><a class="code" href="classRT1__2DFECollection.html#a60cc591264bf2a7a067fd6aa6bb48c36">00161</a>    <span class="keyword">const</span> <a class="code" href="classP1SegmentFiniteElement.html" title="Linear 1D element with nodes 1/3 and 2/3 (trace of RT1)">P1SegmentFiniteElement</a> <a class="code" href="classRT1__2DFECollection.html#a60cc591264bf2a7a067fd6aa6bb48c36">SegmentFE</a>; <span class="comment">// normal component on edge</span>
+<a name="l00162"></a><a class="code" href="classRT1__2DFECollection.html#a3305b6bc6319556703cc3b001d195f0a">00162</a>    <span class="keyword">const</span> <a class="code" href="classRT1TriangleFiniteElement.html">RT1TriangleFiniteElement</a> <a class="code" href="classRT1__2DFECollection.html#a3305b6bc6319556703cc3b001d195f0a">TriangleFE</a>;
 <a name="l00163"></a>00163 <span class="keyword">public</span>:
-<a name="l00164"></a>00164    <a class="code" href="classRT1__2DFECollection.html">RT1_2DFECollection</a>() { };
+<a name="l00164"></a><a class="code" href="classRT1__2DFECollection.html#a9bcbec020795f7e295c7ba30976db65c">00164</a>    <a class="code" href="classRT1__2DFECollection.html#a9bcbec020795f7e295c7ba30976db65c">RT1_2DFECollection</a>() { };
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00167"></a>00167    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00167"></a>00167    <a class="code" href="classRT1__2DFECollection.html#ab556efdba381fbc868a01d62711d6241">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00168"></a>00168 
-<a name="l00169"></a>00169    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00169"></a>00169    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classRT1__2DFECollection.html#ae576a4df7c0eb277af7f764cb29f5224">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00170"></a>00170 
-<a name="l00171"></a>00171    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00171"></a>00171    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classRT1__2DFECollection.html#ace277ddeeea4ed2cb5447eddb9d660a2">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00172"></a>00172 };
 <a name="l00173"></a>00173 
 <a name="l00174"></a><a class="code" href="classRT2__2DFECollection.html">00174</a> <span class="keyword">class </span><a class="code" href="classRT2__2DFECollection.html">RT2_2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00175"></a>00175 {
 <a name="l00176"></a>00176 <span class="keyword">private</span>:
-<a name="l00177"></a>00177    <span class="keyword">const</span> <a class="code" href="classP2SegmentFiniteElement.html" title="Quadratic 1D element with nodes the Gaussian points in [0,1] (trace of RT2)">P2SegmentFiniteElement</a> SegmentFE; <span class="comment">// normal component on edge</span>
-<a name="l00178"></a>00178    <span class="keyword">const</span> <a class="code" href="classRT2TriangleFiniteElement.html">RT2TriangleFiniteElement</a> TriangleFE;
+<a name="l00177"></a><a class="code" href="classRT2__2DFECollection.html#ad523593065b6f5376a6ed5cf6ec6a58a">00177</a>    <span class="keyword">const</span> <a class="code" href="classP2SegmentFiniteElement.html" title="Quadratic 1D element with nodes the Gaussian points in [0,1] (trace of RT2)">P2SegmentFiniteElement</a> <a class="code" href="classRT2__2DFECollection.html#ad523593065b6f5376a6ed5cf6ec6a58a">SegmentFE</a>; <span class="comment">// normal component on edge</span>
+<a name="l00178"></a><a class="code" href="classRT2__2DFECollection.html#a3add0108e2b52ac5de8f2ea08355a539">00178</a>    <span class="keyword">const</span> <a class="code" href="classRT2TriangleFiniteElement.html">RT2TriangleFiniteElement</a> <a class="code" href="classRT2__2DFECollection.html#a3add0108e2b52ac5de8f2ea08355a539">TriangleFE</a>;
 <a name="l00179"></a>00179 <span class="keyword">public</span>:
-<a name="l00180"></a>00180    <a class="code" href="classRT2__2DFECollection.html">RT2_2DFECollection</a>() { };
+<a name="l00180"></a><a class="code" href="classRT2__2DFECollection.html#acb8ad75fd7a827154f173b9d38ead2dc">00180</a>    <a class="code" href="classRT2__2DFECollection.html#acb8ad75fd7a827154f173b9d38ead2dc">RT2_2DFECollection</a>() { };
 <a name="l00181"></a>00181 
 <a name="l00182"></a>00182    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00183"></a>00183    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00183"></a>00183    <a class="code" href="classRT2__2DFECollection.html#af77fac62aff412262dfdc5de0ee0a9d3">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00184"></a>00184 
-<a name="l00185"></a>00185    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00185"></a>00185    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classRT2__2DFECollection.html#a7362400c3242bb08d94de501b5f8569c">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00186"></a>00186 
-<a name="l00187"></a>00187    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00187"></a>00187    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classRT2__2DFECollection.html#ae7aed66b4569340de1970736bdcbed2a">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00188"></a>00188 };
 <a name="l00189"></a>00189 
 <a name="l00190"></a><a class="code" href="classConst2DFECollection.html">00190</a> <span class="keyword">class </span><a class="code" href="classConst2DFECollection.html">Const2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00191"></a>00191 {
 <a name="l00192"></a>00192 <span class="keyword">private</span>:
-<a name="l00193"></a>00193    <span class="keyword">const</span> <a class="code" href="classP0TriangleFiniteElement.html" title="Class for constant FE on triangle.">P0TriangleFiniteElement</a> TriangleFE;
-<a name="l00194"></a>00194    <span class="keyword">const</span> <a class="code" href="classP0QuadFiniteElement.html">P0QuadFiniteElement</a> QuadrilateralFE;
+<a name="l00193"></a><a class="code" href="classConst2DFECollection.html#a0c7f3c83ab76c8ce8583f0402389c884">00193</a>    <span class="keyword">const</span> <a class="code" href="classP0TriangleFiniteElement.html" title="Class for constant FE on triangle.">P0TriangleFiniteElement</a> <a class="code" href="classConst2DFECollection.html#a0c7f3c83ab76c8ce8583f0402389c884">TriangleFE</a>;
+<a name="l00194"></a><a class="code" href="classConst2DFECollection.html#aac49f240de6cb7bff90cebfe91abf07f">00194</a>    <span class="keyword">const</span> <a class="code" href="classP0QuadFiniteElement.html">P0QuadFiniteElement</a> <a class="code" href="classConst2DFECollection.html#aac49f240de6cb7bff90cebfe91abf07f">QuadrilateralFE</a>;
 <a name="l00195"></a>00195 <span class="keyword">public</span>:
-<a name="l00196"></a>00196    <a class="code" href="classConst2DFECollection.html">Const2DFECollection</a>() { };
+<a name="l00196"></a><a class="code" href="classConst2DFECollection.html#ab9610197e2dadf9a4a6fde3445ae735e">00196</a>    <a class="code" href="classConst2DFECollection.html#ab9610197e2dadf9a4a6fde3445ae735e">Const2DFECollection</a>() { };
 <a name="l00197"></a>00197 
 <a name="l00198"></a>00198    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00199"></a>00199    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00199"></a>00199    <a class="code" href="classConst2DFECollection.html#ae4a752818e59e4955e1ac5205237f8dc">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00200"></a>00200 
-<a name="l00201"></a>00201    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00201"></a>00201    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classConst2DFECollection.html#aee49485e2ce7702c7aacde806b161f0f">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00202"></a>00202 
-<a name="l00203"></a>00203    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00203"></a>00203    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classConst2DFECollection.html#ac3aeef6f4f39204a2f5723bf70c97173">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00204"></a>00204 
-<a name="l00205"></a>00205    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Const2D&quot;</span>; };
+<a name="l00205"></a><a class="code" href="classConst2DFECollection.html#a9d94d4ab3fb2d0c9fd2d2b8ebd22ee51">00205</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classConst2DFECollection.html#a9d94d4ab3fb2d0c9fd2d2b8ebd22ee51">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Const2D&quot;</span>; };
 <a name="l00206"></a>00206 };
 <a name="l00207"></a>00207 
 <a name="l00208"></a><a class="code" href="classLinearDiscont2DFECollection.html">00208</a> <span class="keyword">class </span><a class="code" href="classLinearDiscont2DFECollection.html">LinearDiscont2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00209"></a>00209 {
 <a name="l00210"></a>00210 <span class="keyword">private</span>:
-<a name="l00211"></a>00211    <span class="keyword">const</span> <a class="code" href="classLinear2DFiniteElement.html" title="Class for linear FE on triangle.">Linear2DFiniteElement</a> TriangleFE;
-<a name="l00212"></a>00212    <span class="keyword">const</span> <a class="code" href="classBiLinear2DFiniteElement.html" title="Class for bilinear FE on quadrilateral.">BiLinear2DFiniteElement</a> QuadrilateralFE;
+<a name="l00211"></a><a class="code" href="classLinearDiscont2DFECollection.html#a1539878a6ed44fd4ca4068bbf620c207">00211</a>    <span class="keyword">const</span> <a class="code" href="classLinear2DFiniteElement.html" title="Class for linear FE on triangle.">Linear2DFiniteElement</a> <a class="code" href="classLinearDiscont2DFECollection.html#a1539878a6ed44fd4ca4068bbf620c207">TriangleFE</a>;
+<a name="l00212"></a><a class="code" href="classLinearDiscont2DFECollection.html#a525984d83f1991b3eb231a7dd175f317">00212</a>    <span class="keyword">const</span> <a class="code" href="classBiLinear2DFiniteElement.html" title="Class for bilinear FE on quadrilateral.">BiLinear2DFiniteElement</a> <a class="code" href="classLinearDiscont2DFECollection.html#a525984d83f1991b3eb231a7dd175f317">QuadrilateralFE</a>;
 <a name="l00213"></a>00213 
 <a name="l00214"></a>00214 <span class="keyword">public</span>:
-<a name="l00215"></a>00215    <a class="code" href="classLinearDiscont2DFECollection.html">LinearDiscont2DFECollection</a>() { };
+<a name="l00215"></a><a class="code" href="classLinearDiscont2DFECollection.html#a745c49b6ba6efa1096df5be6bfe87cd3">00215</a>    <a class="code" href="classLinearDiscont2DFECollection.html#a745c49b6ba6efa1096df5be6bfe87cd3">LinearDiscont2DFECollection</a>() { };
 <a name="l00216"></a>00216 
 <a name="l00217"></a>00217    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00218"></a>00218    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00218"></a>00218    <a class="code" href="classLinearDiscont2DFECollection.html#a2df0cfd4ecaaf0280d4b82d00b1d3270">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00219"></a>00219 
-<a name="l00220"></a>00220    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00220"></a>00220    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classLinearDiscont2DFECollection.html#aafbe3f719332a0d6c4031b0c3883c38a">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00221"></a>00221 
-<a name="l00222"></a>00222    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00222"></a>00222    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classLinearDiscont2DFECollection.html#a795b0097e57e71a8f7c5f6827b5573c3">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00223"></a>00223 
-<a name="l00224"></a>00224    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;LinearDiscont2D&quot;</span>; };
+<a name="l00224"></a><a class="code" href="classLinearDiscont2DFECollection.html#afde60bec9978d96a54659fc5f5c01add">00224</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classLinearDiscont2DFECollection.html#afde60bec9978d96a54659fc5f5c01add">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;LinearDiscont2D&quot;</span>; };
 <a name="l00225"></a>00225 };
 <a name="l00226"></a>00226 
 <a name="l00227"></a><a class="code" href="classGaussLinearDiscont2DFECollection.html">00227</a> <span class="keyword">class </span><a class="code" href="classGaussLinearDiscont2DFECollection.html">GaussLinearDiscont2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00228"></a>00228 {
 <a name="l00229"></a>00229 <span class="keyword">private</span>:
 <a name="l00230"></a>00230    <span class="comment">// const CrouzeixRaviartFiniteElement TriangleFE;</span>
-<a name="l00231"></a>00231    <span class="keyword">const</span> <a class="code" href="classGaussLinear2DFiniteElement.html" title="Class for linear FE on triangle with nodes at the 3 &quot;Gaussian&quot; points.">GaussLinear2DFiniteElement</a> TriangleFE;
-<a name="l00232"></a>00232    <span class="keyword">const</span> <a class="code" href="classGaussBiLinear2DFiniteElement.html" title="Class for bilinear FE on quad with nodes at the 4 Gaussian points.">GaussBiLinear2DFiniteElement</a> QuadrilateralFE;
+<a name="l00231"></a><a class="code" href="classGaussLinearDiscont2DFECollection.html#af2b473a541ac48026dfcaa978ac8d622">00231</a>    <span class="keyword">const</span> <a class="code" href="classGaussLinear2DFiniteElement.html" title="Class for linear FE on triangle with nodes at the 3 &quot;Gaussian&quot; points.">GaussLinear2DFiniteElement</a> <a class="code" href="classGaussLinearDiscont2DFECollection.html#af2b473a541ac48026dfcaa978ac8d622">TriangleFE</a>;
+<a name="l00232"></a><a class="code" href="classGaussLinearDiscont2DFECollection.html#a5eed96dd7098637e0e10f53e01e52a5e">00232</a>    <span class="keyword">const</span> <a class="code" href="classGaussBiLinear2DFiniteElement.html" title="Class for bilinear FE on quad with nodes at the 4 Gaussian points.">GaussBiLinear2DFiniteElement</a> <a class="code" href="classGaussLinearDiscont2DFECollection.html#a5eed96dd7098637e0e10f53e01e52a5e">QuadrilateralFE</a>;
 <a name="l00233"></a>00233 
 <a name="l00234"></a>00234 <span class="keyword">public</span>:
-<a name="l00235"></a>00235    <a class="code" href="classGaussLinearDiscont2DFECollection.html">GaussLinearDiscont2DFECollection</a>() { };
+<a name="l00235"></a><a class="code" href="classGaussLinearDiscont2DFECollection.html#a2d09ba26c7a1a456171869a476d7a50b">00235</a>    <a class="code" href="classGaussLinearDiscont2DFECollection.html#a2d09ba26c7a1a456171869a476d7a50b">GaussLinearDiscont2DFECollection</a>() { };
 <a name="l00236"></a>00236 
 <a name="l00237"></a>00237    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00238"></a>00238    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00238"></a>00238    <a class="code" href="classGaussLinearDiscont2DFECollection.html#abb810c6ef0c38532f1a30fc7989b9855">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00239"></a>00239 
-<a name="l00240"></a>00240    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00240"></a>00240    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classGaussLinearDiscont2DFECollection.html#addea754febb49f2540238e859753600e">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00241"></a>00241 
-<a name="l00242"></a>00242    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00242"></a>00242    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classGaussLinearDiscont2DFECollection.html#ac953842f6c9e0d2b35349c57e3698eeb">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00243"></a>00243 
-<a name="l00244"></a>00244    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;GaussLinearDiscont2D&quot;</span>; };
+<a name="l00244"></a><a class="code" href="classGaussLinearDiscont2DFECollection.html#a43a3a3efdf4d99a9be465f33d167bb14">00244</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classGaussLinearDiscont2DFECollection.html#a43a3a3efdf4d99a9be465f33d167bb14">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;GaussLinearDiscont2D&quot;</span>; };
 <a name="l00245"></a>00245 };
 <a name="l00246"></a>00246 
 <a name="l00247"></a><a class="code" href="classP1OnQuadFECollection.html">00247</a> <span class="keyword">class </span><a class="code" href="classP1OnQuadFECollection.html">P1OnQuadFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00248"></a>00248 {
 <a name="l00249"></a>00249 <span class="keyword">private</span>:
-<a name="l00250"></a>00250    <span class="keyword">const</span> <a class="code" href="classP1OnQuadFiniteElement.html">P1OnQuadFiniteElement</a> QuadrilateralFE;
+<a name="l00250"></a><a class="code" href="classP1OnQuadFECollection.html#a4d8663a63670aead2a15be0aa666ab9b">00250</a>    <span class="keyword">const</span> <a class="code" href="classP1OnQuadFiniteElement.html">P1OnQuadFiniteElement</a> <a class="code" href="classP1OnQuadFECollection.html#a4d8663a63670aead2a15be0aa666ab9b">QuadrilateralFE</a>;
 <a name="l00251"></a>00251 <span class="keyword">public</span>:
-<a name="l00252"></a>00252    <a class="code" href="classP1OnQuadFECollection.html">P1OnQuadFECollection</a>() { };
+<a name="l00252"></a><a class="code" href="classP1OnQuadFECollection.html#a71ba7b35f8ebe4927e92fc8764bf1766">00252</a>    <a class="code" href="classP1OnQuadFECollection.html#a71ba7b35f8ebe4927e92fc8764bf1766">P1OnQuadFECollection</a>() { };
 <a name="l00253"></a>00253    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00254"></a>00254    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
-<a name="l00255"></a>00255    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
-<a name="l00256"></a>00256    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
-<a name="l00257"></a>00257    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;P1OnQuad&quot;</span>; };
+<a name="l00254"></a>00254    <a class="code" href="classP1OnQuadFECollection.html#a0d809845684e56bd1a400bd25768b351">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00255"></a>00255    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classP1OnQuadFECollection.html#a97528a7af5dbaed25ab3e82691c54d04">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00256"></a>00256    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classP1OnQuadFECollection.html#ac3c9ed54005e5c58ba5d16eaede3a50a">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00257"></a><a class="code" href="classP1OnQuadFECollection.html#ade62e0729dadb11ee0f87eea73514582">00257</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classP1OnQuadFECollection.html#ade62e0729dadb11ee0f87eea73514582">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;P1OnQuad&quot;</span>; };
 <a name="l00258"></a>00258 };
 <a name="l00259"></a>00259 
 <a name="l00260"></a><a class="code" href="classQuadraticDiscont2DFECollection.html">00260</a> <span class="keyword">class </span><a class="code" href="classQuadraticDiscont2DFECollection.html">QuadraticDiscont2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00261"></a>00261 {
 <a name="l00262"></a>00262 <span class="keyword">private</span>:
-<a name="l00263"></a>00263    <span class="keyword">const</span> <a class="code" href="classQuad2DFiniteElement.html" title="Class for quadratic FE on triangle.">Quad2DFiniteElement</a> TriangleFE;
-<a name="l00264"></a>00264    <span class="keyword">const</span> <a class="code" href="classBiQuad2DFiniteElement.html" title="Class for bi-quadratic FE on quadrilateral.">BiQuad2DFiniteElement</a> QuadrilateralFE;
+<a name="l00263"></a><a class="code" href="classQuadraticDiscont2DFECollection.html#a92f767f5c040ba82e56f7b58fd07bf6e">00263</a>    <span class="keyword">const</span> <a class="code" href="classQuad2DFiniteElement.html" title="Class for quadratic FE on triangle.">Quad2DFiniteElement</a> <a class="code" href="classQuadraticDiscont2DFECollection.html#a92f767f5c040ba82e56f7b58fd07bf6e">TriangleFE</a>;
+<a name="l00264"></a><a class="code" href="classQuadraticDiscont2DFECollection.html#a0a45bb2bf61c362cf00a695c7ec264f4">00264</a>    <span class="keyword">const</span> <a class="code" href="classBiQuad2DFiniteElement.html" title="Class for bi-quadratic FE on quadrilateral.">BiQuad2DFiniteElement</a> <a class="code" href="classQuadraticDiscont2DFECollection.html#a0a45bb2bf61c362cf00a695c7ec264f4">QuadrilateralFE</a>;
 <a name="l00265"></a>00265 
 <a name="l00266"></a>00266 <span class="keyword">public</span>:
-<a name="l00267"></a>00267    <a class="code" href="classQuadraticDiscont2DFECollection.html">QuadraticDiscont2DFECollection</a>() { };
+<a name="l00267"></a><a class="code" href="classQuadraticDiscont2DFECollection.html#a9fd70de02f61662a6205d3ff2e1b69b1">00267</a>    <a class="code" href="classQuadraticDiscont2DFECollection.html#a9fd70de02f61662a6205d3ff2e1b69b1">QuadraticDiscont2DFECollection</a>() { };
 <a name="l00268"></a>00268 
 <a name="l00269"></a>00269    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00270"></a>00270    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00270"></a>00270    <a class="code" href="classQuadraticDiscont2DFECollection.html#ae2ba30b11e779dcc25b5cae0673e83b0">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00271"></a>00271 
-<a name="l00272"></a>00272    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00272"></a>00272    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classQuadraticDiscont2DFECollection.html#a5e4889ecceadafd0be4ff2494e6dfbe0">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00273"></a>00273 
-<a name="l00274"></a>00274    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00274"></a>00274    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classQuadraticDiscont2DFECollection.html#a5a106344e3316078915fe80a8d4ad87a">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00275"></a>00275 
-<a name="l00276"></a>00276    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticDiscont2D&quot;</span>; };
+<a name="l00276"></a><a class="code" href="classQuadraticDiscont2DFECollection.html#a96b7924a5c0288917f84f9bf2f00a7d2">00276</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classQuadraticDiscont2DFECollection.html#a96b7924a5c0288917f84f9bf2f00a7d2">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticDiscont2D&quot;</span>; };
 <a name="l00277"></a>00277 };
 <a name="l00278"></a>00278 
 <a name="l00279"></a><a class="code" href="classQuadraticPosDiscont2DFECollection.html">00279</a> <span class="keyword">class </span><a class="code" href="classQuadraticPosDiscont2DFECollection.html">QuadraticPosDiscont2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00280"></a>00280 {
 <a name="l00281"></a>00281 <span class="keyword">private</span>:
-<a name="l00282"></a>00282    <span class="keyword">const</span> <a class="code" href="classBiQuadPos2DFiniteElement.html">BiQuadPos2DFiniteElement</a> QuadrilateralFE;
+<a name="l00282"></a><a class="code" href="classQuadraticPosDiscont2DFECollection.html#ae48ec498a7e4bce803d17830ceca22f6">00282</a>    <span class="keyword">const</span> <a class="code" href="classBiQuadPos2DFiniteElement.html">BiQuadPos2DFiniteElement</a> <a class="code" href="classQuadraticPosDiscont2DFECollection.html#ae48ec498a7e4bce803d17830ceca22f6">QuadrilateralFE</a>;
 <a name="l00283"></a>00283 
 <a name="l00284"></a>00284 <span class="keyword">public</span>:
-<a name="l00285"></a>00285    <a class="code" href="classQuadraticPosDiscont2DFECollection.html">QuadraticPosDiscont2DFECollection</a>() { };
+<a name="l00285"></a><a class="code" href="classQuadraticPosDiscont2DFECollection.html#a27cd40c9fd5ea6bb55e4122d9ca967c0">00285</a>    <a class="code" href="classQuadraticPosDiscont2DFECollection.html#a27cd40c9fd5ea6bb55e4122d9ca967c0">QuadraticPosDiscont2DFECollection</a>() { };
 <a name="l00286"></a>00286    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00287"></a>00287    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
-<a name="l00288"></a>00288    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
-<a name="l00289"></a>00289    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or)<span class="keyword"> const</span>
+<a name="l00287"></a>00287    <a class="code" href="classQuadraticPosDiscont2DFECollection.html#a66e42fa6b152fdcd4c67f4155ea1c848">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00288"></a>00288    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classQuadraticPosDiscont2DFECollection.html#aeff908edb059f7ac03259bb8a06f74c9">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00289"></a><a class="code" href="classQuadraticPosDiscont2DFECollection.html#a308da4477ab5bd6563526d2eeb79c1d1">00289</a>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classQuadraticPosDiscont2DFECollection.html#a308da4477ab5bd6563526d2eeb79c1d1">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or)<span class="keyword"> const</span>
 <a name="l00290"></a>00290 <span class="keyword">   </span>{ <span class="keywordflow">return</span> NULL; };
-<a name="l00291"></a>00291    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticPosDiscont2D&quot;</span>; };
+<a name="l00291"></a><a class="code" href="classQuadraticPosDiscont2DFECollection.html#aeec85cfb9f9dd46312a1db5a474503dd">00291</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classQuadraticPosDiscont2DFECollection.html#aeec85cfb9f9dd46312a1db5a474503dd">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticPosDiscont2D&quot;</span>; };
 <a name="l00292"></a>00292 };
 <a name="l00293"></a>00293 
 <a name="l00294"></a><a class="code" href="classGaussQuadraticDiscont2DFECollection.html">00294</a> <span class="keyword">class </span><a class="code" href="classGaussQuadraticDiscont2DFECollection.html">GaussQuadraticDiscont2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00295"></a>00295 {
 <a name="l00296"></a>00296 <span class="keyword">private</span>:
 <a name="l00297"></a>00297    <span class="comment">// const Quad2DFiniteElement TriangleFE;</span>
-<a name="l00298"></a>00298    <span class="keyword">const</span> <a class="code" href="classGaussQuad2DFiniteElement.html" title="Class for quadratic FE on triangle with nodes at the &quot;Gaussian&quot; points.">GaussQuad2DFiniteElement</a> TriangleFE;
-<a name="l00299"></a>00299    <span class="keyword">const</span> <a class="code" href="classGaussBiQuad2DFiniteElement.html" title="Bi-quadratic element on quad with nodes at the 9 Gaussian points.">GaussBiQuad2DFiniteElement</a> QuadrilateralFE;
+<a name="l00298"></a><a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a2b0ccf03127b43e0e4454ece3c59a32d">00298</a>    <span class="keyword">const</span> <a class="code" href="classGaussQuad2DFiniteElement.html" title="Class for quadratic FE on triangle with nodes at the &quot;Gaussian&quot; points.">GaussQuad2DFiniteElement</a> <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a2b0ccf03127b43e0e4454ece3c59a32d">TriangleFE</a>;
+<a name="l00299"></a><a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a0cc4a02b1531acad952e35292f29f534">00299</a>    <span class="keyword">const</span> <a class="code" href="classGaussBiQuad2DFiniteElement.html" title="Bi-quadratic element on quad with nodes at the 9 Gaussian points.">GaussBiQuad2DFiniteElement</a> <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a0cc4a02b1531acad952e35292f29f534">QuadrilateralFE</a>;
 <a name="l00300"></a>00300 
 <a name="l00301"></a>00301 <span class="keyword">public</span>:
-<a name="l00302"></a>00302    <a class="code" href="classGaussQuadraticDiscont2DFECollection.html">GaussQuadraticDiscont2DFECollection</a>() { };
+<a name="l00302"></a><a class="code" href="classGaussQuadraticDiscont2DFECollection.html#acb9e40319e1c2c5ada7c59bb87cb7c5e">00302</a>    <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#acb9e40319e1c2c5ada7c59bb87cb7c5e">GaussQuadraticDiscont2DFECollection</a>() { };
 <a name="l00303"></a>00303 
 <a name="l00304"></a>00304    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00305"></a>00305    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00305"></a>00305    <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a65b8565066c2eac05094b53b17b141da">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00306"></a>00306 
-<a name="l00307"></a>00307    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00307"></a>00307    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#ae1fb59032247891b174c51dacfe2335f">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00308"></a>00308 
-<a name="l00309"></a>00309    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00309"></a>00309    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a769cc3c28acc45940e187a5ef2cacf56">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00310"></a>00310 
-<a name="l00311"></a>00311    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;GaussQuadraticDiscont2D&quot;</span>; };
+<a name="l00311"></a><a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a0171535aae64520697aa9eedc60b46fd">00311</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classGaussQuadraticDiscont2DFECollection.html#a0171535aae64520697aa9eedc60b46fd">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;GaussQuadraticDiscont2D&quot;</span>; };
 <a name="l00312"></a>00312 };
 <a name="l00313"></a>00313 
 <a name="l00314"></a><a class="code" href="classCubicDiscont2DFECollection.html">00314</a> <span class="keyword">class </span><a class="code" href="classCubicDiscont2DFECollection.html">CubicDiscont2DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00315"></a>00315 {
 <a name="l00316"></a>00316 <span class="keyword">private</span>:
-<a name="l00317"></a>00317    <span class="keyword">const</span> <a class="code" href="classCubic2DFiniteElement.html">Cubic2DFiniteElement</a> TriangleFE;
-<a name="l00318"></a>00318    <span class="keyword">const</span> <a class="code" href="classBiCubic2DFiniteElement.html">BiCubic2DFiniteElement</a> QuadrilateralFE;
+<a name="l00317"></a><a class="code" href="classCubicDiscont2DFECollection.html#a9f19fb93b68d61d116d433daf94cd911">00317</a>    <span class="keyword">const</span> <a class="code" href="classCubic2DFiniteElement.html">Cubic2DFiniteElement</a> <a class="code" href="classCubicDiscont2DFECollection.html#a9f19fb93b68d61d116d433daf94cd911">TriangleFE</a>;
+<a name="l00318"></a><a class="code" href="classCubicDiscont2DFECollection.html#a13b4d1cf51a95b74ab70f534fe7cc61c">00318</a>    <span class="keyword">const</span> <a class="code" href="classBiCubic2DFiniteElement.html">BiCubic2DFiniteElement</a> <a class="code" href="classCubicDiscont2DFECollection.html#a13b4d1cf51a95b74ab70f534fe7cc61c">QuadrilateralFE</a>;
 <a name="l00319"></a>00319 
 <a name="l00320"></a>00320 <span class="keyword">public</span>:
-<a name="l00321"></a>00321    <a class="code" href="classCubicDiscont2DFECollection.html">CubicDiscont2DFECollection</a>() { };
+<a name="l00321"></a><a class="code" href="classCubicDiscont2DFECollection.html#a2c4e5d7baaa1a62ef4a5beef71518683">00321</a>    <a class="code" href="classCubicDiscont2DFECollection.html#a2c4e5d7baaa1a62ef4a5beef71518683">CubicDiscont2DFECollection</a>() { };
 <a name="l00322"></a>00322 
 <a name="l00323"></a>00323    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00324"></a>00324    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00324"></a>00324    <a class="code" href="classCubicDiscont2DFECollection.html#a9044527ef96a61f685c30557c403bf89">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00325"></a>00325 
-<a name="l00326"></a>00326    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00326"></a>00326    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classCubicDiscont2DFECollection.html#abca68e51162be69fd19df60028547bf9">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00327"></a>00327 
-<a name="l00328"></a>00328    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00328"></a>00328    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classCubicDiscont2DFECollection.html#a3e4147a5d5bdff3c0dcd68c8bf0bbbaf">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00329"></a>00329 
-<a name="l00330"></a>00330    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;CubicDiscont2D&quot;</span>; };
+<a name="l00330"></a><a class="code" href="classCubicDiscont2DFECollection.html#aa597b194b11b52251251c659f8a278c1">00330</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classCubicDiscont2DFECollection.html#aa597b194b11b52251251c659f8a278c1">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;CubicDiscont2D&quot;</span>; };
 <a name="l00331"></a>00331 };
 <a name="l00332"></a>00332 
 <a name="l00333"></a><a class="code" href="classLinearNonConf3DFECollection.html">00333</a> <span class="keyword">class </span><a class="code" href="classLinearNonConf3DFECollection.html">LinearNonConf3DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00334"></a>00334 {
 <a name="l00335"></a>00335 <span class="keyword">private</span>:
-<a name="l00336"></a>00336    <span class="keyword">const</span> <a class="code" href="classP0TriangleFiniteElement.html" title="Class for constant FE on triangle.">P0TriangleFiniteElement</a> TriangleFE;
-<a name="l00337"></a>00337    <span class="keyword">const</span> <a class="code" href="classP1TetNonConfFiniteElement.html">P1TetNonConfFiniteElement</a> TetrahedronFE;
-<a name="l00338"></a>00338    <span class="keyword">const</span> <a class="code" href="classP0QuadFiniteElement.html">P0QuadFiniteElement</a> QuadrilateralFE;
-<a name="l00339"></a>00339    <span class="keyword">const</span> <a class="code" href="classRotTriLinearHexFiniteElement.html">RotTriLinearHexFiniteElement</a> ParallelepipedFE;
+<a name="l00336"></a><a class="code" href="classLinearNonConf3DFECollection.html#acb5658d366a2650cf692170c1bf3835e">00336</a>    <span class="keyword">const</span> <a class="code" href="classP0TriangleFiniteElement.html" title="Class for constant FE on triangle.">P0TriangleFiniteElement</a> <a class="code" href="classLinearNonConf3DFECollection.html#acb5658d366a2650cf692170c1bf3835e">TriangleFE</a>;
+<a name="l00337"></a><a class="code" href="classLinearNonConf3DFECollection.html#a0d087a5ca40c121145196dbf6799cac3">00337</a>    <span class="keyword">const</span> <a class="code" href="classP1TetNonConfFiniteElement.html">P1TetNonConfFiniteElement</a> <a class="code" href="classLinearNonConf3DFECollection.html#a0d087a5ca40c121145196dbf6799cac3">TetrahedronFE</a>;
+<a name="l00338"></a><a class="code" href="classLinearNonConf3DFECollection.html#afa2becc4b17fa3bbdf160f90b71c05c2">00338</a>    <span class="keyword">const</span> <a class="code" href="classP0QuadFiniteElement.html">P0QuadFiniteElement</a> <a class="code" href="classLinearNonConf3DFECollection.html#afa2becc4b17fa3bbdf160f90b71c05c2">QuadrilateralFE</a>;
+<a name="l00339"></a><a class="code" href="classLinearNonConf3DFECollection.html#ac1abf73159658f827a7fdcda2eb43cf6">00339</a>    <span class="keyword">const</span> <a class="code" href="classRotTriLinearHexFiniteElement.html">RotTriLinearHexFiniteElement</a> <a class="code" href="classLinearNonConf3DFECollection.html#ac1abf73159658f827a7fdcda2eb43cf6">ParallelepipedFE</a>;
 <a name="l00340"></a>00340 
 <a name="l00341"></a>00341 <span class="keyword">public</span>:
-<a name="l00342"></a>00342    <a class="code" href="classLinearNonConf3DFECollection.html">LinearNonConf3DFECollection</a> () { };
+<a name="l00342"></a><a class="code" href="classLinearNonConf3DFECollection.html#adf5cc73be8eee9e2a48ca21ddd5abac0">00342</a>    <a class="code" href="classLinearNonConf3DFECollection.html#adf5cc73be8eee9e2a48ca21ddd5abac0">LinearNonConf3DFECollection</a> () { };
 <a name="l00343"></a>00343 
 <a name="l00344"></a>00344    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00345"></a>00345    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00345"></a>00345    <a class="code" href="classLinearNonConf3DFECollection.html#a915b54cd91462aaae3dcd69d45ef7075">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00346"></a>00346 
-<a name="l00347"></a>00347    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00347"></a>00347    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classLinearNonConf3DFECollection.html#a4359143d803d04c15ebbd286b763de3f">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00348"></a>00348 
-<a name="l00349"></a>00349    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00349"></a>00349    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classLinearNonConf3DFECollection.html#afdfdad069a14b62ee3fbb5ff7290b878">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00350"></a>00350 
-<a name="l00351"></a>00351    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;LinearNonConf3D&quot;</span>; };
+<a name="l00351"></a><a class="code" href="classLinearNonConf3DFECollection.html#a0800aced101cbdcaa35918ea0412d64f">00351</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classLinearNonConf3DFECollection.html#a0800aced101cbdcaa35918ea0412d64f">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;LinearNonConf3D&quot;</span>; };
 <a name="l00352"></a>00352 };
 <a name="l00353"></a>00353 
 <a name="l00354"></a><a class="code" href="classConst3DFECollection.html">00354</a> <span class="keyword">class </span><a class="code" href="classConst3DFECollection.html">Const3DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00355"></a>00355 {
 <a name="l00356"></a>00356 <span class="keyword">private</span>:
-<a name="l00357"></a>00357    <span class="keyword">const</span> <a class="code" href="classP0TetFiniteElement.html">P0TetFiniteElement</a> TetrahedronFE;
-<a name="l00358"></a>00358    <span class="keyword">const</span> <a class="code" href="classP0HexFiniteElement.html">P0HexFiniteElement</a> ParallelepipedFE;
+<a name="l00357"></a><a class="code" href="classConst3DFECollection.html#a2293743be66a7722e5ff162ce638a2ff">00357</a>    <span class="keyword">const</span> <a class="code" href="classP0TetFiniteElement.html">P0TetFiniteElement</a> <a class="code" href="classConst3DFECollection.html#a2293743be66a7722e5ff162ce638a2ff">TetrahedronFE</a>;
+<a name="l00358"></a><a class="code" href="classConst3DFECollection.html#ab68bf386ee0586b248cb2c358feeada6">00358</a>    <span class="keyword">const</span> <a class="code" href="classP0HexFiniteElement.html">P0HexFiniteElement</a> <a class="code" href="classConst3DFECollection.html#ab68bf386ee0586b248cb2c358feeada6">ParallelepipedFE</a>;
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360 <span class="keyword">public</span>:
-<a name="l00361"></a>00361    <a class="code" href="classConst3DFECollection.html">Const3DFECollection</a> () { };
+<a name="l00361"></a><a class="code" href="classConst3DFECollection.html#ad5cdcb545c106d4cc1ada108203f87b2">00361</a>    <a class="code" href="classConst3DFECollection.html#ad5cdcb545c106d4cc1ada108203f87b2">Const3DFECollection</a> () { };
 <a name="l00362"></a>00362 
 <a name="l00363"></a>00363    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00364"></a>00364    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00364"></a>00364    <a class="code" href="classConst3DFECollection.html#ad61dd06cd28e1799bbf76ca604b0459d">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00365"></a>00365 
-<a name="l00366"></a>00366    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00366"></a>00366    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classConst3DFECollection.html#a46a5dc9aa8561c39f20611c35eb9c227">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00367"></a>00367 
-<a name="l00368"></a>00368    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00368"></a>00368    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classConst3DFECollection.html#a41cdd6043565590825444fd16a374544">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00369"></a>00369 
-<a name="l00370"></a>00370    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Const3D&quot;</span>; };
+<a name="l00370"></a><a class="code" href="classConst3DFECollection.html#a10f1b65f901ed30158e558fd2df4e0cc">00370</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classConst3DFECollection.html#a10f1b65f901ed30158e558fd2df4e0cc">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Const3D&quot;</span>; };
 <a name="l00371"></a>00371 };
 <a name="l00372"></a>00372 
 <a name="l00373"></a><a class="code" href="classLinearDiscont3DFECollection.html">00373</a> <span class="keyword">class </span><a class="code" href="classLinearDiscont3DFECollection.html">LinearDiscont3DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00374"></a>00374 {
 <a name="l00375"></a>00375 <span class="keyword">private</span>:
-<a name="l00376"></a>00376    <span class="keyword">const</span> <a class="code" href="classLinear3DFiniteElement.html" title="Class for linear FE on tetrahedron.">Linear3DFiniteElement</a> TetrahedronFE;
-<a name="l00377"></a>00377    <span class="keyword">const</span> <a class="code" href="classTriLinear3DFiniteElement.html" title="Class for tri-linear FE on cube.">TriLinear3DFiniteElement</a> ParallelepipedFE;
+<a name="l00376"></a><a class="code" href="classLinearDiscont3DFECollection.html#abb4c107404451979e8b71b81ebadff85">00376</a>    <span class="keyword">const</span> <a class="code" href="classLinear3DFiniteElement.html" title="Class for linear FE on tetrahedron.">Linear3DFiniteElement</a> <a class="code" href="classLinearDiscont3DFECollection.html#abb4c107404451979e8b71b81ebadff85">TetrahedronFE</a>;
+<a name="l00377"></a><a class="code" href="classLinearDiscont3DFECollection.html#a1885b9da4dab8f0a1b1d415380c0e17e">00377</a>    <span class="keyword">const</span> <a class="code" href="classTriLinear3DFiniteElement.html" title="Class for tri-linear FE on cube.">TriLinear3DFiniteElement</a> <a class="code" href="classLinearDiscont3DFECollection.html#a1885b9da4dab8f0a1b1d415380c0e17e">ParallelepipedFE</a>;
 <a name="l00378"></a>00378 
 <a name="l00379"></a>00379 <span class="keyword">public</span>:
-<a name="l00380"></a>00380    <a class="code" href="classLinearDiscont3DFECollection.html">LinearDiscont3DFECollection</a> () { };
+<a name="l00380"></a><a class="code" href="classLinearDiscont3DFECollection.html#a869ee7562ad47a3e5ada67d2ecb9b0fb">00380</a>    <a class="code" href="classLinearDiscont3DFECollection.html#a869ee7562ad47a3e5ada67d2ecb9b0fb">LinearDiscont3DFECollection</a> () { };
 <a name="l00381"></a>00381 
 <a name="l00382"></a>00382    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00383"></a>00383    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00383"></a>00383    <a class="code" href="classLinearDiscont3DFECollection.html#adb2381c05198f8b3c5c74ce7ce8a15a7">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00384"></a>00384 
-<a name="l00385"></a>00385    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00385"></a>00385    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classLinearDiscont3DFECollection.html#a3b24b3dc4aad46001a65b2f471f292e3">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00386"></a>00386 
-<a name="l00387"></a>00387    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00387"></a>00387    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classLinearDiscont3DFECollection.html#a4c6734b933dd67fd65c401a254635b84">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00388"></a>00388 
-<a name="l00389"></a>00389    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;LinearDiscont3D&quot;</span>; };
+<a name="l00389"></a><a class="code" href="classLinearDiscont3DFECollection.html#a5e3c9e949b9cc50f299a0998c7713e63">00389</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classLinearDiscont3DFECollection.html#a5e3c9e949b9cc50f299a0998c7713e63">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;LinearDiscont3D&quot;</span>; };
 <a name="l00390"></a>00390 };
 <a name="l00391"></a>00391 
 <a name="l00392"></a><a class="code" href="classQuadraticDiscont3DFECollection.html">00392</a> <span class="keyword">class </span><a class="code" href="classQuadraticDiscont3DFECollection.html">QuadraticDiscont3DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00393"></a>00393 {
 <a name="l00394"></a>00394 <span class="keyword">private</span>:
-<a name="l00395"></a>00395    <span class="keyword">const</span> <a class="code" href="classQuadratic3DFiniteElement.html" title="Class for quadratic FE on tetrahedron.">Quadratic3DFiniteElement</a> TetrahedronFE;
-<a name="l00396"></a>00396    <span class="keyword">const</span> <a class="code" href="classLagrangeHexFiniteElement.html" title="Tensor products of 1D FEs (only degree 2 is functional)">LagrangeHexFiniteElement</a> ParallelepipedFE;
+<a name="l00395"></a><a class="code" href="classQuadraticDiscont3DFECollection.html#a7b8ddd4aef549d11e07133cd32e188b1">00395</a>    <span class="keyword">const</span> <a class="code" href="classQuadratic3DFiniteElement.html" title="Class for quadratic FE on tetrahedron.">Quadratic3DFiniteElement</a> <a class="code" href="classQuadraticDiscont3DFECollection.html#a7b8ddd4aef549d11e07133cd32e188b1">TetrahedronFE</a>;
+<a name="l00396"></a><a class="code" href="classQuadraticDiscont3DFECollection.html#a54811278b79b766e7eaf30ac4390a758">00396</a>    <span class="keyword">const</span> <a class="code" href="classLagrangeHexFiniteElement.html" title="Tensor products of 1D FEs (only degree 2 is functional)">LagrangeHexFiniteElement</a> <a class="code" href="classQuadraticDiscont3DFECollection.html#a54811278b79b766e7eaf30ac4390a758">ParallelepipedFE</a>;
 <a name="l00397"></a>00397 
 <a name="l00398"></a>00398 <span class="keyword">public</span>:
-<a name="l00399"></a>00399    <a class="code" href="classQuadraticDiscont3DFECollection.html">QuadraticDiscont3DFECollection</a> () : ParallelepipedFE(2) { };
+<a name="l00399"></a><a class="code" href="classQuadraticDiscont3DFECollection.html#a89e8b27e1e99aaa855165a299bd77709">00399</a>    <a class="code" href="classQuadraticDiscont3DFECollection.html#a89e8b27e1e99aaa855165a299bd77709">QuadraticDiscont3DFECollection</a> () : <a class="code" href="classQuadraticDiscont3DFECollection.html#a54811278b79b766e7eaf30ac4390a758">ParallelepipedFE</a>(2) { };
 <a name="l00400"></a>00400 
 <a name="l00401"></a>00401    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00402"></a>00402    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00402"></a>00402    <a class="code" href="classQuadraticDiscont3DFECollection.html#acd663eca9be6e188a6f42a33dfc43fcf">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00403"></a>00403 
-<a name="l00404"></a>00404    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00404"></a>00404    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classQuadraticDiscont3DFECollection.html#a6b43acd65d7626c78821953b907bfdaa">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00405"></a>00405 
-<a name="l00406"></a>00406    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00406"></a>00406    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classQuadraticDiscont3DFECollection.html#a165f50275efada7154f81a3f1e12d828">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00407"></a>00407 
-<a name="l00408"></a>00408    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticDiscont3D&quot;</span>; };
+<a name="l00408"></a><a class="code" href="classQuadraticDiscont3DFECollection.html#a5d903fa0b61a2c3cbdceb32c1b8c986d">00408</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classQuadraticDiscont3DFECollection.html#a5d903fa0b61a2c3cbdceb32c1b8c986d">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;QuadraticDiscont3D&quot;</span>; };
 <a name="l00409"></a>00409 };
 <a name="l00410"></a>00410 
 <a name="l00411"></a><a class="code" href="classRefinedLinearFECollection.html">00411</a> <span class="keyword">class </span><a class="code" href="classRefinedLinearFECollection.html">RefinedLinearFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00412"></a>00412 {
 <a name="l00413"></a>00413 <span class="keyword">private</span>:
-<a name="l00414"></a>00414    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> PointFE;
-<a name="l00415"></a>00415    <span class="keyword">const</span> <a class="code" href="classRefinedLinear1DFiniteElement.html" title="Class for refined linear FE on interval.">RefinedLinear1DFiniteElement</a> SegmentFE;
-<a name="l00416"></a>00416    <span class="keyword">const</span> <a class="code" href="classRefinedLinear2DFiniteElement.html" title="Class for refined linear FE on triangle.">RefinedLinear2DFiniteElement</a> TriangleFE;
-<a name="l00417"></a>00417    <span class="keyword">const</span> <a class="code" href="classRefinedBiLinear2DFiniteElement.html" title="Class for refined bi-linear FE on quadrilateral.">RefinedBiLinear2DFiniteElement</a> QuadrilateralFE;
-<a name="l00418"></a>00418    <span class="keyword">const</span> <a class="code" href="classRefinedLinear3DFiniteElement.html" title="Class for refined linear FE on tetrahedron.">RefinedLinear3DFiniteElement</a> TetrahedronFE;
-<a name="l00419"></a>00419    <span class="keyword">const</span> <a class="code" href="classRefinedTriLinear3DFiniteElement.html" title="Class for refined trilinear FE on a hexahedron.">RefinedTriLinear3DFiniteElement</a> ParallelepipedFE;
+<a name="l00414"></a><a class="code" href="classRefinedLinearFECollection.html#aadf41a025bc4d5310e47c0e5b916821e">00414</a>    <span class="keyword">const</span> <a class="code" href="classPointFiniteElement.html">PointFiniteElement</a> <a class="code" href="classRefinedLinearFECollection.html#aadf41a025bc4d5310e47c0e5b916821e">PointFE</a>;
+<a name="l00415"></a><a class="code" href="classRefinedLinearFECollection.html#a0d1a6cef81dee341f1884b71d9de8d56">00415</a>    <span class="keyword">const</span> <a class="code" href="classRefinedLinear1DFiniteElement.html" title="Class for refined linear FE on interval.">RefinedLinear1DFiniteElement</a> <a class="code" href="classRefinedLinearFECollection.html#a0d1a6cef81dee341f1884b71d9de8d56">SegmentFE</a>;
+<a name="l00416"></a><a class="code" href="classRefinedLinearFECollection.html#a516accd9c6eaf4559ba86f4a992556af">00416</a>    <span class="keyword">const</span> <a class="code" href="classRefinedLinear2DFiniteElement.html" title="Class for refined linear FE on triangle.">RefinedLinear2DFiniteElement</a> <a class="code" href="classRefinedLinearFECollection.html#a516accd9c6eaf4559ba86f4a992556af">TriangleFE</a>;
+<a name="l00417"></a><a class="code" href="classRefinedLinearFECollection.html#a950b8cc74dbdc5a70283e3797a213691">00417</a>    <span class="keyword">const</span> <a class="code" href="classRefinedBiLinear2DFiniteElement.html" title="Class for refined bi-linear FE on quadrilateral.">RefinedBiLinear2DFiniteElement</a> <a class="code" href="classRefinedLinearFECollection.html#a950b8cc74dbdc5a70283e3797a213691">QuadrilateralFE</a>;
+<a name="l00418"></a><a class="code" href="classRefinedLinearFECollection.html#a84d21fd320878b5b64c0a1dcc6b81635">00418</a>    <span class="keyword">const</span> <a class="code" href="classRefinedLinear3DFiniteElement.html" title="Class for refined linear FE on tetrahedron.">RefinedLinear3DFiniteElement</a> <a class="code" href="classRefinedLinearFECollection.html#a84d21fd320878b5b64c0a1dcc6b81635">TetrahedronFE</a>;
+<a name="l00419"></a><a class="code" href="classRefinedLinearFECollection.html#a746858004b8455fe491db83449632ba8">00419</a>    <span class="keyword">const</span> <a class="code" href="classRefinedTriLinear3DFiniteElement.html" title="Class for refined trilinear FE on a hexahedron.">RefinedTriLinear3DFiniteElement</a> <a class="code" href="classRefinedLinearFECollection.html#a746858004b8455fe491db83449632ba8">ParallelepipedFE</a>;
 <a name="l00420"></a>00420 
 <a name="l00421"></a>00421 <span class="keyword">public</span>:
-<a name="l00422"></a>00422    <a class="code" href="classRefinedLinearFECollection.html">RefinedLinearFECollection</a>() { };
+<a name="l00422"></a><a class="code" href="classRefinedLinearFECollection.html#acbb5b98283d035e939f402e447fce1bc">00422</a>    <a class="code" href="classRefinedLinearFECollection.html#acbb5b98283d035e939f402e447fce1bc">RefinedLinearFECollection</a>() { };
 <a name="l00423"></a>00423 
 <a name="l00424"></a>00424    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00425"></a>00425    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00425"></a>00425    <a class="code" href="classRefinedLinearFECollection.html#a4655720f13926cae9399b2fed3d3c752">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00426"></a>00426 
-<a name="l00427"></a>00427    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00427"></a>00427    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classRefinedLinearFECollection.html#a70bae63a78a25f77f9b9e0c29c55098b">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00428"></a>00428 
-<a name="l00429"></a>00429    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00429"></a>00429    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classRefinedLinearFECollection.html#a44de49e2f9d058ffc76a7cba0b9af542">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00430"></a>00430 
-<a name="l00431"></a>00431    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;RefinedLinear&quot;</span>; };
+<a name="l00431"></a><a class="code" href="classRefinedLinearFECollection.html#a4e634736c2396abfeea00155db910003">00431</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classRefinedLinearFECollection.html#a4e634736c2396abfeea00155db910003">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;RefinedLinear&quot;</span>; };
 <a name="l00432"></a>00432 };
 <a name="l00433"></a>00433 
 <a name="l00434"></a><a class="code" href="classND1__3DFECollection.html">00434</a> <span class="keyword">class </span><a class="code" href="classND1__3DFECollection.html">ND1_3DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00435"></a>00435 {
 <a name="l00436"></a>00436 <span class="keyword">private</span>:
-<a name="l00437"></a>00437    <span class="keyword">const</span> <a class="code" href="classNedelec1HexFiniteElement.html">Nedelec1HexFiniteElement</a> HexahedronFE;
-<a name="l00438"></a>00438    <span class="keyword">const</span> <a class="code" href="classNedelec1TetFiniteElement.html">Nedelec1TetFiniteElement</a> TetrahedronFE;
+<a name="l00437"></a><a class="code" href="classND1__3DFECollection.html#a0e59fb59395d8da268669337ab89bd6f">00437</a>    <span class="keyword">const</span> <a class="code" href="classNedelec1HexFiniteElement.html">Nedelec1HexFiniteElement</a> <a class="code" href="classND1__3DFECollection.html#a0e59fb59395d8da268669337ab89bd6f">HexahedronFE</a>;
+<a name="l00438"></a><a class="code" href="classND1__3DFECollection.html#a1a5e66a0abde934eb930c00b6e285309">00438</a>    <span class="keyword">const</span> <a class="code" href="classNedelec1TetFiniteElement.html">Nedelec1TetFiniteElement</a> <a class="code" href="classND1__3DFECollection.html#a1a5e66a0abde934eb930c00b6e285309">TetrahedronFE</a>;
 <a name="l00439"></a>00439 
 <a name="l00440"></a>00440 <span class="keyword">public</span>:
-<a name="l00441"></a>00441    <a class="code" href="classND1__3DFECollection.html">ND1_3DFECollection</a>() { };
+<a name="l00441"></a><a class="code" href="classND1__3DFECollection.html#a8fd8e7a29872196dffa25104dc4d3079">00441</a>    <a class="code" href="classND1__3DFECollection.html#a8fd8e7a29872196dffa25104dc4d3079">ND1_3DFECollection</a>() { };
 <a name="l00442"></a>00442 
 <a name="l00443"></a>00443    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00444"></a>00444    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00444"></a>00444    <a class="code" href="classND1__3DFECollection.html#ab3d0caf7a63334e03c80b5b5274a5ea9">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00445"></a>00445 
-<a name="l00446"></a>00446    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00446"></a>00446    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classND1__3DFECollection.html#a2f27cfc823c9cda606ad1d34f5ef419a">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00447"></a>00447 
-<a name="l00448"></a>00448    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00448"></a>00448    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classND1__3DFECollection.html#a51aee8f3cc7f59f1615c4b1a5f2961e9">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00449"></a>00449 
-<a name="l00450"></a>00450    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * Name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;ND1_3D&quot;</span>; };
+<a name="l00450"></a><a class="code" href="classND1__3DFECollection.html#a125d475cb3b401774fcb001c04354ba0">00450</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classND1__3DFECollection.html#a125d475cb3b401774fcb001c04354ba0">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;ND1_3D&quot;</span>; };
 <a name="l00451"></a>00451 };
 <a name="l00452"></a>00452 
 <a name="l00453"></a><a class="code" href="classRT0__3DFECollection.html">00453</a> <span class="keyword">class </span><a class="code" href="classRT0__3DFECollection.html">RT0_3DFECollection</a> : <span class="keyword">public</span> <a class="code" href="classFiniteElementCollection.html">FiniteElementCollection</a>
 <a name="l00454"></a>00454 {
 <a name="l00455"></a>00455 <span class="keyword">private</span>:
-<a name="l00456"></a>00456    <span class="keyword">const</span> <a class="code" href="classP0TriangleFiniteElement.html" title="Class for constant FE on triangle.">P0TriangleFiniteElement</a> TriangleFE;
-<a name="l00457"></a>00457    <span class="keyword">const</span> <a class="code" href="classRT0TetFiniteElement.html">RT0TetFiniteElement</a> TetrahedronFE;
+<a name="l00456"></a><a class="code" href="classRT0__3DFECollection.html#a1252f33a111d1cb244fbca2da843f582">00456</a>    <span class="keyword">const</span> <a class="code" href="classP0TriangleFiniteElement.html" title="Class for constant FE on triangle.">P0TriangleFiniteElement</a> <a class="code" href="classRT0__3DFECollection.html#a1252f33a111d1cb244fbca2da843f582">TriangleFE</a>;
+<a name="l00457"></a><a class="code" href="classRT0__3DFECollection.html#aded2eae8793ce2a8a927bdb3f2f463e7">00457</a>    <span class="keyword">const</span> <a class="code" href="classRT0TetFiniteElement.html">RT0TetFiniteElement</a> <a class="code" href="classRT0__3DFECollection.html#aded2eae8793ce2a8a927bdb3f2f463e7">TetrahedronFE</a>;
 <a name="l00458"></a>00458 <span class="keyword">public</span>:
-<a name="l00459"></a>00459    <a class="code" href="classRT0__3DFECollection.html">RT0_3DFECollection</a>() { };
+<a name="l00459"></a><a class="code" href="classRT0__3DFECollection.html#ac9a26504b719d46a1196b3c84bd44ce4">00459</a>    <a class="code" href="classRT0__3DFECollection.html#ac9a26504b719d46a1196b3c84bd44ce4">RT0_3DFECollection</a>() { };
 <a name="l00460"></a>00460 
 <a name="l00461"></a>00461    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *
-<a name="l00462"></a>00462    FiniteElementForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00462"></a>00462    <a class="code" href="classRT0__3DFECollection.html#ab3c1a13ee7011666956d058cb3519f41">FiniteElementForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00463"></a>00463 
-<a name="l00464"></a>00464    <span class="keyword">virtual</span> <span class="keywordtype">int</span> DofForGeometry(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
+<a name="l00464"></a>00464    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classRT0__3DFECollection.html#ad88478ab333d392e2100cbc8f99d9692">DofForGeometry</a>(<span class="keywordtype">int</span> GeomType) <span class="keyword">const</span>;
 <a name="l00465"></a>00465 
-<a name="l00466"></a>00466    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * DofOrderForOrientation(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
+<a name="l00466"></a>00466    <span class="keyword">virtual</span> <span class="keywordtype">int</span> * <a class="code" href="classRT0__3DFECollection.html#a5d3cef58736f649195ab656e1c21dbf8">DofOrderForOrientation</a>(<span class="keywordtype">int</span> GeomType, <span class="keywordtype">int</span> Or) <span class="keyword">const</span>;
 <a name="l00467"></a>00467 };
 <a name="l00468"></a>00468 
 <a name="l00469"></a>00469 
@@ -543,7 +544,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -552,7 +553,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

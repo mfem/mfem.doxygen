@@ -60,12 +60,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Lagrange1DFiniteElement Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Lagrange1DFiniteElement" --><!-- doxytag: inherits="NodalFiniteElement" --><div class="dynheader">
+<!-- doxytag: class="Lagrange1DFiniteElement" --><!-- doxytag: inherits="NodalFiniteElement" -->
+<p><code>#include &lt;<a class="el" href="fe_8hpp_source.html">fe.hpp</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for Lagrange1DFiniteElement:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLagrange1DFiniteElement__inherit__graph.png" border="0" usemap="#Lagrange1DFiniteElement_inherit__map" alt="Inheritance graph"/></div>
@@ -84,15 +87,61 @@ Collaboration diagram for Lagrange1DFiniteElement:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11af1583adea52b7bbb48542b8fb331f"></a><!-- doxytag: member="Lagrange1DFiniteElement::Lagrange1DFiniteElement" ref="a11af1583adea52b7bbb48542b8fb331f" args="(int degree)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Lagrange1DFiniteElement</b> (int degree)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLagrange1DFiniteElement.html#a11af1583adea52b7bbb48542b8fb331f">Lagrange1DFiniteElement</a> (int degree)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLagrange1DFiniteElement.html#a977d0d454f1ce63812edc1ad6bd02ae5">CalcShape</a> (const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip, <a class="el" href="classVector.html">Vector</a> &amp;shape) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLagrange1DFiniteElement.html#aff2ebbae3f94b5ec2a013263bc933015">CalcDShape</a> (const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;dshape) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLagrange1DFiniteElement.html#a2d24261e123d7eb48a895edd0c2b1a9a">~Lagrange1DFiniteElement</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLagrange1DFiniteElement.html#a63106a02a91c8daa424b7497106a94ba">rwk</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLagrange1DFiniteElement.html#acd008bedef12fa2c888a23b330bd954e">rxxk</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="fe_8hpp_source.html#l00700">700</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a11af1583adea52b7bbb48542b8fb331f"></a><!-- doxytag: member="Lagrange1DFiniteElement::Lagrange1DFiniteElement" ref="a11af1583adea52b7bbb48542b8fb331f" args="(int degree)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lagrange1DFiniteElement::Lagrange1DFiniteElement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>degree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02282">2282</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="fe_8hpp_source.html#l00036">FiniteElement::Nodes</a>, <a class="el" href="fe_8hpp_source.html#l00703">rwk</a>, <a class="el" href="fe_8hpp_source.html#l00703">rxxk</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d24261e123d7eb48a895edd0c2b1a9a"></a><!-- doxytag: member="Lagrange1DFiniteElement::~Lagrange1DFiniteElement" ref="a2d24261e123d7eb48a895edd0c2b1a9a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lagrange1DFiniteElement::~Lagrange1DFiniteElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02368">2368</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="fe_8hpp_source.html#l00703">rwk</a>, and <a class="el" href="fe_8hpp_source.html#l00703">rxxk</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="aff2ebbae3f94b5ec2a013263bc933015"></a><!-- doxytag: member="Lagrange1DFiniteElement::CalcDShape" ref="aff2ebbae3f94b5ec2a013263bc933015" args="(const IntegrationPoint &amp;ip, DenseMatrix &amp;dshape) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +172,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fe_8cpp_source.html#l02332">2332</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
-<p>References <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>.</p>
+<p>References <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="fe_8hpp_source.html#l00703">rwk</a>, <a class="el" href="fe_8hpp_source.html#l00703">rxxk</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>.</p>
 
 </div>
 </div>
@@ -157,7 +206,42 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fe_8cpp_source.html#l02304">2304</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
-<p>References <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>.</p>
+<p>References <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="fe_8hpp_source.html#l00703">rwk</a>, <a class="el" href="fe_8hpp_source.html#l00703">rxxk</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a63106a02a91c8daa424b7497106a94ba"></a><!-- doxytag: member="Lagrange1DFiniteElement::rwk" ref="a63106a02a91c8daa424b7497106a94ba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* <a class="el" href="classLagrange1DFiniteElement.html#a63106a02a91c8daa424b7497106a94ba">Lagrange1DFiniteElement::rwk</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00703">703</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l02332">CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l02304">CalcShape()</a>, <a class="el" href="fe_8cpp_source.html#l02282">Lagrange1DFiniteElement()</a>, and <a class="el" href="fe_8cpp_source.html#l02368">~Lagrange1DFiniteElement()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd008bedef12fa2c888a23b330bd954e"></a><!-- doxytag: member="Lagrange1DFiniteElement::rxxk" ref="acd008bedef12fa2c888a23b330bd954e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double * <a class="el" href="classLagrange1DFiniteElement.html#acd008bedef12fa2c888a23b330bd954e">Lagrange1DFiniteElement::rxxk</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00703">703</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l02332">CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l02304">CalcShape()</a>, <a class="el" href="fe_8cpp_source.html#l02282">Lagrange1DFiniteElement()</a>, and <a class="el" href="fe_8cpp_source.html#l02368">~Lagrange1DFiniteElement()</a>.</p>
 
 </div>
 </div>
@@ -171,7 +255,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -180,7 +264,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

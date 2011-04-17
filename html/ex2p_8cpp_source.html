@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ex2p.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//                       MFEM Example 2 - Parallel Version</span>
+<a href="ex2p_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//                       MFEM Example 2 - Parallel Version</span>
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">// Compile with: make ex2p</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -101,9 +102,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00033"></a>00033 <span class="comment">//               We recommend viewing example 1 before viewing this example.</span>
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 <span class="preprocessor">#include &lt;fstream&gt;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;mfem.hpp&quot;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="mfem_8hpp.html">mfem.hpp</a>&quot;</span>
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keywordtype">int</span> main (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
+<a name="l00038"></a><a class="code" href="ex2p_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">00038</a> <span class="keywordtype">int</span> <a class="code" href="ex1_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
 <a name="l00039"></a>00039 {
 <a name="l00040"></a>00040    <span class="keywordtype">int</span> num_procs, myid;
 <a name="l00041"></a>00041 
@@ -136,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00068"></a>00068    mesh = <span class="keyword">new</span> <a class="code" href="classMesh.html">Mesh</a>(imesh, 1, 1);
 <a name="l00069"></a>00069    imesh.close();
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071    <span class="keywordflow">if</span> (mesh-&gt;attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>() &lt; 2 || mesh-&gt;bdr_attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>() &lt; 2)
+<a name="l00071"></a>00071    <span class="keywordflow">if</span> (mesh-&gt;<a class="code" href="classMesh.html#af92bffafa31f96813c6de882dd8ee498">attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>() &lt; 2 || mesh-&gt;<a class="code" href="classMesh.html#a75b0cbf767e0aa0be448358e7ded06a9">bdr_attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>() &lt; 2)
 <a name="l00072"></a>00072    {
 <a name="l00073"></a>00073       <span class="keywordflow">if</span> (myid == 0)
 <a name="l00074"></a>00074          cerr &lt;&lt; <span class="stringliteral">&quot;\nInput mesh should have at least two materials and &quot;</span>
@@ -145,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00077"></a>00077       MPI_Finalize();
 <a name="l00078"></a>00078       <span class="keywordflow">return</span> 3;
 <a name="l00079"></a>00079    }
-<a name="l00080"></a>00080    <span class="keywordtype">int</span> dim = mesh-&gt;Dimension();
+<a name="l00080"></a>00080    <span class="keywordtype">int</span> dim = mesh-&gt;<a class="code" href="classMesh.html#a06b6803b50a04ee6961c455b5af90b6b">Dimension</a>();
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082    <span class="comment">// 3. Refine the serial mesh on all processors to increase the resolution. In</span>
 <a name="l00083"></a>00083    <span class="comment">//    this example we do &#39;ref_levels&#39; of uniform refinement. We choose</span>
@@ -199,7 +200,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00131"></a>00131    <span class="keywordflow">if</span> (myid == 0)
 <a name="l00132"></a>00132       cout &lt;&lt; <span class="stringliteral">&quot;Assembling: &quot;</span> &lt;&lt; flush;
 <a name="l00133"></a>00133    <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *fespace =
-<a name="l00134"></a>00134       <span class="keyword">new</span> <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>(pmesh, fec, dim, Ordering::byVDIM);
+<a name="l00134"></a>00134       <span class="keyword">new</span> <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>(pmesh, fec, dim, <a class="code" href="classOrdering.html#a400843ea597f458cc1a8b802fe83b4c8aaf0d6502f86edb15f545927a104917fb">Ordering::byVDIM</a>);
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136    <span class="comment">// 6. Set up the parallel linear form b(.) which corresponds to the</span>
 <a name="l00137"></a>00137    <span class="comment">//    right-hand side of the FEM linear system. In this case, b_i equals the</span>
@@ -211,12 +212,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00143"></a>00143    <span class="comment">//    coefficient for its last component.</span>
 <a name="l00144"></a>00144    <a class="code" href="classVectorArrayCoefficient.html" title="Vector coefficient defined by an array of scalar coefficients.">VectorArrayCoefficient</a> f(dim);
 <a name="l00145"></a>00145    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; dim-1; i++)
-<a name="l00146"></a>00146       f.Set(i, <span class="keyword">new</span> <a class="code" href="classConstantCoefficient.html" title="Subclass constant coefficient.">ConstantCoefficient</a>(0.0));
+<a name="l00146"></a>00146       f.<a class="code" href="classVectorArrayCoefficient.html#a6b224e05b3bc42a3bce0357f7a344739" title="Sets coefficient in the vector.">Set</a>(i, <span class="keyword">new</span> <a class="code" href="classConstantCoefficient.html" title="Subclass constant coefficient.">ConstantCoefficient</a>(0.0));
 <a name="l00147"></a>00147    {
-<a name="l00148"></a>00148       <a class="code" href="classVector.html" title="Vector data type.">Vector</a> pull_force(pmesh-&gt;bdr_attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
+<a name="l00148"></a>00148       <a class="code" href="classVector.html" title="Vector data type.">Vector</a> pull_force(pmesh-&gt;<a class="code" href="classMesh.html#a75b0cbf767e0aa0be448358e7ded06a9">bdr_attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
 <a name="l00149"></a>00149       pull_force = 0.0;
 <a name="l00150"></a>00150       pull_force(1) = -1.0e-2;
-<a name="l00151"></a>00151       f.<a class="code" href="classVector.html#ad58cf5e1a91a290dc8598cc174eb36d4" title="(*this) = a * x">Set</a>(dim-1, <span class="keyword">new</span> <a class="code" href="classPWConstCoefficient.html" title="class for piecewise constant coefficient">PWConstCoefficient</a>(pull_force));
+<a name="l00151"></a>00151       f.<a class="code" href="classVectorArrayCoefficient.html#a6b224e05b3bc42a3bce0357f7a344739" title="Sets coefficient in the vector.">Set</a>(dim-1, <span class="keyword">new</span> <a class="code" href="classPWConstCoefficient.html" title="class for piecewise constant coefficient">PWConstCoefficient</a>(pull_force));
 <a name="l00152"></a>00152    }
 <a name="l00153"></a>00153 
 <a name="l00154"></a>00154    <a class="code" href="classParLinearForm.html" title="Class for parallel linear form.">ParLinearForm</a> *b = <span class="keyword">new</span> <a class="code" href="classParLinearForm.html" title="Class for parallel linear form.">ParLinearForm</a>(fespace);
@@ -236,11 +237,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00168"></a>00168    <span class="comment">//    constants coefficient lambda and mu. The boundary conditions are</span>
 <a name="l00169"></a>00169    <span class="comment">//    implemented by marking only boundary attribute 1 as essential. After</span>
 <a name="l00170"></a>00170    <span class="comment">//    serial/parallel assembly we extract the corresponding parallel matrix.</span>
-<a name="l00171"></a>00171    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> lambda(pmesh-&gt;attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
+<a name="l00171"></a>00171    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> lambda(pmesh-&gt;<a class="code" href="classMesh.html#af92bffafa31f96813c6de882dd8ee498">attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
 <a name="l00172"></a>00172    lambda = 1.0;
 <a name="l00173"></a>00173    lambda(0) = lambda(1)*50;
 <a name="l00174"></a>00174    <a class="code" href="classPWConstCoefficient.html" title="class for piecewise constant coefficient">PWConstCoefficient</a> lambda_func(lambda);
-<a name="l00175"></a>00175    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> mu(pmesh-&gt;attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
+<a name="l00175"></a>00175    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> mu(pmesh-&gt;<a class="code" href="classMesh.html#af92bffafa31f96813c6de882dd8ee498">attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
 <a name="l00176"></a>00176    mu = 1.0;
 <a name="l00177"></a>00177    mu(0) = mu(1)*50;
 <a name="l00178"></a>00178    <a class="code" href="classPWConstCoefficient.html" title="class for piecewise constant coefficient">PWConstCoefficient</a> mu_func(mu);
@@ -251,7 +252,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00183"></a>00183       cout &lt;&lt; <span class="stringliteral">&quot;matrix ... &quot;</span> &lt;&lt; flush;
 <a name="l00184"></a>00184    a-&gt;<a class="code" href="classBilinearForm.html#a6038ab7ee17df230cc2adbfd9efad7fa" title="Assembles the form i.e. sums over all domain/bdr integrators.">Assemble</a>();
 <a name="l00185"></a>00185    {
-<a name="l00186"></a>00186       <a class="code" href="classArray.html">Array&lt;int&gt;</a> ess_bdr(pmesh-&gt;bdr_attributes.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
+<a name="l00186"></a>00186       <a class="code" href="classArray.html">Array&lt;int&gt;</a> ess_bdr(pmesh-&gt;<a class="code" href="classMesh.html#a75b0cbf767e0aa0be448358e7ded06a9">bdr_attributes</a>.<a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Max</a>());
 <a name="l00187"></a>00187       ess_bdr = 0;
 <a name="l00188"></a>00188       ess_bdr[0] = 1;
 <a name="l00189"></a>00189       <a class="code" href="classArray.html">Array&lt;int&gt;</a> ess_dofs;
@@ -266,7 +267,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00198"></a>00198    <span class="comment">//    b(.) and the finite element approximation.</span>
 <a name="l00199"></a>00199    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A = a-&gt;<a class="code" href="classParBilinearForm.html#a028c3d4bac0b104a20d4dbaf0a123b13" title="Returns the matrix assembled on the true dofs, i.e. P^t A P.">ParallelAssemble</a>();
 <a name="l00200"></a>00200    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *B = b-&gt;<a class="code" href="classParLinearForm.html#a44f5b3b936bb05a3992e8bc9ae0cadaa" title="Returns the vector assembled on the true dofs, i.e. P^t v.">ParallelAssemble</a>();
-<a name="l00201"></a>00201    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *X = x.ParallelAverage();
+<a name="l00201"></a>00201    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *X = x.<a class="code" href="classParGridFunction.html#ad3fa7ded69008079ba6f691016633afe" title="Returns the vector averaged on the true dofs.">ParallelAverage</a>();
 <a name="l00202"></a>00202 
 <a name="l00203"></a>00203    <span class="keyword">delete</span> a;
 <a name="l00204"></a>00204    <span class="keyword">delete</span> b;
@@ -276,9 +277,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00208"></a>00208    <a class="code" href="classHypreBoomerAMG.html" title="The BoomerAMG solver in hypre.">HypreBoomerAMG</a> *amg = <span class="keyword">new</span> <a class="code" href="classHypreBoomerAMG.html" title="The BoomerAMG solver in hypre.">HypreBoomerAMG</a>(*A);
 <a name="l00209"></a>00209    amg-&gt;<a class="code" href="classHypreBoomerAMG.html#ac43e9aefde0a7ccd33d40e8f2b891b61">SetSystemsOptions</a>(dim);
 <a name="l00210"></a>00210    <a class="code" href="classHyprePCG.html" title="PCG solver in hypre.">HyprePCG</a> *pcg = <span class="keyword">new</span> <a class="code" href="classHyprePCG.html" title="PCG solver in hypre.">HyprePCG</a>(*A);
-<a name="l00211"></a>00211    pcg-&gt;SetTol(1e-8);
-<a name="l00212"></a>00212    pcg-&gt;SetMaxIter(500);
-<a name="l00213"></a>00213    pcg-&gt;SetPrintLevel(2);
+<a name="l00211"></a>00211    pcg-&gt;<a class="code" href="classHyprePCG.html#acb4c1fe6a3addccb48bf8524cc0c2bec">SetTol</a>(1e-8);
+<a name="l00212"></a>00212    pcg-&gt;<a class="code" href="classHyprePCG.html#aba8948cc7f5bb22438db30bc3a9abf64">SetMaxIter</a>(500);
+<a name="l00213"></a>00213    pcg-&gt;<a class="code" href="classHyprePCG.html#afcde200456322e7e51e7c9ac6276a6d2">SetPrintLevel</a>(2);
 <a name="l00214"></a>00214    pcg-&gt;<a class="code" href="classHyprePCG.html#a9e8a3ab4eca497899cc105d2088edb95" title="Set the hypre solver to be used as a preconditioner.">SetPreconditioner</a>(*amg);
 <a name="l00215"></a>00215    pcg-&gt;<a class="code" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba" title="Solve Ax=b with hypre&#39;s PCG.">Mult</a>(*B, *X);
 <a name="l00216"></a>00216 
@@ -293,13 +294,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00225"></a>00225    <span class="comment">//     displacement field. We assume that the initial mesh (read from the</span>
 <a name="l00226"></a>00226    <span class="comment">//     file) is not higher order curved mesh compared to the FE space chosen</span>
 <a name="l00227"></a>00227    <span class="comment">//     from the menu.</span>
-<a name="l00228"></a>00228    pmesh-&gt;SetNodalFESpace(fespace);
+<a name="l00228"></a>00228    pmesh-&gt;<a class="code" href="classMesh.html#aed08368b50e2e3bf73358a954deabb84">SetNodalFESpace</a>(fespace);
 <a name="l00229"></a>00229 
 <a name="l00230"></a>00230    <span class="comment">// 13. Save the displaced mesh and the inverted solution (which gives the</span>
 <a name="l00231"></a>00231    <span class="comment">//     backward displacements to the original grid). This output can be</span>
 <a name="l00232"></a>00232    <span class="comment">//     viewed later using GLVis: &quot;glvis -m displaced.mesh -g sol.gf&quot;.</span>
 <a name="l00233"></a>00233    {
-<a name="l00234"></a>00234       <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *nodes = pmesh-&gt;GetNodes();
+<a name="l00234"></a>00234       <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *nodes = pmesh-&gt;<a class="code" href="classMesh.html#ae5d2fa1604f79828e3d352220d43b83d">GetNodes</a>();
 <a name="l00235"></a>00235       *nodes += x;
 <a name="l00236"></a>00236       x *= -1;
 <a name="l00237"></a>00237       ofstream mesh_ofs;
@@ -314,7 +315,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00246"></a>00246       <span class="keywordflow">if</span> (myid == 0)
 <a name="l00247"></a>00247          sol_ofs.open(<span class="stringliteral">&quot;sol.gf&quot;</span>);
 <a name="l00248"></a>00248       sol_ofs.precision(8);
-<a name="l00249"></a>00249       x.SaveAsOne(sol_ofs);
+<a name="l00249"></a>00249       x.<a class="code" href="classParGridFunction.html#ab901364b935a4ccf1e54357d1825e2ac" title="Merge the local grid functions.">SaveAsOne</a>(sol_ofs);
 <a name="l00250"></a>00250       <span class="keywordflow">if</span> (myid == 0)
 <a name="l00251"></a>00251          sol_ofs.close();
 <a name="l00252"></a>00252    }
@@ -336,7 +337,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00268"></a>00268       sol_sock-&gt;precision(8);
 <a name="l00269"></a>00269    }
 <a name="l00270"></a>00270    pmesh-&gt;<a class="code" href="classParMesh.html#ae63858c93985cd3f7ca9442f5b5a1016">PrintAsOne</a>(*sol_sock);
-<a name="l00271"></a>00271    x.SaveAsOne(*sol_sock);
+<a name="l00271"></a>00271    x.<a class="code" href="classParGridFunction.html#ab901364b935a4ccf1e54357d1825e2ac" title="Merge the local grid functions.">SaveAsOne</a>(*sol_sock);
 <a name="l00272"></a>00272    <span class="keywordflow">if</span> (myid == 0)
 <a name="l00273"></a>00273    {
 <a name="l00274"></a>00274       sol_sock-&gt;<a class="code" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">send</a>();
@@ -364,7 +365,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -373,7 +374,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

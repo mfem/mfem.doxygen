@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">gmres.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="gmres_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -80,9 +81,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;iomanip&gt;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;math.h&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;vector.hpp&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;matrix.hpp&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;densemat.hpp&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="vector_8hpp.html">vector.hpp</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="matrix_8hpp.html">matrix.hpp</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="densemat_8hpp.html">densemat.hpp</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="comment">//*****************************************************************</span>
 <a name="l00020"></a>00020 <span class="comment">// Iterative template routine -- GMRES</span>
@@ -105,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00037"></a>00037 <span class="comment">//</span>
 <a name="l00038"></a>00038 <span class="comment">//*****************************************************************</span>
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">inline</span> <span class="keywordtype">void</span> GeneratePlaneRotation (<span class="keywordtype">double</span> &amp;dx, <span class="keywordtype">double</span> &amp;dy, <span class="keywordtype">double</span> &amp;cs, <span class="keywordtype">double</span> &amp;sn)
+<a name="l00040"></a><a class="code" href="gmres_8cpp.html#ac79a504222b6c2fcd1ee06fdba30eacf">00040</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="gmres_8cpp.html#ac79a504222b6c2fcd1ee06fdba30eacf">GeneratePlaneRotation</a> (<span class="keywordtype">double</span> &amp;dx, <span class="keywordtype">double</span> &amp;dy, <span class="keywordtype">double</span> &amp;cs, <span class="keywordtype">double</span> &amp;sn)
 <a name="l00041"></a>00041 {
 <a name="l00042"></a>00042    <span class="keywordflow">if</span> (dy == 0.0) {
 <a name="l00043"></a>00043       cs = 1.0;
@@ -121,14 +122,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00053"></a>00053    }
 <a name="l00054"></a>00054 }
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">inline</span> <span class="keywordtype">void</span> ApplyPlaneRotation (<span class="keywordtype">double</span> &amp;dx, <span class="keywordtype">double</span> &amp;dy, <span class="keywordtype">double</span> &amp;cs, <span class="keywordtype">double</span> &amp;sn)
+<a name="l00056"></a><a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">00056</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a> (<span class="keywordtype">double</span> &amp;dx, <span class="keywordtype">double</span> &amp;dy, <span class="keywordtype">double</span> &amp;cs, <span class="keywordtype">double</span> &amp;sn)
 <a name="l00057"></a>00057 {
 <a name="l00058"></a>00058    <span class="keywordtype">double</span> temp  =  cs * dx + sn * dy;
 <a name="l00059"></a>00059    dy = -sn * dx + cs * dy;
 <a name="l00060"></a>00060    dx = temp;
 <a name="l00061"></a>00061 }
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="keyword">inline</span> <span class="keywordtype">void</span> Update (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <span class="keywordtype">int</span> k, <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;h, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;s, <a class="code" href="classArray.html">Array&lt;Vector*&gt;</a> &amp;v)
+<a name="l00063"></a><a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">00063</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <span class="keywordtype">int</span> k, <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;h, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;s, <a class="code" href="classArray.html">Array&lt;Vector*&gt;</a> &amp;v)
 <a name="l00064"></a>00064 {
 <a name="l00065"></a>00065    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> y(s.<a class="code" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1" title="Returns the size of the vector.">Size</a>());  y = s;
 <a name="l00066"></a>00066 
@@ -143,13 +144,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00075"></a>00075       x.<a class="code" href="classVector.html#a7928366c4fbc6c190936f2a56bf5c65c" title="(*this) += a * Va">Add</a>(y(j),*v[j]);
 <a name="l00076"></a>00076 }
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="keyword">inline</span> <span class="keywordtype">double</span> norm (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; u)
+<a name="l00078"></a><a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">00078</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; u)
 <a name="l00079"></a>00079 {
 <a name="l00080"></a>00080    <span class="keywordflow">return</span> sqrt(u*u);
 <a name="l00081"></a>00081 }
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083 <span class="keywordtype">int</span>
-<a name="l00084"></a>00084 GMRES(<span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;A, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b,
+<a name="l00084"></a><a class="code" href="solvers_8hpp.html#abc2ef8fe061f33c8dbb677d78ea92e15">00084</a> <a class="code" href="gmres_8cpp.html#abc2ef8fe061f33c8dbb677d78ea92e15" title="A GMRES solver.">GMRES</a>(<span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;A, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b,
 <a name="l00085"></a>00085       <span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;M, <span class="keywordtype">int</span> &amp;max_iter,
 <a name="l00086"></a>00086       <span class="keywordtype">int</span> m, <span class="keywordtype">double</span> &amp;tol, <span class="keywordtype">double</span> &amp;atol, <span class="keywordtype">int</span> printit)
 <a name="l00087"></a>00087 {
@@ -163,15 +164,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00095"></a>00095    <span class="keywordtype">int</span> i, j, k;
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097    M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(b,w);
-<a name="l00098"></a>00098    <span class="keywordtype">double</span> normb = norm(w); <span class="comment">// normb = ||M b||</span>
+<a name="l00098"></a>00098    <span class="keywordtype">double</span> normb = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(w); <span class="comment">// normb = ||M b||</span>
 <a name="l00099"></a>00099    <span class="keywordflow">if</span> (normb == 0.0)
 <a name="l00100"></a>00100       normb = 1;
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> r(n);
 <a name="l00103"></a>00103    A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00104"></a>00104    subtract(b,r,w);
+<a name="l00104"></a>00104    <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
 <a name="l00105"></a>00105    M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
-<a name="l00106"></a>00106    <span class="keywordtype">double</span> beta = norm(r);  <span class="comment">// beta = ||r||</span>
+<a name="l00106"></a>00106    <span class="keywordtype">double</span> beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);  <span class="comment">// beta = ||r||</span>
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108    resid = beta / normb;
 <a name="l00109"></a>00109 
@@ -198,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00130"></a>00130    {
 <a name="l00131"></a>00131       <span class="keywordflow">if</span> (v[0] == NULL)  v[0] = <span class="keyword">new</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a>(n);
 <a name="l00132"></a>00132       (*v[0]) = 0.0;
-<a name="l00133"></a>00133       v[0] -&gt; Add (1.0/beta, r);   <span class="comment">// v[0] = r / ||r||</span>
+<a name="l00133"></a>00133       v[0] -&gt; <a class="code" href="densemat_8cpp.html#a00f1742fc9481ac7b9d314d2163a8732" title="C = A + alpha*B.">Add</a> (1.0/beta, r);   <span class="comment">// v[0] = r / ||r||</span>
 <a name="l00134"></a>00134       s = 0.0; s(0) = beta;
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136       <span class="keywordflow">for</span> (i = 0; i &lt; m &amp;&amp; j &lt;= max_iter; i++) {
@@ -207,20 +208,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140          <span class="keywordflow">for</span> (k = 0; k &lt;= i; k++) {
 <a name="l00141"></a>00141             H(k,i) = w * (*v[k]);    <span class="comment">// H(k,i) = w * v[k]</span>
-<a name="l00142"></a>00142             w.Add(-H(k,i), (*v[k])); <span class="comment">// w -= H(k,i) * v[k]</span>
+<a name="l00142"></a>00142             w.<a class="code" href="classDenseMatrix.html#af49d8b366113658f878645e163cce152" title="Adds the matrix A multiplied by the number c to the matrix.">Add</a>(-H(k,i), (*v[k])); <span class="comment">// w -= H(k,i) * v[k]</span>
 <a name="l00143"></a>00143          }
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145          H(i+1,i)  = norm(w);       <span class="comment">// H(i+1,i) = ||w||</span>
+<a name="l00145"></a>00145          H(i+1,i)  = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(w);       <span class="comment">// H(i+1,i) = ||w||</span>
 <a name="l00146"></a>00146          <span class="keywordflow">if</span> (v[i+1] == NULL)  v[i+1] = <span class="keyword">new</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a>(n);
 <a name="l00147"></a>00147          (*v[i+1]) = 0.0;
-<a name="l00148"></a>00148          v[i+1] -&gt; Add (1.0/H(i+1,i), w); <span class="comment">// v[i+1] = w / H(i+1,i)</span>
+<a name="l00148"></a>00148          v[i+1] -&gt; <a class="code" href="densemat_8cpp.html#a00f1742fc9481ac7b9d314d2163a8732" title="C = A + alpha*B.">Add</a> (1.0/H(i+1,i), w); <span class="comment">// v[i+1] = w / H(i+1,i)</span>
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150          <span class="keywordflow">for</span> (k = 0; k &lt; i; k++)
-<a name="l00151"></a>00151             ApplyPlaneRotation(H(k,i), H(k+1,i), cs(k), sn(k));
+<a name="l00151"></a>00151             <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a>(H(k,i), H(k+1,i), cs(k), sn(k));
 <a name="l00152"></a>00152 
-<a name="l00153"></a>00153          GeneratePlaneRotation(H(i,i), H(i+1,i), cs(i), sn(i));
-<a name="l00154"></a>00154          ApplyPlaneRotation(H(i,i), H(i+1,i), cs(i), sn(i));
-<a name="l00155"></a>00155          ApplyPlaneRotation(s(i), s(i+1), cs(i), sn(i));
+<a name="l00153"></a>00153          <a class="code" href="gmres_8cpp.html#ac79a504222b6c2fcd1ee06fdba30eacf">GeneratePlaneRotation</a>(H(i,i), H(i+1,i), cs(i), sn(i));
+<a name="l00154"></a>00154          <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a>(H(i,i), H(i+1,i), cs(i), sn(i));
+<a name="l00155"></a>00155          <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a>(s(i), s(i+1), cs(i), sn(i));
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157          resid = fabs(s(i+1));
 <a name="l00158"></a>00158          <span class="keywordflow">if</span> (printit)
@@ -229,7 +230,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00161"></a>00161                  &lt;&lt; <span class="stringliteral">&quot;  (r, r) = &quot;</span> &lt;&lt; resid*resid &lt;&lt; endl;
 <a name="l00162"></a>00162 
 <a name="l00163"></a>00163          <span class="keywordflow">if</span> ( resid*resid &lt; tol) {
-<a name="l00164"></a>00164             Update(x, i, H, s, v);
+<a name="l00164"></a>00164             <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a>(x, i, H, s, v);
 <a name="l00165"></a>00165             tol = resid * resid;
 <a name="l00166"></a>00166             max_iter = j;
 <a name="l00167"></a>00167             <span class="keywordflow">for</span> (i= 0; i&lt;=m; i++)
@@ -241,12 +242,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00173"></a>00173       <span class="keywordflow">if</span> (printit)
 <a name="l00174"></a>00174          cout &lt;&lt; <span class="stringliteral">&quot;Restarting...&quot;</span> &lt;&lt; endl;
 <a name="l00175"></a>00175 
-<a name="l00176"></a>00176       Update(x, i-1, H, s, v);
+<a name="l00176"></a>00176       <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a>(x, i-1, H, s, v);
 <a name="l00177"></a>00177 
 <a name="l00178"></a>00178       A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00179"></a>00179       subtract(b,r,w);
+<a name="l00179"></a>00179       <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
 <a name="l00180"></a>00180       M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
-<a name="l00181"></a>00181       beta = norm(r);         <span class="comment">// beta = ||r||</span>
+<a name="l00181"></a>00181       beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);         <span class="comment">// beta = ||r||</span>
 <a name="l00182"></a>00182       <span class="keywordflow">if</span> ( resid*resid &lt; tol) {
 <a name="l00183"></a>00183          tol = resid * resid;
 <a name="l00184"></a>00184          max_iter = j;
@@ -265,7 +266,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00197"></a>00197 }
 <a name="l00198"></a>00198 
 <a name="l00199"></a>00199 <span class="keywordtype">int</span>
-<a name="l00200"></a>00200 aGMRES(<span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;A, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b,
+<a name="l00200"></a><a class="code" href="solvers_8hpp.html#a86ee7223a3ad557de0357e870d6dcafd">00200</a> <a class="code" href="gmres_8cpp.html#a86ee7223a3ad557de0357e870d6dcafd">aGMRES</a>(<span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;A, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b,
 <a name="l00201"></a>00201        <span class="keyword">const</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a> &amp;M, <span class="keywordtype">int</span> &amp;max_iter,
 <a name="l00202"></a>00202        <span class="keywordtype">int</span> m_max, <span class="keywordtype">int</span> m_min, <span class="keywordtype">int</span> m_step, <span class="keywordtype">double</span> cf,
 <a name="l00203"></a>00203        <span class="keywordtype">double</span> &amp;tol, <span class="keywordtype">double</span> &amp;atol, <span class="keywordtype">int</span> printit)
@@ -282,15 +283,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00214"></a>00214    <span class="keywordtype">int</span> i, j, k;
 <a name="l00215"></a>00215 
 <a name="l00216"></a>00216    M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(b,w);
-<a name="l00217"></a>00217    <span class="keywordtype">double</span> normb = norm(w); <span class="comment">// normb = ||M b||</span>
+<a name="l00217"></a>00217    <span class="keywordtype">double</span> normb = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(w); <span class="comment">// normb = ||M b||</span>
 <a name="l00218"></a>00218    <span class="keywordflow">if</span> (normb == 0.0)
 <a name="l00219"></a>00219       normb = 1;
 <a name="l00220"></a>00220 
 <a name="l00221"></a>00221    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> r(n);
 <a name="l00222"></a>00222    A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00223"></a>00223    subtract(b,r,w);
+<a name="l00223"></a>00223    <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
 <a name="l00224"></a>00224    M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
-<a name="l00225"></a>00225    <span class="keywordtype">double</span> beta = norm(r);  <span class="comment">// beta = ||r||</span>
+<a name="l00225"></a>00225    <span class="keywordtype">double</span> beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);  <span class="comment">// beta = ||r||</span>
 <a name="l00226"></a>00226 
 <a name="l00227"></a>00227    resid = beta / normb;
 <a name="l00228"></a>00228 
@@ -318,7 +319,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00250"></a>00250    j = 1;
 <a name="l00251"></a>00251    <span class="keywordflow">while</span> (j &lt;= max_iter) {
 <a name="l00252"></a>00252       (*v[0]) = 0.0;
-<a name="l00253"></a>00253       v[0] -&gt; Add (1.0/beta, r);   <span class="comment">// v[0] = r / ||r||</span>
+<a name="l00253"></a>00253       v[0] -&gt; <a class="code" href="densemat_8cpp.html#a00f1742fc9481ac7b9d314d2163a8732" title="C = A + alpha*B.">Add</a> (1.0/beta, r);   <span class="comment">// v[0] = r / ||r||</span>
 <a name="l00254"></a>00254       s = 0.0; s(0) = beta;
 <a name="l00255"></a>00255 
 <a name="l00256"></a>00256       r1 = beta;
@@ -329,19 +330,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00261"></a>00261 
 <a name="l00262"></a>00262          <span class="keywordflow">for</span> (k = 0; k &lt;= i; k++) {
 <a name="l00263"></a>00263             H(k,i) = w * (*v[k]);    <span class="comment">// H(k,i) = w * v[k]</span>
-<a name="l00264"></a>00264             w.Add(-H(k,i), (*v[k])); <span class="comment">// w -= H(k,i) * v[k]</span>
+<a name="l00264"></a>00264             w.<a class="code" href="classDenseMatrix.html#af49d8b366113658f878645e163cce152" title="Adds the matrix A multiplied by the number c to the matrix.">Add</a>(-H(k,i), (*v[k])); <span class="comment">// w -= H(k,i) * v[k]</span>
 <a name="l00265"></a>00265          }
 <a name="l00266"></a>00266 
-<a name="l00267"></a>00267          H(i+1,i)  = norm(w);       <span class="comment">// H(i+1,i) = ||w||</span>
+<a name="l00267"></a>00267          H(i+1,i)  = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(w);       <span class="comment">// H(i+1,i) = ||w||</span>
 <a name="l00268"></a>00268          (*v[i+1]) = 0.0;
-<a name="l00269"></a>00269          v[i+1] -&gt; Add (1.0/H(i+1,i), w); <span class="comment">// v[i+1] = w / H(i+1,i)</span>
+<a name="l00269"></a>00269          v[i+1] -&gt; <a class="code" href="densemat_8cpp.html#a00f1742fc9481ac7b9d314d2163a8732" title="C = A + alpha*B.">Add</a> (1.0/H(i+1,i), w); <span class="comment">// v[i+1] = w / H(i+1,i)</span>
 <a name="l00270"></a>00270 
 <a name="l00271"></a>00271          <span class="keywordflow">for</span> (k = 0; k &lt; i; k++)
-<a name="l00272"></a>00272             ApplyPlaneRotation(H(k,i), H(k+1,i), cs(k), sn(k));
+<a name="l00272"></a>00272             <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a>(H(k,i), H(k+1,i), cs(k), sn(k));
 <a name="l00273"></a>00273 
-<a name="l00274"></a>00274          GeneratePlaneRotation(H(i,i), H(i+1,i), cs(i), sn(i));
-<a name="l00275"></a>00275          ApplyPlaneRotation(H(i,i), H(i+1,i), cs(i), sn(i));
-<a name="l00276"></a>00276          ApplyPlaneRotation(s(i), s(i+1), cs(i), sn(i));
+<a name="l00274"></a>00274          <a class="code" href="gmres_8cpp.html#ac79a504222b6c2fcd1ee06fdba30eacf">GeneratePlaneRotation</a>(H(i,i), H(i+1,i), cs(i), sn(i));
+<a name="l00275"></a>00275          <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a>(H(i,i), H(i+1,i), cs(i), sn(i));
+<a name="l00276"></a>00276          <a class="code" href="gmres_8cpp.html#a6257289b8b37abece8c3594de40c8fbe">ApplyPlaneRotation</a>(s(i), s(i+1), cs(i), sn(i));
 <a name="l00277"></a>00277 
 <a name="l00278"></a>00278          resid = fabs(s(i+1));
 <a name="l00279"></a>00279          <span class="keywordflow">if</span> (printit)
@@ -350,7 +351,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00282"></a>00282                  &lt;&lt; <span class="stringliteral">&quot;  (r, r) = &quot;</span> &lt;&lt; resid*resid &lt;&lt; endl;
 <a name="l00283"></a>00283 
 <a name="l00284"></a>00284          <span class="keywordflow">if</span> ( resid*resid &lt; tol) {
-<a name="l00285"></a>00285             Update(x, i, H, s, v);
+<a name="l00285"></a>00285             <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a>(x, i, H, s, v);
 <a name="l00286"></a>00286             tol = resid * resid;
 <a name="l00287"></a>00287             max_iter = j;
 <a name="l00288"></a>00288             <span class="keywordflow">for</span> (i= 0; i&lt;=m; i++)
@@ -362,12 +363,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00294"></a>00294       <span class="keywordflow">if</span> (printit)
 <a name="l00295"></a>00295          cout &lt;&lt; <span class="stringliteral">&quot;Restarting...&quot;</span> &lt;&lt; endl;
 <a name="l00296"></a>00296 
-<a name="l00297"></a>00297       Update(x, i-1, H, s, v);
+<a name="l00297"></a>00297       <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a>(x, i-1, H, s, v);
 <a name="l00298"></a>00298 
 <a name="l00299"></a>00299       A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00300"></a>00300       subtract(b,r,w);
+<a name="l00300"></a>00300       <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
 <a name="l00301"></a>00301       M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
-<a name="l00302"></a>00302       beta = norm(r);         <span class="comment">// beta = ||r||</span>
+<a name="l00302"></a>00302       beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);         <span class="comment">// beta = ||r||</span>
 <a name="l00303"></a>00303       <span class="keywordflow">if</span> ( resid*resid &lt; tol) {
 <a name="l00304"></a>00304          tol = resid * resid;
 <a name="l00305"></a>00305          max_iter = j;
@@ -397,7 +398,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -406,7 +407,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

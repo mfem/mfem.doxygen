@@ -60,12 +60,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">CubicFECollection Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="CubicFECollection" --><!-- doxytag: inherits="FiniteElementCollection" --><div class="dynheader">
+<!-- doxytag: class="CubicFECollection" --><!-- doxytag: inherits="FiniteElementCollection" -->
+<p><code>#include &lt;<a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for CubicFECollection:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCubicFECollection__inherit__graph.png" border="0" usemap="#CubicFECollection_inherit__map" alt="Inheritance graph"/></div>
@@ -84,19 +87,246 @@ Collaboration diagram for CubicFECollection:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac53afbdadcacf90015a24973bbd58d7d"></a><!-- doxytag: member="CubicFECollection::FiniteElementForGeometry" ref="ac53afbdadcacf90015a24973bbd58d7d" args="(int GeomType) const " -->
-virtual const <a class="el" href="classFiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>FiniteElementForGeometry</b> (int GeomType) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace3506753280430833bd1d1acc8744ea"></a><!-- doxytag: member="CubicFECollection::DofForGeometry" ref="ace3506753280430833bd1d1acc8744ea" args="(int GeomType) const " -->
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>DofForGeometry</b> (int GeomType) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cccea12834d994d9b766a48afc4782b"></a><!-- doxytag: member="CubicFECollection::DofOrderForOrientation" ref="a6cccea12834d994d9b766a48afc4782b" args="(int GeomType, int Or) const " -->
-virtual int *&#160;</td><td class="memItemRight" valign="bottom"><b>DofOrderForOrientation</b> (int GeomType, int Or) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a310c00a87cbee18cd3757709f9392542"></a><!-- doxytag: member="CubicFECollection::Name" ref="a310c00a87cbee18cd3757709f9392542" args="() const " -->
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#a1cf3ac9fecee389f87295dfedf0f5261">CubicFECollection</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classFiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#ac53afbdadcacf90015a24973bbd58d7d">FiniteElementForGeometry</a> (int GeomType) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#ace3506753280430833bd1d1acc8744ea">DofForGeometry</a> (int GeomType) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#a6cccea12834d994d9b766a48afc4782b">DofOrderForOrientation</a> (int GeomType, int Or) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#a310c00a87cbee18cd3757709f9392542">Name</a> () const </td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPointFiniteElement.html">PointFiniteElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#acd920e8f0440bc46975c9bc5a0b6b38c">PointFE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCubic1DFiniteElement.html">Cubic1DFiniteElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#adc5430c1f254d6cc85fc1ecf4a9053b2">SegmentFE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCubic2DFiniteElement.html">Cubic2DFiniteElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#af3883b640c8614da77de81bbd0807b92">TriangleFE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classBiCubic2DFiniteElement.html">BiCubic2DFiniteElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#a169e534a32811099842e25a439ad5a67">QuadrilateralFE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCubic3DFiniteElement.html">Cubic3DFiniteElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#a3edfe5418768ee7088ae62e05c2a6f3b">TetrahedronFE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLagrangeHexFiniteElement.html">LagrangeHexFiniteElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCubicFECollection.html#a6e64f6bd7bb3850ea079cf0428c5656c">ParallelepipedFE</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00099">99</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1cf3ac9fecee389f87295dfedf0f5261"></a><!-- doxytag: member="CubicFECollection::CubicFECollection" ref="a1cf3ac9fecee389f87295dfedf0f5261" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CubicFECollection::CubicFECollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00110">110</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ace3506753280430833bd1d1acc8744ea"></a><!-- doxytag: member="CubicFECollection::DofForGeometry" ref="ace3506753280430833bd1d1acc8744ea" args="(int GeomType) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CubicFECollection::DofForGeometry </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classFiniteElementCollection.html#abdf2413cbf2640a90f3af4a247e5dea3">FiniteElementCollection</a>.</p>
+
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l00208">208</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00025">Geometry::CUBE</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::POINT</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::SEGMENT</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::TETRAHEDRON</a>, and <a class="el" href="geom_8hpp_source.html#l00025">Geometry::TRIANGLE</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cccea12834d994d9b766a48afc4782b"></a><!-- doxytag: member="CubicFECollection::DofOrderForOrientation" ref="a6cccea12834d994d9b766a48afc4782b" args="(int GeomType, int Or) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * CubicFECollection::DofOrderForOrientation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Or</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classFiniteElementCollection.html#a67d56ef98ced102ee763257d64e1d414">FiniteElementCollection</a>.</p>
+
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l00224">224</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00025">Geometry::SEGMENT</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::SQUARE</a>, and <a class="el" href="geom_8hpp_source.html#l00025">Geometry::TRIANGLE</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac53afbdadcacf90015a24973bbd58d7d"></a><!-- doxytag: member="CubicFECollection::FiniteElementForGeometry" ref="ac53afbdadcacf90015a24973bbd58d7d" args="(int GeomType) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classFiniteElement.html">FiniteElement</a> * CubicFECollection::FiniteElementForGeometry </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classFiniteElementCollection.html#a7d635a700ecdb259a21e54399f0c2d75">FiniteElementCollection</a>.</p>
+
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l00192">192</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00025">Geometry::CUBE</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="fe__coll_8hpp_source.html#l00107">ParallelepipedFE</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::POINT</a>, <a class="el" href="fe__coll_8hpp_source.html#l00102">PointFE</a>, <a class="el" href="fe__coll_8hpp_source.html#l00105">QuadrilateralFE</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::SEGMENT</a>, <a class="el" href="fe__coll_8hpp_source.html#l00103">SegmentFE</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::TETRAHEDRON</a>, <a class="el" href="fe__coll_8hpp_source.html#l00106">TetrahedronFE</a>, <a class="el" href="geom_8hpp_source.html#l00025">Geometry::TRIANGLE</a>, and <a class="el" href="fe__coll_8hpp_source.html#l00104">TriangleFE</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a310c00a87cbee18cd3757709f9392542"></a><!-- doxytag: member="CubicFECollection::Name" ref="a310c00a87cbee18cd3757709f9392542" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* CubicFECollection::Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classFiniteElementCollection.html#a705e3ef9aaea9992777d2aa6ccba7516">FiniteElementCollection</a>.</p>
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00119">119</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a6e64f6bd7bb3850ea079cf0428c5656c"></a><!-- doxytag: member="CubicFECollection::ParallelepipedFE" ref="a6e64f6bd7bb3850ea079cf0428c5656c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLagrangeHexFiniteElement.html">LagrangeHexFiniteElement</a> <a class="el" href="classCubicFECollection.html#a6e64f6bd7bb3850ea079cf0428c5656c">CubicFECollection::ParallelepipedFE</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00107">107</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe__coll_8cpp_source.html#l00192">FiniteElementForGeometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd920e8f0440bc46975c9bc5a0b6b38c"></a><!-- doxytag: member="CubicFECollection::PointFE" ref="acd920e8f0440bc46975c9bc5a0b6b38c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPointFiniteElement.html">PointFiniteElement</a> <a class="el" href="classCubicFECollection.html#acd920e8f0440bc46975c9bc5a0b6b38c">CubicFECollection::PointFE</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00102">102</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe__coll_8cpp_source.html#l00192">FiniteElementForGeometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a169e534a32811099842e25a439ad5a67"></a><!-- doxytag: member="CubicFECollection::QuadrilateralFE" ref="a169e534a32811099842e25a439ad5a67" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classBiCubic2DFiniteElement.html">BiCubic2DFiniteElement</a> <a class="el" href="classCubicFECollection.html#a169e534a32811099842e25a439ad5a67">CubicFECollection::QuadrilateralFE</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00105">105</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe__coll_8cpp_source.html#l00192">FiniteElementForGeometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc5430c1f254d6cc85fc1ecf4a9053b2"></a><!-- doxytag: member="CubicFECollection::SegmentFE" ref="adc5430c1f254d6cc85fc1ecf4a9053b2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCubic1DFiniteElement.html">Cubic1DFiniteElement</a> <a class="el" href="classCubicFECollection.html#adc5430c1f254d6cc85fc1ecf4a9053b2">CubicFECollection::SegmentFE</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00103">103</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe__coll_8cpp_source.html#l00192">FiniteElementForGeometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3edfe5418768ee7088ae62e05c2a6f3b"></a><!-- doxytag: member="CubicFECollection::TetrahedronFE" ref="a3edfe5418768ee7088ae62e05c2a6f3b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCubic3DFiniteElement.html">Cubic3DFiniteElement</a> <a class="el" href="classCubicFECollection.html#a3edfe5418768ee7088ae62e05c2a6f3b">CubicFECollection::TetrahedronFE</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00106">106</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe__coll_8cpp_source.html#l00192">FiniteElementForGeometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3883b640c8614da77de81bbd0807b92"></a><!-- doxytag: member="CubicFECollection::TriangleFE" ref="af3883b640c8614da77de81bbd0807b92" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCubic2DFiniteElement.html">Cubic2DFiniteElement</a> <a class="el" href="classCubicFECollection.html#af3883b640c8614da77de81bbd0807b92">CubicFECollection::TriangleFE</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00104">104</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe__coll_8cpp_source.html#l00192">FiniteElementForGeometry()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a></li>
 <li><a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a></li>
 </ul>
@@ -106,7 +336,7 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>Name<
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,7 +345,7 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>Name<
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

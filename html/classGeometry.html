@@ -62,7 +62,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Geometry Class Reference</div>  </div>
 </div>
@@ -81,40 +82,341 @@ Collaboration diagram for Geometry:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <br/>
-&#160;&#160;<b>POINT</b>, 
-<b>SEGMENT</b>, 
-<b>TRIANGLE</b>, 
-<b>SQUARE</b>, 
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942">Type</a> { <br/>
+&#160;&#160;<a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942a410b024c33dddc256cde201aa4a29309">POINT</a>, 
+<a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942aecc350b144d8875079df9d9b5edf3e71">SEGMENT</a>, 
+<a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942afc86149722fa2788c0e28612ac4cf26f">TRIANGLE</a>, 
+<a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942ad3f2f72cd796b2f9ce061629986a3096">SQUARE</a>, 
 <br/>
-&#160;&#160;<b>TETRAHEDRON</b>, 
-<b>CUBE</b>
+&#160;&#160;<a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942acf5234aa19902300904058fd597f522f">TETRAHEDRON</a>, 
+<a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942ac8111fdbaab3a0d0f6473fe6526edb12">CUBE</a>
 <br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4407e25da37e80f210318cffa972836c"></a><!-- doxytag: member="Geometry::GetVertices" ref="a4407e25da37e80f210318cffa972836c" args="(int GeomType)" -->
-const <a class="el" href="classIntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetVertices</b> (int GeomType)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa919e8cd6baac67ec0898f4d7fadc26"></a><!-- doxytag: member="Geometry::GetCenter" ref="aaa919e8cd6baac67ec0898f4d7fadc26" args="(int GeomType)" -->
-const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCenter</b> (int GeomType)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adea91bccc970393cb7caba0f3a670ba5"></a><!-- doxytag: member="Geometry::GetPerfPointMat" ref="adea91bccc970393cb7caba0f3a670ba5" args="(int GeomType, DenseMatrix &amp;pm)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GetPerfPointMat</b> (int GeomType, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;pm)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cd48d9fe088b1eb0074cd60b80b5e31"></a><!-- doxytag: member="Geometry::JacToPerfJac" ref="a2cd48d9fe088b1eb0074cd60b80b5e31" args="(int GeomType, const DenseMatrix &amp;J, DenseMatrix &amp;PJ) const " -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>JacToPerfJac</b> (int GeomType, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;J, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;PJ) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e71ae8511299890efef9d692dd7f881"></a><!-- doxytag: member="Geometry::NumBdr" ref="a4e71ae8511299890efef9d692dd7f881" args="(int GeomType)" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>NumBdr</b> (int GeomType)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4c301c163c63d21ed08c17b0f4e131d3">Geometry</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#ad55e832122ab3a2833dcaa6507867678">~Geometry</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classIntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4407e25da37e80f210318cffa972836c">GetVertices</a> (int GeomType)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#aaa919e8cd6baac67ec0898f4d7fadc26">GetCenter</a> (int GeomType)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#adea91bccc970393cb7caba0f3a670ba5">GetPerfPointMat</a> (int GeomType, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;pm)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a2cd48d9fe088b1eb0074cd60b80b5e31">JacToPerfJac</a> (int GeomType, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;J, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;PJ) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4e71ae8511299890efef9d692dd7f881">NumBdr</a> (int GeomType)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4870c28e4f60c47008a245d4961e2479"></a><!-- doxytag: member="Geometry::NumGeom" ref="a4870c28e4f60c47008a245d4961e2479" args="" -->
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>NumGeom</b> = 6</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafbebec38a437426b32787da94476ef4"></a><!-- doxytag: member="Geometry::NumBdrArray" ref="aafbebec38a437426b32787da94476ef4" args="[]" -->
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>NumBdrArray</b> [] = { 0, 2, 3, 4, 4, 6 }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a> = 6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#aafbebec38a437426b32787da94476ef4">NumBdrArray</a> [] = { 0, 2, 3, 4, 4, 6 }</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#aed97b0498bb1feb66784274709902e3a">GeomVert</a> [<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIntegrationPoint.html">IntegrationPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a60f1f9ec84494131c75465014d28df78">GeomCenter</a> [<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a980b428e3b7a113bfd5d95cdc9f7345b">PerfGeomToGeomJac</a> [<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Types of domains for integration rules and reference finite elements: Geometry::POINT - a point Geometry::SEGMENT - the interval [0,1] Geometry::TRIANGLE - triangle with verteces (0,0), (1,0), (0,1) Geometry::SQUARE - the unit square (0,1)x(0,1) Geometry::TETRAHEDRON - w/ vert. (0,0,0),(1,0,0),(0,1,0),(0,0,1) Geometry::CUBE - the unit cube </p>
+<div class="textblock"><p>Types of domains for integration rules and reference finite elements: <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942a410b024c33dddc256cde201aa4a29309">Geometry::POINT</a> - a point <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942aecc350b144d8875079df9d9b5edf3e71">Geometry::SEGMENT</a> - the interval [0,1] <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942afc86149722fa2788c0e28612ac4cf26f">Geometry::TRIANGLE</a> - triangle with verteces (0,0), (1,0), (0,1) <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942ad3f2f72cd796b2f9ce061629986a3096">Geometry::SQUARE</a> - the unit square (0,1)x(0,1) <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942acf5234aa19902300904058fd597f522f">Geometry::TETRAHEDRON</a> - w/ vert. (0,0,0),(1,0,0),(0,1,0),(0,0,1) <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942ac8111fdbaab3a0d0f6473fe6526edb12">Geometry::CUBE</a> - the unit cube </p>
 
 <p>Definition at line <a class="el" href="geom_8hpp_source.html#l00022">22</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a242844653d28499f6eaeb3e60616b942"></a><!-- doxytag: member="Geometry::Type" ref="a242844653d28499f6eaeb3e60616b942" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classGeometry.html#a242844653d28499f6eaeb3e60616b942">Geometry::Type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a242844653d28499f6eaeb3e60616b942a410b024c33dddc256cde201aa4a29309"></a><!-- doxytag: member="POINT" ref="a242844653d28499f6eaeb3e60616b942a410b024c33dddc256cde201aa4a29309" args="" -->POINT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a242844653d28499f6eaeb3e60616b942aecc350b144d8875079df9d9b5edf3e71"></a><!-- doxytag: member="SEGMENT" ref="a242844653d28499f6eaeb3e60616b942aecc350b144d8875079df9d9b5edf3e71" args="" -->SEGMENT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a242844653d28499f6eaeb3e60616b942afc86149722fa2788c0e28612ac4cf26f"></a><!-- doxytag: member="TRIANGLE" ref="a242844653d28499f6eaeb3e60616b942afc86149722fa2788c0e28612ac4cf26f" args="" -->TRIANGLE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a242844653d28499f6eaeb3e60616b942ad3f2f72cd796b2f9ce061629986a3096"></a><!-- doxytag: member="SQUARE" ref="a242844653d28499f6eaeb3e60616b942ad3f2f72cd796b2f9ce061629986a3096" args="" -->SQUARE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a242844653d28499f6eaeb3e60616b942acf5234aa19902300904058fd597f522f"></a><!-- doxytag: member="TETRAHEDRON" ref="a242844653d28499f6eaeb3e60616b942acf5234aa19902300904058fd597f522f" args="" -->TETRAHEDRON</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a242844653d28499f6eaeb3e60616b942ac8111fdbaab3a0d0f6473fe6526edb12"></a><!-- doxytag: member="CUBE" ref="a242844653d28499f6eaeb3e60616b942ac8111fdbaab3a0d0f6473fe6526edb12" args="" -->CUBE</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00025">25</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4c301c163c63d21ed08c17b0f4e131d3"></a><!-- doxytag: member="Geometry::Geometry" ref="a4c301c163c63d21ed08c17b0f4e131d3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Geometry::Geometry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00014">14</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8cpp_source.html#l01159">CalcInverse()</a>, <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="geom_8hpp_source.html#l00033">GeomCenter</a>, <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="geom_8cpp_source.html#l00180">GetPerfPointMat()</a>, <a class="el" href="eltrans_8hpp_source.html#l00055">IsoparametricTransformation::GetPointMat()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="eltrans_8cpp_source.html#l00016">IsoparametricTransformation::Jacobian()</a>, <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>, <a class="el" href="geom_8hpp_source.html#l00025">POINT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="eltrans_8hpp_source.html#l00054">IsoparametricTransformation::SetFE()</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::z</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad55e832122ab3a2833dcaa6507867678"></a><!-- doxytag: member="Geometry::~Geometry" ref="ad55e832122ab3a2833dcaa6507867678" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Geometry::~Geometry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00154">154</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="geom_8hpp_source.html#l00027">NumGeom</a>, and <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aaa919e8cd6baac67ec0898f4d7fadc26"></a><!-- doxytag: member="Geometry::GetCenter" ref="aaa919e8cd6baac67ec0898f4d7fadc26" args="(int GeomType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a>&amp; Geometry::GetCenter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00043">43</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00033">GeomCenter</a>.</p>
+
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l03645">Mesh::CheckDisplacements()</a>, and <a class="el" href="mesh_8cpp_source.html#l00024">Mesh::GetElementJacobian()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adea91bccc970393cb7caba0f3a670ba5"></a><!-- doxytag: member="Geometry::GetPerfPointMat" ref="adea91bccc970393cb7caba0f3a670ba5" args="(int GeomType, DenseMatrix &amp;pm)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Geometry::GetPerfPointMat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00180">180</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, and <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>.</p>
+
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4407e25da37e80f210318cffa972836c"></a><!-- doxytag: member="Geometry::GetVertices" ref="a4407e25da37e80f210318cffa972836c" args="(int GeomType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classIntegrationRule.html">IntegrationRule</a> * Geometry::GetVertices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00163">163</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="geom_8hpp_source.html#l00025">POINT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, and <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>.</p>
+
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l00324">Mesh::GetLocalQuadToHexTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00274">Mesh::GetLocalSegToQuadTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00252">Mesh::GetLocalSegToTriTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00296">Mesh::GetLocalTriToTetTransformation()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00085">GridFunction::GetNodalValues()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00434">GridFunction::GetVectorFieldNodalValues()</a>, and <a class="el" href="mesh_8cpp_source.html#l05867">Mesh::PrintVTK()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cd48d9fe088b1eb0074cd60b80b5e31"></a><!-- doxytag: member="Geometry::JacToPerfJac" ref="a2cd48d9fe088b1eb0074cd60b80b5e31" args="(int GeomType, const DenseMatrix &amp;J, DenseMatrix &amp;PJ) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Geometry::JacToPerfJac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>J</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>PJ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00241">241</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+<p>References <a class="el" href="table_8cpp_source.html#l00291">Mult()</a>, and <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>.</p>
+
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l00024">Mesh::GetElementJacobian()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e71ae8511299890efef9d692dd7f881"></a><!-- doxytag: member="Geometry::NumBdr" ref="a4e71ae8511299890efef9d692dd7f881" args="(int GeomType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Geometry::NumBdr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00050">50</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00029">NumBdrArray</a>.</p>
+
+<p>Referenced by <a class="el" href="gridfunc_8cpp_source.html#l01378">GridFunction::SaveSTL()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a60f1f9ec84494131c75465014d28df78"></a><!-- doxytag: member="Geometry::GeomCenter" ref="a60f1f9ec84494131c75465014d28df78" args="[NumGeom]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> <a class="el" href="classGeometry.html#a60f1f9ec84494131c75465014d28df78">Geometry::GeomCenter</a>[<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00033">33</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>, and <a class="el" href="geom_8hpp_source.html#l00043">GetCenter()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed97b0498bb1feb66784274709902e3a"></a><!-- doxytag: member="Geometry::GeomVert" ref="aed97b0498bb1feb66784274709902e3a" args="[NumGeom]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIntegrationRule.html">IntegrationRule</a>* <a class="el" href="classGeometry.html#aed97b0498bb1feb66784274709902e3a">Geometry::GeomVert</a>[<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00032">32</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>, <a class="el" href="geom_8cpp_source.html#l00163">GetVertices()</a>, and <a class="el" href="geom_8cpp_source.html#l00154">~Geometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafbebec38a437426b32787da94476ef4"></a><!-- doxytag: member="Geometry::NumBdrArray" ref="aafbebec38a437426b32787da94476ef4" args="[]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classGeometry.html#aafbebec38a437426b32787da94476ef4">Geometry::NumBdrArray</a> = { 0, 2, 3, 4, 4, 6 }<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00029">29</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="geom_8hpp_source.html#l00050">NumBdr()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4870c28e4f60c47008a245d4961e2479"></a><!-- doxytag: member="Geometry::NumGeom" ref="a4870c28e4f60c47008a245d4961e2479" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">Geometry::NumGeom</a> = 6<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00027">27</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00261">GeometryRefiner::GeometryRefiner()</a>, <a class="el" href="geom_8cpp_source.html#l00154">~Geometry()</a>, and <a class="el" href="geom_8cpp_source.html#l00270">GeometryRefiner::~GeometryRefiner()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a980b428e3b7a113bfd5d95cdc9f7345b"></a><!-- doxytag: member="Geometry::PerfGeomToGeomJac" ref="a980b428e3b7a113bfd5d95cdc9f7345b" args="[NumGeom]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>* <a class="el" href="classGeometry.html#a980b428e3b7a113bfd5d95cdc9f7345b">Geometry::PerfGeomToGeomJac</a>[<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00034">34</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>, <a class="el" href="geom_8cpp_source.html#l00241">JacToPerfJac()</a>, and <a class="el" href="geom_8cpp_source.html#l00154">~Geometry()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="geom_8hpp_source.html">geom.hpp</a></li>
 <li><a class="el" href="geom_8cpp_source.html">geom.cpp</a></li>
 </ul>
@@ -124,7 +426,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>NumBdrArr
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -133,7 +435,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>NumBdrArr
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

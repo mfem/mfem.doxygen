@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lininteg.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="lininteg_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -89,22 +90,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00024"></a>00024    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classLinearFormIntegrator.html#aec810d793069ed72a610d2a5d9262861">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00025"></a>00025                                        <a class="code" href="classFaceElementTransformations.html">FaceElementTransformations</a> &amp;Tr,
 <a name="l00026"></a>00026                                        <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;elvect);
-<a name="l00027"></a>00027    <span class="keyword">virtual</span> ~<a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>() { };
+<a name="l00027"></a><a class="code" href="classLinearFormIntegrator.html#a0f1f834fbfb2e49baaa53fc9225330b0">00027</a>    <span class="keyword">virtual</span> <a class="code" href="classLinearFormIntegrator.html#a0f1f834fbfb2e49baaa53fc9225330b0">~LinearFormIntegrator</a>() { };
 <a name="l00028"></a>00028 };
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
 <a name="l00032"></a><a class="code" href="classDomainLFIntegrator.html">00032</a> <span class="keyword">class </span><a class="code" href="classDomainLFIntegrator.html" title="Class for domain integration L(v) := (f, v)">DomainLFIntegrator</a> : <span class="keyword">public</span> <a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>
 <a name="l00033"></a>00033 {
-<a name="l00034"></a>00034    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> shape;
-<a name="l00035"></a>00035    <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;Q;
-<a name="l00036"></a>00036    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *IntRule;
-<a name="l00037"></a>00037    <span class="keywordtype">int</span> oa, ob;
+<a name="l00034"></a><a class="code" href="classDomainLFIntegrator.html#aecb396095c93c4109a1182bb9d9932f5">00034</a>    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> <a class="code" href="classDomainLFIntegrator.html#aecb396095c93c4109a1182bb9d9932f5">shape</a>;
+<a name="l00035"></a><a class="code" href="classDomainLFIntegrator.html#a4de1079963b469a064b2b65dd39e32c8">00035</a>    <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;<a class="code" href="classDomainLFIntegrator.html#a4de1079963b469a064b2b65dd39e32c8">Q</a>;
+<a name="l00036"></a><a class="code" href="classDomainLFIntegrator.html#a73ff386b2640947cca1e4d1deac843ef">00036</a>    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *<a class="code" href="classDomainLFIntegrator.html#a73ff386b2640947cca1e4d1deac843ef">IntRule</a>;
+<a name="l00037"></a><a class="code" href="classDomainLFIntegrator.html#af95e4da25a285f8fb4303e314082f830">00037</a>    <span class="keywordtype">int</span> <a class="code" href="classDomainLFIntegrator.html#aa3d8bde4a99acc9e8f625a028655a47f">oa</a>, <a class="code" href="classDomainLFIntegrator.html#af95e4da25a285f8fb4303e314082f830">ob</a>;
 <a name="l00038"></a>00038 <span class="keyword">public</span>:
 <a name="l00040"></a><a class="code" href="classDomainLFIntegrator.html#a3e7529965b06c4ed8b50457c5e2cd77b">00040</a>    <a class="code" href="classDomainLFIntegrator.html#a3e7529965b06c4ed8b50457c5e2cd77b" title="Constructs a domain integrator with a given Coefficient.">DomainLFIntegrator</a>(<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;QF, <span class="keywordtype">int</span> a = 1, <span class="keywordtype">int</span> b = 1)
-<a name="l00041"></a>00041       : Q(QF), oa(a), ob(b) { IntRule = NULL; }
+<a name="l00041"></a>00041       : <a class="code" href="classDomainLFIntegrator.html#a4de1079963b469a064b2b65dd39e32c8">Q</a>(QF), <a class="code" href="classDomainLFIntegrator.html#aa3d8bde4a99acc9e8f625a028655a47f">oa</a>(a), <a class="code" href="classDomainLFIntegrator.html#af95e4da25a285f8fb4303e314082f830">ob</a>(b) { <a class="code" href="classDomainLFIntegrator.html#a73ff386b2640947cca1e4d1deac843ef">IntRule</a> = NULL; }
 <a name="l00042"></a>00042 
 <a name="l00044"></a><a class="code" href="classDomainLFIntegrator.html#ab95cb9e2da1afeaf74bd9b9690b8f913">00044</a>    <a class="code" href="classDomainLFIntegrator.html#a3e7529965b06c4ed8b50457c5e2cd77b" title="Constructs a domain integrator with a given Coefficient.">DomainLFIntegrator</a>(<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;QF, <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *ir)
-<a name="l00045"></a>00045       : Q(QF), oa(1), ob(1) { IntRule = ir; }
+<a name="l00045"></a>00045       : <a class="code" href="classDomainLFIntegrator.html#a4de1079963b469a064b2b65dd39e32c8">Q</a>(QF), <a class="code" href="classDomainLFIntegrator.html#aa3d8bde4a99acc9e8f625a028655a47f">oa</a>(1), <a class="code" href="classDomainLFIntegrator.html#af95e4da25a285f8fb4303e314082f830">ob</a>(1) { <a class="code" href="classDomainLFIntegrator.html#a73ff386b2640947cca1e4d1deac843ef">IntRule</a> = ir; }
 <a name="l00046"></a>00046 
 <a name="l00049"></a>00049    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classDomainLFIntegrator.html#aa3fd95da5907e460dc6cee9a472f5791">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00050"></a>00050                                        <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr,
@@ -115,12 +116,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00055"></a>00055 
 <a name="l00057"></a><a class="code" href="classBoundaryLFIntegrator.html">00057</a> <span class="keyword">class </span><a class="code" href="classBoundaryLFIntegrator.html" title="Class for boundary integration L(v) := (g, v)">BoundaryLFIntegrator</a> : <span class="keyword">public</span> <a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>
 <a name="l00058"></a>00058 {
-<a name="l00059"></a>00059    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> shape;
-<a name="l00060"></a>00060    <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;Q;
-<a name="l00061"></a>00061    <span class="keywordtype">int</span> oa, ob;
+<a name="l00059"></a><a class="code" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">00059</a>    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> <a class="code" href="classBoundaryLFIntegrator.html#a43dea58b5e4c362aeed4a57e2143b1ba">shape</a>;
+<a name="l00060"></a><a class="code" href="classBoundaryLFIntegrator.html#a626b741ed346999a3aed921680173a85">00060</a>    <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;<a class="code" href="classBoundaryLFIntegrator.html#a626b741ed346999a3aed921680173a85">Q</a>;
+<a name="l00061"></a><a class="code" href="classBoundaryLFIntegrator.html#aad05167ad4d37ddc4e5fcf9254ad82ec">00061</a>    <span class="keywordtype">int</span> <a class="code" href="classBoundaryLFIntegrator.html#a7f40d189c68afb13232e7e16f362d1f5">oa</a>, <a class="code" href="classBoundaryLFIntegrator.html#aad05167ad4d37ddc4e5fcf9254ad82ec">ob</a>;
 <a name="l00062"></a>00062 <span class="keyword">public</span>:
 <a name="l00064"></a><a class="code" href="classBoundaryLFIntegrator.html#a46618f3c0957e1b601c1f3888b40817f">00064</a>    <a class="code" href="classBoundaryLFIntegrator.html#a46618f3c0957e1b601c1f3888b40817f" title="Constructs a boundary integrator with a given Coefficient QG.">BoundaryLFIntegrator</a>(<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;QG, <span class="keywordtype">int</span> a = 1, <span class="keywordtype">int</span> b = 1)
-<a name="l00065"></a>00065       : Q(QG), oa(a), ob(b) {};
+<a name="l00065"></a>00065       : <a class="code" href="classBoundaryLFIntegrator.html#a626b741ed346999a3aed921680173a85">Q</a>(QG), <a class="code" href="classBoundaryLFIntegrator.html#a7f40d189c68afb13232e7e16f362d1f5">oa</a>(a), <a class="code" href="classBoundaryLFIntegrator.html#aad05167ad4d37ddc4e5fcf9254ad82ec">ob</a>(b) {};
 <a name="l00066"></a>00066 
 <a name="l00069"></a>00069    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBoundaryLFIntegrator.html#afc25ca942f01cd749d91b9534bd2dab8">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00070"></a>00070                                        <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr,
@@ -132,11 +133,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00078"></a><a class="code" href="classVectorDomainLFIntegrator.html">00078</a> <span class="keyword">class </span><a class="code" href="classVectorDomainLFIntegrator.html">VectorDomainLFIntegrator</a> : <span class="keyword">public</span> <a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>
 <a name="l00079"></a>00079 {
 <a name="l00080"></a>00080 <span class="keyword">private</span>:
-<a name="l00081"></a>00081    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> shape, Qvec;
-<a name="l00082"></a>00082    <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;Q;
+<a name="l00081"></a><a class="code" href="classVectorDomainLFIntegrator.html#aa2baf49a577b43d918ba08bad9fdbe41">00081</a>    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> <a class="code" href="classVectorDomainLFIntegrator.html#aa2baf49a577b43d918ba08bad9fdbe41">shape</a>, <a class="code" href="classVectorDomainLFIntegrator.html#add901c78642dc142a9ce16f909b8e808">Qvec</a>;
+<a name="l00082"></a><a class="code" href="classVectorDomainLFIntegrator.html#ad73f54f1ab2e99b06c43b423cb2adb3d">00082</a>    <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;<a class="code" href="classVectorDomainLFIntegrator.html#ad73f54f1ab2e99b06c43b423cb2adb3d">Q</a>;
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084 <span class="keyword">public</span>:
-<a name="l00086"></a><a class="code" href="classVectorDomainLFIntegrator.html#af48afb7547ee3b1292b5b70d368fb42f">00086</a>    <a class="code" href="classVectorDomainLFIntegrator.html#af48afb7547ee3b1292b5b70d368fb42f" title="Constructs a domain integrator with a given VectorCoefficient.">VectorDomainLFIntegrator</a>(<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QF) : Q(QF) {};
+<a name="l00086"></a><a class="code" href="classVectorDomainLFIntegrator.html#af48afb7547ee3b1292b5b70d368fb42f">00086</a>    <a class="code" href="classVectorDomainLFIntegrator.html#af48afb7547ee3b1292b5b70d368fb42f" title="Constructs a domain integrator with a given VectorCoefficient.">VectorDomainLFIntegrator</a>(<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QF) : <a class="code" href="classVectorDomainLFIntegrator.html#ad73f54f1ab2e99b06c43b423cb2adb3d">Q</a>(QF) {};
 <a name="l00087"></a>00087 
 <a name="l00090"></a>00090    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVectorDomainLFIntegrator.html#a82be01a4bd0471800e04f0e929da45b0">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00091"></a>00091                                        <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr,
@@ -148,11 +149,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00099"></a><a class="code" href="classVectorBoundaryLFIntegrator.html">00099</a> <span class="keyword">class </span><a class="code" href="classVectorBoundaryLFIntegrator.html">VectorBoundaryLFIntegrator</a> : <span class="keyword">public</span> <a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>
 <a name="l00100"></a>00100 {
 <a name="l00101"></a>00101 <span class="keyword">private</span>:
-<a name="l00102"></a>00102    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> shape, vec;
-<a name="l00103"></a>00103    <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;Q;
+<a name="l00102"></a><a class="code" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">00102</a>    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> <a class="code" href="classVectorBoundaryLFIntegrator.html#a181fd09688920aafba0fc383bf5005ab">shape</a>, <a class="code" href="classVectorBoundaryLFIntegrator.html#a3801b3ba5ddf04e6b25acef14a972c7d">vec</a>;
+<a name="l00103"></a><a class="code" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">00103</a>    <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;<a class="code" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">Q</a>;
 <a name="l00104"></a>00104 
 <a name="l00105"></a>00105 <span class="keyword">public</span>:
-<a name="l00107"></a><a class="code" href="classVectorBoundaryLFIntegrator.html#a080f8a86f9349132af8d312bb724b4a3">00107</a>    <a class="code" href="classVectorBoundaryLFIntegrator.html#a080f8a86f9349132af8d312bb724b4a3" title="Constructs a boundary integrator with a given VectorCoefficient QG.">VectorBoundaryLFIntegrator</a>(<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QG) : Q(QG) {};
+<a name="l00107"></a><a class="code" href="classVectorBoundaryLFIntegrator.html#a080f8a86f9349132af8d312bb724b4a3">00107</a>    <a class="code" href="classVectorBoundaryLFIntegrator.html#a080f8a86f9349132af8d312bb724b4a3" title="Constructs a boundary integrator with a given VectorCoefficient QG.">VectorBoundaryLFIntegrator</a>(<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QG) : <a class="code" href="classVectorBoundaryLFIntegrator.html#aabd33429e41b635dc0b9a153c9583262">Q</a>(QG) {};
 <a name="l00108"></a>00108 
 <a name="l00111"></a>00111    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVectorBoundaryLFIntegrator.html#ae02a1bd878501d693e7646a07aeeb018">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00112"></a>00112                                        <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr,
@@ -164,12 +165,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00119"></a><a class="code" href="classVectorFEDomainLFIntegrator.html">00119</a> <span class="keyword">class </span><a class="code" href="classVectorFEDomainLFIntegrator.html" title=" for VectorFiniteElements (Nedelec, Raviart-Thomas)">VectorFEDomainLFIntegrator</a> : <span class="keyword">public</span> <a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>
 <a name="l00120"></a>00120 {
 <a name="l00121"></a>00121 <span class="keyword">private</span>:
-<a name="l00122"></a>00122    <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;QF;
-<a name="l00123"></a>00123    <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> vshape;
-<a name="l00124"></a>00124    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> vec;
+<a name="l00122"></a><a class="code" href="classVectorFEDomainLFIntegrator.html#af3df5c3a9876e8200f9cd74d7aeb04c4">00122</a>    <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;<a class="code" href="classVectorFEDomainLFIntegrator.html#af3df5c3a9876e8200f9cd74d7aeb04c4">QF</a>;
+<a name="l00123"></a><a class="code" href="classVectorFEDomainLFIntegrator.html#ada89fe39a087916a279ffb4e2170aeb8">00123</a>    <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> <a class="code" href="classVectorFEDomainLFIntegrator.html#ada89fe39a087916a279ffb4e2170aeb8">vshape</a>;
+<a name="l00124"></a><a class="code" href="classVectorFEDomainLFIntegrator.html#a274de5f7355277caac816c37518d87e7">00124</a>    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> <a class="code" href="classVectorFEDomainLFIntegrator.html#a274de5f7355277caac816c37518d87e7">vec</a>;
 <a name="l00125"></a>00125 
 <a name="l00126"></a>00126 <span class="keyword">public</span>:
-<a name="l00127"></a>00127    <a class="code" href="classVectorFEDomainLFIntegrator.html" title=" for VectorFiniteElements (Nedelec, Raviart-Thomas)">VectorFEDomainLFIntegrator</a> (<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;F) : QF(F) { }
+<a name="l00127"></a><a class="code" href="classVectorFEDomainLFIntegrator.html#a7fe4abbf9f0401f39f5ad43630e9fcc3">00127</a>    <a class="code" href="classVectorFEDomainLFIntegrator.html#a7fe4abbf9f0401f39f5ad43630e9fcc3">VectorFEDomainLFIntegrator</a> (<a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;F) : <a class="code" href="classVectorFEDomainLFIntegrator.html#af3df5c3a9876e8200f9cd74d7aeb04c4">QF</a>(F) { }
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVectorFEDomainLFIntegrator.html#a21f6692fea215964d76ec6dd1cef94e9">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00130"></a>00130                                        <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr,
@@ -182,14 +183,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00140"></a><a class="code" href="classVectorBoundaryFluxLFIntegrator.html">00140</a> <span class="keyword">class </span><a class="code" href="classVectorBoundaryFluxLFIntegrator.html">VectorBoundaryFluxLFIntegrator</a> : <span class="keyword">public</span> <a class="code" href="classLinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator.">LinearFormIntegrator</a>
 <a name="l00141"></a>00141 {
 <a name="l00142"></a>00142 <span class="keyword">private</span>:
-<a name="l00143"></a>00143    <span class="keywordtype">double</span> Sign;
-<a name="l00144"></a>00144    <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> *F;
-<a name="l00145"></a>00145    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> shape, nor;
-<a name="l00146"></a>00146    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *IntRule;
+<a name="l00143"></a><a class="code" href="classVectorBoundaryFluxLFIntegrator.html#acd9dc19f85ec77e67a7a340c52c0f777">00143</a>    <span class="keywordtype">double</span> <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#acd9dc19f85ec77e67a7a340c52c0f777">Sign</a>;
+<a name="l00144"></a><a class="code" href="classVectorBoundaryFluxLFIntegrator.html#ab225db4acb356e02ec121bbce80470b8">00144</a>    <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> *<a class="code" href="classVectorBoundaryFluxLFIntegrator.html#ab225db4acb356e02ec121bbce80470b8">F</a>;
+<a name="l00145"></a><a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a22fb3a7387714d746374ad47b1db7a63">00145</a>    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a22fb3a7387714d746374ad47b1db7a63">shape</a>, <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#aec6880b1cc12d189400b8b66b325bbe9">nor</a>;
+<a name="l00146"></a><a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a4c1075490995ec582d24187e163f6dfb">00146</a>    <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *<a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a4c1075490995ec582d24187e163f6dfb">IntRule</a>;
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148 <span class="keyword">public</span>:
-<a name="l00149"></a>00149    <a class="code" href="classVectorBoundaryFluxLFIntegrator.html">VectorBoundaryFluxLFIntegrator</a> (<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;f, <span class="keywordtype">double</span> s = 1.0, <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *ir = NULL)
-<a name="l00150"></a>00150       : Sign(s), F(&amp;f), IntRule(ir) { };
+<a name="l00149"></a><a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a09fc3683bed02d42347de048f455af92">00149</a>    <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a09fc3683bed02d42347de048f455af92">VectorBoundaryFluxLFIntegrator</a> (<a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;f, <span class="keywordtype">double</span> s = 1.0, <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *ir = NULL)
+<a name="l00150"></a>00150       : <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#acd9dc19f85ec77e67a7a340c52c0f777">Sign</a>(s), <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#ab225db4acb356e02ec121bbce80470b8">F</a>(&amp;f), <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#a4c1075490995ec582d24187e163f6dfb">IntRule</a>(ir) { };
 <a name="l00151"></a>00151 
 <a name="l00152"></a>00152    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVectorBoundaryFluxLFIntegrator.html#ac436ba61ef8902416db10c83430ffb4a">AssembleRHSElementVect</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> &amp;el,
 <a name="l00153"></a>00153                                        <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr,
@@ -206,7 +207,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -215,7 +216,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

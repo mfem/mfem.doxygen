@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">GridFunctionCoefficient Class Reference</div>  </div>
 </div>
@@ -87,10 +88,12 @@ Collaboration diagram for GridFunctionCoefficient:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridFunctionCoefficient.html#a285904beefef576073ca9122381394b8">GridFunctionCoefficient</a> (<a class="el" href="classGridFunction.html">GridFunction</a> *gf, int comp=1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa69020ee457e3bbe3ae91c42d697b435"></a><!-- doxytag: member="GridFunctionCoefficient::Eval" ref="aa69020ee457e3bbe3ae91c42d697b435" args="(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)" -->
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>Eval</b> (<a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af18331c53baaf66c521d8c58ebb3e69a"></a><!-- doxytag: member="GridFunctionCoefficient::Read" ref="af18331c53baaf66c521d8c58ebb3e69a" args="(istream &amp;in)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (istream &amp;in)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridFunctionCoefficient.html#aa69020ee457e3bbe3ae91c42d697b435">Eval</a> (<a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridFunctionCoefficient.html#af18331c53baaf66c521d8c58ebb3e69a">Read</a> (istream &amp;in)</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGridFunction.html">GridFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridFunctionCoefficient.html#a7dbf7d15e29768eb5884782a50f634cf">GridF</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridFunctionCoefficient.html#a77ffbf3824757eada2920bab11037bd9">Component</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> defined by a <a class="el" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a>; This coefficient is mesh dependent. </p>
@@ -125,6 +128,100 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (ist
 
 <p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00112">112</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
+<p>References <a class="el" href="coefficient_8hpp_source.html#l00106">Component</a>, and <a class="el" href="coefficient_8hpp_source.html#l00105">GridF</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa69020ee457e3bbe3ae91c42d697b435"></a><!-- doxytag: member="GridFunctionCoefficient::Eval" ref="aa69020ee457e3bbe3ae91c42d697b435" args="(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double GridFunctionCoefficient::Eval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Coefficient</a>.</p>
+
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00043">43</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+
+<p>References <a class="el" href="coefficient_8hpp_source.html#l00106">Component</a>, <a class="el" href="eltrans_8hpp_source.html#l00023">ElementTransformation::ElementNo</a>, and <a class="el" href="coefficient_8hpp_source.html#l00105">GridF</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af18331c53baaf66c521d8c58ebb3e69a"></a><!-- doxytag: member="GridFunctionCoefficient::Read" ref="af18331c53baaf66c521d8c58ebb3e69a" args="(istream &amp;in)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GridFunctionCoefficient::Read </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classCoefficient.html#aa84af8c639361ebc81193d2496619be4">Coefficient</a>.</p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00118">118</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+<p>References <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a77ffbf3824757eada2920bab11037bd9"></a><!-- doxytag: member="GridFunctionCoefficient::Component" ref="a77ffbf3824757eada2920bab11037bd9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classGridFunctionCoefficient.html#a77ffbf3824757eada2920bab11037bd9">GridFunctionCoefficient::Component</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00106">106</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="coefficient_8cpp_source.html#l00043">Eval()</a>, and <a class="el" href="coefficient_8hpp_source.html#l00112">GridFunctionCoefficient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7dbf7d15e29768eb5884782a50f634cf"></a><!-- doxytag: member="GridFunctionCoefficient::GridF" ref="a7dbf7d15e29768eb5884782a50f634cf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGridFunction.html">GridFunction</a>* <a class="el" href="classGridFunctionCoefficient.html#a7dbf7d15e29768eb5884782a50f634cf">GridFunctionCoefficient::GridF</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00105">105</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="coefficient_8cpp_source.html#l00043">Eval()</a>, and <a class="el" href="coefficient_8hpp_source.html#l00112">GridFunctionCoefficient()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -137,7 +234,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (ist
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -146,7 +243,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (ist
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

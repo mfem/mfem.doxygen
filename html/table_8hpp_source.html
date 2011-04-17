@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">table.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="table_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -82,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 <span class="preprocessor"></span>
 <a name="l00015"></a>00015 <span class="comment">// Data types for Table.</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;mem_alloc.hpp&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="mem__alloc_8hpp.html">mem_alloc.hpp</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00022"></a><a class="code" href="classTable.html">00022</a> <span class="keyword">class </span><a class="code" href="classTable.html">Table</a>
 <a name="l00023"></a>00023 {
@@ -90,22 +91,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00025"></a>00025 
 <a name="l00027"></a><a class="code" href="classTable.html#ac187aaf2e5d8b52fdad9e4ce3403b099">00027</a>    <span class="keywordtype">int</span> <a class="code" href="classTable.html#ac187aaf2e5d8b52fdad9e4ce3403b099" title="size is the number of TYPE I elements.">size</a>;
 <a name="l00028"></a>00028 
-<a name="l00032"></a><a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">00032</a>    <span class="keywordtype">int</span> *<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>, *J;
+<a name="l00032"></a><a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">00032</a>    <span class="keywordtype">int</span> *<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>, *<a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00036"></a><a class="code" href="classTable.html#a049f2e06391781ae255c6698869c4ad1">00036</a>    <a class="code" href="classTable.html#a049f2e06391781ae255c6698869c4ad1" title="Creates an empty table.">Table</a>() { <a class="code" href="classTable.html#ac187aaf2e5d8b52fdad9e4ce3403b099" title="size is the number of TYPE I elements.">size</a> = -1; <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a> = J = NULL; }
+<a name="l00036"></a><a class="code" href="classTable.html#a049f2e06391781ae255c6698869c4ad1">00036</a>    <a class="code" href="classTable.html#a049f2e06391781ae255c6698869c4ad1" title="Creates an empty table.">Table</a>() { <a class="code" href="classTable.html#ac187aaf2e5d8b52fdad9e4ce3403b099" title="size is the number of TYPE I elements.">size</a> = -1; <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a> = <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a> = NULL; }
 <a name="l00037"></a>00037 
 <a name="l00039"></a>00039    <a class="code" href="classTable.html#a049f2e06391781ae255c6698869c4ad1" title="Creates an empty table.">Table</a> (<span class="keywordtype">int</span> dim, <span class="keywordtype">int</span> connections_per_row = 3);
 <a name="l00040"></a>00040 
 <a name="l00043"></a>00043    <a class="code" href="classTable.html#a049f2e06391781ae255c6698869c4ad1" title="Creates an empty table.">Table</a> (<span class="keywordtype">int</span> nrows, <span class="keywordtype">int</span> *partitioning);
 <a name="l00044"></a>00044 
 <a name="l00046"></a>00046    <span class="keywordtype">void</span> <a class="code" href="classTable.html#a75289f7cdb7ed235541ee750859020c6" title="Next 7 methods are used together with the default constructor.">MakeI</a> (<span class="keywordtype">int</span> nrows);
-<a name="l00047"></a>00047    <span class="keywordtype">void</span> AddAColumnInRow (<span class="keywordtype">int</span> r) { <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[r]++; }
-<a name="l00048"></a>00048    <span class="keywordtype">void</span> AddColumnsInRow (<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> ncol) { <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[r] += ncol; }
-<a name="l00049"></a>00049    <span class="keywordtype">void</span> MakeJ();
-<a name="l00050"></a>00050    <span class="keywordtype">void</span> AddConnection (<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c) { J[<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[r]++] = c; }
-<a name="l00051"></a>00051    <span class="keywordtype">void</span> AddConnections (<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> *c, <span class="keywordtype">int</span> nc);
-<a name="l00052"></a>00052    <span class="keywordtype">void</span> ShiftUpI();
+<a name="l00047"></a><a class="code" href="classTable.html#acb4c276355a9316e8b9e51ec5dca8605">00047</a>    <span class="keywordtype">void</span> <a class="code" href="classTable.html#acb4c276355a9316e8b9e51ec5dca8605">AddAColumnInRow</a> (<span class="keywordtype">int</span> r) { <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[r]++; }
+<a name="l00048"></a><a class="code" href="classTable.html#a1e626fa0acf9c2f5c6304827cf322d36">00048</a>    <span class="keywordtype">void</span> <a class="code" href="classTable.html#a1e626fa0acf9c2f5c6304827cf322d36">AddColumnsInRow</a> (<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> ncol) { <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[r] += ncol; }
+<a name="l00049"></a>00049    <span class="keywordtype">void</span> <a class="code" href="classTable.html#a95e0e7ae9aeb7b3bd3fb4b9e1a213fa4">MakeJ</a>();
+<a name="l00050"></a><a class="code" href="classTable.html#ac5e7a9c9727ac3dec7d4e1953879b311">00050</a>    <span class="keywordtype">void</span> <a class="code" href="classTable.html#ac5e7a9c9727ac3dec7d4e1953879b311">AddConnection</a> (<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c) { <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a>[<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[r]++] = c; }
+<a name="l00051"></a>00051    <span class="keywordtype">void</span> <a class="code" href="classTable.html#ad0bc0a43ad307cd2d6d6bfe57ecd6d04">AddConnections</a> (<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> *c, <span class="keywordtype">int</span> nc);
+<a name="l00052"></a>00052    <span class="keywordtype">void</span> <a class="code" href="classTable.html#a5fe0c074ae63dfca5e4272c24a85da3e">ShiftUpI</a>();
 <a name="l00053"></a>00053 
 <a name="l00055"></a>00055    <span class="keywordtype">void</span> <a class="code" href="classTable.html#adc83dc5cc639d0b6f7a01f030a886eb9" title="Set the size and the number of connections for the table.">SetSize</a>(<span class="keywordtype">int</span> dim, <span class="keywordtype">int</span> connections_per_row);
 <a name="l00056"></a>00056 
@@ -119,17 +120,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00074"></a>00074 
 <a name="l00076"></a>00076    <span class="keywordtype">void</span> <a class="code" href="classTable.html#afc7bf4d8b63073f7283268191fe5760e" title="Return row i in array row (the Table must be finalized)">GetRow</a>(<span class="keywordtype">int</span> i, <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;row) <span class="keyword">const</span>;
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078    <span class="keywordtype">int</span> RowSize(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i+1]-<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i]; }
+<a name="l00078"></a><a class="code" href="classTable.html#aa545ece6d05545a66cf42810e158c489">00078</a>    <span class="keywordtype">int</span> <a class="code" href="classTable.html#aa545ece6d05545a66cf42810e158c489">RowSize</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i+1]-<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i]; }
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080    <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classTable.html#afc7bf4d8b63073f7283268191fe5760e" title="Return row i in array row (the Table must be finalized)">GetRow</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> J+<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i]; }
-<a name="l00081"></a>00081    <span class="keywordtype">int</span> *<a class="code" href="classTable.html#afc7bf4d8b63073f7283268191fe5760e" title="Return row i in array row (the Table must be finalized)">GetRow</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> J+<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i]; }
+<a name="l00080"></a><a class="code" href="classTable.html#a1e4c0eee4b8e3c8ba1c418a8fd01812a">00080</a>    <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classTable.html#a1e4c0eee4b8e3c8ba1c418a8fd01812a">GetRow</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a>+<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i]; }
+<a name="l00081"></a><a class="code" href="classTable.html#aac59b2a7bf8688a580fc9cba53dcc488">00081</a>    <span class="keywordtype">int</span> *<a class="code" href="classTable.html#aac59b2a7bf8688a580fc9cba53dcc488">GetRow</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a>+<a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>[i]; }
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083    <span class="keywordtype">int</span> *GetI() { <span class="keywordflow">return</span> <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>; };
-<a name="l00084"></a>00084    <span class="keywordtype">int</span> *GetJ() { <span class="keywordflow">return</span> J; };
-<a name="l00085"></a>00085    <span class="keyword">const</span> <span class="keywordtype">int</span> *GetI()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>; };
-<a name="l00086"></a>00086    <span class="keyword">const</span> <span class="keywordtype">int</span> *GetJ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> J; };
+<a name="l00083"></a><a class="code" href="classTable.html#af3cf9697d71afed14f9b2997f7a5ee84">00083</a>    <span class="keywordtype">int</span> *<a class="code" href="classTable.html#af3cf9697d71afed14f9b2997f7a5ee84">GetI</a>() { <span class="keywordflow">return</span> <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>; };
+<a name="l00084"></a><a class="code" href="classTable.html#a3dc46885dc380faf9aabc62e23a55ba8">00084</a>    <span class="keywordtype">int</span> *<a class="code" href="classTable.html#a3dc46885dc380faf9aabc62e23a55ba8">GetJ</a>() { <span class="keywordflow">return</span> <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a>; };
+<a name="l00085"></a><a class="code" href="classTable.html#a0f67d31c945ed51958cdb276726701ff">00085</a>    <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classTable.html#a0f67d31c945ed51958cdb276726701ff">GetI</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a>; };
+<a name="l00086"></a><a class="code" href="classTable.html#ae19c840c390235db457d5908a4e19ca8">00086</a>    <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classTable.html#ae19c840c390235db457d5908a4e19ca8">GetJ</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a>; };
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088    <span class="keywordtype">void</span> SetIJ(<span class="keywordtype">int</span> *newI, <span class="keywordtype">int</span> *newJ, <span class="keywordtype">int</span> newsize = -1);
+<a name="l00088"></a>00088    <span class="keywordtype">void</span> <a class="code" href="classTable.html#a3190715349cf43a4b4ab887e1792db10">SetIJ</a>(<span class="keywordtype">int</span> *newI, <span class="keywordtype">int</span> *newJ, <span class="keywordtype">int</span> newsize = -1);
 <a name="l00089"></a>00089 
 <a name="l00095"></a>00095    <span class="keywordtype">int</span> <a class="code" href="classTable.html#ac8f525b9c1b24408517c13daee26ee9c">Push</a>( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j );
 <a name="l00096"></a>00096 
@@ -137,18 +138,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00103"></a>00103 
 <a name="l00105"></a>00105    <span class="keywordtype">int</span> <a class="code" href="classTable.html#a10dc3fb10b9fa6ea9d3f23d64883d5e7" title="Returns the number of TYPE II elements (after Finalize() is called).">Width</a>() <span class="keyword">const</span>;
 <a name="l00106"></a>00106 
-<a name="l00108"></a><a class="code" href="classTable.html#ac3e6b03978fc33333834a35ee569d923">00108</a>    <span class="keywordtype">void</span> <a class="code" href="classTable.html#ac3e6b03978fc33333834a35ee569d923" title="Call this if data has been stolen.">LoseData</a>() { <a class="code" href="classTable.html#ac187aaf2e5d8b52fdad9e4ce3403b099" title="size is the number of TYPE I elements.">size</a> = -1; <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a> = J = NULL; }
+<a name="l00108"></a><a class="code" href="classTable.html#ac3e6b03978fc33333834a35ee569d923">00108</a>    <span class="keywordtype">void</span> <a class="code" href="classTable.html#ac3e6b03978fc33333834a35ee569d923" title="Call this if data has been stolen.">LoseData</a>() { <a class="code" href="classTable.html#ac187aaf2e5d8b52fdad9e4ce3403b099" title="size is the number of TYPE I elements.">size</a> = -1; <a class="code" href="classTable.html#a5daea098d7c2ece5732671051aea7c80">I</a> = <a class="code" href="classTable.html#a447d441a92d7e4342df06fb1efcc688a">J</a> = NULL; }
 <a name="l00109"></a>00109 
 <a name="l00111"></a>00111    <span class="keywordtype">void</span> <a class="code" href="classTable.html#af85784aca3cf52ddd746640b09351761" title="Prints the table to stream out.">Print</a>(ostream &amp; out = cout, <span class="keywordtype">int</span> width = 4) <span class="keyword">const</span>;
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113    <span class="keywordtype">void</span> Save(ostream &amp; out) <span class="keyword">const</span>;
+<a name="l00113"></a>00113    <span class="keywordtype">void</span> <a class="code" href="classTable.html#aeeaa065280d4074926bbadbc95a2c338">Save</a>(ostream &amp; out) <span class="keyword">const</span>;
 <a name="l00114"></a>00114 
 <a name="l00116"></a>00116    <a class="code" href="classTable.html#a9a559f2e7beb37b511ee9f88873164f8" title="Destroys Table.">~Table</a>();
 <a name="l00117"></a>00117 };
 <a name="l00118"></a>00118 
-<a name="l00120"></a>00120 <span class="keywordtype">void</span> Transpose (<span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;A, <a class="code" href="classTable.html">Table</a> &amp;At, <span class="keywordtype">int</span> _ncols_A = -1);
+<a name="l00120"></a>00120 <span class="keywordtype">void</span> <a class="code" href="table_8cpp.html#aa2ebc1538c040bb6f74c4ad9ca623c5b" title="Transpose a Table.">Transpose</a> (<span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;A, <a class="code" href="classTable.html">Table</a> &amp;At, <span class="keywordtype">int</span> _ncols_A = -1);
 <a name="l00121"></a>00121 
-<a name="l00123"></a>00123 <span class="keywordtype">void</span> Mult (<span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;A, <span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;B, <a class="code" href="classTable.html">Table</a> &amp;C);
+<a name="l00123"></a>00123 <span class="keywordtype">void</span> <a class="code" href="table_8cpp.html#a640d9bfa0f77dd502a095e13431e1ab4" title="C = A * B (as boolean matrices)">Mult</a> (<span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;A, <span class="keyword">const</span> <a class="code" href="classTable.html">Table</a> &amp;B, <a class="code" href="classTable.html">Table</a> &amp;C);
 <a name="l00124"></a>00124 
 <a name="l00125"></a>00125 
 <a name="l00130"></a><a class="code" href="classSTable.html">00130</a> <span class="keyword">class </span><a class="code" href="classSTable.html">STable</a> : <span class="keyword">public</span> <a class="code" href="classTable.html">Table</a>
@@ -167,42 +168,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00153"></a><a class="code" href="classDSTable.html">00153</a> <span class="keyword">class </span><a class="code" href="classDSTable.html">DSTable</a>
 <a name="l00154"></a>00154 {
 <a name="l00155"></a>00155 <span class="keyword">private</span>:
-<a name="l00156"></a>00156    <span class="keyword">class </span>Node
+<a name="l00156"></a><a class="code" href="classDSTable_1_1Node.html">00156</a>    <span class="keyword">class </span><a class="code" href="classDSTable_1_1Node.html">Node</a>
 <a name="l00157"></a>00157    {
 <a name="l00158"></a>00158    <span class="keyword">public</span>:
-<a name="l00159"></a>00159       Node *Prev;
-<a name="l00160"></a>00160       <span class="keywordtype">int</span>  Column, Index;
+<a name="l00159"></a><a class="code" href="classDSTable_1_1Node.html#a693426504d84f214c153198b6990040b">00159</a>       <a class="code" href="classDSTable_1_1Node.html">Node</a> *<a class="code" href="classDSTable_1_1Node.html#a693426504d84f214c153198b6990040b">Prev</a>;
+<a name="l00160"></a><a class="code" href="classDSTable_1_1Node.html#ac37a65880ab83375e471ce9234ca7b8e">00160</a>       <span class="keywordtype">int</span>  <a class="code" href="classDSTable_1_1Node.html#a34077133e771070fa1ff7d0b0c24b573">Column</a>, <a class="code" href="classDSTable_1_1Node.html#ac37a65880ab83375e471ce9234ca7b8e">Index</a>;
 <a name="l00161"></a>00161    };
 <a name="l00162"></a>00162 
-<a name="l00163"></a>00163    <span class="keywordtype">int</span>  NumRows, NumEntries;
-<a name="l00164"></a>00164    Node **Rows;
+<a name="l00163"></a><a class="code" href="classDSTable.html#a77cd7b19da863d6a691a77493cedc072">00163</a>    <span class="keywordtype">int</span>  <a class="code" href="classDSTable.html#a77cd7b19da863d6a691a77493cedc072">NumRows</a>, <a class="code" href="classDSTable.html#ac04008aae7018df751bcba9c9052c125">NumEntries</a>;
+<a name="l00164"></a><a class="code" href="classDSTable.html#a7c3e87f49d24aba276857d4355ded48e">00164</a>    <a class="code" href="classDSTable_1_1Node.html">Node</a> **<a class="code" href="classDSTable.html#a7c3e87f49d24aba276857d4355ded48e">Rows</a>;
 <a name="l00165"></a>00165 <span class="preprocessor">#ifdef MFEM_USE_MEMALLOC</span>
 <a name="l00166"></a>00166 <span class="preprocessor"></span>   <a class="code" href="classMemAlloc.html">MemAlloc &lt;Node, 1024&gt;</a> NodesMem;
 <a name="l00167"></a>00167 <span class="preprocessor">#endif</span>
 <a name="l00168"></a>00168 <span class="preprocessor"></span>
-<a name="l00169"></a>00169    <span class="keywordtype">int</span> Push_(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c);
-<a name="l00170"></a>00170    <span class="keywordtype">int</span> Index(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c) <span class="keyword">const</span>;
+<a name="l00169"></a>00169    <span class="keywordtype">int</span> <a class="code" href="classDSTable.html#a7466c6ec9c0075f9472a9e79c2422c16">Push_</a>(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c);
+<a name="l00170"></a>00170    <span class="keywordtype">int</span> <a class="code" href="classDSTable.html#a69672c856de4a311cf28a943d0bf045d">Index</a>(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c) <span class="keyword">const</span>;
 <a name="l00171"></a>00171 
 <a name="l00172"></a>00172 <span class="keyword">public</span>:
-<a name="l00173"></a>00173    <a class="code" href="classDSTable.html">DSTable</a>(<span class="keywordtype">int</span> nrows);
-<a name="l00174"></a>00174    <span class="keywordtype">int</span> NumberOfRows()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(NumRows); }
-<a name="l00175"></a>00175    <span class="keywordtype">int</span> NumberOfEntries()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(NumEntries); }
-<a name="l00176"></a>00176    <span class="keywordtype">int</span> Push(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)
-<a name="l00177"></a>00177    { <span class="keywordflow">return</span>((a &lt;= b) ? Push_(a, b) : Push_(b, a)); }
-<a name="l00178"></a>00178    <span class="keywordtype">int</span> operator()(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)<span class="keyword"> const</span>
-<a name="l00179"></a>00179 <span class="keyword">   </span>{ <span class="keywordflow">return</span>((a &lt;= b) ? Index(a, b) : Index(b, a)); }
-<a name="l00180"></a>00180    ~<a class="code" href="classDSTable.html">DSTable</a>();
+<a name="l00173"></a>00173    <a class="code" href="classDSTable.html#a29a24edc9fc66352aff76ad54ed58a2f">DSTable</a>(<span class="keywordtype">int</span> nrows);
+<a name="l00174"></a><a class="code" href="classDSTable.html#aee87ec6f6b80a08f1f4d99f49673e21f">00174</a>    <span class="keywordtype">int</span> <a class="code" href="classDSTable.html#aee87ec6f6b80a08f1f4d99f49673e21f">NumberOfRows</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(<a class="code" href="classDSTable.html#a77cd7b19da863d6a691a77493cedc072">NumRows</a>); }
+<a name="l00175"></a><a class="code" href="classDSTable.html#aa2d5d16c624618657d9286663f2212a1">00175</a>    <span class="keywordtype">int</span> <a class="code" href="classDSTable.html#aa2d5d16c624618657d9286663f2212a1">NumberOfEntries</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(<a class="code" href="classDSTable.html#ac04008aae7018df751bcba9c9052c125">NumEntries</a>); }
+<a name="l00176"></a><a class="code" href="classDSTable.html#a41b354957c9c92e7e7e78ff3f3a60809">00176</a>    <span class="keywordtype">int</span> <a class="code" href="classDSTable.html#a41b354957c9c92e7e7e78ff3f3a60809">Push</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)
+<a name="l00177"></a>00177    { <span class="keywordflow">return</span>((a &lt;= b) ? <a class="code" href="classDSTable.html#a7466c6ec9c0075f9472a9e79c2422c16">Push_</a>(a, b) : <a class="code" href="classDSTable.html#a7466c6ec9c0075f9472a9e79c2422c16">Push_</a>(b, a)); }
+<a name="l00178"></a><a class="code" href="classDSTable.html#a1c8775d1fa71464745d7ece4e9515097">00178</a>    <span class="keywordtype">int</span> <a class="code" href="classDSTable.html#a1c8775d1fa71464745d7ece4e9515097">operator()</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)<span class="keyword"> const</span>
+<a name="l00179"></a>00179 <span class="keyword">   </span>{ <span class="keywordflow">return</span>((a &lt;= b) ? <a class="code" href="classDSTable.html#a69672c856de4a311cf28a943d0bf045d">Index</a>(a, b) : <a class="code" href="classDSTable.html#a69672c856de4a311cf28a943d0bf045d">Index</a>(b, a)); }
+<a name="l00180"></a>00180    <a class="code" href="classDSTable.html#a9f11c35582df057169fb173732266b43">~DSTable</a>();
 <a name="l00181"></a>00181 
 <a name="l00182"></a><a class="code" href="classDSTable_1_1RowIterator.html">00182</a>    <span class="keyword">class </span><a class="code" href="classDSTable_1_1RowIterator.html">RowIterator</a>
 <a name="l00183"></a>00183    {
 <a name="l00184"></a>00184    <span class="keyword">private</span>:
-<a name="l00185"></a>00185       Node *n;
+<a name="l00185"></a><a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">00185</a>       <a class="code" href="classDSTable_1_1Node.html">Node</a> *<a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a>;
 <a name="l00186"></a>00186    <span class="keyword">public</span>:
-<a name="l00187"></a>00187       <a class="code" href="classDSTable_1_1RowIterator.html">RowIterator</a> (<span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;t, <span class="keywordtype">int</span> r) { n = t.Rows[r]; }
-<a name="l00188"></a>00188       <span class="keywordtype">int</span> operator!() { <span class="keywordflow">return</span>(n != NULL); }
-<a name="l00189"></a>00189       <span class="keywordtype">void</span> operator++() { n = n-&gt;Prev; }
-<a name="l00190"></a>00190       <span class="keywordtype">int</span> Column() { <span class="keywordflow">return</span>(n-&gt;Column); }
-<a name="l00191"></a>00191       <span class="keywordtype">int</span> Index() { <span class="keywordflow">return</span>(n-&gt;Index); }
+<a name="l00187"></a><a class="code" href="classDSTable_1_1RowIterator.html#a9d73a1f3d2bc9a0f123e63f28ebb7892">00187</a>       <a class="code" href="classDSTable_1_1RowIterator.html#a9d73a1f3d2bc9a0f123e63f28ebb7892">RowIterator</a> (<span class="keyword">const</span> <a class="code" href="classDSTable.html">DSTable</a> &amp;t, <span class="keywordtype">int</span> r) { <a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a> = t.<a class="code" href="classDSTable.html#a7c3e87f49d24aba276857d4355ded48e">Rows</a>[r]; }
+<a name="l00188"></a><a class="code" href="classDSTable_1_1RowIterator.html#a5a67b5a5e7d30a4552cae708569f2619">00188</a>       <span class="keywordtype">int</span> <a class="code" href="classDSTable_1_1RowIterator.html#a5a67b5a5e7d30a4552cae708569f2619">operator!</a>() { <span class="keywordflow">return</span>(<a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a> != NULL); }
+<a name="l00189"></a><a class="code" href="classDSTable_1_1RowIterator.html#a93ba82ffca7f103bb19b7a9c2992aea5">00189</a>       <span class="keywordtype">void</span> <a class="code" href="classDSTable_1_1RowIterator.html#a93ba82ffca7f103bb19b7a9c2992aea5">operator++</a>() { <a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a> = <a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a>-&gt;<a class="code" href="classDSTable_1_1Node.html#a693426504d84f214c153198b6990040b">Prev</a>; }
+<a name="l00190"></a><a class="code" href="classDSTable_1_1RowIterator.html#a4c45377273e57cc2d6393f7d2be0878a">00190</a>       <span class="keywordtype">int</span> <a class="code" href="classDSTable_1_1RowIterator.html#a4c45377273e57cc2d6393f7d2be0878a">Column</a>() { <span class="keywordflow">return</span>(<a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a>-&gt;<a class="code" href="classDSTable_1_1Node.html#a34077133e771070fa1ff7d0b0c24b573">Column</a>); }
+<a name="l00191"></a><a class="code" href="classDSTable_1_1RowIterator.html#a95d5e0c446428b5a6ce9ebfeeae7d8fc">00191</a>       <span class="keywordtype">int</span> <a class="code" href="classDSTable_1_1RowIterator.html#a95d5e0c446428b5a6ce9ebfeeae7d8fc">Index</a>() { <span class="keywordflow">return</span>(<a class="code" href="classDSTable_1_1RowIterator.html#a91cc00c7210be3bcfa3a5a0159f135ff">n</a>-&gt;<a class="code" href="classDSTable_1_1Node.html#ac37a65880ab83375e471ce9234ca7b8e">Index</a>); }
 <a name="l00192"></a>00192    };
 <a name="l00193"></a>00193 };
 <a name="l00194"></a>00194 
@@ -214,7 +215,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -223,7 +224,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:03 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

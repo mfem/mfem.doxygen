@@ -90,23 +90,97 @@ Collaboration diagram for ParLinearForm:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38814c2d1ebc064077a6e7daf04b946e"></a><!-- doxytag: member="ParLinearForm::ParLinearForm" ref="a38814c2d1ebc064077a6e7daf04b946e" args="(ParFiniteElementSpace *pf)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>ParLinearForm</b> (<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *pf)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29d3daf705ac95a62bef1eacd4a4808f"></a><!-- doxytag: member="ParLinearForm::Update" ref="a29d3daf705ac95a62bef1eacd4a4808f" args="(ParFiniteElementSpace *pf=NULL)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *pf=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44f5b3b936bb05a3992e8bc9ae0cadaa"></a><!-- doxytag: member="ParLinearForm::ParallelAssemble" ref="a44f5b3b936bb05a3992e8bc9ae0cadaa" args="()" -->
-<a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParLinearForm.html#a44f5b3b936bb05a3992e8bc9ae0cadaa">ParallelAssemble</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector assembled on the true dofs, i.e. P^t v. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParLinearForm.html#a38814c2d1ebc064077a6e7daf04b946e">ParLinearForm</a> (<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *pf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParLinearForm.html#a29d3daf705ac95a62bef1eacd4a4808f">Update</a> (<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *pf=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParLinearForm.html#a44f5b3b936bb05a3992e8bc9ae0cadaa">ParallelAssemble</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector assembled on the true dofs, i.e. P^t v.  <a href="#a44f5b3b936bb05a3992e8bc9ae0cadaa"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a478a40a92dd17fdee8c5d4af46e1f391"></a><!-- doxytag: member="ParLinearForm::pfes" ref="a478a40a92dd17fdee8c5d4af46e1f391" args="" -->
-<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pfes</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for parallel linear form. </p>
 
 <p>Definition at line <a class="el" href="plinearform_8hpp_source.html#l00016">16</a> of file <a class="el" href="plinearform_8hpp_source.html">plinearform.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a38814c2d1ebc064077a6e7daf04b946e"></a><!-- doxytag: member="ParLinearForm::ParLinearForm" ref="a38814c2d1ebc064077a6e7daf04b946e" args="(ParFiniteElementSpace *pf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParLinearForm::ParLinearForm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>pf</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="plinearform_8hpp_source.html#l00022">22</a> of file <a class="el" href="plinearform_8hpp_source.html">plinearform.hpp</a>.</p>
+
+<p>References <a class="el" href="plinearform_8hpp_source.html#l00019">pfes</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a44f5b3b936bb05a3992e8bc9ae0cadaa"></a><!-- doxytag: member="ParLinearForm::ParallelAssemble" ref="a44f5b3b936bb05a3992e8bc9ae0cadaa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParVector.html">HypreParVector</a>* ParLinearForm::ParallelAssemble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the vector assembled on the true dofs, i.e. P^t v. </p>
+
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29d3daf705ac95a62bef1eacd4a4808f"></a><!-- doxytag: member="ParLinearForm::Update" ref="a29d3daf705ac95a62bef1eacd4a4808f" args="(ParFiniteElementSpace *pf=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParLinearForm::Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>pf</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a478a40a92dd17fdee8c5d4af46e1f391"></a><!-- doxytag: member="ParLinearForm::pfes" ref="a478a40a92dd17fdee8c5d4af46e1f391" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a>* <a class="el" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">ParLinearForm::pfes</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="plinearform_8hpp_source.html#l00019">19</a> of file <a class="el" href="plinearform_8hpp_source.html">plinearform.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="plinearform_8hpp_source.html#l00022">ParLinearForm()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="plinearform_8hpp_source.html">plinearform.hpp</a></li>
 </ul>
 </div>
@@ -115,7 +189,7 @@ Protected Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -124,7 +198,7 @@ Protected Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:06 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:04 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

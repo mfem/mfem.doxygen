@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
   <div id="nav-path" class="navpath">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">eltrans.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="eltrans_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443211. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -79,135 +80,135 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;math.h&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;fem.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="fem_8hpp.html">fem.hpp</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a><a class="code" href="classIsoparametricTransformation.html#a121fd5ff2e1e3c2b440f55d184ed10d8">00016</a> <span class="keyword">const</span> <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp; <a class="code" href="classIsoparametricTransformation.html#a121fd5ff2e1e3c2b440f55d184ed10d8">IsoparametricTransformation::Jacobian</a>()
 <a name="l00017"></a>00017 {
-<a name="l00018"></a>00018    <span class="keywordflow">if</span> (JacobianIsEvaluated)  <span class="keywordflow">return</span> dFdx;
+<a name="l00018"></a>00018    <span class="keywordflow">if</span> (<a class="code" href="classElementTransformation.html#aefbe838192bc68587766a7387fbca934">JacobianIsEvaluated</a>)  <span class="keywordflow">return</span> <a class="code" href="classIsoparametricTransformation.html#a7ecdeff2d8d1bca7486d3b206a004471">dFdx</a>;
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020    dshape.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(FElem-&gt;<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>(), FElem-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>());
-<a name="l00021"></a>00021    dFdx.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(PointMat.<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>(), dshape.<a class="code" href="classDenseMatrix.html#ae9a077745804de542fb2acc2b81dfdb2" title="Returns the width of the matrix.">Width</a>());
+<a name="l00020"></a>00020    <a class="code" href="classIsoparametricTransformation.html#af7ce2cdd93d6c9a832c4009018672142">dshape</a>.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>(), <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>());
+<a name="l00021"></a>00021    <a class="code" href="classIsoparametricTransformation.html#a7ecdeff2d8d1bca7486d3b206a004471">dFdx</a>.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(<a class="code" href="classIsoparametricTransformation.html#a7bb8eb84d0b754adb5cb68ad7de806b6">PointMat</a>.<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>(), <a class="code" href="classIsoparametricTransformation.html#af7ce2cdd93d6c9a832c4009018672142">dshape</a>.<a class="code" href="classDenseMatrix.html#ae9a077745804de542fb2acc2b81dfdb2" title="Returns the width of the matrix.">Width</a>());
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023    FElem -&gt; CalcDShape(*IntPoint, dshape);
-<a name="l00024"></a>00024    Mult(PointMat, dshape, dFdx);
+<a name="l00023"></a>00023    <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a> -&gt; CalcDShape(*<a class="code" href="classElementTransformation.html#ad0789a58963d3a52d26bc35e518717f8">IntPoint</a>, <a class="code" href="classIsoparametricTransformation.html#af7ce2cdd93d6c9a832c4009018672142">dshape</a>);
+<a name="l00024"></a>00024    <a class="code" href="table_8cpp.html#a640d9bfa0f77dd502a095e13431e1ab4" title="C = A * B (as boolean matrices)">Mult</a>(<a class="code" href="classIsoparametricTransformation.html#a7bb8eb84d0b754adb5cb68ad7de806b6">PointMat</a>, <a class="code" href="classIsoparametricTransformation.html#af7ce2cdd93d6c9a832c4009018672142">dshape</a>, <a class="code" href="classIsoparametricTransformation.html#a7ecdeff2d8d1bca7486d3b206a004471">dFdx</a>);
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026    JacobianIsEvaluated = 1;
+<a name="l00026"></a>00026    <a class="code" href="classElementTransformation.html#aefbe838192bc68587766a7387fbca934">JacobianIsEvaluated</a> = 1;
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028    <span class="keywordflow">return</span> dFdx;
+<a name="l00028"></a>00028    <span class="keywordflow">return</span> <a class="code" href="classIsoparametricTransformation.html#a7ecdeff2d8d1bca7486d3b206a004471">dFdx</a>;
 <a name="l00029"></a>00029 }
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keywordtype">double</span> IsoparametricTransformation::Weight()
+<a name="l00031"></a><a class="code" href="classIsoparametricTransformation.html#a1184cd506aa844abad28c454538216e2">00031</a> <span class="keywordtype">double</span> <a class="code" href="classIsoparametricTransformation.html#a1184cd506aa844abad28c454538216e2">IsoparametricTransformation::Weight</a>()
 <a name="l00032"></a>00032 {
-<a name="l00033"></a>00033    <span class="keywordflow">if</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>() == 0)
+<a name="l00033"></a>00033    <span class="keywordflow">if</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>() == 0)
 <a name="l00034"></a>00034       <span class="keywordflow">return</span> 1.0;
-<a name="l00035"></a>00035    <span class="keywordflow">if</span> (WeightIsEvaluated)
-<a name="l00036"></a>00036       <span class="keywordflow">return</span> Wght;
+<a name="l00035"></a>00035    <span class="keywordflow">if</span> (<a class="code" href="classElementTransformation.html#a903408a701864f41d4ba0bea5c386e3d">WeightIsEvaluated</a>)
+<a name="l00036"></a>00036       <span class="keywordflow">return</span> <a class="code" href="classIsoparametricTransformation.html#a0788e2ebb169e2022714193c2c8f61da">Wght</a>;
 <a name="l00037"></a>00037    <a class="code" href="classIsoparametricTransformation.html#a121fd5ff2e1e3c2b440f55d184ed10d8">Jacobian</a>();
-<a name="l00038"></a>00038    WeightIsEvaluated = 1;
-<a name="l00039"></a>00039    <span class="keywordflow">return</span> (Wght = dFdx.Weight());
+<a name="l00038"></a>00038    <a class="code" href="classElementTransformation.html#a903408a701864f41d4ba0bea5c386e3d">WeightIsEvaluated</a> = 1;
+<a name="l00039"></a>00039    <span class="keywordflow">return</span> (<a class="code" href="classIsoparametricTransformation.html#a0788e2ebb169e2022714193c2c8f61da">Wght</a> = <a class="code" href="classIsoparametricTransformation.html#a7ecdeff2d8d1bca7486d3b206a004471">dFdx</a>.<a class="code" href="classDenseMatrix.html#a7472bc9d0377db8aee25d05db28f1d3c">Weight</a>());
 <a name="l00040"></a>00040 }
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keywordtype">int</span> IsoparametricTransformation::OrderJ()
+<a name="l00042"></a><a class="code" href="classIsoparametricTransformation.html#a17bf12df7ba1af7e70d7bb54412b7718">00042</a> <span class="keywordtype">int</span> <a class="code" href="classIsoparametricTransformation.html#a17bf12df7ba1af7e70d7bb54412b7718">IsoparametricTransformation::OrderJ</a>()
 <a name="l00043"></a>00043 {
-<a name="l00044"></a>00044    <span class="keywordflow">switch</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
+<a name="l00044"></a>00044    <span class="keywordflow">switch</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
 <a name="l00045"></a>00045    {
-<a name="l00046"></a>00046    <span class="keywordflow">case</span> FunctionSpace::Pk:
-<a name="l00047"></a>00047       <span class="keywordflow">return</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>()-1);
-<a name="l00048"></a>00048    <span class="keywordflow">case</span> FunctionSpace::Qk:
-<a name="l00049"></a>00049       <span class="keywordflow">return</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>());
+<a name="l00046"></a>00046    <span class="keywordflow">case</span> <a class="code" href="classFunctionSpace.html#aa9399f244896852bb6250b4186afc138ab90a21695fe023cc1376306bb194058b">FunctionSpace::Pk</a>:
+<a name="l00047"></a>00047       <span class="keywordflow">return</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>()-1);
+<a name="l00048"></a>00048    <span class="keywordflow">case</span> <a class="code" href="classFunctionSpace.html#aa9399f244896852bb6250b4186afc138a9c798c93a15fec5553aa675b956efea6">FunctionSpace::Qk</a>:
+<a name="l00049"></a>00049       <span class="keywordflow">return</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>());
 <a name="l00050"></a>00050    <span class="keywordflow">default</span>:
-<a name="l00051"></a>00051       mfem_error(<span class="stringliteral">&quot;IsoparametricTransformation::OrderJ()&quot;</span>);
+<a name="l00051"></a>00051       <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a>(<span class="stringliteral">&quot;IsoparametricTransformation::OrderJ()&quot;</span>);
 <a name="l00052"></a>00052    }
 <a name="l00053"></a>00053    <span class="keywordflow">return</span> 0;
 <a name="l00054"></a>00054 }
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keywordtype">int</span> IsoparametricTransformation::OrderW()
+<a name="l00056"></a><a class="code" href="classIsoparametricTransformation.html#a379f84ca18cf761deedda96cd43a7448">00056</a> <span class="keywordtype">int</span> <a class="code" href="classIsoparametricTransformation.html#a379f84ca18cf761deedda96cd43a7448">IsoparametricTransformation::OrderW</a>()
 <a name="l00057"></a>00057 {
-<a name="l00058"></a>00058    <span class="keywordflow">switch</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
+<a name="l00058"></a>00058    <span class="keywordflow">switch</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
 <a name="l00059"></a>00059    {
-<a name="l00060"></a>00060    <span class="keywordflow">case</span> FunctionSpace::Pk:
-<a name="l00061"></a>00061       <span class="keywordflow">return</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() - 1) * FElem-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>();
-<a name="l00062"></a>00062    <span class="keywordflow">case</span> FunctionSpace::Qk:
-<a name="l00063"></a>00063       <span class="keywordflow">return</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() * FElem-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>() - 1);
+<a name="l00060"></a>00060    <span class="keywordflow">case</span> <a class="code" href="classFunctionSpace.html#aa9399f244896852bb6250b4186afc138ab90a21695fe023cc1376306bb194058b">FunctionSpace::Pk</a>:
+<a name="l00061"></a>00061       <span class="keywordflow">return</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() - 1) * <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>();
+<a name="l00062"></a>00062    <span class="keywordflow">case</span> <a class="code" href="classFunctionSpace.html#aa9399f244896852bb6250b4186afc138a9c798c93a15fec5553aa675b956efea6">FunctionSpace::Qk</a>:
+<a name="l00063"></a>00063       <span class="keywordflow">return</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>() * <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>() - 1);
 <a name="l00064"></a>00064    <span class="keywordflow">default</span>:
-<a name="l00065"></a>00065       mfem_error(<span class="stringliteral">&quot;IsoparametricTransformation::OrderW()&quot;</span>);
+<a name="l00065"></a>00065       <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a>(<span class="stringliteral">&quot;IsoparametricTransformation::OrderW()&quot;</span>);
 <a name="l00066"></a>00066    }
 <a name="l00067"></a>00067    <span class="keywordflow">return</span> 0;
 <a name="l00068"></a>00068 }
 <a name="l00069"></a>00069 
 <a name="l00070"></a><a class="code" href="classIsoparametricTransformation.html#a8146e9b7ef3f5d942363b9aa366192f8">00070</a> <span class="keywordtype">int</span> <a class="code" href="classIsoparametricTransformation.html#a8146e9b7ef3f5d942363b9aa366192f8" title="order of adj(J)^t.grad(fi)">IsoparametricTransformation::OrderGrad</a>(<span class="keyword">const</span> <a class="code" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> *fe)
 <a name="l00071"></a>00071 {
-<a name="l00072"></a>00072    <span class="keywordflow">if</span> (FElem-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>() == fe-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
+<a name="l00072"></a>00072    <span class="keywordflow">if</span> (<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>() == fe-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
 <a name="l00073"></a>00073    {
-<a name="l00074"></a>00074       <span class="keywordtype">int</span> k = FElem-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>();
-<a name="l00075"></a>00075       <span class="keywordtype">int</span> d = FElem-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>();
+<a name="l00074"></a>00074       <span class="keywordtype">int</span> k = <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>();
+<a name="l00075"></a>00075       <span class="keywordtype">int</span> d = <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#aecbaefe82ec91c88d9222e3f56954afb" title="Returns the space dimension for the finite element.">GetDim</a>();
 <a name="l00076"></a>00076       <span class="keywordtype">int</span> l = fe-&gt;<a class="code" href="classFiniteElement.html#ac80061bcdb8a15aff6e3d437ec0b782d" title="Returns the order of the finite element.">GetOrder</a>();
 <a name="l00077"></a>00077       <span class="keywordflow">switch</span> (fe-&gt;<a class="code" href="classFiniteElement.html#af3f41f316bdc37a21509789f50771619" title="Returns the type of space on each element.">Space</a>())
 <a name="l00078"></a>00078       {
-<a name="l00079"></a>00079       <span class="keywordflow">case</span> FunctionSpace::Pk:
+<a name="l00079"></a>00079       <span class="keywordflow">case</span> <a class="code" href="classFunctionSpace.html#aa9399f244896852bb6250b4186afc138ab90a21695fe023cc1376306bb194058b">FunctionSpace::Pk</a>:
 <a name="l00080"></a>00080          <span class="keywordflow">return</span> ((k-1)*(d-1)+(l-1));
-<a name="l00081"></a>00081       <span class="keywordflow">case</span> FunctionSpace::Qk:
+<a name="l00081"></a>00081       <span class="keywordflow">case</span> <a class="code" href="classFunctionSpace.html#aa9399f244896852bb6250b4186afc138a9c798c93a15fec5553aa675b956efea6">FunctionSpace::Qk</a>:
 <a name="l00082"></a>00082          <span class="keywordflow">return</span> (k*(d-1)+(l-1));
 <a name="l00083"></a>00083       }
 <a name="l00084"></a>00084    }
-<a name="l00085"></a>00085    mfem_error(<span class="stringliteral">&quot;IsoparametricTransformation::OrderGrad(...)&quot;</span>);
+<a name="l00085"></a>00085    <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a>(<span class="stringliteral">&quot;IsoparametricTransformation::OrderGrad(...)&quot;</span>);
 <a name="l00086"></a>00086    <span class="keywordflow">return</span> 0;
 <a name="l00087"></a>00087 }
 <a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="keywordtype">void</span> IsoparametricTransformation::Transform (<span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip,
+<a name="l00089"></a><a class="code" href="classIsoparametricTransformation.html#a5bdf08c76791026f47cf9d30ac31991c">00089</a> <span class="keywordtype">void</span> <a class="code" href="classIsoparametricTransformation.html#a5bdf08c76791026f47cf9d30ac31991c">IsoparametricTransformation::Transform</a> (<span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip,
 <a name="l00090"></a>00090                                              <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;trans)
 <a name="l00091"></a>00091 {
-<a name="l00092"></a>00092    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(FElem-&gt;<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>());
-<a name="l00093"></a>00093    trans.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(PointMat.<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>());
+<a name="l00092"></a>00092    <a class="code" href="classIsoparametricTransformation.html#a89f8bc78d1eeb3b5841a8d3a99dc9d68">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>());
+<a name="l00093"></a>00093    trans.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classIsoparametricTransformation.html#a7bb8eb84d0b754adb5cb68ad7de806b6">PointMat</a>.<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>());
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095    FElem -&gt; CalcShape(ip, shape);
-<a name="l00096"></a>00096    PointMat.<a class="code" href="classDenseMatrix.html#a551f543a298eeabe7d83e1b738838db6" title="Matrix matrix multiplication. A = B * C.">Mult</a>(shape, trans);
+<a name="l00095"></a>00095    <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a> -&gt; CalcShape(ip, <a class="code" href="classIsoparametricTransformation.html#a89f8bc78d1eeb3b5841a8d3a99dc9d68">shape</a>);
+<a name="l00096"></a>00096    <a class="code" href="classIsoparametricTransformation.html#a7bb8eb84d0b754adb5cb68ad7de806b6">PointMat</a>.<a class="code" href="classDenseMatrix.html#a551f543a298eeabe7d83e1b738838db6" title="Matrix matrix multiplication. A = B * C.">Mult</a>(<a class="code" href="classIsoparametricTransformation.html#a89f8bc78d1eeb3b5841a8d3a99dc9d68">shape</a>, trans);
 <a name="l00097"></a>00097 }
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099 <span class="keywordtype">void</span> IsoparametricTransformation::Transform (<span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir,
+<a name="l00099"></a><a class="code" href="classIsoparametricTransformation.html#a8d862b1a47e0dd45a946676adf0b2421">00099</a> <span class="keywordtype">void</span> <a class="code" href="classIsoparametricTransformation.html#a5bdf08c76791026f47cf9d30ac31991c">IsoparametricTransformation::Transform</a> (<span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir,
 <a name="l00100"></a>00100                                              <a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;tr)
 <a name="l00101"></a>00101 {
 <a name="l00102"></a>00102    <span class="keywordtype">int</span> dof, n, dim, i, j, k;
 <a name="l00103"></a>00103 
-<a name="l00104"></a>00104    dim = PointMat.<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>();
-<a name="l00105"></a>00105    dof = FElem-&gt;<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
+<a name="l00104"></a>00104    dim = <a class="code" href="classIsoparametricTransformation.html#a7bb8eb84d0b754adb5cb68ad7de806b6">PointMat</a>.<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>();
+<a name="l00105"></a>00105    dof = <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a>-&gt;<a class="code" href="classFiniteElement.html#a067c3ad75885810cdb3b6c1e97bbb0c2" title="Returns the degrees of freedom in the FE space.">GetDof</a>();
 <a name="l00106"></a>00106    n = ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>();
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108    shape.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
+<a name="l00108"></a>00108    <a class="code" href="classIsoparametricTransformation.html#a89f8bc78d1eeb3b5841a8d3a99dc9d68">shape</a>.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(dof);
 <a name="l00109"></a>00109    tr.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(dim, n);
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111    <span class="keywordflow">for</span> (j = 0; j &lt; n; j++)
 <a name="l00112"></a>00112    {
-<a name="l00113"></a>00113       FElem -&gt; CalcShape (ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(j), shape);
+<a name="l00113"></a>00113       <a class="code" href="classIsoparametricTransformation.html#aa62db3283b27e1bb8c74cca735c4a4cd">FElem</a> -&gt; CalcShape (ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(j), <a class="code" href="classIsoparametricTransformation.html#a89f8bc78d1eeb3b5841a8d3a99dc9d68">shape</a>);
 <a name="l00114"></a>00114       <span class="keywordflow">for</span> (i = 0; i &lt; dim; i++)
 <a name="l00115"></a>00115       {
 <a name="l00116"></a>00116          tr(i, j) = 0.0;
 <a name="l00117"></a>00117          <span class="keywordflow">for</span> (k = 0; k &lt; dof; k++)
-<a name="l00118"></a>00118             tr(i, j) += PointMat(i, k) * shape(k);
+<a name="l00118"></a>00118             tr(i, j) += <a class="code" href="classIsoparametricTransformation.html#a7bb8eb84d0b754adb5cb68ad7de806b6">PointMat</a>(i, k) * <a class="code" href="classIsoparametricTransformation.html#a89f8bc78d1eeb3b5841a8d3a99dc9d68">shape</a>(k);
 <a name="l00119"></a>00119       }
 <a name="l00120"></a>00120    }
 <a name="l00121"></a>00121 }
 <a name="l00122"></a>00122 
-<a name="l00123"></a>00123 <span class="keywordtype">void</span> IntegrationPointTransformation::Transform (<span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip1,
+<a name="l00123"></a><a class="code" href="classIntegrationPointTransformation.html#ab35b9a0e1c5580b283482457a1e0b664">00123</a> <span class="keywordtype">void</span> <a class="code" href="classIntegrationPointTransformation.html#ab35b9a0e1c5580b283482457a1e0b664">IntegrationPointTransformation::Transform</a> (<span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip1,
 <a name="l00124"></a>00124                                                 <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip2)
 <a name="l00125"></a>00125 {
 <a name="l00126"></a>00126    <span class="keywordtype">double</span> vec[3];
-<a name="l00127"></a>00127    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> v (vec, Transf.GetPointMat().<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>());
+<a name="l00127"></a>00127    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> v (vec, <a class="code" href="classIntegrationPointTransformation.html#ae8df3355f2ed3a7bcc3ff50572f0f893">Transf</a>.<a class="code" href="classIsoparametricTransformation.html#a5948da1437644e3858bfab62c162c3ce">GetPointMat</a>().<a class="code" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c" title="Returns the height of the matrix.">Height</a>());
 <a name="l00128"></a>00128 
-<a name="l00129"></a>00129    Transf.Transform (ip1, v);
-<a name="l00130"></a>00130    ip2.x = vec[0];
-<a name="l00131"></a>00131    ip2.y = vec[1];
-<a name="l00132"></a>00132    ip2.z = vec[2];
+<a name="l00129"></a>00129    <a class="code" href="classIntegrationPointTransformation.html#ae8df3355f2ed3a7bcc3ff50572f0f893">Transf</a>.<a class="code" href="classIsoparametricTransformation.html#a5bdf08c76791026f47cf9d30ac31991c">Transform</a> (ip1, v);
+<a name="l00130"></a>00130    ip2.<a class="code" href="classIntegrationPoint.html#a18776fbe007079616fd72dd8cca6461c">x</a> = vec[0];
+<a name="l00131"></a>00131    ip2.<a class="code" href="classIntegrationPoint.html#a1f856959524a97f669cc2efa1c95e168">y</a> = vec[1];
+<a name="l00132"></a>00132    ip2.<a class="code" href="classIntegrationPoint.html#ab8083dabffac637359e2a0918d9140b5">z</a> = vec[2];
 <a name="l00133"></a>00133 }
 <a name="l00134"></a>00134 
-<a name="l00135"></a>00135 <span class="keywordtype">void</span> IntegrationPointTransformation::Transform (<span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir1,
+<a name="l00135"></a><a class="code" href="classIntegrationPointTransformation.html#ad00f1f310f091847b05ca8c4a2a11d3b">00135</a> <span class="keywordtype">void</span> <a class="code" href="classIntegrationPointTransformation.html#ab35b9a0e1c5580b283482457a1e0b664">IntegrationPointTransformation::Transform</a> (<span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir1,
 <a name="l00136"></a>00136                                                 <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir2)
 <a name="l00137"></a>00137 {
 <a name="l00138"></a>00138    <span class="keywordtype">int</span> i, n;
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140    n = ir1.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>();
 <a name="l00141"></a>00141    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)
-<a name="l00142"></a>00142       Transform (ir1.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i), ir2.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i));
+<a name="l00142"></a>00142       <a class="code" href="classIntegrationPointTransformation.html#ab35b9a0e1c5580b283482457a1e0b664">Transform</a> (ir1.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i), ir2.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i));
 <a name="l00143"></a>00143 }
 </pre></div></div>
 </div>
@@ -216,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -225,7 +226,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 14:47:05 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:17:02 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
