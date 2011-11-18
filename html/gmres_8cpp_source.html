@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> r(n);
 <a name="l00103"></a>00103    A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00104"></a>00104    <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
+<a name="l00104"></a>00104    <a class="code" href="vector_8cpp.html#a8467fd920186492e6b7b8c26dfc78667">subtract</a>(b,r,w);
 <a name="l00105"></a>00105    M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
 <a name="l00106"></a>00106    <span class="keywordtype">double</span> beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);  <span class="comment">// beta = ||r||</span>
 <a name="l00107"></a>00107 
@@ -245,7 +245,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00176"></a>00176       <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a>(x, i-1, H, s, v);
 <a name="l00177"></a>00177 
 <a name="l00178"></a>00178       A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00179"></a>00179       <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
+<a name="l00179"></a>00179       <a class="code" href="vector_8cpp.html#a8467fd920186492e6b7b8c26dfc78667">subtract</a>(b,r,w);
 <a name="l00180"></a>00180       M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
 <a name="l00181"></a>00181       beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);         <span class="comment">// beta = ||r||</span>
 <a name="l00182"></a>00182       <span class="keywordflow">if</span> ( resid*resid &lt; tol) {
@@ -289,7 +289,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00220"></a>00220 
 <a name="l00221"></a>00221    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> r(n);
 <a name="l00222"></a>00222    A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00223"></a>00223    <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
+<a name="l00223"></a>00223    <a class="code" href="vector_8cpp.html#a8467fd920186492e6b7b8c26dfc78667">subtract</a>(b,r,w);
 <a name="l00224"></a>00224    M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
 <a name="l00225"></a>00225    <span class="keywordtype">double</span> beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);  <span class="comment">// beta = ||r||</span>
 <a name="l00226"></a>00226 
@@ -366,7 +366,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00297"></a>00297       <a class="code" href="gmres_8cpp.html#a773c1695960b1af89cab9fd4da4ae954">Update</a>(x, i-1, H, s, v);
 <a name="l00298"></a>00298 
 <a name="l00299"></a>00299       A.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(x, r);
-<a name="l00300"></a>00300       <a class="code" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a>(b,r,w);
+<a name="l00300"></a>00300       <a class="code" href="vector_8cpp.html#a8467fd920186492e6b7b8c26dfc78667">subtract</a>(b,r,w);
 <a name="l00301"></a>00301       M.<a class="code" href="classOperator.html#a75470adabcf941b3f4276525dde0dd57" title="Operator application.">Mult</a>(w, r);           <span class="comment">// r = M (b - A x)</span>
 <a name="l00302"></a>00302       beta = <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>(r);         <span class="comment">// beta = ||r||</span>
 <a name="l00303"></a>00303       <span class="keywordflow">if</span> ( resid*resid &lt; tol) {
@@ -378,19 +378,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00309"></a>00309       }
 <a name="l00310"></a>00310 
 <a name="l00311"></a>00311       <span class="keywordflow">if</span> (beta/r1 &gt; cf)
-<a name="l00312"></a>00312          <span class="keywordflow">if</span> (m - m_step &gt;= m_min)
-<a name="l00313"></a>00313             m -= m_step;
-<a name="l00314"></a>00314          <span class="keywordflow">else</span>
-<a name="l00315"></a>00315             m = m_max;
-<a name="l00316"></a>00316 
-<a name="l00317"></a>00317       j++;
-<a name="l00318"></a>00318    }
-<a name="l00319"></a>00319 
-<a name="l00320"></a>00320    tol = resid * resid;
-<a name="l00321"></a>00321    <span class="keywordflow">for</span> (i= 0; i&lt;=m; i++)
-<a name="l00322"></a>00322       <span class="keyword">delete</span> v[i];
-<a name="l00323"></a>00323    <span class="keywordflow">return</span> 1;
-<a name="l00324"></a>00324 }
+<a name="l00312"></a>00312       {
+<a name="l00313"></a>00313          <span class="keywordflow">if</span> (m - m_step &gt;= m_min)
+<a name="l00314"></a>00314             m -= m_step;
+<a name="l00315"></a>00315          <span class="keywordflow">else</span>
+<a name="l00316"></a>00316             m = m_max;
+<a name="l00317"></a>00317       }
+<a name="l00318"></a>00318 
+<a name="l00319"></a>00319       j++;
+<a name="l00320"></a>00320    }
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322    tol = resid * resid;
+<a name="l00323"></a>00323    <span class="keywordflow">for</span> (i= 0; i&lt;=m; i++)
+<a name="l00324"></a>00324       <span class="keyword">delete</span> v[i];
+<a name="l00325"></a>00325    <span class="keywordflow">return</span> 1;
+<a name="l00326"></a>00326 }
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -407,7 +409,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:23 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

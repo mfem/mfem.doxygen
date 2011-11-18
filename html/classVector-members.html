@@ -70,6 +70,7 @@ This is the complete list of members for <a class="el" href="classVector.html">V
   <tr class="memlist"><td><a class="el" href="classVector.html#a42e4f1cebe28f9eeab99796c343000d9">add</a>(const double a, const Vector &amp;x, const Vector &amp;y, Vector &amp;z)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [friend]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#aff96dd2a7614d80b492cc630d0cb27fb">add</a>(const double a, const Vector &amp;x, const double b, const Vector &amp;y, Vector &amp;z)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [friend]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a73271245854a00bd978aba7e8a6a8961">AddElementVector</a>(const Array&lt; int &gt; &amp;dofs, const Vector &amp;elemvect)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVector.html#aa95ef4c2a5fe737c857aaf7176aded8e">AddElementVector</a>(const Array&lt; int &gt; &amp;dofs, double *elem_data)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#acbb46d90431f32609f8f46742302bce8">AddElementVector</a>(const Array&lt; int &gt; &amp;dofs, const double a, const Vector &amp;elemvect)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a5ded956b73fa05bc355747b17351cdad">allocsize</a></td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a></td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [protected]</code></td></tr>
@@ -79,6 +80,7 @@ This is the complete list of members for <a class="el" href="classVector.html">V
   <tr class="memlist"><td><a class="el" href="classVector.html#a7a8370aaf95ad3a35009a4efd884361f">Elem</a>(int i) const </td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a789ef615634287c103a2fb111de8cab9">GetData</a>() const </td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ab9f417235f435b9cafc1c7caf99ea2f6">GetSubVector</a>(const Array&lt; int &gt; &amp;dofs, Vector &amp;elemvect) const </td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVector.html#a7e66563ff6b2c7439b6809230530ad9f">GetSubVector</a>(const Array&lt; int &gt; &amp;dofs, double *elem_data) const </td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ab81369435143fa2e5898c36542fffee2">Load</a>(istream **in, int np, int *dim)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a798b88288de35a86f27ab8011378cfcf">Load</a>(istream &amp;in, int Size)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a7468debbed267ea305f3708e9de1d3ab">Load</a>(istream &amp;in)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
@@ -102,14 +104,15 @@ This is the complete list of members for <a class="el" href="classVector.html">V
   <tr class="memlist"><td><a class="el" href="classVector.html#a22d89ac025a3f884fde979bd0f61201d">operator/=</a>(double c)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ae48c467a9f65d60e2f7455aba4ca1239">operator=</a>(const Vector &amp;v)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a99368555e511baf847bb764037c50896">operator=</a>(double value)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classVector.html#a9123ca2c8dacfe1ca49b479dbebf653b">Print</a>(ostream &amp;out=cout, int width=8)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classVector.html#aa5f92396697bb858ddfaf1423c7019b1">Print_HYPRE</a>(ostream &amp;out)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVector.html#adf967646f20e7a903b856b859f38a15d">Print</a>(ostream &amp;out=cout, int width=8) const </td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVector.html#a907c2aa88f5e9fe35a2467c6ff67ef29">Print_HYPRE</a>(ostream &amp;out) const </td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a18c17662c981ec013662a43f6d349b4f">Randomize</a>(int seed=0)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ad58cf5e1a91a290dc8598cc174eb36d4">Set</a>(const double a, const Vector &amp;x)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a8796799b2ea1faf5b551a5a751b47ddb">SetData</a>(double *d)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a35f720a71ee87fb26053c9b02f280d20">SetDataAndSize</a>(double *d, int s)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a195961c95085ba0db54ebddbedf0412a">SetSize</a>(int s)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ac5ba98844eb09dc0a74e34f9a77da564">SetSubVector</a>(const Array&lt; int &gt; &amp;dofs, const Vector &amp;elemvect)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVector.html#ad3473cce570d18f24237061254ebfcc1">SetSubVector</a>(const Array&lt; int &gt; &amp;dofs, double *elem_data)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a3b1032cbd82bb8e09f7e6e9697a16493">SetVector</a>(const Vector &amp;v, int offset)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ae13c6e730a6558ba444beb8f7e44d4ca">size</a></td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ab0f88720c5589e49c8d84b26ff8640a1">Size</a>() const </td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
@@ -119,7 +122,7 @@ This is the complete list of members for <a class="el" href="classVector.html">V
   <tr class="memlist"><td><a class="el" href="classVector.html#ad728c7d6719e3a3aedbf94cc81919044">swap</a>(Vector *v1, Vector *v2)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [friend]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">Vector</a>()</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a130470658bcf6440baa7280f4b94449b">Vector</a>(const Vector &amp;)</td><td><a class="el" href="classVector.html">Vector</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classVector.html#afdbac4668ef38dcdc148036230a2457c">Vector</a>(int s)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVector.html#afdbac4668ef38dcdc148036230a2457c">Vector</a>(int s)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline, explicit]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#ab44987cccb5537b3215916045c0e4d2e">Vector</a>(double *_data, int _size)</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVector.html#a2eb3c49587a4f12cade7895ccb73f6a0">~Vector</a>()</td><td><a class="el" href="classVector.html">Vector</a></td><td><code> [inline]</code></td></tr>
 </table></div>
@@ -137,7 +140,7 @@ This is the complete list of members for <a class="el" href="classVector.html">V
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:27 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:57 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

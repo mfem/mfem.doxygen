@@ -81,32 +81,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#ifndef MFEM_ISOCKSTREAM</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define MFEM_ISOCKSTREAM</span>
 <a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;signal.h&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;sstream&gt;</span>
-<a name="l00017"></a>00017 <span class="keyword">using namespace </span>std;
-<a name="l00018"></a>00018 
-<a name="l00022"></a><a class="code" href="classisockstream.html">00022</a> <span class="keyword">class </span><a class="code" href="classisockstream.html">isockstream</a>
-<a name="l00023"></a>00023 {
-<a name="l00024"></a>00024 <span class="keyword">private</span>:
-<a name="l00025"></a><a class="code" href="classisockstream.html#a23043cbafd44f51641ba0348cebd12aa">00025</a>    <span class="keywordtype">int</span> portnum, portID, <a class="code" href="classisockstream.html#a23043cbafd44f51641ba0348cebd12aa">socketID</a>, error;
-<a name="l00026"></a><a class="code" href="classisockstream.html#acf2f58cb4afc5aca8ff11904d58b74e8">00026</a>    <span class="keywordtype">char</span> *<a class="code" href="classisockstream.html#acf2f58cb4afc5aca8ff11904d58b74e8">Buf</a>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028    <span class="keywordtype">int</span> establish();
-<a name="l00029"></a>00029    <span class="keywordtype">int</span> read_data(<span class="keywordtype">int</span> socketid, <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> size);
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keyword">public</span>:
-<a name="l00032"></a>00032 
-<a name="l00035"></a>00035    <a class="code" href="classisockstream.html">isockstream</a>(<span class="keywordtype">int</span> port);
-<a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="classisockstream.html#a75da666d011ef031fd04a3693e48d1ed">00037</a>    <span class="keywordtype">bool</span> <a class="code" href="classisockstream.html#a75da666d011ef031fd04a3693e48d1ed">good</a>() { <span class="keywordflow">return</span> (!error); }
-<a name="l00038"></a>00038 
-<a name="l00040"></a>00040    <span class="keywordtype">void</span> receive(istringstream **in);
-<a name="l00041"></a>00041 
-<a name="l00043"></a>00043    ~<a class="code" href="classisockstream.html">isockstream</a>();
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
+<a name="l00017"></a>00017 
+<a name="l00023"></a><a class="code" href="classisockstream.html">00023</a> <span class="keyword">class </span><a class="code" href="classisockstream.html">isockstream</a>
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025 <span class="keyword">private</span>:
+<a name="l00026"></a><a class="code" href="classisockstream.html#a23043cbafd44f51641ba0348cebd12aa">00026</a>    <span class="keywordtype">int</span> portnum, portID, <a class="code" href="classisockstream.html#a23043cbafd44f51641ba0348cebd12aa">socketID</a>, error;
+<a name="l00027"></a><a class="code" href="classisockstream.html#acf2f58cb4afc5aca8ff11904d58b74e8">00027</a>    <span class="keywordtype">char</span> *<a class="code" href="classisockstream.html#acf2f58cb4afc5aca8ff11904d58b74e8">Buf</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029    <span class="keywordtype">int</span> establish();
+<a name="l00030"></a>00030    <span class="keywordtype">int</span> read_data(<span class="keywordtype">int</span> socketid, <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> size);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">public</span>:
+<a name="l00033"></a>00033 
+<a name="l00036"></a>00036    <span class="keyword">explicit</span> <a class="code" href="classisockstream.html">isockstream</a>(<span class="keywordtype">int</span> port);
+<a name="l00037"></a>00037 
+<a name="l00038"></a><a class="code" href="classisockstream.html#a75da666d011ef031fd04a3693e48d1ed">00038</a>    <span class="keywordtype">bool</span> <a class="code" href="classisockstream.html#a75da666d011ef031fd04a3693e48d1ed">good</a>() { <span class="keywordflow">return</span> (!error); }
+<a name="l00039"></a>00039 
+<a name="l00041"></a>00041    <span class="keywordtype">void</span> receive(istringstream **in);
+<a name="l00042"></a>00042 
+<a name="l00044"></a>00044    ~<a class="code" href="classisockstream.html">isockstream</a>();
+<a name="l00045"></a>00045 };
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -123,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

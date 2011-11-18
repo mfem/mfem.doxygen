@@ -78,6 +78,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Include dependency graph for hypre.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="hypre_8hpp__incl.png" border="0" usemap="#hypre_8hpp" alt=""/></div>
+<map name="hypre_8hpp" id="hypre_8hpp">
+</map>
 </div>
 </div>
 <p><a href="hypre_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -104,6 +106,8 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The BoomerAMG solver in hypre.  <a href="classHypreBoomerAMG.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html">HypreAMS</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The Auxiliary-space Maxwell Solver in hypre.  <a href="classHypreAMS.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreADS.html">HypreADS</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The Auxiliary-space Divergence Solver in hypre.  <a href="classHypreADS.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hypre_8hpp.html#a2d3cd757b184636482e767744cbed9cc">HYPRE_TIMING</a></td></tr>
@@ -116,6 +120,11 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix A * B.  <a href="#a67a5d7b480c7c62b9aa47b3c02a697fa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hypre_8hpp.html#a28a54d4215a329971ea527527e44939d">RAP</a> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *A, <a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *P)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix P^t * A * P.  <a href="#a28a54d4215a329971ea527527e44939d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hypre_8hpp.html#af5f7571e32d3eb937073389f75d9ce21">EliminateBC</a> (<a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;A, <a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;Ae, <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;ess_dof_list, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;x, <a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;b)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hypre_8hpp.html#a87cbc6ef1eeed718b2d19a72a8ab7e77">DiscreteGrad</a> (<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *edge_fespace, <a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *vert_fespace)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete gradient matrix between the nodal linear and ND1 spaces.  <a href="#a87cbc6ef1eeed718b2d19a72a8ab7e77"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hypre_8hpp.html#a14dcb023041b33a68a2f1b932fdb8578">DiscreteCurl</a> (<a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *face_fespace, <a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *edge_fespace)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete curl matrix between the ND1 and RT0 spaces.  <a href="#a14dcb023041b33a68a2f1b932fdb8578"></a><br/></td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
 <a class="anchor" id="a2d3cd757b184636482e767744cbed9cc"></a><!-- doxytag: member="hypre.hpp::HYPRE_TIMING" ref="a2d3cd757b184636482e767744cbed9cc" args="" -->
@@ -134,21 +143,21 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a38ca3f21b834c27d9f6652407408bce4"></a><!-- doxytag: member="hypre.hpp::InnerProduct" ref="a38ca3f21b834c27d9f6652407408bce4" args="(HypreParVector &amp;x, HypreParVector &amp;y)" -->
+<a class="anchor" id="a14dcb023041b33a68a2f1b932fdb8578"></a><!-- doxytag: member="hypre.hpp::DiscreteCurl" ref="a14dcb023041b33a68a2f1b932fdb8578" args="(ParFiniteElementSpace *face_fespace, ParFiniteElementSpace *edge_fespace)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double InnerProduct </td>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a>* DiscreteCurl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>face_fespace</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>edge_fespace</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -159,7 +168,82 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Returns the inner product of x and y. </p>
+<p>Compute the discrete curl matrix between the ND1 and RT0 spaces. </p>
+
+</div>
+</div>
+<a class="anchor" id="a87cbc6ef1eeed718b2d19a72a8ab7e77"></a><!-- doxytag: member="hypre.hpp::DiscreteGrad" ref="a87cbc6ef1eeed718b2d19a72a8ab7e77" args="(ParFiniteElementSpace *edge_fespace, ParFiniteElementSpace *vert_fespace)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a>* DiscreteGrad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>edge_fespace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>vert_fespace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compute the discrete gradient matrix between the nodal linear and ND1 spaces. </p>
+
+</div>
+</div>
+<a class="anchor" id="af5f7571e32d3eb937073389f75d9ce21"></a><!-- doxytag: member="hypre.hpp::EliminateBC" ref="af5f7571e32d3eb937073389f75d9ce21" args="(HypreParMatrix &amp;A, HypreParMatrix &amp;Ae, Array&lt; int &gt; &amp;ess_dof_list, HypreParVector &amp;x, HypreParVector &amp;b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EliminateBC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>Ae</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ess_dof_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Eliminate essential b.c. specified by ess_dof_list from the solution x to the r.h.s. b. Here A is matrix with eliminated b.c., while Ae is such that (A+Ae) is the original (Neumann) matrix before elimination. </p>
 
 </div>
 </div>
@@ -187,6 +271,35 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38ca3f21b834c27d9f6652407408bce4"></a><!-- doxytag: member="hypre.hpp::InnerProduct" ref="a38ca3f21b834c27d9f6652407408bce4" args="(HypreParVector &amp;x, HypreParVector &amp;y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double InnerProduct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classHypreParVector.html">HypreParVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the inner product of x and y. </p>
 
 </div>
 </div>
@@ -263,7 +376,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

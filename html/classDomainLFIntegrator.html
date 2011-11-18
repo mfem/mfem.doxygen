@@ -90,8 +90,8 @@ Collaboration diagram for DomainLFIntegrator:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainLFIntegrator.html#a3e7529965b06c4ed8b50457c5e2cd77b">DomainLFIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;QF, int a=1, int b=1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a domain integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a>.  <a href="#a3e7529965b06c4ed8b50457c5e2cd77b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainLFIntegrator.html#ab8b34429867fd49bfb0447707db087f9">DomainLFIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;QF, int a=2, int b=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a domain integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a>.  <a href="#ab8b34429867fd49bfb0447707db087f9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainLFIntegrator.html#ab95cb9e2da1afeaf74bd9b9690b8f913">DomainLFIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;QF, const <a class="el" href="classIntegrationRule.html">IntegrationRule</a> *ir)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a domain integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a>.  <a href="#ab95cb9e2da1afeaf74bd9b9690b8f913"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainLFIntegrator.html#aa3fd95da5907e460dc6cee9a472f5791">AssembleRHSElementVect</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Tr, <a class="el" href="classVector.html">Vector</a> &amp;elvect)</td></tr>
@@ -108,7 +108,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00032">32</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3e7529965b06c4ed8b50457c5e2cd77b"></a><!-- doxytag: member="DomainLFIntegrator::DomainLFIntegrator" ref="a3e7529965b06c4ed8b50457c5e2cd77b" args="(Coefficient &amp;QF, int a=1, int b=1)" -->
+<a class="anchor" id="ab8b34429867fd49bfb0447707db087f9"></a><!-- doxytag: member="DomainLFIntegrator::DomainLFIntegrator" ref="ab8b34429867fd49bfb0447707db087f9" args="(Coefficient &amp;QF, int a=2, int b=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -122,13 +122,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a</em> = <code>1</code>, </td>
+          <td class="paramname"><em>a</em> = <code>2</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>b</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>b</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -174,7 +174,7 @@ Private Attributes</h2></td></tr>
 
 <p>Constructs a domain integrator with a given <a class="el" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a>. </p>
 
-<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00044">44</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00046">46</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
 
 <p>References <a class="el" href="lininteg_8hpp_source.html#l00036">IntRule</a>.</p>
 
@@ -217,7 +217,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="lininteg_8cpp_source.html#l00023">23</a> of file <a class="el" href="lininteg_8cpp_source.html">lininteg.cpp</a>.</p>
 
-<p>References <a class="el" href="vector_8cpp_source.html#l00202">add()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Coefficient::Eval()</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="lininteg_8hpp_source.html#l00036">IntRule</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="lininteg_8hpp_source.html#l00037">oa</a>, <a class="el" href="lininteg_8hpp_source.html#l00037">ob</a>, <a class="el" href="lininteg_8hpp_source.html#l00035">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="lininteg_8hpp_source.html#l00034">shape</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>, and <a class="el" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">ElementTransformation::Weight()</a>.</p>
+<p>References <a class="el" href="vector_8cpp_source.html#l00216">add()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Coefficient::Eval()</a>, <a class="el" href="intrules_8cpp_source.html#l00188">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00057">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00054">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00187">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00060">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="lininteg_8hpp_source.html#l00036">IntRule</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="lininteg_8hpp_source.html#l00037">oa</a>, <a class="el" href="lininteg_8hpp_source.html#l00037">ob</a>, <a class="el" href="lininteg_8hpp_source.html#l00035">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00198">Vector::SetSize()</a>, <a class="el" href="lininteg_8hpp_source.html#l00034">shape</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>, and <a class="el" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">ElementTransformation::Weight()</a>.</p>
 
 </div>
 </div>
@@ -326,7 +326,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:25 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

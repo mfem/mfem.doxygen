@@ -70,6 +70,8 @@ This is the complete list of members for <a class="el" href="classDenseMatrix.ht
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ae89e2638dc1b276d21ff583b1f743d82">AddMult</a>(const Vector &amp;x, Vector &amp;y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a298d0f2d78e61e6d4fa42eaf0bceffaa">AddToVector</a>(int offset, Vector &amp;v) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#aedf31d5543691ccbbaa52bfc277abe6c">AdjustDofDirection</a>(Array&lt; int &gt; &amp;dofs)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a757fd334ae629deaa8ffdb18181aa42e">CalcEigenvalues</a>(double *lambda, double *vec) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ac2529e478e78de3e8b2f9565c1b19374">CalcSingularvalue</a>(const int i) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a8ebbe6720e939897a02cdbeb1b0e9b86">ClearExternalData</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a9faa9c7f0ceb312758ec88e29f1d224d">CopyCols</a>(DenseMatrix &amp;A, int col1, int col2)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a1177868a2dedc2569d82c082874d1828">CopyMN</a>(DenseMatrix &amp;A, int m, int n, int Aro, int Aco)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
@@ -82,7 +84,7 @@ This is the complete list of members for <a class="el" href="classDenseMatrix.ht
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a9a993f7c323df43639b941052fe92263">Data</a>() const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a962f1cca43a07753de96c8b9e413db06">DenseMatrix</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a2d9a839e616135ed83f8cf9dd1af2bbb">DenseMatrix</a>(const DenseMatrix &amp;)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a6ee48e719709820552135d9cc942dd1b">DenseMatrix</a>(int s)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a6ee48e719709820552135d9cc942dd1b">DenseMatrix</a>(int s)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [explicit]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a70e967b6e077cb2c4dda6f21f630ccd3">DenseMatrix</a>(int m, int n)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ad946363949af97b2b83d6bbe1daaae3b">DenseMatrix</a>(const DenseMatrix &amp;mat, char ch)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a00528ff6cdd7800512ac10703c8de2ed">DenseMatrix</a>(double *d, int h, int w)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
@@ -106,17 +108,19 @@ This is the complete list of members for <a class="el" href="classDenseMatrix.ht
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a79965cd4c08ff682aaea8cfdd0b135cd">GradToDiv</a>(Vector &amp;div)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a3f0992eda0283d43426308ed3d4258e6">height</a></td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#aed8c95856eec8c0b9b0d9ddfbdb4922c">Height</a>() const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ac39022364703f3906600c36e865d95b4">InnerProduct</a>(const Vector &amp;x, const Vector &amp;y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a4c8ba579e74434cd8904501caceb0a14">InnerProduct</a>(const double *x, const double *y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ac39022364703f3906600c36e865d95b4">InnerProduct</a>(const Vector &amp;x, const Vector &amp;y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ae618148364920b2f36493766d61dcfb4">Inverse</a>() const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#aebb728dba84eab2ba6b8d21d43b650c3">Invert</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a77a13cfe8bd699cd8d64a6685897ea78">Lump</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMatrix.html#a7389f8977f7b1f46b339dab286c55389">Matrix</a>(int s)</td><td><a class="el" href="classMatrix.html">Matrix</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMatrix.html#a7389f8977f7b1f46b339dab286c55389">Matrix</a>(int s)</td><td><a class="el" href="classMatrix.html">Matrix</a></td><td><code> [inline, explicit]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a551f543a298eeabe7d83e1b738838db6">Mult</a>(const DenseMatrix &amp;b, const DenseMatrix &amp;c, DenseMatrix &amp;a)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [friend]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a69919b10fa83b79bfd269a77dc1ceccb">Mult</a>(const double *x, double *y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ac3a43415a1174d0edf592392f568de97">Mult</a>(const Vector &amp;x, Vector &amp;y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#af19199b8bc7bfc254e72732f0cb7c008">MultTranspose</a>(const Vector &amp;x, Vector &amp;y) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a3b834d4aa18b444182035e8223deb986">Neg</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a507c60617784e903f19f94e433051971">Norm2</a>(double *v)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73">Operator</a>(int s=0)</td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#aa13fb1313df14d7b6db59d3a13bec6c8">Norm2</a>(double *v) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73">Operator</a>(int s=0)</td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [inline, explicit]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a821e509845c75497acd818de0b6ac118">operator()</a>(int i, int j)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#ad06562112590b29f12e89c1bc79b4a51">operator()</a>(int i, int j) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#aef17bbfb2f8d174221fa3c8fd5e45bd5">operator*</a>(const DenseMatrix &amp;m) const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
@@ -134,6 +138,7 @@ This is the complete list of members for <a class="el" href="classDenseMatrix.ht
   <tr class="memlist"><td><a class="el" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a></td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classOperator.html#a27f7c4dfac134bd5f57055d43eaa025f">Size</a>() const </td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a9461b2333a876d768623912d4207814c">Symmetrize</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a7457b454040de5a8b2f727eb69b0e5fe">TestInversion</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#afe4b157ed431bfb0202aef15e592d0cf">Trace</a>() const </td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a0b9f800320c7a70ce6a5130e9c9c27b0">Transpose</a>()</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classDenseMatrix.html#a86bba84c6025d6ac3b60e45ed2b441c6">Transpose</a>(DenseMatrix &amp;A)</td><td><a class="el" href="classDenseMatrix.html">DenseMatrix</a></td><td></td></tr>
@@ -158,7 +163,7 @@ This is the complete list of members for <a class="el" href="classDenseMatrix.ht
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:25 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

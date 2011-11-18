@@ -89,6 +89,7 @@ Collaboration diagram for VectorDivergenceIntegrator:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorDivergenceIntegrator.html#a30d02524c78bbd50d9671899ffea3340">VectorDivergenceIntegrator</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorDivergenceIntegrator.html#ab44ae3fa83f3280d7a01f04661825a82">VectorDivergenceIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> *_q)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorDivergenceIntegrator.html#a2cbb1bae532cc49821934547c8acb693">VectorDivergenceIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;q)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorDivergenceIntegrator.html#a8831017846d7ded5522ac5c966d43dd9">AssembleElementMatrix2</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;trial_fe, const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;test_fe, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -102,7 +103,7 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Integrator for (Q div u, p) where u=(v1,...,vn) and all vi are in the same scalar FE space; p is also in a (different) scalar FE space. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00292">292</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00331">331</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a30d02524c78bbd50d9671899ffea3340"></a><!-- doxytag: member="VectorDivergenceIntegrator::VectorDivergenceIntegrator" ref="a30d02524c78bbd50d9671899ffea3340" args="()" -->
 <div class="memitem">
@@ -118,9 +119,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00304">304</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00343">343</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>References <a class="el" href="bilininteg_8hpp_source.html#l00295">Q</a>.</p>
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00334">Q</a>.</p>
 
 </div>
 </div>
@@ -139,9 +140,30 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00305">305</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00344">344</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>References <a class="el" href="bilininteg_8hpp_source.html#l00295">Q</a>.</p>
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00334">Q</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cbb1bae532cc49821934547c8acb693"></a><!-- doxytag: member="VectorDivergenceIntegrator::VectorDivergenceIntegrator" ref="a2cbb1bae532cc49821934547c8acb693" args="(Coefficient &amp;q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorDivergenceIntegrator::VectorDivergenceIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoefficient.html">Coefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00345">345</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00334">Q</a>.</p>
 
 </div>
 </div>
@@ -186,9 +208,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBilinearFormIntegrator.html#a336fe9542c9793b7d7b659527407c8a5">BilinearFormIntegrator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00595">595</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00684">684</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8cpp_source.html#l01385">AddMultVWt()</a>, <a class="el" href="densemat_8cpp_source.html#l01099">CalcAdjugate()</a>, <a class="el" href="classFiniteElement.html#a4ee7f132abb6b65544a58392159ee02f">FiniteElement::CalcDShape()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00298">divshape</a>, <a class="el" href="bilininteg_8hpp_source.html#l00299">dshape</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00050">FiniteElement::GetDim()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="densemat_8cpp_source.html#l00817">DenseMatrix::GradToDiv()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00300">gshape</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">ElementTransformation::Jacobian()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00301">Jadj</a>, <a class="el" href="table_8cpp_source.html#l00291">Mult()</a>, <a class="el" href="classElementTransformation.html#a5e77101905b1a58239a504af3660b949">ElementTransformation::OrderGrad()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00295">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00297">shape</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>.</p>
+<p>References <a class="el" href="densemat_8cpp_source.html#l02286">AddMultVWt()</a>, <a class="el" href="densemat_8cpp_source.html#l01838">CalcAdjugate()</a>, <a class="el" href="classFiniteElement.html#a4ee7f132abb6b65544a58392159ee02f">FiniteElement::CalcDShape()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00337">divshape</a>, <a class="el" href="bilininteg_8hpp_source.html#l00338">dshape</a>, <a class="el" href="intrules_8cpp_source.html#l00188">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00051">FiniteElement::GetDim()</a>, <a class="el" href="fe_8hpp_source.html#l00057">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00054">FiniteElement::GetGeomType()</a>, <a class="el" href="fe_8hpp_source.html#l00060">FiniteElement::GetOrder()</a>, <a class="el" href="densemat_8cpp_source.html#l01544">DenseMatrix::GradToDiv()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00339">gshape</a>, <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">ElementTransformation::Jacobian()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00340">Jadj</a>, <a class="el" href="table_8cpp_source.html#l00302">Mult()</a>, <a class="el" href="classElementTransformation.html#a5e77101905b1a58239a504af3660b949">ElementTransformation::OrderGrad()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00334">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="vector_8hpp_source.html#l00198">Vector::SetSize()</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00336">shape</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>.</p>
 
 </div>
 </div>
@@ -204,9 +226,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00298">298</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00337">337</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00595">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00684">AssembleElementMatrix2()</a>.</p>
 
 </div>
 </div>
@@ -221,9 +243,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00299">299</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00338">338</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00595">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00684">AssembleElementMatrix2()</a>.</p>
 
 </div>
 </div>
@@ -238,9 +260,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00300">300</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00339">339</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00595">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00684">AssembleElementMatrix2()</a>.</p>
 
 </div>
 </div>
@@ -255,9 +277,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00301">301</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00340">340</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00595">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00684">AssembleElementMatrix2()</a>.</p>
 
 </div>
 </div>
@@ -272,9 +294,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00295">295</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00334">334</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00595">AssembleElementMatrix2()</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00304">VectorDivergenceIntegrator()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00684">AssembleElementMatrix2()</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00343">VectorDivergenceIntegrator()</a>.</p>
 
 </div>
 </div>
@@ -289,9 +311,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00297">297</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00336">336</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00595">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00684">AssembleElementMatrix2()</a>.</p>
 
 </div>
 </div>
@@ -314,7 +336,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:27 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:57 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

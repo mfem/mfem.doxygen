@@ -90,6 +90,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDenseTensor.html#a8c1ae90780dd8064002c3289b95d7f87">SizeK</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDenseTensor.html#a1ad62f8ae732e4a7bb42e6cd8af12d43">SetSize</a> (int i, int j, int k)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDenseTensor.html#aeb5d98ac44d525bf0e83f228aac4297e">operator()</a> (int k)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDenseTensor.html#a833d9161bd23ab8d0768aa99e489a9d5">GetData</a> (int k)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDenseTensor.html#a993766b8558f7973af7c1c520ae76a48">Data</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDenseTensor.html#a9b5cd88fb39b4b403ab198b8759d770b">~DenseTensor</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
@@ -101,7 +102,7 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Rank 3 tensor (array of matrices) </p>
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00348">348</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00364">364</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af27c84be9863c8eed753162a00133a1f"></a><!-- doxytag: member="DenseTensor::DenseTensor" ref="af27c84be9863c8eed753162a00133a1f" args="()" -->
 <div class="memitem">
@@ -117,9 +118,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00356">356</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00372">372</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00353">nk</a>, and <a class="el" href="densemat_8hpp_source.html#l00352">tdata</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00369">nk</a>, and <a class="el" href="densemat_8hpp_source.html#l00368">tdata</a>.</p>
 
 </div>
 </div>
@@ -154,9 +155,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00358">358</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00374">374</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00353">nk</a>, and <a class="el" href="densemat_8hpp_source.html#l00352">tdata</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00369">nk</a>, and <a class="el" href="densemat_8hpp_source.html#l00368">tdata</a>.</p>
 
 </div>
 </div>
@@ -174,9 +175,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00379">379</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00396">396</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00052">DenseMatrix::ClearExternalData()</a>, <a class="el" href="densemat_8hpp_source.html#l00351">Mk</a>, and <a class="el" href="densemat_8hpp_source.html#l00352">tdata</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00052">DenseMatrix::ClearExternalData()</a>, <a class="el" href="densemat_8hpp_source.html#l00367">Mk</a>, and <a class="el" href="densemat_8hpp_source.html#l00368">tdata</a>.</p>
 
 </div>
 </div>
@@ -195,9 +196,32 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00377">377</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00394">394</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00352">tdata</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00368">tdata</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a833d9161bd23ab8d0768aa99e489a9d5"></a><!-- doxytag: member="DenseTensor::GetData" ref="a833d9161bd23ab8d0768aa99e489a9d5" args="(int k)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* DenseTensor::GetData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00392">392</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8hpp_source.html#l00061">DenseMatrix::Height()</a>, <a class="el" href="densemat_8hpp_source.html#l00367">Mk</a>, <a class="el" href="densemat_8hpp_source.html#l00368">tdata</a>, and <a class="el" href="densemat_8hpp_source.html#l00064">DenseMatrix::Width()</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8cpp_source.html#l00253">BilinearForm::ComputeElementMatrices()</a>, <a class="el" href="bilinearform_8cpp_source.html#l00106">BilinearForm::ComputeElementMatrix()</a>, and <a class="el" href="densemat_8hpp_source.html#l00390">operator()()</a>.</p>
 
 </div>
 </div>
@@ -216,9 +240,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00374">374</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00390">390</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00022">DenseMatrix::data</a>, <a class="el" href="densemat_8hpp_source.html#l00061">DenseMatrix::Height()</a>, <a class="el" href="densemat_8hpp_source.html#l00351">Mk</a>, <a class="el" href="densemat_8hpp_source.html#l00352">tdata</a>, and <a class="el" href="densemat_8hpp_source.html#l00064">DenseMatrix::Width()</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00022">DenseMatrix::data</a>, <a class="el" href="densemat_8hpp_source.html#l00392">GetData()</a>, and <a class="el" href="densemat_8hpp_source.html#l00367">Mk</a>.</p>
 
 </div>
 </div>
@@ -253,9 +277,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00366">366</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00382">382</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00351">Mk</a>, <a class="el" href="densemat_8hpp_source.html#l00353">nk</a>, <a class="el" href="densemat_8hpp_source.html#l00352">tdata</a>, and <a class="el" href="densemat_8hpp_source.html#l00049">DenseMatrix::UseExternalData()</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00367">Mk</a>, <a class="el" href="densemat_8hpp_source.html#l00369">nk</a>, <a class="el" href="densemat_8hpp_source.html#l00368">tdata</a>, and <a class="el" href="densemat_8hpp_source.html#l00049">DenseMatrix::UseExternalData()</a>.</p>
 
 </div>
 </div>
@@ -273,9 +297,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00362">362</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00378">378</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00061">DenseMatrix::Height()</a>, and <a class="el" href="densemat_8hpp_source.html#l00351">Mk</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00061">DenseMatrix::Height()</a>, and <a class="el" href="densemat_8hpp_source.html#l00367">Mk</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8cpp_source.html#l00106">BilinearForm::ComputeElementMatrix()</a>.</p>
 
 </div>
 </div>
@@ -293,9 +319,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00363">363</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00379">379</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00351">Mk</a>, and <a class="el" href="densemat_8hpp_source.html#l00064">DenseMatrix::Width()</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00367">Mk</a>, and <a class="el" href="densemat_8hpp_source.html#l00064">DenseMatrix::Width()</a>.</p>
+
+<p>Referenced by <a class="el" href="bilinearform_8cpp_source.html#l00106">BilinearForm::ComputeElementMatrix()</a>.</p>
 
 </div>
 </div>
@@ -313,9 +341,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00364">364</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00380">380</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8hpp_source.html#l00353">nk</a>.</p>
+<p>References <a class="el" href="densemat_8hpp_source.html#l00369">nk</a>.</p>
 
 </div>
 </div>
@@ -331,9 +359,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00351">351</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00367">367</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="densemat_8hpp_source.html#l00374">operator()()</a>, <a class="el" href="densemat_8hpp_source.html#l00366">SetSize()</a>, <a class="el" href="densemat_8hpp_source.html#l00362">SizeI()</a>, <a class="el" href="densemat_8hpp_source.html#l00363">SizeJ()</a>, and <a class="el" href="densemat_8hpp_source.html#l00379">~DenseTensor()</a>.</p>
+<p>Referenced by <a class="el" href="densemat_8hpp_source.html#l00392">GetData()</a>, <a class="el" href="densemat_8hpp_source.html#l00390">operator()()</a>, <a class="el" href="densemat_8hpp_source.html#l00382">SetSize()</a>, <a class="el" href="densemat_8hpp_source.html#l00378">SizeI()</a>, <a class="el" href="densemat_8hpp_source.html#l00379">SizeJ()</a>, and <a class="el" href="densemat_8hpp_source.html#l00396">~DenseTensor()</a>.</p>
 
 </div>
 </div>
@@ -348,9 +376,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00353">353</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00369">369</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="densemat_8hpp_source.html#l00356">DenseTensor()</a>, <a class="el" href="densemat_8hpp_source.html#l00366">SetSize()</a>, and <a class="el" href="densemat_8hpp_source.html#l00364">SizeK()</a>.</p>
+<p>Referenced by <a class="el" href="densemat_8hpp_source.html#l00372">DenseTensor()</a>, <a class="el" href="densemat_8hpp_source.html#l00382">SetSize()</a>, and <a class="el" href="densemat_8hpp_source.html#l00380">SizeK()</a>.</p>
 
 </div>
 </div>
@@ -365,9 +393,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00352">352</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8hpp_source.html#l00368">368</a> of file <a class="el" href="densemat_8hpp_source.html">densemat.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="densemat_8hpp_source.html#l00377">Data()</a>, <a class="el" href="densemat_8hpp_source.html#l00356">DenseTensor()</a>, <a class="el" href="densemat_8hpp_source.html#l00374">operator()()</a>, <a class="el" href="densemat_8hpp_source.html#l00366">SetSize()</a>, and <a class="el" href="densemat_8hpp_source.html#l00379">~DenseTensor()</a>.</p>
+<p>Referenced by <a class="el" href="densemat_8hpp_source.html#l00394">Data()</a>, <a class="el" href="densemat_8hpp_source.html#l00372">DenseTensor()</a>, <a class="el" href="densemat_8hpp_source.html#l00392">GetData()</a>, <a class="el" href="densemat_8hpp_source.html#l00382">SetSize()</a>, and <a class="el" href="densemat_8hpp_source.html#l00396">~DenseTensor()</a>.</p>
 
 </div>
 </div>
@@ -389,7 +417,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:25 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

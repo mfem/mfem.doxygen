@@ -104,146 +104,165 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00035"></a><a class="code" href="classFunctionCoefficient.html#a76cc8eb54bb49556eab64b9ac9ad51e3">00035</a> <span class="keywordtype">double</span> <a class="code" href="classFunctionCoefficient.html#a76cc8eb54bb49556eab64b9ac9ad51e3" title="Evaluate coefficient.">FunctionCoefficient::Eval</a>(<a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp; T,
 <a name="l00036"></a>00036                                  <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp; ip)
 <a name="l00037"></a>00037 {
-<a name="l00038"></a>00038    T.<a class="code" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">Transform</a>(ip, <a class="code" href="classFunctionCoefficient.html#a31895acec4abf7f55597d3f8b85a5f65">transip</a>);
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040    <span class="keywordflow">return</span>((*<a class="code" href="classFunctionCoefficient.html#a82c555cbe57664dc1539ba2c55f0edef">Function</a>)(<a class="code" href="classFunctionCoefficient.html#a31895acec4abf7f55597d3f8b85a5f65">transip</a>));
-<a name="l00041"></a>00041 }
+<a name="l00038"></a>00038    <span class="keywordtype">double</span> x[3];
+<a name="l00039"></a>00039    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> transip(x, 3);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041    T.<a class="code" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">Transform</a>(ip, transip);
 <a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="classGridFunctionCoefficient.html#aa69020ee457e3bbe3ae91c42d697b435">00043</a> <span class="keywordtype">double</span> <a class="code" href="classGridFunctionCoefficient.html#aa69020ee457e3bbe3ae91c42d697b435">GridFunctionCoefficient::Eval</a> (<a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00044"></a>00044                                       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
-<a name="l00045"></a>00045 {
-<a name="l00046"></a>00046    <span class="keywordflow">return</span> <a class="code" href="classGridFunctionCoefficient.html#a7dbf7d15e29768eb5884782a50f634cf">GridF</a> -&gt; GetValue (T.<a class="code" href="classElementTransformation.html#ad6de4568eeb712e2c15a6b4d32544271">ElementNo</a>, ip, <a class="code" href="classGridFunctionCoefficient.html#a77ffbf3824757eada2920bab11037bd9">Component</a>);
-<a name="l00047"></a>00047 }
-<a name="l00048"></a>00048 
-<a name="l00049"></a><a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">00049</a> <span class="keywordtype">void</span> <a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">VectorCoefficient::Eval</a>(<a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;M, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00050"></a>00050                              <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir)
-<a name="l00051"></a>00051 {
-<a name="l00052"></a>00052    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> Mi;
-<a name="l00053"></a>00053    M.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>, ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>());
-<a name="l00054"></a>00054    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
-<a name="l00055"></a>00055    {
-<a name="l00056"></a>00056       M.<a class="code" href="classDenseMatrix.html#a8fe67a7ded1a967a1037352dc07e69bb">GetColumnReference</a>(i, Mi);
-<a name="l00057"></a>00057       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
-<a name="l00058"></a>00058       T.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a>(&amp;ip);
-<a name="l00059"></a>00059       <a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">Eval</a>(Mi, T, ip);
-<a name="l00060"></a>00060    }
-<a name="l00061"></a>00061 }
-<a name="l00062"></a>00062 
-<a name="l00063"></a><a class="code" href="classVectorFunctionCoefficient.html#abfa08f1b6312cfb7426769a8ea5f9d65">00063</a> <span class="keywordtype">void</span> <a class="code" href="classVectorFunctionCoefficient.html#abfa08f1b6312cfb7426769a8ea5f9d65">VectorFunctionCoefficient::Eval</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00064"></a>00064                                       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
-<a name="l00065"></a>00065 {
-<a name="l00066"></a>00066    T.<a class="code" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">Transform</a> (ip, <a class="code" href="classVectorFunctionCoefficient.html#a635e77ad49797052b1e89c9c0950dc97">transip</a>);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068    V.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>);
-<a name="l00069"></a>00069    (*Function) (<a class="code" href="classVectorFunctionCoefficient.html#a635e77ad49797052b1e89c9c0950dc97">transip</a>, V);
-<a name="l00070"></a>00070    <span class="keywordflow">if</span> (<a class="code" href="classVectorFunctionCoefficient.html#a926debf97e437367e3af8f479db261ce">Q</a>)
-<a name="l00071"></a>00071       V *= <a class="code" href="classVectorFunctionCoefficient.html#a926debf97e437367e3af8f479db261ce">Q</a> -&gt; <a class="code" href="classVectorFunctionCoefficient.html#abfa08f1b6312cfb7426769a8ea5f9d65">Eval</a> (T, ip);
-<a name="l00072"></a>00072 }
+<a name="l00043"></a>00043    <span class="keywordflow">return</span>((*<a class="code" href="classFunctionCoefficient.html#a82c555cbe57664dc1539ba2c55f0edef">Function</a>)(transip));
+<a name="l00044"></a>00044 }
+<a name="l00045"></a>00045 
+<a name="l00046"></a><a class="code" href="classGridFunctionCoefficient.html#aa69020ee457e3bbe3ae91c42d697b435">00046</a> <span class="keywordtype">double</span> <a class="code" href="classGridFunctionCoefficient.html#aa69020ee457e3bbe3ae91c42d697b435">GridFunctionCoefficient::Eval</a> (<a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00047"></a>00047                                       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00048"></a>00048 {
+<a name="l00049"></a>00049    <span class="keywordflow">return</span> <a class="code" href="classGridFunctionCoefficient.html#a7dbf7d15e29768eb5884782a50f634cf">GridF</a> -&gt; GetValue (T.<a class="code" href="classElementTransformation.html#ad6de4568eeb712e2c15a6b4d32544271">ElementNo</a>, ip, <a class="code" href="classGridFunctionCoefficient.html#a77ffbf3824757eada2920bab11037bd9">Component</a>);
+<a name="l00050"></a>00050 }
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">00052</a> <span class="keywordtype">void</span> <a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">VectorCoefficient::Eval</a>(<a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;M, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00053"></a>00053                              <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir)
+<a name="l00054"></a>00054 {
+<a name="l00055"></a>00055    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> Mi;
+<a name="l00056"></a>00056    M.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a>(<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>, ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>());
+<a name="l00057"></a>00057    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); i++)
+<a name="l00058"></a>00058    {
+<a name="l00059"></a>00059       M.<a class="code" href="classDenseMatrix.html#a8fe67a7ded1a967a1037352dc07e69bb">GetColumnReference</a>(i, Mi);
+<a name="l00060"></a>00060       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(i);
+<a name="l00061"></a>00061       T.<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a>(&amp;ip);
+<a name="l00062"></a>00062       <a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">Eval</a>(Mi, T, ip);
+<a name="l00063"></a>00063    }
+<a name="l00064"></a>00064 }
+<a name="l00065"></a>00065 
+<a name="l00066"></a><a class="code" href="classVectorFunctionCoefficient.html#abfa08f1b6312cfb7426769a8ea5f9d65">00066</a> <span class="keywordtype">void</span> <a class="code" href="classVectorFunctionCoefficient.html#abfa08f1b6312cfb7426769a8ea5f9d65">VectorFunctionCoefficient::Eval</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00067"></a>00067                                       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00068"></a>00068 {
+<a name="l00069"></a>00069    <span class="keywordtype">double</span> x[3];
+<a name="l00070"></a>00070    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> transip(x, 3);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072    T.<a class="code" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">Transform</a> (ip, transip);
 <a name="l00073"></a>00073 
-<a name="l00074"></a><a class="code" href="classVectorArrayCoefficient.html#a42d9e4ad9a3af5a8b1e27d273befce44">00074</a> <a class="code" href="classVectorArrayCoefficient.html#a42d9e4ad9a3af5a8b1e27d273befce44" title="Construct vector of dim coefficients.">VectorArrayCoefficient::VectorArrayCoefficient</a> (<span class="keywordtype">int</span> dim)
-<a name="l00075"></a>00075    : <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a>(dim), Coeff(dim)
-<a name="l00076"></a>00076 {
-<a name="l00077"></a>00077    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; dim; i++)
-<a name="l00078"></a>00078       <a class="code" href="classVectorArrayCoefficient.html#aa87321f3f2d8e01949abe68989bde37a">Coeff</a>[i] = NULL;
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 
-<a name="l00081"></a><a class="code" href="classVectorArrayCoefficient.html#a93b2f8e2065f249b244858fd81d3d960">00081</a> <a class="code" href="classVectorArrayCoefficient.html#a93b2f8e2065f249b244858fd81d3d960" title="Destriys vector coefficient.">VectorArrayCoefficient::~VectorArrayCoefficient</a>()
+<a name="l00074"></a>00074    V.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a> (<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>);
+<a name="l00075"></a>00075    (*Function) (transip, V);
+<a name="l00076"></a>00076    <span class="keywordflow">if</span> (<a class="code" href="classVectorFunctionCoefficient.html#a926debf97e437367e3af8f479db261ce">Q</a>)
+<a name="l00077"></a>00077       V *= <a class="code" href="classVectorFunctionCoefficient.html#a926debf97e437367e3af8f479db261ce">Q</a> -&gt; <a class="code" href="classVectorFunctionCoefficient.html#abfa08f1b6312cfb7426769a8ea5f9d65">Eval</a> (T, ip);
+<a name="l00078"></a>00078 }
+<a name="l00079"></a>00079 
+<a name="l00080"></a><a class="code" href="classVectorArrayCoefficient.html#a42d9e4ad9a3af5a8b1e27d273befce44">00080</a> <a class="code" href="classVectorArrayCoefficient.html#a42d9e4ad9a3af5a8b1e27d273befce44" title="Construct vector of dim coefficients.">VectorArrayCoefficient::VectorArrayCoefficient</a> (<span class="keywordtype">int</span> dim)
+<a name="l00081"></a>00081    : <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a>(dim), Coeff(dim)
 <a name="l00082"></a>00082 {
-<a name="l00083"></a>00083    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>; i++)
-<a name="l00084"></a>00084       <span class="keyword">delete</span> <a class="code" href="classVectorArrayCoefficient.html#aa87321f3f2d8e01949abe68989bde37a">Coeff</a>[i];
+<a name="l00083"></a>00083    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; dim; i++)
+<a name="l00084"></a>00084       <a class="code" href="classVectorArrayCoefficient.html#aa87321f3f2d8e01949abe68989bde37a">Coeff</a>[i] = NULL;
 <a name="l00085"></a>00085 }
 <a name="l00086"></a>00086 
-<a name="l00087"></a><a class="code" href="classVectorArrayCoefficient.html#a2643e9945894164daba1775b9322773b">00087</a> <span class="keywordtype">void</span> <a class="code" href="classVectorArrayCoefficient.html#ada3d16d74040696e516522cf96b3636c" title="Evaluates i&#39;th component of the vector.">VectorArrayCoefficient::Eval</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00088"></a>00088                                    <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
-<a name="l00089"></a>00089 {
-<a name="l00090"></a>00090    <span class="keywordtype">int</span> i;
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092    V.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>);
-<a name="l00093"></a>00093    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>; i++)
-<a name="l00094"></a>00094       V(i) = <a class="code" href="classVectorArrayCoefficient.html#aa87321f3f2d8e01949abe68989bde37a">Coeff</a>[i] -&gt; <a class="code" href="classVectorArrayCoefficient.html#ada3d16d74040696e516522cf96b3636c" title="Evaluates i&#39;th component of the vector.">Eval</a> (T, ip);
-<a name="l00095"></a>00095 }
-<a name="l00096"></a>00096 
-<a name="l00097"></a><a class="code" href="classVectorGridFunctionCoefficient.html#acdc6b52b25c2cebd595c3674cb285ef6">00097</a> <a class="code" href="classVectorGridFunctionCoefficient.html#acdc6b52b25c2cebd595c3674cb285ef6">VectorGridFunctionCoefficient::VectorGridFunctionCoefficient</a> (
-<a name="l00098"></a>00098    <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *gf) : <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> (gf -&gt; VectorDim())
-<a name="l00099"></a>00099 {
-<a name="l00100"></a>00100    <a class="code" href="classVectorGridFunctionCoefficient.html#aeed2738d4a8e42f15cbb98e6f71c5d08">GridFunc</a> = gf;
+<a name="l00087"></a><a class="code" href="classVectorArrayCoefficient.html#a93b2f8e2065f249b244858fd81d3d960">00087</a> <a class="code" href="classVectorArrayCoefficient.html#a93b2f8e2065f249b244858fd81d3d960" title="Destroys vector coefficient.">VectorArrayCoefficient::~VectorArrayCoefficient</a>()
+<a name="l00088"></a>00088 {
+<a name="l00089"></a>00089    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>; i++)
+<a name="l00090"></a>00090       <span class="keyword">delete</span> <a class="code" href="classVectorArrayCoefficient.html#aa87321f3f2d8e01949abe68989bde37a">Coeff</a>[i];
+<a name="l00091"></a>00091 }
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="classVectorArrayCoefficient.html#a2643e9945894164daba1775b9322773b">00093</a> <span class="keywordtype">void</span> <a class="code" href="classVectorArrayCoefficient.html#ada3d16d74040696e516522cf96b3636c" title="Evaluates i&#39;th component of the vector.">VectorArrayCoefficient::Eval</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00094"></a>00094                                    <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00095"></a>00095 {
+<a name="l00096"></a>00096    <span class="keywordtype">int</span> i;
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098    V.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>);
+<a name="l00099"></a>00099    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>; i++)
+<a name="l00100"></a>00100       V(i) = <a class="code" href="classVectorArrayCoefficient.html#aa87321f3f2d8e01949abe68989bde37a">Coeff</a>[i] -&gt; <a class="code" href="classVectorArrayCoefficient.html#ada3d16d74040696e516522cf96b3636c" title="Evaluates i&#39;th component of the vector.">Eval</a> (T, ip);
 <a name="l00101"></a>00101 }
 <a name="l00102"></a>00102 
-<a name="l00103"></a><a class="code" href="classVectorGridFunctionCoefficient.html#a8ea297d1602bdac45741e387ffd3cd77">00103</a> <span class="keywordtype">void</span> <a class="code" href="classVectorGridFunctionCoefficient.html#a8ea297d1602bdac45741e387ffd3cd77">VectorGridFunctionCoefficient::Eval</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00104"></a>00104                                           <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00103"></a><a class="code" href="classVectorGridFunctionCoefficient.html#acdc6b52b25c2cebd595c3674cb285ef6">00103</a> <a class="code" href="classVectorGridFunctionCoefficient.html#acdc6b52b25c2cebd595c3674cb285ef6">VectorGridFunctionCoefficient::VectorGridFunctionCoefficient</a> (
+<a name="l00104"></a>00104    <a class="code" href="classGridFunction.html" title="Class for grid function - Vector with asociated FE space.">GridFunction</a> *gf) : <a class="code" href="classVectorCoefficient.html">VectorCoefficient</a> (gf -&gt; VectorDim())
 <a name="l00105"></a>00105 {
-<a name="l00106"></a>00106    <a class="code" href="classVectorGridFunctionCoefficient.html#aeed2738d4a8e42f15cbb98e6f71c5d08">GridFunc</a> -&gt; GetVectorValue (T.<a class="code" href="classElementTransformation.html#ad6de4568eeb712e2c15a6b4d32544271">ElementNo</a>, ip, V);
+<a name="l00106"></a>00106    <a class="code" href="classVectorGridFunctionCoefficient.html#aeed2738d4a8e42f15cbb98e6f71c5d08">GridFunc</a> = gf;
 <a name="l00107"></a>00107 }
 <a name="l00108"></a>00108 
-<a name="l00109"></a><a class="code" href="classMatrixFunctionCoefficient.html#aae4b3e1d1d5482af44f0850ce4baaf56">00109</a> <span class="keywordtype">void</span> <a class="code" href="classMatrixFunctionCoefficient.html#aae4b3e1d1d5482af44f0850ce4baaf56">MatrixFunctionCoefficient::Eval</a> (<a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;K, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00110"></a>00110                                       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00109"></a><a class="code" href="classVectorGridFunctionCoefficient.html#a8ea297d1602bdac45741e387ffd3cd77">00109</a> <span class="keywordtype">void</span> <a class="code" href="classVectorGridFunctionCoefficient.html#a8ea297d1602bdac45741e387ffd3cd77">VectorGridFunctionCoefficient::Eval</a> (<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00110"></a>00110                                           <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
 <a name="l00111"></a>00111 {
-<a name="l00112"></a>00112    T.<a class="code" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">Transform</a> (ip, <a class="code" href="classMatrixFunctionCoefficient.html#a98f851ffb9b16b24e26166adcab6bf32">transip</a>);
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114    K.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a> (<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>);
-<a name="l00115"></a>00115    (*Function) (<a class="code" href="classMatrixFunctionCoefficient.html#a98f851ffb9b16b24e26166adcab6bf32">transip</a>, K);
-<a name="l00116"></a>00116 }
-<a name="l00117"></a>00117 
-<a name="l00118"></a><a class="code" href="classMatrixArrayCoefficient.html#a261dccd5785e500cccd91ab947e4f81c">00118</a> <a class="code" href="classMatrixArrayCoefficient.html#a261dccd5785e500cccd91ab947e4f81c">MatrixArrayCoefficient::MatrixArrayCoefficient</a> (<span class="keywordtype">int</span> dim)
-<a name="l00119"></a>00119    : <a class="code" href="classMatrixCoefficient.html">MatrixCoefficient</a> (dim)
-<a name="l00120"></a>00120 {
-<a name="l00121"></a>00121    <a class="code" href="classMatrixArrayCoefficient.html#a17c4d968d98b7a5c553e58c4af7a9985">Coeff</a>.<a class="code" href="classArray.html#a471447bf48b64b0b7a08d15994fbbc97" title="Change logical size of the array, keep existing entries.">SetSize</a> (<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>*<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>);
-<a name="l00122"></a>00122 }
-<a name="l00123"></a>00123 
-<a name="l00124"></a><a class="code" href="classMatrixArrayCoefficient.html#a64f6f527666815df642127f13b457a52">00124</a> <a class="code" href="classMatrixArrayCoefficient.html#a64f6f527666815df642127f13b457a52">MatrixArrayCoefficient::~MatrixArrayCoefficient</a> ()
-<a name="l00125"></a>00125 {
-<a name="l00126"></a>00126    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt; <a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>*<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>; i++)
-<a name="l00127"></a>00127       <span class="keyword">delete</span> <a class="code" href="classMatrixArrayCoefficient.html#a17c4d968d98b7a5c553e58c4af7a9985">Coeff</a>[i];
-<a name="l00128"></a>00128 }
-<a name="l00129"></a>00129 
-<a name="l00130"></a><a class="code" href="classMatrixArrayCoefficient.html#aee0d2b290d12096119de4dc62924d140">00130</a> <span class="keywordtype">void</span> <a class="code" href="classMatrixArrayCoefficient.html#a54acabe13d068b4e6e7fc674c152d7b1">MatrixArrayCoefficient::Eval</a> (<a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;K, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
-<a name="l00131"></a>00131                                    <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
-<a name="l00132"></a>00132 {
-<a name="l00133"></a>00133    <span class="keywordtype">int</span> i, j;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>; i++)
-<a name="l00136"></a>00136       <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>; j++)
-<a name="l00137"></a>00137          K(i,j) = <a class="code" href="classMatrixArrayCoefficient.html#a17c4d968d98b7a5c553e58c4af7a9985">Coeff</a>[i*vdim+j] -&gt; <a class="code" href="classMatrixArrayCoefficient.html#a54acabe13d068b4e6e7fc674c152d7b1">Eval</a>(T, ip);
-<a name="l00138"></a>00138 }
-<a name="l00139"></a>00139 
-<a name="l00140"></a><a class="code" href="coefficient_8hpp.html#aa99cfef2c6145f8ed0d0c143938852b0">00140</a> <span class="keywordtype">double</span> <a class="code" href="coefficient_8cpp.html#aa99cfef2c6145f8ed0d0c143938852b0">ComputeLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;coeff, <a class="code" href="classMesh.html">Mesh</a> &amp;mesh,
-<a name="l00141"></a>00141                      <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *irs[])
-<a name="l00142"></a>00142 {
-<a name="l00143"></a>00143    <span class="keywordtype">double</span> <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a> = 0.0;
-<a name="l00144"></a>00144    <a class="code" href="classElementTransformation.html">ElementTransformation</a> *tr;
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.<a class="code" href="classMesh.html#ab6b8177d6bde4dffb5a03d4944cf4465" title="Returns number of elements.">GetNE</a>(); i++)
-<a name="l00147"></a>00147    {
-<a name="l00148"></a>00148       tr = mesh.<a class="code" href="classMesh.html#aff6fb250e506628c2705c885f1a7f0a4">GetElementTransformation</a>(i);
-<a name="l00149"></a>00149       <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = *irs[mesh.<a class="code" href="classMesh.html#ae8a391f24309555f70c6e88601209a67" title="Returns the type of element i.">GetElementType</a>(i)];
-<a name="l00150"></a>00150       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); j++)
-<a name="l00151"></a>00151       {
-<a name="l00152"></a>00152          <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(j);
-<a name="l00153"></a>00153          tr-&gt;<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a>(&amp;ip);
-<a name="l00154"></a>00154          <span class="keywordtype">double</span> val = fabs(coeff.<a class="code" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Eval</a>(*tr, ip));
-<a name="l00155"></a>00155          <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())
-<a name="l00156"></a>00156          {
-<a name="l00157"></a>00157             norm += ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * tr-&gt;<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>() * pow(val, p);
-<a name="l00158"></a>00158          }
-<a name="l00159"></a>00159          <span class="keywordflow">else</span>
-<a name="l00160"></a>00160          {
-<a name="l00161"></a>00161             <span class="keywordflow">if</span> (norm &lt; val)
-<a name="l00162"></a>00162                norm = val;
-<a name="l00163"></a>00163          }
-<a name="l00164"></a>00164       }
-<a name="l00165"></a>00165    }
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167    <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())
-<a name="l00168"></a>00168    {
-<a name="l00169"></a>00169       <span class="comment">// negative quadrature weights may cause norm to be negative</span>
-<a name="l00170"></a>00170       <span class="keywordflow">if</span> (norm &lt; 0.)
-<a name="l00171"></a>00171          norm = -pow(-norm, 1. / p);
-<a name="l00172"></a>00172       <span class="keywordflow">else</span>
-<a name="l00173"></a>00173          norm = pow(norm, 1. / p);
-<a name="l00174"></a>00174    }
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176    <span class="keywordflow">return</span> <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>;
-<a name="l00177"></a>00177 }
+<a name="l00112"></a>00112    <a class="code" href="classVectorGridFunctionCoefficient.html#aeed2738d4a8e42f15cbb98e6f71c5d08">GridFunc</a> -&gt; GetVectorValue (T.<a class="code" href="classElementTransformation.html#ad6de4568eeb712e2c15a6b4d32544271">ElementNo</a>, ip, V);
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="classVectorRestrictedCoefficient.html#a8d0ead5680c4e3d2204223e28138ad02">00115</a> <span class="keywordtype">void</span> <a class="code" href="classVectorRestrictedCoefficient.html#a8d0ead5680c4e3d2204223e28138ad02">VectorRestrictedCoefficient::Eval</a>(<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;V, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00116"></a>00116                                        <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00117"></a>00117 {
+<a name="l00118"></a>00118    V.<a class="code" href="classVector.html#a195961c95085ba0db54ebddbedf0412a" title="Resizes the vector if the new size is different.">SetSize</a>(<a class="code" href="classVectorCoefficient.html#a2fbfd6852d7da100cdacf9c10a44c214">vdim</a>);
+<a name="l00119"></a>00119    <span class="keywordflow">if</span> (<a class="code" href="classVectorRestrictedCoefficient.html#a60a7139ab93b7257a48bdb12ce226690">active_attr</a>[T.<a class="code" href="classElementTransformation.html#a2e0472a77e66a8df1052a06af33763e5">Attribute</a>-1])
+<a name="l00120"></a>00120       <a class="code" href="classVectorRestrictedCoefficient.html#ae5397385bd1a47158a89f654a1ac9689">c</a>-&gt;<a class="code" href="classVectorCoefficient.html#a640bbe63d2d61ec0d0e6b082a10ce969">Eval</a>(V, T, ip);
+<a name="l00121"></a>00121    <span class="keywordflow">else</span>
+<a name="l00122"></a>00122       V = 0.0;
+<a name="l00123"></a>00123 }
+<a name="l00124"></a>00124 
+<a name="l00125"></a><a class="code" href="classMatrixFunctionCoefficient.html#aae4b3e1d1d5482af44f0850ce4baaf56">00125</a> <span class="keywordtype">void</span> <a class="code" href="classMatrixFunctionCoefficient.html#aae4b3e1d1d5482af44f0850ce4baaf56">MatrixFunctionCoefficient::Eval</a> (<a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;K, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00126"></a>00126                                       <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00127"></a>00127 {
+<a name="l00128"></a>00128    <span class="keywordtype">double</span> x[3];
+<a name="l00129"></a>00129    <a class="code" href="classVector.html" title="Vector data type.">Vector</a> transip(x, 3);
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131    T.<a class="code" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">Transform</a> (ip, transip);
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133    K.<a class="code" href="classDenseMatrix.html#a0c8c43b9645a20eaf034cc208ae4c610" title="If the matrix is not a square matrix of size s then recreate it.">SetSize</a> (<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>);
+<a name="l00134"></a>00134    (*Function) (transip, K);
+<a name="l00135"></a>00135 }
+<a name="l00136"></a>00136 
+<a name="l00137"></a><a class="code" href="classMatrixArrayCoefficient.html#a261dccd5785e500cccd91ab947e4f81c">00137</a> <a class="code" href="classMatrixArrayCoefficient.html#a261dccd5785e500cccd91ab947e4f81c">MatrixArrayCoefficient::MatrixArrayCoefficient</a> (<span class="keywordtype">int</span> dim)
+<a name="l00138"></a>00138    : <a class="code" href="classMatrixCoefficient.html">MatrixCoefficient</a> (dim)
+<a name="l00139"></a>00139 {
+<a name="l00140"></a>00140    <a class="code" href="classMatrixArrayCoefficient.html#a17c4d968d98b7a5c553e58c4af7a9985">Coeff</a>.<a class="code" href="classArray.html#a471447bf48b64b0b7a08d15994fbbc97" title="Change logical size of the array, keep existing entries.">SetSize</a> (<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>*<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>);
+<a name="l00141"></a>00141 }
+<a name="l00142"></a>00142 
+<a name="l00143"></a><a class="code" href="classMatrixArrayCoefficient.html#a64f6f527666815df642127f13b457a52">00143</a> <a class="code" href="classMatrixArrayCoefficient.html#a64f6f527666815df642127f13b457a52">MatrixArrayCoefficient::~MatrixArrayCoefficient</a> ()
+<a name="l00144"></a>00144 {
+<a name="l00145"></a>00145    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt; <a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>*<a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>; i++)
+<a name="l00146"></a>00146       <span class="keyword">delete</span> <a class="code" href="classMatrixArrayCoefficient.html#a17c4d968d98b7a5c553e58c4af7a9985">Coeff</a>[i];
+<a name="l00147"></a>00147 }
+<a name="l00148"></a>00148 
+<a name="l00149"></a><a class="code" href="classMatrixArrayCoefficient.html#aee0d2b290d12096119de4dc62924d140">00149</a> <span class="keywordtype">void</span> <a class="code" href="classMatrixArrayCoefficient.html#a54acabe13d068b4e6e7fc674c152d7b1">MatrixArrayCoefficient::Eval</a> (<a class="code" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> &amp;K, <a class="code" href="classElementTransformation.html">ElementTransformation</a> &amp;T,
+<a name="l00150"></a>00150                                    <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip)
+<a name="l00151"></a>00151 {
+<a name="l00152"></a>00152    <span class="keywordtype">int</span> i, j;
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>; i++)
+<a name="l00155"></a>00155       <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="classMatrixCoefficient.html#a9a57201ed5b64962dd7230b737303d0f">vdim</a>; j++)
+<a name="l00156"></a>00156          K(i,j) = <a class="code" href="classMatrixArrayCoefficient.html#a17c4d968d98b7a5c553e58c4af7a9985">Coeff</a>[i*vdim+j] -&gt; <a class="code" href="classMatrixArrayCoefficient.html#a54acabe13d068b4e6e7fc674c152d7b1">Eval</a>(T, ip);
+<a name="l00157"></a>00157 }
+<a name="l00158"></a>00158 
+<a name="l00159"></a><a class="code" href="coefficient_8hpp.html#aa99cfef2c6145f8ed0d0c143938852b0">00159</a> <span class="keywordtype">double</span> <a class="code" href="coefficient_8cpp.html#aa99cfef2c6145f8ed0d0c143938852b0">ComputeLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classCoefficient.html" title="Base class Coefficient.">Coefficient</a> &amp;coeff, <a class="code" href="classMesh.html">Mesh</a> &amp;mesh,
+<a name="l00160"></a>00160                      <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> *irs[])
+<a name="l00161"></a>00161 {
+<a name="l00162"></a>00162    <span class="keywordtype">double</span> <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a> = 0.0;
+<a name="l00163"></a>00163    <a class="code" href="classElementTransformation.html">ElementTransformation</a> *tr;
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.<a class="code" href="classMesh.html#ab6b8177d6bde4dffb5a03d4944cf4465" title="Returns number of elements.">GetNE</a>(); i++)
+<a name="l00166"></a>00166    {
+<a name="l00167"></a>00167       tr = mesh.<a class="code" href="classMesh.html#aff6fb250e506628c2705c885f1a7f0a4">GetElementTransformation</a>(i);
+<a name="l00168"></a>00168       <span class="keyword">const</span> <a class="code" href="classIntegrationRule.html" title="Class for integration rule.">IntegrationRule</a> &amp;ir = *irs[mesh.<a class="code" href="classMesh.html#ae8a391f24309555f70c6e88601209a67" title="Returns the type of element i.">GetElementType</a>(i)];
+<a name="l00169"></a>00169       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; ir.<a class="code" href="classIntegrationRule.html#ad450ac97ab611b5575bf2e4a5578b83e" title="Returns the number of the points in the integration rule.">GetNPoints</a>(); j++)
+<a name="l00170"></a>00170       {
+<a name="l00171"></a>00171          <span class="keyword">const</span> <a class="code" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classIntegrationRule.html#a30f5b6a5c2f58a412680d277ba4ed189" title="Returns a reference to the i-th integration point.">IntPoint</a>(j);
+<a name="l00172"></a>00172          tr-&gt;<a class="code" href="classElementTransformation.html#a914f72157a1367b21bd4fedd65849c1f">SetIntPoint</a>(&amp;ip);
+<a name="l00173"></a>00173          <span class="keywordtype">double</span> val = fabs(coeff.<a class="code" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Eval</a>(*tr, ip));
+<a name="l00174"></a>00174          <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())
+<a name="l00175"></a>00175          {
+<a name="l00176"></a>00176             norm += ip.<a class="code" href="classIntegrationPoint.html#ae8a7f001017b6caa0cd338471fbc87ad">weight</a> * tr-&gt;<a class="code" href="classElementTransformation.html#a78c58ee5092b3237955c508690085c2b">Weight</a>() * pow(val, p);
+<a name="l00177"></a>00177          }
+<a name="l00178"></a>00178          <span class="keywordflow">else</span>
+<a name="l00179"></a>00179          {
+<a name="l00180"></a>00180             <span class="keywordflow">if</span> (norm &lt; val)
+<a name="l00181"></a>00181                norm = val;
+<a name="l00182"></a>00182          }
+<a name="l00183"></a>00183       }
+<a name="l00184"></a>00184    }
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186    <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())
+<a name="l00187"></a>00187    {
+<a name="l00188"></a>00188       <span class="comment">// negative quadrature weights may cause norm to be negative</span>
+<a name="l00189"></a>00189       <span class="keywordflow">if</span> (norm &lt; 0.)
+<a name="l00190"></a>00190          norm = -pow(-norm, 1. / p);
+<a name="l00191"></a>00191       <span class="keywordflow">else</span>
+<a name="l00192"></a>00192          norm = pow(norm, 1. / p);
+<a name="l00193"></a>00193    }
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195    <span class="keywordflow">return</span> <a class="code" href="gmres_8cpp.html#ad9890f4cb9caef9f4a01c36ce71612df">norm</a>;
+<a name="l00196"></a>00196 }
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -260,7 +279,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:23 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

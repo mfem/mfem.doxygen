@@ -91,32 +91,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *<a class="code" href="classParLinearForm.html#a44f5b3b936bb05a3992e8bc9ae0cadaa" title="Returns the vector assembled on the true dofs, i.e. P^t v.">ParLinearForm::ParallelAssemble</a>()
 <a name="l00024"></a>00024 {
-<a name="l00025"></a>00025    <span class="keywordtype">int</span>  nproc    = <a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a> -&gt; GetNRanks();
-<a name="l00026"></a>00026    <span class="keywordtype">int</span> *dof_off  = <a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a> -&gt; GetDofOffsets();
-<a name="l00027"></a>00027    <span class="keywordtype">int</span> *tdof_off = <a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a> -&gt; GetTrueDofOffsets();
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029    <span class="comment">// vector on (all) dofs</span>
-<a name="l00030"></a>00030    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *v;
-<a name="l00031"></a>00031    <span class="keywordflow">if</span> (HYPRE_AssumedPartitionCheck())
-<a name="l00032"></a>00032       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[2], <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, dof_off);
-<a name="l00033"></a>00033    <span class="keywordflow">else</span>
-<a name="l00034"></a>00034       v = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(dof_off[nproc], <a class="code" href="classVector.html#a5c596b5d8971aaeaf42b7fbb971d2a17">data</a>, dof_off);
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036    <span class="comment">// vector on true dofs</span>
-<a name="l00037"></a>00037    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *tv;
-<a name="l00038"></a>00038    <span class="keywordflow">if</span> (HYPRE_AssumedPartitionCheck())
-<a name="l00039"></a>00039       tv = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(tdof_off[2], tdof_off);
-<a name="l00040"></a>00040    <span class="keywordflow">else</span>
-<a name="l00041"></a>00041       tv = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(tdof_off[nproc], tdof_off);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043    <a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a> -&gt; Dof_TrueDof_Matrix() -&gt; MultTranspose(*v,*tv);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045    <span class="keyword">delete</span> v;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047    <span class="keywordflow">return</span> tv;
-<a name="l00048"></a>00048 }
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="preprocessor">#endif</span>
+<a name="l00025"></a>00025    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *tv = <span class="keyword">new</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a>(<a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>(),
+<a name="l00026"></a>00026                                            <a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>());
+<a name="l00027"></a>00027    <a class="code" href="classParLinearForm.html#a478a40a92dd17fdee8c5d4af46e1f391">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aef050d1bb1c2239e4e31085e3a8d5b67" title="The true dof-to-dof interpolation matrix.">Dof_TrueDof_Matrix</a>()-&gt;<a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(*<span class="keyword">this</span>, *tv);
+<a name="l00028"></a>00028    <span class="keywordflow">return</span> tv;
+<a name="l00029"></a>00029 }
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -133,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

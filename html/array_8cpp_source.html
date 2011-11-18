@@ -143,36 +143,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00074"></a>00074 }
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00077"></a><a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">00077</a> T <a class="code" href="classArray.html#a58ac03f540e9ab655de7042f5f4455cb">Array&lt;T&gt;::Max</a>()
-<a name="l00078"></a>00078 {
-<a name="l00079"></a>00079    T max;
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081    <span class="keywordflow">if</span> (size &gt; 0)
-<a name="l00082"></a>00082       max = operator[](0);
-<a name="l00083"></a>00083    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; size; i++)
-<a name="l00084"></a>00084       <span class="keywordflow">if</span> (max &lt; <span class="keyword">operator</span>[](i))
-<a name="l00085"></a>00085          max = operator[](i);
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087    <span class="keywordflow">return</span> max;
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00091"></a><a class="code" href="array_8cpp.html#a7bb258d43da5ccdc6010c64cd0b90319">00091</a> <span class="keywordtype">int</span> <a class="code" href="array_8cpp.html#a7bb258d43da5ccdc6010c64cd0b90319">Compare</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *p, <span class="keyword">const</span> <span class="keywordtype">void</span> *q)
-<a name="l00092"></a>00092 {
-<a name="l00093"></a>00093    <span class="keywordflow">if</span> (*((T*)p) &lt; *((T*)q))  <span class="keywordflow">return</span> -1;
-<a name="l00094"></a>00094    <span class="keywordflow">if</span> (*((T*)q) &lt; *((T*)p))  <span class="keywordflow">return</span> +1;
-<a name="l00095"></a>00095    <span class="keywordflow">return</span> 0;
-<a name="l00096"></a>00096 }
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00099"></a><a class="code" href="classArray.html#aae7102f125db37e0f82bec16ba56c65b">00099</a> <span class="keywordtype">void</span> <a class="code" href="classArray.html#aae7102f125db37e0f82bec16ba56c65b" title="Sorts the array.">Array&lt;T&gt;::Sort</a>()
-<a name="l00100"></a>00100 {
-<a name="l00101"></a>00101    <span class="comment">// qsort((T*)data,0,size-1);</span>
-<a name="l00102"></a>00102    qsort(data, size, <span class="keyword">sizeof</span>(T), Compare&lt;T&gt;);  <span class="comment">// use qsort from stdlib.h</span>
-<a name="l00103"></a>00103 }
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classArray.html">Array&lt;int&gt;</a>;
-<a name="l00106"></a>00106 <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classArray.html">Array&lt;double&gt;</a>;
+<a name="l00077"></a><a class="code" href="classArray.html#afbc6efcef79fdf21f00624a089d34143">00077</a> T <a class="code" href="classArray.html#afbc6efcef79fdf21f00624a089d34143">Array&lt;T&gt;::Max</a>()<span class="keyword"> const</span>
+<a name="l00078"></a>00078 <span class="keyword"></span>{
+<a name="l00079"></a>00079 <span class="preprocessor">#ifdef MFEM_DEBUG</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span>   <span class="keywordflow">if</span> (size &lt;= 0)
+<a name="l00081"></a>00081       <a class="code" href="error_8cpp.html#a102dfeb7150cf57c4931f2a91aad7bdd">mfem_error</a>(<span class="stringliteral">&quot;Array::Max : empty array!&quot;</span>);
+<a name="l00082"></a>00082 <span class="preprocessor">#endif</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a>00084    T max = operator[](0);
+<a name="l00085"></a>00085    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; size; i++)
+<a name="l00086"></a>00086       <span class="keywordflow">if</span> (max &lt; <span class="keyword">operator</span>[](i))
+<a name="l00087"></a>00087          max = operator[](i);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089    <span class="keywordflow">return</span> max;
+<a name="l00090"></a>00090 }
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00093"></a><a class="code" href="array_8cpp.html#a7bb258d43da5ccdc6010c64cd0b90319">00093</a> <span class="keywordtype">int</span> <a class="code" href="array_8cpp.html#a7bb258d43da5ccdc6010c64cd0b90319">Compare</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *p, <span class="keyword">const</span> <span class="keywordtype">void</span> *q)
+<a name="l00094"></a>00094 {
+<a name="l00095"></a>00095    <span class="keywordflow">if</span> (*((T*)p) &lt; *((T*)q))  <span class="keywordflow">return</span> -1;
+<a name="l00096"></a>00096    <span class="keywordflow">if</span> (*((T*)q) &lt; *((T*)p))  <span class="keywordflow">return</span> +1;
+<a name="l00097"></a>00097    <span class="keywordflow">return</span> 0;
+<a name="l00098"></a>00098 }
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00101"></a><a class="code" href="classArray.html#aae7102f125db37e0f82bec16ba56c65b">00101</a> <span class="keywordtype">void</span> <a class="code" href="classArray.html#aae7102f125db37e0f82bec16ba56c65b" title="Sorts the array.">Array&lt;T&gt;::Sort</a>()
+<a name="l00102"></a>00102 {
+<a name="l00103"></a>00103    <span class="comment">// qsort((T*)data,0,size-1);</span>
+<a name="l00104"></a>00104    qsort(data, size, <span class="keyword">sizeof</span>(T), Compare&lt;T&gt;);  <span class="comment">// use qsort from stdlib.h</span>
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classArray.html">Array&lt;int&gt;</a>;
+<a name="l00108"></a>00108 <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classArray.html">Array&lt;double&gt;</a>;
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -189,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:23 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:54 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

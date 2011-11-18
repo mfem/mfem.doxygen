@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">RT1TriangleFiniteElement Class Reference</div>  </div>
 </div>
@@ -90,10 +91,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRT1TriangleFiniteElement.html#a6c97707304e2559abcc5d7f262f04a07">CalcVShape</a> (const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;shape) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRT1TriangleFiniteElement.html#a3c54fdcf854460084da997adbe58e741">CalcVShape</a> (<a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;shape) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRT1TriangleFiniteElement.html#aaee323cad4759ea76d5e9b5c2acac245">CalcDivShape</a> (const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;ip, <a class="el" href="classVector.html">Vector</a> &amp;divshape) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRT1TriangleFiniteElement.html#a032a721cfd013f8c053376c3b8962c27">GetLocalInterpolation</a> (<a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;I) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRT1TriangleFiniteElement.html#a4fdeee09f3c51f64172981a837d44980">Project</a> (<a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;vc, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classVector.html">Vector</a> &amp;dofs) const </td></tr>
+<tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRT1TriangleFiniteElement.html#ab88eebd2e0d21ef1a03b611545ff3510">nk</a> [8][2]</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00646">646</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00736">736</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5772d45118c0a4f14d11159a0fa6c787"></a><!-- doxytag: member="RT1TriangleFiniteElement::RT1TriangleFiniteElement" ref="a5772d45118c0a4f14d11159a0fa6c787" args="()" -->
 <div class="memitem">
@@ -109,9 +115,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02048">2048</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02414">2414</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
-<p>References <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="fe_8hpp_source.html#l00036">FiniteElement::Nodes</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
+<p>References <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="fe_8hpp_source.html#l00037">FiniteElement::Nodes</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
 
 </div>
 </div>
@@ -144,41 +150,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classFiniteElement.html#ac5bf14e5efc8525a7505c1f97008f11c">FiniteElement</a>.</p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02092">2092</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
-
-<p>References <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6c97707304e2559abcc5d7f262f04a07"></a><!-- doxytag: member="RT1TriangleFiniteElement::CalcVShape" ref="a6c97707304e2559abcc5d7f262f04a07" args="(const IntegrationPoint &amp;ip, DenseMatrix &amp;shape) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RT1TriangleFiniteElement::CalcVShape </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td>
-          <td class="paramname"><em>ip</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>shape</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>This virtual function evaluates the values of all components of all shape functions at the given <a class="el" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a>. The result is stored in the <a class="el" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> shape (Dof x Dim) so that each row contains the components of one shape function. </p>
-
-<p>Reimplemented from <a class="el" href="classFiniteElement.html#a06703623cb0917534007a824c31a4932">FiniteElement</a>.</p>
-
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02069">2069</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02458">2458</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 <p>References <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
 
@@ -211,9 +183,144 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classFiniteElement.html#ac6bf4d09e2203317e187633bbb02c51c">FiniteElement</a>.</p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00654">654</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00747">747</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
-<p>References <a class="el" href="fe_8cpp_source.html#l00152">VectorFiniteElement::CalcVShape_RT()</a>.</p>
+<p>References <a class="el" href="fe_8cpp_source.html#l00257">VectorFiniteElement::CalcVShape_RT()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c97707304e2559abcc5d7f262f04a07"></a><!-- doxytag: member="RT1TriangleFiniteElement::CalcVShape" ref="a6c97707304e2559abcc5d7f262f04a07" args="(const IntegrationPoint &amp;ip, DenseMatrix &amp;shape) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT1TriangleFiniteElement::CalcVShape </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This virtual function evaluates the values of all components of all shape functions at the given <a class="el" href="classIntegrationPoint.html" title="Class for integration point with weight.">IntegrationPoint</a>. The result is stored in the <a class="el" href="classDenseMatrix.html" title="Data type dense matrix.">DenseMatrix</a> shape (Dof x Dim) so that each row contains the components of one shape function. </p>
+
+<p>Reimplemented from <a class="el" href="classFiniteElement.html#a06703623cb0917534007a824c31a4932">FiniteElement</a>.</p>
+
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02435">2435</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l02481">GetLocalInterpolation()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a032a721cfd013f8c053376c3b8962c27"></a><!-- doxytag: member="RT1TriangleFiniteElement::GetLocalInterpolation" ref="a032a721cfd013f8c053376c3b8962c27" args="(ElementTransformation &amp;Trans, DenseMatrix &amp;I) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT1TriangleFiniteElement::GetLocalInterpolation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>Trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>I</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Return the local interpolation matrix I (Dof x Dof) where the fine element is the image of the base geometry under the given transformation. </p>
+
+<p>Reimplemented from <a class="el" href="classFiniteElement.html#af605e4954cd82e6d9d1c71915858a831">FiniteElement</a>.</p>
+
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02481">2481</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8cpp_source.html#l01868">CalcAdjugateTranspose()</a>, <a class="el" href="fe_8cpp_source.html#l02435">CalcVShape()</a>, <a class="el" href="fe_8hpp_source.html#l00036">FiniteElement::Dim</a>, <a class="el" href="fe_8hpp_source.html#l00036">FiniteElement::Dof</a>, <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">ElementTransformation::Jacobian()</a>, <a class="el" href="fe_8hpp_source.html#l00222">VectorFiniteElement::Jinv</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="fe_8hpp_source.html#l00739">nk</a>, <a class="el" href="fe_8hpp_source.html#l00037">FiniteElement::Nodes</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="classElementTransformation.html#ad45b6952ecf442d315b1dbd8f10d13e9">ElementTransformation::Transform()</a>, <a class="el" href="fe_8hpp_source.html#l00223">VectorFiniteElement::vshape</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fdeee09f3c51f64172981a837d44980"></a><!-- doxytag: member="RT1TriangleFiniteElement::Project" ref="a4fdeee09f3c51f64172981a837d44980" args="(VectorCoefficient &amp;vc, ElementTransformation &amp;Trans, Vector &amp;dofs) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RT1TriangleFiniteElement::Project </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>vc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;&#160;</td>
+          <td class="paramname"><em>Trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>dofs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Given a vector coefficient and a transformation, compute its projection (approximation) in the local finite dimensional space in terms of the degrees of freedom. (VectorFiniteElements) </p>
+
+<p>Reimplemented from <a class="el" href="classFiniteElement.html#a25c7edb5c3e2272f45f8212338816a24">FiniteElement</a>.</p>
+
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l02531">2531</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+
+<p>References <a class="el" href="densemat_8cpp_source.html#l01868">CalcAdjugateTranspose()</a>, <a class="el" href="fe_8hpp_source.html#l00036">FiniteElement::Dim</a>, <a class="el" href="coefficient_8cpp_source.html#l00052">VectorCoefficient::Eval()</a>, <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="classElementTransformation.html#a2cdb5703127f0426386f0dcb97893801">ElementTransformation::Jacobian()</a>, <a class="el" href="fe_8hpp_source.html#l00222">VectorFiniteElement::Jinv</a>, <a class="el" href="fe_8hpp_source.html#l00739">nk</a>, <a class="el" href="fe_8hpp_source.html#l00037">FiniteElement::Nodes</a>, and <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ab88eebd2e0d21ef1a03b611545ff3510"></a><!-- doxytag: member="RT1TriangleFiniteElement::nk" ref="ab88eebd2e0d21ef1a03b611545ff3510" args="[8][2]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="classRT1TriangleFiniteElement.html#ab88eebd2e0d21ef1a03b611545ff3510">RT1TriangleFiniteElement::nk</a><code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Initial value:</b><div class="fragment"><pre class="fragment">
+{
+   { 0,-1}, { 0,-1},
+   { 1, 1}, { 1, 1},
+   {-1, 0}, {-1, 0},
+   { 1, 0}, { 0, 1}
+}
+</pre></div>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00739">739</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="fe_8cpp_source.html#l02481">GetLocalInterpolation()</a>, and <a class="el" href="fe_8cpp_source.html#l02531">Project()</a>.</p>
 
 </div>
 </div>
@@ -236,7 +343,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:27 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:57 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

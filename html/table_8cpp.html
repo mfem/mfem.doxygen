@@ -87,6 +87,8 @@ Include dependency graph for table.cpp:</div>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="table_8cpp.html#aa2ebc1538c040bb6f74c4ad9ca623c5b">Transpose</a> (const <a class="el" href="classTable.html">Table</a> &amp;A, <a class="el" href="classTable.html">Table</a> &amp;At, int _ncols_A)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose a <a class="el" href="classTable.html">Table</a>.  <a href="#aa2ebc1538c040bb6f74c4ad9ca623c5b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="table_8cpp.html#ac4fce49976c42e65ae8fe3df925eef1b">Transpose</a> (const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;A, <a class="el" href="classTable.html">Table</a> &amp;At, int _ncols_A)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose an <a class="el" href="classArray.html">Array&lt;int&gt;</a>  <a href="#ac4fce49976c42e65ae8fe3df925eef1b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="table_8cpp.html#a640d9bfa0f77dd502a095e13431e1ab4">Mult</a> (const <a class="el" href="classTable.html">Table</a> &amp;A, const <a class="el" href="classTable.html">Table</a> &amp;B, <a class="el" href="classTable.html">Table</a> &amp;C)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">C = A * B (as boolean matrices)  <a href="#a640d9bfa0f77dd502a095e13431e1ab4"></a><br/></td></tr>
 </table>
@@ -124,11 +126,11 @@ Functions</h2></td></tr>
 
 <p>C = A * B (as boolean matrices) </p>
 
-<p>Definition at line <a class="el" href="table_8cpp_source.html#l00291">291</a> of file <a class="el" href="table_8cpp_source.html">table.cpp</a>.</p>
+<p>Definition at line <a class="el" href="table_8cpp_source.html#l00302">302</a> of file <a class="el" href="table_8cpp_source.html">table.cpp</a>.</p>
 
 <p>References <a class="el" href="table_8hpp_source.html#l00083">Table::GetI()</a>, <a class="el" href="table_8hpp_source.html#l00084">Table::GetJ()</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="table_8cpp_source.html#l00102">Table::SetDims()</a>, <a class="el" href="table_8hpp_source.html#l00062">Table::Size()</a>, and <a class="el" href="table_8cpp_source.html#l00219">Table::Width()</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00738">ElasticityIntegrator::AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00681">VectorDiffusionIntegrator::AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00068">DiffusionIntegrator::AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00595">VectorDivergenceIntegrator::AssembleElementMatrix2()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00419">DerivativeIntegrator::AssembleElementMatrix2()</a>, <a class="el" href="fe_8cpp_source.html#l00601">GaussQuad2DFiniteElement::CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l00162">VectorFiniteElement::CalcVShape_ND()</a>, <a class="el" href="mesh_8cpp_source.html#l03646">Mesh::CheckDisplacements()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00946">GridFunction::ComputeH1Error()</a>, <a class="el" href="gridfunc_8cpp_source.html#l01157">GridFunction::ComputeW11Error()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00618">GridFunction::GetVectorGradient()</a>, <a class="el" href="eltrans_8cpp_source.html#l00016">IsoparametricTransformation::Jacobian()</a>, <a class="el" href="geom_8cpp_source.html#l00241">Geometry::JacToPerfJac()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01296">Mult_AtDA()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01285">RAP()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00830">ElasticityIntegrator::AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00773">VectorDiffusionIntegrator::AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00068">DiffusionIntegrator::AssembleElementMatrix()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00684">VectorDivergenceIntegrator::AssembleElementMatrix2()</a>, <a class="el" href="bilininteg_8cpp_source.html#l00481">DerivativeIntegrator::AssembleElementMatrix2()</a>, <a class="el" href="fe_8cpp_source.html#l08362">ND_TetrahedronElement::CalcCurlShape()</a>, <a class="el" href="fe_8cpp_source.html#l06959">L2_TetrahedronElement::CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l06859">L2_TriangleElement::CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l06480">H1_TetrahedronElement::CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l06331">H1_TriangleElement::CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l00953">GaussQuad2DFiniteElement::CalcDShape()</a>, <a class="el" href="fe_8cpp_source.html#l08512">ND_TriangleElement::CalcVShape()</a>, <a class="el" href="fe_8cpp_source.html#l08320">ND_TetrahedronElement::CalcVShape()</a>, <a class="el" href="fe_8cpp_source.html#l07693">RT_TetrahedronElement::CalcVShape()</a>, <a class="el" href="fe_8cpp_source.html#l07520">RT_TriangleElement::CalcVShape()</a>, <a class="el" href="fe_8cpp_source.html#l00270">VectorFiniteElement::CalcVShape_ND()</a>, <a class="el" href="mesh_8cpp_source.html#l03979">Mesh::CheckDisplacements()</a>, <a class="el" href="gridfunc_8cpp_source.html#l01168">GridFunction::ComputeH1Error()</a>, <a class="el" href="gridfunc_8cpp_source.html#l01381">GridFunction::ComputeW11Error()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00727">GridFunction::GetVectorGradient()</a>, <a class="el" href="eltrans_8cpp_source.html#l00016">IsoparametricTransformation::Jacobian()</a>, <a class="el" href="geom_8cpp_source.html#l00244">Geometry::JacToPerfJac()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01550">Mult_AtDA()</a>, <a class="el" href="fe_8cpp_source.html#l00204">NodalFiniteElement::ProjectGrad()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01539">RAP()</a>.</p>
 
 </div>
 </div>
@@ -169,7 +171,46 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="table_8hpp_source.html#l00083">Table::GetI()</a>, <a class="el" href="table_8hpp_source.html#l00084">Table::GetJ()</a>, <a class="el" href="table_8cpp_source.html#l00102">Table::SetDims()</a>, <a class="el" href="table_8hpp_source.html#l00062">Table::Size()</a>, and <a class="el" href="table_8cpp_source.html#l00219">Table::Width()</a>.</p>
 
-<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l02864">Mesh::ElementToElementTable()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01296">Mult_AtDA()</a>, <a class="el" href="mesh_8cpp_source.html#l06154">Mesh::PrintElementsWithPartitioning()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01285">RAP()</a>.</p>
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l03025">Mesh::ElementToElementTable()</a>, <a class="el" href="sparsemat_8cpp_source.html#l01550">Mult_AtDA()</a>, <a class="el" href="mesh_8cpp_source.html#l06532">Mesh::PrintElementsWithPartitioning()</a>, and <a class="el" href="sparsemat_8cpp_source.html#l01539">RAP()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4fce49976c42e65ae8fe3df925eef1b"></a><!-- doxytag: member="table.cpp::Transpose" ref="ac4fce49976c42e65ae8fe3df925eef1b" args="(const Array&lt; int &gt; &amp;A, Table &amp;At, int _ncols_A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transpose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArray.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTable.html">Table</a> &amp;&#160;</td>
+          <td class="paramname"><em>At</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_ncols_A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Transpose an <a class="el" href="classArray.html">Array&lt;int&gt;</a> </p>
+
+<p>Definition at line <a class="el" href="table_8cpp_source.html#l00291">291</a> of file <a class="el" href="table_8cpp_source.html">table.cpp</a>.</p>
+
+<p>References <a class="el" href="table_8hpp_source.html#l00047">Table::AddAColumnInRow()</a>, <a class="el" href="table_8hpp_source.html#l00050">Table::AddConnection()</a>, <a class="el" href="table_8cpp_source.html#l00052">Table::MakeI()</a>, <a class="el" href="table_8cpp_source.html#l00060">Table::MakeJ()</a>, <a class="el" href="array_8cpp_source.html#l00077">Array&lt; T &gt;::Max()</a>, <a class="el" href="table_8cpp_source.html#l00079">Table::ShiftUpI()</a>, and <a class="el" href="array_8hpp_source.html#l00101">Array&lt; T &gt;::Size()</a>.</p>
 
 </div>
 </div>
@@ -188,7 +229,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:25 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

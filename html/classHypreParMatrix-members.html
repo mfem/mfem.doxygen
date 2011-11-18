@@ -70,6 +70,7 @@ This is the complete list of members for <a class="el" href="classHypreParMatrix
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#aa5372c817087cb9c2f1467daed67cf08">CommPkg</a></td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#ad0dabd3eaaa58b2274511498c9137bde">DestroyCommPkg</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#aaf11718ed6c23ea57a5ae80eb0b080ce">GetColStarts</a>() const </td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#afb1a2d691a61c33b33f198e7952b4df6">GetDiag</a>(Vector &amp;diag)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a84335af6cbce3b570286ad272ad96f0d">GetGlobalNumCols</a>() const </td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#aedb6237fd215108472cc3820fa4f7df2">GetGlobalNumRows</a>() const </td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#af1cb1366a1423043af97fadcdb11e1e1">GetNumRows</a>() const </td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
@@ -81,6 +82,7 @@ This is the complete list of members for <a class="el" href="classHypreParMatrix
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#ab6faf3193a42188f08b7b875cdb4be53">HypreParMatrix</a>(int *row, int *col, SparseMatrix *a)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a0b07a76d11af625f84a587746439e2c7">HypreParMatrix</a>(int M, int N, int *row, int *col, Table *diag)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#affbfeb7c8ae1397ebc896e6c03e111bd">HypreParMatrix</a>(MPI_Comm comm, int id, int np, int *row, int *col, int *i_diag, int *j_diag, int *i_offd, int *j_offd, int *cmap, int cmap_size)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a7b80fe56375c190f3c17f042a40aaf5d">HypreParMatrix</a>(MPI_Comm comm, int nrows, int glob_nrows, int glob_ncols, int *I, int *J, double *data, int *rows, int *cols)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#ada6b7a9556b88d721cebcec04db74348">M</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5">Mult</a>(HypreParVector &amp;x, HypreParVector &amp;y, double alpha=1.0, double beta=0.0)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a22f3b29e00bf4065cf71837dbc738f0d">Mult</a>(HYPRE_ParVector x, HYPRE_ParVector y, double alpha=1.0, double beta=0.0)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
@@ -89,7 +91,7 @@ This is the complete list of members for <a class="el" href="classHypreParMatrix
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a53bbdf507e56a348aeda22e3fabe2b65">MultTranspose</a>(const Vector &amp;x, Vector &amp;y) const </td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#af2e75328b8a1c7a510b45078d36b05f6">N</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#acc6f847d1c87c03b42bbafe5a49cb4e0">NNZ</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73">Operator</a>(int s=0)</td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73">Operator</a>(int s=0)</td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [inline, explicit]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a72c4ccea526ae8b63938d61939fc2561">operator HYPRE_ParCSRMatrix</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#ac025c563a34b1fdcc62361f1921468b0">operator hypre_ParCSRMatrix *</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a9f400a2a3da2ccf6b7fd4eaf80550658">Print</a>(const char *fname, int offi=0, int offj=0)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
@@ -97,8 +99,8 @@ This is the complete list of members for <a class="el" href="classHypreParMatrix
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a11bf99adc6b0c570665147a3651306d3">Read</a>(const char *fname)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#abbfa028421b642590d166f1da968ecf3">RowPart</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#ad3822103d5bbb58260a40f59a3c4fcb4">SetCommPkg</a>(hypre_ParCSRCommPkg *comm_pkg)</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a></td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classOperator.html#a27f7c4dfac134bd5f57055d43eaa025f">Size</a>() const </td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a></td><td><a class="el" href="classOperator.html">Operator</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#ad9088eebaf70923f7dba257fdf6ed46c">StealData</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a6deacd4b9f03f9dc45e6168862ac720e">Transpose</a>()</td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classHypreParMatrix.html#a353f0a33391fa0b19a875b9edb06863b">X</a></td><td><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a></td><td><code> [mutable, private]</code></td></tr>
@@ -120,7 +122,7 @@ This is the complete list of members for <a class="el" href="classHypreParMatrix
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:26 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

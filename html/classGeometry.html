@@ -98,6 +98,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#ad55e832122ab3a2833dcaa6507867678">~Geometry</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classIntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4407e25da37e80f210318cffa972836c">GetVertices</a> (int GeomType)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classIntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#aaa919e8cd6baac67ec0898f4d7fadc26">GetCenter</a> (int GeomType)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDenseMatrix.html">DenseMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#ae5b24aaa13ddbc3d44e7024e626f6c38">GetPerfGeomToGeomJac</a> (int GeomType)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#adea91bccc970393cb7caba0f3a670ba5">GetPerfPointMat</a> (int GeomType, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;pm)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a2cd48d9fe088b1eb0074cd60b80b5e31">JacToPerfJac</a> (int GeomType, const <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;J, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;PJ) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4e71ae8511299890efef9d692dd7f881">NumBdr</a> (int GeomType)</td></tr>
@@ -105,6 +106,7 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a> = 6</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#aafbebec38a437426b32787da94476ef4">NumBdrArray</a> [] = { 0, 2, 3, 4, 4, 6 }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#a63d77f092a18e9251a086b7173118ba1">Name</a> [<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometry.html#aed97b0498bb1feb66784274709902e3a">GeomVert</a> [<a class="el" href="classGeometry.html#a4870c28e4f60c47008a245d4961e2479">NumGeom</a>]</td></tr>
@@ -162,9 +164,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00014">14</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00017">17</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8cpp_source.html#l01159">CalcInverse()</a>, <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="geom_8hpp_source.html#l00033">GeomCenter</a>, <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="geom_8cpp_source.html#l00180">GetPerfPointMat()</a>, <a class="el" href="eltrans_8hpp_source.html#l00055">IsoparametricTransformation::GetPointMat()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="eltrans_8cpp_source.html#l00016">IsoparametricTransformation::Jacobian()</a>, <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>, <a class="el" href="geom_8hpp_source.html#l00025">POINT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="eltrans_8hpp_source.html#l00054">IsoparametricTransformation::SetFE()</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::z</a>.</p>
+<p>References <a class="el" href="densemat_8cpp_source.html#l01898">CalcInverse()</a>, <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="geom_8hpp_source.html#l00033">GeomCenter</a>, <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="geom_8cpp_source.html#l00183">GetPerfPointMat()</a>, <a class="el" href="eltrans_8hpp_source.html#l00055">IsoparametricTransformation::GetPointMat()</a>, <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="eltrans_8cpp_source.html#l00016">IsoparametricTransformation::Jacobian()</a>, <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>, <a class="el" href="geom_8hpp_source.html#l00025">POINT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="eltrans_8hpp_source.html#l00054">IsoparametricTransformation::SetFE()</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::x</a>, <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::y</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::z</a>.</p>
 
 </div>
 </div>
@@ -182,7 +184,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00154">154</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00157">157</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 <p>References <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="geom_8hpp_source.html#l00027">NumGeom</a>, and <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>.</p>
 
@@ -208,7 +210,28 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="geom_8hpp_source.html#l00033">GeomCenter</a>.</p>
 
-<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l03646">Mesh::CheckDisplacements()</a>, and <a class="el" href="mesh_8cpp_source.html#l00024">Mesh::GetElementJacobian()</a>.</p>
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l03367">Mesh::CartesianPartitioning()</a>, <a class="el" href="mesh_8cpp_source.html#l03979">Mesh::CheckDisplacements()</a>, <a class="el" href="mesh_8cpp_source.html#l00025">Mesh::GetElementJacobian()</a>, <a class="el" href="fe_8cpp_source.html#l00491">VectorFiniteElement::LocalInterpolation_ND()</a>, and <a class="el" href="fe_8cpp_source.html#l00457">VectorFiniteElement::LocalInterpolation_RT()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5b24aaa13ddbc3d44e7024e626f6c38"></a><!-- doxytag: member="Geometry::GetPerfGeomToGeomJac" ref="ae5b24aaa13ddbc3d44e7024e626f6c38" args="(int GeomType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDenseMatrix.html">DenseMatrix</a>* Geometry::GetPerfGeomToGeomJac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>GeomType</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00046">46</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>References <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>.</p>
 
 </div>
 </div>
@@ -237,11 +260,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00180">180</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00183">183</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 <p>References <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, and <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>.</p>
 
-<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>.</p>
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00017">Geometry()</a>.</p>
 
 </div>
 </div>
@@ -260,11 +283,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00163">163</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00166">166</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 <p>References <a class="el" href="geom_8hpp_source.html#l00025">CUBE</a>, <a class="el" href="geom_8hpp_source.html#l00032">GeomVert</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="geom_8hpp_source.html#l00025">POINT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SEGMENT</a>, <a class="el" href="geom_8hpp_source.html#l00025">SQUARE</a>, <a class="el" href="geom_8hpp_source.html#l00025">TETRAHEDRON</a>, and <a class="el" href="geom_8hpp_source.html#l00025">TRIANGLE</a>.</p>
 
-<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l00324">Mesh::GetLocalQuadToHexTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00274">Mesh::GetLocalSegToQuadTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00252">Mesh::GetLocalSegToTriTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00296">Mesh::GetLocalTriToTetTransformation()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00085">GridFunction::GetNodalValues()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00434">GridFunction::GetVectorFieldNodalValues()</a>, and <a class="el" href="mesh_8cpp_source.html#l05871">Mesh::PrintVTK()</a>.</p>
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l00326">Mesh::GetLocalQuadToHexTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00276">Mesh::GetLocalSegToQuadTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00254">Mesh::GetLocalSegToTriTransformation()</a>, <a class="el" href="mesh_8cpp_source.html#l00298">Mesh::GetLocalTriToTetTransformation()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00161">GridFunction::GetNodalValues()</a>, <a class="el" href="gridfunc_8cpp_source.html#l00528">GridFunction::GetVectorFieldNodalValues()</a>, and <a class="el" href="mesh_8cpp_source.html#l06238">Mesh::PrintVTK()</a>.</p>
 
 </div>
 </div>
@@ -299,11 +322,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00241">241</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00244">244</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
-<p>References <a class="el" href="table_8cpp_source.html#l00291">Mult()</a>, and <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>.</p>
+<p>References <a class="el" href="table_8cpp_source.html#l00302">Mult()</a>, and <a class="el" href="geom_8hpp_source.html#l00034">PerfGeomToGeomJac</a>.</p>
 
-<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l00024">Mesh::GetElementJacobian()</a>.</p>
+<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l00025">Mesh::GetElementJacobian()</a>.</p>
 
 </div>
 </div>
@@ -322,11 +345,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00050">50</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00052">52</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
-<p>References <a class="el" href="geom_8hpp_source.html#l00029">NumBdrArray</a>.</p>
+<p>References <a class="el" href="geom_8hpp_source.html#l00028">NumBdrArray</a>.</p>
 
-<p>Referenced by <a class="el" href="gridfunc_8cpp_source.html#l01378">GridFunction::SaveSTL()</a>.</p>
+<p>Referenced by <a class="el" href="gridfunc_8cpp_source.html#l01605">GridFunction::SaveSTL()</a>.</p>
 
 </div>
 </div>
@@ -344,7 +367,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="geom_8hpp_source.html#l00033">33</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>, and <a class="el" href="geom_8hpp_source.html#l00043">GetCenter()</a>.</p>
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00017">Geometry()</a>, and <a class="el" href="geom_8hpp_source.html#l00043">GetCenter()</a>.</p>
 
 </div>
 </div>
@@ -361,7 +384,26 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="geom_8hpp_source.html#l00032">32</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>, <a class="el" href="geom_8cpp_source.html#l00163">GetVertices()</a>, and <a class="el" href="geom_8cpp_source.html#l00154">~Geometry()</a>.</p>
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00017">Geometry()</a>, <a class="el" href="geom_8cpp_source.html#l00166">GetVertices()</a>, and <a class="el" href="geom_8cpp_source.html#l00157">~Geometry()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63d77f092a18e9251a086b7173118ba1"></a><!-- doxytag: member="Geometry::Name" ref="a63d77f092a18e9251a086b7173118ba1" args="[NumGeom]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="classGeometry.html#a63d77f092a18e9251a086b7173118ba1">Geometry::Name</a><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Initial value:</b><div class="fragment"><pre class="fragment">
+{ <span class="stringliteral">&quot;Point&quot;</span>, <span class="stringliteral">&quot;Segment&quot;</span>, <span class="stringliteral">&quot;Triangle&quot;</span>, <span class="stringliteral">&quot;Square&quot;</span>, <span class="stringliteral">&quot;Tetrahedron&quot;</span>, <span class="stringliteral">&quot;Cube&quot;</span> }
+</pre></div>
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00029">29</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="intrules_8cpp_source.html#l00188">IntegrationRules::Get()</a>.</p>
 
 </div>
 </div>
@@ -376,9 +418,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00029">29</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00028">28</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="geom_8hpp_source.html#l00050">NumBdr()</a>.</p>
+<p>Referenced by <a class="el" href="geom_8hpp_source.html#l00052">NumBdr()</a>.</p>
 
 </div>
 </div>
@@ -395,7 +437,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="geom_8hpp_source.html#l00027">27</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00261">GeometryRefiner::GeometryRefiner()</a>, <a class="el" href="geom_8cpp_source.html#l00154">~Geometry()</a>, and <a class="el" href="geom_8cpp_source.html#l00270">GeometryRefiner::~GeometryRefiner()</a>.</p>
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00264">GeometryRefiner::GeometryRefiner()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01021">H1_FECollection::H1_FECollection()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01133">L2_FECollection::L2_FECollection()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01293">ND_FECollection::ND_FECollection()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01169">RT_FECollection::RT_FECollection()</a>, <a class="el" href="geom_8cpp_source.html#l00157">~Geometry()</a>, <a class="el" href="geom_8cpp_source.html#l00274">GeometryRefiner::~GeometryRefiner()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01123">H1_FECollection::~H1_FECollection()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01162">L2_FECollection::~L2_FECollection()</a>, <a class="el" href="fe__coll_8cpp_source.html#l01435">ND_FECollection::~ND_FECollection()</a>, and <a class="el" href="fe__coll_8cpp_source.html#l01284">RT_FECollection::~RT_FECollection()</a>.</p>
 
 </div>
 </div>
@@ -412,7 +454,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="geom_8hpp_source.html#l00034">34</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00014">Geometry()</a>, <a class="el" href="geom_8cpp_source.html#l00241">JacToPerfJac()</a>, and <a class="el" href="geom_8cpp_source.html#l00154">~Geometry()</a>.</p>
+<p>Referenced by <a class="el" href="geom_8cpp_source.html#l00017">Geometry()</a>, <a class="el" href="geom_8hpp_source.html#l00046">GetPerfGeomToGeomJac()</a>, <a class="el" href="geom_8cpp_source.html#l00244">JacToPerfJac()</a>, and <a class="el" href="geom_8cpp_source.html#l00157">~Geometry()</a>.</p>
 
 </div>
 </div>
@@ -435,7 +477,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:26 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

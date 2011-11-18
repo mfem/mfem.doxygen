@@ -97,8 +97,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#afcde200456322e7e51e7c9ac6276a6d2">SetPrintLevel</a> (int print_lvl)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a9e8a3ab4eca497899cc105d2088edb95">SetPreconditioner</a> (<a class="el" href="classHypreSolver.html">HypreSolver</a> &amp;precond)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hypre solver to be used as a preconditioner.  <a href="#a9e8a3ab4eca497899cc105d2088edb95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#ab4f0b7ac7ea8bbbeaf7e32a1e66eeb2c">SetResidualConvergenceOptions</a> (int res_frequency=-1, double rtol=0.0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8">SetZeroInintialIterate</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">non-hypre setting  <a href="#a0762b854807403bfc25a36c3126476d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a75ea43ef9894e2e978937f130cd571a3">GetNumIterations</a> (int &amp;num_iterations)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd">operator HYPRE_Solver</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The typecast to HYPRE_Solver returns the internal pcg_solver.  <a href="#ae0ff17c0202202ac737bf483f94b52bd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual HYPRE_PtrToParSolverFcn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c">SetupFcn</a> () const </td></tr>
@@ -117,7 +119,7 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>PCG solver in hypre. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00219">219</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00234">234</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a32fb41f878f624d4c0c85b85a8de0729"></a><!-- doxytag: member="HyprePCG::HyprePCG" ref="a32fb41f878f624d4c0c85b85a8de0729" args="(HypreParMatrix &amp;_A)" -->
 <div class="memitem">
@@ -153,6 +155,27 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a75ea43ef9894e2e978937f130cd571a3"></a><!-- doxytag: member="HyprePCG::GetNumIterations" ref="a75ea43ef9894e2e978937f130cd571a3" args="(int &amp;num_iterations)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::GetNumIterations </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_iterations</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00259">259</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+<p>References <a class="el" href="hypre_8hpp_source.html#l00238">pcg_solver</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aaded11183cc28d5a43268e43570c78ba"></a><!-- doxytag: member="HyprePCG::Mult" ref="aaded11183cc28d5a43268e43570c78ba" args="(const HypreParVector &amp;b, HypreParVector &amp;x) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -182,7 +205,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd">HypreSolver</a>.</p>
 
-<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00033">main()</a>.</p>
 
 </div>
 </div>
@@ -204,9 +227,9 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd">HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00240">240</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00263">263</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>References <a class="el" href="hypre_8hpp_source.html#l00223">pcg_solver</a>.</p>
+<p>References <a class="el" href="hypre_8hpp_source.html#l00238">pcg_solver</a>.</p>
 
 </div>
 </div>
@@ -242,7 +265,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00033">main()</a>.</p>
 
 </div>
 </div>
@@ -263,7 +286,7 @@ Private Attributes</h2></td></tr>
 
 <p>Set the hypre solver to be used as a preconditioner. </p>
 
-<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00033">main()</a>.</p>
 
 </div>
 </div>
@@ -282,7 +305,35 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00033">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4f0b7ac7ea8bbbeaf7e32a1e66eeb2c"></a><!-- doxytag: member="HyprePCG::SetResidualConvergenceOptions" ref="ab4f0b7ac7ea8bbbeaf7e32a1e66eeb2c" args="(int res_frequency=&#45;1, double rtol=0.0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HyprePCG::SetResidualConvergenceOptions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res_frequency</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rtol</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Use the L2 norm of the residual for measuring PCG convergence, plus (optionally) 1) periodically recompute true residuals from scratch; and 2) enable residual-based stopping criteria. </p>
 
 </div>
 </div>
@@ -301,7 +352,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00027">main()</a>.</p>
+<p>Referenced by <a class="el" href="ex1p_8cpp_source.html#l00033">main()</a>.</p>
 
 </div>
 </div>
@@ -323,7 +374,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218">HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00243">243</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00266">266</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -343,9 +394,9 @@ Private Attributes</h2></td></tr>
 
 <p>non-hypre setting </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00237">237</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00257">257</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>References <a class="el" href="hypre_8hpp_source.html#l00222">use_zero_initial_iterate</a>.</p>
+<p>References <a class="el" href="hypre_8hpp_source.html#l00237">use_zero_initial_iterate</a>.</p>
 
 </div>
 </div>
@@ -367,7 +418,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59">HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00246">246</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00269">269</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -383,9 +434,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00223">223</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00238">238</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00240">operator HYPRE_Solver()</a>.</p>
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00259">GetNumIterations()</a>, and <a class="el" href="hypre_8hpp_source.html#l00263">operator HYPRE_Solver()</a>.</p>
 
 </div>
 </div>
@@ -400,7 +451,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00222">222</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00237">237</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,9 +466,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00222">222</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00237">237</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00237">SetZeroInintialIterate()</a>.</p>
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00257">SetZeroInintialIterate()</a>.</p>
 
 </div>
 </div>
@@ -439,7 +490,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:26 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

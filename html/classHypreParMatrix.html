@@ -103,6 +103,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates boolean block-diagonal rectangular parallel matrix.  <a href="#a0b07a76d11af625f84a587746439e2c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#affbfeb7c8ae1397ebc896e6c03e111bd">HypreParMatrix</a> (MPI_Comm comm, int id, int np, int *row, int *col, int *i_diag, int *j_diag, int *i_offd, int *j_offd, int *cmap, int cmap_size)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates boolean rectangular parallel matrix (which owns its data)  <a href="#affbfeb7c8ae1397ebc896e6c03e111bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#a7b80fe56375c190f3c17f042a40aaf5d">HypreParMatrix</a> (MPI_Comm comm, int nrows, int glob_nrows, int glob_ncols, int *I, int *J, double *data, int *rows, int *cols)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#ad3822103d5bbb58260a40f59a3c4fcb4">SetCommPkg</a> (hypre_ParCSRCommPkg *comm_pkg)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#a017c64734f32796565ecc7d1a22b9f04">CheckCommPkg</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#ad0dabd3eaaa58b2274511498c9137bde">DestroyCommPkg</a> ()</td></tr>
@@ -122,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the global number of rows.  <a href="#ada6b7a9556b88d721cebcec04db74348"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#af2e75328b8a1c7a510b45078d36b05f6">N</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the global number of columns.  <a href="#af2e75328b8a1c7a510b45078d36b05f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#afb1a2d691a61c33b33f198e7952b4df6">GetDiag</a> (<a class="el" href="classVector.html">Vector</a> &amp;diag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the diagonal of the matrix.  <a href="#afb1a2d691a61c33b33f198e7952b4df6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#a6deacd4b9f03f9dc45e6168862ac720e">Transpose</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transpose of *this.  <a href="#a6deacd4b9f03f9dc45e6168862ac720e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreParMatrix.html#af1cb1366a1423043af97fadcdb11e1e1">GetNumRows</a> () const </td></tr>
@@ -489,6 +492,76 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7b80fe56375c190f3c17f042a40aaf5d"></a><!-- doxytag: member="HypreParMatrix::HypreParMatrix" ref="a7b80fe56375c190f3c17f042a40aaf5d" args="(MPI_Comm comm, int nrows, int glob_nrows, int glob_ncols, int *I, int *J, double *data, int *rows, int *cols)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HypreParMatrix::HypreParMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nrows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glob_nrows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glob_ncols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>I</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>J</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Creates a general parallel matrix from a local CSR matrix on each processor described by the I, J and data arrays. The local matrix should be of size (local) nrows by (global) glob_ncols. The parallel matrix contains copies of the rows and cols arrays (so they can be deleted). </p>
+
+</div>
+</div>
 <a class="anchor" id="aca4e5e844c1ded03f28d7c4d1ac6f7f3"></a><!-- doxytag: member="HypreParMatrix::~HypreParMatrix" ref="aca4e5e844c1ded03f28d7c4d1ac6f7f3" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -540,7 +613,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the row partitioning. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00135">135</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00142">142</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -576,9 +649,28 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00154">154</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00163">163</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb1a2d691a61c33b33f198e7952b4df6"></a><!-- doxytag: member="HypreParMatrix::GetDiag" ref="afb1a2d691a61c33b33f198e7952b4df6" args="(Vector &amp;diag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HypreParMatrix::GetDiag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>diag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the diagonal of the matrix. </p>
 
 </div>
 </div>
@@ -596,9 +688,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00150">150</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00159">159</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
+
+<p>Referenced by <a class="el" href="pfespace_8hpp_source.html#l00086">ParFiniteElementSpace::GlobalTrueVSize()</a>.</p>
 
 </div>
 </div>
@@ -616,9 +710,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00148">148</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00157">157</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
+
+<p>Referenced by <a class="el" href="pfespace_8hpp_source.html#l00085">ParFiniteElementSpace::GlobalVSize()</a>.</p>
 
 </div>
 </div>
@@ -638,7 +734,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the number of rows in the diagonal block of the ParCSRMatrix. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00145">145</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00154">154</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -658,7 +754,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00152">152</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00161">161</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -680,7 +776,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the global number of rows. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00137">137</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00144">144</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -887,7 +983,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the global number of columns. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00139">139</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00146">146</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -909,7 +1005,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the number of nonzeros. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00131">131</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00138">138</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -1021,7 +1117,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the row partitioning. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00133">133</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00140">140</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 <p>References <a class="el" href="hypre_8hpp_source.html#l00087">A</a>.</p>
 
@@ -1096,7 +1192,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00087">87</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00135">ColPart()</a>, <a class="el" href="hypre_8hpp_source.html#l00154">GetColStarts()</a>, <a class="el" href="hypre_8hpp_source.html#l00150">GetGlobalNumCols()</a>, <a class="el" href="hypre_8hpp_source.html#l00148">GetGlobalNumRows()</a>, <a class="el" href="hypre_8hpp_source.html#l00145">GetNumRows()</a>, <a class="el" href="hypre_8hpp_source.html#l00152">GetRowStarts()</a>, <a class="el" href="hypre_8hpp_source.html#l00137">M()</a>, <a class="el" href="hypre_8hpp_source.html#l00139">N()</a>, <a class="el" href="hypre_8hpp_source.html#l00131">NNZ()</a>, and <a class="el" href="hypre_8hpp_source.html#l00133">RowPart()</a>.</p>
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00142">ColPart()</a>, <a class="el" href="hypre_8hpp_source.html#l00163">GetColStarts()</a>, <a class="el" href="hypre_8hpp_source.html#l00159">GetGlobalNumCols()</a>, <a class="el" href="hypre_8hpp_source.html#l00157">GetGlobalNumRows()</a>, <a class="el" href="hypre_8hpp_source.html#l00154">GetNumRows()</a>, <a class="el" href="hypre_8hpp_source.html#l00161">GetRowStarts()</a>, <a class="el" href="hypre_8hpp_source.html#l00144">M()</a>, <a class="el" href="hypre_8hpp_source.html#l00146">N()</a>, <a class="el" href="hypre_8hpp_source.html#l00138">NNZ()</a>, and <a class="el" href="hypre_8hpp_source.html#l00140">RowPart()</a>.</p>
 
 </div>
 </div>
@@ -1173,7 +1269,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:26 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

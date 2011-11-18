@@ -83,7 +83,7 @@ Collaboration diagram for HypreAMS:</div>
 <div class="dyncontent">
 <div class="center"><img src="classHypreAMS__coll__graph.png" border="0" usemap="#HypreAMS_coll__map" alt="Collaboration graph"/></div>
 <map name="HypreAMS_coll__map" id="HypreAMS_coll__map">
-<area shape="rect" id="node2" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners." alt="" coords="76,309,169,336"/><area shape="rect" id="node4" href="classOperator.html" title="Abstract operator." alt="" coords="155,83,229,109"/><area shape="rect" id="node10" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class." alt="" coords="161,188,273,215"/><area shape="rect" id="node6" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class." alt="" coords="5,83,120,109"/><area shape="rect" id="node8" href="classVector.html" title="Vector data type." alt="" coords="33,5,92,32"/></map>
+<area shape="rect" id="node2" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners." alt="" coords="76,333,169,360"/><area shape="rect" id="node4" href="classOperator.html" title="Abstract operator." alt="" coords="155,83,229,109"/><area shape="rect" id="node10" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class." alt="" coords="161,188,273,215"/><area shape="rect" id="node6" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class." alt="" coords="5,83,120,109"/><area shape="rect" id="node8" href="classVector.html" title="Vector data type." alt="" coords="33,5,92,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classHypreAMS-members.html">List of all members.</a></p>
@@ -107,11 +107,16 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html#a646709299f45a6cf023513b6225dea4f">z</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html#ac70c2066d66840fc29eb7a8593f9005d">G</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Discrete gradient matrix.  <a href="#ac70c2066d66840fc29eb7a8593f9005d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html#a7e6ca8a1dc3fd89ab0d67bd54c263b6d">Pi</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nedelec interpolation matrix and its components.  <a href="#a7e6ca8a1dc3fd89ab0d67bd54c263b6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html#a2c2091f6e755b6f42512873865ec02ba">Pix</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html#a94e8df5d9ef22fd007618296dd9679d9">Piy</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHypreAMS.html#af9a0fdec726edc25222f163206cf5398">Piz</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The Auxiliary-space Maxwell Solver in hypre. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00373">373</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00404">404</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5065e35b3784fd56a45aaade5fb8a839"></a><!-- doxytag: member="HypreAMS::HypreAMS" ref="a5065e35b3784fd56a45aaade5fb8a839" args="(HypreParMatrix &amp;A, ParFiniteElementSpace *edge_fespace)" -->
 <div class="memitem">
@@ -175,9 +180,9 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd">HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00387">387</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00420">420</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>References <a class="el" href="hypre_8hpp_source.html#l00376">ams</a>.</p>
+<p>References <a class="el" href="hypre_8hpp_source.html#l00407">ams</a>.</p>
 
 </div>
 </div>
@@ -199,7 +204,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218">HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00389">389</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00422">422</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -221,7 +226,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59">HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00391">391</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00424">424</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,9 +242,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00376">376</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00407">407</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00387">operator HYPRE_Solver()</a>.</p>
+<p>Referenced by <a class="el" href="hypre_8hpp_source.html#l00420">operator HYPRE_Solver()</a>.</p>
 
 </div>
 </div>
@@ -256,7 +261,69 @@ Private Attributes</h2></td></tr>
 
 <p>Discrete gradient matrix. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00381">381</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00412">412</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e6ca8a1dc3fd89ab0d67bd54c263b6d"></a><!-- doxytag: member="HypreAMS::Pi" ref="a7e6ca8a1dc3fd89ab0d67bd54c263b6d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a>* <a class="el" href="classHypreAMS.html#a7e6ca8a1dc3fd89ab0d67bd54c263b6d">HypreAMS::Pi</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nedelec interpolation matrix and its components. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00414">414</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c2091f6e755b6f42512873865ec02ba"></a><!-- doxytag: member="HypreAMS::Pix" ref="a2c2091f6e755b6f42512873865ec02ba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> * <a class="el" href="classHypreAMS.html#a2c2091f6e755b6f42512873865ec02ba">HypreAMS::Pix</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00414">414</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94e8df5d9ef22fd007618296dd9679d9"></a><!-- doxytag: member="HypreAMS::Piy" ref="a94e8df5d9ef22fd007618296dd9679d9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> * <a class="el" href="classHypreAMS.html#a94e8df5d9ef22fd007618296dd9679d9">HypreAMS::Piy</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00414">414</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9a0fdec726edc25222f163206cf5398"></a><!-- doxytag: member="HypreAMS::Piz" ref="af9a0fdec726edc25222f163206cf5398" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHypreParMatrix.html">HypreParMatrix</a> * <a class="el" href="classHypreAMS.html#af9a0fdec726edc25222f163206cf5398">HypreAMS::Piz</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00414">414</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +340,7 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classVertex.html" title="Data type for vertex.">Vertex</a> coordinates. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00379">379</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00410">410</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -288,7 +355,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00379">379</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00410">410</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +370,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00379">379</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l00410">410</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +392,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:26 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

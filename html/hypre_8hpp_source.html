@@ -150,233 +150,276 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00115"></a>00115                   <span class="keywordtype">int</span> *i_diag, <span class="keywordtype">int</span> *j_diag, <span class="keywordtype">int</span> *i_offd, <span class="keywordtype">int</span> *j_offd,
 <a name="l00116"></a>00116                   <span class="keywordtype">int</span> *cmap, <span class="keywordtype">int</span> cmap_size);
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118    <span class="comment">// hypre&#39;s communication package object</span>
-<a name="l00119"></a>00119    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#ad3822103d5bbb58260a40f59a3c4fcb4">SetCommPkg</a>(hypre_ParCSRCommPkg *comm_pkg);
-<a name="l00120"></a>00120    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#a017c64734f32796565ecc7d1a22b9f04">CheckCommPkg</a>();
-<a name="l00121"></a>00121    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#ad0dabd3eaaa58b2274511498c9137bde">DestroyCommPkg</a>();
-<a name="l00122"></a>00122 
-<a name="l00124"></a>00124    <a class="code" href="classHypreParMatrix.html#ac025c563a34b1fdcc62361f1921468b0" title="Typecasting to hypre&#39;s hypre_ParCSRMatrix*.">operator hypre_ParCSRMatrix*</a>();
-<a name="l00126"></a>00126    <a class="code" href="classHypreParMatrix.html#a72c4ccea526ae8b63938d61939fc2561" title="Typecasting to hypre&#39;s HYPRE_ParCSRMatrix, a.k.a. void *.">operator HYPRE_ParCSRMatrix</a>();
-<a name="l00128"></a>00128    hypre_ParCSRMatrix* <a class="code" href="classHypreParMatrix.html#ad9088eebaf70923f7dba257fdf6ed46c" title="Changes the ownership of the the matrix.">StealData</a>();
+<a name="l00122"></a>00122    <a class="code" href="classHypreParMatrix.html#ae3b0212596f9f9fb75d275e188fdd0d1" title="Converts hypre&#39;s format to HypreParMatrix.">HypreParMatrix</a>(MPI_Comm comm, <span class="keywordtype">int</span> nrows, <span class="keywordtype">int</span> glob_nrows, <span class="keywordtype">int</span> glob_ncols,
+<a name="l00123"></a>00123                   <span class="keywordtype">int</span> *I, <span class="keywordtype">int</span> *J, <span class="keywordtype">double</span> *data, <span class="keywordtype">int</span> *rows, <span class="keywordtype">int</span> *cols);
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125    <span class="comment">// hypre&#39;s communication package object</span>
+<a name="l00126"></a>00126    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#ad3822103d5bbb58260a40f59a3c4fcb4">SetCommPkg</a>(hypre_ParCSRCommPkg *comm_pkg);
+<a name="l00127"></a>00127    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#a017c64734f32796565ecc7d1a22b9f04">CheckCommPkg</a>();
+<a name="l00128"></a>00128    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#ad0dabd3eaaa58b2274511498c9137bde">DestroyCommPkg</a>();
 <a name="l00129"></a>00129 
-<a name="l00131"></a><a class="code" href="classHypreParMatrix.html#acc6f847d1c87c03b42bbafe5a49cb4e0">00131</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#acc6f847d1c87c03b42bbafe5a49cb4e0" title="Returns the number of nonzeros.">NNZ</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>-&gt;num_nonzeros; }
-<a name="l00133"></a><a class="code" href="classHypreParMatrix.html#abbfa028421b642590d166f1da968ecf3">00133</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> * <a class="code" href="classHypreParMatrix.html#abbfa028421b642590d166f1da968ecf3" title="Returns the row partitioning.">RowPart</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>-&gt;row_starts; }
-<a name="l00135"></a><a class="code" href="classHypreParMatrix.html#a68b9e78bc8bc0b155de216b9ad7e6a53">00135</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> * <a class="code" href="classHypreParMatrix.html#a68b9e78bc8bc0b155de216b9ad7e6a53" title="Returns the row partitioning.">ColPart</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>-&gt;col_starts; }
-<a name="l00137"></a><a class="code" href="classHypreParMatrix.html#ada6b7a9556b88d721cebcec04db74348">00137</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#ada6b7a9556b88d721cebcec04db74348" title="Returns the global number of rows.">M</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a> -&gt; global_num_rows; }
-<a name="l00139"></a><a class="code" href="classHypreParMatrix.html#af2e75328b8a1c7a510b45078d36b05f6">00139</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#af2e75328b8a1c7a510b45078d36b05f6" title="Returns the global number of columns.">N</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a> -&gt; global_num_cols; }
-<a name="l00140"></a>00140 
-<a name="l00142"></a>00142    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> * <a class="code" href="classHypreParMatrix.html#a6deacd4b9f03f9dc45e6168862ac720e" title="Returns the transpose of *this.">Transpose</a>();
-<a name="l00143"></a>00143 
-<a name="l00145"></a><a class="code" href="classHypreParMatrix.html#af1cb1366a1423043af97fadcdb11e1e1">00145</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#af1cb1366a1423043af97fadcdb11e1e1" title="Returns the number of rows in the diagonal block of the ParCSRMatrix.">GetNumRows</a>()<span class="keyword"> const</span>
-<a name="l00146"></a>00146 <span class="keyword">   </span>{ <span class="keywordflow">return</span> hypre_CSRMatrixNumRows(hypre_ParCSRMatrixDiag(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>)); }
+<a name="l00131"></a>00131    <a class="code" href="classHypreParMatrix.html#ac025c563a34b1fdcc62361f1921468b0" title="Typecasting to hypre&#39;s hypre_ParCSRMatrix*.">operator hypre_ParCSRMatrix*</a>();
+<a name="l00133"></a>00133    <a class="code" href="classHypreParMatrix.html#a72c4ccea526ae8b63938d61939fc2561" title="Typecasting to hypre&#39;s HYPRE_ParCSRMatrix, a.k.a. void *.">operator HYPRE_ParCSRMatrix</a>();
+<a name="l00135"></a>00135    hypre_ParCSRMatrix* <a class="code" href="classHypreParMatrix.html#ad9088eebaf70923f7dba257fdf6ed46c" title="Changes the ownership of the the matrix.">StealData</a>();
+<a name="l00136"></a>00136 
+<a name="l00138"></a><a class="code" href="classHypreParMatrix.html#acc6f847d1c87c03b42bbafe5a49cb4e0">00138</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#acc6f847d1c87c03b42bbafe5a49cb4e0" title="Returns the number of nonzeros.">NNZ</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>-&gt;num_nonzeros; }
+<a name="l00140"></a><a class="code" href="classHypreParMatrix.html#abbfa028421b642590d166f1da968ecf3">00140</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> * <a class="code" href="classHypreParMatrix.html#abbfa028421b642590d166f1da968ecf3" title="Returns the row partitioning.">RowPart</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>-&gt;row_starts; }
+<a name="l00142"></a><a class="code" href="classHypreParMatrix.html#a68b9e78bc8bc0b155de216b9ad7e6a53">00142</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> * <a class="code" href="classHypreParMatrix.html#a68b9e78bc8bc0b155de216b9ad7e6a53" title="Returns the row partitioning.">ColPart</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>-&gt;col_starts; }
+<a name="l00144"></a><a class="code" href="classHypreParMatrix.html#ada6b7a9556b88d721cebcec04db74348">00144</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#ada6b7a9556b88d721cebcec04db74348" title="Returns the global number of rows.">M</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a> -&gt; global_num_rows; }
+<a name="l00146"></a><a class="code" href="classHypreParMatrix.html#af2e75328b8a1c7a510b45078d36b05f6">00146</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#af2e75328b8a1c7a510b45078d36b05f6" title="Returns the global number of columns.">N</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a> -&gt; global_num_cols; }
 <a name="l00147"></a>00147 
-<a name="l00148"></a><a class="code" href="classHypreParMatrix.html#aedb6237fd215108472cc3820fa4f7df2">00148</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#aedb6237fd215108472cc3820fa4f7df2">GetGlobalNumRows</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixGlobalNumRows(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
-<a name="l00149"></a>00149 
-<a name="l00150"></a><a class="code" href="classHypreParMatrix.html#a84335af6cbce3b570286ad272ad96f0d">00150</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#a84335af6cbce3b570286ad272ad96f0d">GetGlobalNumCols</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixGlobalNumCols(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
-<a name="l00151"></a>00151 
-<a name="l00152"></a><a class="code" href="classHypreParMatrix.html#aed3fa0063ce9d04fccd950bff0a413e3">00152</a>    <span class="keywordtype">int</span> *<a class="code" href="classHypreParMatrix.html#aed3fa0063ce9d04fccd950bff0a413e3">GetRowStarts</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixRowStarts(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
-<a name="l00153"></a>00153 
-<a name="l00154"></a><a class="code" href="classHypreParMatrix.html#aaf11718ed6c23ea57a5ae80eb0b080ce">00154</a>    <span class="keywordtype">int</span> *<a class="code" href="classHypreParMatrix.html#aaf11718ed6c23ea57a5ae80eb0b080ce">GetColStarts</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixColStarts(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
-<a name="l00155"></a>00155 
-<a name="l00157"></a>00157    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(<a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;y,
-<a name="l00158"></a>00158             <span class="keywordtype">double</span> alpha = 1.0, <span class="keywordtype">double</span> beta = 0.0);
-<a name="l00160"></a>00160    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(HYPRE_ParVector x, HYPRE_ParVector y,
-<a name="l00161"></a>00161             <span class="keywordtype">double</span> alpha = 1.0, <span class="keywordtype">double</span> beta = 0.0);
-<a name="l00163"></a>00163    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(<a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;y,
-<a name="l00164"></a>00164                      <span class="keywordtype">double</span> alpha = 1.0, <span class="keywordtype">double</span> beta = 0.0);
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;y) <span class="keyword">const</span>;
-<a name="l00167"></a>00167    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;y) <span class="keyword">const</span>;
-<a name="l00168"></a>00168 
-<a name="l00170"></a>00170    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#a9f400a2a3da2ccf6b7fd4eaf80550658" title="Prints the locally owned rows in parallel.">Print</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname, <span class="keywordtype">int</span> offi = 0, <span class="keywordtype">int</span> offj = 0);
-<a name="l00172"></a>00172    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#a11bf99adc6b0c570665147a3651306d3" title="Reads the matrix from a file.">Read</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname);
-<a name="l00173"></a>00173 
-<a name="l00175"></a>00175    <span class="keyword">virtual</span> <a class="code" href="classHypreParMatrix.html#aca4e5e844c1ded03f28d7c4d1ac6f7f3" title="Calls hypre&#39;s destroy function.">~HypreParMatrix</a>();
-<a name="l00176"></a>00176 };
+<a name="l00149"></a>00149    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#afb1a2d691a61c33b33f198e7952b4df6" title="Get the diagonal of the matrix.">GetDiag</a>(<a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;diag);
+<a name="l00151"></a>00151    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> * <a class="code" href="classHypreParMatrix.html#a6deacd4b9f03f9dc45e6168862ac720e" title="Returns the transpose of *this.">Transpose</a>();
+<a name="l00152"></a>00152 
+<a name="l00154"></a><a class="code" href="classHypreParMatrix.html#af1cb1366a1423043af97fadcdb11e1e1">00154</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#af1cb1366a1423043af97fadcdb11e1e1" title="Returns the number of rows in the diagonal block of the ParCSRMatrix.">GetNumRows</a>()<span class="keyword"> const</span>
+<a name="l00155"></a>00155 <span class="keyword">   </span>{ <span class="keywordflow">return</span> hypre_CSRMatrixNumRows(hypre_ParCSRMatrixDiag(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>)); }
+<a name="l00156"></a>00156 
+<a name="l00157"></a><a class="code" href="classHypreParMatrix.html#aedb6237fd215108472cc3820fa4f7df2">00157</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#aedb6237fd215108472cc3820fa4f7df2">GetGlobalNumRows</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixGlobalNumRows(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
+<a name="l00158"></a>00158 
+<a name="l00159"></a><a class="code" href="classHypreParMatrix.html#a84335af6cbce3b570286ad272ad96f0d">00159</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#a84335af6cbce3b570286ad272ad96f0d">GetGlobalNumCols</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixGlobalNumCols(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
+<a name="l00160"></a>00160 
+<a name="l00161"></a><a class="code" href="classHypreParMatrix.html#aed3fa0063ce9d04fccd950bff0a413e3">00161</a>    <span class="keywordtype">int</span> *<a class="code" href="classHypreParMatrix.html#aed3fa0063ce9d04fccd950bff0a413e3">GetRowStarts</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixRowStarts(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
+<a name="l00162"></a>00162 
+<a name="l00163"></a><a class="code" href="classHypreParMatrix.html#aaf11718ed6c23ea57a5ae80eb0b080ce">00163</a>    <span class="keywordtype">int</span> *<a class="code" href="classHypreParMatrix.html#aaf11718ed6c23ea57a5ae80eb0b080ce">GetColStarts</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hypre_ParCSRMatrixColStarts(<a class="code" href="classHypreParMatrix.html#a40051b0e72d86b44a468fe73f5124f68" title="The actual object.">A</a>); }
+<a name="l00164"></a>00164 
+<a name="l00166"></a>00166    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(<a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;y,
+<a name="l00167"></a>00167             <span class="keywordtype">double</span> alpha = 1.0, <span class="keywordtype">double</span> beta = 0.0);
+<a name="l00169"></a>00169    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(HYPRE_ParVector x, HYPRE_ParVector y,
+<a name="l00170"></a>00170             <span class="keywordtype">double</span> alpha = 1.0, <span class="keywordtype">double</span> beta = 0.0);
+<a name="l00172"></a>00172    <span class="keywordtype">int</span> <a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(<a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;y,
+<a name="l00173"></a>00173                      <span class="keywordtype">double</span> alpha = 1.0, <span class="keywordtype">double</span> beta = 0.0);
+<a name="l00174"></a>00174 
+<a name="l00175"></a>00175    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#afa879c538ec2053b43036f405c19e5a5" title="Computes y = alpha * A * x + beta * y.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;y) <span class="keyword">const</span>;
+<a name="l00176"></a>00176    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#adfdf37d34e181809bbd7d3aa41653d91" title="Computes y = alpha * A^t * x + beta * y.">MultTranspose</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;y) <span class="keyword">const</span>;
 <a name="l00177"></a>00177 
-<a name="l00179"></a>00179 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> * <a class="code" href="hypre_8hpp.html#a67a5d7b480c7c62b9aa47b3c02a697fa" title="Returns the matrix A * B.">ParMult</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A, <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *B);
-<a name="l00180"></a>00180 
-<a name="l00182"></a>00182 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> * <a class="code" href="hypre_8hpp.html#a28a54d4215a329971ea527527e44939d" title="Returns the matrix P^t * A * P.">RAP</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A, <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *P);
-<a name="l00183"></a>00183 
-<a name="l00184"></a>00184 
-<a name="l00186"></a><a class="code" href="classHypreSolver.html">00186</a> <span class="keyword">class </span><a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a> : <span class="keyword">public</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a>
-<a name="l00187"></a>00187 {
-<a name="l00188"></a>00188 <span class="keyword">protected</span>:
-<a name="l00190"></a><a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e">00190</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>;
-<a name="l00191"></a>00191 
-<a name="l00193"></a><a class="code" href="classHypreSolver.html#a03c3ad9e98feebbb28ff5f07dc688478">00193</a>    <span class="keyword">mutable</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *<a class="code" href="classHypreSolver.html#ad82d7436fd5856f7ce287a431db5d541" title="Right-hand side and solution vector.">B</a>, *<a class="code" href="classHypreSolver.html#a03c3ad9e98feebbb28ff5f07dc688478">X</a>;
-<a name="l00194"></a>00194 
-<a name="l00196"></a><a class="code" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862">00196</a>    <span class="keyword">mutable</span> <span class="keywordtype">int</span> <a class="code" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862" title="Was hypre&#39;s Setup function called already?">setup_called</a>;
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198 <span class="keyword">public</span>:
-<a name="l00199"></a>00199    <a class="code" href="classHypreSolver.html#a3c23584085442dea23813430bfdb8319">HypreSolver</a>();
-<a name="l00200"></a>00200 
-<a name="l00201"></a>00201    <a class="code" href="classHypreSolver.html#a3c23584085442dea23813430bfdb8319">HypreSolver</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *_A);
-<a name="l00202"></a>00202 
-<a name="l00204"></a>00204    <span class="keyword">virtual</span> <a class="code" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd" title="Typecast to HYPRE_Solver -- return the solver.">operator HYPRE_Solver</a>() <span class="keyword">const</span> = 0;
-<a name="l00205"></a>00205 
-<a name="l00207"></a>00207    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218" title="hypre&#39;s internal Setup function">SetupFcn</a>() <span class="keyword">const</span> = 0;
-<a name="l00209"></a>00209    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59" title="hypre&#39;s internal Solve function">SolveFcn</a>() <span class="keyword">const</span> = 0;
-<a name="l00210"></a>00210 
-<a name="l00212"></a>00212    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd" title="Solve the linear system Ax=b.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x) <span class="keyword">const</span>;
-<a name="l00213"></a>00213    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd" title="Solve the linear system Ax=b.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x) <span class="keyword">const</span>;
-<a name="l00214"></a>00214 
-<a name="l00215"></a>00215    <span class="keyword">virtual</span> <a class="code" href="classHypreSolver.html#aeb844a18d8f54a0e2b0e6c34c26e9cda">~HypreSolver</a>();
-<a name="l00216"></a>00216 };
+<a name="l00179"></a>00179    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#a9f400a2a3da2ccf6b7fd4eaf80550658" title="Prints the locally owned rows in parallel.">Print</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname, <span class="keywordtype">int</span> offi = 0, <span class="keywordtype">int</span> offj = 0);
+<a name="l00181"></a>00181    <span class="keywordtype">void</span> <a class="code" href="classHypreParMatrix.html#a11bf99adc6b0c570665147a3651306d3" title="Reads the matrix from a file.">Read</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname);
+<a name="l00182"></a>00182 
+<a name="l00184"></a>00184    <span class="keyword">virtual</span> <a class="code" href="classHypreParMatrix.html#aca4e5e844c1ded03f28d7c4d1ac6f7f3" title="Calls hypre&#39;s destroy function.">~HypreParMatrix</a>();
+<a name="l00185"></a>00185 };
+<a name="l00186"></a>00186 
+<a name="l00188"></a>00188 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> * <a class="code" href="hypre_8hpp.html#a67a5d7b480c7c62b9aa47b3c02a697fa" title="Returns the matrix A * B.">ParMult</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A, <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *B);
+<a name="l00189"></a>00189 
+<a name="l00191"></a>00191 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> * <a class="code" href="hypre_8hpp.html#a28a54d4215a329971ea527527e44939d" title="Returns the matrix P^t * A * P.">RAP</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A, <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *P);
+<a name="l00192"></a>00192 
+<a name="l00196"></a>00196 <span class="keywordtype">void</span> <a class="code" href="hypre_8hpp.html#af5f7571e32d3eb937073389f75d9ce21">EliminateBC</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;A, <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;Ae,
+<a name="l00197"></a>00197                  <a class="code" href="classArray.html">Array&lt;int&gt;</a> &amp;ess_dof_list,
+<a name="l00198"></a>00198                  <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b);
+<a name="l00199"></a>00199 
+<a name="l00201"></a><a class="code" href="classHypreSolver.html">00201</a> <span class="keyword">class </span><a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a> : <span class="keyword">public</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a>
+<a name="l00202"></a>00202 {
+<a name="l00203"></a>00203 <span class="keyword">protected</span>:
+<a name="l00205"></a><a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e">00205</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>;
+<a name="l00206"></a>00206 
+<a name="l00208"></a><a class="code" href="classHypreSolver.html#a03c3ad9e98feebbb28ff5f07dc688478">00208</a>    <span class="keyword">mutable</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *<a class="code" href="classHypreSolver.html#ad82d7436fd5856f7ce287a431db5d541" title="Right-hand side and solution vector.">B</a>, *<a class="code" href="classHypreSolver.html#a03c3ad9e98feebbb28ff5f07dc688478">X</a>;
+<a name="l00209"></a>00209 
+<a name="l00211"></a><a class="code" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862">00211</a>    <span class="keyword">mutable</span> <span class="keywordtype">int</span> <a class="code" href="classHypreSolver.html#a8e3d0a9756127924a0dfde6dc6ce9862" title="Was hypre&#39;s Setup function called already?">setup_called</a>;
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213 <span class="keyword">public</span>:
+<a name="l00214"></a>00214    <a class="code" href="classHypreSolver.html#a3c23584085442dea23813430bfdb8319">HypreSolver</a>();
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216    <a class="code" href="classHypreSolver.html#a3c23584085442dea23813430bfdb8319">HypreSolver</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *_A);
 <a name="l00217"></a>00217 
-<a name="l00219"></a><a class="code" href="classHyprePCG.html">00219</a> <span class="keyword">class </span><a class="code" href="classHyprePCG.html" title="PCG solver in hypre.">HyprePCG</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00220"></a>00220 {
-<a name="l00221"></a>00221 <span class="keyword">private</span>:
-<a name="l00222"></a><a class="code" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">00222</a>    <span class="keywordtype">int</span> <a class="code" href="classHyprePCG.html#a7814b70afc23b2b53497bf183dc040a7">print_level</a>, <a class="code" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">use_zero_initial_iterate</a>;
-<a name="l00223"></a><a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">00223</a>    HYPRE_Solver <a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">pcg_solver</a>;
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225 <span class="keyword">public</span>:
-<a name="l00226"></a>00226    <a class="code" href="classHyprePCG.html#a32fb41f878f624d4c0c85b85a8de0729">HyprePCG</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;_A);
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#acb4c1fe6a3addccb48bf8524cc0c2bec">SetTol</a>(<span class="keywordtype">double</span> tol);
-<a name="l00229"></a>00229    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#aba8948cc7f5bb22438db30bc3a9abf64">SetMaxIter</a>(<span class="keywordtype">int</span> max_iter);
-<a name="l00230"></a>00230    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#aedf1b14e744d87c5bd6259c8a4d8b7e8">SetLogging</a>(<span class="keywordtype">int</span> logging);
-<a name="l00231"></a>00231    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#afcde200456322e7e51e7c9ac6276a6d2">SetPrintLevel</a>(<span class="keywordtype">int</span> print_lvl);
+<a name="l00219"></a>00219    <span class="keyword">virtual</span> <a class="code" href="classHypreSolver.html#a4205de991f93697ea62eb5a29dae3cdd" title="Typecast to HYPRE_Solver -- return the solver.">operator HYPRE_Solver</a>() <span class="keyword">const</span> = 0;
+<a name="l00220"></a>00220 
+<a name="l00222"></a>00222    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreSolver.html#a0d88449fc278c7faa6eacb476550d218" title="hypre&#39;s internal Setup function">SetupFcn</a>() <span class="keyword">const</span> = 0;
+<a name="l00224"></a>00224    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreSolver.html#a0acb48a83e99e048e5db6af4b8974b59" title="hypre&#39;s internal Solve function">SolveFcn</a>() <span class="keyword">const</span> = 0;
+<a name="l00225"></a>00225 
+<a name="l00227"></a>00227    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd" title="Solve the linear system Ax=b.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x) <span class="keyword">const</span>;
+<a name="l00228"></a>00228    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreSolver.html#a873629c6575abc84d70e4f5a649652fd" title="Solve the linear system Ax=b.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;b, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp;x) <span class="keyword">const</span>;
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230    <span class="keyword">virtual</span> <a class="code" href="classHypreSolver.html#aeb844a18d8f54a0e2b0e6c34c26e9cda">~HypreSolver</a>();
+<a name="l00231"></a>00231 };
 <a name="l00232"></a>00232 
-<a name="l00234"></a>00234    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#a9e8a3ab4eca497899cc105d2088edb95" title="Set the hypre solver to be used as a preconditioner.">SetPreconditioner</a>(<a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a> &amp;precond);
-<a name="l00235"></a>00235 
-<a name="l00237"></a><a class="code" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8">00237</a>    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8" title="non-hypre setting">SetZeroInintialIterate</a>() { <a class="code" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">use_zero_initial_iterate</a> = 1; }
-<a name="l00238"></a>00238 
-<a name="l00240"></a><a class="code" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd">00240</a>    <span class="keyword">virtual</span> <a class="code" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd" title="The typecast to HYPRE_Solver returns the internal pcg_solver.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">pcg_solver</a>; }
-<a name="l00241"></a>00241 
-<a name="l00243"></a><a class="code" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c">00243</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c" title="PCG Setup function.">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00244"></a>00244 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRPCGSetup; }
-<a name="l00246"></a><a class="code" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492">00246</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492" title="PCG Solve function.">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00247"></a>00247 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRPCGSolve; }
-<a name="l00248"></a>00248 
-<a name="l00250"></a>00250    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba" title="Solve Ax=b with hypre&#39;s PCG.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x) <span class="keyword">const</span>;
-<a name="l00251"></a>00251    <span class="keyword">using</span> <a class="code" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba" title="Solve Ax=b with hypre&#39;s PCG.">HypreSolver::Mult</a>;
-<a name="l00252"></a>00252 
-<a name="l00253"></a>00253    <span class="keyword">virtual</span> <a class="code" href="classHyprePCG.html#a350b2485a39c995323e37847ddb2351e">~HyprePCG</a>();
-<a name="l00254"></a>00254 };
+<a name="l00234"></a><a class="code" href="classHyprePCG.html">00234</a> <span class="keyword">class </span><a class="code" href="classHyprePCG.html" title="PCG solver in hypre.">HyprePCG</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00235"></a>00235 {
+<a name="l00236"></a>00236 <span class="keyword">private</span>:
+<a name="l00237"></a><a class="code" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">00237</a>    <span class="keywordtype">int</span> <a class="code" href="classHyprePCG.html#a7814b70afc23b2b53497bf183dc040a7">print_level</a>, <a class="code" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">use_zero_initial_iterate</a>;
+<a name="l00238"></a><a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">00238</a>    HYPRE_Solver <a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">pcg_solver</a>;
+<a name="l00239"></a>00239 
+<a name="l00240"></a>00240 <span class="keyword">public</span>:
+<a name="l00241"></a>00241    <a class="code" href="classHyprePCG.html#a32fb41f878f624d4c0c85b85a8de0729">HyprePCG</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;_A);
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#acb4c1fe6a3addccb48bf8524cc0c2bec">SetTol</a>(<span class="keywordtype">double</span> tol);
+<a name="l00244"></a>00244    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#aba8948cc7f5bb22438db30bc3a9abf64">SetMaxIter</a>(<span class="keywordtype">int</span> max_iter);
+<a name="l00245"></a>00245    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#aedf1b14e744d87c5bd6259c8a4d8b7e8">SetLogging</a>(<span class="keywordtype">int</span> logging);
+<a name="l00246"></a>00246    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#afcde200456322e7e51e7c9ac6276a6d2">SetPrintLevel</a>(<span class="keywordtype">int</span> print_lvl);
+<a name="l00247"></a>00247 
+<a name="l00249"></a>00249    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#a9e8a3ab4eca497899cc105d2088edb95" title="Set the hypre solver to be used as a preconditioner.">SetPreconditioner</a>(<a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a> &amp;precond);
+<a name="l00250"></a>00250 
+<a name="l00254"></a>00254    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#ab4f0b7ac7ea8bbbeaf7e32a1e66eeb2c">SetResidualConvergenceOptions</a>(<span class="keywordtype">int</span> res_frequency=-1, <span class="keywordtype">double</span> rtol=0.0);
 <a name="l00255"></a>00255 
-<a name="l00257"></a><a class="code" href="classHypreGMRES.html">00257</a> <span class="keyword">class </span><a class="code" href="classHypreGMRES.html" title="GMRES solver in hypre.">HypreGMRES</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00258"></a>00258 {
-<a name="l00259"></a>00259 <span class="keyword">private</span>:
-<a name="l00260"></a><a class="code" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">00260</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreGMRES.html#a65b89d5ec20e21a5e9438c108eabbf04">print_level</a>, <a class="code" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">use_zero_initial_iterate</a>;
-<a name="l00261"></a><a class="code" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">00261</a>    HYPRE_Solver <a class="code" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">gmres_solver</a>;
-<a name="l00262"></a>00262 
-<a name="l00263"></a>00263 <span class="keyword">public</span>:
-<a name="l00264"></a>00264    <a class="code" href="classHypreGMRES.html#a85b8e2660c10e0b65bc41f1fea9e4dc1">HypreGMRES</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;_A);
-<a name="l00265"></a>00265 
-<a name="l00266"></a>00266    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a86e97797376ca4adf4fe34a4c9379103">SetTol</a>(<span class="keywordtype">double</span> tol);
-<a name="l00267"></a>00267    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#aa79b69b547271595df306dc91d5bfe5e">SetMaxIter</a>(<span class="keywordtype">int</span> max_iter);
-<a name="l00268"></a>00268    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a6a2c9bb81408839b09abe1ef8c29334c">SetKDim</a>(<span class="keywordtype">int</span> dim);
-<a name="l00269"></a>00269    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a482cc77f3be37d337796a43b79b399e4">SetLogging</a>(<span class="keywordtype">int</span> logging);
-<a name="l00270"></a>00270    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a137a47455c0762c55c85322e5bdd24b9">SetPrintLevel</a>(<span class="keywordtype">int</span> print_lvl);
+<a name="l00257"></a><a class="code" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8">00257</a>    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#a0762b854807403bfc25a36c3126476d8" title="non-hypre setting">SetZeroInintialIterate</a>() { <a class="code" href="classHyprePCG.html#a7f9057e03342230474176e94dfe3e48c">use_zero_initial_iterate</a> = 1; }
+<a name="l00258"></a>00258 
+<a name="l00259"></a><a class="code" href="classHyprePCG.html#a75ea43ef9894e2e978937f130cd571a3">00259</a>    <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#a75ea43ef9894e2e978937f130cd571a3">GetNumIterations</a>(<span class="keywordtype">int</span> &amp;num_iterations)
+<a name="l00260"></a>00260    { HYPRE_ParCSRPCGGetNumIterations(<a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">pcg_solver</a>, &amp;num_iterations); }
+<a name="l00261"></a>00261 
+<a name="l00263"></a><a class="code" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd">00263</a>    <span class="keyword">virtual</span> <a class="code" href="classHyprePCG.html#ae0ff17c0202202ac737bf483f94b52bd" title="The typecast to HYPRE_Solver returns the internal pcg_solver.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHyprePCG.html#afe8418d6e4b0548be4c2c9139c9f8de9">pcg_solver</a>; }
+<a name="l00264"></a>00264 
+<a name="l00266"></a><a class="code" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c">00266</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHyprePCG.html#a12cdbf1bcc5ffb1abbc259a76bf56e0c" title="PCG Setup function.">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00267"></a>00267 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRPCGSetup; }
+<a name="l00269"></a><a class="code" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492">00269</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHyprePCG.html#a857deae792f5985f07f6f5911ef5f492" title="PCG Solve function.">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00270"></a>00270 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRPCGSolve; }
 <a name="l00271"></a>00271 
-<a name="l00273"></a>00273    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a6635c24ada49fd26b321a95e856a48c7" title="Set the hypre solver to be used as a preconditioner.">SetPreconditioner</a>(<a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a> &amp;precond);
-<a name="l00274"></a>00274 
-<a name="l00276"></a><a class="code" href="classHypreGMRES.html#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2">00276</a>    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2" title="non-hypre setting">SetZeroInintialIterate</a>() { <a class="code" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">use_zero_initial_iterate</a> = 1; }
-<a name="l00277"></a>00277 
-<a name="l00279"></a><a class="code" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65">00279</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65" title="The typecast to HYPRE_Solver returns the internal gmres_solver.">operator HYPRE_Solver</a>()<span class="keyword"> const  </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">gmres_solver</a>; }
-<a name="l00280"></a>00280 
-<a name="l00282"></a><a class="code" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2">00282</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2" title="GMRES Setup function.">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00283"></a>00283 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRGMRESSetup; }
-<a name="l00285"></a><a class="code" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10">00285</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10" title="GMRES Solve function.">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00286"></a>00286 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRGMRESSolve; }
-<a name="l00287"></a>00287 
-<a name="l00289"></a>00289    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c" title="Solve Ax=b with hypre&#39;s GMRES.">Mult</a> (<span class="keyword">const</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x) <span class="keyword">const</span>;
-<a name="l00290"></a>00290    <span class="keyword">using</span> <a class="code" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c" title="Solve Ax=b with hypre&#39;s GMRES.">HypreSolver::Mult</a>;
-<a name="l00291"></a>00291 
-<a name="l00292"></a>00292    <span class="keyword">virtual</span> <a class="code" href="classHypreGMRES.html#a137b9315da70b3379afde976ce213522">~HypreGMRES</a>();
-<a name="l00293"></a>00293 };
+<a name="l00273"></a>00273    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba" title="Solve Ax=b with hypre&#39;s PCG.">Mult</a>(<span class="keyword">const</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x) <span class="keyword">const</span>;
+<a name="l00274"></a>00274    <span class="keyword">using</span> <a class="code" href="classHyprePCG.html#aaded11183cc28d5a43268e43570c78ba" title="Solve Ax=b with hypre&#39;s PCG.">HypreSolver::Mult</a>;
+<a name="l00275"></a>00275 
+<a name="l00276"></a>00276    <span class="keyword">virtual</span> <a class="code" href="classHyprePCG.html#a350b2485a39c995323e37847ddb2351e">~HyprePCG</a>();
+<a name="l00277"></a>00277 };
+<a name="l00278"></a>00278 
+<a name="l00280"></a><a class="code" href="classHypreGMRES.html">00280</a> <span class="keyword">class </span><a class="code" href="classHypreGMRES.html" title="GMRES solver in hypre.">HypreGMRES</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00281"></a>00281 {
+<a name="l00282"></a>00282 <span class="keyword">private</span>:
+<a name="l00283"></a><a class="code" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">00283</a>    <span class="keywordtype">int</span> <a class="code" href="classHypreGMRES.html#a65b89d5ec20e21a5e9438c108eabbf04">print_level</a>, <a class="code" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">use_zero_initial_iterate</a>;
+<a name="l00284"></a><a class="code" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">00284</a>    HYPRE_Solver <a class="code" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">gmres_solver</a>;
+<a name="l00285"></a>00285 
+<a name="l00286"></a>00286 <span class="keyword">public</span>:
+<a name="l00287"></a>00287    <a class="code" href="classHypreGMRES.html#a85b8e2660c10e0b65bc41f1fea9e4dc1">HypreGMRES</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;_A);
+<a name="l00288"></a>00288 
+<a name="l00289"></a>00289    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a86e97797376ca4adf4fe34a4c9379103">SetTol</a>(<span class="keywordtype">double</span> tol);
+<a name="l00290"></a>00290    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#aa79b69b547271595df306dc91d5bfe5e">SetMaxIter</a>(<span class="keywordtype">int</span> max_iter);
+<a name="l00291"></a>00291    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a6a2c9bb81408839b09abe1ef8c29334c">SetKDim</a>(<span class="keywordtype">int</span> dim);
+<a name="l00292"></a>00292    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a482cc77f3be37d337796a43b79b399e4">SetLogging</a>(<span class="keywordtype">int</span> logging);
+<a name="l00293"></a>00293    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a137a47455c0762c55c85322e5bdd24b9">SetPrintLevel</a>(<span class="keywordtype">int</span> print_lvl);
 <a name="l00294"></a>00294 
-<a name="l00296"></a><a class="code" href="classHypreIdentity.html">00296</a> <span class="keyword">class </span><a class="code" href="classHypreIdentity.html" title="The identity operator as a hypre solver.">HypreIdentity</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00297"></a>00297 {
-<a name="l00298"></a>00298 <span class="keyword">public</span>:
-<a name="l00299"></a><a class="code" href="classHypreIdentity.html#ab2868a313b1eedc9d9f7675705442eeb">00299</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreIdentity.html#ab2868a313b1eedc9d9f7675705442eeb" title="Typecast to HYPRE_Solver -- return the solver.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> NULL; }
+<a name="l00296"></a>00296    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a6635c24ada49fd26b321a95e856a48c7" title="Set the hypre solver to be used as a preconditioner.">SetPreconditioner</a>(<a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a> &amp;precond);
+<a name="l00297"></a>00297 
+<a name="l00299"></a><a class="code" href="classHypreGMRES.html#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2">00299</a>    <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a4cc2b4e8bc5fb96a5c97c6bc24eb35c2" title="non-hypre setting">SetZeroInintialIterate</a>() { <a class="code" href="classHypreGMRES.html#a4f26623991c62cac2108994722843d90">use_zero_initial_iterate</a> = 1; }
 <a name="l00300"></a>00300 
-<a name="l00301"></a><a class="code" href="classHypreIdentity.html#a8514386c1ad7f6838ae0f4769d9cbe23">00301</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreIdentity.html#a8514386c1ad7f6838ae0f4769d9cbe23" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00302"></a>00302 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) hypre_ParKrylovIdentitySetup; }
-<a name="l00303"></a><a class="code" href="classHypreIdentity.html#a64e15502e2e8095a66ed04cd6bb3dfbd">00303</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreIdentity.html#a64e15502e2e8095a66ed04cd6bb3dfbd" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00304"></a>00304 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) hypre_ParKrylovIdentity; }
-<a name="l00305"></a>00305 
-<a name="l00306"></a><a class="code" href="classHypreIdentity.html#a1b8ea65339a14afbf019c5f85bbf2875">00306</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreIdentity.html#a1b8ea65339a14afbf019c5f85bbf2875">~HypreIdentity</a>() { }
-<a name="l00307"></a>00307 };
-<a name="l00308"></a>00308 
-<a name="l00310"></a><a class="code" href="classHypreDiagScale.html">00310</a> <span class="keyword">class </span><a class="code" href="classHypreDiagScale.html" title="Jacobi preconditioner in hypre.">HypreDiagScale</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00311"></a>00311 {
-<a name="l00312"></a>00312 <span class="keyword">public</span>:
-<a name="l00313"></a><a class="code" href="classHypreDiagScale.html#a3a3e1ba3568ffe955b8b37d6e208d9b5">00313</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreDiagScale.html#a3a3e1ba3568ffe955b8b37d6e208d9b5" title="Typecast to HYPRE_Solver -- return the solver.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> NULL; }
+<a name="l00302"></a><a class="code" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65">00302</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreGMRES.html#a8c91636d4e6289c40601efa04beb6c65" title="The typecast to HYPRE_Solver returns the internal gmres_solver.">operator HYPRE_Solver</a>()<span class="keyword"> const  </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreGMRES.html#ae1be31a79b029a94c7df5458bdebed0f">gmres_solver</a>; }
+<a name="l00303"></a>00303 
+<a name="l00305"></a><a class="code" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2">00305</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreGMRES.html#a59e4bccfe05ac4ff69ec408bde192df2" title="GMRES Setup function.">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00306"></a>00306 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRGMRESSetup; }
+<a name="l00308"></a><a class="code" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10">00308</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreGMRES.html#a6573638420f68b23f18e5e410850ff10" title="GMRES Solve function.">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00309"></a>00309 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRGMRESSolve; }
+<a name="l00310"></a>00310 
+<a name="l00312"></a>00312    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c" title="Solve Ax=b with hypre&#39;s GMRES.">Mult</a> (<span class="keyword">const</span> <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;b, <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> &amp;x) <span class="keyword">const</span>;
+<a name="l00313"></a>00313    <span class="keyword">using</span> <a class="code" href="classHypreGMRES.html#a1f877a8e3242e9a4dfaa9eecdc97438c" title="Solve Ax=b with hypre&#39;s GMRES.">HypreSolver::Mult</a>;
 <a name="l00314"></a>00314 
-<a name="l00315"></a><a class="code" href="classHypreDiagScale.html#a260d5b2937a6d03f5f5df84fee7a2dc9">00315</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreDiagScale.html#a260d5b2937a6d03f5f5df84fee7a2dc9" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00316"></a>00316 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRDiagScaleSetup; }
-<a name="l00317"></a><a class="code" href="classHypreDiagScale.html#a886a658059d9f68115fe0106281d6f55">00317</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreDiagScale.html#a886a658059d9f68115fe0106281d6f55" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00318"></a>00318 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRDiagScale; }
-<a name="l00319"></a>00319 
-<a name="l00320"></a><a class="code" href="classHypreDiagScale.html#a51f027e344b561a3a7a870342cece357">00320</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreDiagScale.html#a51f027e344b561a3a7a870342cece357">~HypreDiagScale</a>() { }
-<a name="l00321"></a>00321 };
-<a name="l00322"></a>00322 
-<a name="l00324"></a><a class="code" href="classHypreParaSails.html">00324</a> <span class="keyword">class </span><a class="code" href="classHypreParaSails.html" title="The ParaSails preconditioner in hypre.">HypreParaSails</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00325"></a>00325 {
-<a name="l00326"></a>00326 <span class="keyword">private</span>:
-<a name="l00327"></a><a class="code" href="classHypreParaSails.html#aa2420fb62824586f5377deb28106d1a5">00327</a>    HYPRE_Solver <a class="code" href="classHypreParaSails.html#aa2420fb62824586f5377deb28106d1a5">sai_precond</a>;
+<a name="l00315"></a>00315    <span class="keyword">virtual</span> <a class="code" href="classHypreGMRES.html#a137b9315da70b3379afde976ce213522">~HypreGMRES</a>();
+<a name="l00316"></a>00316 };
+<a name="l00317"></a>00317 
+<a name="l00319"></a><a class="code" href="classHypreIdentity.html">00319</a> <span class="keyword">class </span><a class="code" href="classHypreIdentity.html" title="The identity operator as a hypre solver.">HypreIdentity</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00320"></a>00320 {
+<a name="l00321"></a>00321 <span class="keyword">public</span>:
+<a name="l00322"></a><a class="code" href="classHypreIdentity.html#ab2868a313b1eedc9d9f7675705442eeb">00322</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreIdentity.html#ab2868a313b1eedc9d9f7675705442eeb" title="Typecast to HYPRE_Solver -- return the solver.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> NULL; }
+<a name="l00323"></a>00323 
+<a name="l00324"></a><a class="code" href="classHypreIdentity.html#a8514386c1ad7f6838ae0f4769d9cbe23">00324</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreIdentity.html#a8514386c1ad7f6838ae0f4769d9cbe23" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00325"></a>00325 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) hypre_ParKrylovIdentitySetup; }
+<a name="l00326"></a><a class="code" href="classHypreIdentity.html#a64e15502e2e8095a66ed04cd6bb3dfbd">00326</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreIdentity.html#a64e15502e2e8095a66ed04cd6bb3dfbd" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00327"></a>00327 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) hypre_ParKrylovIdentity; }
 <a name="l00328"></a>00328 
-<a name="l00329"></a>00329 <span class="keyword">public</span>:
-<a name="l00330"></a>00330    <a class="code" href="classHypreParaSails.html#aab35e3cf75099eef59d29a96a15c9d2c">HypreParaSails</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>);
+<a name="l00329"></a><a class="code" href="classHypreIdentity.html#a1b8ea65339a14afbf019c5f85bbf2875">00329</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreIdentity.html#a1b8ea65339a14afbf019c5f85bbf2875">~HypreIdentity</a>() { }
+<a name="l00330"></a>00330 };
 <a name="l00331"></a>00331 
-<a name="l00332"></a>00332    <span class="keywordtype">void</span> <a class="code" href="classHypreParaSails.html#ae672948b42fdd12d673c71b15e07d311">SetSymmetry</a>(<span class="keywordtype">int</span> sym);
-<a name="l00333"></a>00333 
-<a name="l00335"></a><a class="code" href="classHypreParaSails.html#a99dfef2c13f82fef2371fd7347783409">00335</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreParaSails.html#a99dfef2c13f82fef2371fd7347783409" title="The typecast to HYPRE_Solver returns the internal sai_precond.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreParaSails.html#aa2420fb62824586f5377deb28106d1a5">sai_precond</a>; }
-<a name="l00336"></a>00336 
-<a name="l00337"></a><a class="code" href="classHypreParaSails.html#a5c8335c097e3aa0fc2f2e452f9e96edc">00337</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreParaSails.html#a5c8335c097e3aa0fc2f2e452f9e96edc" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00338"></a>00338 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParaSailsSetup; }
-<a name="l00339"></a><a class="code" href="classHypreParaSails.html#a14cb92a138f4934526d091e3c1262748">00339</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreParaSails.html#a14cb92a138f4934526d091e3c1262748" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00340"></a>00340 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParaSailsSolve; }
-<a name="l00341"></a>00341 
-<a name="l00342"></a>00342    <span class="keyword">virtual</span> <a class="code" href="classHypreParaSails.html#a1c459e00cca51be758eab7f8ade7e8be">~HypreParaSails</a>();
-<a name="l00343"></a>00343 };
-<a name="l00344"></a>00344 
-<a name="l00346"></a><a class="code" href="classHypreBoomerAMG.html">00346</a> <span class="keyword">class </span><a class="code" href="classHypreBoomerAMG.html" title="The BoomerAMG solver in hypre.">HypreBoomerAMG</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00347"></a>00347 {
-<a name="l00348"></a>00348 <span class="keyword">private</span>:
-<a name="l00349"></a><a class="code" href="classHypreBoomerAMG.html#a704449e0050a585239ffcec6850f3012">00349</a>    HYPRE_Solver <a class="code" href="classHypreBoomerAMG.html#a704449e0050a585239ffcec6850f3012">amg_precond</a>;
-<a name="l00350"></a>00350 
-<a name="l00351"></a>00351 <span class="keyword">public</span>:
-<a name="l00352"></a>00352    <a class="code" href="classHypreBoomerAMG.html#ab6a62fdd70f895d1c7a3c683db233c35">HypreBoomerAMG</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>);
-<a name="l00353"></a>00353 
-<a name="l00357"></a>00357    <span class="keywordtype">void</span> <a class="code" href="classHypreBoomerAMG.html#ac43e9aefde0a7ccd33d40e8f2b891b61">SetSystemsOptions</a>(<span class="keywordtype">int</span> dim);
-<a name="l00358"></a>00358 
-<a name="l00360"></a><a class="code" href="classHypreBoomerAMG.html#a8ee4f32952c019aeb918b3a004e65e62">00360</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreBoomerAMG.html#a8ee4f32952c019aeb918b3a004e65e62" title="The typecast to HYPRE_Solver returns the internal amg_precond.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreBoomerAMG.html#a704449e0050a585239ffcec6850f3012">amg_precond</a>; }
-<a name="l00361"></a>00361 
-<a name="l00362"></a><a class="code" href="classHypreBoomerAMG.html#a6b300c47b1a5cf2e70fdd75e568aac49">00362</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreBoomerAMG.html#a6b300c47b1a5cf2e70fdd75e568aac49" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00363"></a>00363 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_BoomerAMGSetup; }
-<a name="l00364"></a><a class="code" href="classHypreBoomerAMG.html#ac639899217dc8a9980b9bc3c4deb960e">00364</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreBoomerAMG.html#ac639899217dc8a9980b9bc3c4deb960e" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00365"></a>00365 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_BoomerAMGSolve; }
-<a name="l00366"></a>00366 
-<a name="l00367"></a>00367    <span class="keyword">virtual</span> <a class="code" href="classHypreBoomerAMG.html#a77e0b2aae62ea6fb8beb69d51cf96ba9">~HypreBoomerAMG</a>();
-<a name="l00368"></a>00368 };
-<a name="l00369"></a>00369 
-<a name="l00370"></a>00370 <span class="keyword">class </span><a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>;
-<a name="l00371"></a>00371 
-<a name="l00373"></a><a class="code" href="classHypreAMS.html">00373</a> <span class="keyword">class </span><a class="code" href="classHypreAMS.html" title="The Auxiliary-space Maxwell Solver in hypre.">HypreAMS</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
-<a name="l00374"></a>00374 {
-<a name="l00375"></a>00375 <span class="keyword">private</span>:
-<a name="l00376"></a><a class="code" href="classHypreAMS.html#add0bd97a91bd3c4e8bb77281bc2bc327">00376</a>    HYPRE_Solver <a class="code" href="classHypreAMS.html#add0bd97a91bd3c4e8bb77281bc2bc327">ams</a>;
+<a name="l00333"></a><a class="code" href="classHypreDiagScale.html">00333</a> <span class="keyword">class </span><a class="code" href="classHypreDiagScale.html" title="Jacobi preconditioner in hypre.">HypreDiagScale</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00334"></a>00334 {
+<a name="l00335"></a>00335 <span class="keyword">public</span>:
+<a name="l00336"></a><a class="code" href="classHypreDiagScale.html#a3a3e1ba3568ffe955b8b37d6e208d9b5">00336</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreDiagScale.html#a3a3e1ba3568ffe955b8b37d6e208d9b5" title="Typecast to HYPRE_Solver -- return the solver.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> NULL; }
+<a name="l00337"></a>00337 
+<a name="l00338"></a><a class="code" href="classHypreDiagScale.html#a260d5b2937a6d03f5f5df84fee7a2dc9">00338</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreDiagScale.html#a260d5b2937a6d03f5f5df84fee7a2dc9" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00339"></a>00339 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRDiagScaleSetup; }
+<a name="l00340"></a><a class="code" href="classHypreDiagScale.html#a886a658059d9f68115fe0106281d6f55">00340</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreDiagScale.html#a886a658059d9f68115fe0106281d6f55" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00341"></a>00341 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParCSRDiagScale; }
+<a name="l00342"></a>00342 
+<a name="l00343"></a><a class="code" href="classHypreDiagScale.html#ab3dfb531f220e03d161d7189da9e3bd8">00343</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>* <a class="code" href="classHypreDiagScale.html#ab3dfb531f220e03d161d7189da9e3bd8">GetData</a>() { <span class="keywordflow">return</span> <a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>; }
+<a name="l00344"></a><a class="code" href="classHypreDiagScale.html#a51f027e344b561a3a7a870342cece357">00344</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreDiagScale.html#a51f027e344b561a3a7a870342cece357">~HypreDiagScale</a>() { }
+<a name="l00345"></a>00345 };
+<a name="l00346"></a>00346 
+<a name="l00348"></a><a class="code" href="classHypreParaSails.html">00348</a> <span class="keyword">class </span><a class="code" href="classHypreParaSails.html" title="The ParaSails preconditioner in hypre.">HypreParaSails</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00349"></a>00349 {
+<a name="l00350"></a>00350 <span class="keyword">private</span>:
+<a name="l00351"></a><a class="code" href="classHypreParaSails.html#aa2420fb62824586f5377deb28106d1a5">00351</a>    HYPRE_Solver <a class="code" href="classHypreParaSails.html#aa2420fb62824586f5377deb28106d1a5">sai_precond</a>;
+<a name="l00352"></a>00352 
+<a name="l00353"></a>00353 <span class="keyword">public</span>:
+<a name="l00354"></a>00354    <a class="code" href="classHypreParaSails.html#aab35e3cf75099eef59d29a96a15c9d2c">HypreParaSails</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>);
+<a name="l00355"></a>00355 
+<a name="l00356"></a>00356    <span class="keywordtype">void</span> <a class="code" href="classHypreParaSails.html#ae672948b42fdd12d673c71b15e07d311">SetSymmetry</a>(<span class="keywordtype">int</span> sym);
+<a name="l00357"></a>00357 
+<a name="l00359"></a><a class="code" href="classHypreParaSails.html#a99dfef2c13f82fef2371fd7347783409">00359</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreParaSails.html#a99dfef2c13f82fef2371fd7347783409" title="The typecast to HYPRE_Solver returns the internal sai_precond.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreParaSails.html#aa2420fb62824586f5377deb28106d1a5">sai_precond</a>; }
+<a name="l00360"></a>00360 
+<a name="l00361"></a><a class="code" href="classHypreParaSails.html#a5c8335c097e3aa0fc2f2e452f9e96edc">00361</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreParaSails.html#a5c8335c097e3aa0fc2f2e452f9e96edc" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00362"></a>00362 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParaSailsSetup; }
+<a name="l00363"></a><a class="code" href="classHypreParaSails.html#a14cb92a138f4934526d091e3c1262748">00363</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreParaSails.html#a14cb92a138f4934526d091e3c1262748" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00364"></a>00364 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ParaSailsSolve; }
+<a name="l00365"></a>00365 
+<a name="l00366"></a>00366    <span class="keyword">virtual</span> <a class="code" href="classHypreParaSails.html#a1c459e00cca51be758eab7f8ade7e8be">~HypreParaSails</a>();
+<a name="l00367"></a>00367 };
+<a name="l00368"></a>00368 
+<a name="l00370"></a><a class="code" href="classHypreBoomerAMG.html">00370</a> <span class="keyword">class </span><a class="code" href="classHypreBoomerAMG.html" title="The BoomerAMG solver in hypre.">HypreBoomerAMG</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00371"></a>00371 {
+<a name="l00372"></a>00372 <span class="keyword">private</span>:
+<a name="l00373"></a><a class="code" href="classHypreBoomerAMG.html#a704449e0050a585239ffcec6850f3012">00373</a>    HYPRE_Solver <a class="code" href="classHypreBoomerAMG.html#a704449e0050a585239ffcec6850f3012">amg_precond</a>;
+<a name="l00374"></a>00374 
+<a name="l00375"></a>00375 <span class="keyword">public</span>:
+<a name="l00376"></a>00376    <a class="code" href="classHypreBoomerAMG.html#ab6a62fdd70f895d1c7a3c683db233c35">HypreBoomerAMG</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>);
 <a name="l00377"></a>00377 
-<a name="l00379"></a><a class="code" href="classHypreAMS.html#a646709299f45a6cf023513b6225dea4f">00379</a>    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *<a class="code" href="classHypreAMS.html#aff58e4f1f4cec7644632326f3fc21fba" title="Vertex coordinates.">x</a>, *<a class="code" href="classHypreAMS.html#a665275bbe8fe5a62799f2e08299bfbba">y</a>, *<a class="code" href="classHypreAMS.html#a646709299f45a6cf023513b6225dea4f">z</a>;
-<a name="l00381"></a><a class="code" href="classHypreAMS.html#ac70c2066d66840fc29eb7a8593f9005d">00381</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreAMS.html#ac70c2066d66840fc29eb7a8593f9005d" title="Discrete gradient matrix.">G</a>;
+<a name="l00381"></a>00381    <span class="keywordtype">void</span> <a class="code" href="classHypreBoomerAMG.html#ac43e9aefde0a7ccd33d40e8f2b891b61">SetSystemsOptions</a>(<span class="keywordtype">int</span> dim);
 <a name="l00382"></a>00382 
-<a name="l00383"></a>00383 <span class="keyword">public</span>:
-<a name="l00384"></a>00384    <a class="code" href="classHypreAMS.html#a5065e35b3784fd56a45aaade5fb8a839">HypreAMS</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>, <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *edge_fespace);
+<a name="l00384"></a><a class="code" href="classHypreBoomerAMG.html#a8ee4f32952c019aeb918b3a004e65e62">00384</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreBoomerAMG.html#a8ee4f32952c019aeb918b3a004e65e62" title="The typecast to HYPRE_Solver returns the internal amg_precond.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreBoomerAMG.html#a704449e0050a585239ffcec6850f3012">amg_precond</a>; }
 <a name="l00385"></a>00385 
-<a name="l00387"></a><a class="code" href="classHypreAMS.html#a64adcf9793cefe7008ec527fbe7d39e8">00387</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreAMS.html#a64adcf9793cefe7008ec527fbe7d39e8" title="The typecast to HYPRE_Solver returns the internal ams object.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreAMS.html#add0bd97a91bd3c4e8bb77281bc2bc327">ams</a>; }
-<a name="l00388"></a>00388 
-<a name="l00389"></a><a class="code" href="classHypreAMS.html#a2759ca3ecbf66f4109be192998e73812">00389</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreAMS.html#a2759ca3ecbf66f4109be192998e73812" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
-<a name="l00390"></a>00390 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_AMSSetup; }
-<a name="l00391"></a><a class="code" href="classHypreAMS.html#abac0b4c546d2523e0f4fc44b2789aadb">00391</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreAMS.html#abac0b4c546d2523e0f4fc44b2789aadb" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
-<a name="l00392"></a>00392 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_AMSSolve; }
+<a name="l00386"></a><a class="code" href="classHypreBoomerAMG.html#a6b300c47b1a5cf2e70fdd75e568aac49">00386</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreBoomerAMG.html#a6b300c47b1a5cf2e70fdd75e568aac49" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00387"></a>00387 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_BoomerAMGSetup; }
+<a name="l00388"></a><a class="code" href="classHypreBoomerAMG.html#ac639899217dc8a9980b9bc3c4deb960e">00388</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreBoomerAMG.html#ac639899217dc8a9980b9bc3c4deb960e" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00389"></a>00389 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_BoomerAMGSolve; }
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391    <span class="keyword">virtual</span> <a class="code" href="classHypreBoomerAMG.html#a77e0b2aae62ea6fb8beb69d51cf96ba9">~HypreBoomerAMG</a>();
+<a name="l00392"></a>00392 };
 <a name="l00393"></a>00393 
-<a name="l00394"></a>00394    <span class="keyword">virtual</span> <a class="code" href="classHypreAMS.html#a62d6cc8160657f5fe0bf98e6b79c9388">~HypreAMS</a>();
-<a name="l00395"></a>00395 };
-<a name="l00396"></a>00396 
-<a name="l00397"></a>00397 <span class="preprocessor">#endif</span>
+<a name="l00394"></a>00394 <span class="keyword">class </span><a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a>;
+<a name="l00395"></a>00395 
+<a name="l00397"></a>00397 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>* <a class="code" href="hypre_8hpp.html#a87cbc6ef1eeed718b2d19a72a8ab7e77" title="Compute the discrete gradient matrix between the nodal linear and ND1 spaces.">DiscreteGrad</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *edge_fespace,
+<a name="l00398"></a>00398                              <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *vert_fespace);
+<a name="l00400"></a>00400 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>* <a class="code" href="hypre_8hpp.html#a14dcb023041b33a68a2f1b932fdb8578" title="Compute the discrete curl matrix between the ND1 and RT0 spaces.">DiscreteCurl</a>(<a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *face_fespace,
+<a name="l00401"></a>00401                              <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *edge_fespace);
+<a name="l00402"></a>00402 
+<a name="l00404"></a><a class="code" href="classHypreAMS.html">00404</a> <span class="keyword">class </span><a class="code" href="classHypreAMS.html" title="The Auxiliary-space Maxwell Solver in hypre.">HypreAMS</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00405"></a>00405 {
+<a name="l00406"></a>00406 <span class="keyword">private</span>:
+<a name="l00407"></a><a class="code" href="classHypreAMS.html#add0bd97a91bd3c4e8bb77281bc2bc327">00407</a>    HYPRE_Solver <a class="code" href="classHypreAMS.html#add0bd97a91bd3c4e8bb77281bc2bc327">ams</a>;
+<a name="l00408"></a>00408 
+<a name="l00410"></a><a class="code" href="classHypreAMS.html#a646709299f45a6cf023513b6225dea4f">00410</a>    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *<a class="code" href="classHypreAMS.html#aff58e4f1f4cec7644632326f3fc21fba" title="Vertex coordinates.">x</a>, *<a class="code" href="classHypreAMS.html#a665275bbe8fe5a62799f2e08299bfbba">y</a>, *<a class="code" href="classHypreAMS.html#a646709299f45a6cf023513b6225dea4f">z</a>;
+<a name="l00412"></a><a class="code" href="classHypreAMS.html#ac70c2066d66840fc29eb7a8593f9005d">00412</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreAMS.html#ac70c2066d66840fc29eb7a8593f9005d" title="Discrete gradient matrix.">G</a>;
+<a name="l00414"></a><a class="code" href="classHypreAMS.html#af9a0fdec726edc25222f163206cf5398">00414</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreAMS.html#a7e6ca8a1dc3fd89ab0d67bd54c263b6d" title="Nedelec interpolation matrix and its components.">Pi</a>, *<a class="code" href="classHypreAMS.html#a2c2091f6e755b6f42512873865ec02ba">Pix</a>, *<a class="code" href="classHypreAMS.html#a94e8df5d9ef22fd007618296dd9679d9">Piy</a>, *<a class="code" href="classHypreAMS.html#af9a0fdec726edc25222f163206cf5398">Piz</a>;
+<a name="l00415"></a>00415 
+<a name="l00416"></a>00416 <span class="keyword">public</span>:
+<a name="l00417"></a>00417    <a class="code" href="classHypreAMS.html#a5065e35b3784fd56a45aaade5fb8a839">HypreAMS</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>, <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *edge_fespace);
+<a name="l00418"></a>00418 
+<a name="l00420"></a><a class="code" href="classHypreAMS.html#a64adcf9793cefe7008ec527fbe7d39e8">00420</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreAMS.html#a64adcf9793cefe7008ec527fbe7d39e8" title="The typecast to HYPRE_Solver returns the internal ams object.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreAMS.html#add0bd97a91bd3c4e8bb77281bc2bc327">ams</a>; }
+<a name="l00421"></a>00421 
+<a name="l00422"></a><a class="code" href="classHypreAMS.html#a2759ca3ecbf66f4109be192998e73812">00422</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreAMS.html#a2759ca3ecbf66f4109be192998e73812" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00423"></a>00423 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_AMSSetup; }
+<a name="l00424"></a><a class="code" href="classHypreAMS.html#abac0b4c546d2523e0f4fc44b2789aadb">00424</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreAMS.html#abac0b4c546d2523e0f4fc44b2789aadb" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00425"></a>00425 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_AMSSolve; }
+<a name="l00426"></a>00426 
+<a name="l00427"></a>00427    <span class="keyword">virtual</span> <a class="code" href="classHypreAMS.html#a62d6cc8160657f5fe0bf98e6b79c9388">~HypreAMS</a>();
+<a name="l00428"></a>00428 };
+<a name="l00429"></a>00429 
+<a name="l00431"></a><a class="code" href="classHypreADS.html">00431</a> <span class="keyword">class </span><a class="code" href="classHypreADS.html" title="The Auxiliary-space Divergence Solver in hypre.">HypreADS</a> : <span class="keyword">public</span> <a class="code" href="classHypreSolver.html" title="Abstract class for hypre&#39;s solvers and preconditioners.">HypreSolver</a>
+<a name="l00432"></a>00432 {
+<a name="l00433"></a>00433 <span class="keyword">private</span>:
+<a name="l00434"></a><a class="code" href="classHypreADS.html#a723cd574f233791667fbaac2a95c425c">00434</a>    HYPRE_Solver <a class="code" href="classHypreADS.html#a723cd574f233791667fbaac2a95c425c">ads</a>;
+<a name="l00435"></a>00435 
+<a name="l00437"></a><a class="code" href="classHypreADS.html#a39bba9b8230d88a9c1fda73d292c855b">00437</a>    <a class="code" href="classHypreParVector.html" title="Wrapper for hypre&#39;s parallel vector class.">HypreParVector</a> *<a class="code" href="classHypreADS.html#afc5856b3823916ce6b592c88faa7462d" title="Vertex coordinates.">x</a>, *<a class="code" href="classHypreADS.html#ae2360c48ebdf24921a6c4b8d6b6e2e0b">y</a>, *<a class="code" href="classHypreADS.html#a39bba9b8230d88a9c1fda73d292c855b">z</a>;
+<a name="l00439"></a><a class="code" href="classHypreADS.html#a87ca0034c7efb4cb179d5b1f2d415468">00439</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreADS.html#a87ca0034c7efb4cb179d5b1f2d415468" title="Discrete gradient matrix.">G</a>;
+<a name="l00441"></a><a class="code" href="classHypreADS.html#a3dc87b75ce013107b902aec080e6335f">00441</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreADS.html#a3dc87b75ce013107b902aec080e6335f" title="Discrete curl matrix.">C</a>;
+<a name="l00443"></a><a class="code" href="classHypreADS.html#ae52e4a67ba98c82d5934b4c6adce3a5d">00443</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreADS.html#a67f6976bceee05033e2681d2b2ea1fe2" title="Nedelec interpolation matrix and its components.">ND_Pi</a>, *<a class="code" href="classHypreADS.html#a23f3dbe39a1c296ba8077b89537dfc0c">ND_Pix</a>, *<a class="code" href="classHypreADS.html#ace436889a2c594562306b6e6fb1aaadd">ND_Piy</a>, *<a class="code" href="classHypreADS.html#ae52e4a67ba98c82d5934b4c6adce3a5d">ND_Piz</a>;
+<a name="l00445"></a><a class="code" href="classHypreADS.html#a8772aa9c96a65c07803b9089e88f96d0">00445</a>    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classHypreADS.html#a50945956631b7c295a2b6f7c12fcc700" title="Raviart-Thomas interpolation matrix and its components.">RT_Pi</a>, *<a class="code" href="classHypreADS.html#ad8fcfd5f6925cb3083c617d1f8faa56b">RT_Pix</a>, *<a class="code" href="classHypreADS.html#a891eea0e2475dfc3e27b2dfc088f7a5f">RT_Piy</a>, *<a class="code" href="classHypreADS.html#a8772aa9c96a65c07803b9089e88f96d0">RT_Piz</a>;
+<a name="l00446"></a>00446 
+<a name="l00447"></a>00447 <span class="keyword">public</span>:
+<a name="l00448"></a>00448    <a class="code" href="classHypreADS.html#a61acda51da7882c3047e4a13fa060e00">HypreADS</a>(<a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> &amp;<a class="code" href="classHypreSolver.html#a48bf10954d2874da3406265e80d04a7e" title="The linear system matrix.">A</a>, <a class="code" href="classParFiniteElementSpace.html" title="Abstract parallel finite element space.">ParFiniteElementSpace</a> *face_fespace);
+<a name="l00449"></a>00449 
+<a name="l00451"></a><a class="code" href="classHypreADS.html#a06572aa9ab320cb9d275066aa4d42f7d">00451</a>    <span class="keyword">virtual</span> <a class="code" href="classHypreADS.html#a06572aa9ab320cb9d275066aa4d42f7d" title="The typecast to HYPRE_Solver returns the internal ads object.">operator HYPRE_Solver</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classHypreADS.html#a723cd574f233791667fbaac2a95c425c">ads</a>; }
+<a name="l00452"></a>00452 
+<a name="l00453"></a><a class="code" href="classHypreADS.html#a28b6a331edaa0e6fb59c294b12e4b4c9">00453</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreADS.html#a28b6a331edaa0e6fb59c294b12e4b4c9" title="hypre&#39;s internal Setup function">SetupFcn</a>()<span class="keyword"> const</span>
+<a name="l00454"></a>00454 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ADSSetup; }
+<a name="l00455"></a><a class="code" href="classHypreADS.html#af6ff40b2c6ec80520e812848ffcb01e1">00455</a>    <span class="keyword">virtual</span> HYPRE_PtrToParSolverFcn <a class="code" href="classHypreADS.html#af6ff40b2c6ec80520e812848ffcb01e1" title="hypre&#39;s internal Solve function">SolveFcn</a>()<span class="keyword"> const</span>
+<a name="l00456"></a>00456 <span class="keyword">   </span>{ <span class="keywordflow">return</span> (HYPRE_PtrToParSolverFcn) HYPRE_ADSSolve; }
+<a name="l00457"></a>00457 
+<a name="l00458"></a>00458    <span class="keyword">virtual</span> <a class="code" href="classHypreADS.html#a917c50137e72d79212893d5f1d630aaa">~HypreADS</a>();
+<a name="l00459"></a>00459 };
+<a name="l00460"></a>00460 
+<a name="l00461"></a>00461 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -393,7 +436,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

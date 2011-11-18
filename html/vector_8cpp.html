@@ -92,7 +92,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8cpp.html#aa7c4ac2998d0a1f2b6c19026aec5bd5c">add</a> (const <a class="el" href="classVector.html">Vector</a> &amp;v1, double alpha, const <a class="el" href="classVector.html">Vector</a> &amp;v2, <a class="el" href="classVector.html">Vector</a> &amp;v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8cpp.html#a42e4f1cebe28f9eeab99796c343000d9">add</a> (const double a, const <a class="el" href="classVector.html">Vector</a> &amp;x, const <a class="el" href="classVector.html">Vector</a> &amp;y, <a class="el" href="classVector.html">Vector</a> &amp;z)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8cpp.html#aff96dd2a7614d80b492cc630d0cb27fb">add</a> (const double a, const <a class="el" href="classVector.html">Vector</a> &amp;x, const double b, const <a class="el" href="classVector.html">Vector</a> &amp;y, <a class="el" href="classVector.html">Vector</a> &amp;z)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8cpp.html#a667c85b165c4e78a35fed438f5ddd70b">subtract</a> (const <a class="el" href="classVector.html">Vector</a> &amp;v1, const <a class="el" href="classVector.html">Vector</a> &amp;v2, <a class="el" href="classVector.html">Vector</a> &amp;v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8cpp.html#a8467fd920186492e6b7b8c26dfc78667">subtract</a> (const <a class="el" href="classVector.html">Vector</a> &amp;x, const <a class="el" href="classVector.html">Vector</a> &amp;y, <a class="el" href="classVector.html">Vector</a> &amp;z)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8cpp.html#ae6eeb5cb943b72db1cfaefbd65fec4a1">subtract</a> (const double a, const <a class="el" href="classVector.html">Vector</a> &amp;x, const <a class="el" href="classVector.html">Vector</a> &amp;y, <a class="el" href="classVector.html">Vector</a> &amp;z)</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
@@ -127,11 +127,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00202">202</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00216">216</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 <p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
 
-<p>Referenced by <a class="el" href="lininteg_8cpp_source.html#l00063">BoundaryLFIntegrator::AssembleRHSElementVect()</a>, <a class="el" href="lininteg_8cpp_source.html#l00023">DomainLFIntegrator::AssembleRHSElementVect()</a>, <a class="el" href="bicgstab_8cpp_source.html#l00039">BiCGSTAB()</a>, <a class="el" href="cgsolver_8cpp_source.html#l00020">CG()</a>, <a class="el" href="pcgsolver_8cpp_source.html#l00022">PCG()</a>, and <a class="el" href="pcgsolver_8cpp_source.html#l00112">SLI()</a>.</p>
+<p>Referenced by <a class="el" href="vector_8cpp_source.html#l00230">add()</a>, <a class="el" href="lininteg_8cpp_source.html#l00222">VectorFEBoundaryFluxLFIntegrator::AssembleRHSElementVect()</a>, <a class="el" href="lininteg_8cpp_source.html#l00058">BoundaryLFIntegrator::AssembleRHSElementVect()</a>, <a class="el" href="lininteg_8cpp_source.html#l00023">DomainLFIntegrator::AssembleRHSElementVect()</a>, <a class="el" href="bicgstab_8cpp_source.html#l00039">BiCGSTAB()</a>, <a class="el" href="fe_8cpp_source.html#l08564">NURBS1DFiniteElement::CalcDShape()</a>, <a class="el" href="cgsolver_8cpp_source.html#l00020">CG()</a>, <a class="el" href="pcgsolver_8cpp_source.html#l00022">PCG()</a>, and <a class="el" href="pcgsolver_8cpp_source.html#l00115">SLI()</a>.</p>
 
 </div>
 </div>
@@ -172,9 +172,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00225">225</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00257">257</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
-<p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
+<p>References <a class="el" href="vector_8cpp_source.html#l00216">add()</a>, <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
 
 </div>
 </div>
@@ -221,9 +221,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00240">240</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00287">287</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
-<p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
+<p>References <a class="el" href="vector_8cpp_source.html#l00216">add()</a>, <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="vector_8cpp_source.html#l00171">Vector::Set()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
 
 </div>
 </div>
@@ -264,13 +264,13 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00212">212</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00230">230</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
-<p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
+<p>References <a class="el" href="vector_8cpp_source.html#l00216">add()</a>, <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a667c85b165c4e78a35fed438f5ddd70b"></a><!-- doxytag: member="vector.cpp::subtract" ref="a667c85b165c4e78a35fed438f5ddd70b" args="(const Vector &amp;v1, const Vector &amp;v2, Vector &amp;v)" -->
+<a class="anchor" id="a8467fd920186492e6b7b8c26dfc78667"></a><!-- doxytag: member="vector.cpp::subtract" ref="a8467fd920186492e6b7b8c26dfc78667" args="(const Vector &amp;x, const Vector &amp;y, Vector &amp;z)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -278,19 +278,19 @@ Functions</h2></td></tr>
           <td class="memname">void subtract </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>v1</em>, </td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>v2</em>, </td>
+          <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classVector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -301,11 +301,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00256">256</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00330">330</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 <p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
 
-<p>Referenced by <a class="el" href="gmres_8cpp_source.html#l00200">aGMRES()</a>, <a class="el" href="bicgstab_8cpp_source.html#l00039">BiCGSTAB()</a>, <a class="el" href="cgsolver_8cpp_source.html#l00020">CG()</a>, <a class="el" href="gmres_8cpp_source.html#l00084">GMRES()</a>, <a class="el" href="pcgsolver_8cpp_source.html#l00022">PCG()</a>, and <a class="el" href="pcgsolver_8cpp_source.html#l00112">SLI()</a>.</p>
+<p>Referenced by <a class="el" href="gmres_8cpp_source.html#l00200">aGMRES()</a>, <a class="el" href="bicgstab_8cpp_source.html#l00039">BiCGSTAB()</a>, <a class="el" href="cgsolver_8cpp_source.html#l00020">CG()</a>, <a class="el" href="gmres_8cpp_source.html#l00084">GMRES()</a>, <a class="el" href="pcgsolver_8cpp_source.html#l00022">PCG()</a>, <a class="el" href="pcgsolver_8cpp_source.html#l00115">SLI()</a>, and <a class="el" href="vector_8cpp_source.html#l00348">subtract()</a>.</p>
 
 </div>
 </div>
@@ -346,9 +346,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00266">266</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00348">348</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
-<p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
+<p>References <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, <a class="el" href="error_8cpp_source.html#l00014">mfem_error()</a>, <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>, and <a class="el" href="vector_8cpp_source.html#l00330">subtract()</a>.</p>
 
 </div>
 </div>
@@ -377,9 +377,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00188">188</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00202">202</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="mesh_8cpp_source.html#l03487">FindRoots()</a>.</p>
+<p>References <a class="el" href="vector_8hpp_source.html#l00025">Vector::allocsize</a>, <a class="el" href="vector_8hpp_source.html#l00026">Vector::data</a>, and <a class="el" href="vector_8hpp_source.html#l00025">Vector::size</a>.</p>
 
 </div>
 </div>
@@ -398,7 +398,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:25 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

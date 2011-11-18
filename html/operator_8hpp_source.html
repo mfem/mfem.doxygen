@@ -89,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00021"></a><a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">00021</a>    <span class="keywordtype">int</span> <a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a>;
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00025"></a><a class="code" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73">00025</a>    <a class="code" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73" title="Construct Operator with given size s (default 0)">Operator</a> (<span class="keywordtype">int</span> s = 0) { <a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a> = s; }
+<a name="l00025"></a><a class="code" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73">00025</a>    <span class="keyword">explicit</span> <a class="code" href="classOperator.html#a1d92c2ae8d539f2ba6f3e8eb7f3bbd73" title="Construct Operator with given size s (default 0)">Operator</a> (<span class="keywordtype">int</span> s = 0) { <a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a> = s; }
 <a name="l00026"></a>00026 
 <a name="l00028"></a><a class="code" href="classOperator.html#a27f7c4dfac134bd5f57055d43eaa025f">00028</a>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classOperator.html#a27f7c4dfac134bd5f57055d43eaa025f" title="Returns the size of the input.">Size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a>; }
 <a name="l00029"></a>00029 
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00045"></a><a class="code" href="classIdentityOperator.html">00045</a> <span class="keyword">class </span><a class="code" href="classIdentityOperator.html" title="Operator I: x -&gt; x.">IdentityOperator</a> : <span class="keyword">public</span> <a class="code" href="classOperator.html" title="Abstract operator.">Operator</a>
 <a name="l00046"></a>00046 {
 <a name="l00047"></a>00047 <span class="keyword">public</span>:
-<a name="l00049"></a><a class="code" href="classIdentityOperator.html#a41a11cd5607b91742821c6f62031d41f">00049</a>    <a class="code" href="classIdentityOperator.html#a41a11cd5607b91742821c6f62031d41f" title="Creates I_{nxn}.">IdentityOperator</a> (<span class="keywordtype">int</span> n) { <a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a> = n; }
+<a name="l00049"></a><a class="code" href="classIdentityOperator.html#a41a11cd5607b91742821c6f62031d41f">00049</a>    <span class="keyword">explicit</span> <a class="code" href="classIdentityOperator.html#a41a11cd5607b91742821c6f62031d41f" title="Creates I_{nxn}.">IdentityOperator</a> (<span class="keywordtype">int</span> n) { <a class="code" href="classOperator.html#a1d380eda81675507b282a09a20a74b34">size</a> = n; }
 <a name="l00050"></a>00050 
 <a name="l00052"></a><a class="code" href="classIdentityOperator.html#a97ddd03f55a5dcfe6169cd6dc1629d3e">00052</a>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIdentityOperator.html#a97ddd03f55a5dcfe6169cd6dc1629d3e" title="Operator application.">Mult</a> (<span class="keyword">const</span> <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; x, <a class="code" href="classVector.html" title="Vector data type.">Vector</a> &amp; y)<span class="keyword"> const </span>{ y = x; }
 <a name="l00053"></a>00053 
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

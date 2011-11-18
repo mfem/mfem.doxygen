@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="fem_8hpp_source.html">fem.hpp</a>&quot;</code><br/>
+<code>#include &lt;cstring&gt;</code><br/>
 <code>#include &lt;math.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for gridfunc.cpp:</div>
@@ -130,11 +131,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="gridfunc_8cpp_source.html#l01459">1459</a> of file <a class="el" href="gridfunc_8cpp_source.html">gridfunc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="gridfunc_8cpp_source.html#l01686">1686</a> of file <a class="el" href="gridfunc_8cpp_source.html">gridfunc.cpp</a>.</p>
 
-<p>References <a class="el" href="vector_8cpp_source.html#l00306">Vector::AddElementVector()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00035">BilinearFormIntegrator::ComputeElementFlux()</a>, <a class="el" href="gridfunc_8hpp_source.html#l00140">GridFunction::FESpace()</a>, <a class="el" href="fespace_8hpp_source.html#l00139">FiniteElementSpace::GetElementTransformation()</a>, <a class="el" href="fespace_8cpp_source.html#l00103">FiniteElementSpace::GetElementVDofs()</a>, <a class="el" href="fespace_8cpp_source.html#l00570">FiniteElementSpace::GetFE()</a>, <a class="el" href="fespace_8hpp_source.html#l00118">FiniteElementSpace::GetNE()</a>, <a class="el" href="array_8hpp_source.html#l00178">Array&lt; T &gt;::SetSize()</a>, <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>, and <a class="el" href="vector_8hpp_source.html#l00065">Vector::Size()</a>.</p>
+<p>References <a class="el" href="vector_8cpp_source.html#l00425">Vector::AddElementVector()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00035">BilinearFormIntegrator::ComputeElementFlux()</a>, <a class="el" href="gridfunc_8hpp_source.html#l00169">GridFunction::FESpace()</a>, <a class="el" href="fespace_8hpp_source.html#l00151">FiniteElementSpace::GetElementTransformation()</a>, <a class="el" href="fespace_8cpp_source.html#l00112">FiniteElementSpace::GetElementVDofs()</a>, <a class="el" href="fespace_8cpp_source.html#l00633">FiniteElementSpace::GetFE()</a>, <a class="el" href="fespace_8hpp_source.html#l00130">FiniteElementSpace::GetNE()</a>, <a class="el" href="array_8hpp_source.html#l00255">Array&lt; T &gt;::SetSize()</a>, <a class="el" href="array_8hpp_source.html#l00101">Array&lt; T &gt;::Size()</a>, and <a class="el" href="vector_8hpp_source.html#l00065">Vector::Size()</a>.</p>
 
-<p>Referenced by <a class="el" href="gridfunc_8cpp_source.html#l01505">ZZErrorEstimator()</a>.</p>
+<p>Referenced by <a class="el" href="gridfunc_8cpp_source.html#l01732">ZZErrorEstimator()</a>.</p>
 
 </div>
 </div>
@@ -181,9 +182,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="gridfunc_8cpp_source.html#l01505">1505</a> of file <a class="el" href="gridfunc_8cpp_source.html">gridfunc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="gridfunc_8cpp_source.html#l01732">1732</a> of file <a class="el" href="gridfunc_8cpp_source.html">gridfunc.cpp</a>.</p>
 
-<p>References <a class="el" href="bilininteg_8hpp_source.html#l00035">BilinearFormIntegrator::ComputeElementFlux()</a>, <a class="el" href="gridfunc_8cpp_source.html#l01459">ComputeFlux()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00040">BilinearFormIntegrator::ComputeFluxEnergy()</a>, <a class="el" href="gridfunc_8hpp_source.html#l00140">GridFunction::FESpace()</a>, <a class="el" href="fespace_8hpp_source.html#l00146">FiniteElementSpace::GetAttribute()</a>, <a class="el" href="fespace_8hpp_source.html#l00139">FiniteElementSpace::GetElementTransformation()</a>, <a class="el" href="fespace_8cpp_source.html#l00103">FiniteElementSpace::GetElementVDofs()</a>, <a class="el" href="fespace_8cpp_source.html#l00570">FiniteElementSpace::GetFE()</a>, <a class="el" href="fespace_8hpp_source.html#l00118">FiniteElementSpace::GetNE()</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="vector_8hpp_source.html#l00065">Vector::Size()</a>, and <a class="el" href="array_8hpp_source.html#l00098">Array&lt; T &gt;::Size()</a>.</p>
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00035">BilinearFormIntegrator::ComputeElementFlux()</a>, <a class="el" href="gridfunc_8cpp_source.html#l01686">ComputeFlux()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00040">BilinearFormIntegrator::ComputeFluxEnergy()</a>, <a class="el" href="gridfunc_8hpp_source.html#l00169">GridFunction::FESpace()</a>, <a class="el" href="fespace_8hpp_source.html#l00163">FiniteElementSpace::GetAttribute()</a>, <a class="el" href="fespace_8hpp_source.html#l00151">FiniteElementSpace::GetElementTransformation()</a>, <a class="el" href="fespace_8cpp_source.html#l00112">FiniteElementSpace::GetElementVDofs()</a>, <a class="el" href="fespace_8cpp_source.html#l00633">FiniteElementSpace::GetFE()</a>, <a class="el" href="fespace_8hpp_source.html#l00130">FiniteElementSpace::GetNE()</a>, <a class="el" href="vector_8hpp_source.html#l00198">Vector::SetSize()</a>, <a class="el" href="vector_8hpp_source.html#l00065">Vector::Size()</a>, and <a class="el" href="array_8hpp_source.html#l00101">Array&lt; T &gt;::Size()</a>.</p>
 
 </div>
 </div>
@@ -202,7 +203,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

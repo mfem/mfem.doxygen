@@ -82,26 +82,117 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="fem_8hpp.html">fem.hpp</a>&quot;</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classParBilinearForm.html#a028c3d4bac0b104a20d4dbaf0a123b13" title="Returns the matrix assembled on the true dofs, i.e. P^t A P.">ParBilinearForm::ParallelAssemble</a>()
+<a name="l00016"></a>00016 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classParBilinearForm.html#a028c3d4bac0b104a20d4dbaf0a123b13" title="Returns the matrix assembled on the true dofs, i.e. P^t A P.">ParBilinearForm::ParallelAssemble</a>(<a class="code" href="classSparseMatrix.html" title="Data type sparse matrix.">SparseMatrix</a> *m)
 <a name="l00017"></a>00017 {
-<a name="l00018"></a>00018    <span class="keywordtype">int</span>  nproc   = <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a> -&gt; GetNRanks();
-<a name="l00019"></a>00019    <span class="keywordtype">int</span> *dof_off = <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a> -&gt; GetDofOffsets();
+<a name="l00018"></a>00018    <span class="keywordflow">if</span> (m == NULL)
+<a name="l00019"></a>00019       <span class="keywordflow">return</span> NULL;
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021    <span class="comment">// construct the block-diagonal matrix A</span>
-<a name="l00022"></a>00022    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A;
-<a name="l00023"></a>00023    <span class="keywordflow">if</span> (HYPRE_AssumedPartitionCheck())
-<a name="l00024"></a>00024       A = <span class="keyword">new</span> <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>(dof_off[2], dof_off, <a class="code" href="classBilinearForm.html#ad753a56f3e660ea3e24bbbce4aa366af" title="Sparse matrix to be associated with the form.">mat</a>);
-<a name="l00025"></a>00025    <span class="keywordflow">else</span>
-<a name="l00026"></a>00026       A = <span class="keyword">new</span> <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>(dof_off[nproc], dof_off, <a class="code" href="classBilinearForm.html#ad753a56f3e660ea3e24bbbce4aa366af" title="Sparse matrix to be associated with the form.">mat</a>);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *rap = <a class="code" href="hypre_8hpp.html#a28a54d4215a329971ea527527e44939d" title="Returns the matrix P^t * A * P.">RAP</a>(A, <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a> -&gt; Dof_TrueDof_Matrix());
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030    <span class="keyword">delete</span> A;
+<a name="l00021"></a>00021    <span class="comment">// construct a parallel block-diagonal wrapper matrix A based on m</span>
+<a name="l00022"></a>00022    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *A = <span class="keyword">new</span> <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>(<a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#ad6ebbacb0a53116ba079c8fed6fd5f9d">GlobalVSize</a>(),
+<a name="l00023"></a>00023                                           <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a803693dc975ace96da8d8daab926f514">GetDofOffsets</a>(), m);
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025    <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *rap = <a class="code" href="hypre_8hpp.html#a28a54d4215a329971ea527527e44939d" title="Returns the matrix P^t * A * P.">RAP</a>(A, <a class="code" href="classParBilinearForm.html#a5805f166793c5854d21b6c9e25d718f8">pfes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aef050d1bb1c2239e4e31085e3a8d5b67" title="The true dof-to-dof interpolation matrix.">Dof_TrueDof_Matrix</a>());
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027    <span class="keyword">delete</span> A;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029    <span class="keywordflow">return</span> rap;
+<a name="l00030"></a>00030 }
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032    <span class="keywordflow">return</span> rap;
-<a name="l00033"></a>00033 }
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#endif</span>
+<a name="l00032"></a>00032 <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a> *<a class="code" href="classParDiscreteLinearOperator.html#a8db16eb12dcd15ecbe89adf0e4aaf61e" title="Returns the matrix &quot;assembled&quot; on the true dofs.">ParDiscreteLinearOperator::ParallelAssemble</a>(<a class="code" href="classSparseMatrix.html" title="Data type sparse matrix.">SparseMatrix</a> *m)
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034    <span class="keywordflow">if</span> (m == NULL)
+<a name="l00035"></a>00035       <span class="keywordflow">return</span> NULL;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037    <span class="keywordtype">int</span> *I = m-&gt;<a class="code" href="classSparseMatrix.html#a5e76f22cecc10b89a4f1c30bc9b2f39c" title="Return the array I.">GetI</a>();
+<a name="l00038"></a>00038    <span class="keywordtype">int</span> *J = m-&gt;<a class="code" href="classSparseMatrix.html#ad00134d53ef613399af89213f5fadbd2" title="Return the array J.">GetJ</a>();
+<a name="l00039"></a>00039    <span class="keywordtype">double</span> *data = m-&gt;<a class="code" href="classSparseMatrix.html#ac62d784d911f9ac660a7679b216c1e98" title="Return element data.">GetData</a>();
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041    <span class="comment">// remap to tdof local row and tdof global column indices</span>
+<a name="l00042"></a>00042    <a class="code" href="classSparseMatrix.html" title="Data type sparse matrix.">SparseMatrix</a> local(<a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a3e1b91a7bc861cf5457f3635bc304941">TrueVSize</a>(), <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>());
+<a name="l00043"></a>00043    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code" href="classOperator.html#a27f7c4dfac134bd5f57055d43eaa025f" title="Returns the size of the input.">Size</a>(); i++)
+<a name="l00044"></a>00044    {
+<a name="l00045"></a>00045       <span class="keywordtype">int</span> lti = <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a48cd2c79673b97dbb62c1e39dcd17849">GetLocalTDofNumber</a>(i);
+<a name="l00046"></a>00046       <span class="keywordflow">if</span> (lti &gt;= 0)
+<a name="l00047"></a>00047          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = I[i]; j &lt; I[i+1]; j++)
+<a name="l00048"></a>00048             local.Set(lti, <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aa3554b373a52386d80f7e1a439abcd03" title="Returns the global tdof number of the given local degree of freedom.">GetGlobalTDofNumber</a>(J[j]), data[j]);
+<a name="l00049"></a>00049    }
+<a name="l00050"></a>00050    local.Finalize();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052    <span class="comment">// construct and return a global ParCSR matrix by splitting the local matrix</span>
+<a name="l00053"></a>00053    <span class="comment">// into diag and offd parts</span>
+<a name="l00054"></a>00054    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>(<a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aa139180f9ccbf2f391e8f17741bfa6d5">GetComm</a>(),
+<a name="l00055"></a>00055                              <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a3e1b91a7bc861cf5457f3635bc304941">TrueVSize</a>(),
+<a name="l00056"></a>00056                              <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>(),
+<a name="l00057"></a>00057                              <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>(),
+<a name="l00058"></a>00058                              local.GetI(), local.GetJ(), local.GetData(),
+<a name="l00059"></a>00059                              <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>(),
+<a name="l00060"></a>00060                              <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>());
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="keywordtype">void</span> <a class="code" href="classParDiscreteLinearOperator.html#a8e33e60b18edaa4dcb5bfee0f3c4723f">ParDiscreteLinearOperator::GetParBlocks</a>(<a class="code" href="classArray2D.html">Array2D&lt;HypreParMatrix *&gt;</a> &amp;blocks)<span class="keyword"> const</span>
+<a name="l00064"></a>00064 <span class="keyword"></span>{
+<a name="l00065"></a>00065    <span class="keywordtype">int</span> rdim = <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classFiniteElementSpace.html#ac3f3af363d6517a14ebff84accad4f36" title="Returns vector dimension.">GetVDim</a>();
+<a name="l00066"></a>00066    <span class="keywordtype">int</span> ddim = <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classFiniteElementSpace.html#ac3f3af363d6517a14ebff84accad4f36" title="Returns vector dimension.">GetVDim</a>();
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068    blocks.<a class="code" href="classArray2D.html#a309fb63dd5c239ba6b842440513befea">SetSize</a>(rdim, ddim);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070    <span class="keywordtype">int</span> i, j, n;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072    <span class="comment">// construct the scalar versions of the row/coll offset arrays</span>
+<a name="l00073"></a>00073    <span class="keywordtype">int</span> *row_starts, *col_starts;
+<a name="l00074"></a>00074    <span class="keywordflow">if</span> (HYPRE_AssumedPartitionCheck())
+<a name="l00075"></a>00075       n = 2;
+<a name="l00076"></a>00076    <span class="keywordflow">else</span>
+<a name="l00077"></a>00077       n = <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#af3bb56da3aa74118f09cb39a2459eb6f">GetNRanks</a>()+1;
+<a name="l00078"></a>00078    row_starts = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];
+<a name="l00079"></a>00079    col_starts = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];
+<a name="l00080"></a>00080    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)
+<a name="l00081"></a>00081    {
+<a name="l00082"></a>00082       row_starts[i] = (<a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>())[i] / rdim;
+<a name="l00083"></a>00083       col_starts[i] = (<a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a0374b1b4bafc9184871e6f149564d3c1">GetTrueDofOffsets</a>())[i] / ddim;
+<a name="l00084"></a>00084    }
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086    <a class="code" href="classArray2D.html">Array2D&lt;SparseMatrix *&gt;</a> lblocks;
+<a name="l00087"></a>00087    <a class="code" href="classMixedBilinearForm.html#af94029f463ff5bfa609a4c2f90ec0fac">GetBlocks</a>(lblocks);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> bi = 0; bi &lt; rdim; bi++)
+<a name="l00090"></a>00090       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> bj = 0; bj &lt; ddim; bj++)
+<a name="l00091"></a>00091       {
+<a name="l00092"></a>00092          <span class="keywordtype">int</span> *I = lblocks(bi,bj)-&gt;GetI();
+<a name="l00093"></a>00093          <span class="keywordtype">int</span> *J = lblocks(bi,bj)-&gt;GetJ();
+<a name="l00094"></a>00094          <span class="keywordtype">double</span> *data = lblocks(bi,bj)-&gt;GetData();
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096          <span class="comment">// remap to tdof local row and tdof global column indices</span>
+<a name="l00097"></a>00097          <a class="code" href="classSparseMatrix.html" title="Data type sparse matrix.">SparseMatrix</a> local(<a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a3e1b91a7bc861cf5457f3635bc304941">TrueVSize</a>()/rdim,
+<a name="l00098"></a>00098                             <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>()/ddim);
+<a name="l00099"></a>00099          <span class="keywordflow">for</span> (i = 0; i &lt; lblocks(bi,bj)-&gt;Size(); i++)
+<a name="l00100"></a>00100          {
+<a name="l00101"></a>00101             <span class="keywordtype">int</span> lti = <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a48cd2c79673b97dbb62c1e39dcd17849">GetLocalTDofNumber</a>(i);
+<a name="l00102"></a>00102             <span class="keywordflow">if</span> (lti &gt;= 0)
+<a name="l00103"></a>00103                <span class="keywordflow">for</span> (j = I[i]; j &lt; I[i+1]; j++)
+<a name="l00104"></a>00104                   local.Set(lti,
+<a name="l00105"></a>00105                             <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a27ee259d3a0edf76d85bd2505d17d56b">GetGlobalScalarTDofNumber</a>(J[j]),
+<a name="l00106"></a>00106                             data[j]);
+<a name="l00107"></a>00107          }
+<a name="l00108"></a>00108          local.Finalize();
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110          <span class="keyword">delete</span> lblocks(bi,bj);
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112          <span class="comment">// construct and return a global ParCSR matrix by splitting the local</span>
+<a name="l00113"></a>00113          <span class="comment">// matrix into diag and offd parts</span>
+<a name="l00114"></a>00114          blocks(bi,bj) = <span class="keyword">new</span> <a class="code" href="classHypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class.">HypreParMatrix</a>(<a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#aa139180f9ccbf2f391e8f17741bfa6d5">GetComm</a>(),
+<a name="l00115"></a>00115                                             <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a3e1b91a7bc861cf5457f3635bc304941">TrueVSize</a>()/rdim,
+<a name="l00116"></a>00116                                             <a class="code" href="classParDiscreteLinearOperator.html#a2bd1a93f2e8615563a9a283aa6f19e57">range_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>()/rdim,
+<a name="l00117"></a>00117                                             <a class="code" href="classParDiscreteLinearOperator.html#a6e36993c23601d8217ebce2faaacc621">domain_fes</a>-&gt;<a class="code" href="classParFiniteElementSpace.html#a698acdcbf35db7593cf14c2ba52aa042">GlobalTrueVSize</a>()/ddim,
+<a name="l00118"></a>00118                                             local.GetI(), local.GetJ(), local.GetData(),
+<a name="l00119"></a>00119                                             row_starts, col_starts);
+<a name="l00120"></a>00120       }
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122    <span class="keyword">delete</span> row_starts;
+<a name="l00123"></a>00123    <span class="keyword">delete</span> col_starts;
+<a name="l00124"></a>00124 }
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -118,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

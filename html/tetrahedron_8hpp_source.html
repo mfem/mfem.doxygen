@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
 <a name="l00033"></a>00033 
-<a name="l00035"></a><a class="code" href="classTetrahedron.html#a9f4ec41078b21e8aa5a5f6df731ac386a2757cd853b9a9ea4fbdda1ed8b805ca1">00035</a>    <span class="keyword">enum</span> { <a class="code" href="classTetrahedron.html#a9f4ec41078b21e8aa5a5f6df731ac386a2757cd853b9a9ea4fbdda1ed8b805ca1">TYPE_PU</a>=0, <a class="code" href="classTetrahedron.html#a9f4ec41078b21e8aa5a5f6df731ac386ac9e8cf03c9d79532fc9000f9b3cd17de">TYPE_A</a>=1, <a class="code" href="classTetrahedron.html#a9f4ec41078b21e8aa5a5f6df731ac386ac6a2b339a728e6deb7a27217ce4fb2b2">TYPE_PF</a>=2, <a class="code" href="classTetrahedron.html#a9f4ec41078b21e8aa5a5f6df731ac386a8ff7bf5a64541b2e670fd8a52e81f363">TYPE_O</a>=3, <a class="code" href="classTetrahedron.html#a9f4ec41078b21e8aa5a5f6df731ac386ad681ae1717f1538e7d57fc19786a0a33">TYPE_M</a>=4 };
+<a name="l00035"></a><a class="code" href="classTetrahedron.html#ac95ee2bc6ee37ff3c22c573cb1def13aa2757cd853b9a9ea4fbdda1ed8b805ca1">00035</a>    <span class="keyword">enum</span> { <a class="code" href="classTetrahedron.html#ac95ee2bc6ee37ff3c22c573cb1def13aa2757cd853b9a9ea4fbdda1ed8b805ca1">TYPE_PU</a>=0, <a class="code" href="classTetrahedron.html#ac95ee2bc6ee37ff3c22c573cb1def13aac9e8cf03c9d79532fc9000f9b3cd17de">TYPE_A</a>=1, <a class="code" href="classTetrahedron.html#ac95ee2bc6ee37ff3c22c573cb1def13aac6a2b339a728e6deb7a27217ce4fb2b2">TYPE_PF</a>=2, <a class="code" href="classTetrahedron.html#ac95ee2bc6ee37ff3c22c573cb1def13aa8ff7bf5a64541b2e670fd8a52e81f363">TYPE_O</a>=3, <a class="code" href="classTetrahedron.html#ac95ee2bc6ee37ff3c22c573cb1def13aad681ae1717f1538e7d57fc19786a0a33">TYPE_M</a>=4 };
 <a name="l00036"></a>00036 
 <a name="l00037"></a><a class="code" href="classTetrahedron.html#ae0b07b13c90b10e253b3fb9978f7d2e4">00037</a>    <a class="code" href="classTetrahedron.html#ae0b07b13c90b10e253b3fb9978f7d2e4">Tetrahedron</a>() : <a class="code" href="classElement.html" title="Abstract data type element.">Element</a>(<a class="code" href="classGeometry.html">Geometry</a>::<a class="code" href="classElement.html#a009a3be4c3a037a72e292b2464c9cbc5a3ceed1d146788d590596a9489d65dd2e">TETRAHEDRON</a>) { <a class="code" href="classTetrahedron.html#ab14e9894bdb0188188717763d93df0f7">refinement_flag</a> = 0; }
 <a name="l00038"></a>00038 
@@ -126,18 +126,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00077"></a>00077 
 <a name="l00078"></a><a class="code" href="classTetrahedron.html#a56ee1792cdf54eaf8acb6e35f42ff244">00078</a>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classTetrahedron.html#a56ee1792cdf54eaf8acb6e35f42ff244">GetEdgeVertices</a>(<span class="keywordtype">int</span> ei)<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(<a class="code" href="classTetrahedron.html#a6f4ba2681d5c8a01506b1236a9198545">edges</a>[ei]); }
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080    <span class="keyword">virtual</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *<a class="code" href="classTetrahedron.html#ab0b426d5a9e128215daf007ab0fec377">Duplicate</a>() <span class="keyword">const</span>;
+<a name="l00080"></a>00080    <span class="keyword">virtual</span> <a class="code" href="classElement.html" title="Abstract data type element.">Element</a> *<a class="code" href="classTetrahedron.html#a80fc64b396ce7caf06021635a2799a7a">Duplicate</a>(<a class="code" href="classMesh.html">Mesh</a> *m) <span class="keyword">const</span>;
 <a name="l00081"></a>00081 
 <a name="l00082"></a><a class="code" href="classTetrahedron.html#ac4704f97b2c656cfae120731d13d3aaa">00082</a>    <span class="keyword">virtual</span> <a class="code" href="classTetrahedron.html#ac4704f97b2c656cfae120731d13d3aaa">~Tetrahedron</a>() { }
 <a name="l00083"></a>00083 };
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085 <span class="keyword">extern</span> <a class="code" href="classLinear3DFiniteElement.html" title="Class for linear FE on tetrahedron.">Linear3DFiniteElement</a> <a class="code" href="tetrahedron_8cpp.html#ae3582f89b36ca4f3f3aeb184ae1c1ac1">TetrahedronFE</a>;
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#ifdef MFEM_USE_MEMALLOC</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span><span class="keyword">extern</span> <a class="code" href="classMemAlloc.html">MemAlloc &lt;Tetrahedron, 1024&gt;</a> TetMemory;
-<a name="l00089"></a>00089 <span class="preprocessor">#endif</span>
-<a name="l00090"></a>00090 <span class="preprocessor"></span>
-<a name="l00091"></a>00091 <span class="preprocessor">#endif</span>
+<a name="l00087"></a>00087 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -154,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:56 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

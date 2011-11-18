@@ -80,7 +80,7 @@ Collaboration diagram for VectorFEDivergenceIntegrator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVectorFEDivergenceIntegrator__coll__graph.png" border="0" usemap="#VectorFEDivergenceIntegrator_coll__map" alt="Collaboration graph"/></div>
 <map name="VectorFEDivergenceIntegrator_coll__map" id="VectorFEDivergenceIntegrator_coll__map">
-<area shape="rect" id="node2" href="classBilinearFormIntegrator.html" title="Abstract base class BilinearFormIntegrator." alt="" coords="5,5,160,32"/><area shape="rect" id="node4" href="classVector.html" title="Vector data type." alt="" coords="184,5,243,32"/></map>
+<area shape="rect" id="node2" href="classBilinearFormIntegrator.html" title="Abstract base class BilinearFormIntegrator." alt="" coords="5,5,160,32"/><area shape="rect" id="node4" href="classVector.html" title="Vector data type." alt="" coords="184,5,243,32"/><area shape="rect" id="node6" href="classCoefficient.html" title="Base class Coefficient." alt="" coords="267,5,352,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classVectorFEDivergenceIntegrator-members.html">List of all members.</a></p>
@@ -88,18 +88,20 @@ Collaboration diagram for VectorFEDivergenceIntegrator:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#a190de50202d66027ec8622732e255c39">VectorFEDivergenceIntegrator</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#a8c08da051028373665ae04b9abe45f0d">VectorFEDivergenceIntegrator</a> (<a class="el" href="classCoefficient.html">Coefficient</a> &amp;q)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#af71c981b27b27b8f1cc9ef665df24ddb">AssembleElementMatrix</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a particular Finite <a class="el" href="classElement.html" title="Abstract data type element.">Element</a> computes the element matrix elmat.  <a href="#af71c981b27b27b8f1cc9ef665df24ddb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#ac25cbd2f881350106bfe884c7bbf28a8">AssembleElementMatrix2</a> (const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;trial_fe, const <a class="el" href="classFiniteElement.html">FiniteElement</a> &amp;test_fe, <a class="el" href="classElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classDenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoefficient.html">Coefficient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#a4eb13c5651c337a96553d5901210e39e">Q</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#ac9af03675218773020232a715d83dfe4">divshape</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorFEDivergenceIntegrator.html#a60f5dbd0c8c12131ca0df55b9c7866d8">shape</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for integrating (div u, p) where u is a vector field given by <a class="el" href="classVectorFiniteElement.html">VectorFiniteElement</a> through Piola transformation (for RT elements); p is scalar function given by <a class="el" href="classFiniteElement.html" title="Abstract class for Finite Elements.">FiniteElement</a> through standard transformation. Here, u is the trial function and p is the test function. Note: the element matrix returned by AssembleElementMatrix2 does NOT depend on the <a class="el" href="classElementTransformation.html">ElementTransformation</a> Trans. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00213">213</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00215">215</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a190de50202d66027ec8622732e255c39"></a><!-- doxytag: member="VectorFEDivergenceIntegrator::VectorFEDivergenceIntegrator" ref="a190de50202d66027ec8622732e255c39" args="()" -->
 <div class="memitem">
@@ -115,7 +117,30 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00218">218</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00223">223</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00218">Q</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c08da051028373665ae04b9abe45f0d"></a><!-- doxytag: member="VectorFEDivergenceIntegrator::VectorFEDivergenceIntegrator" ref="a8c08da051028373665ae04b9abe45f0d" args="(Coefficient &amp;q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorFEDivergenceIntegrator::VectorFEDivergenceIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoefficient.html">Coefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00224">224</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>References <a class="el" href="bilininteg_8hpp_source.html#l00218">Q</a>.</p>
 
 </div>
 </div>
@@ -155,7 +180,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBilinearFormIntegrator.html#adf3480ea4fb587b2a7853b6531ecb912">BilinearFormIntegrator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00219">219</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00225">225</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,9 +224,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBilinearFormIntegrator.html#a336fe9542c9793b7d7b659527407c8a5">BilinearFormIntegrator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00393">393</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00408">408</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
 
-<p>References <a class="el" href="densemat_8cpp_source.html#l01385">AddMultVWt()</a>, <a class="el" href="fe_8cpp_source.html#l00038">FiniteElement::CalcDivShape()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00216">divshape</a>, <a class="el" href="intrules_8cpp_source.html#l00127">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00056">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00053">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00050">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00059">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00053">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="vector_8hpp_source.html#l00195">Vector::SetSize()</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00216">shape</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>.</p>
+<p>References <a class="el" href="densemat_8cpp_source.html#l02286">AddMultVWt()</a>, <a class="el" href="fe_8cpp_source.html#l00038">FiniteElement::CalcDivShape()</a>, <a class="el" href="classFiniteElement.html#a15ade321354be573fba66f58930d0890">FiniteElement::CalcShape()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00220">divshape</a>, <a class="el" href="classCoefficient.html#ab7a931de5049e9572ddd4401492ae3e7">Coefficient::Eval()</a>, <a class="el" href="intrules_8cpp_source.html#l00188">IntegrationRules::Get()</a>, <a class="el" href="fe_8hpp_source.html#l00057">FiniteElement::GetDof()</a>, <a class="el" href="fe_8hpp_source.html#l00054">FiniteElement::GetGeomType()</a>, <a class="el" href="intrules_8hpp_source.html#l00187">IntegrationRule::GetNPoints()</a>, <a class="el" href="fe_8hpp_source.html#l00060">FiniteElement::GetOrder()</a>, <a class="el" href="intrules_8hpp_source.html#l00190">IntegrationRule::IntPoint()</a>, <a class="el" href="intrules_8cpp.html#a1a805d12644ff94d58335295e67b7f91">IntRules</a>, <a class="el" href="bilininteg_8hpp_source.html#l00218">Q</a>, <a class="el" href="eltrans_8hpp_source.html#l00024">ElementTransformation::SetIntPoint()</a>, <a class="el" href="densemat_8cpp_source.html#l00077">DenseMatrix::SetSize()</a>, <a class="el" href="vector_8hpp_source.html#l00198">Vector::SetSize()</a>, <a class="el" href="bilininteg_8hpp_source.html#l00220">shape</a>, and <a class="el" href="intrules_8hpp_source.html#l00022">IntegrationPoint::weight</a>.</p>
 
 </div>
 </div>
@@ -217,9 +242,26 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00216">216</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00220">220</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00393">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00408">AssembleElementMatrix2()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4eb13c5651c337a96553d5901210e39e"></a><!-- doxytag: member="VectorFEDivergenceIntegrator::Q" ref="a4eb13c5651c337a96553d5901210e39e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoefficient.html">Coefficient</a>* <a class="el" href="classVectorFEDivergenceIntegrator.html#a4eb13c5651c337a96553d5901210e39e">VectorFEDivergenceIntegrator::Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00218">218</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00408">AssembleElementMatrix2()</a>, and <a class="el" href="bilininteg_8hpp_source.html#l00223">VectorFEDivergenceIntegrator()</a>.</p>
 
 </div>
 </div>
@@ -234,9 +276,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00216">216</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l00220">220</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00393">AssembleElementMatrix2()</a>.</p>
+<p>Referenced by <a class="el" href="bilininteg_8cpp_source.html#l00408">AssembleElementMatrix2()</a>.</p>
 
 </div>
 </div>
@@ -259,7 +301,7 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:27 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:57 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

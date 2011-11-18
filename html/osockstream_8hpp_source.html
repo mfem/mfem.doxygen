@@ -81,32 +81,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#ifndef MFEM_OSOCKSTREAM</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define MFEM_OSOCKSTREAM</span>
 <a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="socketstream_8hpp.html">socketstream.hpp</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
 <a name="l00017"></a>00017 
-<a name="l00024"></a><a class="code" href="classosockstream.html">00024</a> <span class="keyword">class </span><a class="code" href="classosockstream.html">osockstream</a> : <span class="keyword">public</span> ostringstream
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">private</span>:
-<a name="l00027"></a><a class="code" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">00027</a>    <span class="keywordtype">int</span> portnum, <a class="code" href="classosockstream.html#a180a9d010e2d84a0f034e7df88e714c1">sent</a>;
-<a name="l00028"></a><a class="code" href="classosockstream.html#a1f2fbeb94bff1c5178d5e04c1a52c937">00028</a>    <span class="keywordtype">char</span> machine[128];
+<a name="l00026"></a><a class="code" href="classosockstream.html">00026</a> <span class="keyword">class </span><a class="code" href="classosockstream.html">osockstream</a> : <span class="keyword">public</span> <a class="code" href="classsocketstream.html">socketstream</a>
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030    <span class="comment">// return socket number;</span>
-<a name="l00031"></a>00031    <span class="comment">// (-1) for unknown machine;</span>
-<a name="l00032"></a>00032    <span class="comment">// (-2) for socket fail;</span>
-<a name="l00033"></a>00033    <span class="comment">// (-3) for connect fail.</span>
-<a name="l00034"></a>00034    <span class="keywordtype">int</span> call_socket();
-<a name="l00035"></a>00035    <span class="keywordtype">int</span> send_through_socket(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">char</span> *Buf, <span class="keywordtype">int</span> size);
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">public</span>:
+<a name="l00032"></a>00032    <a class="code" href="classosockstream.html">osockstream</a>(<span class="keywordtype">int</span> port, <span class="keyword">const</span> <span class="keywordtype">char</span> *hostname);
+<a name="l00033"></a>00033 
+<a name="l00037"></a><a class="code" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">00037</a>    <span class="keywordtype">int</span> <a class="code" href="classosockstream.html#aa4d87572e4f499c07d8003210bcf20ef">send</a>() { (*this) &lt;&lt; std::flush; <span class="keywordflow">return</span> 0; }
 <a name="l00038"></a>00038 
-<a name="l00041"></a>00041    <a class="code" href="classosockstream.html">osockstream</a>(<span class="keywordtype">int</span> port, <span class="keyword">const</span> <span class="keywordtype">char</span> *hostname);
+<a name="l00040"></a><a class="code" href="classosockstream.html#a75edad4c9b3071158264c7cd99b138e6">00040</a>    <span class="keyword">virtual</span> <a class="code" href="classosockstream.html#a75edad4c9b3071158264c7cd99b138e6">~osockstream</a>() { }
+<a name="l00041"></a>00041 };
 <a name="l00042"></a>00042 
-<a name="l00046"></a>00046    <span class="keywordtype">int</span> send();
-<a name="l00047"></a>00047 
-<a name="l00049"></a>00049    ~<a class="code" href="classosockstream.html">osockstream</a>();
-<a name="l00050"></a>00050 };
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="preprocessor">#endif</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -123,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 19 2011 15:13:24 for MFEM by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 11:44:55 for MFEM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
