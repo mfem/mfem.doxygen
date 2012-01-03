@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['b',['b',['../classPoly__1D_1_1Basis.html#a91d434e5fd866dff8643a331345b9623',1,'Poly_1D::Basis::b()'],['../classHypreSolver.html#ad82d7436fd5856f7ce287a431db5d541',1,'HypreSolver::B()']]],
+  ['base_5fgeom',['base_geom',['../classElement.html#ae7a2b27bb1f63f95434122a80293526e',1,'Element']]],
+  ['basis1d',['basis1d',['../classH1__SegmentElement.html#a87104e2bc01dba1fbb63f272f04ce8b1',1,'H1_SegmentElement::basis1d()'],['../classH1__QuadrilateralElement.html#abea35f1058c78b655faff9f7c9de056f',1,'H1_QuadrilateralElement::basis1d()'],['../classH1__HexahedronElement.html#aaf714c67207781668ba28b0373ae967c',1,'H1_HexahedronElement::basis1d()'],['../classL2__SegmentElement.html#a57b879097b7012ea0792f03709184b2a',1,'L2_SegmentElement::basis1d()'],['../classL2__QuadrilateralElement.html#acc43ea6bc78cd35090ca6999b031c0ea',1,'L2_QuadrilateralElement::basis1d()'],['../classL2__HexahedronElement.html#a1e1cbb9f59c9a408f5a25b45809bf2ae',1,'L2_HexahedronElement::basis1d()']]],
+  ['bbfi',['bbfi',['../classBilinearForm.html#aa4cdb25633a600ed0b4d08ca14e28a84',1,'BilinearForm']]],
+  ['bdfidxt',['BdFidxT',['../classConvectionIntegrator.html#ae72c99cc2935b552a5a180e7929c9c6b',1,'ConvectionIntegrator']]],
+  ['bdofs',['bdofs',['../classFiniteElementSpace.html#a40aa5f0d3e32a809611f8c4aa4f3c9b7',1,'FiniteElementSpace']]],
+  ['bdr',['bdr',['../classMixedBilinearForm.html#a3766f8a0cb308b1dcfa7b18b7789d204',1,'MixedBilinearForm']]],
+  ['bdr_5fattributes',['bdr_attributes',['../classMesh.html#a75b0cbf767e0aa0be448358e7ded06a9',1,'Mesh']]],
+  ['bdrelem_5fdof',['bdrElem_dof',['../classFiniteElementSpace.html#a55158dcddeba424e46dda9518e7c5c50',1,'FiniteElementSpace']]],
+  ['be_5fto_5fedge',['be_to_edge',['../classMesh.html#a8e5a6e2bd3805aa53f66271722172edb',1,'Mesh']]],
+  ['be_5fto_5fface',['be_to_face',['../classMesh.html#a9702695a88cf6d3d6473184d990c828c',1,'Mesh']]],
+  ['bel_5fdof',['bel_dof',['../classNURBSExtension.html#a1f93d4eaf29e9fccb8ba51c7e6393eec',1,'NURBSExtension']]],
+  ['bel_5fto_5fedge',['bel_to_edge',['../classMesh.html#ae877723f78cfc62598ed1baba702a2e0',1,'Mesh']]],
+  ['bel_5fto_5fijk',['bel_to_IJK',['../classNURBSExtension.html#a45fb8fb6bd5666b296a40d063b85fb30',1,'NURBSExtension']]],
+  ['bel_5fto_5fpatch',['bel_to_patch',['../classNURBSExtension.html#a24f9b7eea88240a751bc7b873a524aef',1,'NURBSExtension']]],
+  ['bfbfi',['bfbfi',['../classBilinearForm.html#a52b07ffc645c5aefde24967366b869da',1,'BilinearForm']]],
+  ['bfi',['bfi',['../classTransposeIntegrator.html#a53ea7426cda662335eef780dae082003',1,'TransposeIntegrator::bfi()'],['../classLumpedIntegrator.html#a6dfa34464b8806349db3464c8905dbfc',1,'LumpedIntegrator::bfi()']]],
+  ['bfi_5felmat',['bfi_elmat',['../classTransposeIntegrator.html#a7288373851e80f753189197d9731617c',1,'TransposeIntegrator']]],
+  ['blfi',['blfi',['../classLinearForm.html#ace716ac716d19a7ac39477605594d4fd',1,'LinearForm']]],
+  ['boundary',['boundary',['../classMesh.html#aabe7e2c884b49ea0723a7fffeb4923da',1,'Mesh']]],
+  ['buf',['Buf',['../classisockstream.html#acf2f58cb4afc5aca8ff11904d58b74e8',1,'isockstream']]],
+  ['buflen',['buflen',['../classsocketbuf.html#a7eacd967a492b92da054e97249a3a695',1,'socketbuf']]]
+];
