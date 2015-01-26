@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['r',['r',['../classmfem_1_1SLISolver.html#ab40de0b67e040df71eca502729668665',1,'mfem::SLISolver::r()'],['../classmfem_1_1CGSolver.html#a1e4e74f3a410837ba10b157effcffb3c',1,'mfem::CGSolver::r()'],['../classmfem_1_1BiCGSTABSolver.html#af805e1a813385737032e351efe3d5ca1',1,'mfem::BiCGSTABSolver::r()'],['../classmfem_1_1NewtonSolver.html#aaa9aa65922bbed1807c5a1055db5f42c',1,'mfem::NewtonSolver::r()']]],
+  ['range_5ffes',['range_fes',['../classmfem_1_1ParDiscreteLinearOperator.html#a6b129c89f6a99fa3b2eda950dfcbb38c',1,'mfem::ParDiscreteLinearOperator']]],
+  ['rangetype',['RangeType',['../classmfem_1_1FiniteElement.html#adc093bb9c14248d13b7a526240165823',1,'mfem::FiniteElement']]],
+  ['ref_5fcount',['ref_count',['../structmfem_1_1NCMesh_1_1RefCount.html#a1de0350e2db25695070a235082d7eb0e',1,'mfem::NCMesh::RefCount']]],
+  ['ref_5fstack',['ref_stack',['../classmfem_1_1NCMesh.html#a3cd612c106a884440bbf2ce621fd363c',1,'mfem::NCMesh']]],
+  ['ref_5ftype',['ref_type',['../structmfem_1_1Refinement.html#a3b1564053d2ef6fe71d716cd50b1dea5',1,'mfem::Refinement::ref_type()'],['../structmfem_1_1NCMesh_1_1Element.html#a7607d864c91ea9de54cecd9a2146db2f',1,'mfem::NCMesh::Element::ref_type()'],['../structmfem_1_1NCMesh_1_1RefStackItem.html#a0db8c878e56de28189e7dd8c28b799cc',1,'mfem::NCMesh::RefStackItem::ref_type()']]],
+  ['refdata',['RefData',['../classmfem_1_1FiniteElementSpace.html#a1004fff4ab833bf23e88b4ae8b57152a',1,'mfem::FiniteElementSpace']]],
+  ['refedges',['RefEdges',['../classmfem_1_1RefinedGeometry.html#acd79d35d60905b00ce7add9470b378ad',1,'mfem::RefinedGeometry']]],
+  ['refgeoms',['RefGeoms',['../classmfem_1_1RefinedGeometry.html#a4b2d00bf63fc89732a277670859845fa',1,'mfem::RefinedGeometry']]],
+  ['refinedintrules',['RefinedIntRules',['../namespacemfem.html#a35009a11349e1b78371e7cdb27a29479',1,'mfem']]],
+  ['refinement_5fflag',['refinement_flag',['../classmfem_1_1Tetrahedron.html#a2b24c08d57248501597a43acdcae1811',1,'mfem::Tetrahedron']]],
+  ['refpts',['RefPts',['../classmfem_1_1RefinedGeometry.html#a06d15a8bc8081d6b5e120057e485129f',1,'mfem::RefinedGeometry']]],
+  ['rel_5ftol',['rel_tol',['../classmfem_1_1IterativeSolver.html#a6019f0111d9a660234e05ffa33ca7414',1,'mfem::IterativeSolver']]],
+  ['relax_5ftimes',['relax_times',['../classmfem_1_1HypreSmoother.html#a564eb913e2bc29670029b1fbbb448857',1,'mfem::HypreSmoother']]],
+  ['relax_5fweight',['relax_weight',['../classmfem_1_1HypreSmoother.html#ab1135f294f142b45579dda87cc1b6e42',1,'mfem::HypreSmoother']]],
+  ['root_5felements',['root_elements',['../classmfem_1_1NCMesh.html#aa7d204b53e179939373fd5f2f1102c8d',1,'mfem::NCMesh']]],
+  ['rt_5fdof',['RT_dof',['../classmfem_1_1RT__FECollection.html#a28d15f30cddff695f23027fe99cd3595',1,'mfem::RT_FECollection']]],
+  ['rt_5felements',['RT_Elements',['../classmfem_1_1RT__FECollection.html#a3228f6c28ce960f373b139cd24869fb6',1,'mfem::RT_FECollection']]],
+  ['rt_5fname',['rt_name',['../classmfem_1_1RT__FECollection.html#aa7f0827b6e134796a715f7671d165569',1,'mfem::RT_FECollection']]],
+  ['rtilde',['rtilde',['../classmfem_1_1BiCGSTABSolver.html#a3de9b646633ad27b8e8524026b63485f',1,'mfem::BiCGSTABSolver']]]
+];
