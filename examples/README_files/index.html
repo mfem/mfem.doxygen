@@ -254,17 +254,29 @@ function update(id)
    showElement("nomatch", allHidden);
 }
 
+function initButtons()
+{
+   var query = location.search.substr(1);
+   query.split("&").forEach(function(id)
+   {
+      setChecked(id, true);
+      update(id);
+   });
+}
+
 // make sure "no match" div is not visible after page is loaded
 window.onload = update;
 
 // force vertical scrollbar
 document.getElementsByTagName("body")[0].style = "overflow-y: scroll"
 
+initButtons();
+
 //--></script>
  </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 14:58:51 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 6 2015 10:08:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
