@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Finite element discretization library</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the MFEM library. For more information and source code</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// availability see http://mfem.googlecode.com.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// availability see http://mfem.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// MFEM is free software; you can redistribute it and/or modify it under the</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
@@ -132,10 +133,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a545d5e0ad9a1371f76ef1f1378599d85">   49</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a545d5e0ad9a1371f76ef1f1378599d85">GetNVertices</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 4; }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a2dd3d349069a3875533ac82c76926d99">   51</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a2dd3d349069a3875533ac82c76926d99">GetNEdges</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>(4); }</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a2dd3d349069a3875533ac82c76926d99">   51</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a2dd3d349069a3875533ac82c76926d99">GetNEdges</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (4); }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a74942f3bd1e2fa0fe4358a4cb7991d88">   53</a></span>&#160;   <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classmfem_1_1Quadrilateral.html#a74942f3bd1e2fa0fe4358a4cb7991d88">GetEdgeVertices</a>(<span class="keywordtype">int</span> ei)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">   </span>{ <span class="keywordflow">return</span>(<a class="code" href="classmfem_1_1Quadrilateral.html#a7a4f9831d20fda14729b8237b19cabe6">edges</a>[ei]); }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">   </span>{ <span class="keywordflow">return</span> (<a class="code" href="classmfem_1_1Quadrilateral.html#a7a4f9831d20fda14729b8237b19cabe6">edges</a>[ei]); }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#acb9bc91cf18aefb2b797ddc5e2fd1210">   56</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Quadrilateral.html#acb9bc91cf18aefb2b797ddc5e2fd1210">GetNFaces</a>(<span class="keywordtype">int</span> &amp;nFaceVertices)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">   </span>{ nFaceVertices = 0; <span class="keywordflow">return</span> 0; }</div>
@@ -154,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classmfem_1_1Element_html_aaac293c18ce91216ee202754eed37a78a436c656492d91d8a836913e8c1b8bf68"><div class="ttname"><a href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78a436c656492d91d8a836913e8c1b8bf68">mfem::Element::QUADRILATERAL</a></div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00037">element.hpp:37</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00040">mesh.hpp:40</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00041">mesh.hpp:41</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a5621dc786814e4ae3f0674be87555db3"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a5621dc786814e4ae3f0674be87555db3">mfem::Quadrilateral::GetFaceVertices</a></div><div class="ttdeci">virtual const int * GetFaceVertices(int fi) const </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00059">quadrilateral.hpp:59</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a697586d1370da3f1667051959bc00043"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a697586d1370da3f1667051959bc00043">mfem::Quadrilateral::Duplicate</a></div><div class="ttdeci">virtual Element * Duplicate(Mesh *m) const </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00061">quadrilateral.hpp:61</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_af21f7adbc8402ef41f6b83561747f68f"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#af21f7adbc8402ef41f6b83561747f68f">mfem::Quadrilateral::Quadrilateral</a></div><div class="ttdeci">Quadrilateral()</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00030">quadrilateral.hpp:30</a></div></div>
@@ -164,12 +165,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array&lt; int &gt;</a></div></div>
 <div class="ttc" id="element_8hpp_html"><div class="ttname"><a href="element_8hpp.html">element.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a096053594c99330b720a89aa909d36fd"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a096053594c99330b720a89aa909d36fd">mfem::Quadrilateral::~Quadrilateral</a></div><div class="ttdeci">virtual ~Quadrilateral()</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00064">quadrilateral.hpp:64</a></div></div>
-<div class="ttc" id="classmfem_1_1Quadrilateral_html_a54d7e222c119be71f65a5e613d5d93c3"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">mfem::Quadrilateral::SetVertices</a></div><div class="ttdeci">virtual void SetVertices(const int *ind)</div><div class="ttdoc">Set the vertices according to the given input. </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00038">quadrilateral.cpp:38</a></div></div>
+<div class="ttc" id="classmfem_1_1Quadrilateral_html_a54d7e222c119be71f65a5e613d5d93c3"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">mfem::Quadrilateral::SetVertices</a></div><div class="ttdeci">virtual void SetVertices(const int *ind)</div><div class="ttdoc">Set the vertices according to the given input. </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00041">quadrilateral.cpp:41</a></div></div>
 <div class="ttc" id="classmfem_1_1Element_html_a00df91e5febb7200cd5addc303a52f85"><div class="ttname"><a href="classmfem_1_1Element.html#a00df91e5febb7200cd5addc303a52f85">mfem::Element::attribute</a></div><div class="ttdeci">int attribute</div><div class="ttdoc">Element&amp;#39;s attribute (specifying material property, etc). </div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00032">element.hpp:32</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a839fa9b71dacd18a25f1c3a47d696115"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a839fa9b71dacd18a25f1c3a47d696115">mfem::Quadrilateral::GetType</a></div><div class="ttdeci">int GetType() const </div><div class="ttdoc">Return element&amp;#39;s type. </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00039">quadrilateral.hpp:39</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a713a33b74b99b5d2dac44b070588146f"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a713a33b74b99b5d2dac44b070588146f">mfem::Quadrilateral::GetVertices</a></div><div class="ttdeci">virtual int * GetVertices()</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00047">quadrilateral.hpp:47</a></div></div>
 <div class="ttc" id="classmfem_1_1Geometry_html"><div class="ttname"><a href="classmfem_1_1Geometry.html">mfem::Geometry</a></div><div class="ttdef"><b>Definition:</b> <a href="geom_8hpp_source.html#l00029">geom.hpp:29</a></div></div>
-<div class="ttc" id="namespacemfem_html_a1674870a1b00018223bec88ea7f8e15a"><div class="ttname"><a href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">mfem::QuadrilateralFE</a></div><div class="ttdeci">BiLinear2DFiniteElement QuadrilateralFE</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00049">quadrilateral.cpp:49</a></div></div>
+<div class="ttc" id="namespacemfem_html_a1674870a1b00018223bec88ea7f8e15a"><div class="ttname"><a href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">mfem::QuadrilateralFE</a></div><div class="ttdeci">BiLinear2DFiniteElement QuadrilateralFE</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00058">quadrilateral.cpp:58</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a74942f3bd1e2fa0fe4358a4cb7991d88"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a74942f3bd1e2fa0fe4358a4cb7991d88">mfem::Quadrilateral::GetEdgeVertices</a></div><div class="ttdeci">virtual const int * GetEdgeVertices(int ei) const </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00053">quadrilateral.hpp:53</a></div></div>
 <div class="ttc" id="classmfem_1_1Element_html"><div class="ttname"><a href="classmfem_1_1Element.html">mfem::Element</a></div><div class="ttdoc">Abstract data type element. </div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00027">element.hpp:27</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a7a4f9831d20fda14729b8237b19cabe6"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a7a4f9831d20fda14729b8237b19cabe6">mfem::Quadrilateral::edges</a></div><div class="ttdeci">static const int edges[4][2]</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00026">quadrilateral.hpp:26</a></div></div>
@@ -178,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 15:21:12 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 16 2016 15:49:12 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

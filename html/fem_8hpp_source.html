@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Finite element discretization library</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the MFEM library. For more information and source code</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// availability see http://mfem.googlecode.com.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// availability see http://mfem.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// MFEM is free software; you can redistribute it and/or modify it under the</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
@@ -120,18 +121,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="linearform_8hpp.html">linearform.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nonlinearform_8hpp.html">nonlinearform.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bilinearform_8hpp.html">bilinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="datacollection_8hpp.html">datacollection.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pfespace_8hpp.html">pfespace.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pgridfunc_8hpp.html">pgridfunc.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="plinearform_8hpp.html">plinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pbilinearform_8hpp.html">pbilinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pnonlinearform_8hpp.html">pnonlinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hybridization_8hpp.html">hybridization.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="datacollection_8hpp.html">datacollection.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pfespace_8hpp.html">pfespace.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pgridfunc_8hpp.html">pgridfunc.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="plinearform_8hpp.html">plinearform.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pbilinearform_8hpp.html">pbilinearform.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pnonlinearform_8hpp.html">pnonlinearform.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="pnonlinearform_8hpp_html"><div class="ttname"><a href="pnonlinearform_8hpp.html">pnonlinearform.hpp</a></div></div>
 <div class="ttc" id="lininteg_8hpp_html"><div class="ttname"><a href="lininteg_8hpp.html">lininteg.hpp</a></div></div>
 <div class="ttc" id="fe__coll_8hpp_html"><div class="ttname"><a href="fe__coll_8hpp.html">fe_coll.hpp</a></div></div>
@@ -144,6 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="plinearform_8hpp_html"><div class="ttname"><a href="plinearform_8hpp.html">plinearform.hpp</a></div></div>
 <div class="ttc" id="linearform_8hpp_html"><div class="ttname"><a href="linearform_8hpp.html">linearform.hpp</a></div></div>
 <div class="ttc" id="pbilinearform_8hpp_html"><div class="ttname"><a href="pbilinearform_8hpp.html">pbilinearform.hpp</a></div></div>
+<div class="ttc" id="hybridization_8hpp_html"><div class="ttname"><a href="hybridization_8hpp.html">hybridization.hpp</a></div></div>
 <div class="ttc" id="intrules_8hpp_html"><div class="ttname"><a href="intrules_8hpp.html">intrules.hpp</a></div></div>
 <div class="ttc" id="eltrans_8hpp_html"><div class="ttname"><a href="eltrans_8hpp.html">eltrans.hpp</a></div></div>
 <div class="ttc" id="geom_8hpp_html"><div class="ttname"><a href="geom_8hpp.html">geom.hpp</a></div></div>
@@ -155,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 15:21:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 16 2016 15:49:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

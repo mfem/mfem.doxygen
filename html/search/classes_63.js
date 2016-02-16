@@ -2,6 +2,7 @@ var searchData=
 [
   ['cgsolver',['CGSolver',['../classmfem_1_1CGSolver.html',1,'mfem']]],
   ['coefficient',['Coefficient',['../classmfem_1_1Coefficient.html',1,'mfem']]],
+  ['connection',['Connection',['../structmfem_1_1Connection.html',1,'mfem']]],
   ['const2dfecollection',['Const2DFECollection',['../classmfem_1_1Const2DFECollection.html',1,'mfem']]],
   ['const3dfecollection',['Const3DFECollection',['../classmfem_1_1Const3DFECollection.html',1,'mfem']]],
   ['constantcoefficient',['ConstantCoefficient',['../classmfem_1_1ConstantCoefficient.html',1,'mfem']]],

@@ -3,6 +3,7 @@ var searchData=
   ['table',['Table',['../classmfem_1_1Table.html',1,'mfem']]],
   ['tagdata',['TagData',['../structmfem_1_1MesquiteMesh_1_1MeshTags_1_1TagData.html',1,'mfem::MesquiteMesh::MeshTags']]],
   ['tagiterator',['TagIterator',['../classmfem_1_1MesquiteMesh_1_1MeshTags_1_1TagIterator.html',1,'mfem::MesquiteMesh::MeshTags']]],
+  ['teslasolver',['TeslaSolver',['../classmfem_1_1electromagnetics_1_1TeslaSolver.html',1,'mfem::electromagnetics']]],
   ['tetrahedron',['Tetrahedron',['../classmfem_1_1Tetrahedron.html',1,'mfem']]],
   ['timedependentoperator',['TimeDependentOperator',['../classmfem_1_1TimeDependentOperator.html',1,'mfem']]],
   ['tracejumpintegrator',['TraceJumpIntegrator',['../classmfem_1_1TraceJumpIntegrator.html',1,'mfem']]],

@@ -8,6 +8,7 @@ var searchData=
   ['gaussquadraticdiscont2dfecollection',['GaussQuadraticDiscont2DFECollection',['../classmfem_1_1GaussQuadraticDiscont2DFECollection.html',1,'mfem']]],
   ['geometry',['Geometry',['../classmfem_1_1Geometry.html',1,'mfem']]],
   ['geometryrefiner',['GeometryRefiner',['../classmfem_1_1GeometryRefiner.html',1,'mfem']]],
+  ['geominfo',['GeomInfo',['../structmfem_1_1NCMesh_1_1GeomInfo.html',1,'mfem::NCMesh']]],
   ['gmressolver',['GMRESSolver',['../classmfem_1_1GMRESSolver.html',1,'mfem']]],
   ['gradientinterpolator',['GradientInterpolator',['../classmfem_1_1GradientInterpolator.html',1,'mfem']]],
   ['gridfunction',['GridFunction',['../classmfem_1_1GridFunction.html',1,'mfem']]],

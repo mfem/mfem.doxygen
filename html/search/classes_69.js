@@ -11,6 +11,7 @@ var searchData=
   ['integrationrules',['IntegrationRules',['../classmfem_1_1IntegrationRules.html',1,'mfem']]],
   ['inverseharmonicmodel',['InverseHarmonicModel',['../classmfem_1_1InverseHarmonicModel.html',1,'mfem']]],
   ['inverseintegrator',['InverseIntegrator',['../classmfem_1_1InverseIntegrator.html',1,'mfem']]],
+  ['irrotationalprojector',['IrrotationalProjector',['../classmfem_1_1miniapps_1_1IrrotationalProjector.html',1,'mfem::miniapps']]],
   ['isockstream',['isockstream',['../classmfem_1_1isockstream.html',1,'mfem']]],
   ['isoparametrictransformation',['IsoparametricTransformation',['../classmfem_1_1IsoparametricTransformation.html',1,'mfem']]],
   ['iterativesolver',['IterativeSolver',['../classmfem_1_1IterativeSolver.html',1,'mfem']]],

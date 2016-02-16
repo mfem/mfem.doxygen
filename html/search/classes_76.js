@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['varmessage',['VarMessage',['../structmfem_1_1VarMessage.html',1,'mfem']]],
+  ['varmessage_3c_20135_20_3e',['VarMessage&lt; 135 &gt;',['../structmfem_1_1VarMessage.html',1,'mfem']]],
+  ['varmessage_3c_20289_20_3e',['VarMessage&lt; 289 &gt;',['../structmfem_1_1VarMessage.html',1,'mfem']]],
+  ['varmessage_3c_20312_20_3e',['VarMessage&lt; 312 &gt;',['../structmfem_1_1VarMessage.html',1,'mfem']]],
+  ['varmessage_3c_20313_20_3e',['VarMessage&lt; 313 &gt;',['../structmfem_1_1VarMessage.html',1,'mfem']]],
   ['vector',['Vector',['../classmfem_1_1Vector.html',1,'mfem']]],
   ['vectorarraycoefficient',['VectorArrayCoefficient',['../classmfem_1_1VectorArrayCoefficient.html',1,'mfem']]],
   ['vectorboundaryfluxlfintegrator',['VectorBoundaryFluxLFIntegrator',['../classmfem_1_1VectorBoundaryFluxLFIntegrator.html',1,'mfem']]],
@@ -21,8 +26,9 @@ var searchData=
   ['vectorgridfunctioncoefficient',['VectorGridFunctionCoefficient',['../classmfem_1_1VectorGridFunctionCoefficient.html',1,'mfem']]],
   ['vectormassintegrator',['VectorMassIntegrator',['../classmfem_1_1VectorMassIntegrator.html',1,'mfem']]],
   ['vectorrestrictedcoefficient',['VectorRestrictedCoefficient',['../classmfem_1_1VectorRestrictedCoefficient.html',1,'mfem']]],
-  ['vertex',['Vertex',['../structmfem_1_1NCMesh_1_1Vertex.html',1,'mfem::NCMesh']]],
   ['vertex',['Vertex',['../classmfem_1_1Vertex.html',1,'mfem']]],
+  ['vertex',['Vertex',['../structmfem_1_1NCMesh_1_1Vertex.html',1,'mfem::NCMesh']]],
   ['visitdatacollection',['VisItDataCollection',['../classmfem_1_1VisItDataCollection.html',1,'mfem']]],
-  ['visitfieldinfo',['VisItFieldInfo',['../classmfem_1_1VisItFieldInfo.html',1,'mfem']]]
+  ['visitfieldinfo',['VisItFieldInfo',['../classmfem_1_1VisItFieldInfo.html',1,'mfem']]],
+  ['voltasolver',['VoltaSolver',['../classmfem_1_1electromagnetics_1_1VoltaSolver.html',1,'mfem::electromagnetics']]]
 ];

@@ -2,7 +2,7 @@ var searchData=
 [
   ['face',['Face',['../structmfem_1_1NCMesh_1_1Face.html',1,'mfem::NCMesh']]],
   ['faceelementtransformations',['FaceElementTransformations',['../classmfem_1_1FaceElementTransformations.html',1,'mfem']]],
-  ['faceinfo',['FaceInfo',['../classmfem_1_1Mesh_1_1FaceInfo.html',1,'mfem::Mesh']]],
+  ['faceinfo',['FaceInfo',['../structmfem_1_1Mesh_1_1FaceInfo.html',1,'mfem::Mesh']]],
   ['fgmressolver',['FGMRESSolver',['../classmfem_1_1FGMRESSolver.html',1,'mfem']]],
   ['finetransform',['FineTransform',['../structmfem_1_1NCMesh_1_1FineTransform.html',1,'mfem::NCMesh']]],
   ['finiteelement',['FiniteElement',['../classmfem_1_1FiniteElement.html',1,'mfem']]],

@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Finite element discretization library</div>
   </td>
  </tr>
  </tbody>
@@ -114,6 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a68afc0275eb9a41e34eb2e7f68ca13f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d8415910e68d576798a029f8ae88bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1DiscreteLinearOperator.html#a2d8415910e68d576798a029f8ae88bc1">AddDomainInterpolator</a> (<a class="el" href="classmfem_1_1DiscreteInterpolator.html">DiscreteInterpolator</a> *di)</td></tr>
 <tr class="separator:a2d8415910e68d576798a029f8ae88bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431843f8042ee5f911116551812c4372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1DiscreteLinearOperator.html#a431843f8042ee5f911116551812c4372">AddTraceFaceInterpolator</a> (<a class="el" href="classmfem_1_1DiscreteInterpolator.html">DiscreteInterpolator</a> *di)</td></tr>
+<tr class="separator:a431843f8042ee5f911116551812c4372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a821c2e99bc1587f60a26efc60cfa8301"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1DiscreteLinearOperator.html#a821c2e99bc1587f60a26efc60cfa8301">GetDI</a> ()</td></tr>
 <tr class="separator:a821c2e99bc1587f60a26efc60cfa8301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4774e7d3634338562a034fc0bda7ad1b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1DiscreteLinearOperator.html#a4774e7d3634338562a034fc0bda7ad1b">Assemble</a> (int skip_zeros=1)</td></tr>
@@ -249,7 +252,7 @@ Additional Inherited Members</h2></td></tr>
 <p>where M denotes the mass matrix for the inner product in the range space: V1^t M V2 = (v1,v2). Similarly, if c(u,w) := (Lu,Lw) then</p>
 <p>C = A^t M A. </p>
 
-<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00337">337</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00407">407</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a68afc0275eb9a41e34eb2e7f68ca13f5"></a>
 <div class="memitem">
@@ -283,7 +286,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00340">340</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00410">410</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +313,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00344">344</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00414">414</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a431843f8042ee5f911116551812c4372"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::DiscreteLinearOperator::AddTraceFaceInterpolator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1DiscreteInterpolator.html">DiscreteInterpolator</a> *&#160;</td>
+          <td class="paramname"><em>di</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00417">417</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +365,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilinearform_8cpp_source.html#l00731">731</a> of file <a class="el" href="bilinearform_8cpp_source.html">bilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform_8cpp_source.html#l01025">1025</a> of file <a class="el" href="bilinearform_8cpp_source.html">bilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -361,7 +390,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00347">347</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform_8hpp_source.html#l00420">420</a> of file <a class="el" href="bilinearform_8hpp_source.html">bilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -372,7 +401,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 15:21:13 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 16 2016 15:49:13 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

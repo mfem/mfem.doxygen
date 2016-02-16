@@ -8,5 +8,6 @@ var searchData=
   ['leaf_5felements',['leaf_elements',['../classmfem_1_1NCMesh.html#a240354c7120e9ac7c68e4275a87c676d',1,'mfem::NCMesh']]],
   ['lo',['lo',['../classmfem_1_1SLBQPOptimizer.html#ac4c82a17f9f635ae34ae84b998e1cabb',1,'mfem::SLBQPOptimizer']]],
   ['loc1',['Loc1',['../classmfem_1_1FaceElementTransformations.html#a58930273cc132a70cfc9ae53c51dcc57',1,'mfem::FaceElementTransformations']]],
-  ['loc2',['Loc2',['../classmfem_1_1FaceElementTransformations.html#ac7b1dcce22e1c2bb4509713254db85c9',1,'mfem::FaceElementTransformations']]]
+  ['loc2',['Loc2',['../classmfem_1_1FaceElementTransformations.html#ac7b1dcce22e1c2bb4509713254db85c9',1,'mfem::FaceElementTransformations']]],
+  ['local',['local',['../structmfem_1_1NCMesh_1_1MeshId.html#aa32f075c4f9789da9fd5ab23a06bbacd',1,'mfem::NCMesh::MeshId']]]
 ];

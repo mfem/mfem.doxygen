@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['bar_5fmagnet',['bar_magnet',['../tesla_8cpp.html#a52de95c7668c61358a06ca346d753068',1,'tesla.cpp']]],
   ['basearray',['BaseArray',['../classmfem_1_1BaseArray.html#a2bde7f6805bae97e4752018e000257eb',1,'mfem::BaseArray::BaseArray()'],['../classmfem_1_1BaseArray.html#aca8bdab63fd6310afe5a52e50088ac79',1,'mfem::BaseArray::BaseArray(int asize, int ainc, int elmentsize)']]],
   ['basis',['Basis',['../classmfem_1_1Poly__1D_1_1Basis.html#aa4474216087b48e6f58a3390d683003e',1,'mfem::Poly_1D::Basis']]],
   ['bcast',['Bcast',['../classmfem_1_1GroupCommunicator.html#aabf402c66e41eebc0b4a89ce63947aab',1,'mfem::GroupCommunicator::Bcast(T *ldata)'],['../classmfem_1_1GroupCommunicator.html#a9a7da4f172cef0d960124d34cf66036d',1,'mfem::GroupCommunicator::Bcast(Array&lt; T &gt; &amp;ldata)']]],
@@ -17,11 +18,18 @@ var searchData=
   ['bisecttettrans',['BisectTetTrans',['../classmfem_1_1Mesh.html#aba90a76b43a3fc260847c905e9733a06',1,'mfem::Mesh']]],
   ['bisecttritrans',['BisectTriTrans',['../classmfem_1_1Mesh.html#a950e504d3495d5ce7ddd3cf13000a8f2',1,'mfem::Mesh']]],
   ['bitor',['BitOR',['../classmfem_1_1GroupCommunicator.html#aa880a2647cd691f9c3e99e0334f92475',1,'mfem::GroupCommunicator']]],
+  ['blockbacksolve',['BlockBackSolve',['../classmfem_1_1LUFactors.html#aae447455bb8e40509f3529bb2624470c',1,'mfem::LUFactors']]],
   ['blockdiagonalpreconditioner',['BlockDiagonalPreconditioner',['../classmfem_1_1BlockDiagonalPreconditioner.html#aba38ca75563b6cf507830447cd79fdd4',1,'mfem::BlockDiagonalPreconditioner']]],
+  ['blockfactor',['BlockFactor',['../classmfem_1_1LUFactors.html#a60be139fd8e83bd5d2d10ced2cd7f3fc',1,'mfem::LUFactors']]],
+  ['blockforwsolve',['BlockForwSolve',['../classmfem_1_1LUFactors.html#a4cdaa56290e658aecb5d97e435ae1fe8',1,'mfem::LUFactors']]],
   ['blockmatrix',['BlockMatrix',['../classmfem_1_1BlockMatrix.html#a50647c7ba4361fb1696e8e0258aa57ba',1,'mfem::BlockMatrix::BlockMatrix(const Array&lt; int &gt; &amp;offsets)'],['../classmfem_1_1BlockMatrix.html#ab81f999901cdb0da20d6fe99f47e80f3',1,'mfem::BlockMatrix::BlockMatrix(const Array&lt; int &gt; &amp;row_offsets, const Array&lt; int &gt; &amp;col_offsets)']]],
   ['blockoperator',['BlockOperator',['../classmfem_1_1BlockOperator.html#a6165ca45ae931df5c347a39e11684393',1,'mfem::BlockOperator::BlockOperator(const Array&lt; int &gt; &amp;offsets)'],['../classmfem_1_1BlockOperator.html#a062595bfb3f239063069540a3451cf80',1,'mfem::BlockOperator::BlockOperator(const Array&lt; int &gt; &amp;row_offsets, const Array&lt; int &gt; &amp;col_offsets)']]],
   ['blocksize',['BlockSize',['../classmfem_1_1BlockVector.html#a1130d5e50e780e66432aabb0f933b0b0',1,'mfem::BlockVector']]],
   ['blockvector',['BlockVector',['../classmfem_1_1BlockVector.html#afa6397cd0e6f6b479dd65df2cb141878',1,'mfem::BlockVector::BlockVector()'],['../classmfem_1_1BlockVector.html#a0219a2990b2d2fd0bbe7e3905f518098',1,'mfem::BlockVector::BlockVector(const Array&lt; int &gt; &amp;bOffsets)'],['../classmfem_1_1BlockVector.html#a955e73d9857edfeb4fc5581237d370b1',1,'mfem::BlockVector::BlockVector(const BlockVector &amp;block)'],['../classmfem_1_1BlockVector.html#af256cbc5c8dbf29b60723de64db3a69b',1,'mfem::BlockVector::BlockVector(double *data, const Array&lt; int &gt; &amp;bOffsets)']]],
+  ['booleanmult',['BooleanMult',['../classmfem_1_1HypreParMatrix.html#a97ad0dafb5033ce0d56db98a16ff611e',1,'mfem::HypreParMatrix::BooleanMult()'],['../classmfem_1_1SparseMatrix.html#a99724aab275ea04d9102024d861f20e1',1,'mfem::SparseMatrix::BooleanMult()']]],
+  ['booleanmulttranspose',['BooleanMultTranspose',['../classmfem_1_1SparseMatrix.html#aeb9a767bf23b63bdc7524a1d45e48c79',1,'mfem::SparseMatrix']]],
+  ['bottle2_5ftrans',['bottle2_trans',['../klein-bottle_8cpp.html#ad86e67aafd1d2d78ac6db8bcdea51644',1,'klein-bottle.cpp']]],
+  ['bottle_5ftrans',['bottle_trans',['../klein-bottle_8cpp.html#a7d5238ca2e2e7d8b7587e41997514380',1,'klein-bottle.cpp']]],
   ['boundary',['Boundary',['../structmfem_1_1NCMesh_1_1Edge.html#adfe1112bfc1363b64320f484ec2171b9',1,'mfem::NCMesh::Edge::Boundary()'],['../structmfem_1_1NCMesh_1_1Face.html#ac617ad0add1cc5dc349515ddc4647680',1,'mfem::NCMesh::Face::Boundary()']]],
   ['boundaryflowintegrator',['BoundaryFlowIntegrator',['../classmfem_1_1BoundaryFlowIntegrator.html#a48799fc22443edef3365087ff7f67036',1,'mfem::BoundaryFlowIntegrator']]],
   ['boundarylfintegrator',['BoundaryLFIntegrator',['../classmfem_1_1BoundaryLFIntegrator.html#a8f0e3ac519727c9b6d5c56c7504d5161',1,'mfem::BoundaryLFIntegrator']]],
@@ -29,5 +37,9 @@ var searchData=
   ['boundarynormallfintegrator',['BoundaryNormalLFIntegrator',['../classmfem_1_1BoundaryNormalLFIntegrator.html#a379af5ef6463e347d3dba0e809f3251f',1,'mfem::BoundaryNormalLFIntegrator']]],
   ['boundarytangentiallfintegrator',['BoundaryTangentialLFIntegrator',['../classmfem_1_1BoundaryTangentialLFIntegrator.html#a6a8e499e61d3f2c25ed53a7f74636453',1,'mfem::BoundaryTangentialLFIntegrator']]],
   ['builddoftoarrays',['BuildDofToArrays',['../classmfem_1_1FiniteElementSpace.html#a6fdcc5b76eeba6c034d58a014427420c',1,'mfem::FiniteElementSpace']]],
-  ['buildelementtodoftable',['BuildElementToDofTable',['../classmfem_1_1FiniteElementSpace.html#aa4bdc98c53f9f0bb7fb5f68fa0c12612',1,'mfem::FiniteElementSpace']]]
+  ['buildedgelist',['BuildEdgeList',['../classmfem_1_1NCMesh.html#a9c479270fa12d2b9f9aeb38bcbb27e64',1,'mfem::NCMesh::BuildEdgeList()'],['../classmfem_1_1ParNCMesh.html#a1dd0a5330a044d6782797a3bc2e44c0f',1,'mfem::ParNCMesh::BuildEdgeList()']]],
+  ['buildelementtodoftable',['BuildElementToDofTable',['../classmfem_1_1FiniteElementSpace.html#aa4bdc98c53f9f0bb7fb5f68fa0c12612',1,'mfem::FiniteElementSpace']]],
+  ['buildelementtovertextable',['BuildElementToVertexTable',['../classmfem_1_1NCMesh.html#a365c960ba9c3554188c8f67a720ea0ac',1,'mfem::NCMesh']]],
+  ['buildfacelist',['BuildFaceList',['../classmfem_1_1NCMesh.html#a63bb269853d5f9aa5312d2629f25d0c4',1,'mfem::NCMesh::BuildFaceList()'],['../classmfem_1_1ParNCMesh.html#af0ad12947763aff56ec56006fc3cef68',1,'mfem::ParNCMesh::BuildFaceList()']]],
+  ['buildsharedvertices',['BuildSharedVertices',['../classmfem_1_1ParNCMesh.html#acaebe66b958fdac87d8f3126fe5e162f',1,'mfem::ParNCMesh']]]
 ];

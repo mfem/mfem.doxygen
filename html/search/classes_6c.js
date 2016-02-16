@@ -2,6 +2,7 @@ var searchData=
 [
   ['l2_5ffecollection',['L2_FECollection',['../classmfem_1_1L2__FECollection.html',1,'mfem']]],
   ['l2_5fhexahedronelement',['L2_HexahedronElement',['../classmfem_1_1L2__HexahedronElement.html',1,'mfem']]],
+  ['l2_5fparfespace',['L2_ParFESpace',['../classmfem_1_1miniapps_1_1L2__ParFESpace.html',1,'mfem::miniapps']]],
   ['l2_5fquadrilateralelement',['L2_QuadrilateralElement',['../classmfem_1_1L2__QuadrilateralElement.html',1,'mfem']]],
   ['l2_5fsegmentelement',['L2_SegmentElement',['../classmfem_1_1L2__SegmentElement.html',1,'mfem']]],
   ['l2_5ftetrahedronelement',['L2_TetrahedronElement',['../classmfem_1_1L2__TetrahedronElement.html',1,'mfem']]],
@@ -24,5 +25,6 @@ var searchData=
   ['linearnonconf3dfecollection',['LinearNonConf3DFECollection',['../classmfem_1_1LinearNonConf3DFECollection.html',1,'mfem']]],
   ['listofintegersets',['ListOfIntegerSets',['../classmfem_1_1ListOfIntegerSets.html',1,'mfem']]],
   ['local_5ffecollection',['Local_FECollection',['../classmfem_1_1Local__FECollection.html',1,'mfem']]],
+  ['lufactors',['LUFactors',['../classmfem_1_1LUFactors.html',1,'mfem']]],
   ['lumpedintegrator',['LumpedIntegrator',['../classmfem_1_1LumpedIntegrator.html',1,'mfem']]]
 ];

@@ -4,6 +4,7 @@ var searchData=
   ['sdirk33solver',['SDIRK33Solver',['../classmfem_1_1SDIRK33Solver.html',1,'mfem']]],
   ['sdirk34solver',['SDIRK34Solver',['../classmfem_1_1SDIRK34Solver.html',1,'mfem']]],
   ['segment',['Segment',['../classmfem_1_1Segment.html',1,'mfem']]],
+  ['slave',['Slave',['../structmfem_1_1NCMesh_1_1Slave.html',1,'mfem::NCMesh']]],
   ['slbqpoptimizer',['SLBQPOptimizer',['../classmfem_1_1SLBQPOptimizer.html',1,'mfem']]],
   ['slisolver',['SLISolver',['../classmfem_1_1SLISolver.html',1,'mfem']]],
   ['socketbuf',['socketbuf',['../classmfem_1_1socketbuf.html',1,'mfem']]],
@@ -27,6 +28,8 @@ var searchData=
   ['stackpart_3c_20mfem_3a_3astable3dnode_20_2a_2c_20num_20_3e',['StackPart&lt; mfem::STable3DNode *, Num &gt;',['../classmfem_1_1StackPart.html',1,'mfem']]],
   ['stackpart_3c_20mfem_3a_3atetrahedron_20_2a_2c_20num_20_3e',['StackPart&lt; mfem::Tetrahedron *, Num &gt;',['../classmfem_1_1StackPart.html',1,'mfem']]],
   ['stackpart_3c_20node_20_2a_2c_20num_20_3e',['StackPart&lt; Node *, Num &gt;',['../classmfem_1_1StackPart.html',1,'mfem']]],
+  ['staticcondensation',['StaticCondensation',['../classmfem_1_1StaticCondensation.html',1,'mfem']]],
   ['stopwatch',['StopWatch',['../classmfem_1_1StopWatch.html',1,'mfem']]],
-  ['sumintegrator',['SumIntegrator',['../classmfem_1_1SumIntegrator.html',1,'mfem']]]
+  ['sumintegrator',['SumIntegrator',['../classmfem_1_1SumIntegrator.html',1,'mfem']]],
+  ['surfacecurrent',['SurfaceCurrent',['../classmfem_1_1electromagnetics_1_1SurfaceCurrent.html',1,'mfem::electromagnetics']]]
 ];

@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Finite element discretization library</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the MFEM library. For more information and source code</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// availability see http://mfem.googlecode.com.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// availability see http://mfem.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// MFEM is free software; you can redistribute it and/or modify it under the</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
@@ -113,49 +114,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   <a class="code" href="classmfem_1_1Element.html#a00df91e5febb7200cd5addc303a52f85">attribute</a> = attr;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;4; i++)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[i] = ind[i];</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a2ecb7149a87d42410ef42d51c640923f">   29</a></span>&#160;<a class="code" href="classmfem_1_1Quadrilateral.html#af21f7adbc8402ef41f6b83561747f68f">Quadrilateral::Quadrilateral</a>( <span class="keywordtype">int</span> ind1, <span class="keywordtype">int</span> ind2, <span class="keywordtype">int</span> ind3, <span class="keywordtype">int</span> ind4,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                              <span class="keywordtype">int</span> attr ) : <a class="code" href="classmfem_1_1Element.html">Element</a>(<a class="code" href="classmfem_1_1Geometry.html">Geometry</a>::SQUARE) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <a class="code" href="classmfem_1_1Element.html#a00df91e5febb7200cd5addc303a52f85">attribute</a>  = attr;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[0] = ind1;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[1] = ind2;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[2] = ind3;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[3] = ind4;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">Quadrilateral::SetVertices</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> *ind){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;4; i++)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[i] = ind[i];</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#af9d8484609bf40db410a07576ce052c2">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a713a33b74b99b5d2dac44b070588146f">Quadrilateral::GetVertices</a>( <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;v )<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   v.<a class="code" href="classmfem_1_1Array.html#a566edbabee3d4f0d7ce15cbc638021ca">SetSize</a>( 4 );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;4; i++)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      v[i] = <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[i];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[i] = ind[i];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a2ecb7149a87d42410ef42d51c640923f">   31</a></span>&#160;<a class="code" href="classmfem_1_1Quadrilateral.html#af21f7adbc8402ef41f6b83561747f68f">Quadrilateral::Quadrilateral</a>( <span class="keywordtype">int</span> ind1, <span class="keywordtype">int</span> ind2, <span class="keywordtype">int</span> ind3, <span class="keywordtype">int</span> ind4,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                              <span class="keywordtype">int</span> attr ) : <a class="code" href="classmfem_1_1Element.html">Element</a>(<a class="code" href="classmfem_1_1Geometry.html">Geometry</a>::SQUARE)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <a class="code" href="classmfem_1_1Element.html#a00df91e5febb7200cd5addc303a52f85">attribute</a>  = attr;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[0] = ind1;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[1] = ind2;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[2] = ind3;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[3] = ind4;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">Quadrilateral::SetVertices</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> *ind)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;4; i++)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[i] = ind[i];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">   49</a></span>&#160;<a class="code" href="classmfem_1_1BiLinear2DFiniteElement.html">BiLinear2DFiniteElement</a> <a class="code" href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">QuadrilateralFE</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmfem_1_1Quadrilateral.html#af9d8484609bf40db410a07576ce052c2">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Quadrilateral.html#a713a33b74b99b5d2dac44b070588146f">Quadrilateral::GetVertices</a>( <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;v )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   v.<a class="code" href="classmfem_1_1Array.html#a566edbabee3d4f0d7ce15cbc638021ca">SetSize</a>( 4 );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;4; i++)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      v[i] = <a class="code" href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">indices</a>[i];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">   58</a></span>&#160;<a class="code" href="classmfem_1_1BiLinear2DFiniteElement.html">BiLinear2DFiniteElement</a> <a class="code" href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">QuadrilateralFE</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_af21f7adbc8402ef41f6b83561747f68f"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#af21f7adbc8402ef41f6b83561747f68f">mfem::Quadrilateral::Quadrilateral</a></div><div class="ttdeci">Quadrilateral()</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00030">quadrilateral.hpp:30</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_aa4c1e0651a2ab424bab9d0e777dda31d"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#aa4c1e0651a2ab424bab9d0e777dda31d">mfem::Quadrilateral::indices</a></div><div class="ttdeci">int indices[4]</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00025">quadrilateral.hpp:25</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array&lt; int &gt;</a></div></div>
 <div class="ttc" id="mesh__headers_8hpp_html"><div class="ttname"><a href="mesh__headers_8hpp.html">mesh_headers.hpp</a></div></div>
-<div class="ttc" id="classmfem_1_1Quadrilateral_html_a54d7e222c119be71f65a5e613d5d93c3"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">mfem::Quadrilateral::SetVertices</a></div><div class="ttdeci">virtual void SetVertices(const int *ind)</div><div class="ttdoc">Set the vertices according to the given input. </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00038">quadrilateral.cpp:38</a></div></div>
+<div class="ttc" id="classmfem_1_1Quadrilateral_html_a54d7e222c119be71f65a5e613d5d93c3"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a54d7e222c119be71f65a5e613d5d93c3">mfem::Quadrilateral::SetVertices</a></div><div class="ttdeci">virtual void SetVertices(const int *ind)</div><div class="ttdoc">Set the vertices according to the given input. </div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00041">quadrilateral.cpp:41</a></div></div>
 <div class="ttc" id="classmfem_1_1Element_html_a00df91e5febb7200cd5addc303a52f85"><div class="ttname"><a href="classmfem_1_1Element.html#a00df91e5febb7200cd5addc303a52f85">mfem::Element::attribute</a></div><div class="ttdeci">int attribute</div><div class="ttdoc">Element&amp;#39;s attribute (specifying material property, etc). </div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00032">element.hpp:32</a></div></div>
-<div class="ttc" id="classmfem_1_1Array_html_a566edbabee3d4f0d7ce15cbc638021ca"><div class="ttname"><a href="classmfem_1_1Array.html#a566edbabee3d4f0d7ce15cbc638021ca">mfem::Array::SetSize</a></div><div class="ttdeci">void SetSize(int nsize)</div><div class="ttdoc">Change logical size of the array, keep existing entries. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00293">array.hpp:293</a></div></div>
-<div class="ttc" id="classmfem_1_1BiLinear2DFiniteElement_html"><div class="ttname"><a href="classmfem_1_1BiLinear2DFiniteElement.html">mfem::BiLinear2DFiniteElement</a></div><div class="ttdoc">Class for bilinear FE on quadrilateral. </div><div class="ttdef"><b>Definition:</b> <a href="fe_8hpp_source.html#l00384">fe.hpp:384</a></div></div>
+<div class="ttc" id="classmfem_1_1Array_html_a566edbabee3d4f0d7ce15cbc638021ca"><div class="ttname"><a href="classmfem_1_1Array.html#a566edbabee3d4f0d7ce15cbc638021ca">mfem::Array::SetSize</a></div><div class="ttdeci">void SetSize(int nsize)</div><div class="ttdoc">Change logical size of the array, keep existing entries. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00323">array.hpp:323</a></div></div>
+<div class="ttc" id="classmfem_1_1BiLinear2DFiniteElement_html"><div class="ttname"><a href="classmfem_1_1BiLinear2DFiniteElement.html">mfem::BiLinear2DFiniteElement</a></div><div class="ttdoc">Class for bilinear FE on quadrilateral. </div><div class="ttdef"><b>Definition:</b> <a href="fe_8hpp_source.html#l00396">fe.hpp:396</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a713a33b74b99b5d2dac44b070588146f"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a713a33b74b99b5d2dac44b070588146f">mfem::Quadrilateral::GetVertices</a></div><div class="ttdeci">virtual int * GetVertices()</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00047">quadrilateral.hpp:47</a></div></div>
 <div class="ttc" id="classmfem_1_1Geometry_html"><div class="ttname"><a href="classmfem_1_1Geometry.html">mfem::Geometry</a></div><div class="ttdef"><b>Definition:</b> <a href="geom_8hpp_source.html#l00029">geom.hpp:29</a></div></div>
-<div class="ttc" id="namespacemfem_html_a1674870a1b00018223bec88ea7f8e15a"><div class="ttname"><a href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">mfem::QuadrilateralFE</a></div><div class="ttdeci">BiLinear2DFiniteElement QuadrilateralFE</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00049">quadrilateral.cpp:49</a></div></div>
+<div class="ttc" id="namespacemfem_html_a1674870a1b00018223bec88ea7f8e15a"><div class="ttname"><a href="namespacemfem.html#a1674870a1b00018223bec88ea7f8e15a">mfem::QuadrilateralFE</a></div><div class="ttdeci">BiLinear2DFiniteElement QuadrilateralFE</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8cpp_source.html#l00058">quadrilateral.cpp:58</a></div></div>
 <div class="ttc" id="classmfem_1_1Element_html"><div class="ttname"><a href="classmfem_1_1Element.html">mfem::Element</a></div><div class="ttdoc">Abstract data type element. </div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00027">element.hpp:27</a></div></div>
 <div class="ttc" id="classmfem_1_1Quadrilateral_html_a7a4f9831d20fda14729b8237b19cabe6"><div class="ttname"><a href="classmfem_1_1Quadrilateral.html#a7a4f9831d20fda14729b8237b19cabe6">mfem::Quadrilateral::edges</a></div><div class="ttdeci">static const int edges[4][2]</div><div class="ttdef"><b>Definition:</b> <a href="quadrilateral_8hpp_source.html#l00026">quadrilateral.hpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 15:21:12 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 16 2016 15:49:12 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

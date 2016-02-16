@@ -17,5 +17,7 @@ var searchData=
   ['bfbfi',['bfbfi',['../classmfem_1_1BilinearForm.html#aaf721e489eceb0aee46c943a611503f7',1,'mfem::BilinearForm']]],
   ['blockoffsets',['blockOffsets',['../classmfem_1_1BlockVector.html#a592280793b82a2ea892a1941a14d3159',1,'mfem::BlockVector']]],
   ['boundary',['boundary',['../classmfem_1_1Mesh.html#ac9063d444be89252ed9479011d01fa08',1,'mfem::Mesh']]],
+  ['boundary_5fedges',['boundary_edges',['../classmfem_1_1NCMesh.html#a53b9fb76922d0b11637d6622e8194c31',1,'mfem::NCMesh']]],
+  ['boundary_5ffaces',['boundary_faces',['../classmfem_1_1NCMesh.html#aa975185bf69e1ce48f1101227d085a31',1,'mfem::NCMesh']]],
   ['buf',['buf',['../structmfem_1_1GroupCommunicator_1_1OpData.html#a4efbdd0171def83bb0ac1233437c9391',1,'mfem::GroupCommunicator::OpData']]]
 ];

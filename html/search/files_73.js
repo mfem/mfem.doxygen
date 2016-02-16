@@ -15,5 +15,7 @@ var searchData=
   ['sparsesmoothers_2ecpp',['sparsesmoothers.cpp',['../sparsesmoothers_8cpp.html',1,'']]],
   ['sparsesmoothers_2ehpp',['sparsesmoothers.hpp',['../sparsesmoothers_8hpp.html',1,'']]],
   ['stable3d_2ecpp',['stable3d.cpp',['../stable3d_8cpp.html',1,'']]],
-  ['stable3d_2ehpp',['stable3d.hpp',['../stable3d_8hpp.html',1,'']]]
+  ['stable3d_2ehpp',['stable3d.hpp',['../stable3d_8hpp.html',1,'']]],
+  ['staticcond_2ecpp',['staticcond.cpp',['../staticcond_8cpp.html',1,'']]],
+  ['staticcond_2ehpp',['staticcond.hpp',['../staticcond_8hpp.html',1,'']]]
 ];
