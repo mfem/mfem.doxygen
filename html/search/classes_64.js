@@ -11,8 +11,13 @@ var searchData=
   ['dg_5finterface_5ffecollection',['DG_Interface_FECollection',['../classmfem_1_1DG__Interface__FECollection.html',1,'mfem']]],
   ['dgdiffusionintegrator',['DGDiffusionIntegrator',['../classmfem_1_1DGDiffusionIntegrator.html',1,'mfem']]],
   ['dgdirichletlfintegrator',['DGDirichletLFIntegrator',['../classmfem_1_1DGDirichletLFIntegrator.html',1,'mfem']]],
+  ['dgindexer',['DGIndexer',['../classmfem_1_1DGIndexer.html',1,'mfem']]],
   ['dgtraceintegrator',['DGTraceIntegrator',['../classmfem_1_1DGTraceIntegrator.html',1,'mfem']]],
   ['diffusionintegrator',['DiffusionIntegrator',['../classmfem_1_1DiffusionIntegrator.html',1,'mfem']]],
+  ['dim',['Dim',['../structmfem_1_1TFunctionCoefficient_1_1Dim.html',1,'mfem::TFunctionCoefficient']]],
+  ['dim_3c_201_2c_20dummy_20_3e',['Dim&lt; 1, dummy &gt;',['../structmfem_1_1TFunctionCoefficient_1_1Dim_3_011_00_01dummy_01_4.html',1,'mfem::TFunctionCoefficient']]],
+  ['dim_3c_202_2c_20dummy_20_3e',['Dim&lt; 2, dummy &gt;',['../structmfem_1_1TFunctionCoefficient_1_1Dim_3_012_00_01dummy_01_4.html',1,'mfem::TFunctionCoefficient']]],
+  ['dim_3c_203_2c_20dummy_20_3e',['Dim&lt; 3, dummy &gt;',['../structmfem_1_1TFunctionCoefficient_1_1Dim_3_013_00_01dummy_01_4.html',1,'mfem::TFunctionCoefficient']]],
   ['discreteinterpolator',['DiscreteInterpolator',['../classmfem_1_1DiscreteInterpolator.html',1,'mfem']]],
   ['discretelinearoperator',['DiscreteLinearOperator',['../classmfem_1_1DiscreteLinearOperator.html',1,'mfem']]],
   ['divdivintegrator',['DivDivIntegrator',['../classmfem_1_1DivDivIntegrator.html',1,'mfem']]],
@@ -20,5 +25,6 @@ var searchData=
   ['divergenceinterpolator',['DivergenceInterpolator',['../classmfem_1_1DivergenceInterpolator.html',1,'mfem']]],
   ['domainlfintegrator',['DomainLFIntegrator',['../classmfem_1_1DomainLFIntegrator.html',1,'mfem']]],
   ['dsmoother',['DSmoother',['../classmfem_1_1DSmoother.html',1,'mfem']]],
-  ['dstable',['DSTable',['../classmfem_1_1DSTable.html',1,'mfem']]]
+  ['dstable',['DSTable',['../classmfem_1_1DSTable.html',1,'mfem']]],
+  ['dynamicvectorlayout',['DynamicVectorLayout',['../classmfem_1_1DynamicVectorLayout.html',1,'mfem']]]
 ];

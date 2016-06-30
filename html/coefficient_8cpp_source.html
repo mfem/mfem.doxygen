@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.1</span>
+   &#160;<span id="projectnumber">v3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -315,244 +315,262 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      }</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">  227</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classmfem_1_1MatrixRestrictedCoefficient.html#a9f3d55fd5fb3aff2de98d852aa460c2f">  227</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1MatrixRestrictedCoefficient.html#a9f3d55fd5fb3aff2de98d852aa460c2f">MatrixRestrictedCoefficient::Eval</a>(<a class="code" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;K, <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                       <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   <span class="keywordtype">double</span> norm = 0.0;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *tr;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.<a class="code" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">GetNE</a>(); i++)</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      tr = mesh.<a class="code" href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">GetElementTransformation</a>(i);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;ir = *irs[mesh.<a class="code" href="classmfem_1_1Mesh.html#a064427a4a8eedcad7ce698110c41066d">GetElementType</a>(i)];</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; ir.<a class="code" href="classmfem_1_1IntegrationRule.html#aed557d90b3acf948530fc8dec78d07c9">GetNPoints</a>(); j++)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;         <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classmfem_1_1IntegrationRule.html#ab4b7d6acdf25f87e9bf207757edeaf57">IntPoint</a>(j);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;         tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint</a>(&amp;ip);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;         <span class="keywordtype">double</span> val = fabs(coeff.<a class="code" href="classmfem_1_1Coefficient.html#ad31b5210ced46820cc4ea9240ff32f69">Eval</a>(*tr, ip));</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;         <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;         {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            norm += ip.<a class="code" href="classmfem_1_1IntegrationPoint.html#ad8e50ba6064beac339dae76461930596">weight</a> * tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#a202a4aeb917c04cee421952f4dbdb503">Weight</a>() * pow(val, p);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;         }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;         {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">if</span> (norm &lt; val)</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;               norm = val;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;         }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;   }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;   <span class="keywordflow">return</span> norm;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="namespacemfem.html#a17247cbb5fe159208cf4435e0e9fd2d8">  258</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;   <span class="keywordtype">double</span> norm = 0.0;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *tr;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;   <span class="keywordtype">int</span> vdim = coeff.<a class="code" href="classmfem_1_1VectorCoefficient.html#a47cd974a280f20e0d4b7f8ce43ea1597">GetVDim</a>();</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> vval(vdim);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   <span class="keywordtype">double</span> val;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.<a class="code" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">GetNE</a>(); i++)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;   {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      tr = mesh.<a class="code" href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">GetElementTransformation</a>(i);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;ir = *irs[mesh.<a class="code" href="classmfem_1_1Mesh.html#a064427a4a8eedcad7ce698110c41066d">GetElementType</a>(i)];</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; ir.<a class="code" href="classmfem_1_1IntegrationRule.html#aed557d90b3acf948530fc8dec78d07c9">GetNPoints</a>(); j++)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;         <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classmfem_1_1IntegrationRule.html#ab4b7d6acdf25f87e9bf207757edeaf57">IntPoint</a>(j);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;         tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint</a>(&amp;ip);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;         coeff.<a class="code" href="classmfem_1_1VectorCoefficient.html#ac85f5bb9e09019b15c9543f4f41b37d5">Eval</a>(vval, *tr, ip);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;         <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;         {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idim(0); idim &lt; vdim; ++idim)</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            {</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;               norm += ip.<a class="code" href="classmfem_1_1IntegrationPoint.html#ad8e50ba6064beac339dae76461930596">weight</a> * tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#a202a4aeb917c04cee421952f4dbdb503">Weight</a>() * pow(fabs( vval(idim) ), p);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;         }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;         {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idim(0); idim &lt; vdim; ++idim)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;               val = fabs(vval(idim));</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;               <span class="keywordflow">if</span> (norm &lt; val)</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;               {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                  norm = val;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;               }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;         }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;   }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   <span class="keywordflow">return</span> norm;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">  300</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">ComputeLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                     <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;   <span class="keywordtype">double</span> norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, mesh, irs);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;   {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keywordflow">if</span> (norm &lt; 0.0)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;         norm = -pow(-norm, 1.0/p);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;         norm = pow(norm, 1.0/p);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;   }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;   <span class="keywordflow">return</span> norm;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="namespacemfem.html#a5ea79e1b83e47d3d7c2c50cf96d89f68">  321</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">ComputeLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                     <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;   <span class="keywordtype">double</span> norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, mesh, irs);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;   {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      <span class="keywordflow">if</span> (norm &lt; 0.0)</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;         norm = -pow(-norm, 1.0/p);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;         norm = pow(norm, 1.0/p);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;   }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;   <span class="keywordflow">return</span> norm;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">  343</a></span>&#160;<span class="preprocessor"></span><span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">ComputeGlobalLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1ParMesh.html">ParMesh</a> &amp;pmesh,</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                           <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;{</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;   <span class="keywordtype">double</span> loc_norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, pmesh, irs);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;   <span class="keywordtype">double</span> glob_norm = 0;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;   MPI_Comm comm = pmesh.<a class="code" href="classmfem_1_1ParMesh.html#aa762d01c22839f07400bc6aa97b91456">GetComm</a>();</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_SUM, comm);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="keywordflow">if</span> (glob_norm &lt; 0.0)</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;         glob_norm = -pow(-glob_norm, 1.0/p);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;         glob_norm = pow(glob_norm, 1.0/p);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_MAX, comm);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   <span class="keywordflow">if</span> (active_attr[T.<a class="code" href="classmfem_1_1ElementTransformation.html#adcbe93689e9f88e401464c49f0d4fb2e">Attribute</a>-1])</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;   {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      c-&gt;<a class="code" href="classmfem_1_1MatrixCoefficient.html#aa873d34c1fa3755ae99c2f43b9163ea6">SetTime</a>(<a class="code" href="classmfem_1_1MatrixCoefficient.html#a296ff78faeb06268281544dd3b553a15">GetTime</a>());</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      c-&gt;<a class="code" href="classmfem_1_1MatrixCoefficient.html#a9026dc9110645d2b4700b8f75107b647">Eval</a>(K, T, ip);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;   {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      K.<a class="code" href="classmfem_1_1DenseMatrix.html#a5c62b399e1c6408e5f1903f6cab5dfbb">SetSize</a>(<a class="code" href="classmfem_1_1MatrixCoefficient.html#a98a9ecb046e29ec9e36d3f8066cab304">vdim</a>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      K = 0.0;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;   }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">  242</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   <span class="keywordtype">double</span> norm = 0.0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *tr;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.<a class="code" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">GetNE</a>(); i++)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      tr = mesh.<a class="code" href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">GetElementTransformation</a>(i);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;ir = *irs[mesh.<a class="code" href="classmfem_1_1Mesh.html#a064427a4a8eedcad7ce698110c41066d">GetElementType</a>(i)];</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; ir.<a class="code" href="classmfem_1_1IntegrationRule.html#aed557d90b3acf948530fc8dec78d07c9">GetNPoints</a>(); j++)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;         <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classmfem_1_1IntegrationRule.html#ab4b7d6acdf25f87e9bf207757edeaf57">IntPoint</a>(j);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;         tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint</a>(&amp;ip);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;         <span class="keywordtype">double</span> val = fabs(coeff.<a class="code" href="classmfem_1_1Coefficient.html#ad31b5210ced46820cc4ea9240ff32f69">Eval</a>(*tr, ip));</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;         <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;         {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            norm += ip.<a class="code" href="classmfem_1_1IntegrationPoint.html#ad8e50ba6064beac339dae76461930596">weight</a> * tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#a202a4aeb917c04cee421952f4dbdb503">Weight</a>() * pow(val, p);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;         }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;         {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">if</span> (norm &lt; val)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;               norm = val;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;         }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;   }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   <span class="keywordflow">return</span> norm;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="namespacemfem.html#a17247cbb5fe159208cf4435e0e9fd2d8">  273</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;   <span class="keywordtype">double</span> norm = 0.0;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *tr;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="keywordtype">int</span> vdim = coeff.<a class="code" href="classmfem_1_1VectorCoefficient.html#a47cd974a280f20e0d4b7f8ce43ea1597">GetVDim</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> vval(vdim);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   <span class="keywordtype">double</span> val;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh.<a class="code" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">GetNE</a>(); i++)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;   {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      tr = mesh.<a class="code" href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">GetElementTransformation</a>(i);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;ir = *irs[mesh.<a class="code" href="classmfem_1_1Mesh.html#a064427a4a8eedcad7ce698110c41066d">GetElementType</a>(i)];</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; ir.<a class="code" href="classmfem_1_1IntegrationRule.html#aed557d90b3acf948530fc8dec78d07c9">GetNPoints</a>(); j++)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;         <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip = ir.<a class="code" href="classmfem_1_1IntegrationRule.html#ab4b7d6acdf25f87e9bf207757edeaf57">IntPoint</a>(j);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;         tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint</a>(&amp;ip);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;         coeff.<a class="code" href="classmfem_1_1VectorCoefficient.html#ac85f5bb9e09019b15c9543f4f41b37d5">Eval</a>(vval, *tr, ip);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;         <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;         {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idim(0); idim &lt; vdim; ++idim)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;               norm += ip.<a class="code" href="classmfem_1_1IntegrationPoint.html#ad8e50ba6064beac339dae76461930596">weight</a> * tr-&gt;<a class="code" href="classmfem_1_1ElementTransformation.html#a202a4aeb917c04cee421952f4dbdb503">Weight</a>() * pow(fabs( vval(idim) ), p);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;         }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;         {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idim(0); idim &lt; vdim; ++idim)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;               val = fabs(vval(idim));</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;               <span class="keywordflow">if</span> (norm &lt; val)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;               {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                  norm = val;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;               }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;         }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   <span class="keywordflow">return</span> norm;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">  315</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">ComputeLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                     <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;   <span class="keywordtype">double</span> norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, mesh, irs);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;   {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <span class="keywordflow">if</span> (norm &lt; 0.0)</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         norm = -pow(-norm, 1.0/p);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;         norm = pow(norm, 1.0/p);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;   }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;   <span class="keywordflow">return</span> norm;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="namespacemfem.html#a5ea79e1b83e47d3d7c2c50cf96d89f68">  336</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">ComputeLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh,</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                     <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;{</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;   <span class="keywordtype">double</span> norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, mesh, irs);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;   {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="keywordflow">if</span> (norm &lt; 0.0)</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;         norm = -pow(-norm, 1.0/p);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;         norm = pow(norm, 1.0/p);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;   <span class="keywordflow">return</span> norm;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">  358</a></span>&#160;<span class="preprocessor"></span><span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">ComputeGlobalLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1ParMesh.html">ParMesh</a> &amp;pmesh,</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                           <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;{</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;   <span class="keywordtype">double</span> loc_norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, pmesh, irs);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;   <span class="keywordtype">double</span> glob_norm = 0;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   MPI_Comm comm = pmesh.<a class="code" href="classmfem_1_1ParMesh.html#aa762d01c22839f07400bc6aa97b91456">GetComm</a>();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;   {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_SUM, comm);</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;   <span class="keywordflow">return</span> glob_norm;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
-<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="namespacemfem.html#a7c8c7346951f40cc6df97875fdb672bd">  373</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">ComputeGlobalLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1ParMesh.html">ParMesh</a> &amp;pmesh,</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                           <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;{</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;   <span class="keywordtype">double</span> loc_norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, pmesh, irs);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   <span class="keywordtype">double</span> glob_norm = 0;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   MPI_Comm comm = pmesh.<a class="code" href="classmfem_1_1ParMesh.html#aa762d01c22839f07400bc6aa97b91456">GetComm</a>();</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;   {</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_SUM, comm);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <span class="keywordflow">if</span> (glob_norm &lt; 0.0)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;         glob_norm = -pow(-glob_norm, 1.0/p);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;         glob_norm = pow(glob_norm, 1.0/p);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;   {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_MAX, comm);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   }</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      <span class="keywordflow">if</span> (glob_norm &lt; 0.0)</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;         glob_norm = -pow(-glob_norm, 1.0/p);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      }</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      {</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;         glob_norm = pow(glob_norm, 1.0/p);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;   }</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;   {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_MAX, comm);</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;   }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;   <span class="keywordflow">return</span> glob_norm;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="namespacemfem.html#a7c8c7346951f40cc6df97875fdb672bd">  388</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">ComputeGlobalLpNorm</a>(<span class="keywordtype">double</span> p, <a class="code" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;coeff, <a class="code" href="classmfem_1_1ParMesh.html">ParMesh</a> &amp;pmesh,</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                           <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[])</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;{</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;   <span class="keywordtype">double</span> loc_norm = <a class="code" href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">LpNormLoop</a>(p, coeff, pmesh, irs);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;   <span class="keywordtype">double</span> glob_norm = 0;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;   MPI_Comm comm = pmesh.<a class="code" href="classmfem_1_1ParMesh.html#aa762d01c22839f07400bc6aa97b91456">GetComm</a>();</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;   <span class="keywordflow">if</span> (p &lt; numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_SUM, comm);</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;   <span class="keywordflow">return</span> glob_norm;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;}</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;      <span class="comment">// negative quadrature weights may cause norm to be negative</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      <span class="keywordflow">if</span> (glob_norm &lt; 0.0)</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      {</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;         glob_norm = -pow(-glob_norm, 1.0/p);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;         glob_norm = pow(glob_norm, 1.0/p);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;   }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;   {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      MPI_Allreduce(&amp;loc_norm, &amp;glob_norm, 1, MPI_DOUBLE, MPI_MAX, comm);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;   }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;   <span class="keywordflow">return</span> glob_norm;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}</div>
 <div class="ttc" id="classmfem_1_1IntegrationRule_html_aed557d90b3acf948530fc8dec78d07c9"><div class="ttname"><a href="classmfem_1_1IntegrationRule.html#aed557d90b3acf948530fc8dec78d07c9">mfem::IntegrationRule::GetNPoints</a></div><div class="ttdeci">int GetNPoints() const </div><div class="ttdoc">Returns the number of the points in the integration rule. </div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00228">intrules.hpp:228</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorRestrictedCoefficient_html_a25e9b6781fb6c284e0812f6be706dbe1"><div class="ttname"><a href="classmfem_1_1VectorRestrictedCoefficient.html#a25e9b6781fb6c284e0812f6be706dbe1">mfem::VectorRestrictedCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(Vector &amp;V, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00151">coefficient.cpp:151</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00041">mesh.hpp:41</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00045">mesh.hpp:45</a></div></div>
 <div class="ttc" id="classmfem_1_1IntegrationRule_html"><div class="ttname"><a href="classmfem_1_1IntegrationRule.html">mfem::IntegrationRule</a></div><div class="ttdoc">Class for integration rule. </div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00083">intrules.hpp:83</a></div></div>
 <div class="ttc" id="classmfem_1_1GridFunction_html"><div class="ttname"><a href="classmfem_1_1GridFunction.html">mfem::GridFunction</a></div><div class="ttdoc">Class for grid function - Vector with associated FE space. </div><div class="ttdef"><b>Definition:</b> <a href="gridfunc_8hpp_source.html#l00027">gridfunc.hpp:27</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorCoefficient_html"><div class="ttname"><a href="classmfem_1_1VectorCoefficient.html">mfem::VectorCoefficient</a></div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00228">coefficient.hpp:228</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorGridFunctionCoefficient_html_a0ad4b9ed6401eee66d220f37645be7a1"><div class="ttname"><a href="classmfem_1_1VectorGridFunctionCoefficient.html#a0ad4b9ed6401eee66d220f37645be7a1">mfem::VectorGridFunctionCoefficient::VectorGridFunctionCoefficient</a></div><div class="ttdeci">VectorGridFunctionCoefficient(GridFunction *gf)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00133">coefficient.cpp:133</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorCoefficient_html_ac85f5bb9e09019b15c9543f4f41b37d5"><div class="ttname"><a href="classmfem_1_1VectorCoefficient.html#ac85f5bb9e09019b15c9543f4f41b37d5">mfem::VectorCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(Vector &amp;V, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)=0</div></div>
-<div class="ttc" id="classmfem_1_1GridFunction_html_aaee317406b13c42d713cc1b0dc91a35b"><div class="ttname"><a href="classmfem_1_1GridFunction.html#aaee317406b13c42d713cc1b0dc91a35b">mfem::GridFunction::GetVectorValue</a></div><div class="ttdeci">void GetVectorValue(int i, const IntegrationPoint &amp;ip, Vector &amp;val) const </div><div class="ttdef"><b>Definition:</b> <a href="gridfunc_8cpp_source.html#l00292">gridfunc.cpp:292</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ac1e67bd3ee82db59573950d19897c149"><div class="ttname"><a href="classmfem_1_1Vector.html#ac1e67bd3ee82db59573950d19897c149">mfem::Vector::SetSize</a></div><div class="ttdeci">void SetSize(int s)</div><div class="ttdoc">Resizes the vector if the new size is different. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00259">vector.hpp:259</a></div></div>
+<div class="ttc" id="classmfem_1_1GridFunction_html_aaee317406b13c42d713cc1b0dc91a35b"><div class="ttname"><a href="classmfem_1_1GridFunction.html#aaee317406b13c42d713cc1b0dc91a35b">mfem::GridFunction::GetVectorValue</a></div><div class="ttdeci">void GetVectorValue(int i, const IntegrationPoint &amp;ip, Vector &amp;val) const </div><div class="ttdef"><b>Definition:</b> <a href="gridfunc_8cpp_source.html#l00316">gridfunc.cpp:316</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ac1e67bd3ee82db59573950d19897c149"><div class="ttname"><a href="classmfem_1_1Vector.html#ac1e67bd3ee82db59573950d19897c149">mfem::Vector::SetSize</a></div><div class="ttdeci">void SetSize(int s)</div><div class="ttdoc">Resize the vector if the new size is different. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00263">vector.hpp:263</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixCoefficient_html_a296ff78faeb06268281544dd3b553a15"><div class="ttname"><a href="classmfem_1_1MatrixCoefficient.html#a296ff78faeb06268281544dd3b553a15">mfem::MatrixCoefficient::GetTime</a></div><div class="ttdeci">double GetTime()</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00378">coefficient.hpp:378</a></div></div>
-<div class="ttc" id="classmfem_1_1ElementTransformation_html_abfa8411e550ce8afa85bf1015bfe6ba8"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">mfem::ElementTransformation::SetIntPoint</a></div><div class="ttdeci">void SetIntPoint(const IntegrationPoint *ip)</div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00033">eltrans.hpp:33</a></div></div>
+<div class="ttc" id="classmfem_1_1MatrixCoefficient_html_a9026dc9110645d2b4700b8f75107b647"><div class="ttname"><a href="classmfem_1_1MatrixCoefficient.html#a9026dc9110645d2b4700b8f75107b647">mfem::MatrixCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(DenseMatrix &amp;K, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)=0</div></div>
+<div class="ttc" id="classmfem_1_1ElementTransformation_html_abfa8411e550ce8afa85bf1015bfe6ba8"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">mfem::ElementTransformation::SetIntPoint</a></div><div class="ttdeci">void SetIntPoint(const IntegrationPoint *ip)</div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00035">eltrans.hpp:35</a></div></div>
 <div class="ttc" id="classmfem_1_1DenseMatrix_html"><div class="ttname"><a href="classmfem_1_1DenseMatrix.html">mfem::DenseMatrix</a></div><div class="ttdoc">Data type dense matrix using column-major storage. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8hpp_source.html#l00022">densemat.hpp:22</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorFunctionCoefficient_html_aa4d450c6ee8a2c7cb3a46dd1b7de26de"><div class="ttname"><a href="classmfem_1_1VectorFunctionCoefficient.html#aa4d450c6ee8a2c7cb3a46dd1b7de26de">mfem::VectorFunctionCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(Vector &amp;V, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00083">coefficient.cpp:83</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_af1d1c5110a2cd10105c3ae093c9f7b51"><div class="ttname"><a href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">mfem::Mesh::GetNE</a></div><div class="ttdeci">int GetNE() const </div><div class="ttdoc">Returns number of elements. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00454">mesh.hpp:454</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_af1d1c5110a2cd10105c3ae093c9f7b51"><div class="ttname"><a href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">mfem::Mesh::GetNE</a></div><div class="ttdeci">int GetNE() const </div><div class="ttdoc">Returns number of elements. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00496">mesh.hpp:496</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixArrayCoefficient_html_a8648946446a62830c6d5e531ec22fb18"><div class="ttname"><a href="classmfem_1_1MatrixArrayCoefficient.html#a8648946446a62830c6d5e531ec22fb18">mfem::MatrixArrayCoefficient::~MatrixArrayCoefficient</a></div><div class="ttdeci">virtual ~MatrixArrayCoefficient()</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00207">coefficient.cpp:207</a></div></div>
 <div class="ttc" id="classmfem_1_1TransformedCoefficient_html_ae70456d34f457f8521404daadd326537"><div class="ttname"><a href="classmfem_1_1TransformedCoefficient.html#ae70456d34f457f8521404daadd326537">mfem::TransformedCoefficient::Eval</a></div><div class="ttdeci">virtual double Eval(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00055">coefficient.cpp:55</a></div></div>
+<div class="ttc" id="classmfem_1_1MatrixCoefficient_html_aa873d34c1fa3755ae99c2f43b9163ea6"><div class="ttname"><a href="classmfem_1_1MatrixCoefficient.html#aa873d34c1fa3755ae99c2f43b9163ea6">mfem::MatrixCoefficient::SetTime</a></div><div class="ttdeci">void SetTime(double t)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00377">coefficient.hpp:377</a></div></div>
 <div class="ttc" id="classmfem_1_1FunctionCoefficient_html_ac09d639bba738efb30c90e7c5573ba39"><div class="ttname"><a href="classmfem_1_1FunctionCoefficient.html#ac09d639bba738efb30c90e7c5573ba39">mfem::FunctionCoefficient::Eval</a></div><div class="ttdeci">virtual double Eval(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdoc">Evaluate coefficient. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00031">coefficient.cpp:31</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixFunctionCoefficient_html_aa5389c3dace2493a88eed60551ab2f42"><div class="ttname"><a href="classmfem_1_1MatrixFunctionCoefficient.html#aa5389c3dace2493a88eed60551ab2f42">mfem::MatrixFunctionCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(DenseMatrix &amp;K, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00181">coefficient.cpp:181</a></div></div>
 <div class="ttc" id="classmfem_1_1IntegrationRule_html_ab4b7d6acdf25f87e9bf207757edeaf57"><div class="ttname"><a href="classmfem_1_1IntegrationRule.html#ab4b7d6acdf25f87e9bf207757edeaf57">mfem::IntegrationRule::IntPoint</a></div><div class="ttdeci">IntegrationPoint &amp; IntPoint(int i)</div><div class="ttdoc">Returns a reference to the i-th integration point. </div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00231">intrules.hpp:231</a></div></div>
-<div class="ttc" id="ex3_8cpp_html_a70b5e28b5bc3d1b63a7435c5fe50b837"><div class="ttname"><a href="ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8cpp_source.html#l00048">ex3.cpp:48</a></div></div>
-<div class="ttc" id="namespacemfem_html_ab8d3bc48e018ceca5ab5d6bed931d912"><div class="ttname"><a href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">mfem::ComputeLpNorm</a></div><div class="ttdeci">double ComputeLpNorm(double p, Coefficient &amp;coeff, Mesh &amp;mesh, const IntegrationRule *irs[])</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00300">coefficient.cpp:300</a></div></div>
+<div class="ttc" id="ex3_8cpp_html_a70b5e28b5bc3d1b63a7435c5fe50b837"><div class="ttname"><a href="ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8cpp_source.html#l00047">ex3.cpp:47</a></div></div>
+<div class="ttc" id="namespacemfem_html_ab8d3bc48e018ceca5ab5d6bed931d912"><div class="ttname"><a href="namespacemfem.html#ab8d3bc48e018ceca5ab5d6bed931d912">mfem::ComputeLpNorm</a></div><div class="ttdeci">double ComputeLpNorm(double p, Coefficient &amp;coeff, Mesh &amp;mesh, const IntegrationRule *irs[])</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00315">coefficient.cpp:315</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorCoefficient_html_ac5022bc578464dea2c84506812b806f4"><div class="ttname"><a href="classmfem_1_1VectorCoefficient.html#ac5022bc578464dea2c84506812b806f4">mfem::VectorCoefficient::GetTime</a></div><div class="ttdeci">double GetTime()</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00238">coefficient.hpp:238</a></div></div>
-<div class="ttc" id="namespacemfem_html_a377b2eeef283c157c7de87c43531168a"><div class="ttname"><a href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">mfem::LpNormLoop</a></div><div class="ttdeci">double LpNormLoop(double p, Coefficient &amp;coeff, Mesh &amp;mesh, const IntegrationRule *irs[])</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00227">coefficient.cpp:227</a></div></div>
+<div class="ttc" id="namespacemfem_html_a377b2eeef283c157c7de87c43531168a"><div class="ttname"><a href="namespacemfem.html#a377b2eeef283c157c7de87c43531168a">mfem::LpNormLoop</a></div><div class="ttdeci">double LpNormLoop(double p, Coefficient &amp;coeff, Mesh &amp;mesh, const IntegrationRule *irs[])</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00242">coefficient.cpp:242</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html_a945a5eda543ab04aa8cf38b5caeaf4f0"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#a945a5eda543ab04aa8cf38b5caeaf4f0">mfem::ElementTransformation::ElementNo</a></div><div class="ttdeci">int ElementNo</div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00031">eltrans.hpp:31</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorCoefficient_html_ab925726693546a0bd5438826c24f2ff6"><div class="ttname"><a href="classmfem_1_1VectorCoefficient.html#ab925726693546a0bd5438826c24f2ff6">mfem::VectorCoefficient::vdim</a></div><div class="ttdeci">int vdim</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00231">coefficient.hpp:231</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a064427a4a8eedcad7ce698110c41066d"><div class="ttname"><a href="classmfem_1_1Mesh.html#a064427a4a8eedcad7ce698110c41066d">mfem::Mesh::GetElementType</a></div><div class="ttdeci">int GetElementType(int i) const </div><div class="ttdoc">Returns the type of element i. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l04382">mesh.cpp:4382</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a064427a4a8eedcad7ce698110c41066d"><div class="ttname"><a href="classmfem_1_1Mesh.html#a064427a4a8eedcad7ce698110c41066d">mfem::Mesh::GetElementType</a></div><div class="ttdeci">int GetElementType(int i) const </div><div class="ttdoc">Returns the type of element i. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l03680">mesh.cpp:3680</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixArrayCoefficient_html_a9d6c49206e93c17833a2de0cd673de5b"><div class="ttname"><a href="classmfem_1_1MatrixArrayCoefficient.html#a9d6c49206e93c17833a2de0cd673de5b">mfem::MatrixArrayCoefficient::Eval</a></div><div class="ttdeci">double Eval(int i, int j, ElementTransformation &amp;T, IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00431">coefficient.hpp:431</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorArrayCoefficient_html_a169615f87c41db2ac28eddea6a831bb0"><div class="ttname"><a href="classmfem_1_1VectorArrayCoefficient.html#a169615f87c41db2ac28eddea6a831bb0">mfem::VectorArrayCoefficient::~VectorArrayCoefficient</a></div><div class="ttdeci">virtual ~VectorArrayCoefficient()</div><div class="ttdoc">Destroys vector coefficient. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00115">coefficient.cpp:115</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html_a202a4aeb917c04cee421952f4dbdb503"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#a202a4aeb917c04cee421952f4dbdb503">mfem::ElementTransformation::Weight</a></div><div class="ttdeci">virtual double Weight()=0</div></div>
 <div class="ttc" id="classmfem_1_1VectorCoefficient_html_a47cd974a280f20e0d4b7f8ce43ea1597"><div class="ttname"><a href="classmfem_1_1VectorCoefficient.html#a47cd974a280f20e0d4b7f8ce43ea1597">mfem::VectorCoefficient::GetVDim</a></div><div class="ttdeci">int GetVDim()</div><div class="ttdoc">Returns dimension of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00241">coefficient.hpp:241</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorArrayCoefficient_html_a5104e25683ff842ae3272b07483f4734"><div class="ttname"><a href="classmfem_1_1VectorArrayCoefficient.html#a5104e25683ff842ae3272b07483f4734">mfem::VectorArrayCoefficient::Eval</a></div><div class="ttdeci">double Eval(int i, ElementTransformation &amp;T, IntegrationPoint &amp;ip)</div><div class="ttdoc">Evaluates i&amp;#39;th component of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00319">coefficient.hpp:319</a></div></div>
-<div class="ttc" id="classmfem_1_1ParMesh_html_aa762d01c22839f07400bc6aa97b91456"><div class="ttname"><a href="classmfem_1_1ParMesh.html#aa762d01c22839f07400bc6aa97b91456">mfem::ParMesh::GetComm</a></div><div class="ttdeci">MPI_Comm GetComm() const </div><div class="ttdef"><b>Definition:</b> <a href="pmesh_8hpp_source.html#l00086">pmesh.hpp:86</a></div></div>
+<div class="ttc" id="classmfem_1_1ParMesh_html_aa762d01c22839f07400bc6aa97b91456"><div class="ttname"><a href="classmfem_1_1ParMesh.html#aa762d01c22839f07400bc6aa97b91456">mfem::ParMesh::GetComm</a></div><div class="ttdeci">MPI_Comm GetComm() const </div><div class="ttdef"><b>Definition:</b> <a href="pmesh_8hpp_source.html#l00096">pmesh.hpp:96</a></div></div>
 <div class="ttc" id="classmfem_1_1Coefficient_html"><div class="ttname"><a href="classmfem_1_1Coefficient.html">mfem::Coefficient</a></div><div class="ttdoc">Base class Coefficient that may optionally depend on time. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00031">coefficient.hpp:31</a></div></div>
 <div class="ttc" id="fem_8hpp_html"><div class="ttname"><a href="fem_8hpp.html">fem.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixCoefficient_html"><div class="ttname"><a href="classmfem_1_1MatrixCoefficient.html">mfem::MatrixCoefficient</a></div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00368">coefficient.hpp:368</a></div></div>
 <div class="ttc" id="classmfem_1_1PWConstCoefficient_html_aaa2f10d37bd4c4b9215c60ba9b2dc253"><div class="ttname"><a href="classmfem_1_1PWConstCoefficient.html#aaa2f10d37bd4c4b9215c60ba9b2dc253">mfem::PWConstCoefficient::Eval</a></div><div class="ttdeci">virtual double Eval(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdoc">Evaluate the coefficient function. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00024">coefficient.cpp:24</a></div></div>
-<div class="ttc" id="classmfem_1_1DenseMatrix_html_a3fcf25ab0c89b54024f0e3249c12710e"><div class="ttname"><a href="classmfem_1_1DenseMatrix.html#a3fcf25ab0c89b54024f0e3249c12710e">mfem::DenseMatrix::GetColumnReference</a></div><div class="ttdeci">void GetColumnReference(int c, Vector &amp;col)</div><div class="ttdef"><b>Definition:</b> <a href="densemat_8hpp_source.html#l00200">densemat.hpp:200</a></div></div>
+<div class="ttc" id="classmfem_1_1DenseMatrix_html_a3fcf25ab0c89b54024f0e3249c12710e"><div class="ttname"><a href="classmfem_1_1DenseMatrix.html#a3fcf25ab0c89b54024f0e3249c12710e">mfem::DenseMatrix::GetColumnReference</a></div><div class="ttdeci">void GetColumnReference(int c, Vector &amp;col)</div><div class="ttdef"><b>Definition:</b> <a href="densemat_8hpp_source.html#l00201">densemat.hpp:201</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorCoefficient_html_a648fc730a13a7faca1515309c89eabf5"><div class="ttname"><a href="classmfem_1_1VectorCoefficient.html#a648fc730a13a7faca1515309c89eabf5">mfem::VectorCoefficient::SetTime</a></div><div class="ttdeci">void SetTime(double t)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00237">coefficient.hpp:237</a></div></div>
 <div class="ttc" id="classmfem_1_1VectorGridFunctionCoefficient_html_a73467c6fc741f190c6718e71f7c8f5ea"><div class="ttname"><a href="classmfem_1_1VectorGridFunctionCoefficient.html#a73467c6fc741f190c6718e71f7c8f5ea">mfem::VectorGridFunctionCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(Vector &amp;V, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00139">coefficient.cpp:139</a></div></div>
-<div class="ttc" id="namespacemfem_html_a560dab5a12810247085e27c4564d6fa5"><div class="ttname"><a href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">mfem::ComputeGlobalLpNorm</a></div><div class="ttdeci">double ComputeGlobalLpNorm(double p, Coefficient &amp;coeff, ParMesh &amp;pmesh, const IntegrationRule *irs[])</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00343">coefficient.cpp:343</a></div></div>
+<div class="ttc" id="namespacemfem_html_a560dab5a12810247085e27c4564d6fa5"><div class="ttname"><a href="namespacemfem.html#a560dab5a12810247085e27c4564d6fa5">mfem::ComputeGlobalLpNorm</a></div><div class="ttdeci">double ComputeGlobalLpNorm(double p, Coefficient &amp;coeff, ParMesh &amp;pmesh, const IntegrationRule *irs[])</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00358">coefficient.cpp:358</a></div></div>
 <div class="ttc" id="classmfem_1_1GridFunctionCoefficient_html_a4fc4547220fb76029f1bcb7ab8393447"><div class="ttname"><a href="classmfem_1_1GridFunctionCoefficient.html#a4fc4547220fb76029f1bcb7ab8393447">mfem::GridFunctionCoefficient::Eval</a></div><div class="ttdeci">virtual double Eval(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00049">coefficient.cpp:49</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixArrayCoefficient_html_a66a1bccdfed36807c0ba76ffa622d9f8"><div class="ttname"><a href="classmfem_1_1MatrixArrayCoefficient.html#a66a1bccdfed36807c0ba76ffa622d9f8">mfem::MatrixArrayCoefficient::MatrixArrayCoefficient</a></div><div class="ttdeci">MatrixArrayCoefficient(int dim)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00201">coefficient.cpp:201</a></div></div>
 <div class="ttc" id="classmfem_1_1IntegrationPoint_html"><div class="ttname"><a href="classmfem_1_1IntegrationPoint.html">mfem::IntegrationPoint</a></div><div class="ttdoc">Class for integration point with weight. </div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00025">intrules.hpp:25</a></div></div>
 <div class="ttc" id="classmfem_1_1MatrixCoefficient_html_a98a9ecb046e29ec9e36d3f8066cab304"><div class="ttname"><a href="classmfem_1_1MatrixCoefficient.html#a98a9ecb046e29ec9e36d3f8066cab304">mfem::MatrixCoefficient::vdim</a></div><div class="ttdeci">int vdim</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8hpp_source.html#l00371">coefficient.hpp:371</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00023">eltrans.hpp:23</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a72dd2c8c7e70b3c766b72b25e2bfbb26"><div class="ttname"><a href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">mfem::Mesh::GetElementTransformation</a></div><div class="ttdeci">void GetElementTransformation(int i, IsoparametricTransformation *ElTr)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l00173">mesh.cpp:173</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a72dd2c8c7e70b3c766b72b25e2bfbb26"><div class="ttname"><a href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">mfem::Mesh::GetElementTransformation</a></div><div class="ttdeci">void GetElementTransformation(int i, IsoparametricTransformation *ElTr)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l00237">mesh.cpp:237</a></div></div>
 <div class="ttc" id="classmfem_1_1IntegrationPoint_html_ad8e50ba6064beac339dae76461930596"><div class="ttname"><a href="classmfem_1_1IntegrationPoint.html#ad8e50ba6064beac339dae76461930596">mfem::IntegrationPoint::weight</a></div><div class="ttdeci">double weight</div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00028">intrules.hpp:28</a></div></div>
-<div class="ttc" id="classmfem_1_1GridFunction_html_ac463beb0aa4d4f9afa16f6394adb7a59"><div class="ttname"><a href="classmfem_1_1GridFunction.html#ac463beb0aa4d4f9afa16f6394adb7a59">mfem::GridFunction::GetVectorValues</a></div><div class="ttdeci">void GetVectorValues(ElementTransformation &amp;T, const IntegrationRule &amp;ir, DenseMatrix &amp;vals) const </div><div class="ttdef"><b>Definition:</b> <a href="gridfunc_8cpp_source.html#l00405">gridfunc.cpp:405</a></div></div>
+<div class="ttc" id="classmfem_1_1GridFunction_html_ac463beb0aa4d4f9afa16f6394adb7a59"><div class="ttname"><a href="classmfem_1_1GridFunction.html#ac463beb0aa4d4f9afa16f6394adb7a59">mfem::GridFunction::GetVectorValues</a></div><div class="ttdeci">void GetVectorValues(ElementTransformation &amp;T, const IntegrationRule &amp;ir, DenseMatrix &amp;vals) const </div><div class="ttdef"><b>Definition:</b> <a href="gridfunc_8cpp_source.html#l00429">gridfunc.cpp:429</a></div></div>
 <div class="ttc" id="classmfem_1_1Coefficient_html_ad31b5210ced46820cc4ea9240ff32f69"><div class="ttname"><a href="classmfem_1_1Coefficient.html#ad31b5210ced46820cc4ea9240ff32f69">mfem::Coefficient::Eval</a></div><div class="ttdeci">virtual double Eval(ElementTransformation &amp;T, const IntegrationPoint &amp;ip)=0</div></div>
 <div class="ttc" id="classmfem_1_1VectorArrayCoefficient_html_aac80d19e0d594da5c4e79cd95a468b84"><div class="ttname"><a href="classmfem_1_1VectorArrayCoefficient.html#aac80d19e0d594da5c4e79cd95a468b84">mfem::VectorArrayCoefficient::VectorArrayCoefficient</a></div><div class="ttdeci">VectorArrayCoefficient(int dim)</div><div class="ttdoc">Construct vector of dim coefficients. </div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00106">coefficient.cpp:106</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html_adcbe93689e9f88e401464c49f0d4fb2e"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#adcbe93689e9f88e401464c49f0d4fb2e">mfem::ElementTransformation::Attribute</a></div><div class="ttdeci">int Attribute</div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00031">eltrans.hpp:31</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00033">vector.hpp:33</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html_ac5bf9371c58dac27dda644e11b18a47c"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#ac5bf9371c58dac27dda644e11b18a47c">mfem::ElementTransformation::Transform</a></div><div class="ttdeci">virtual void Transform(const IntegrationPoint &amp;, Vector &amp;)=0</div></div>
+<div class="ttc" id="classmfem_1_1MatrixRestrictedCoefficient_html_a9f3d55fd5fb3aff2de98d852aa460c2f"><div class="ttname"><a href="classmfem_1_1MatrixRestrictedCoefficient.html#a9f3d55fd5fb3aff2de98d852aa460c2f">mfem::MatrixRestrictedCoefficient::Eval</a></div><div class="ttdeci">virtual void Eval(DenseMatrix &amp;K, ElementTransformation &amp;T, const IntegrationPoint &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="coefficient_8cpp_source.html#l00227">coefficient.cpp:227</a></div></div>
 <div class="ttc" id="classmfem_1_1DenseMatrix_html_a5c62b399e1c6408e5f1903f6cab5dfbb"><div class="ttname"><a href="classmfem_1_1DenseMatrix.html#a5c62b399e1c6408e5f1903f6cab5dfbb">mfem::DenseMatrix::SetSize</a></div><div class="ttdeci">void SetSize(int s)</div><div class="ttdoc">Change the size of the DenseMatrix to s x s. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8hpp_source.html#l00071">densemat.hpp:71</a></div></div>
 <div class="ttc" id="classmfem_1_1ParMesh_html"><div class="ttname"><a href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></div><div class="ttdoc">Class for parallel meshes. </div><div class="ttdef"><b>Definition:</b> <a href="pmesh_8hpp_source.html#l00028">pmesh.hpp:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 16 2016 15:49:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 30 2016 10:43:26 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

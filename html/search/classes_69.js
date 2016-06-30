@@ -9,6 +9,7 @@ var searchData=
   ['integrationpointtransformation',['IntegrationPointTransformation',['../classmfem_1_1IntegrationPointTransformation.html',1,'mfem']]],
   ['integrationrule',['IntegrationRule',['../classmfem_1_1IntegrationRule.html',1,'mfem']]],
   ['integrationrules',['IntegrationRules',['../classmfem_1_1IntegrationRules.html',1,'mfem']]],
+  ['intrulecoefficient',['IntRuleCoefficient',['../structmfem_1_1IntRuleCoefficient.html',1,'mfem']]],
   ['inverseharmonicmodel',['InverseHarmonicModel',['../classmfem_1_1InverseHarmonicModel.html',1,'mfem']]],
   ['inverseintegrator',['InverseIntegrator',['../classmfem_1_1InverseIntegrator.html',1,'mfem']]],
   ['irrotationalprojector',['IrrotationalProjector',['../classmfem_1_1miniapps_1_1IrrotationalProjector.html',1,'mfem::miniapps']]],

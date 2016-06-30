@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.1</span>
+   &#160;<span id="projectnumber">v3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0ea421bc0615b523d70b046abb64f63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the data will be deleted by the array.  <a href="#a0ea421bc0615b523d70b046abb64f63d">More...</a><br/></td></tr>
 <tr class="separator:a0ea421bc0615b523d70b046abb64f63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c4ce80778bad4f1dd517685bff604d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a55c4ce80778bad4f1dd517685bff604d">StealData</a> (T **p)</td></tr>
-<tr class="memdesc:a55c4ce80778bad4f1dd517685bff604d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the ownership of the the data.  <a href="#a55c4ce80778bad4f1dd517685bff604d">More...</a><br/></td></tr>
+<tr class="memdesc:a55c4ce80778bad4f1dd517685bff604d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the ownership of the data.  <a href="#a55c4ce80778bad4f1dd517685bff604d">More...</a><br/></td></tr>
 <tr class="separator:a55c4ce80778bad4f1dd517685bff604d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d7ebc8a3e064693b92172b81c30f89c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a5d7ebc8a3e064693b92172b81c30f89c">LoseData</a> ()</td></tr>
 <tr class="memdesc:a5d7ebc8a3e064693b92172b81c30f89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">NULL-ifies the data.  <a href="#a5d7ebc8a3e064693b92172b81c30f89c">More...</a><br/></td></tr>
@@ -217,6 +217,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a370c68671fe785d87d9bf2b5b1f4b152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a370c68671fe785d87d9bf2b5b1f4b152">Sort</a> ()</td></tr>
 <tr class="memdesc:a370c68671fe785d87d9bf2b5b1f4b152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts the array. This requires operator&lt; to be defined for T.  <a href="#a370c68671fe785d87d9bf2b5b1f4b152">More...</a><br/></td></tr>
 <tr class="separator:a370c68671fe785d87d9bf2b5b1f4b152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c9d587be35f80de08d3a3a24ee5c94"><td class="memTemplParams" colspan="2">template&lt;class Compare &gt; </td></tr>
+<tr class="memitem:a14c9d587be35f80de08d3a3a24ee5c94"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a14c9d587be35f80de08d3a3a24ee5c94">Sort</a> (Compare cmp)</td></tr>
+<tr class="memdesc:a14c9d587be35f80de08d3a3a24ee5c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts the array using the supplied comparison function object.  <a href="#a14c9d587be35f80de08d3a3a24ee5c94">More...</a><br/></td></tr>
+<tr class="separator:a14c9d587be35f80de08d3a3a24ee5c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab5094e73ef3cc50816b8f6122b33bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#aab5094e73ef3cc50816b8f6122b33bba">Unique</a> ()</td></tr>
 <tr class="separator:aab5094e73ef3cc50816b8f6122b33bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa395795e41daa102a9f0007e93bd18f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#aa395795e41daa102a9f0007e93bd18f3">IsSorted</a> ()</td></tr>
@@ -233,6 +237,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47c1b7e47d459d296a301906ba3f6257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a47c1b7e47d459d296a301906ba3f6257">Assign</a> (const T *)</td></tr>
 <tr class="memdesc:a47c1b7e47d459d296a301906ba3f6257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from a pointer. <a class="el" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff" title="Logical size of the array. ">Size()</a> elements are copied.  <a href="#a47c1b7e47d459d296a301906ba3f6257">More...</a><br/></td></tr>
 <tr class="separator:a47c1b7e47d459d296a301906ba3f6257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8964bb62385a6a5b5927c5db5143dbc0"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a8964bb62385a6a5b5927c5db5143dbc0">begin</a> () const </td></tr>
+<tr class="separator:a8964bb62385a6a5b5927c5db5143dbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ac859f23a8384683c6970778bce02c"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a74ac859f23a8384683c6970778bce02c">end</a> () const </td></tr>
+<tr class="separator:a74ac859f23a8384683c6970778bce02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ada4c57e881a84fd055e2b792eb5879"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Array.html#a3ada4c57e881a84fd055e2b792eb5879">MemoryUsage</a> () const </td></tr>
 <tr class="separator:a3ada4c57e881a84fd055e2b792eb5879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -417,7 +425,7 @@ template&lt;class T&gt; </div>
 
 <p>Append element to array, resize if necessary. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00368">368</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00376">376</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -447,7 +455,7 @@ template&lt;class T&gt; </div>
 
 <p>Append another array to this array, resize if necessary. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00376">376</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00384">384</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +485,34 @@ template&lt;class T&gt; </div>
 
 <p>Copy data from a pointer. <a class="el" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff" title="Logical size of the array. ">Size()</a> elements are copied. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00510">510</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00518">518</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8964bb62385a6a5b5927c5db5143dbc0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classmfem_1_1Array.html">mfem::Array</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00218">218</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -564,7 +599,7 @@ template&lt;class T &gt; </div>
 
 <p>Delete whole array. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00455">455</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00463">463</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -594,7 +629,7 @@ template&lt;class T&gt; </div>
 
 <p>Delete the first 'el' entry. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00440">440</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00448">448</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -627,6 +662,33 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a74ac859f23a8384683c6970778bce02c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classmfem_1_1Array.html">mfem::Array</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00219">219</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae34ff5104ab26897a75d09b4f0452d04"></a>
 <div class="memitem">
 <div class="memproto">
@@ -653,7 +715,7 @@ template&lt;class T&gt; </div>
 
 <p>Return the first index where 'el' is found; return -1 if not found. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00429">429</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00437">437</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -755,7 +817,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00491">491</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00499">499</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -805,7 +867,7 @@ template&lt;class T &gt; </div>
 
 <p>Return the last element in the array. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00403">403</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00411">411</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -832,7 +894,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00410">410</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00418">418</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +992,7 @@ template&lt;class T&gt; </div>
 
 <p>Make this <a class="el" href="classmfem_1_1Array.html">Array</a> a reference to a pointer. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00466">466</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00474">474</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -960,7 +1022,7 @@ template&lt;class T&gt; </div>
 
 <p>Make this <a class="el" href="classmfem_1_1Array.html">Array</a> a reference to 'master'. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00478">478</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00486">486</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1069,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00213">213</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00221">221</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1175,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00501">501</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00509">509</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1205,7 @@ template&lt;class T &gt; </div>
 
 <p>Access element. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00352">352</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00360">360</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1173,7 +1235,7 @@ template&lt;class T &gt; </div>
 
 <p>Access const element. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00360">360</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00368">368</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1253,7 +1315,7 @@ template&lt;class T&gt; </div>
 
 <p>Prepend an element to the array, resize if necessary. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00390">390</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00398">398</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1367,7 +1429,7 @@ template&lt;class T &gt; </div>
 
 <p>Change logical size of the array, keep existing entries. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00323">323</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00331">331</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1407,7 +1469,7 @@ template&lt;class T&gt; </div>
 
 <p>Same as <a class="el" href="classmfem_1_1Array.html#a566edbabee3d4f0d7ce15cbc638021ca" title="Change logical size of the array, keep existing entries. ">SetSize(int)</a> plus initialize new entries with 'initval'. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00334">334</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00342">342</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1469,6 +1531,38 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a14c9d587be35f80de08d3a3a24ee5c94"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;class Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmfem_1_1Array.html">mfem::Array</a>&lt; T &gt;::Sort </td>
+          <td>(</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>cmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sorts the array using the supplied comparison function object. </p>
+
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00193">193</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a55c4ce80778bad4f1dd517685bff604d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1493,7 +1587,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Changes the ownership of the the data. </p>
+<p>Changes the ownership of the data. </p>
 
 <p>Definition at line <a class="el" href="array_8hpp_source.html#l00099">99</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
@@ -1546,7 +1640,7 @@ template&lt;class T&gt; </div>
 
 <p>Append element when it is not yet in the array, return index. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00417">417</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00425">425</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1668,7 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 <p>Removes duplicities from a sorted array. This requires operator== to be defined for T. </p>
 
-<p>Definition at line <a class="el" href="array_8hpp_source.html#l00193">193</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<p>Definition at line <a class="el" href="array_8hpp_source.html#l00197">197</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
 
 </div>
 </div>
@@ -1622,7 +1716,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 16 2016 15:49:13 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 30 2016 10:43:29 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

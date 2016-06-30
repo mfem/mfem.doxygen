@@ -13,8 +13,17 @@ var searchData=
   ['af_5foffsets',['Af_offsets',['../classmfem_1_1Hybridization.html#ac1f476d40c61bf5990457fe1b95f939c',1,'mfem::Hybridization']]],
   ['ai',['AI',['../classmfem_1_1UMFPackSolver.html#a96611a6fe58a1850f43270729c1f04f9',1,'mfem::UMFPackSolver']]],
   ['aj',['AJ',['../classmfem_1_1UMFPackSolver.html#a3575efe4ed7573055991ce3aace36dbf',1,'mfem::UMFPackSolver']]],
+  ['aligned_5fsize',['aligned_size',['../structmfem_1_1TVector.html#a058de9aa862c4c633a4a98db0f860a7d',1,'mfem::TVector']]],
   ['allocsize',['allocsize',['../classmfem_1_1BaseArray.html#a91d619cd44900ce0e055273e885ec45d',1,'mfem::BaseArray::allocsize()'],['../classmfem_1_1Vector.html#af15d6f387a15ea59511f7c21a48936cc',1,'mfem::Vector::allocsize()']]],
+  ['alpha',['alpha',['../ex15_8cpp.html#adeedc97114c5a704906c8e26bdbd2451',1,'alpha():&#160;ex15.cpp'],['../ex15p_8cpp.html#adeedc97114c5a704906c8e26bdbd2451',1,'alpha():&#160;ex15p.cpp']]],
+  ['aniso_5festimator',['aniso_estimator',['../classmfem_1_1ThresholdRefiner.html#a43b7bc485c658623086ba7e4fd2ff179',1,'mfem::ThresholdRefiner']]],
+  ['aniso_5fflags',['aniso_flags',['../classmfem_1_1ZienkiewiczZhuEstimator.html#abba1c891901ec5d495353cfb28a04fa8',1,'mfem::ZienkiewiczZhuEstimator']]],
+  ['anisotropic',['anisotropic',['../classmfem_1_1ZienkiewiczZhuEstimator.html#a097ab401def75be79ac1fcd68f6ad674',1,'mfem::ZienkiewiczZhuEstimator']]],
+  ['aptr_5f',['APtr_',['../classmfem_1_1SuperLUSolver.html#a7c67c675d11abbf38f3a4c6ba4a7e982',1,'mfem::SuperLUSolver']]],
+  ['assembled_5fdata',['assembled_data',['../classmfem_1_1TBilinearForm.html#a919058d52e3dd0167d6b42baf60e5ca3',1,'mfem::TBilinearForm']]],
   ['association',['association',['../classmfem_1_1VisItFieldInfo.html#a2bc9aacb039b285130341159cd517c03',1,'mfem::VisItFieldInfo']]],
+  ['attrib',['attrib',['../structmfem_1_1TElementTransformation_1_1Result_3_016_00_01NE_01_4.html#a844396391c5e51b688bed8479e0bd115',1,'mfem::TElementTransformation::Result&lt; 6, NE &gt;']]],
   ['attribute',['attribute',['../classmfem_1_1Element.html#a00df91e5febb7200cd5addc303a52f85',1,'mfem::Element::attribute()'],['../structmfem_1_1NCMesh_1_1Edge.html#a83ebc0a70ca5ecd6dc1e24e028d94cac',1,'mfem::NCMesh::Edge::attribute()'],['../structmfem_1_1NCMesh_1_1Face.html#ab5335d4fac164e8fa809537dc4b21967',1,'mfem::NCMesh::Face::attribute()'],['../structmfem_1_1NCMesh_1_1Element.html#aea98bd2662eb60edfce0ed01f98085b8',1,'mfem::NCMesh::Element::attribute()'],['../classmfem_1_1ElementTransformation.html#adcbe93689e9f88e401464c49f0d4fb2e',1,'mfem::ElementTransformation::Attribute()']]],
-  ['attributes',['attributes',['../classmfem_1_1Mesh.html#af90b0afb96358056d9beae25806dab47',1,'mfem::Mesh']]]
+  ['attributes',['attributes',['../classmfem_1_1Mesh.html#af90b0afb96358056d9beae25806dab47',1,'mfem::Mesh']]],
+  ['aux_5fpm_5fstore',['aux_pm_store',['../classmfem_1_1ParNCMesh.html#aa9ee519962553bce5db83fc86165eeae',1,'mfem::ParNCMesh']]]
 ];

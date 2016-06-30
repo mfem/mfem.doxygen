@@ -8,7 +8,6 @@ var searchData=
   ['socketstream_2ehpp',['socketstream.hpp',['../socketstream_8hpp.html',1,'']]],
   ['solvers_2ecpp',['solvers.cpp',['../solvers_8cpp.html',1,'']]],
   ['solvers_2ehpp',['solvers.hpp',['../solvers_8hpp.html',1,'']]],
-  ['sort_5fpairs_2ecpp',['sort_pairs.cpp',['../sort__pairs_8cpp.html',1,'']]],
   ['sort_5fpairs_2ehpp',['sort_pairs.hpp',['../sort__pairs_8hpp.html',1,'']]],
   ['sparsemat_2ecpp',['sparsemat.cpp',['../sparsemat_8cpp.html',1,'']]],
   ['sparsemat_2ehpp',['sparsemat.hpp',['../sparsemat_8hpp.html',1,'']]],
@@ -17,5 +16,7 @@ var searchData=
   ['stable3d_2ecpp',['stable3d.cpp',['../stable3d_8cpp.html',1,'']]],
   ['stable3d_2ehpp',['stable3d.hpp',['../stable3d_8hpp.html',1,'']]],
   ['staticcond_2ecpp',['staticcond.cpp',['../staticcond_8cpp.html',1,'']]],
-  ['staticcond_2ehpp',['staticcond.hpp',['../staticcond_8hpp.html',1,'']]]
+  ['staticcond_2ehpp',['staticcond.hpp',['../staticcond_8hpp.html',1,'']]],
+  ['superlu_2ecpp',['superlu.cpp',['../superlu_8cpp.html',1,'']]],
+  ['superlu_2ehpp',['superlu.hpp',['../superlu_8hpp.html',1,'']]]
 ];

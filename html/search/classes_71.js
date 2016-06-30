@@ -9,6 +9,5 @@ var searchData=
   ['quadraticfecollection',['QuadraticFECollection',['../classmfem_1_1QuadraticFECollection.html',1,'mfem']]],
   ['quadraticposdiscont2dfecollection',['QuadraticPosDiscont2DFECollection',['../classmfem_1_1QuadraticPosDiscont2DFECollection.html',1,'mfem']]],
   ['quadraticposfecollection',['QuadraticPosFECollection',['../classmfem_1_1QuadraticPosFECollection.html',1,'mfem']]],
-  ['quadrilateral',['Quadrilateral',['../classmfem_1_1Quadrilateral.html',1,'mfem']]],
-  ['quadrisectedelement',['QuadrisectedElement',['../classmfem_1_1QuadrisectedElement.html',1,'mfem']]]
+  ['quadrilateral',['Quadrilateral',['../classmfem_1_1Quadrilateral.html',1,'mfem']]]
 ];

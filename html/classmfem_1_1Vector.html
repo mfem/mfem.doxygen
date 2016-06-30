@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.1</span>
+   &#160;<span id="projectnumber">v3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -132,7 +132,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2d4862c3b17301436806e7d91698ffd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a vector from an input stream.  <a href="#a2d4862c3b17301436806e7d91698ffd0">More...</a><br/></td></tr>
 <tr class="separator:a2d4862c3b17301436806e7d91698ffd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e67bd3ee82db59573950d19897c149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ac1e67bd3ee82db59573950d19897c149">SetSize</a> (int s)</td></tr>
-<tr class="memdesc:ac1e67bd3ee82db59573950d19897c149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the vector if the new size is different.  <a href="#ac1e67bd3ee82db59573950d19897c149">More...</a><br/></td></tr>
+<tr class="memdesc:ac1e67bd3ee82db59573950d19897c149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the vector if the new size is different.  <a href="#ac1e67bd3ee82db59573950d19897c149">More...</a><br/></td></tr>
 <tr class="separator:ac1e67bd3ee82db59573950d19897c149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a631158f850b835e3a7ec3359b44d1d40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a631158f850b835e3a7ec3359b44d1d40">SetData</a> (double *d)</td></tr>
 <tr class="separator:a631158f850b835e3a7ec3359b44d1d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,7 +285,7 @@ Friends</h2></td></tr>
 <tr class="memitem:afab8821f67b068fd29c8dee586a16020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afab8821f67b068fd29c8dee586a16020">add</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v1, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v2, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="memdesc:afab8821f67b068fd29c8dee586a16020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do v = v1 + v2.  <a href="#afab8821f67b068fd29c8dee586a16020">More...</a><br/></td></tr>
 <tr class="separator:afab8821f67b068fd29c8dee586a16020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7c4ac2998d0a1f2b6c19026aec5bd5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#aa7c4ac2998d0a1f2b6c19026aec5bd5c">add</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v1, double alpha, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v2, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
+<tr class="memitem:aa7c4ac2998d0a1f2b6c19026aec5bd5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#aa7c4ac2998d0a1f2b6c19026aec5bd5c">add</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v1, double <a class="el" href="ex15p_8cpp.html#adeedc97114c5a704906c8e26bdbd2451">alpha</a>, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v2, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="memdesc:aa7c4ac2998d0a1f2b6c19026aec5bd5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do v = v1 + alpha * v2.  <a href="#aa7c4ac2998d0a1f2b6c19026aec5bd5c">More...</a><br/></td></tr>
 <tr class="separator:aa7c4ac2998d0a1f2b6c19026aec5bd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42e4f1cebe28f9eeab99796c343000d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a42e4f1cebe28f9eeab99796c343000d9">add</a> (const double a, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;z)</td></tr>
@@ -376,8 +376,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates vector of size s. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Entries are not initialized to zero! </dd></dl>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00245">245</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00249">249</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +416,7 @@ Friends</h2></td></tr>
 
 <p>Creates a vector referencing an array of doubles, owned by someone else. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00052">52</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00053">53</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -442,7 +443,7 @@ Friends</h2></td></tr>
 
 <p>Destroys vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00317">317</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00321">321</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +592,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Count the number of entries in the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> for which isfinite is false, i.e. the entry is a NaN or +/-Inf. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00217">217</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00219">219</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -618,7 +619,7 @@ Friends</h2></td></tr>
 
 <p>Destroy a vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00278">278</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00282">282</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -638,7 +639,7 @@ Friends</h2></td></tr>
 
 <p>Compute the Euclidean distance to another vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00738">738</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00733">733</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +704,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00088">88</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00090">90</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -853,7 +854,7 @@ Friends</h2></td></tr>
 
 <p>Load a vector from an input stream. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00062">62</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00063">63</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -878,7 +879,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00078">78</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00080">80</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -897,7 +898,7 @@ Friends</h2></td></tr>
 
 <p>Returns the maximal element of the vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00700">700</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00695">695</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -946,7 +947,7 @@ Friends</h2></td></tr>
 
 <p>Returns the minimal element of the vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00713">713</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00708">708</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1002,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00072">72</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00074">74</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1020,7 +1021,7 @@ Friends</h2></td></tr>
 
 <p>Returns the l_1 norm of the vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00662">662</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00659">659</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -1078,7 +1079,7 @@ Friends</h2></td></tr>
 
 <p>Returns the l_p norm of the vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00674">674</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00669">669</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1104,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00092">92</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00094">94</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1128,7 +1129,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00090">90</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00092">92</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1157,7 @@ Friends</h2></td></tr>
 
 <p>Sets value in vector. Index i = 0 .. size-1. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00288">288</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00292">292</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1185,7 @@ Friends</h2></td></tr>
 
 <p>Sets value in vector. Index i = 0 .. size-1. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00296">296</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00300">300</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1395,7 +1396,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00094">94</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00096">96</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1521,7 +1522,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00067">67</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00069">69</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1557,7 +1558,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00069">69</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00071">71</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1583,9 +1584,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Resizes the vector if the new size is different. </p>
+<p>Resize the vector if the new size is different. </p>
+<dl class="section warning"><dt>Warning</dt><dd>New entries are not initialized! </dd></dl>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00259">259</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00263">263</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1726,7 +1728,7 @@ Friends</h2></td></tr>
 
 <p>Returns the size of the vector. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00084">84</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00086">86</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1754,7 +1756,7 @@ Friends</h2></td></tr>
 
 <p>Changes the ownership of the data; after the call the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> is empty. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00097">97</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00099">99</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1781,7 +1783,7 @@ Friends</h2></td></tr>
 
 <p>Changes the ownership of the data; after the call the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> is empty. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00101">101</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00103">103</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -1800,7 +1802,7 @@ Friends</h2></td></tr>
 
 <p>Return the sum of the vector entries. </p>
 
-<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00726">726</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8cpp_source.html#l00721">721</a> of file <a class="el" href="vector_8cpp_source.html">vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -1828,7 +1830,7 @@ Friends</h2></td></tr>
 
 <p>Swap the contents of two Vectors. </p>
 
-<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00304">304</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vector_8hpp_source.html#l00308">308</a> of file <a class="el" href="vector_8hpp_source.html">vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -2201,7 +2203,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 16 2016 15:49:13 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 30 2016 10:43:29 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

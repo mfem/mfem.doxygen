@@ -5,8 +5,14 @@ var searchData=
   ['v1',['v1',['../classmfem_1_1MINRESSolver.html#ab60e80ece047e7a8e7508c242bc34e57',1,'mfem::MINRESSolver']]],
   ['v_5fmeshoffsets',['v_meshOffsets',['../classmfem_1_1NURBSExtension.html#a6c47b34fdcafa07ff732f7ae9bf93e80',1,'mfem::NURBSExtension']]],
   ['v_5fspaceoffsets',['v_spaceOffsets',['../classmfem_1_1NURBSExtension.html#aed316e5ecd1eef1496cac02e52b7d593',1,'mfem::NURBSExtension']]],
-  ['vdim',['vdim',['../classmfem_1_1VectorCoefficient.html#ab925726693546a0bd5438826c24f2ff6',1,'mfem::VectorCoefficient::vdim()'],['../classmfem_1_1MatrixCoefficient.html#a98a9ecb046e29ec9e36d3f8066cab304',1,'mfem::MatrixCoefficient::vdim()'],['../classmfem_1_1FiniteElementSpace.html#a8042c7fe51b14548061950e909583e87',1,'mfem::FiniteElementSpace::vdim()']]],
+  ['val_5fdofs',['val_dofs',['../structmfem_1_1FieldEvaluator_1_1AData_3_011_00_01NE_01_4.html#ab1e0c086322e9c5465dc7b4b30785888',1,'mfem::FieldEvaluator::AData&lt; 1, NE &gt;::val_dofs()'],['../structmfem_1_1FieldEvaluator_1_1AData_3_012_00_01NE_01_4.html#adf3737f195e08e586b6301a0a8795be3',1,'mfem::FieldEvaluator::AData&lt; 2, NE &gt;::val_dofs()'],['../structmfem_1_1FieldEvaluator_1_1AData_3_013_00_01NE_01_4.html#aefcc60aec63f5401e075e53605418585',1,'mfem::FieldEvaluator::AData&lt; 3, NE &gt;::val_dofs()']]],
+  ['val_5fqpts',['val_qpts',['../structmfem_1_1FieldEvaluator_1_1AData_3_011_00_01NE_01_4.html#aacf9a3de4ab38239ccc7a7d621ed1650',1,'mfem::FieldEvaluator::AData&lt; 1, NE &gt;::val_qpts()'],['../structmfem_1_1FieldEvaluator_1_1AData_3_013_00_01NE_01_4.html#a0a5cf9cef27001b8fa94a6ea14004088',1,'mfem::FieldEvaluator::AData&lt; 3, NE &gt;::val_qpts()']]],
+  ['value',['value',['../classmfem_1_1TConstantCoefficient.html#a306ae925330fda2066cfbad9fef7b100',1,'mfem::TConstantCoefficient']]],
+  ['values',['values',['../classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a494b9b5517f228f76075fd2491b9b41a',1,'mfem::ParNCMesh::ElementValueMessage']]],
+  ['vdim',['vdim',['../classmfem_1_1VectorCoefficient.html#ab925726693546a0bd5438826c24f2ff6',1,'mfem::VectorCoefficient::vdim()'],['../classmfem_1_1MatrixCoefficient.html#a98a9ecb046e29ec9e36d3f8066cab304',1,'mfem::MatrixCoefficient::vdim()'],['../classmfem_1_1FiniteElementSpace.html#a8042c7fe51b14548061950e909583e87',1,'mfem::FiniteElementSpace::vdim()'],['../classmfem_1_1TBilinearForm.html#a918deef6369fb4a03b6256fc6b5a5587',1,'mfem::TBilinearForm::vdim()'],['../classmfem_1_1FieldEvaluator.html#a258ae4d12eeed73333ffc7320b65297d',1,'mfem::FieldEvaluator::vdim()']]],
   ['vdofs',['vdofs',['../classmfem_1_1BilinearForm.html#ae3ad7f3dbb28c34b26aec6f4189f88cb',1,'mfem::BilinearForm']]],
+  ['vec_5fdim',['vec_dim',['../classmfem_1_1DynamicVectorLayout.html#a583519cf8159cbe06183178720049f33',1,'mfem::DynamicVectorLayout::vec_dim()'],['../classmfem_1_1VectorLayout.html#a126c8d6e5fe5efb631084fe967a1e5fb',1,'mfem::VectorLayout::vec_dim()'],['../classmfem_1_1ScalarLayout.html#a632e52b328b47e5a01982bd3bd749497',1,'mfem::ScalarLayout::vec_dim()']]],
+  ['vec_5flayout',['vec_layout',['../classmfem_1_1FieldEvaluator__base.html#a04c89004f63bfef822276680294bbbde',1,'mfem::FieldEvaluator_base']]],
   ['vertex',['vertex',['../structmfem_1_1NCMesh_1_1Node.html#a4b7bd24642b110713b6cfd2ed46a9171',1,'mfem::NCMesh::Node']]],
   ['vertex_5fgroup',['vertex_group',['../classmfem_1_1ParNCMesh.html#a9bb7b148e8a088f303c0509c519a4fed',1,'mfem::ParNCMesh']]],
   ['vertex_5fnodeid',['vertex_nodeId',['../classmfem_1_1NCMesh.html#a78e18a036c8860a7f9daafa868d052eb',1,'mfem::NCMesh']]],
@@ -16,5 +22,7 @@ var searchData=
   ['vertices',['vertices',['../classmfem_1_1Mesh.html#a004c7eff16b8b8a5e4a2a055dbe1eef2',1,'mfem::Mesh']]],
   ['visit_5fmax_5flevels_5fof_5fdetail',['visit_max_levels_of_detail',['../classmfem_1_1VisItDataCollection.html#afbf88ff9505a2100ac65f19633a61184',1,'mfem::VisItDataCollection']]],
   ['volume',['Volume',['../classmfem_1_1Geometry.html#a257185f305e8c049cf7a19581697750e',1,'mfem::Geometry']]],
-  ['vshape',['vshape',['../classmfem_1_1VectorFiniteElement.html#afe1819c139ba089e35e49f4b512fcbc7',1,'mfem::VectorFiniteElement']]]
+  ['vshape',['vshape',['../classmfem_1_1VectorFiniteElement.html#afe1819c139ba089e35e49f4b512fcbc7',1,'mfem::VectorFiniteElement']]],
+  ['vtk_5fquadratic_5fhex',['vtk_quadratic_hex',['../classmfem_1_1Mesh.html#aaf6c3805501b4614e290816f92b8efe3',1,'mfem::Mesh']]],
+  ['vtk_5fquadratic_5ftet',['vtk_quadratic_tet',['../classmfem_1_1Mesh.html#a1aafd8ba5cafe05dde6680d5aafd50d2',1,'mfem::Mesh']]]
 ];

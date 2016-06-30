@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['named_5fifstream',['named_ifstream',['../classmfem_1_1named__ifstream.html',1,'mfem']]],
   ['ncfaceinfo',['NCFaceInfo',['../structmfem_1_1Mesh_1_1NCFaceInfo.html',1,'mfem::Mesh']]],
   ['nclist',['NCList',['../structmfem_1_1NCMesh_1_1NCList.html',1,'mfem::NCMesh']]],
   ['ncmesh',['NCMesh',['../classmfem_1_1NCMesh.html',1,'mfem']]],
@@ -15,7 +16,9 @@ var searchData=
   ['nd_5ftriangleelement',['ND_TriangleElement',['../classmfem_1_1ND__TriangleElement.html',1,'mfem']]],
   ['nedelec1hexfiniteelement',['Nedelec1HexFiniteElement',['../classmfem_1_1Nedelec1HexFiniteElement.html',1,'mfem']]],
   ['nedelec1tetfiniteelement',['Nedelec1TetFiniteElement',['../classmfem_1_1Nedelec1TetFiniteElement.html',1,'mfem']]],
+  ['neighborderefinementmessage',['NeighborDerefinementMessage',['../classmfem_1_1ParNCMesh_1_1NeighborDerefinementMessage.html',1,'mfem::ParNCMesh']]],
   ['neighbordofmessage',['NeighborDofMessage',['../classmfem_1_1NeighborDofMessage.html',1,'mfem']]],
+  ['neighborelementrankmessage',['NeighborElementRankMessage',['../classmfem_1_1ParNCMesh_1_1NeighborElementRankMessage.html',1,'mfem::ParNCMesh']]],
   ['neighborrefinementmessage',['NeighborRefinementMessage',['../classmfem_1_1ParNCMesh_1_1NeighborRefinementMessage.html',1,'mfem::ParNCMesh']]],
   ['neighborrowreply',['NeighborRowReply',['../classmfem_1_1NeighborRowReply.html',1,'mfem']]],
   ['neighborrowrequest',['NeighborRowRequest',['../classmfem_1_1NeighborRowRequest.html',1,'mfem']]],
