@@ -2,41 +2,63 @@
 \form#1:$ x_i = \sum_j | A_{i, j} | $
 \form#2:$ D_{ii} = \sum_j |A_{ij}| $
 \form#3:$ D_{ii} = \sum_j A_{ij} $
-\form#4:$ \| f \|_{Lp} = ( \int_\Omega | f |^p d\Omega)^{1/p} $
-\form#5:$ \| f \|_{Lp} = ( \sum_i \| f_i \|_{Lp}^p )^{1/p} $
-\form#6:$ (\int_{\Omega} (*this) \psi_i)/(\int_{\Omega} \psi_i) $
-\form#7:$ \psi_i $
-\form#8:$ A $
-\form#9:\[ A = P^T \hat{A} P, \]
-\form#10:$ P $
-\form#11:$ \hat{A} $
-\form#12:$ R $
-\form#13:$ R P = I $
-\form#14:$ C $
-\form#15:$ \operatorname{Ker}(C) = \operatorname{Im}(P) $
-\form#16:$ A x = b $
-\form#17:$ \lambda $
-\form#18:\[ (C \hat{A}^{-1} C^T) \lambda = C \hat{A}^{-1} R^T b \]
-\form#19:$ x = R \hat{A}^{-1} (R^T b - C^T \lambda) $
-\form#20:$ H = (C \hat{A}^{-1} C^T) $
-\form#21:\[ C = \begin{pmatrix} 0 & C_b \end{pmatrix}, \]
-\form#22:$ H $
-\form#23:\[ H = C_b S_b^{-1} C_b^T, \]
-\form#24:$ S_b $
-\form#25:\[ S_b = \hat{A}_b - \hat{A}_{bf} \hat{A}_{f}^{-1} \hat{A}_{fb}. \]
-\form#26:$ L(v) = (g \cdot n, v) $
-\form#27:$ L(v) = (g \dot tau, v) $
-\form#28:$ (f, v)_{\Omega} $
-\form#29:$ (f, v \cdot n)_{\partial\Omega} $
-\form#30:$ L(v) = (n \times f, v) $
-\form#31:$(\mu/2)(\bar{I}_1 - dim) + (K/2)(det(J)/g - 1)^2$
-\form#32:$\bar{I}_1 = (det(J))^{-2/dim} Tr(J J^t)$
-\form#33:$\mu$
-\form#34:\[ A = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix} \begin{array}{l} \text{-- groups: element interior/private DOFs} \\ \text{-- interface: element boundary/exposed DOFs} \end{array} \]
-\form#35:$ A_1 $
-\form#36:\[ \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix} = \begin{pmatrix} B_1 \\ B_2 \end{pmatrix} \]
-\form#37:\[ S_{22} X_2 = B_2 - A_{21} A_{11}^{-1} B_1 \]
-\form#38:$ S_{22} $
-\form#39:\[ S_{22} = A_{22} - A_{21} A_{11}^{-1} A_{12}. \]
-\form#40:$ X_1 $
-\form#41:\[ X_1 = A_{11}^{-1} ( B_1 - A_{12} X_2 ). \]
+\form#4:\[ - \left< \{ \tau(u) \}, [v] \right> + \alpha \left< \{ \tau(v) \}, [u] \right> + \kappa \left< h^{-1} \{ \lambda + 2 \mu \} [u], [v] \right> \]
+\form#5:$ \left<u, v\right> = \int_{F} u \cdot v $
+\form#6:$ F $
+\form#7:$ F_b $
+\form#8:$ K $
+\form#9:$ F_i $
+\form#10:$ K_1 $
+\form#11:$ K_2 $
+\form#12:$ \tau(u) $
+\form#13:$ \tau(u) = \sigma(u) \cdot \vec{n} $
+\form#14:$ \sigma(u) $
+\form#15:$ \vec{n} $
+\form#16:\[ - \left< \{ \sigma(u) \cdot \vec{n} \}, [v] \right> + \alpha \left< \{ \sigma(v) \cdot \vec{n} \}, [u] \right> + \kappa \left< h^{-1} \{ \lambda + 2 \mu \} [u], [v] \right> \]
+\form#17:\[ \begin{split} \sigma(u) &= \lambda \nabla \cdot u I + 2 \mu \varepsilon(u) \\ &= \lambda \nabla \cdot u I + 2 \mu \frac{1}{2} (\nabla u + \nabla u^T) \\ &= \lambda \nabla \cdot u I + \mu (\nabla u + \nabla u^T) \end{split} \]
+\form#18:$ I $
+\form#19:$ \lambda $
+\form#20:$ \mu $
+\form#21:$ u, v $
+\form#22:$ \alpha $
+\form#23:$ \kappa $
+\form#24:$\alpha = 0$
+\form#25:$\alpha = -1$
+\form#26:$\alpha = 1$
+\form#27:$ \| f \|_{Lp} = ( \int_\Omega | f |^p d\Omega)^{1/p} $
+\form#28:$ \| f \|_{Lp} = ( \sum_i \| f_i \|_{Lp}^p )^{1/p} $
+\form#29:$ (\int_{\Omega} (*this) \psi_i)/(\int_{\Omega} \psi_i) $
+\form#30:$ \psi_i $
+\form#31:$ A $
+\form#32:\[ A = P^T \hat{A} P, \]
+\form#33:$ P $
+\form#34:$ \hat{A} $
+\form#35:$ R $
+\form#36:$ R P = I $
+\form#37:$ C $
+\form#38:$ \operatorname{Ker}(C) = \operatorname{Im}(P) $
+\form#39:$ A x = b $
+\form#40:\[ (C \hat{A}^{-1} C^T) \lambda = C \hat{A}^{-1} R^T b \]
+\form#41:$ x = R \hat{A}^{-1} (R^T b - C^T \lambda) $
+\form#42:$ H = (C \hat{A}^{-1} C^T) $
+\form#43:\[ C = \begin{pmatrix} 0 & C_b \end{pmatrix}, \]
+\form#44:$ H $
+\form#45:\[ H = C_b S_b^{-1} C_b^T, \]
+\form#46:$ S_b $
+\form#47:\[ S_b = \hat{A}_b - \hat{A}_{bf} \hat{A}_{f}^{-1} \hat{A}_{fb}. \]
+\form#48:$ L(v) = (g \cdot n, v) $
+\form#49:$ L(v) = (g \cdot \tau, v) $
+\form#50:$ (f, v)_{\Omega} $
+\form#51:$ (f, v \cdot n)_{\partial\Omega} $
+\form#52:$ L(v) = (n \times f, v) $
+\form#53:$(\mu/2)(\bar{I}_1 - dim) + (K/2)(det(J)/g - 1)^2$
+\form#54:$\bar{I}_1 = (det(J))^{-2/dim} Tr(J J^t)$
+\form#55:$\mu$
+\form#56:\[ A = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix} \begin{array}{l} \text{-- groups: element interior/private DOFs} \\ \text{-- interface: element boundary/exposed DOFs} \end{array} \]
+\form#57:$ A_1 $
+\form#58:\[ \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix} = \begin{pmatrix} B_1 \\ B_2 \end{pmatrix} \]
+\form#59:\[ S_{22} X_2 = B_2 - A_{21} A_{11}^{-1} B_1 \]
+\form#60:$ S_{22} $
+\form#61:\[ S_{22} = A_{22} - A_{21} A_{11}^{-1} A_{12}. \]
+\form#62:$ X_1 $
+\form#63:\[ X_1 = A_{11}^{-1} ( B_1 - A_{12} X_2 ). \]
