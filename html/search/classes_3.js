@@ -2,6 +2,7 @@ var searchData=
 [
   ['datacollection',['DataCollection',['../classmfem_1_1DataCollection.html',1,'mfem']]],
   ['deltacoefficient',['DeltaCoefficient',['../classmfem_1_1DeltaCoefficient.html',1,'mfem']]],
+  ['deltalfintegrator',['DeltaLFIntegrator',['../classmfem_1_1DeltaLFIntegrator.html',1,'mfem']]],
   ['densematrix',['DenseMatrix',['../classmfem_1_1DenseMatrix.html',1,'mfem']]],
   ['densematrixeigensystem',['DenseMatrixEigensystem',['../classmfem_1_1DenseMatrixEigensystem.html',1,'mfem']]],
   ['densematrixinverse',['DenseMatrixInverse',['../classmfem_1_1DenseMatrixInverse.html',1,'mfem']]],
@@ -25,6 +26,7 @@ var searchData=
   ['divdivintegrator',['DivDivIntegrator',['../classmfem_1_1DivDivIntegrator.html',1,'mfem']]],
   ['divergencefreeprojector',['DivergenceFreeProjector',['../classmfem_1_1miniapps_1_1DivergenceFreeProjector.html',1,'mfem::miniapps']]],
   ['divergenceinterpolator',['DivergenceInterpolator',['../classmfem_1_1DivergenceInterpolator.html',1,'mfem']]],
+  ['domainintegrator',['DomainIntegrator',['../classDomainIntegrator.html',1,'']]],
   ['domainlfintegrator',['DomainLFIntegrator',['../classmfem_1_1DomainLFIntegrator.html',1,'mfem']]],
   ['dsmoother',['DSmoother',['../classmfem_1_1DSmoother.html',1,'mfem']]],
   ['dstable',['DSTable',['../classmfem_1_1DSTable.html',1,'mfem']]],

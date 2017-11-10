@@ -6,6 +6,7 @@ var searchData=
   ['matrix_2ehpp',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
   ['mem_5falloc_2ehpp',['mem_alloc.hpp',['../mem__alloc_8hpp.html',1,'']]],
   ['mesh_2dexplorer_2ecpp',['mesh-explorer.cpp',['../mesh-explorer_8cpp.html',1,'']]],
+  ['mesh_2doptimizer_2ecpp',['mesh-optimizer.cpp',['../mesh-optimizer_8cpp.html',1,'']]],
   ['mesh_2ecpp',['mesh.cpp',['../mesh_8cpp.html',1,'']]],
   ['mesh_2ehpp',['mesh.hpp',['../mesh_8hpp.html',1,'']]],
   ['mesh_5fextras_2ecpp',['mesh_extras.cpp',['../mesh__extras_8cpp.html',1,'']]],

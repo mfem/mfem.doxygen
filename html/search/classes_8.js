@@ -2,7 +2,6 @@ var searchData=
 [
   ['identityinterpolator',['IdentityInterpolator',['../classmfem_1_1IdentityInterpolator.html',1,'mfem']]],
   ['identityoperator',['IdentityOperator',['../classmfem_1_1IdentityOperator.html',1,'mfem']]],
-  ['idgenerator',['IdGenerator',['../classmfem_1_1IdGenerator.html',1,'mfem']]],
   ['ifgzstream',['ifgzstream',['../classmfem_1_1ifgzstream.html',1,'mfem']]],
   ['igzstream',['igzstream',['../classmfem_1_1igzstream.html',1,'mfem']]],
   ['implicitmidpointsolver',['ImplicitMidpointSolver',['../classmfem_1_1ImplicitMidpointSolver.html',1,'mfem']]],
@@ -12,11 +11,20 @@ var searchData=
   ['integrationrule',['IntegrationRule',['../classmfem_1_1IntegrationRule.html',1,'mfem']]],
   ['integrationrules',['IntegrationRules',['../classmfem_1_1IntegrationRules.html',1,'mfem']]],
   ['intrulecoefficient',['IntRuleCoefficient',['../structmfem_1_1IntRuleCoefficient.html',1,'mfem']]],
+  ['invariantsevaluator2d',['InvariantsEvaluator2D',['../classmfem_1_1InvariantsEvaluator2D.html',1,'mfem']]],
+  ['invariantsevaluator2d_3c_20double_20_3e',['InvariantsEvaluator2D&lt; double &gt;',['../classmfem_1_1InvariantsEvaluator2D.html',1,'mfem']]],
+  ['invariantsevaluator3d',['InvariantsEvaluator3D',['../classmfem_1_1InvariantsEvaluator3D.html',1,'mfem']]],
+  ['invariantsevaluator3d_3c_20double_20_3e',['InvariantsEvaluator3D&lt; double &gt;',['../classmfem_1_1InvariantsEvaluator3D.html',1,'mfem']]],
+  ['inverseelementtransformation',['InverseElementTransformation',['../classmfem_1_1InverseElementTransformation.html',1,'mfem']]],
   ['inverseharmonicmodel',['InverseHarmonicModel',['../classmfem_1_1InverseHarmonicModel.html',1,'mfem']]],
   ['inverseintegrator',['InverseIntegrator',['../classmfem_1_1InverseIntegrator.html',1,'mfem']]],
   ['irrotationalprojector',['IrrotationalProjector',['../classmfem_1_1miniapps_1_1IrrotationalProjector.html',1,'mfem::miniapps']]],
   ['isockstream',['isockstream',['../classmfem_1_1isockstream.html',1,'mfem']]],
   ['isoparametrictransformation',['IsoparametricTransformation',['../classmfem_1_1IsoparametricTransformation.html',1,'mfem']]],
   ['iterativesolver',['IterativeSolver',['../classmfem_1_1IterativeSolver.html',1,'mfem']]],
-  ['iterator',['Iterator',['../classmfem_1_1HashTable_1_1Iterator.html',1,'mfem::HashTable']]]
+  ['iterator',['iterator',['../classmfem_1_1HashTable_1_1iterator.html',1,'mfem::HashTable']]],
+  ['iterator',['iterator',['../classmfem_1_1BlockArray_1_1iterator.html',1,'mfem::BlockArray']]],
+  ['iterator_5fbase',['iterator_base',['../classmfem_1_1BlockArray_1_1iterator__base.html',1,'mfem::BlockArray']]],
+  ['iterator_5fbase_3c_20blockarray_2c_20t_20_3e',['iterator_base&lt; BlockArray, T &gt;',['../classmfem_1_1BlockArray_1_1iterator__base.html',1,'mfem::BlockArray']]],
+  ['iterator_5fbase_3c_20const_20blockarray_2c_20const_20t_20_3e',['iterator_base&lt; const BlockArray, const T &gt;',['../classmfem_1_1BlockArray_1_1iterator__base.html',1,'mfem::BlockArray']]]
 ];

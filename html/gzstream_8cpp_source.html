@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -294,7 +295,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classmfem_1_1ifgzstream.html#a3161826efde62f17548cd929f73b148e">  202</a></span>&#160;<a class="code" href="classmfem_1_1ifgzstream.html#a3161826efde62f17548cd929f73b148e">ifgzstream::ifgzstream</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *name, <span class="keywordtype">char</span> <span class="keyword">const</span> *mode)</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;   : <a class="code" href="namespacestd.html">std</a>::istream(0)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;   <span class="keywordtype">bool</span> err;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">err</a>;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_GZSTREAM</span></div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1ifgzstream.html#a40a4edd1f6903c64ffc878651cd763d7">maybe_gz</a>(name))</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;   {</div>
@@ -332,7 +333,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="classmfem_1_1ofgzstream.html#a49375bff816afa1b05007b8c8c2df525">  240</a></span>&#160;<a class="code" href="classmfem_1_1ofgzstream.html#a49375bff816afa1b05007b8c8c2df525">ofgzstream::ofgzstream</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *name, <span class="keywordtype">char</span> <span class="keyword">const</span> *mode)</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;   : <a class="code" href="namespacestd.html">std</a>::ostream(0)</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordtype">bool</span> err;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">err</a>;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_GZSTREAM</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   <span class="keywordflow">if</span> (strchr(mode,<span class="charliteral">&#39;z&#39;</span>))</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   {</div>
@@ -344,7 +345,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;   {</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      std::filebuf *fbuf = <span class="keyword">new</span> std::filebuf;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      err = fbuf != fbuf-&gt;<a class="code" href="classmfem_1_1gzstreambuf.html#ab37992e4d62f00d386644c7886674710">open</a>(name, std::ios_base::out); <span class="comment">// &#39;mode&#39; is ignored</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      err = fbuf != fbuf-&gt;<a class="code" href="classmfem_1_1gzstreambuf.html#ab37992e4d62f00d386644c7886674710">open</a>(name, <a class="code" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">std::ios_base::out</a>); <span class="comment">// &#39;mode&#39; is ignored</span></div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <a class="code" href="classmfem_1_1ofgzstream.html#aa643c985f8750d9834c25d3cc94e761d">buf</a> = fbuf;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;   <span class="keywordflow">if</span> (!err)</div>
@@ -376,7 +377,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div><div class="ttdef"><b>Definition:</b> <a href="CodeDocumentation_8dox_source.html#l00001">CodeDocumentation.dox:1</a></div></div>
 <div class="ttc" id="classmfem_1_1gzstreambuf_html_a74e046e5bd74862500597ad6507b4776"><div class="ttname"><a href="classmfem_1_1gzstreambuf.html#a74e046e5bd74862500597ad6507b4776">mfem::gzstreambuf::is_open</a></div><div class="ttdeci">int is_open()</div><div class="ttdef"><b>Definition:</b> <a href="gzstream_8hpp_source.html#l00580">gzstream.hpp:580</a></div></div>
 <div class="ttc" id="gzstream_8hpp_html"><div class="ttname"><a href="gzstream_8hpp.html">gzstream.hpp</a></div></div>
+<div class="ttc" id="namespacemfem_html_afe45941924fb90ca83973228a5fb8c64"><div class="ttname"><a href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">mfem::err</a></div><div class="ttdeci">OutStream err(std::cerr)</div><div class="ttdoc">Global stream used by the library for standard error output. Initially it uses the same std::streambu...</div><div class="ttdef"><b>Definition:</b> <a href="globals_8hpp_source.html#l00069">globals.hpp:69</a></div></div>
 <div class="ttc" id="classmfem_1_1ifgzstream_html_a87fa30a1ae7e340033ab174fa937c5bf"><div class="ttname"><a href="classmfem_1_1ifgzstream.html#a87fa30a1ae7e340033ab174fa937c5bf">mfem::ifgzstream::buf</a></div><div class="ttdeci">std::streambuf * buf</div><div class="ttdef"><b>Definition:</b> <a href="gzstream_8hpp_source.html#l00646">gzstream.hpp:646</a></div></div>
+<div class="ttc" id="namespacemfem_html_a0e01b55edfba5e7b3e4d6913cee6be45"><div class="ttname"><a href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a></div><div class="ttdeci">OutStream out(std::cout)</div><div class="ttdoc">Global stream used by the library for standard output. Initially it uses the same std::streambuf as s...</div><div class="ttdef"><b>Definition:</b> <a href="globals_8hpp_source.html#l00064">globals.hpp:64</a></div></div>
 <div class="ttc" id="classmfem_1_1gzstreambuf_html_afc2cd731a525c6b20d79ec94328b01ea"><div class="ttname"><a href="classmfem_1_1gzstreambuf.html#afc2cd731a525c6b20d79ec94328b01ea">mfem::gzstreambuf::underflow</a></div><div class="ttdeci">virtual int underflow()</div><div class="ttdef"><b>Definition:</b> <a href="gzstream_8cpp_source.html#l00076">gzstream.cpp:76</a></div></div>
 <div class="ttc" id="classmfem_1_1gzstreambuf_html_acf3f5df54ba7544107bd8a7b0a206b2f"><div class="ttname"><a href="classmfem_1_1gzstreambuf.html#acf3f5df54ba7544107bd8a7b0a206b2f">mfem::gzstreambuf::sync</a></div><div class="ttdeci">virtual int sync()</div><div class="ttdef"><b>Definition:</b> <a href="gzstream_8cpp_source.html#l00142">gzstream.cpp:142</a></div></div>
 <div class="ttc" id="classmfem_1_1gzstreambuf_html_ab37992e4d62f00d386644c7886674710"><div class="ttname"><a href="classmfem_1_1gzstreambuf.html#ab37992e4d62f00d386644c7886674710">mfem::gzstreambuf::open</a></div><div class="ttdeci">gzstreambuf * open(char const *name, char const *mode)</div><div class="ttdef"><b>Definition:</b> <a href="gzstream_8cpp_source.html#l00046">gzstream.cpp:46</a></div></div>
@@ -384,7 +387,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:09 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:57 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

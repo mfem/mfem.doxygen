@@ -2,6 +2,8 @@ var searchData=
 [
   ['parmetis',['PARMETIS',['../namespacemfem_1_1superlu.html#a1b4995f6996ce77a7ebf44b5b5b31c75a86406135d7e17a103c22a821d89de094',1,'mfem::superlu']]],
   ['petsc_5fmataij',['PETSC_MATAIJ',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288ac413ab1b41d0f8ac8d5367948210b77b',1,'mfem::Operator']]],
+  ['petsc_5fmatgeneric',['PETSC_MATGENERIC',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a90d024f742e7251e0c2c7859ebc9a95f',1,'mfem::Operator']]],
+  ['petsc_5fmathypre',['PETSC_MATHYPRE',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a4922890a0fdb0d26b4f17b94f97d55cb',1,'mfem::Operator']]],
   ['petsc_5fmatis',['PETSC_MATIS',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a27a98183bfa38f02418c5559e87c6bfc',1,'mfem::Operator']]],
   ['petsc_5fmatnest',['PETSC_MATNEST',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288ac6ccd4cee4911480b3bc263f8eb5ccc9',1,'mfem::Operator']]],
   ['petsc_5fmatshell',['PETSC_MATSHELL',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288adfad89eb3d9cf6064b50fb7a823aa363',1,'mfem::Operator']]],

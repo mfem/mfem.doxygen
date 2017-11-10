@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -118,10 +119,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    blueprint specification. */</span><span class="comment"></span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/** SidreDataCollection provides an HDF5-based file format for visualization or</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    restart capability.  This functionality is aimed primarily at customers of</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    LLNL&#39;s ASC Toolkit that run problems at extreme scales.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    LLNL&#39;s axom project that run problems at extreme scales.</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    For more information, see:</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    - LLNL ASC toolkit Sidre component (to be open-sourced), http://goo.gl/cZyJdn</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    - Sidre component of LLNL&#39;s axom project (to be open-sourced), http://goo.gl/cZyJdn</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    - LLNL conduit/blueprint library, https://github.com/LLNL/conduit</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    - HDF5 library, https://support.hdfgroup.org/HDF5</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span></div>
@@ -280,12 +281,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">       With this constructor, the SidreDataCollection does not own the Sidre</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">       DataStore.</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">       @note No mesh or fields are read from the given DataGroups. The mesh has</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">       @note No mesh or fields are read from the given Groups. The mesh has</span></div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">       to be set with SetMesh() and fields registered with RegisterField().</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#a60c701f499fe3efda67cb461f5490a66">SidreDataCollection</a>(<span class="keyword">const</span> std::string&amp; collection_name,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                       asctoolkit::sidre::DataGroup * global_grp,</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                       asctoolkit::sidre::DataGroup * domain_grp,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                       axom::sidre::Group * global_grp,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                       axom::sidre::Group * domain_grp,</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                       <span class="keywordtype">bool</span> owns_mesh_data = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
@@ -323,7 +324,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#a62018ee0b4de65d410e3595fda5b1e4d">RegisterField</a>(<span class="keyword">const</span> std::string &amp;field_name, <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf,</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                      <span class="keyword">const</span> std::string &amp;buffer_name,</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                      asctoolkit::sidre::SidreLength offset);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                      axom::sidre::SidreLength offset);</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">   /// Set the name of the mesh nodes field.</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"></span><span class="comment">   /** This name will be used by SetMesh() to register the mesh nodes, if not</span></div>
@@ -355,11 +356,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">       reset to valid groups in the datastore.</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">       @sa Load(const std::string &amp;path, const std::string &amp;protocol).</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#a8aa4f9ac237d1197c820b49e17124f16">SetGroupPointers</a>(asctoolkit::sidre::DataGroup * global_grp,</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                         asctoolkit::sidre::DataGroup * domain_grp);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#a10cbb1a95a73d8494dd8414f59cc0795">SetGroupPointers</a>(axom::sidre::Group * global_grp,</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                         axom::sidre::Group * domain_grp);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#a9775d46eda00b12c3f2be7582ac9e4cc">  269</a></span>&#160;   asctoolkit::sidre::DataGroup * <a class="code" href="classmfem_1_1SidreDataCollection.html#a9775d46eda00b12c3f2be7582ac9e4cc">GetBPGroup</a>() { <span class="keywordflow">return</span> bp_grp; }</div>
-<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#a042754dd37ca69cdea3c9dcd333b470d">  270</a></span>&#160;   asctoolkit::sidre::DataGroup * <a class="code" href="classmfem_1_1SidreDataCollection.html#a042754dd37ca69cdea3c9dcd333b470d">GetBPIndexGroup</a>() { <span class="keywordflow">return</span> bp_index_grp; }</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#a00cbcf2785bfe9c1d354dea7852051b7">  269</a></span>&#160;   axom::sidre::Group * <a class="code" href="classmfem_1_1SidreDataCollection.html#a00cbcf2785bfe9c1d354dea7852051b7">GetBPGroup</a>() { <span class="keywordflow">return</span> bp_grp; }</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#a4539272e57ee0816889b4c3da48ecae4">  270</a></span>&#160;   axom::sidre::Group * <a class="code" href="classmfem_1_1SidreDataCollection.html#a4539272e57ee0816889b4c3da48ecae4">GetBPIndexGroup</a>() { <span class="keywordflow">return</span> bp_index_grp; }</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">   /// Prepare the DataStore for writing</span></div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"></span>   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#ab8738f76361a60bb01cdd40189c94b2c">PrepareToSave</a>();</div>
@@ -412,199 +413,212 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">   /** @name Methods for named buffer access and manipulation. */</span><span class="comment"></span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">   ///@{</span></div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"></span><span class="comment"></span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">   /** @brief Get a pointer to the sidre::DataView holding the named buffer for</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">   /** @brief Get a pointer to the sidre::View holding the named buffer for</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">       @a buffer_name. */</span><span class="comment"></span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">   /** If such named buffer is not allocated, the method returns NULL.</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">       @note To access the underlying pointer, use DataView::getData().</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">       @note To query the size of the buffer, use DataView::getNumElements().</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">       @note To access the underlying pointer, use View::getData().</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">       @note To query the size of the buffer, use View::getNumElements().</span></div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;   asctoolkit::sidre::DataView *</div>
-<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#aef420bb6b4af278dd92cc227aadf5587">  330</a></span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aef420bb6b4af278dd92cc227aadf5587">GetNamedBuffer</a>(<span class="keyword">const</span> std::string&amp; buffer_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">   </span>{ <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#ac78bf0daedc8a623631e8bcde05e654e">named_buffers_grp</a>()-&gt;getView(buffer_name); }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">   /// Return newly allocated or existing named buffer for @a buffer_name.</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment"></span><span class="comment">   /** The buffer is stored in the named_buffers group. If the currently</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">       allocated buffer size is smaller than @a sz, then the buffer is</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">       reallocated with size @a sz, destroying its contents.</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">       @note To access the underlying pointer, use DataView::getData().</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;   asctoolkit::sidre::DataView *</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#a5c46d6f9e4062606438c0a843b7d4274">AllocNamedBuffer</a>(<span class="keyword">const</span> std::string&amp; buffer_name,</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    asctoolkit::sidre::SidreLength sz,</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    asctoolkit::sidre::TypeID type =</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                       asctoolkit::sidre::DOUBLE_ID);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">   /// Deallocate the named buffer @a buffer_name.</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#a2ac58cdfee4af25d0c21184f08246715">  346</a></span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#a2ac58cdfee4af25d0c21184f08246715">FreeNamedBuffer</a>(<span class="keyword">const</span> std::string&amp; buffer_name)</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;   { <a class="code" href="classmfem_1_1SidreDataCollection.html#ac78bf0daedc8a623631e8bcde05e654e">named_buffers_grp</a>()-&gt;destroyViewAndData(buffer_name); }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;   axom::sidre::View *</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#aedc0174cab208193ac9c2710e962a283">  330</a></span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aedc0174cab208193ac9c2710e962a283">GetNamedBuffer</a>(<span class="keyword">const</span> std::string&amp; buffer_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">   </span>{</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#a691d85c0a11722f213bebedf32d860aa">named_buffers_grp</a>()-&gt;hasView(buffer_name)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;             ? <a class="code" href="classmfem_1_1SidreDataCollection.html#a691d85c0a11722f213bebedf32d860aa">named_buffers_grp</a>()-&gt;getView(buffer_name)</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;             : NULL;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;   }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">   /// Return newly allocated or existing named buffer for @a buffer_name.</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment"></span><span class="comment">   /** The buffer is stored in the named_buffers group. If the currently</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">       allocated buffer size is smaller than @a sz, then the buffer is</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">       reallocated with size @a sz, destroying its contents.</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">       @note To access the underlying pointer, use View::getData().</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;   axom::sidre::View *</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aadf3fcf1c3b188c105a6f1224f243555">AllocNamedBuffer</a>(<span class="keyword">const</span> std::string&amp; buffer_name,</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    axom::sidre::SidreLength sz,</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    axom::sidre::TypeID type =</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                       axom::sidre::DOUBLE_ID);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">   ///@}</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   <span class="comment">// Used if the Sidre data collection is providing the datastore itself.</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">bool</span> m_owns_datastore;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;   <span class="comment">// TODO - Need to evaluate if this bool member can be combined with own_data</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   <span class="comment">// in parent data collection class. m_owns_mesh_data indicates whether the</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;   <span class="comment">// Sidre dc owns the mesh element data and node positions gf. The DC base</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;   <span class="comment">// class own_data indicates if the dc owns the mesh object pointer itself and</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;   <span class="comment">// GF objects. Can we use one flag and just have DC own all objects vs none?</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">bool</span> m_owns_mesh_data;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;   <span class="comment">// Name to be used for registering the mesh nodes in the SidreDataCollection.</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   <span class="comment">// This name is used by SetMesh() and can be overwritten by the method</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   <span class="comment">// SetMeshNodesName().</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   <span class="comment">// Default value: &quot;mesh_nodes&quot;.</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   std::string m_meshNodesGFName;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   <span class="comment">// If the data collection owns the datastore, it will store a pointer to it.</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;   <span class="comment">// Otherwise, this pointer is NULL.</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;   asctoolkit::sidre::DataStore * m_datastore_ptr;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">   /// Deallocate the named buffer @a buffer_name.</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="classmfem_1_1SidreDataCollection.html#a2ac58cdfee4af25d0c21184f08246715">  350</a></span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1SidreDataCollection.html#a2ac58cdfee4af25d0c21184f08246715">FreeNamedBuffer</a>(<span class="keyword">const</span> std::string&amp; buffer_name)</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;   { <a class="code" href="classmfem_1_1SidreDataCollection.html#a691d85c0a11722f213bebedf32d860aa">named_buffers_grp</a>()-&gt;destroyViewAndData(buffer_name); }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">   ///@}</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   <span class="comment">// Used if the Sidre data collection is providing the datastore itself.</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">bool</span> m_owns_datastore;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;   <span class="comment">// TODO - Need to evaluate if this bool member can be combined with own_data</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;   <span class="comment">// in parent data collection class. m_owns_mesh_data indicates whether the</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;   <span class="comment">// Sidre dc owns the mesh element data and node positions gf. The DC base</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;   <span class="comment">// class own_data indicates if the dc owns the mesh object pointer itself and</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   <span class="comment">// GF objects. Can we use one flag and just have DC own all objects vs none?</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">bool</span> m_owns_mesh_data;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   <span class="comment">// Name to be used for registering the mesh nodes in the SidreDataCollection.</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;   <span class="comment">// This name is used by SetMesh() and can be overwritten by the method</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   <span class="comment">// SetMeshNodesName().</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;   <span class="comment">// Default value: &quot;mesh_nodes&quot;.</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;   std::string m_meshNodesGFName;</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;   MPI_Comm m_comm;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;   <span class="comment">// If the data collection owns the datastore, it will store a pointer to it.</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;   <span class="comment">// Otherwise, this pointer is NULL.</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   axom::sidre::DataStore * m_datastore_ptr;</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   asctoolkit::sidre::DataGroup *<a class="code" href="classmfem_1_1SidreDataCollection.html#ac78bf0daedc8a623631e8bcde05e654e">named_buffers_grp</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   asctoolkit::sidre::DataView *</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aef8bfc44f1615aa53d011f533c5411b1">alloc_view</a>(asctoolkit::sidre::DataGroup *grp,</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;              <span class="keyword">const</span> std::string &amp;view_name);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   MPI_Comm m_comm;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;   axom::sidre::Group *<a class="code" href="classmfem_1_1SidreDataCollection.html#a691d85c0a11722f213bebedf32d860aa">named_buffers_grp</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   asctoolkit::sidre::DataView *</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aef8bfc44f1615aa53d011f533c5411b1">alloc_view</a>(asctoolkit::sidre::DataGroup *grp,</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;              <span class="keyword">const</span> std::string &amp;view_name,</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;              <span class="keyword">const</span> asctoolkit::sidre::DataType &amp;dtype);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;   asctoolkit::sidre::DataGroup *</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#a2561b10ac2081eba1f3993f43a66199f">alloc_group</a>(asctoolkit::sidre::DataGroup *grp,</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;               <span class="keyword">const</span> std::string &amp;group_name);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   axom::sidre::View *</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aa1f75a589516df99c8f74ef91a8d4cfd">alloc_view</a>(axom::sidre::Group *grp,</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;              <span class="keyword">const</span> std::string &amp;view_name);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;   axom::sidre::View *</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aa1f75a589516df99c8f74ef91a8d4cfd">alloc_view</a>(axom::sidre::Group *grp,</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;              <span class="keyword">const</span> std::string &amp;view_name,</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;              <span class="keyword">const</span> axom::sidre::DataType &amp;dtype);</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;   <span class="comment">// return the filename based on prefix_path, collection name and cycle.</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;   std::string <a class="code" href="classmfem_1_1SidreDataCollection.html#a26148adfd9f86918b64ff2c3210d210c">get_file_path</a>(<span class="keyword">const</span> std::string &amp;filename) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;   <span class="comment">// If the data collection does not own the datastore, it will need pointers</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   <span class="comment">// to the blueprint and blueprint index group to use.</span></div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;   asctoolkit::sidre::DataGroup * bp_grp;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;   asctoolkit::sidre::DataGroup * bp_index_grp;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;   <span class="comment">// This is stored for convenience.</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;   asctoolkit::sidre::DataGroup * named_bufs_grp;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;   <span class="comment">// Private helper functions</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;   <span class="keywordtype">void</span> RegisterFieldInBPIndex(<span class="keyword">const</span> std::string&amp; field_name,</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                               <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;   <span class="keywordtype">void</span> DeregisterFieldInBPIndex(<span class="keyword">const</span> std::string &amp; field_name);</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">   /** @brief Return a string with the conduit blueprint name for the given</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="comment">       Element::Type. */</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;   std::string getElementName( <a class="code" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a> elementEnum );</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;   axom::sidre::Group *</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;   <a class="code" href="classmfem_1_1SidreDataCollection.html#aff32b287a38b0184638fc459e0937fb8">alloc_group</a>(axom::sidre::Group *grp,</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;               <span class="keyword">const</span> std::string &amp;group_name);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;   <span class="comment">// return the filename based on prefix_path, collection name and cycle.</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   std::string <a class="code" href="classmfem_1_1SidreDataCollection.html#a26148adfd9f86918b64ff2c3210d210c">get_file_path</a>(<span class="keyword">const</span> std::string &amp;filename) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;   <span class="comment">// If the data collection does not own the datastore, it will need pointers</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;   <span class="comment">// to the blueprint and blueprint index group to use.</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;   axom::sidre::Group * bp_grp;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;   axom::sidre::Group * bp_index_grp;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;   <span class="comment">// This is stored for convenience.</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;   axom::sidre::Group * named_bufs_grp;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;   <span class="comment">// Private helper functions</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;   <span class="keywordtype">void</span> RegisterFieldInBPIndex(<span class="keyword">const</span> std::string&amp; field_name,</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                               <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;   <span class="keywordtype">void</span> DeregisterFieldInBPIndex(<span class="keyword">const</span> std::string &amp; field_name);</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">    * \brief A private helper function to set up the views associated with the</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="comment">       data of a scalar valued grid function in the blueprint style.</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="comment">    * \pre gf is not null</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="comment">    * \note This function is expected to be called by RegisterField()</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="comment">    * \note Handles cases where hierarchy is already set up,</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="comment">    *      where the data was allocated by this data collection</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="comment">    *      and where the gridfunction data is external to Sidre</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;   <span class="keywordtype">void</span> addScalarBasedGridFunction(<span class="keyword">const</span> std::string&amp; field_name,</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                                   <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a>* gf,</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                                   <span class="keyword">const</span> std::string &amp;buffer_name,</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                                   asctoolkit::sidre::SidreLength offset);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="comment">    * \brief A private helper function to set up the views associated with the</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="comment">       data of a vector valued grid function in the blueprint style.</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="comment">    * \pre gf is not null</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="comment">    * \note This function is expected to be called by RegisterField()</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="comment">    * \note Handles cases where hierarchy is already set up,</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment">    *      where the data was allocated by this data collection</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment">    *      and where the gridfunction data is external to Sidre</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;   <span class="keywordtype">void</span> addVectorBasedGridFunction(<span class="keyword">const</span> std::string&amp; field_name,</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                                   <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a>* gf,</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                                   <span class="keyword">const</span> std::string &amp;buffer_name,</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                                   asctoolkit::sidre::SidreLength offset);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment">   /// Sets up the four main mesh blueprint groups.</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintStubs(<span class="keywordtype">bool</span> hasBP);</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;state&#39; group.</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintState(<span class="keywordtype">bool</span> hasBP);</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;coordsets&#39; group.</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintCoordset(<span class="keywordtype">bool</span> hasBP);</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;topologies&#39; group.</span></div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="comment">    * This method is called from SetMesh().</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="comment">    * \param mesh_name The name of the topology.</span></div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="comment">    * \note Valid values for @a mesh_name are &quot;mesh&quot; and &quot;boundary&quot; and the</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">            former has to be created with this method before the latter.</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintTopologies(<span class="keywordtype">bool</span> hasBP, <span class="keyword">const</span> std::string&amp; mesh_name);</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="comment">   /// Verifies that the contents of the mesh blueprint data is valid.</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> verifyMeshBlueprint();</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;};</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="comment">   /** @brief Return a string with the conduit blueprint name for the given</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">       Element::Type. */</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;   std::string getElementName( <a class="code" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a> elementEnum );</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="comment">    * \brief A private helper function to set up the views associated with the</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="comment">       data of a scalar valued grid function in the blueprint style.</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="comment">    * \pre gf is not null</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="comment">    * \note This function is expected to be called by RegisterField()</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="comment">    * \note Handles cases where hierarchy is already set up,</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="comment">    *      where the data was allocated by this data collection</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="comment">    *      and where the gridfunction data is external to Sidre</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;   <span class="keywordtype">void</span> addScalarBasedGridFunction(<span class="keyword">const</span> std::string&amp; field_name,</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                                   <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a>* gf,</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                                   <span class="keyword">const</span> std::string &amp;buffer_name,</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                                   axom::sidre::SidreLength offset);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="comment">    * \brief A private helper function to set up the views associated with the</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment">       data of a vector valued grid function in the blueprint style.</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment">    * \pre gf is not null</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">    * \note This function is expected to be called by RegisterField()</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment">    * \note Handles cases where hierarchy is already set up,</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment">    *      where the data was allocated by this data collection</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">    *      and where the gridfunction data is external to Sidre</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;   <span class="keywordtype">void</span> addVectorBasedGridFunction(<span class="keyword">const</span> std::string&amp; field_name,</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                                   <a class="code" href="classmfem_1_1GridFunction.html">GridFunction</a>* gf,</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                                   <span class="keyword">const</span> std::string &amp;buffer_name,</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                                   axom::sidre::SidreLength offset);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">   /// Sets up the four main mesh blueprint groups.</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintStubs(<span class="keywordtype">bool</span> hasBP);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;state&#39; group.</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintState(<span class="keywordtype">bool</span> hasBP);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;coordsets&#39; group.</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintCoordset(<span class="keywordtype">bool</span> hasBP);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;topologies&#39; group.</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">    * This method is called from SetMesh().</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="comment">    * \param mesh_name The name of the topology.</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment">    * \note Valid values for @a mesh_name are &quot;mesh&quot; and &quot;boundary&quot; and the</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="comment">            former has to be created with this method before the latter.</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintTopologies(<span class="keywordtype">bool</span> hasBP, <span class="keyword">const</span> std::string&amp; mesh_name);</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;} <span class="comment">// end namespace mfem</span></div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a5c46d6f9e4062606438c0a843b7d4274"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a5c46d6f9e4062606438c0a843b7d4274">mfem::SidreDataCollection::AllocNamedBuffer</a></div><div class="ttdeci">asctoolkit::sidre::DataView * AllocNamedBuffer(const std::string &amp;buffer_name, asctoolkit::sidre::SidreLength sz, asctoolkit::sidre::TypeID type=asctoolkit::sidre::DOUBLE_ID)</div><div class="ttdoc">Return newly allocated or existing named buffer for buffer_name. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00194">sidredatacollection.cpp:194</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a2561b10ac2081eba1f3993f43a66199f"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a2561b10ac2081eba1f3993f43a66199f">mfem::SidreDataCollection::alloc_group</a></div><div class="ttdeci">asctoolkit::sidre::DataGroup * alloc_group(asctoolkit::sidre::DataGroup *grp, const std::string &amp;group_name)</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00161">sidredatacollection.cpp:161</a></div></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="comment">   /// Sets up the mesh blueprint &#39;adjacencies&#39; group.</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment"></span><span class="comment">   /**</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="comment">    * \param hasBP Indicates whether the blueprint has already been set up.</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment">    * \note Only valid when using parallel meshes</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;   <span class="keywordtype">void</span> createMeshBlueprintAdjacencies(<span class="keywordtype">bool</span> hasBP);</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="comment">   /// Verifies that the contents of the mesh blueprint data is valid.</span></div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> verifyMeshBlueprint();</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;};</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;} <span class="comment">// end namespace mfem</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_aa1f75a589516df99c8f74ef91a8d4cfd"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#aa1f75a589516df99c8f74ef91a8d4cfd">mfem::SidreDataCollection::alloc_view</a></div><div class="ttdeci">axom::sidre::View * alloc_view(axom::sidre::Group *grp, const std::string &amp;view_name)</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00124">sidredatacollection.cpp:124</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a00cbcf2785bfe9c1d354dea7852051b7"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a00cbcf2785bfe9c1d354dea7852051b7">mfem::SidreDataCollection::GetBPGroup</a></div><div class="ttdeci">axom::sidre::Group * GetBPGroup()</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00269">sidredatacollection.hpp:269</a></div></div>
 <div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00044">mesh.hpp:44</a></div></div>
 <div class="ttc" id="classmfem_1_1GridFunction_html"><div class="ttname"><a href="classmfem_1_1GridFunction.html">mfem::GridFunction</a></div><div class="ttdoc">Class for grid function - Vector with associated FE space. </div><div class="ttdef"><b>Definition:</b> <a href="gridfunc_8hpp_source.html#l00027">gridfunc.hpp:27</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a5b88673b8b40eb4330b3c12677a49caf"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a5b88673b8b40eb4330b3c12677a49caf">mfem::SidreDataCollection::Load</a></div><div class="ttdeci">void Load(const std::string &amp;path, const std::string &amp;protocol)</div><div class="ttdoc">Load the Sidre DataStore from file. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00600">sidredatacollection.cpp:600</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a5b88673b8b40eb4330b3c12677a49caf"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a5b88673b8b40eb4330b3c12677a49caf">mfem::SidreDataCollection::Load</a></div><div class="ttdeci">void Load(const std::string &amp;path, const std::string &amp;protocol)</div><div class="ttdoc">Load the Sidre DataStore from file. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00689">sidredatacollection.cpp:689</a></div></div>
 <div class="ttc" id="classmfem_1_1DataCollection_html_a62b0bb74703ff5dc00f56e9d7f744113"><div class="ttname"><a href="classmfem_1_1DataCollection.html#a62b0bb74703ff5dc00f56e9d7f744113">mfem::DataCollection::SetCycle</a></div><div class="ttdeci">void SetCycle(int c)</div><div class="ttdoc">Set time cycle (for time-dependent simulations) </div><div class="ttdef"><b>Definition:</b> <a href="datacollection_8hpp_source.html#l00171">datacollection.hpp:171</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ac5fefd98423a510455a7d31141c23669"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ac5fefd98423a510455a7d31141c23669">mfem::SidreDataCollection::SetMesh</a></div><div class="ttdeci">virtual void SetMesh(Mesh *new_mesh)</div><div class="ttdoc">Set/change the mesh associated with the collection. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00498">sidredatacollection.cpp:498</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a042754dd37ca69cdea3c9dcd333b470d"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a042754dd37ca69cdea3c9dcd333b470d">mfem::SidreDataCollection::GetBPIndexGroup</a></div><div class="ttdeci">asctoolkit::sidre::DataGroup * GetBPIndexGroup()</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00270">sidredatacollection.hpp:270</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ac5fefd98423a510455a7d31141c23669"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ac5fefd98423a510455a7d31141c23669">mfem::SidreDataCollection::SetMesh</a></div><div class="ttdeci">virtual void SetMesh(Mesh *new_mesh)</div><div class="ttdoc">Set/change the mesh associated with the collection. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00583">sidredatacollection.cpp:583</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html_a62018ee0b4de65d410e3595fda5b1e4d"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a62018ee0b4de65d410e3595fda5b1e4d">mfem::SidreDataCollection::RegisterField</a></div><div class="ttdeci">virtual void RegisterField(const std::string &amp;field_name, GridFunction *gf)</div><div class="ttdoc">Register a GridFunction in the Sidre DataStore. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00210">sidredatacollection.hpp:210</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_aef420bb6b4af278dd92cc227aadf5587"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#aef420bb6b4af278dd92cc227aadf5587">mfem::SidreDataCollection::GetNamedBuffer</a></div><div class="ttdeci">asctoolkit::sidre::DataView * GetNamedBuffer(const std::string &amp;buffer_name) const </div><div class="ttdoc">Get a pointer to the sidre::DataView holding the named buffer for buffer_name. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00330">sidredatacollection.hpp:330</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_aef8bfc44f1615aa53d011f533c5411b1"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#aef8bfc44f1615aa53d011f533c5411b1">mfem::SidreDataCollection::alloc_view</a></div><div class="ttdeci">asctoolkit::sidre::DataView * alloc_view(asctoolkit::sidre::DataGroup *grp, const std::string &amp;view_name)</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00124">sidredatacollection.cpp:124</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html_a60c701f499fe3efda67cb461f5490a66"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a60c701f499fe3efda67cb461f5490a66">mfem::SidreDataCollection::SidreDataCollection</a></div><div class="ttdeci">SidreDataCollection(const std::string &amp;collection_name, Mesh *the_mesh=NULL, bool owns_mesh_data=false)</div><div class="ttdoc">Constructor that allocates and initializes a Sidre DataStore. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00034">sidredatacollection.cpp:34</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ada5650defa47e3727f976a68f0118c8f"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ada5650defa47e3727f976a68f0118c8f">mfem::SidreDataCollection::LoadExternalData</a></div><div class="ttdeci">void LoadExternalData(const std::string &amp;path)</div><div class="ttdoc">Load external data after registering externally owned fields. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00633">sidredatacollection.cpp:633</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a2ea13ddc7dc3e57d836999afac54675b"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a2ea13ddc7dc3e57d836999afac54675b">mfem::SidreDataCollection::DeregisterField</a></div><div class="ttdeci">virtual void DeregisterField(const std::string &amp;field_name)</div><div class="ttdoc">De-register field_name from the SidreDataCollection. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00983">sidredatacollection.cpp:983</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ac78bf0daedc8a623631e8bcde05e654e"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ac78bf0daedc8a623631e8bcde05e654e">mfem::SidreDataCollection::named_buffers_grp</a></div><div class="ttdeci">asctoolkit::sidre::DataGroup * named_buffers_grp() const </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00114">sidredatacollection.cpp:114</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a9775d46eda00b12c3f2be7582ac9e4cc"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a9775d46eda00b12c3f2be7582ac9e4cc">mfem::SidreDataCollection::GetBPGroup</a></div><div class="ttdeci">asctoolkit::sidre::DataGroup * GetBPGroup()</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00269">sidredatacollection.hpp:269</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ada5650defa47e3727f976a68f0118c8f"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ada5650defa47e3727f976a68f0118c8f">mfem::SidreDataCollection::LoadExternalData</a></div><div class="ttdeci">void LoadExternalData(const std::string &amp;path)</div><div class="ttdoc">Load external data after registering externally owned fields. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00722">sidredatacollection.cpp:722</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_aadf3fcf1c3b188c105a6f1224f243555"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#aadf3fcf1c3b188c105a6f1224f243555">mfem::SidreDataCollection::AllocNamedBuffer</a></div><div class="ttdeci">axom::sidre::View * AllocNamedBuffer(const std::string &amp;buffer_name, axom::sidre::SidreLength sz, axom::sidre::TypeID type=axom::sidre::DOUBLE_ID)</div><div class="ttdoc">Return newly allocated or existing named buffer for buffer_name. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00207">sidredatacollection.cpp:207</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a2ea13ddc7dc3e57d836999afac54675b"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a2ea13ddc7dc3e57d836999afac54675b">mfem::SidreDataCollection::DeregisterField</a></div><div class="ttdeci">virtual void DeregisterField(const std::string &amp;field_name)</div><div class="ttdoc">De-register field_name from the SidreDataCollection. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l01078">sidredatacollection.cpp:1078</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_aedc0174cab208193ac9c2710e962a283"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#aedc0174cab208193ac9c2710e962a283">mfem::SidreDataCollection::GetNamedBuffer</a></div><div class="ttdeci">axom::sidre::View * GetNamedBuffer(const std::string &amp;buffer_name) const </div><div class="ttdoc">Get a pointer to the sidre::View holding the named buffer for buffer_name. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00330">sidredatacollection.hpp:330</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html">mfem::SidreDataCollection</a></div><div class="ttdoc">Data collection with Sidre routines following the Conduit mesh blueprint specification. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00159">sidredatacollection.hpp:159</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html_af56901270b41685779258f66b64381f4"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#af56901270b41685779258f66b64381f4">mfem::SidreDataCollection::SetMeshNodesName</a></div><div class="ttdeci">void SetMeshNodesName(const std::string &amp;nodes_name)</div><div class="ttdoc">Set the name of the mesh nodes field. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00241">sidredatacollection.hpp:241</a></div></div>
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div><div class="ttdef"><b>Definition:</b> <a href="CodeDocumentation_8dox_source.html#l00001">CodeDocumentation.dox:1</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a4539272e57ee0816889b4c3da48ecae4"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a4539272e57ee0816889b4c3da48ecae4">mfem::SidreDataCollection::GetBPIndexGroup</a></div><div class="ttdeci">axom::sidre::Group * GetBPIndexGroup()</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00270">sidredatacollection.hpp:270</a></div></div>
 <div class="ttc" id="classmfem_1_1Element_html_aaac293c18ce91216ee202754eed37a78"><div class="ttname"><a href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">mfem::Element::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Constants for the classes derived from Element. </div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00037">element.hpp:37</a></div></div>
 <div class="ttc" id="datacollection_8hpp_html"><div class="ttname"><a href="datacollection_8hpp.html">datacollection.hpp</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a8aa4f9ac237d1197c820b49e17124f16"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a8aa4f9ac237d1197c820b49e17124f16">mfem::SidreDataCollection::SetGroupPointers</a></div><div class="ttdeci">void SetGroupPointers(asctoolkit::sidre::DataGroup *global_grp, asctoolkit::sidre::DataGroup *domain_grp)</div><div class="ttdoc">Reset the domain and global datastore group pointers. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00587">sidredatacollection.cpp:587</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a10cbb1a95a73d8494dd8414f59cc0795"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a10cbb1a95a73d8494dd8414f59cc0795">mfem::SidreDataCollection::SetGroupPointers</a></div><div class="ttdeci">void SetGroupPointers(axom::sidre::Group *global_grp, axom::sidre::Group *domain_grp)</div><div class="ttdoc">Reset the domain and global datastore group pointers. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00676">sidredatacollection.cpp:676</a></div></div>
 <div class="ttc" id="classmfem_1_1DataCollection_html"><div class="ttname"><a href="classmfem_1_1DataCollection.html">mfem::DataCollection</a></div><div class="ttdef"><b>Definition:</b> <a href="datacollection_8hpp_source.html#l00029">datacollection.hpp:29</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a91d3e484b85aface6268edb08e6a82dc"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a91d3e484b85aface6268edb08e6a82dc">mfem::SidreDataCollection::UpdateStateToDS</a></div><div class="ttdeci">void UpdateStateToDS()</div><div class="ttdoc">Updates the data store&#39;s cycle, time, and time-step variables with the values from the SidreDataColle...</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00655">sidredatacollection.cpp:655</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a98d72e5852a232b9d2a33c21506c0eb4"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a98d72e5852a232b9d2a33c21506c0eb4">mfem::SidreDataCollection::UpdateStateFromDS</a></div><div class="ttdeci">void UpdateStateFromDS()</div><div class="ttdoc">Updates the DataCollection&#39;s cycle, time, and time-step variables with the values from the data store...</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00648">sidredatacollection.cpp:648</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a91d3e484b85aface6268edb08e6a82dc"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a91d3e484b85aface6268edb08e6a82dc">mfem::SidreDataCollection::UpdateStateToDS</a></div><div class="ttdeci">void UpdateStateToDS()</div><div class="ttdoc">Updates the data store&#39;s cycle, time, and time-step variables with the values from the SidreDataColle...</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00744">sidredatacollection.cpp:744</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a98d72e5852a232b9d2a33c21506c0eb4"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a98d72e5852a232b9d2a33c21506c0eb4">mfem::SidreDataCollection::UpdateStateFromDS</a></div><div class="ttdeci">void UpdateStateFromDS()</div><div class="ttdoc">Updates the DataCollection&#39;s cycle, time, and time-step variables with the values from the data store...</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00737">sidredatacollection.cpp:737</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html_ad074b3cc0e1f6dcb3664da74cc3fdbe1"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ad074b3cc0e1f6dcb3664da74cc3fdbe1">mfem::SidreDataCollection::~SidreDataCollection</a></div><div class="ttdeci">virtual ~SidreDataCollection()</div><div class="ttdoc">Delete all owned data. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00094">sidredatacollection.cpp:94</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a26148adfd9f86918b64ff2c3210d210c"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a26148adfd9f86918b64ff2c3210d210c">mfem::SidreDataCollection::get_file_path</a></div><div class="ttdeci">std::string get_file_path(const std::string &amp;filename) const </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00177">sidredatacollection.cpp:177</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ab8738f76361a60bb01cdd40189c94b2c"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ab8738f76361a60bb01cdd40189c94b2c">mfem::SidreDataCollection::PrepareToSave</a></div><div class="ttdeci">virtual void PrepareToSave()</div><div class="ttdoc">Prepare the DataStore for writing. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00668">sidredatacollection.cpp:668</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a07ce4ea344e7d9bd49b14a36f1f26067"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a07ce4ea344e7d9bd49b14a36f1f26067">mfem::SidreDataCollection::Save</a></div><div class="ttdeci">virtual void Save()</div><div class="ttdoc">Save the collection to file. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00674">sidredatacollection.cpp:674</a></div></div>
-<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a2ac58cdfee4af25d0c21184f08246715"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a2ac58cdfee4af25d0c21184f08246715">mfem::SidreDataCollection::FreeNamedBuffer</a></div><div class="ttdeci">void FreeNamedBuffer(const std::string &amp;buffer_name)</div><div class="ttdoc">Deallocate the named buffer buffer_name. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00346">sidredatacollection.hpp:346</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a26148adfd9f86918b64ff2c3210d210c"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a26148adfd9f86918b64ff2c3210d210c">mfem::SidreDataCollection::get_file_path</a></div><div class="ttdeci">std::string get_file_path(const std::string &amp;filename) const </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00190">sidredatacollection.cpp:190</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_ab8738f76361a60bb01cdd40189c94b2c"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ab8738f76361a60bb01cdd40189c94b2c">mfem::SidreDataCollection::PrepareToSave</a></div><div class="ttdeci">virtual void PrepareToSave()</div><div class="ttdoc">Prepare the DataStore for writing. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00757">sidredatacollection.cpp:757</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_aff32b287a38b0184638fc459e0937fb8"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#aff32b287a38b0184638fc459e0937fb8">mfem::SidreDataCollection::alloc_group</a></div><div class="ttdeci">axom::sidre::Group * alloc_group(axom::sidre::Group *grp, const std::string &amp;group_name)</div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00169">sidredatacollection.cpp:169</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a07ce4ea344e7d9bd49b14a36f1f26067"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a07ce4ea344e7d9bd49b14a36f1f26067">mfem::SidreDataCollection::Save</a></div><div class="ttdeci">virtual void Save()</div><div class="ttdoc">Save the collection to file. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00763">sidredatacollection.cpp:763</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a2ac58cdfee4af25d0c21184f08246715"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a2ac58cdfee4af25d0c21184f08246715">mfem::SidreDataCollection::FreeNamedBuffer</a></div><div class="ttdeci">void FreeNamedBuffer(const std::string &amp;buffer_name)</div><div class="ttdoc">Deallocate the named buffer buffer_name. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00350">sidredatacollection.hpp:350</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html_a6127545eddf4f80232fb7a055edc91b2"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a6127545eddf4f80232fb7a055edc91b2">mfem::SidreDataCollection::SetComm</a></div><div class="ttdeci">void SetComm(MPI_Comm comm)</div><div class="ttdoc">Associate an MPI communicator with the collection. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00103">sidredatacollection.cpp:103</a></div></div>
 <div class="ttc" id="classmfem_1_1DataCollection_html_aba4f3c41d4f2cb716df6b952002db4f4"><div class="ttname"><a href="classmfem_1_1DataCollection.html#aba4f3c41d4f2cb716df6b952002db4f4">mfem::DataCollection::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the collection, used as a directory name when saving. </div><div class="ttdef"><b>Definition:</b> <a href="datacollection_8hpp_source.html#l00037">datacollection.hpp:37</a></div></div>
 <div class="ttc" id="classmfem_1_1SidreDataCollection_html_ac7fba2f2fe6b15f4648a5df55ec1d0a1"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#ac7fba2f2fe6b15f4648a5df55ec1d0a1">mfem::SidreDataCollection::Load</a></div><div class="ttdeci">virtual void Load(int cycle_=0)</div><div class="ttdoc">Load SidreDataCollection from file. </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8hpp_source.html#l00303">sidredatacollection.hpp:303</a></div></div>
+<div class="ttc" id="classmfem_1_1SidreDataCollection_html_a691d85c0a11722f213bebedf32d860aa"><div class="ttname"><a href="classmfem_1_1SidreDataCollection.html#a691d85c0a11722f213bebedf32d860aa">mfem::SidreDataCollection::named_buffers_grp</a></div><div class="ttdeci">axom::sidre::Group * named_buffers_grp() const </div><div class="ttdef"><b>Definition:</b> <a href="sidredatacollection_8cpp_source.html#l00114">sidredatacollection.cpp:114</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:58 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

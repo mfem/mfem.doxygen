@@ -4,6 +4,7 @@ var searchData=
   ['walk',['Walk',['../classmfem_1_1SparseMatrix.html#ac9576bd2a1bae1ba969657a317481714',1,'mfem::SparseMatrix']]],
   ['wantskipsharedmaster',['WantSkipSharedMaster',['../classmfem_1_1ParMesh.html#a43af712ffcf3ba54d2e3f4a777ab3871',1,'mfem::ParMesh']]],
   ['weight',['Weight',['../classmfem_1_1DenseMatrix.html#a12e6bf17d025304f82c93595f9bc6e80',1,'mfem::DenseMatrix::Weight()'],['../classmfem_1_1DeltaCoefficient.html#af2d7ac67bf90948527ab68d38106138c',1,'mfem::DeltaCoefficient::Weight()'],['../classmfem_1_1ElementTransformation.html#aa4ec517bc8aac5af4505d76d838aa4f6',1,'mfem::ElementTransformation::Weight()']]],
+  ['weight_5ffun',['weight_fun',['../mesh-optimizer_8cpp.html#a25f1e22a0f80ced97d8ca9fa2581448c',1,'weight_fun(const Vector &amp;x):&#160;mesh-optimizer.cpp'],['../pmesh-optimizer_8cpp.html#a25f1e22a0f80ced97d8ca9fa2581448c',1,'weight_fun(const Vector &amp;x):&#160;pmesh-optimizer.cpp']]],
   ['weights',['Weights',['../classmfem_1_1NURBSFiniteElement.html#a6800e0be327213697169fe0e4a897af4',1,'mfem::NURBSFiniteElement']]],
   ['width',['Width',['../classmfem_1_1Table.html#a00525eb783bf0ca4162aca4a5fcc62c6',1,'mfem::Table::Width()'],['../classmfem_1_1Operator.html#ab0eaacccbad37071f14d9bc9431acbce',1,'mfem::Operator::Width()']]],
   ['worldrank',['WorldRank',['../classmfem_1_1MPI__Session.html#a03f4edb4af00dbc9bc09ff5943ca2a7e',1,'mfem::MPI_Session']]],

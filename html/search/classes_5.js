@@ -7,6 +7,8 @@ var searchData=
   ['face',['Face',['../structmfem_1_1NCMesh_1_1Face.html',1,'mfem::NCMesh']]],
   ['faceelementtransformations',['FaceElementTransformations',['../classmfem_1_1FaceElementTransformations.html',1,'mfem']]],
   ['faceinfo',['FaceInfo',['../structmfem_1_1Mesh_1_1FaceInfo.html',1,'mfem::Mesh']]],
+  ['faceintegrator',['FaceIntegrator',['../classFaceIntegrator.html',1,'']]],
+  ['fe_5fevolution',['FE_Evolution',['../classFE__Evolution.html',1,'']]],
   ['fgmressolver',['FGMRESSolver',['../classmfem_1_1FGMRESSolver.html',1,'mfem']]],
   ['fieldevaluator',['FieldEvaluator',['../classmfem_1_1FieldEvaluator.html',1,'mfem']]],
   ['fieldevaluator_5fbase',['FieldEvaluator_base',['../classmfem_1_1FieldEvaluator__base.html',1,'mfem']]],

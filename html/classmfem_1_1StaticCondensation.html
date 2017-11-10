@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -181,20 +182,20 @@ Public Member Functions</h2></td></tr>
 <p>Static condensation is a technique for solving linear systems by eliminating groups/blocks of unknowns and reducing the original system to the remaining interfacial unknowns. The assumption is that unknowns in one group are connected (in the graph of the matrix) only to unknowns in the same group or to interfacial unknowns but not to other groups.</p>
 <p>For finite element systems, the groups correspond to degrees of freedom (DOFs) associated with the interior of the elements. The rest of the DOFs (associated with the element boundaries) are interfacial.</p>
 <p>In block form the matrix of the system can be written as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ A = \begin{pmatrix} A_{11} &amp; A_{12} \\ A_{21} &amp; A_{22} \end{pmatrix} \begin{array}{l} \text{-- groups: element interior/private DOFs} \\ \text{-- interface: element boundary/exposed DOFs} \end{array} \]" src="form_56.png"/>
+<img class="formulaDsp" alt="\[ A = \begin{pmatrix} A_{11} &amp; A_{12} \\ A_{21} &amp; A_{22} \end{pmatrix} \begin{array}{l} \text{-- groups: element interior/private DOFs} \\ \text{-- interface: element boundary/exposed DOFs} \end{array} \]" src="form_57.png"/>
 </p>
-<p> where the block <img class="formulaInl" alt="$ A_1 $" src="form_57.png"/> is itself block diagonal with small local blocks and it is, therefore, easily invertible.</p>
+<p> where the block <img class="formulaInl" alt="$ A_1 $" src="form_58.png"/> is itself block diagonal with small local blocks and it is, therefore, easily invertible.</p>
 <p>Starting with the block system </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \begin{pmatrix} A_{11} &amp; A_{12} \\ A_{21} &amp; A_{22} \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix} = \begin{pmatrix} B_1 \\ B_2 \end{pmatrix} \]" src="form_58.png"/>
+<img class="formulaDsp" alt="\[ \begin{pmatrix} A_{11} &amp; A_{12} \\ A_{21} &amp; A_{22} \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix} = \begin{pmatrix} B_1 \\ B_2 \end{pmatrix} \]" src="form_59.png"/>
 </p>
 <p> the reduced, statically condensed system is given by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ S_{22} X_2 = B_2 - A_{21} A_{11}^{-1} B_1 \]" src="form_59.png"/>
+<img class="formulaDsp" alt="\[ S_{22} X_2 = B_2 - A_{21} A_{11}^{-1} B_1 \]" src="form_60.png"/>
 </p>
-<p> where the Schur complement matrix <img class="formulaInl" alt="$ S_{22} $" src="form_60.png"/> is given by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ S_{22} = A_{22} - A_{21} A_{11}^{-1} A_{12}. \]" src="form_61.png"/>
+<p> where the Schur complement matrix <img class="formulaInl" alt="$ S_{22} $" src="form_61.png"/> is given by </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ S_{22} = A_{22} - A_{21} A_{11}^{-1} A_{12}. \]" src="form_62.png"/>
 </p>
-<p> After solving the Schur complement system, the <img class="formulaInl" alt="$ X_1 $" src="form_62.png"/> part of the solution can be recovered using the formula </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ X_1 = A_{11}^{-1} ( B_1 - A_{12} X_2 ). \]" src="form_63.png"/>
+<p> After solving the Schur complement system, the <img class="formulaInl" alt="$ X_1 $" src="form_63.png"/> part of the solution can be recovered using the formula </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ X_1 = A_{11}^{-1} ( B_1 - A_{12} X_2 ). \]" src="form_64.png"/>
 </p>
  
 <p>Definition at line <a class="el" href="staticcond_8hpp_source.html#l00065">65</a> of file <a class="el" href="staticcond_8hpp_source.html">staticcond.hpp</a>.</p>
@@ -991,7 +992,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:12 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:29:01 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

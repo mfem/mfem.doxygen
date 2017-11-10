@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -566,7 +567,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00474"></a><span class="lineno"><a class="line" href="namespacemfem.html#a418fa01f905444069c657642549f2671">  474</a></span>&#160;<span class="keyword">inline</span> scalar_t <a class="code" href="namespacemfem.html#a418fa01f905444069c657642549f2671">TDet</a>(<span class="keyword">const</span> layout_t &amp;a, <span class="keyword">const</span> data_t &amp;A)</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;{</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;   MFEM_STATIC_ASSERT(layout_t::rank == 2, <span class="stringliteral">&quot;invalid rank&quot;</span>);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="preprocessor">#ifndef __xlC__</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="preprocessor">#if !defined(__xlC__) || (__xlC__ &gt;= 0x0d00)</span></div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;   <span class="keywordflow">return</span> internal::MatrixOps&lt;layout_t::dim_1,layout_t::dim_2&gt;::</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;          template Det&lt;scalar_t&gt;(a, A);</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="preprocessor">#else</span></div>
@@ -582,7 +583,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="namespacemfem.html#a0ab799844066f4ca7fe009a31bdf6488">  490</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacemfem.html#a418fa01f905444069c657642549f2671">TDet</a>(<span class="keyword">const</span> A_layout_t &amp;a, <span class="keyword">const</span> A_data_t &amp;A, D_data_t &amp;D)</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;{</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;   MFEM_STATIC_ASSERT(A_layout_t::rank == 3, <span class="stringliteral">&quot;invalid rank&quot;</span>);</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="preprocessor">#ifndef __xlC__</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="preprocessor">#if !defined(__xlC__) || (__xlC__ &gt;= 0x0d00)</span></div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;   internal::MatrixOps&lt;A_layout_t::dim_2,A_layout_t::dim_3&gt;::</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;   template Det&lt;Op&gt;(a, A, D);</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="preprocessor">#else</span></div>
@@ -625,7 +626,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="structmfem_1_1AssignOp_html_ae5272e4ffd01ce0b65a236210ade7627"><div class="ttname"><a href="structmfem_1_1AssignOp.html#ae5272e4ffd01ce0b65a236210ade7627">mfem::AssignOp::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="tassign_8hpp_source.html#l00024">tassign.hpp:24</a></div></div>
 <div class="ttc" id="namespacemfem_html_ac8013bb03ef7822e3db644f455dd9716"><div class="ttname"><a href="namespacemfem.html#ac8013bb03ef7822e3db644f455dd9716">mfem::bMult_AB</a></div><div class="ttdeci">MFEM_ALWAYS_INLINE void bMult_AB(const A_layout_t &amp;A_layout, const A_data_t &amp;A_data, const B_layout_t &amp;B_layout, const B_data_t &amp;B_data, const C_layout_t &amp;C_layout, C_data_t &amp;C_data)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00075">tmatrix.hpp:75</a></div></div>
 <div class="ttc" id="namespacemfem_html_ac5874634cc5090321fec06ef2fce9332"><div class="ttname"><a href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">mfem::TAdjDet</a></div><div class="ttdeci">scalar_t TAdjDet(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00520">tmatrix.hpp:520</a></div></div>
-<div class="ttc" id="namespacemfem_html_acaef685c3b2cfa9cb35a7af6956a7b67"><div class="ttname"><a href="namespacemfem.html#acaef685c3b2cfa9cb35a7af6956a7b67">mfem::Add</a></div><div class="ttdeci">void Add(const DenseMatrix &amp;A, const DenseMatrix &amp;B, double alpha, DenseMatrix &amp;C)</div><div class="ttdoc">C = A + alpha*B. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8cpp_source.html#l02807">densemat.cpp:2807</a></div></div>
+<div class="ttc" id="namespacemfem_html_acaef685c3b2cfa9cb35a7af6956a7b67"><div class="ttname"><a href="namespacemfem.html#acaef685c3b2cfa9cb35a7af6956a7b67">mfem::Add</a></div><div class="ttdeci">void Add(const DenseMatrix &amp;A, const DenseMatrix &amp;B, double alpha, DenseMatrix &amp;C)</div><div class="ttdoc">C = A + alpha*B. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8cpp_source.html#l02942">densemat.cpp:2942</a></div></div>
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div><div class="ttdef"><b>Definition:</b> <a href="CodeDocumentation_8dox_source.html#l00001">CodeDocumentation.dox:1</a></div></div>
 <div class="ttc" id="namespacemfem_html_aa948b76fdb8a35262dc45e9d2bc9059d"><div class="ttname"><a href="namespacemfem.html#aa948b76fdb8a35262dc45e9d2bc9059d">mfem::TAdjugate</a></div><div class="ttdeci">void TAdjugate(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00506">tmatrix.hpp:506</a></div></div>
 <div class="ttc" id="namespacemfem_html_a4b15ab982abe0cb06b61c0f034350835"><div class="ttname"><a href="namespacemfem.html#a4b15ab982abe0cb06b61c0f034350835">mfem::Mult_AB</a></div><div class="ttdeci">MFEM_ALWAYS_INLINE void Mult_AB(const A_layout_t &amp;A_layout, const A_data_t &amp;A_data, const B_layout_t &amp;B_layout, const B_data_t &amp;B_data, const C_layout_t &amp;C_layout, C_data_t &amp;C_data)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00216">tmatrix.hpp:216</a></div></div>
@@ -633,7 +634,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

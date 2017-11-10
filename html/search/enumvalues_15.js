@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zoltan',['ZOLTAN',['../namespacemfem_1_1superlu.html#a1b4995f6996ce77a7ebf44b5b5b31c75aba3fa577f6844c79ac979412c80e044a',1,'mfem::superlu']]]
+  ['weight_5fmask',['WEIGHT_MASK',['../classmfem_1_1ElementTransformation.html#a78dc6cc15c2f240fc976acd5470be0e0a5c7ce469e94f00315312c2549c12670e',1,'mfem::ElementTransformation']]],
+  ['write_5ferror',['WRITE_ERROR',['../classmfem_1_1DataCollection.html#a6ba343e7c504546c16277dd0bf705f8fa50e79339f25c48bc32fdc4a5a5d3a069',1,'mfem::DataCollection']]]
 ];

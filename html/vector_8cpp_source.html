@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -641,327 +642,386 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;</div>
 <div class="line"><a name="l00550"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">  550</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">Vector::AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;{</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;   <span class="keywordtype">int</span> i, j, n = dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>();</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;      <span class="keywordflow">if</span> ((j=dofs[i]) &gt;= 0)</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;      {</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[j] += elemvect(i);</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      }</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;      {</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[-1-j] -= elemvect(i);</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;      }</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;}</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;</div>
-<div class="line"><a name="l00565"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#abdd3a81244376b6a747f475f5b7ba24f">  565</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">Vector::AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keywordtype">double</span> *elem_data)</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;{</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;   <span class="keywordtype">int</span> i, j, n = dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>();</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;   {</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;      <span class="keywordflow">if</span> ((j = dofs[i]) &gt;= 0)</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;      {</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[j] += elem_data[i];</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;      }</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;      {</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[-1-j] -= elem_data[i];</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;      }</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;   }</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;}</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;</div>
-<div class="line"><a name="l00582"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a7df5321091250399750bae8b0ebc7881">  582</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">Vector::AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <span class="keywordtype">double</span> a,</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                              <span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;{</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;   <span class="keywordtype">int</span> i, j, n = dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>();</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;      <span class="keywordflow">if</span> ((j=dofs[i]) &gt;= 0)</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;      {</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[j] += a * elemvect(i);</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      }</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      {</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[-1-j] -= a * elemvect(i);</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      }</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;}</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;</div>
-<div class="line"><a name="l00598"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">  598</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">Vector::SetSubVectorComplement</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <span class="keywordtype">double</span> val)</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;{</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> dofs_vals;</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#a8ca621edcd2c8b45bd358f484cf57ff9">GetSubVector</a>(dofs, dofs_vals);</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">operator=</a>(val);</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#a9cce8215d185deab7fb54f6d727b5e51">SetSubVector</a>(dofs, dofs_vals);</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;}</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div>
-<div class="line"><a name="l00606"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#ab6f7e5bf1f5873a348b7ca1ffa182410">  606</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#ab6f7e5bf1f5873a348b7ca1ffa182410">Vector::Print</a>(std::ostream &amp;out, <span class="keywordtype">int</span> width)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;   <span class="keywordflow">if</span> (!<a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; 1; )</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;   {</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;      out &lt;&lt; <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;      i++;</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;      <span class="keywordflow">if</span> (i == <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>)</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;      {</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;      }</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;      <span class="keywordflow">if</span> ( i % width == 0 )</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;      {</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;         out &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      }</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;      {</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;         out &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;      }</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;   }</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;   out &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;}</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;</div>
-<div class="line"><a name="l00630"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">  630</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">Vector::Print_HYPRE</a>(std::ostream &amp;out)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;   <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;   std::ios::fmtflags old_fmt = out.flags();</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;   out.setf(std::ios::scientific);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;   std::streamsize old_prec = out.precision(14);</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;   out &lt;&lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;  <span class="comment">// number of rows</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;   {</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;      out &lt;&lt; <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;   }</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;   out.precision(old_prec);</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;   out.flags(old_fmt);</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;}</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;</div>
-<div class="line"><a name="l00648"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a00311453114bf70ddcd35a773f193e78">  648</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a00311453114bf70ddcd35a773f193e78">Vector::Randomize</a>(<span class="keywordtype">int</span> seed)</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;{</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;   <span class="comment">// static unsigned int seed = time(0);</span></div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> max = (double)(RAND_MAX) + 1.;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;   <span class="keywordflow">if</span> (seed == 0)</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;   {</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;      seed = (int)time(0);</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;   }</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;   <span class="comment">// srand(seed++);</span></div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;   srand((<span class="keywordtype">unsigned</span>)seed);</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;   MFEM_ASSERT(dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>() == elemvect.<a class="code" href="classmfem_1_1Vector.html#ae46321466f5d68a25b6d8264bc1b08b5">Size</a>(), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;   <span class="keywordtype">int</span> i, j, n = dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>();</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;   {</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;      <span class="keywordflow">if</span> ((j=dofs[i]) &gt;= 0)</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      {</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[j] += elemvect(i);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;      }</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;      {</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[-1-j] -= elemvect(i);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;      }</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;   }</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;}</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00568"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#abdd3a81244376b6a747f475f5b7ba24f">  568</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">Vector::AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keywordtype">double</span> *elem_data)</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;{</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;   <span class="keywordtype">int</span> i, j, n = dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>();</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;   {</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;      <span class="keywordflow">if</span> ((j = dofs[i]) &gt;= 0)</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      {</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[j] += elem_data[i];</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;      }</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;      {</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[-1-j] -= elem_data[i];</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;      }</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;   }</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;}</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;</div>
+<div class="line"><a name="l00585"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a7df5321091250399750bae8b0ebc7881">  585</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">Vector::AddElementVector</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <span class="keywordtype">double</span> a,</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                              <span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;{</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;   <span class="keywordtype">int</span> i, j, n = dofs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>();</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      <span class="keywordflow">if</span> ((j=dofs[i]) &gt;= 0)</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;      {</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[j] += a * elemvect(i);</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;      }</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      {</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[-1-j] -= a * elemvect(i);</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;      }</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;}</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;</div>
+<div class="line"><a name="l00601"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">  601</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">Vector::SetSubVectorComplement</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;dofs, <span class="keyword">const</span> <span class="keywordtype">double</span> val)</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;{</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> dofs_vals;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#a8ca621edcd2c8b45bd358f484cf57ff9">GetSubVector</a>(dofs, dofs_vals);</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">operator=</a>(val);</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#a9cce8215d185deab7fb54f6d727b5e51">SetSubVector</a>(dofs, dofs_vals);</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;}</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
+<div class="line"><a name="l00609"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">  609</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">Vector::Print</a>(std::ostream &amp;<a class="code" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, <span class="keywordtype">int</span> width)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;   <span class="keywordflow">if</span> (!<a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; 1; )</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;   {</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;      out &lt;&lt; <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;      i++;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;      <span class="keywordflow">if</span> (i == <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;      {</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;      }</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      <span class="keywordflow">if</span> ( i % width == 0 )</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;      {</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;         out &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;      }</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;      {</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;         out &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;      }</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;   }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;   out &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;}</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;</div>
+<div class="line"><a name="l00633"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">  633</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">Vector::Print_HYPRE</a>(std::ostream &amp;<a class="code" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;   <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;   std::ios::fmtflags old_fmt = out.flags();</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;   out.setf(std::ios::scientific);</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;   std::streamsize old_prec = out.precision(14);</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;   out &lt;&lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;  <span class="comment">// number of rows</span></div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;   {</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;      out &lt;&lt; <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;   }</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;   out.precision(old_prec);</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;   out.flags(old_fmt);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;}</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00651"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a00311453114bf70ddcd35a773f193e78">  651</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#a00311453114bf70ddcd35a773f193e78">Vector::Randomize</a>(<span class="keywordtype">int</span> seed)</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;{</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;   <span class="comment">// static unsigned int seed = time(0);</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> max = (double)(RAND_MAX) + 1.;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;   <span class="keywordflow">if</span> (seed == 0)</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;   {</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;      seed = (int)time(0);</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;   }</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;   {</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;      <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] = fabs(rand()/max);</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;   }</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;}</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;</div>
-<div class="line"><a name="l00667"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">  667</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">Vector::Norml2</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;   <span class="keywordflow">return</span> sqrt((*<span class="keyword">this</span>)*(*<span class="keyword">this</span>));</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;}</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;</div>
-<div class="line"><a name="l00672"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">  672</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">Vector::Normlinf</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;   <span class="keywordtype">double</span> max = 0.0;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;   <span class="comment">// srand(seed++);</span></div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;   srand((<span class="keywordtype">unsigned</span>)seed);</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;   {</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;      <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] = std::abs(rand()/max);</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;   }</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;}</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;</div>
+<div class="line"><a name="l00670"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">  670</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">Vector::Norml2</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;   <span class="comment">// Scale entries of Vector on the fly, using algorithms from</span></div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;   <span class="comment">// std::hypot() and LAPACK&#39;s drm2. This scaling ensures that the</span></div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;   <span class="comment">// argument of each call to std::pow is &lt;= 1 to avoid overflow.</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;   <span class="keywordflow">if</span> (0 == <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>)</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;   {</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;      max = std::max(std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]), max);</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;   }</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;   <span class="keywordflow">return</span> max;</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;}</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;</div>
-<div class="line"><a name="l00682"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">  682</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">Vector::Norml1</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;   <span class="keywordtype">double</span> sum = 0.0;</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;   {</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;      sum += std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]);</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;   }</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;   <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;}</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
-<div class="line"><a name="l00692"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">  692</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">Vector::Normlp</a>(<span class="keywordtype">double</span> p)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;   MFEM_ASSERT(p &gt; 0.0, <span class="stringliteral">&quot;Vector::Normlp&quot;</span>);</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;   <span class="keywordflow">if</span> (p == 1.0)</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;   {</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">Norml1</a>();</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;   }</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;   <span class="keywordflow">if</span> (p == 2.0)</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;   {</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">Norml2</a>();</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;   }</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;   <span class="keywordflow">if</span> (p &lt; std::numeric_limits&lt;double&gt;::infinity())</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;   {</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;      <span class="keywordtype">double</span> sum = 0.0;</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;      {</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;         sum += pow(fabs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]), p);</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;      }</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;      <span class="keywordflow">return</span> pow(sum, 1.0/p);</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;   }</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;   {</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">Normlinf</a>();</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;   }</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;</div>
-<div class="line"><a name="l00718"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">  718</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">Vector::Max</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;   <span class="keywordtype">double</span> max = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[0];</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] &gt; max)</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      {</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;         max = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;      }</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;   <span class="keywordflow">return</span> max;</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;}</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
-<div class="line"><a name="l00731"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a4ae8483618a386b48e1e621a46ed70f6">  731</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#a4ae8483618a386b48e1e621a46ed70f6">Vector::Min</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;   <span class="keywordtype">double</span> min = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[0];</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] &lt; min)</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;      {</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;         min = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;      }</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;   <span class="keywordflow">return</span> min;</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;}</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;</div>
-<div class="line"><a name="l00744"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">  744</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">Vector::Sum</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;   <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;      <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;   } <span class="comment">// end if 0 == size</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;   <span class="keywordflow">if</span> (1 == <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>)</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;   {</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;      <span class="keywordflow">return</span> std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[0]);</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;   } <span class="comment">// end if 1 == size</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;   <span class="keywordtype">double</span> scale = 0.0;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;   <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;   {</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] != 0.0)</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;      {</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">double</span> absdata = std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]);</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;         <span class="keywordflow">if</span> (scale &lt;= absdata)</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;         {</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> sqr_arg = scale / absdata;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            sum = 1.0 + sum * (sqr_arg * sqr_arg);</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            scale = absdata;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;         } <span class="comment">// end if scale &lt;= absdata</span></div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">double</span> sqr_arg = absdata / scale;</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;         sum += (sqr_arg * sqr_arg); <span class="comment">// else scale &gt; absdata</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;      } <span class="comment">// end if data[i] != 0</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;   }</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;   <span class="keywordflow">return</span> scale * std::sqrt(sum);</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;}</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
+<div class="line"><a name="l00707"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">  707</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">Vector::Normlinf</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;   <span class="keywordtype">double</span> max = 0.0;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;   {</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;      max = std::max(std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]), max);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;   }</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;   <span class="keywordflow">return</span> max;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;}</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;</div>
+<div class="line"><a name="l00717"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">  717</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">Vector::Norml1</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;   <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;   {</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;      sum += std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]);</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;   }</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;   <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;}</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;</div>
+<div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">  727</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">Vector::Normlp</a>(<span class="keywordtype">double</span> p)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;   MFEM_ASSERT(p &gt; 0.0, <span class="stringliteral">&quot;Vector::Normlp&quot;</span>);</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;   <span class="keywordflow">if</span> (p == 1.0)</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;   {</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">Norml1</a>();</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;   }</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;   <span class="keywordflow">if</span> (p == 2.0)</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;   {</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">Norml2</a>();</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;   }</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;   <span class="keywordflow">if</span> (p &lt; std::numeric_limits&lt;double&gt;::infinity())</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;   {</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;      <span class="comment">// Scale entries of Vector on the fly, using algorithms from</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;      <span class="comment">// std::hypot() and LAPACK&#39;s drm2. This scaling ensures that the</span></div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;      <span class="comment">// argument of each call to std::pow is &lt;= 1 to avoid overflow.</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;      <span class="keywordflow">if</span> (0 == <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>)</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;      {</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;         <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;      } <span class="comment">// end if 0 == size</span></div>
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;   {</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;      sum += <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;   }</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;      <span class="keywordflow">if</span> (1 == <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>)</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;      {</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;         <span class="keywordflow">return</span> std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[0]);</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;      } <span class="comment">// end if 1 == size</span></div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;   <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;}</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;      <span class="keywordtype">double</span> scale = 0.0;</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;      <span class="keywordtype">double</span> sum = 0.0;</div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;</div>
-<div class="line"><a name="l00756"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">  756</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">Vector::DistanceTo</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *p)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="namespacemfem.html#a83257caa0a707abfa63a77eb3c33ece4">Distance</a>(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>, p, <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>);</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;}</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_SUNDIALS</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;</div>
-<div class="line"><a name="l00763"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#afb59ea4e6f9be4e43fc4aea5bba8ac32">  763</a></span>&#160;<a class="code" href="classmfem_1_1Vector.html#a2febe6888483e281a14d19c9f1df27b6">Vector::Vector</a>(N_Vector nv)</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;{</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;   N_Vector_ID nvid = N_VGetVectorID(nv);</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;   <span class="keywordflow">switch</span> (nvid)</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;   {</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_SERIAL:</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">SetDataAndSize</a>(NV_DATA_S(nv), NV_LENGTH_S(nv));</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARALLEL:</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">SetDataAndSize</a>(NV_DATA_P(nv), NV_LOCLENGTH_P(nv));</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARHYP:</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;      {</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;         hypre_Vector *hpv_local = N_VGetVector_ParHyp(nv)-&gt;local_vector;</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">SetDataAndSize</a>(hpv_local-&gt;data, hpv_local-&gt;size);</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;      }</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;         MFEM_ABORT(<span class="stringliteral">&quot;N_Vector type &quot;</span> &lt;&lt; nvid &lt;&lt; <span class="stringliteral">&quot; is not supported&quot;</span>);</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;   }</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;}</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;</div>
-<div class="line"><a name="l00787"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a111395885732d77556d6c1b9a3000399">  787</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">Vector::ToNVector</a>(N_Vector &amp;nv)</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;{</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;   MFEM_ASSERT(nv, <span class="stringliteral">&quot;N_Vector handle is NULL&quot;</span>);</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;   N_Vector_ID nvid = N_VGetVectorID(nv);</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;   <span class="keywordflow">switch</span> (nvid)</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;   {</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_SERIAL:</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;         MFEM_ASSERT(NV_OWN_DATA_S(nv) == FALSE, <span class="stringliteral">&quot;invalid serial N_Vector&quot;</span>);</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;         NV_DATA_S(nv) = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>;</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;         NV_LENGTH_S(nv) = <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>;</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARALLEL:</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;         MFEM_ASSERT(NV_OWN_DATA_P(nv) == FALSE, <span class="stringliteral">&quot;invalid parallel N_Vector&quot;</span>);</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;         NV_DATA_P(nv) = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>;</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;         NV_LOCLENGTH_P(nv) = <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>;</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARHYP:</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;      {</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;         hypre_Vector *hpv_local = N_VGetVector_ParHyp(nv)-&gt;local_vector;</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;         MFEM_ASSERT(hpv_local-&gt;owns_data == <span class="keyword">false</span>, <span class="stringliteral">&quot;invalid hypre N_Vector&quot;</span>);</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;         hpv_local-&gt;data = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>;</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;         hpv_local-&gt;size = <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>;</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;         <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;      }</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;         MFEM_ABORT(<span class="stringliteral">&quot;N_Vector type &quot;</span> &lt;&lt; nvid &lt;&lt; <span class="stringliteral">&quot; is not supported&quot;</span>);</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;   }</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;}</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="preprocessor">#endif // MFEM_USE_SUNDIALS</span></div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;}</div>
-<div class="ttc" id="classmfem_1_1Array_html_a813eda5c8de9bfcbf06f89adaff1f8ff"><div class="ttname"><a href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">mfem::Array::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Logical size of the array. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00109">array.hpp:109</a></div></div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;      {</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;         <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] != 0.0)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;         {</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> absdata = std::abs(<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i]);</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            <span class="keywordflow">if</span> (scale &lt;= absdata)</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;            {</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;               sum = 1.0 + sum * std::pow(scale / absdata, p);</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;               scale = absdata;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;               <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            } <span class="comment">// end if scale &lt;= absdata</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            sum += std::pow(absdata / scale, p); <span class="comment">// else scale &gt; absdata</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;         } <span class="comment">// end if data[i] != 0</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;      }</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;      <span class="keywordflow">return</span> scale * std::pow(sum, 1.0/p);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;   } <span class="comment">// end if p &lt; std::numeric_limits&lt;double&gt;::infinity()</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">Normlinf</a>(); <span class="comment">// else p &gt;= std::numeric_limits&lt;double&gt;::infinity()</span></div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;}</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;</div>
+<div class="line"><a name="l00776"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">  776</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">Vector::Max</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;   <span class="keywordtype">double</span> max = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[0];</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] &gt; max)</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;      {</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;         max = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;      }</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;   <span class="keywordflow">return</span> max;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;}</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;</div>
+<div class="line"><a name="l00789"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a4ae8483618a386b48e1e621a46ed70f6">  789</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#a4ae8483618a386b48e1e621a46ed70f6">Vector::Min</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;   <span class="keywordtype">double</span> min = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[0];</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i] &lt; min)</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;      {</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;         min = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;      }</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;   <span class="keywordflow">return</span> min;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;}</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;</div>
+<div class="line"><a name="l00802"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">  802</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">Vector::Sum</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;   <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>; i++)</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;   {</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;      sum += <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>[i];</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;   }</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;   <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;}</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_SUNDIALS</span></div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="preprocessor">#ifndef SUNTRUE</span></div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;<span class="preprocessor">#define SUNTRUE TRUE</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="preprocessor">#ifndef SUNFALSE</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;<span class="preprocessor">#define SUNFALSE FALSE</span></div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
+<div class="line"><a name="l00823"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#afb59ea4e6f9be4e43fc4aea5bba8ac32">  823</a></span>&#160;<a class="code" href="classmfem_1_1Vector.html#a2febe6888483e281a14d19c9f1df27b6">Vector::Vector</a>(N_Vector nv)</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;{</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;   N_Vector_ID nvid = N_VGetVectorID(nv);</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;   <span class="keywordflow">switch</span> (nvid)</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;   {</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_SERIAL:</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">SetDataAndSize</a>(NV_DATA_S(nv), NV_LENGTH_S(nv));</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARALLEL:</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">SetDataAndSize</a>(NV_DATA_P(nv), NV_LOCLENGTH_P(nv));</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARHYP:</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;      {</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;         hypre_Vector *hpv_local = N_VGetVector_ParHyp(nv)-&gt;local_vector;</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;         <a class="code" href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">SetDataAndSize</a>(hpv_local-&gt;data, hpv_local-&gt;size);</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;      }</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;         MFEM_ABORT(<span class="stringliteral">&quot;N_Vector type &quot;</span> &lt;&lt; nvid &lt;&lt; <span class="stringliteral">&quot; is not supported&quot;</span>);</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;   }</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;}</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;</div>
+<div class="line"><a name="l00847"></a><span class="lineno"><a class="line" href="classmfem_1_1Vector.html#a111395885732d77556d6c1b9a3000399">  847</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">Vector::ToNVector</a>(N_Vector &amp;nv)</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;{</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;   MFEM_ASSERT(nv, <span class="stringliteral">&quot;N_Vector handle is NULL&quot;</span>);</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;   N_Vector_ID nvid = N_VGetVectorID(nv);</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;   <span class="keywordflow">switch</span> (nvid)</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;   {</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_SERIAL:</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;         MFEM_ASSERT(NV_OWN_DATA_S(nv) == SUNFALSE, <span class="stringliteral">&quot;invalid serial N_Vector&quot;</span>);</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;         NV_DATA_S(nv) = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>;</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;         NV_LENGTH_S(nv) = <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARALLEL:</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;         MFEM_ASSERT(NV_OWN_DATA_P(nv) == SUNFALSE, <span class="stringliteral">&quot;invalid parallel N_Vector&quot;</span>);</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;         NV_DATA_P(nv) = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;         NV_LOCLENGTH_P(nv) = <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;      <span class="keywordflow">case</span> SUNDIALS_NVEC_PARHYP:</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;      {</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;         hypre_Vector *hpv_local = N_VGetVector_ParHyp(nv)-&gt;local_vector;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;         MFEM_ASSERT(hpv_local-&gt;owns_data == <span class="keyword">false</span>, <span class="stringliteral">&quot;invalid hypre N_Vector&quot;</span>);</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;         hpv_local-&gt;data = <a class="code" href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">data</a>;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;         hpv_local-&gt;size = <a class="code" href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">size</a>;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;         <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;      }</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;         MFEM_ABORT(<span class="stringliteral">&quot;N_Vector type &quot;</span> &lt;&lt; nvid &lt;&lt; <span class="stringliteral">&quot; is not supported&quot;</span>);</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;   }</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;}</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;<span class="preprocessor">#endif // MFEM_USE_SUNDIALS</span></div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;}</div>
+<div class="ttc" id="classmfem_1_1Array_html_a813eda5c8de9bfcbf06f89adaff1f8ff"><div class="ttname"><a href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">mfem::Array::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Logical size of the array. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00110">array.hpp:110</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a9cce8215d185deab7fb54f6d727b5e51"><div class="ttname"><a href="classmfem_1_1Vector.html#a9cce8215d185deab7fb54f6d727b5e51">mfem::Vector::SetSubVector</a></div><div class="ttdeci">void SetSubVector(const Array&lt; int &gt; &amp;dofs, const double value)</div><div class="ttdoc">Set the entries listed in dofs to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00498">vector.cpp:498</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a1718b9dae65fe30804afa21b3ceb0815"><div class="ttname"><a href="classmfem_1_1Vector.html#a1718b9dae65fe30804afa21b3ceb0815">mfem::Vector::SetVector</a></div><div class="ttdeci">void SetVector(const Vector &amp;v, int offset)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00238">vector.cpp:238</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a2febe6888483e281a14d19c9f1df27b6"><div class="ttname"><a href="classmfem_1_1Vector.html#a2febe6888483e281a14d19c9f1df27b6">mfem::Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdoc">Default constructor for Vector. Sets size = 0 and data = NULL. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00046">vector.hpp:46</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a2febe6888483e281a14d19c9f1df27b6"><div class="ttname"><a href="classmfem_1_1Vector.html#a2febe6888483e281a14d19c9f1df27b6">mfem::Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdoc">Default constructor for Vector. Sets size = 0 and data = NULL. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00051">vector.hpp:51</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a08708fcf67f2fdd7ac37e0a4116f89e2"><div class="ttname"><a href="classmfem_1_1Vector.html#a08708fcf67f2fdd7ac37e0a4116f89e2">mfem::Vector::Elem</a></div><div class="ttdeci">double &amp; Elem(int i)</div><div class="ttdoc">Access Vector entries. Index i = 0 .. size-1. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00080">vector.cpp:80</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ab6f7e5bf1f5873a348b7ca1ffa182410"><div class="ttname"><a href="classmfem_1_1Vector.html#ab6f7e5bf1f5873a348b7ca1ffa182410">mfem::Vector::Print</a></div><div class="ttdeci">void Print(std::ostream &amp;out=std::cout, int width=8) const </div><div class="ttdoc">Prints vector to stream out. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00606">vector.cpp:606</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ac1e67bd3ee82db59573950d19897c149"><div class="ttname"><a href="classmfem_1_1Vector.html#ac1e67bd3ee82db59573950d19897c149">mfem::Vector::SetSize</a></div><div class="ttdeci">void SetSize(int s)</div><div class="ttdoc">Resize the vector to size s. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00310">vector.hpp:310</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ab954a3f94334579efac61a8c8737c04f"><div class="ttname"><a href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">mfem::Vector::Norml2</a></div><div class="ttdeci">double Norml2() const </div><div class="ttdoc">Returns the l2 norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00667">vector.cpp:667</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a8cedbfd7339c3f89f52181591db7f2aa"><div class="ttname"><a href="classmfem_1_1Vector.html#a8cedbfd7339c3f89f52181591db7f2aa">mfem::Vector::operator()</a></div><div class="ttdeci">double &amp; operator()(int i)</div><div class="ttdoc">Access Vector entries using () for 0-based indexing. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00339">vector.hpp:339</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ac1e67bd3ee82db59573950d19897c149"><div class="ttname"><a href="classmfem_1_1Vector.html#ac1e67bd3ee82db59573950d19897c149">mfem::Vector::SetSize</a></div><div class="ttdeci">void SetSize(int s)</div><div class="ttdoc">Resize the vector to size s. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00320">vector.hpp:320</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ab954a3f94334579efac61a8c8737c04f"><div class="ttname"><a href="classmfem_1_1Vector.html#ab954a3f94334579efac61a8c8737c04f">mfem::Vector::Norml2</a></div><div class="ttdeci">double Norml2() const </div><div class="ttdoc">Returns the l2 norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00670">vector.cpp:670</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a8cedbfd7339c3f89f52181591db7f2aa"><div class="ttname"><a href="classmfem_1_1Vector.html#a8cedbfd7339c3f89f52181591db7f2aa">mfem::Vector::operator()</a></div><div class="ttdeci">double &amp; operator()(int i)</div><div class="ttdoc">Access Vector entries using () for 0-based indexing. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00349">vector.hpp:349</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a8ca621edcd2c8b45bd358f484cf57ff9"><div class="ttname"><a href="classmfem_1_1Vector.html#a8ca621edcd2c8b45bd358f484cf57ff9">mfem::Vector::GetSubVector</a></div><div class="ttdeci">void GetSubVector(const Array&lt; int &gt; &amp;dofs, Vector &amp;elemvect) const </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00462">vector.cpp:462</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ae46321466f5d68a25b6d8264bc1b08b5"><div class="ttname"><a href="classmfem_1_1Vector.html#ae46321466f5d68a25b6d8264bc1b08b5">mfem::Vector::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Returns the size of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00106">vector.hpp:106</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ab0a395a866eec394b41d6527d85c6089"><div class="ttname"><a href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">mfem::Vector::Normlinf</a></div><div class="ttdeci">double Normlinf() const </div><div class="ttdoc">Returns the l_infinity norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00672">vector.cpp:672</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a00311453114bf70ddcd35a773f193e78"><div class="ttname"><a href="classmfem_1_1Vector.html#a00311453114bf70ddcd35a773f193e78">mfem::Vector::Randomize</a></div><div class="ttdeci">void Randomize(int seed=0)</div><div class="ttdoc">Set random values in the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00648">vector.cpp:648</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ae46321466f5d68a25b6d8264bc1b08b5"><div class="ttname"><a href="classmfem_1_1Vector.html#ae46321466f5d68a25b6d8264bc1b08b5">mfem::Vector::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Returns the size of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00113">vector.hpp:113</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ab0a395a866eec394b41d6527d85c6089"><div class="ttname"><a href="classmfem_1_1Vector.html#ab0a395a866eec394b41d6527d85c6089">mfem::Vector::Normlinf</a></div><div class="ttdeci">double Normlinf() const </div><div class="ttdoc">Returns the l_infinity norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00707">vector.cpp:707</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a00311453114bf70ddcd35a773f193e78"><div class="ttname"><a href="classmfem_1_1Vector.html#a00311453114bf70ddcd35a773f193e78">mfem::Vector::Randomize</a></div><div class="ttdeci">void Randomize(int seed=0)</div><div class="ttdoc">Set random values in the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00651">vector.cpp:651</a></div></div>
 <div class="ttc" id="namespacemfem_html_a480ada169fcfa4214d92548e77737f3a"><div class="ttname"><a href="namespacemfem.html#a480ada169fcfa4214d92548e77737f3a">mfem::add</a></div><div class="ttdeci">void add(const Vector &amp;v1, const Vector &amp;v2, Vector &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00264">vector.cpp:264</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a0870a32636c63c0f5ad71d27d24518d3"><div class="ttname"><a href="classmfem_1_1Vector.html#a0870a32636c63c0f5ad71d27d24518d3">mfem::Vector::operator*</a></div><div class="ttdeci">double operator*(const double *) const </div><div class="ttdoc">Dot product with a double * array. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00090">vector.cpp:90</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ade208c9337f60afc34f14e2f331bd5f0"><div class="ttname"><a href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">mfem::Vector::operator=</a></div><div class="ttdeci">Vector &amp; operator=(const double *v)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00117">vector.cpp:117</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ade208c9337f60afc34f14e2f331bd5f0"><div class="ttname"><a href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">mfem::Vector::operator=</a></div><div class="ttdeci">Vector &amp; operator=(const double *v)</div><div class="ttdoc">Copy Size() entries from v. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00117">vector.cpp:117</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a9194a2c0e24782bea05303c02fb5bfce"><div class="ttname"><a href="classmfem_1_1Vector.html#a9194a2c0e24782bea05303c02fb5bfce">mfem::Vector::Load</a></div><div class="ttdeci">void Load(std::istream **in, int np, int *dim)</div><div class="ttdoc">Reads a vector from multiple files. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00050">vector.cpp:50</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_acb6cb38c9c66d2bb8b3b787a56dc9c17"><div class="ttname"><a href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">mfem::Vector::Normlp</a></div><div class="ttdeci">double Normlp(double p) const </div><div class="ttdoc">Returns the l_p norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00692">vector.cpp:692</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_acb6cb38c9c66d2bb8b3b787a56dc9c17"><div class="ttname"><a href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">mfem::Vector::Normlp</a></div><div class="ttdeci">double Normlp(double p) const </div><div class="ttdoc">Returns the l_p norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00727">vector.cpp:727</a></div></div>
 <div class="ttc" id="ex3_8cpp_html_a70b5e28b5bc3d1b63a7435c5fe50b837"><div class="ttname"><a href="ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8cpp_source.html#l00047">ex3.cpp:47</a></div></div>
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div><div class="ttdef"><b>Definition:</b> <a href="CodeDocumentation_8dox_source.html#l00001">CodeDocumentation.dox:1</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array&lt; int &gt;</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a2bce958d41c9392c8002f76b33b6d025"><div class="ttname"><a href="classmfem_1_1Vector.html#a2bce958d41c9392c8002f76b33b6d025">mfem::Vector::median</a></div><div class="ttdeci">void median(const Vector &amp;lo, const Vector &amp;hi)</div><div class="ttdoc">v = median(v,lo,hi) entrywise. Implementation assumes lo <= hi. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00445">vector.cpp:445</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a2e607211a08993ec77d30f9609b84661"><div class="ttname"><a href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">mfem::Vector::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00040">vector.hpp:40</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a2e607211a08993ec77d30f9609b84661"><div class="ttname"><a href="classmfem_1_1Vector.html#a2e607211a08993ec77d30f9609b84661">mfem::Vector::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00045">vector.hpp:45</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a6b60ed4dac14bacad367a02ac8fc973c"><div class="ttname"><a href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">mfem::Vector::AddElementVector</a></div><div class="ttdeci">void AddElementVector(const Array&lt; int &gt; &amp;dofs, const Vector &amp;elemvect)</div><div class="ttdoc">Add (element) subvector to the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00550">vector.cpp:550</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a2be7529c9bccbb02f999cc22396cc171"><div class="ttname"><a href="classmfem_1_1Vector.html#a2be7529c9bccbb02f999cc22396cc171">mfem::Vector::operator/=</a></div><div class="ttdeci">Vector &amp; operator/=(double c)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00156">vector.cpp:156</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_adbf3230332957c7ead495539244b7c92"><div class="ttname"><a href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">mfem::Vector::DistanceTo</a></div><div class="ttdeci">double DistanceTo(const double *p) const </div><div class="ttdoc">Compute the Euclidean distance to another vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00756">vector.cpp:756</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_aab941790a2f15dd6dafcba2446078599"><div class="ttname"><a href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">mfem::Vector::SetSubVectorComplement</a></div><div class="ttdeci">void SetSubVectorComplement(const Array&lt; int &gt; &amp;dofs, const double val)</div><div class="ttdoc">Set all vector entries NOT in the &#39;dofs&#39; array to the given &#39;val&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00598">vector.cpp:598</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_aab941790a2f15dd6dafcba2446078599"><div class="ttname"><a href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">mfem::Vector::SetSubVectorComplement</a></div><div class="ttdeci">void SetSubVectorComplement(const Array&lt; int &gt; &amp;dofs, const double val)</div><div class="ttdoc">Set all vector entries NOT in the &#39;dofs&#39; array to the given &#39;val&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00601">vector.cpp:601</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a93447b8ea51df0f800aa7d6679be0fd6"><div class="ttname"><a href="classmfem_1_1Vector.html#a93447b8ea51df0f800aa7d6679be0fd6">mfem::Vector::operator*=</a></div><div class="ttdeci">Vector &amp; operator*=(double c)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00147">vector.cpp:147</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a4ae8483618a386b48e1e621a46ed70f6"><div class="ttname"><a href="classmfem_1_1Vector.html#a4ae8483618a386b48e1e621a46ed70f6">mfem::Vector::Min</a></div><div class="ttdeci">double Min() const </div><div class="ttdoc">Returns the minimal element of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00731">vector.cpp:731</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a2179778c9280164d67965c1928ac323b"><div class="ttname"><a href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">mfem::Vector::Norml1</a></div><div class="ttdeci">double Norml1() const </div><div class="ttdoc">Returns the l_1 norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00682">vector.cpp:682</a></div></div>
-<div class="ttc" id="namespacemfem_html_a83257caa0a707abfa63a77eb3c33ece4"><div class="ttname"><a href="namespacemfem.html#a83257caa0a707abfa63a77eb3c33ece4">mfem::Distance</a></div><div class="ttdeci">double Distance(const double *x, const double *y, const int n)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00376">vector.hpp:376</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a4ae8483618a386b48e1e621a46ed70f6"><div class="ttname"><a href="classmfem_1_1Vector.html#a4ae8483618a386b48e1e621a46ed70f6">mfem::Vector::Min</a></div><div class="ttdeci">double Min() const </div><div class="ttdoc">Returns the minimal element of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00789">vector.cpp:789</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a2179778c9280164d67965c1928ac323b"><div class="ttname"><a href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">mfem::Vector::Norml1</a></div><div class="ttdeci">double Norml1() const </div><div class="ttdoc">Returns the l_1 norm of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00717">vector.cpp:717</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ad9daeb026103f7cb7cb235bbd74b2cc1"><div class="ttname"><a href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">mfem::Vector::Print</a></div><div class="ttdeci">void Print(std::ostream &amp;out=mfem::out, int width=8) const </div><div class="ttdoc">Prints vector to stream out. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00609">vector.cpp:609</a></div></div>
 <div class="ttc" id="namespacemfem_html_ac2ed23630666837792bd4d658b1512f6"><div class="ttname"><a href="namespacemfem.html#ac2ed23630666837792bd4d658b1512f6">mfem::subtract</a></div><div class="ttdeci">void subtract(const Vector &amp;x, const Vector &amp;y, Vector &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00390">vector.cpp:390</a></div></div>
-<div class="ttc" id="namespacemfem_html_a2a32aaca3e6d73a0dc6ca11de559c7e0"><div class="ttname"><a href="namespacemfem.html#a2a32aaca3e6d73a0dc6ca11de559c7e0">mfem::mfem_error</a></div><div class="ttdeci">void mfem_error(const char *msg)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00106">error.cpp:106</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a9e0b8fc3d3050cdf77ba179e36baa3a2"><div class="ttname"><a href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">mfem::Vector::Print_HYPRE</a></div><div class="ttdeci">void Print_HYPRE(std::ostream &amp;out) const </div><div class="ttdoc">Prints vector to stream out in HYPRE_Vector format. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00630">vector.cpp:630</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a668f4a5e08b300dcbc8c0b123df486fb"><div class="ttname"><a href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">mfem::Vector::SetDataAndSize</a></div><div class="ttdeci">void SetDataAndSize(double *d, int s)</div><div class="ttdoc">Set the Vector data and size. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00087">vector.hpp:87</a></div></div>
+<div class="ttc" id="namespacemfem_html_a2a32aaca3e6d73a0dc6ca11de559c7e0"><div class="ttname"><a href="namespacemfem.html#a2a32aaca3e6d73a0dc6ca11de559c7e0">mfem::mfem_error</a></div><div class="ttdeci">void mfem_error(const char *msg)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00107">error.cpp:107</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a9e0b8fc3d3050cdf77ba179e36baa3a2"><div class="ttname"><a href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">mfem::Vector::Print_HYPRE</a></div><div class="ttdeci">void Print_HYPRE(std::ostream &amp;out) const </div><div class="ttdoc">Prints vector to stream out in HYPRE_Vector format. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00633">vector.cpp:633</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a668f4a5e08b300dcbc8c0b123df486fb"><div class="ttname"><a href="classmfem_1_1Vector.html#a668f4a5e08b300dcbc8c0b123df486fb">mfem::Vector::SetDataAndSize</a></div><div class="ttdeci">void SetDataAndSize(double *d, int s)</div><div class="ttdoc">Set the Vector data and size. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00094">vector.hpp:94</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a755a478e79bbde6b7a65f45983f84c4d"><div class="ttname"><a href="classmfem_1_1Vector.html#a755a478e79bbde6b7a65f45983f84c4d">mfem::Vector::Set</a></div><div class="ttdeci">Vector &amp; Set(const double a, const Vector &amp;x)</div><div class="ttdoc">(*this) = a * x </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00223">vector.cpp:223</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a8d3e17a103977e3e5d3fe41da0b47c07"><div class="ttname"><a href="classmfem_1_1Vector.html#a8d3e17a103977e3e5d3fe41da0b47c07">mfem::Vector::Add</a></div><div class="ttdeci">Vector &amp; Add(const double a, const Vector &amp;Va)</div><div class="ttdoc">(*this) += a * Va </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00205">vector.cpp:205</a></div></div>
 <div class="ttc" id="vector_8hpp_html"><div class="ttname"><a href="vector_8hpp.html">vector.hpp</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_afd093a12adfa89412e68a29d2f2d855e"><div class="ttname"><a href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">mfem::Vector::Max</a></div><div class="ttdeci">double Max() const </div><div class="ttdoc">Returns the maximal element of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00718">vector.cpp:718</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_afd093a12adfa89412e68a29d2f2d855e"><div class="ttname"><a href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">mfem::Vector::Max</a></div><div class="ttdeci">double Max() const </div><div class="ttdoc">Returns the maximal element of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00776">vector.cpp:776</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a02e54576470a59ccf4d20a5a58fb6ef6"><div class="ttname"><a href="classmfem_1_1Vector.html#a02e54576470a59ccf4d20a5a58fb6ef6">mfem::Vector::operator-=</a></div><div class="ttdeci">Vector &amp; operator-=(double c)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00166">vector.cpp:166</a></div></div>
 <div class="ttc" id="ex15_8cpp_html_adeedc97114c5a704906c8e26bdbd2451"><div class="ttname"><a href="ex15_8cpp.html#adeedc97114c5a704906c8e26bdbd2451">alpha</a></div><div class="ttdeci">const double alpha</div><div class="ttdef"><b>Definition:</b> <a href="ex15_8cpp_source.html#l00337">ex15.cpp:337</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00036">vector.hpp:36</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_af15d6f387a15ea59511f7c21a48936cc"><div class="ttname"><a href="classmfem_1_1Vector.html#af15d6f387a15ea59511f7c21a48936cc">mfem::Vector::allocsize</a></div><div class="ttdeci">int allocsize</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00040">vector.hpp:40</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00041">vector.hpp:41</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_af15d6f387a15ea59511f7c21a48936cc"><div class="ttname"><a href="classmfem_1_1Vector.html#af15d6f387a15ea59511f7c21a48936cc">mfem::Vector::allocsize</a></div><div class="ttdeci">int allocsize</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00045">vector.hpp:45</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a22792f443dedb1cf48ecdb32a84d8620"><div class="ttname"><a href="classmfem_1_1Vector.html#a22792f443dedb1cf48ecdb32a84d8620">mfem::Vector::operator+=</a></div><div class="ttdeci">Vector &amp; operator+=(const Vector &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00190">vector.cpp:190</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ac9acbbb2a995e87d242a5bd39a588eed"><div class="ttname"><a href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">mfem::Vector::data</a></div><div class="ttdeci">double * data</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00041">vector.hpp:41</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a944c4f53027b4437376f155eef3e783e"><div class="ttname"><a href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">mfem::Vector::Sum</a></div><div class="ttdeci">double Sum() const </div><div class="ttdoc">Return the sum of the vector entries. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00744">vector.cpp:744</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ae57e28986cba33973ceda52cb4b924be"><div class="ttname"><a href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">mfem::Vector::ToNVector</a></div><div class="ttdeci">virtual N_Vector ToNVector()</div><div class="ttdoc">Return a new wrapper SUNDIALS N_Vector of type SUNDIALS_NVEC_SERIAL. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00265">vector.hpp:265</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ac9acbbb2a995e87d242a5bd39a588eed"><div class="ttname"><a href="classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed">mfem::Vector::data</a></div><div class="ttdeci">double * data</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00046">vector.hpp:46</a></div></div>
+<div class="ttc" id="namespacemfem_html_a0e01b55edfba5e7b3e4d6913cee6be45"><div class="ttname"><a href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a></div><div class="ttdeci">OutStream out(std::cout)</div><div class="ttdoc">Global stream used by the library for standard output. Initially it uses the same std::streambuf as s...</div><div class="ttdef"><b>Definition:</b> <a href="globals_8hpp_source.html#l00064">globals.hpp:64</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a944c4f53027b4437376f155eef3e783e"><div class="ttname"><a href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">mfem::Vector::Sum</a></div><div class="ttdeci">double Sum() const </div><div class="ttdoc">Return the sum of the vector entries. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00802">vector.cpp:802</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ae57e28986cba33973ceda52cb4b924be"><div class="ttname"><a href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">mfem::Vector::ToNVector</a></div><div class="ttdeci">virtual N_Vector ToNVector()</div><div class="ttdoc">Return a new wrapper SUNDIALS N_Vector of type SUNDIALS_NVEC_SERIAL. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00275">vector.hpp:275</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a36d689938489efe61f97bfebb3906086"><div class="ttname"><a href="classmfem_1_1Vector.html#a36d689938489efe61f97bfebb3906086">mfem::Vector::Neg</a></div><div class="ttdeci">void Neg()</div><div class="ttdoc">(*this) = -(*this) </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00256">vector.cpp:256</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

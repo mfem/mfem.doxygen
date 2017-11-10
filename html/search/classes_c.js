@@ -6,6 +6,7 @@ var searchData=
   ['matrix',['Matrix',['../classmfem_1_1Matrix.html',1,'mfem']]],
   ['matrixarraycoefficient',['MatrixArrayCoefficient',['../classmfem_1_1MatrixArrayCoefficient.html',1,'mfem']]],
   ['matrixcoefficient',['MatrixCoefficient',['../classmfem_1_1MatrixCoefficient.html',1,'mfem']]],
+  ['matrixconstantcoefficient',['MatrixConstantCoefficient',['../classmfem_1_1MatrixConstantCoefficient.html',1,'mfem']]],
   ['matrixfunctioncoefficient',['MatrixFunctionCoefficient',['../classmfem_1_1MatrixFunctionCoefficient.html',1,'mfem']]],
   ['matrixinverse',['MatrixInverse',['../classmfem_1_1MatrixInverse.html',1,'mfem']]],
   ['matrixrestrictedcoefficient',['MatrixRestrictedCoefficient',['../classmfem_1_1MatrixRestrictedCoefficient.html',1,'mfem']]],

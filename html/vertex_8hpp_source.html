@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -131,30 +132,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">   /// Returns the i&#39;th coordinate of the vertex.</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classmfem_1_1Vertex.html#a034f10af0ce3fc7b24ebe2d1516703fb">   41</a></span>&#160;<span class="comment"></span>   <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; <a class="code" href="classmfem_1_1Vertex.html#a94ddf8d5e7aa759ba1e6502276e240b3">operator() </a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> coord[i]; }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classmfem_1_1Vertex.html#af988b807057c06b9a512c5c87bdc0fe7">   43</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vertex.html#af988b807057c06b9a512c5c87bdc0fe7">SetCoords</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *p)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   { coord[0] = p[0]; coord[1] = p[1]; coord[2] = p[2]; }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classmfem_1_1Vertex.html#ad3745bcf12f1024e538b265fa4f7bef5">   46</a></span>&#160;   <a class="code" href="classmfem_1_1Vertex.html#ad3745bcf12f1024e538b265fa4f7bef5">~Vertex</a>() { }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">   /// (DEPRECATED) Set the coordinates of the Vertex.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">   /** @deprecated This old version of SetCoords is not always memory safe. */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classmfem_1_1Vertex.html#af988b807057c06b9a512c5c87bdc0fe7">   45</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vertex.html#af988b807057c06b9a512c5c87bdc0fe7">SetCoords</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *p)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   { coord[0] = p[0]; coord[1] = p[1]; coord[2] = p[2]; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">   /// Sets vertex location based on given point p</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmfem_1_1Vertex.html#af2a79f86e761ba4a29595934c1e8293a">   49</a></span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1Vertex.html#af2a79f86e761ba4a29595934c1e8293a">SetCoords</a>(<span class="keywordtype">int</span> <a class="code" href="ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, <span class="keyword">const</span> <span class="keywordtype">double</span> *p)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   { <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>; i++) { coord[i] = p[i]; } }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classmfem_1_1Vertex.html#ad3745bcf12f1024e538b265fa4f7bef5">   52</a></span>&#160;   <a class="code" href="classmfem_1_1Vertex.html#ad3745bcf12f1024e538b265fa4f7bef5">~Vertex</a>() { }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classmfem_1_1Vertex_html_af2a79f86e761ba4a29595934c1e8293a"><div class="ttname"><a href="classmfem_1_1Vertex.html#af2a79f86e761ba4a29595934c1e8293a">mfem::Vertex::SetCoords</a></div><div class="ttdeci">void SetCoords(int dim, const double *p)</div><div class="ttdoc">Sets vertex location based on given point p. </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00049">vertex.hpp:49</a></div></div>
 <div class="ttc" id="classmfem_1_1Vertex_html"><div class="ttname"><a href="classmfem_1_1Vertex.html">mfem::Vertex</a></div><div class="ttdoc">Data type for vertex. </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00021">vertex.hpp:21</a></div></div>
 <div class="ttc" id="ex3_8cpp_html_a70b5e28b5bc3d1b63a7435c5fe50b837"><div class="ttname"><a href="ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8cpp_source.html#l00047">ex3.cpp:47</a></div></div>
 <div class="ttc" id="classmfem_1_1Vertex_html_af55946fbb0248fbff6fa5e17126ebc1e"><div class="ttname"><a href="classmfem_1_1Vertex.html#af55946fbb0248fbff6fa5e17126ebc1e">mfem::Vertex::Vertex</a></div><div class="ttdeci">Vertex(double x, double y, double z)</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00031">vertex.hpp:31</a></div></div>
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div><div class="ttdef"><b>Definition:</b> <a href="CodeDocumentation_8dox_source.html#l00001">CodeDocumentation.dox:1</a></div></div>
-<div class="ttc" id="classmfem_1_1Vertex_html_ad3745bcf12f1024e538b265fa4f7bef5"><div class="ttname"><a href="classmfem_1_1Vertex.html#ad3745bcf12f1024e538b265fa4f7bef5">mfem::Vertex::~Vertex</a></div><div class="ttdeci">~Vertex()</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00046">vertex.hpp:46</a></div></div>
+<div class="ttc" id="classmfem_1_1Vertex_html_ad3745bcf12f1024e538b265fa4f7bef5"><div class="ttname"><a href="classmfem_1_1Vertex.html#ad3745bcf12f1024e538b265fa4f7bef5">mfem::Vertex::~Vertex</a></div><div class="ttdeci">~Vertex()</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00052">vertex.hpp:52</a></div></div>
 <div class="ttc" id="classmfem_1_1Vertex_html_afc459cc76dfce5cabfa00caaffa3fa3c"><div class="ttname"><a href="classmfem_1_1Vertex.html#afc459cc76dfce5cabfa00caaffa3fa3c">mfem::Vertex::Vertex</a></div><div class="ttdeci">Vertex()</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00027">vertex.hpp:27</a></div></div>
-<div class="ttc" id="classmfem_1_1Vertex_html_af988b807057c06b9a512c5c87bdc0fe7"><div class="ttname"><a href="classmfem_1_1Vertex.html#af988b807057c06b9a512c5c87bdc0fe7">mfem::Vertex::SetCoords</a></div><div class="ttdeci">void SetCoords(const double *p)</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00043">vertex.hpp:43</a></div></div>
+<div class="ttc" id="classmfem_1_1Vertex_html_af988b807057c06b9a512c5c87bdc0fe7"><div class="ttname"><a href="classmfem_1_1Vertex.html#af988b807057c06b9a512c5c87bdc0fe7">mfem::Vertex::SetCoords</a></div><div class="ttdeci">void SetCoords(const double *p)</div><div class="ttdoc">(DEPRECATED) Set the coordinates of the Vertex. </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00045">vertex.hpp:45</a></div></div>
 <div class="ttc" id="classmfem_1_1Vertex_html_add85f05db30b16c6ddbd6575f270f095"><div class="ttname"><a href="classmfem_1_1Vertex.html#add85f05db30b16c6ddbd6575f270f095">mfem::Vertex::coord</a></div><div class="ttdeci">double coord[3]</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00024">vertex.hpp:24</a></div></div>
 <div class="ttc" id="classmfem_1_1Vertex_html_a94ddf8d5e7aa759ba1e6502276e240b3"><div class="ttname"><a href="classmfem_1_1Vertex.html#a94ddf8d5e7aa759ba1e6502276e240b3">mfem::Vertex::operator()</a></div><div class="ttdeci">double * operator()() const </div><div class="ttdoc">Returns pointer to the coordinates of the vertex. </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00035">vertex.hpp:35</a></div></div>
 <div class="ttc" id="classmfem_1_1Vertex_html_af87db2c488340d3881e461e3ece41dfb"><div class="ttname"><a href="classmfem_1_1Vertex.html#af87db2c488340d3881e461e3ece41dfb">mfem::Vertex::Vertex</a></div><div class="ttdeci">Vertex(double x, double y)</div><div class="ttdef"><b>Definition:</b> <a href="vertex_8hpp_source.html#l00030">vertex.hpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -90,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classmfem_1_1GroupCommunicator-members.html">List of all members</a>  </div>
@@ -97,6 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">mfem::GroupCommunicator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Communicator performing operations within groups defined by a <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> with arbitrary-size data associated with each group.  
+ <a href="classmfem_1_1GroupCommunicator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="communication_8hpp_source.html">communication.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -106,39 +111,87 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure on which we define reduce operations.  <a href="structmfem_1_1GroupCommunicator_1_1OpData.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1a77683f9ab6236ef67d3a4731f22944"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944">Mode</a> { <a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944a8b267e01c5c83306acfebd8e4f7e8f3e">byGroup</a>, 
+<a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944a4844c239a9b490a6c64c2fa05a0530bd">byNeighbor</a>
+ }</td></tr>
+<tr class="memdesc:a1a77683f9ab6236ef67d3a4731f22944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Communication mode.  <a href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944">More...</a><br /></td></tr>
+<tr class="separator:a1a77683f9ab6236ef67d3a4731f22944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a02ca55a48263f2edf6a2102ab847fb3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a02ca55a48263f2edf6a2102ab847fb3b">GroupCommunicator</a> (<a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> &amp;gt)</td></tr>
-<tr class="separator:a02ca55a48263f2edf6a2102ab847fb3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69363bdf906b907b7bf1fe340a57a936"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a69363bdf906b907b7bf1fe340a57a936">GroupCommunicator</a> (<a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> &amp;gt, <a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944">Mode</a> m=<a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944a4844c239a9b490a6c64c2fa05a0530bd">byNeighbor</a>)</td></tr>
+<tr class="memdesc:a69363bdf906b907b7bf1fe340a57a936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> object.  <a href="#a69363bdf906b907b7bf1fe340a57a936">More...</a><br /></td></tr>
+<tr class="separator:a69363bdf906b907b7bf1fe340a57a936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f8307c0c447ca19d44191b4a69f3e04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a7f8307c0c447ca19d44191b4a69f3e04">Create</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ldof_group)</td></tr>
+<tr class="memdesc:a7f8307c0c447ca19d44191b4a69f3e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the communicator from a local-dof to group map. <a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d" title="Allocate internal buffers after the GroupLDofTable is defined. ">Finalize()</a> is called internally.  <a href="#a7f8307c0c447ca19d44191b4a69f3e04">More...</a><br /></td></tr>
 <tr class="separator:a7f8307c0c447ca19d44191b4a69f3e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a01c4355d94a68dc6623c50d1f8fc4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a5a01c4355d94a68dc6623c50d1f8fc4b">GroupLDofTable</a> ()</td></tr>
+<tr class="memdesc:a5a01c4355d94a68dc6623c50d1f8fc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill-in the returned <a class="el" href="classmfem_1_1Table.html">Table</a> reference to initialize the <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> then call <a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d" title="Allocate internal buffers after the GroupLDofTable is defined. ">Finalize()</a>.  <a href="#a5a01c4355d94a68dc6623c50d1f8fc4b">More...</a><br /></td></tr>
 <tr class="separator:a5a01c4355d94a68dc6623c50d1f8fc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49365321f5af65337d7fe5c2b69c19d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d">Finalize</a> ()</td></tr>
 <tr class="memdesc:ae49365321f5af65337d7fe5c2b69c19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate internal buffers after the GroupLDofTable is defined.  <a href="#ae49365321f5af65337d7fe5c2b69c19d">More...</a><br /></td></tr>
 <tr class="separator:ae49365321f5af65337d7fe5c2b69c19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2d0d67b67289b03aefe9ff9bcd75aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#abe2d0d67b67289b03aefe9ff9bcd75aa">SetLTDofTable</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ldof_ltdof)</td></tr>
+<tr class="memdesc:abe2d0d67b67289b03aefe9ff9bcd75aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the internal group_ltdof <a class="el" href="classmfem_1_1Table.html">Table</a>.  <a href="#abe2d0d67b67289b03aefe9ff9bcd75aa">More...</a><br /></td></tr>
+<tr class="separator:abe2d0d67b67289b03aefe9ff9bcd75aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3898d5df0ac176587bb2be6a4f390e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#af3898d5df0ac176587bb2be6a4f390e0">GetGroupTopology</a> ()</td></tr>
-<tr class="memdesc:af3898d5df0ac176587bb2be6a4f390e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the group topology object.  <a href="#af3898d5df0ac176587bb2be6a4f390e0">More...</a><br /></td></tr>
+<tr class="memdesc:af3898d5df0ac176587bb2be6a4f390e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the associated <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> object.  <a href="#af3898d5df0ac176587bb2be6a4f390e0">More...</a><br /></td></tr>
 <tr class="separator:af3898d5df0ac176587bb2be6a4f390e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9578be103533f527ada7c9bf28f3176"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:ac9578be103533f527ada7c9bf28f3176"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#ac9578be103533f527ada7c9bf28f3176">Bcast</a> (T *data, int layout)</td></tr>
-<tr class="memdesc:ac9578be103533f527ada7c9bf28f3176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast within each group where the master is the root. The data <em>layout</em> can be:  <a href="#ac9578be103533f527ada7c9bf28f3176">More...</a><br /></td></tr>
-<tr class="separator:ac9578be103533f527ada7c9bf28f3176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d13e0ccb34f498cde48411f10305e0"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa2d13e0ccb34f498cde48411f10305e0"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0">CopyGroupToBuffer</a> (const T *ldata, T *buf, int group, int layout) const </td></tr>
+<tr class="memdesc:aa2d13e0ccb34f498cde48411f10305e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the entries corresponding to the group <em>group</em> from the local array <em>ldata</em> to the buffer <em>buf</em>.  <a href="#aa2d13e0ccb34f498cde48411f10305e0">More...</a><br /></td></tr>
+<tr class="separator:aa2d13e0ccb34f498cde48411f10305e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5710ca0d08c6d4acf22d3ee4fcd6e1f3"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5710ca0d08c6d4acf22d3ee4fcd6e1f3"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a5710ca0d08c6d4acf22d3ee4fcd6e1f3">CopyGroupFromBuffer</a> (const T *buf, T *ldata, int group, int layout) const </td></tr>
+<tr class="memdesc:a5710ca0d08c6d4acf22d3ee4fcd6e1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the entries corresponding to the group <em>group</em> from the buffer <em>buf</em> to the local array <em>ldata</em>.  <a href="#a5710ca0d08c6d4acf22d3ee4fcd6e1f3">More...</a><br /></td></tr>
+<tr class="separator:a5710ca0d08c6d4acf22d3ee4fcd6e1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49b55a40a905c2c7825298831030fee"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa49b55a40a905c2c7825298831030fee"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#aa49b55a40a905c2c7825298831030fee">ReduceGroupFromBuffer</a> (const T *buf, T *ldata, int group, int layout, void(*Op)(<a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a>&lt; T &gt;)) const </td></tr>
+<tr class="memdesc:aa49b55a40a905c2c7825298831030fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the reduction operation <em>Op</em> to the entries of group <em>group</em> using the values from the buffer <em>buf</em> and the values from the local array <em>ldata</em>, saving the result in the latter.  <a href="#aa49b55a40a905c2c7825298831030fee">More...</a><br /></td></tr>
+<tr class="separator:aa49b55a40a905c2c7825298831030fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bddccb14513685c62c0b6f0c0bade8e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8bddccb14513685c62c0b6f0c0bade8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a8bddccb14513685c62c0b6f0c0bade8e">BcastBegin</a> (T *ldata, int layout)</td></tr>
+<tr class="memdesc:a8bddccb14513685c62c0b6f0c0bade8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin a broadcast within each group where the master is the root.  <a href="#a8bddccb14513685c62c0b6f0c0bade8e">More...</a><br /></td></tr>
+<tr class="separator:a8bddccb14513685c62c0b6f0c0bade8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf58ccafbd5bf488fa6dca03903a2267"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abf58ccafbd5bf488fa6dca03903a2267"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#abf58ccafbd5bf488fa6dca03903a2267">BcastEnd</a> (T *ldata, int layout)</td></tr>
+<tr class="memdesc:abf58ccafbd5bf488fa6dca03903a2267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize a broadcast started with <a class="el" href="classmfem_1_1GroupCommunicator.html#a8bddccb14513685c62c0b6f0c0bade8e" title="Begin a broadcast within each group where the master is the root. ">BcastBegin()</a>.  <a href="#abf58ccafbd5bf488fa6dca03903a2267">More...</a><br /></td></tr>
+<tr class="separator:abf58ccafbd5bf488fa6dca03903a2267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a24c23b5c75dfffacc92d23a413018e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8a24c23b5c75dfffacc92d23a413018e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a8a24c23b5c75dfffacc92d23a413018e">Bcast</a> (T *ldata, int layout)</td></tr>
+<tr class="memdesc:a8a24c23b5c75dfffacc92d23a413018e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast within each group where the master is the root.  <a href="#a8a24c23b5c75dfffacc92d23a413018e">More...</a><br /></td></tr>
+<tr class="separator:a8a24c23b5c75dfffacc92d23a413018e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabf402c66e41eebc0b4a89ce63947aab"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aabf402c66e41eebc0b4a89ce63947aab"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#aabf402c66e41eebc0b4a89ce63947aab">Bcast</a> (T *ldata)</td></tr>
-<tr class="memdesc:aabf402c66e41eebc0b4a89ce63947aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast within each group where the master is the root. This method is instantiated for int and double.  <a href="#aabf402c66e41eebc0b4a89ce63947aab">More...</a><br /></td></tr>
+<tr class="memdesc:aabf402c66e41eebc0b4a89ce63947aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast within each group where the master is the root.  <a href="#aabf402c66e41eebc0b4a89ce63947aab">More...</a><br /></td></tr>
 <tr class="separator:aabf402c66e41eebc0b4a89ce63947aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7da4f172cef0d960124d34cf66036d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a9a7da4f172cef0d960124d34cf66036d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a9a7da4f172cef0d960124d34cf66036d">Bcast</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; T &gt; &amp;ldata)</td></tr>
+<tr class="memdesc:a9a7da4f172cef0d960124d34cf66036d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast within each group where the master is the root.  <a href="#a9a7da4f172cef0d960124d34cf66036d">More...</a><br /></td></tr>
 <tr class="separator:a9a7da4f172cef0d960124d34cf66036d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b1917667eb8d7f44c661495579b7ed"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a72b1917667eb8d7f44c661495579b7ed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a72b1917667eb8d7f44c661495579b7ed">ReduceBegin</a> (const T *ldata)</td></tr>
+<tr class="memdesc:a72b1917667eb8d7f44c661495579b7ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin reduction operation within each group where the master is the root.  <a href="#a72b1917667eb8d7f44c661495579b7ed">More...</a><br /></td></tr>
+<tr class="separator:a72b1917667eb8d7f44c661495579b7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf83b69a4bea56128e4ac700b3b576b8"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:adf83b69a4bea56128e4ac700b3b576b8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#adf83b69a4bea56128e4ac700b3b576b8">ReduceEnd</a> (T *ldata, int layout, void(*Op)(<a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a>&lt; T &gt;))</td></tr>
+<tr class="memdesc:adf83b69a4bea56128e4ac700b3b576b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize reduction operation started with <a class="el" href="classmfem_1_1GroupCommunicator.html#a72b1917667eb8d7f44c661495579b7ed" title="Begin reduction operation within each group where the master is the root. ">ReduceBegin()</a>.  <a href="#adf83b69a4bea56128e4ac700b3b576b8">More...</a><br /></td></tr>
+<tr class="separator:adf83b69a4bea56128e4ac700b3b576b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10fc80cb7047a641a2d66e3bd0b538ad"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a10fc80cb7047a641a2d66e3bd0b538ad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a10fc80cb7047a641a2d66e3bd0b538ad">Reduce</a> (T *ldata, void(*Op)(<a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a>&lt; T &gt;))</td></tr>
 <tr class="memdesc:a10fc80cb7047a641a2d66e3bd0b538ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce within each group where the master is the root.  <a href="#a10fc80cb7047a641a2d66e3bd0b538ad">More...</a><br /></td></tr>
 <tr class="separator:a10fc80cb7047a641a2d66e3bd0b538ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65c02a4c473ff8521504807bbb31573"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ae65c02a4c473ff8521504807bbb31573"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#ae65c02a4c473ff8521504807bbb31573">Reduce</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; T &gt; &amp;ldata, void(*Op)(<a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a>&lt; T &gt;))</td></tr>
+<tr class="memdesc:ae65c02a4c473ff8521504807bbb31573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce within each group where the master is the root.  <a href="#ae65c02a4c473ff8521504807bbb31573">More...</a><br /></td></tr>
 <tr class="separator:ae65c02a4c473ff8521504807bbb31573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6823a4f08d0496a3fc312e20f4cff07b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a6823a4f08d0496a3fc312e20f4cff07b">PrintInfo</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>) const </td></tr>
+<tr class="memdesc:a6823a4f08d0496a3fc312e20f4cff07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about the <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> from all MPI ranks.  <a href="#a6823a4f08d0496a3fc312e20f4cff07b">More...</a><br /></td></tr>
+<tr class="separator:a6823a4f08d0496a3fc312e20f4cff07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7270ca5daceead377a753a0b4ef2955b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GroupCommunicator.html#a7270ca5daceead377a753a0b4ef2955b">~GroupCommunicator</a> ()</td></tr>
+<tr class="memdesc:a7270ca5daceead377a753a0b4ef2955b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> object, deallocating internal data structures and buffers.  <a href="#a7270ca5daceead377a753a0b4ef2955b">More...</a><br /></td></tr>
 <tr class="separator:a7270ca5daceead377a753a0b4ef2955b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -161,10 +214,36 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aa880a2647cd691f9c3e99e0334f92475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Communicator performing operations within groups defined by a <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> with arbitrary-size data associated with each group. </p>
+
 <p>Definition at line <a class="el" href="communication_8hpp_source.html#l00117">117</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a02ca55a48263f2edf6a2102ab847fb3b"></a>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a1a77683f9ab6236ef67d3a4731f22944"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944">mfem::GroupCommunicator::Mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Communication mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1a77683f9ab6236ef67d3a4731f22944a8b267e01c5c83306acfebd8e4f7e8f3e"></a>byGroup&#160;</td><td class="fielddoc">
+<p>Communications are performed one group at a time. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1a77683f9ab6236ef67d3a4731f22944a4844c239a9b490a6c64c2fa05a0530bd"></a>byNeighbor&#160;</td><td class="fielddoc">
+<p>Communications are performed one neighbor at a time, aggregating over groups. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00121">121</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a69363bdf906b907b7bf1fe340a57a936"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -172,13 +251,29 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">mfem::GroupCommunicator::GroupCommunicator </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> &amp;&#160;</td>
-          <td class="paramname"><em>gt</em></td><td>)</td>
+          <td class="paramname"><em>gt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944">Mode</a>&#160;</td>
+          <td class="paramname"><em>m</em> = <code><a class="el" href="classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944a4844c239a9b490a6c64c2fa05a0530bd">byNeighbor</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00265">265</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Construct a <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> object. </p>
+<p>The object must be initialized before it can be used to perform any operations. To initialize the object, either</p><ul>
+<li>call <a class="el" href="classmfem_1_1GroupCommunicator.html#a7f8307c0c447ca19d44191b4a69f3e04" title="Initialize the communicator from a local-dof to group map. Finalize() is called internally. ">Create()</a> or</li>
+<li>initialize the <a class="el" href="classmfem_1_1Table.html">Table</a> reference returned by <a class="el" href="classmfem_1_1GroupCommunicator.html#a5a01c4355d94a68dc6623c50d1f8fc4b" title="Fill-in the returned Table reference to initialize the GroupCommunicator then call Finalize()...">GroupLDofTable()</a> and then call <a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d" title="Allocate internal buffers after the GroupLDofTable is defined. ">Finalize()</a>. </li>
+</ul>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00274">274</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -195,22 +290,27 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00566">566</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Destroy a <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> object, deallocating internal data structures and buffers. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l01138">1138</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac9578be103533f527ada7c9bf28f3176"></a>
+<a class="anchor" id="a8a24c23b5c75dfffacc92d23a413018e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void mfem::GroupCommunicator::Bcast </td>
           <td>(</td>
           <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramname"><em>ldata</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -224,12 +324,18 @@ template&lt;class T &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Broadcast within each group where the master is the root. The data <em>layout</em> can be: </p>
-<p>0 - data is an array on all ldofs 1 - data is an array on the shared ldofs as given by group_ldof </p>
+<p>Broadcast within each group where the master is the root. </p>
+<p>The data <em>layout</em> can be either 0 or 1.</p>
+<p>For a description of <em>layout</em>, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00325">325</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00232">232</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,9 +363,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Broadcast within each group where the master is the root. This method is instantiated for int and double. </p>
+<p>Broadcast within each group where the master is the root. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00151">151</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00239">239</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +393,79 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00152">152</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Broadcast within each group where the master is the root. </p>
+
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00241">241</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bddccb14513685c62c0b6f0c0bade8e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GroupCommunicator::BcastBegin </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ldata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Begin a broadcast within each group where the master is the root. </p>
+<p>For a description of <em>layout</em>, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00558">558</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf58ccafbd5bf488fa6dca03903a2267"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GroupCommunicator::BcastEnd </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ldata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finalize a broadcast started with <a class="el" href="classmfem_1_1GroupCommunicator.html#a8bddccb14513685c62c0b6f0c0bade8e" title="Begin a broadcast within each group where the master is the root. ">BcastBegin()</a>. </p>
+<p>The output data <em>layout</em> can be:</p><ul>
+<li>0 - <em>ldata</em> is an array on all ldofs; the input layout should be either 0 or 2</li>
+<li>1 - <em>ldata</em> is the same array as given to <a class="el" href="classmfem_1_1GroupCommunicator.html#a8bddccb14513685c62c0b6f0c0bade8e" title="Begin a broadcast within each group where the master is the root. ">BcastBegin()</a>; the input layout should be 1.</li>
+</ul>
+<p>For more details about <em>layout</em>, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00695">695</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -317,7 +495,102 @@ template&lt;class T &gt; </div>
 
 <p>Reduce operation bitwise OR, instantiated for int only. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00553">553</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l01005">1005</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5710ca0d08c6d4acf22d3ee4fcd6e1f3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T * mfem::GroupCommunicator::CopyGroupFromBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ldata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy the entries corresponding to the group <em>group</em> from the buffer <em>buf</em> to the local array <em>ldata</em>. </p>
+<p>For a description of <em>layout</em>, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>. </p><dl class="section return"><dt>Returns</dt><dd>The pointer <em>buf</em> plus the number of elements in the group. </dd></dl>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00485">485</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2d13e0ccb34f498cde48411f10305e0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T * mfem::GroupCommunicator::CopyGroupToBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>ldata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy the entries corresponding to the group <em>group</em> from the local array <em>ldata</em> to the buffer <em>buf</em>. </p>
+<p>The <em>layout</em> of the local array can be:</p><ul>
+<li>0 - <em>ldata</em> is an array on all ldofs: copied indices: <code>{ J[j] : I[group] &lt;= j &lt; I[group+1] }</code> where <code>I,J=group_ldof.{I,J}</code></li>
+<li>1 - <em>ldata</em> is an array on the shared ldofs: copied indices: <code>{ j : I[group] &lt;= j &lt; I[group+1] }</code> where <code>I,J=group_ldof.{I,J}</code></li>
+<li>2 - <em>ldata</em> is an array on the true ldofs, ltdofs: copied indices: <code>{ J[j] : I[group] &lt;= j &lt; I[group+1] }</code> where <code>I,J=group_ltdof.{I,J}</code>. <dl class="section return"><dt>Returns</dt><dd>The pointer <em>buf</em> plus the number of elements in the group. </dd></dl>
+</li>
+</ul>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00450">450</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -334,9 +607,10 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize the communicator from a local-dof to group map. Finalize is called internally. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00273">273</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Initialize the communicator from a local-dof to group map. <a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d" title="Allocate internal buffers after the GroupLDofTable is defined. ">Finalize()</a> is called internally. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00286">286</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +629,7 @@ template&lt;class T &gt; </div>
 
 <p>Allocate internal buffers after the GroupLDofTable is defined. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00299">299</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00312">312</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -380,9 +654,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get a reference to the group topology object. </p>
+<p>Get a reference to the associated <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> object. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00139">139</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00170">170</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -406,9 +680,10 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Fill-in the returned <a class="el" href="classmfem_1_1Table.html">Table</a> reference to initialize the communicator then call Finalize. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00134">134</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Fill-in the returned <a class="el" href="classmfem_1_1Table.html">Table</a> reference to initialize the <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> then call <a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d" title="Allocate internal buffers after the GroupLDofTable is defined. ">Finalize()</a>. </p>
+
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00159">159</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -438,7 +713,7 @@ template&lt;class T &gt; </div>
 
 <p>Reduce operation Max, instantiated for int and double. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00535">535</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00987">987</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +743,27 @@ template&lt;class T &gt; </div>
 
 <p>Reduce operation Min, instantiated for int and double. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00517">517</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00969">969</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6823a4f08d0496a3fc312e20f4cff07b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GroupCommunicator::PrintInfo </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code><a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print information about the <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> from all MPI ranks. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l01018">1018</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -477,6 +772,9 @@ template&lt;class T &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void mfem::GroupCommunicator::Reduce </td>
@@ -496,12 +794,17 @@ template&lt;class T &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Reduce within each group where the master is the root. </p>
-<p>The reduce operation is given by the second argument (see below for list of the supported operations.) This method is instantiated for int and double. </p>
+<p>The reduce operation is given by the second argument (see below for list of the supported operations.) </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00419">419</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00272">272</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -539,7 +842,146 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00170">170</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Reduce within each group where the master is the root. </p>
+
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00279">279</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72b1917667eb8d7f44c661495579b7ed"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GroupCommunicator::ReduceBegin </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>ldata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Begin reduction operation within each group where the master is the root. </p>
+<p>The input data layout is an array on all ldofs, i.e. layout 0, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>.</p>
+<p>The reduce operation will be specified when calling <a class="el" href="classmfem_1_1GroupCommunicator.html#adf83b69a4bea56128e4ac700b3b576b8" title="Finalize reduction operation started with ReduceBegin(). ">ReduceEnd()</a>. This method is instantiated for int and double. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00757">757</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf83b69a4bea56128e4ac700b3b576b8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GroupCommunicator::ReduceEnd </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ldata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a>&lt; T &gt;)&#160;</td>
+          <td class="paramname"><em>Op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finalize reduction operation started with <a class="el" href="classmfem_1_1GroupCommunicator.html#a72b1917667eb8d7f44c661495579b7ed" title="Begin reduction operation within each group where the master is the root. ">ReduceBegin()</a>. </p>
+<p>The output data <em>layout</em> can be either 0 or 2, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>.</p>
+<p>The reduce operation is given by the third argument (see below for list of the supported operations.) This method is instantiated for int and double.</p>
+<dl class="section note"><dt>Note</dt><dd>If the output data layout is 2, then the data from the <em>ldata</em> array passed to this call is used in the reduction operation, instead of the data from the <em>ldata</em> array passed to <a class="el" href="classmfem_1_1GroupCommunicator.html#a72b1917667eb8d7f44c661495579b7ed" title="Begin reduction operation within each group where the master is the root. ">ReduceBegin()</a>. Therefore, the data for master-groups has to be identical in both arrays. </dd></dl>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00876">876</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa49b55a40a905c2c7825298831030fee"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T * mfem::GroupCommunicator::ReduceGroupFromBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ldata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a>&lt; T &gt;)&#160;</td>
+          <td class="paramname"><em>Op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform the reduction operation <em>Op</em> to the entries of group <em>group</em> using the values from the buffer <em>buf</em> and the values from the local array <em>ldata</em>, saving the result in the latter. </p>
+<p>For a description of <em>layout</em>, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>. </p><dl class="section return"><dt>Returns</dt><dd>The pointer <em>buf</em> plus the number of elements in the group. </dd></dl>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00519">519</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe2d0d67b67289b03aefe9ff9bcd75aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GroupCommunicator::SetLTDofTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ldof_ltdof</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the internal group_ltdof <a class="el" href="classmfem_1_1Table.html">Table</a>. </p>
+<p>This method must be called before performing operations that use local data layout 2, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a> for layout descriptions. </p>
+
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00421">421</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -569,7 +1011,7 @@ template&lt;class T &gt; </div>
 
 <p>Reduce operation Sum, instantiated for int and double. </p>
 
-<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00503">503</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8cpp_source.html#l00945">945</a> of file <a class="el" href="communication_8cpp_source.html">communication.cpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +1022,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

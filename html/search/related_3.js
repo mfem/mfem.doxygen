@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['integrationrules',['IntegrationRules',['../classmfem_1_1IntegrationRule.html#a48d8488f7cfa0111672665b0deb7466b',1,'mfem::IntegrationRule']]],
-  ['interpolate',['Interpolate',['../classmfem_1_1NURBSPatch.html#afb307dfcefb981d9d9f22b246664886f',1,'mfem::NURBSPatch']]]
+  ['densematrixinverse',['DenseMatrixInverse',['../classmfem_1_1DenseMatrix.html#a63af23bd04c8ba44868344162caddaf0',1,'mfem::DenseMatrix']]],
+  ['densetensor',['DenseTensor',['../classmfem_1_1DenseMatrix.html#a8e4358da76aee5a5d15d6413c9fbfb0a',1,'mfem::DenseMatrix']]]
 ];

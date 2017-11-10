@@ -61,7 +61,7 @@ var searchData=
   ['ldata',['ldata',['../structmfem_1_1GroupCommunicator_1_1OpData.html#ae5951fc15d2444fe2159562d11c97332',1,'mfem::GroupCommunicator::OpData']]],
   ['ldof_5fgroup',['ldof_group',['../classmfem_1_1ParNURBSExtension.html#ad7473979f314925c25ab3f020bf1e583',1,'mfem::ParNURBSExtension']]],
   ['ldofs',['ldofs',['../structmfem_1_1GroupCommunicator_1_1OpData.html#a24a1e1092b8fa8c41d34789c17d7b759',1,'mfem::GroupCommunicator::OpData']]],
-  ['leaf_5felements',['leaf_elements',['../classmfem_1_1NCMesh.html#a240354c7120e9ac7c68e4275a87c676d',1,'mfem::NCMesh']]],
+  ['leaf_5felements',['leaf_elements',['../classmfem_1_1NCMesh.html#a6603ae91d6e852c9576ab98ea2074d85',1,'mfem::NCMesh']]],
   ['leftdiagmult',['LeftDiagMult',['../classmfem_1_1HypreParMatrix.html#af529f6070d0bcce08a9622a991b8073b',1,'mfem::HypreParMatrix']]],
   ['leftscaling',['LeftScaling',['../classmfem_1_1DenseMatrix.html#abf516219a96c4df43a53bc7ffc17e450',1,'mfem::DenseMatrix']]],
   ['limitnclevel',['LimitNCLevel',['../classmfem_1_1NCMesh.html#a7255eda516a5f617b3fe6567bc40ee23',1,'mfem::NCMesh::LimitNCLevel()'],['../classmfem_1_1ParNCMesh.html#aef8e191581f226d508953d16a8c159d7',1,'mfem::ParNCMesh::LimitNCLevel()']]],

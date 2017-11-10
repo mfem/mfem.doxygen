@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['neighbordofmessage',['NeighborDofMessage',['../classmfem_1_1ParNCMesh.html#a2ffc06c0249c3787b6929f39637d6610',1,'mfem::ParNCMesh']]],
-  ['nurbsextension',['NURBSExtension',['../classmfem_1_1Mesh.html#a6a79e19b9529b956ffbfd419b88e80a4',1,'mfem::Mesh']]],
-  ['nurbspatchmap',['NURBSPatchMap',['../classmfem_1_1NURBSExtension.html#ae366ddd5b46afef65ab6fc49ff80113d',1,'mfem::NURBSExtension']]]
+  ['integrationrules',['IntegrationRules',['../classmfem_1_1IntegrationRule.html#a48d8488f7cfa0111672665b0deb7466b',1,'mfem::IntegrationRule']]],
+  ['interpolate',['Interpolate',['../classmfem_1_1NURBSPatch.html#afb307dfcefb981d9d9f22b246664886f',1,'mfem::NURBSPatch']]]
 ];

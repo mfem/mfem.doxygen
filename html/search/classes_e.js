@@ -12,5 +12,6 @@ var searchData=
   ['operatorhandle',['OperatorHandle',['../classmfem_1_1OperatorHandle.html',1,'mfem']]],
   ['optionsparser',['OptionsParser',['../classmfem_1_1OptionsParser.html',1,'mfem']]],
   ['ordering',['Ordering',['../classmfem_1_1Ordering.html',1,'mfem']]],
-  ['osockstream',['osockstream',['../classmfem_1_1osockstream.html',1,'mfem']]]
+  ['osockstream',['osockstream',['../classmfem_1_1osockstream.html',1,'mfem']]],
+  ['outstream',['OutStream',['../classmfem_1_1OutStream.html',1,'mfem']]]
 ];

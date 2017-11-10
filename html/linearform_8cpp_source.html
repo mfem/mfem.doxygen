@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v3.3</span>
+   &#160;<span id="projectnumber">v3.3.2</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -108,159 +109,225 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemfem.html">mfem</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#a0f2a60d80255f2574823d57bc9acef43">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a0f2a60d80255f2574823d57bc9acef43">LinearForm::AddDomainIntegrator</a> (<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> * lfi)</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#a0f2a60d80255f2574823d57bc9acef43">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a0f2a60d80255f2574823d57bc9acef43">LinearForm::AddDomainIntegrator</a>(<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> *lfi)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   dlfi.Append (lfi);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#a287bc86983b37c829a3312aab0dcbd53">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a287bc86983b37c829a3312aab0dcbd53">LinearForm::AddBoundaryIntegrator</a> (<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> * lfi)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   blfi.Append (lfi);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">LinearForm::AddBdrFaceIntegrator</a> (<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> * lfi)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   flfi.Append(lfi);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   flfi_marker.Append(NULL); <span class="comment">// NULL -&gt; all attributes are active</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#aa044ccf1f1a1a02b865bc8854ec24b19">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">LinearForm::AddBdrFaceIntegrator</a>(<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> *lfi,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                      <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;bdr_attr_marker)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   flfi.Append(lfi);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   flfi_marker.Append(&amp;bdr_attr_marker);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#afea448db223eefc3a3398707eab9172b">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#afea448db223eefc3a3398707eab9172b">LinearForm::Assemble</a>()</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> vdofs;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *eltrans;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> elemvect;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">Vector::operator=</a>(0.0);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keywordflow">if</span> (dlfi.Size())</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; fes -&gt; GetNE(); i++)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;         fes -&gt; GetElementVDofs (i, vdofs);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;         eltrans = fes -&gt; GetElementTransformation (i);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0; k &lt; dlfi.Size(); k++)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;         {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            dlfi[k]-&gt;AssembleRHSElementVect(*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(i), *eltrans, elemvect);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (vdofs, elemvect);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;         }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordflow">if</span> (blfi.Size())</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; fes -&gt; GetNBE(); i++)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;         fes -&gt; GetBdrElementVDofs (i, vdofs);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;         eltrans = fes -&gt; GetBdrElementTransformation (i);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0; k &lt; blfi.Size(); k++)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            blfi[k]-&gt;AssembleRHSElementVect(*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a5fbd5ddd42996bd7197f3c54208b34ee">GetBE</a>(i), *eltrans, elemvect);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (vdofs, elemvect);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;         }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <span class="keywordflow">if</span> (flfi.Size())</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *tr;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> *mesh = fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">GetMesh</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="comment">// Which boundary attributes need to be processed?</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> bdr_attr_marker(mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">bdr_attributes</a>.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>() ?</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                 mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">bdr_attributes</a>.<a class="code" href="classmfem_1_1Array.html#a4dc72a68c9e404a05f69b0655fcadb03">Max</a>() : 0);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      bdr_attr_marker = 0;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; flfi.Size(); k++)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;         <span class="keywordflow">if</span> (flfi_marker[k] == NULL)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;         {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            bdr_attr_marker = 1;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;         }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;         <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;bdr_marker = *flfi_marker[k];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;         MFEM_ASSERT(bdr_marker.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>() == bdr_attr_marker.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>(),</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                     <span class="stringliteral">&quot;invalid boundary marker for boundary face integrator #&quot;</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                     &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;, counting from zero&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; bdr_attr_marker.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>(); i++)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;         {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            bdr_attr_marker[i] |= bdr_marker[i];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;         }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#ad207cd78e4d4cf8732938c7226a66f58">GetNBE</a>(); i++)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">int</span> bdr_attr = mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a880cfede65a33f0f96d9d10d5163bc5b">GetBdrAttribute</a>(i);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;         <span class="keywordflow">if</span> (bdr_attr_marker[bdr_attr-1] == 0) { <span class="keywordflow">continue</span>; }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;         tr = mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#aa1869c4a7a9c9d4d1123450aba8f65ff">GetBdrFaceTransformations</a>(i);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;         <span class="keywordflow">if</span> (tr != NULL)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;         {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            fes -&gt; GetElementVDofs (tr -&gt; Elem1No, vdofs);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; flfi.Size(); k++)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;               <span class="keywordflow">if</span> (flfi_marker[k] &amp;&amp;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                   (*flfi_marker[k])[bdr_attr-1] == 0) { <span class="keywordflow">continue</span>; }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;               flfi[k] -&gt; AssembleRHSElementVect (*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(tr -&gt; Elem1No),</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                  *tr, elemvect);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;               <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (vdofs, elemvect);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;         }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;   }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#aabf72b85774b13b92cec33fe0fbaee20">  125</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a95fca38aa8e9c052026c75e702573798">LinearForm::Update</a>(<a class="code" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;v, <span class="keywordtype">int</span> v_offset)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;   fes = f;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#abd99082b7382cd547d26fc4d7149ef04">NewDataAndSize</a>((<span class="keywordtype">double</span> *)v + v_offset, fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a56baa021fc1ee335a82acc9e7b2b7b3f">GetVSize</a>());</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#ab4d5a0426cc2a25b2bd888d614c27f82">  131</a></span>&#160;<a class="code" href="classmfem_1_1LinearForm.html#ab4d5a0426cc2a25b2bd888d614c27f82">LinearForm::~LinearForm</a>()</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   <span class="keywordtype">int</span> k;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; dlfi.Size(); k++) { <span class="keyword">delete</span> dlfi[k]; }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; blfi.Size(); k++) { <span class="keyword">delete</span> blfi[k]; }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; flfi.Size(); k++) { <span class="keyword">delete</span> flfi[k]; }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
-<div class="ttc" id="classmfem_1_1Array_html_a813eda5c8de9bfcbf06f89adaff1f8ff"><div class="ttname"><a href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">mfem::Array::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Logical size of the array. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00109">array.hpp:109</a></div></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   <a class="code" href="classmfem_1_1DeltaLFIntegrator.html">DeltaLFIntegrator</a> *maybe_delta =</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classmfem_1_1DeltaLFIntegrator.html">DeltaLFIntegrator</a> *<span class="keyword">&gt;</span>(lfi);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   <span class="keywordflow">if</span> (!maybe_delta || !maybe_delta-&gt;<a class="code" href="classmfem_1_1DeltaLFIntegrator.html#a11bb1daa84b11539836acfda16f8e6f3">IsDelta</a>())</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      dlfi.Append(lfi);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      dlfi_delta.Append(maybe_delta);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#a287bc86983b37c829a3312aab0dcbd53">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a287bc86983b37c829a3312aab0dcbd53">LinearForm::AddBoundaryIntegrator</a> (<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> * lfi)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   blfi.Append (lfi);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">LinearForm::AddBdrFaceIntegrator</a> (<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> * lfi)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   flfi.Append(lfi);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   flfi_marker.Append(NULL); <span class="comment">// NULL -&gt; all attributes are active</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#aa044ccf1f1a1a02b865bc8854ec24b19">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">LinearForm::AddBdrFaceIntegrator</a>(<a class="code" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> *lfi,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                      <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;bdr_attr_marker)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   flfi.Append(lfi);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   flfi_marker.Append(&amp;bdr_attr_marker);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#afea448db223eefc3a3398707eab9172b">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#afea448db223eefc3a3398707eab9172b">LinearForm::Assemble</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> vdofs;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *eltrans;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> elemvect;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">Vector::operator=</a>(0.0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordflow">if</span> (dlfi.Size())</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; fes -&gt; GetNE(); i++)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;         fes -&gt; GetElementVDofs (i, vdofs);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         eltrans = fes -&gt; GetElementTransformation (i);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0; k &lt; dlfi.Size(); k++)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;         {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            dlfi[k]-&gt;AssembleRHSElementVect(*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(i), *eltrans, elemvect);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (vdofs, elemvect);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <a class="code" href="classmfem_1_1LinearForm.html#a153a0228d6cd187572f911ff5947d679">AssembleDelta</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <span class="keywordflow">if</span> (blfi.Size())</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; fes -&gt; GetNBE(); i++)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;         fes -&gt; GetBdrElementVDofs (i, vdofs);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;         eltrans = fes -&gt; GetBdrElementTransformation (i);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0; k &lt; blfi.Size(); k++)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;         {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            blfi[k]-&gt;AssembleRHSElementVect(*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a5fbd5ddd42996bd7197f3c54208b34ee">GetBE</a>(i), *eltrans, elemvect);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (vdofs, elemvect);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;         }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <span class="keywordflow">if</span> (flfi.Size())</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <a class="code" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *tr;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> *mesh = fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">GetMesh</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="comment">// Which boundary attributes need to be processed?</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> bdr_attr_marker(mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">bdr_attributes</a>.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>() ?</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                 mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">bdr_attributes</a>.<a class="code" href="classmfem_1_1Array.html#a4dc72a68c9e404a05f69b0655fcadb03">Max</a>() : 0);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      bdr_attr_marker = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; flfi.Size(); k++)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;         <span class="keywordflow">if</span> (flfi_marker[k] == NULL)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;         {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            bdr_attr_marker = 1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;         }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;         <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;bdr_marker = *flfi_marker[k];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;         MFEM_ASSERT(bdr_marker.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>() == bdr_attr_marker.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>(),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                     <span class="stringliteral">&quot;invalid boundary marker for boundary face integrator #&quot;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                     &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;, counting from zero&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; bdr_attr_marker.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>(); i++)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;         {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            bdr_attr_marker[i] |= bdr_marker[i];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#ad207cd78e4d4cf8732938c7226a66f58">GetNBE</a>(); i++)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">int</span> bdr_attr = mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a880cfede65a33f0f96d9d10d5163bc5b">GetBdrAttribute</a>(i);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;         <span class="keywordflow">if</span> (bdr_attr_marker[bdr_attr-1] == 0) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;         tr = mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#aa1869c4a7a9c9d4d1123450aba8f65ff">GetBdrFaceTransformations</a>(i);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;         <span class="keywordflow">if</span> (tr != NULL)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;         {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            fes -&gt; GetElementVDofs (tr -&gt; Elem1No, vdofs);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; flfi.Size(); k++)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;               <span class="keywordflow">if</span> (flfi_marker[k] &amp;&amp;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                   (*flfi_marker[k])[bdr_attr-1] == 0) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;               flfi[k] -&gt; AssembleRHSElementVect (*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(tr -&gt; Elem1No),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                                  *tr, elemvect);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;               <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (vdofs, elemvect);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;         }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#aabf72b85774b13b92cec33fe0fbaee20">  136</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a95fca38aa8e9c052026c75e702573798">LinearForm::Update</a>(<a class="code" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;v, <span class="keywordtype">int</span> v_offset)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   fes = f;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   <a class="code" href="classmfem_1_1Vector.html#abd99082b7382cd547d26fc4d7149ef04">NewDataAndSize</a>((<span class="keywordtype">double</span> *)v + v_offset, fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a56baa021fc1ee335a82acc9e7b2b7b3f">GetVSize</a>());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;   ResetDeltaLocations();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#a153a0228d6cd187572f911ff5947d679">  143</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmfem_1_1LinearForm.html#a153a0228d6cd187572f911ff5947d679">LinearForm::AssembleDelta</a>()</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   <span class="keywordflow">if</span> (dlfi_delta.Size() == 0) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;   <span class="keywordflow">if</span> (!HaveDeltaLocations())</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordtype">int</span> sdim = fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">GetMesh</a>()-&gt;<a class="code" href="classmfem_1_1Mesh.html#ada2086bdd3f3125dfc1b55ce0090695d">SpaceDimension</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <a class="code" href="classmfem_1_1Vector.html">Vector</a> center;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <a class="code" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> centers(sdim, dlfi_delta.Size());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; centers.Width(); i++)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;         centers.<a class="code" href="classmfem_1_1DenseMatrix.html#a3fcf25ab0c89b54024f0e3249c12710e">GetColumnReference</a>(i, center);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;         dlfi_delta[i]-&gt;GetDeltaCenter(center);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;         MFEM_VERIFY(center.<a class="code" href="classmfem_1_1Vector.html#ae46321466f5d68a25b6d8264bc1b08b5">Size</a>() == sdim,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                     <span class="stringliteral">&quot;Point dim &quot;</span> &lt;&lt; center.<a class="code" href="classmfem_1_1Vector.html#ae46321466f5d68a25b6d8264bc1b08b5">Size</a>() &lt;&lt;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                     <span class="stringliteral">&quot; does not match space dim &quot;</span> &lt;&lt; sdim);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">GetMesh</a>()-&gt;<a class="code" href="classmfem_1_1Mesh.html#ac4a77cf819f394d9e5097d5f4edc3845">FindPoints</a>(centers, dlfi_delta_elem_id, dlfi_delta_ip);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> vdofs;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> elemvect;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; dlfi_delta.Size(); i++)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordtype">int</span> elem_id = dlfi_delta_elem_id[i];</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="comment">// The delta center may be outside of this sub-domain, or</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="comment">// (Par)Mesh::FindPoints() failed to find this point:</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">if</span> (elem_id &lt; 0) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip = dlfi_delta_ip[i];</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;<a class="code" href="namespacemfem_1_1superlu.html#a23ebba8bf788fd79ffc54e930f33b243">Trans</a> = *fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a3c39f4ceae2f7d09e63a86ecbef9016a">GetElementTransformation</a>(elem_id);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      Trans.<a class="code" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint</a>(&amp;ip);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a853ff7d4d77414a8bc012288529caa76">GetElementVDofs</a>(elem_id, vdofs);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      dlfi_delta[i]-&gt;AssembleDeltaElementVect(*fes-&gt;<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(elem_id), <a class="code" href="namespacemfem_1_1superlu.html#a23ebba8bf788fd79ffc54e930f33b243">Trans</a>,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                              elemvect);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <a class="code" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a>(vdofs, elemvect);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classmfem_1_1LinearForm.html#ab4d5a0426cc2a25b2bd888d614c27f82">  183</a></span>&#160;<a class="code" href="classmfem_1_1LinearForm.html#ab4d5a0426cc2a25b2bd888d614c27f82">LinearForm::~LinearForm</a>()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;   <span class="keywordtype">int</span> k;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; dlfi_delta.Size(); k++) { <span class="keyword">delete</span> dlfi_delta[k]; }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; dlfi.Size(); k++) { <span class="keyword">delete</span> dlfi[k]; }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; blfi.Size(); k++) { <span class="keyword">delete</span> blfi[k]; }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   <span class="keywordflow">for</span> (k=0; k &lt; flfi.Size(); k++) { <span class="keyword">delete</span> flfi[k]; }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="ttc" id="classmfem_1_1Array_html_a813eda5c8de9bfcbf06f89adaff1f8ff"><div class="ttname"><a href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">mfem::Array::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Logical size of the array. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00110">array.hpp:110</a></div></div>
 <div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a56baa021fc1ee335a82acc9e7b2b7b3f"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a56baa021fc1ee335a82acc9e7b2b7b3f">mfem::FiniteElementSpace::GetVSize</a></div><div class="ttdeci">int GetVSize() const </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00163">fespace.hpp:163</a></div></div>
 <div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00044">mesh.hpp:44</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a880cfede65a33f0f96d9d10d5163bc5b"><div class="ttname"><a href="classmfem_1_1Mesh.html#a880cfede65a33f0f96d9d10d5163bc5b">mfem::Mesh::GetBdrAttribute</a></div><div class="ttdeci">int GetBdrAttribute(int i) const </div><div class="ttdoc">Return the attribute of boundary element i. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00824">mesh.hpp:824</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_abd99082b7382cd547d26fc4d7149ef04"><div class="ttname"><a href="classmfem_1_1Vector.html#abd99082b7382cd547d26fc4d7149ef04">mfem::Vector::NewDataAndSize</a></div><div class="ttdeci">void NewDataAndSize(double *d, int s)</div><div class="ttdoc">Set the Vector data and size, deleting the old data, if owned. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00094">vector.hpp:94</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_ad207cd78e4d4cf8732938c7226a66f58"><div class="ttname"><a href="classmfem_1_1Mesh.html#ad207cd78e4d4cf8732938c7226a66f58">mfem::Mesh::GetNBE</a></div><div class="ttdeci">int GetNBE() const </div><div class="ttdoc">Returns number of boundary elements. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00587">mesh.hpp:587</a></div></div>
-<div class="ttc" id="classmfem_1_1LinearForm_html_afea448db223eefc3a3398707eab9172b"><div class="ttname"><a href="classmfem_1_1LinearForm.html#afea448db223eefc3a3398707eab9172b">mfem::LinearForm::Assemble</a></div><div class="ttdeci">void Assemble()</div><div class="ttdoc">Assembles the linear form i.e. sums over all domain/bdr integrators. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00042">linearform.cpp:42</a></div></div>
-<div class="ttc" id="classmfem_1_1FaceElementTransformations_html"><div class="ttname"><a href="classmfem_1_1FaceElementTransformations.html">mfem::FaceElementTransformations</a></div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00154">eltrans.hpp:154</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a880cfede65a33f0f96d9d10d5163bc5b"><div class="ttname"><a href="classmfem_1_1Mesh.html#a880cfede65a33f0f96d9d10d5163bc5b">mfem::Mesh::GetBdrAttribute</a></div><div class="ttdeci">int GetBdrAttribute(int i) const </div><div class="ttdoc">Return the attribute of boundary element i. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00855">mesh.hpp:855</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_abd99082b7382cd547d26fc4d7149ef04"><div class="ttname"><a href="classmfem_1_1Vector.html#abd99082b7382cd547d26fc4d7149ef04">mfem::Vector::NewDataAndSize</a></div><div class="ttdeci">void NewDataAndSize(double *d, int s)</div><div class="ttdoc">Set the Vector data and size, deleting the old data, if owned. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00101">vector.hpp:101</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_ad207cd78e4d4cf8732938c7226a66f58"><div class="ttname"><a href="classmfem_1_1Mesh.html#ad207cd78e4d4cf8732938c7226a66f58">mfem::Mesh::GetNBE</a></div><div class="ttdeci">int GetNBE() const </div><div class="ttdoc">Returns number of boundary elements. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00617">mesh.hpp:617</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a853ff7d4d77414a8bc012288529caa76"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a853ff7d4d77414a8bc012288529caa76">mfem::FiniteElementSpace::GetElementVDofs</a></div><div class="ttdeci">void GetElementVDofs(int i, Array&lt; int &gt; &amp;vdofs) const </div><div class="ttdoc">Returns indexes of degrees of freedom in array dofs for i&#39;th element. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l00133">fespace.cpp:133</a></div></div>
+<div class="ttc" id="classmfem_1_1LinearForm_html_afea448db223eefc3a3398707eab9172b"><div class="ttname"><a href="classmfem_1_1LinearForm.html#afea448db223eefc3a3398707eab9172b">mfem::LinearForm::Assemble</a></div><div class="ttdeci">void Assemble()</div><div class="ttdoc">Assembles the linear form i.e. sums over all domain/bdr integrators. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00051">linearform.cpp:51</a></div></div>
+<div class="ttc" id="classmfem_1_1ElementTransformation_html_abfa8411e550ce8afa85bf1015bfe6ba8"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">mfem::ElementTransformation::SetIntPoint</a></div><div class="ttdeci">void SetIntPoint(const IntegrationPoint *ip)</div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00052">eltrans.hpp:52</a></div></div>
+<div class="ttc" id="classmfem_1_1FaceElementTransformations_html"><div class="ttname"><a href="classmfem_1_1FaceElementTransformations.html">mfem::FaceElementTransformations</a></div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00343">eltrans.hpp:343</a></div></div>
+<div class="ttc" id="classmfem_1_1DenseMatrix_html"><div class="ttname"><a href="classmfem_1_1DenseMatrix.html">mfem::DenseMatrix</a></div><div class="ttdoc">Data type dense matrix using column-major storage. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8hpp_source.html#l00023">densemat.hpp:23</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ae46321466f5d68a25b6d8264bc1b08b5"><div class="ttname"><a href="classmfem_1_1Vector.html#ae46321466f5d68a25b6d8264bc1b08b5">mfem::Vector::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Returns the size of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00113">vector.hpp:113</a></div></div>
 <div class="ttc" id="classmfem_1_1LinearFormIntegrator_html"><div class="ttname"><a href="classmfem_1_1LinearFormIntegrator.html">mfem::LinearFormIntegrator</a></div><div class="ttdoc">Abstract base class LinearFormIntegrator. </div><div class="ttdef"><b>Definition:</b> <a href="lininteg_8hpp_source.html#l00022">lininteg.hpp:22</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_ade208c9337f60afc34f14e2f331bd5f0"><div class="ttname"><a href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">mfem::Vector::operator=</a></div><div class="ttdeci">Vector &amp; operator=(const double *v)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00117">vector.cpp:117</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_ade208c9337f60afc34f14e2f331bd5f0"><div class="ttname"><a href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">mfem::Vector::operator=</a></div><div class="ttdeci">Vector &amp; operator=(const double *v)</div><div class="ttdoc">Copy Size() entries from v. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00117">vector.cpp:117</a></div></div>
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div><div class="ttdef"><b>Definition:</b> <a href="CodeDocumentation_8dox_source.html#l00001">CodeDocumentation.dox:1</a></div></div>
 <div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a103a8ea2e2ec93e0fba94cfb7c0b1111"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">mfem::FiniteElementSpace::GetMesh</a></div><div class="ttdeci">Mesh * GetMesh() const </div><div class="ttdoc">Returns the mesh. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00136">fespace.hpp:136</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array&lt; int &gt;</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html_a4dc72a68c9e404a05f69b0655fcadb03"><div class="ttname"><a href="classmfem_1_1Array.html#a4dc72a68c9e404a05f69b0655fcadb03">mfem::Array::Max</a></div><div class="ttdeci">T Max() const </div><div class="ttdoc">Find the maximal element in the array, using the comparison operator < for class T. </div><div class="ttdef"><b>Definition:</b> <a href="array_8cpp_source.html#l00108">array.cpp:108</a></div></div>
-<div class="ttc" id="classmfem_1_1LinearForm_html_af084ba37899ab6b938aae58a614ee36e"><div class="ttname"><a href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">mfem::LinearForm::AddBdrFaceIntegrator</a></div><div class="ttdeci">void AddBdrFaceIntegrator(LinearFormIntegrator *lfi)</div><div class="ttdoc">Adds new Boundary Face Integrator. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00029">linearform.cpp:29</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_aa1869c4a7a9c9d4d1123450aba8f65ff"><div class="ttname"><a href="classmfem_1_1Mesh.html#aa1869c4a7a9c9d4d1123450aba8f65ff">mfem::Mesh::GetBdrFaceTransformations</a></div><div class="ttdeci">FaceElementTransformations * GetBdrFaceTransformations(int BdrElemNo)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l00687">mesh.cpp:687</a></div></div>
-<div class="ttc" id="classmfem_1_1LinearForm_html_a287bc86983b37c829a3312aab0dcbd53"><div class="ttname"><a href="classmfem_1_1LinearForm.html#a287bc86983b37c829a3312aab0dcbd53">mfem::LinearForm::AddBoundaryIntegrator</a></div><div class="ttdeci">void AddBoundaryIntegrator(LinearFormIntegrator *lfi)</div><div class="ttdoc">Adds new Boundary Integrator. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00024">linearform.cpp:24</a></div></div>
+<div class="ttc" id="classmfem_1_1LinearForm_html_af084ba37899ab6b938aae58a614ee36e"><div class="ttname"><a href="classmfem_1_1LinearForm.html#af084ba37899ab6b938aae58a614ee36e">mfem::LinearForm::AddBdrFaceIntegrator</a></div><div class="ttdeci">void AddBdrFaceIntegrator(LinearFormIntegrator *lfi)</div><div class="ttdoc">Adds new Boundary Face Integrator. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00038">linearform.cpp:38</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_aa1869c4a7a9c9d4d1123450aba8f65ff"><div class="ttname"><a href="classmfem_1_1Mesh.html#aa1869c4a7a9c9d4d1123450aba8f65ff">mfem::Mesh::GetBdrFaceTransformations</a></div><div class="ttdeci">FaceElementTransformations * GetBdrFaceTransformations(int BdrElemNo)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l00717">mesh.cpp:717</a></div></div>
+<div class="ttc" id="classmfem_1_1LinearForm_html_a287bc86983b37c829a3312aab0dcbd53"><div class="ttname"><a href="classmfem_1_1LinearForm.html#a287bc86983b37c829a3312aab0dcbd53">mfem::LinearForm::AddBoundaryIntegrator</a></div><div class="ttdeci">void AddBoundaryIntegrator(LinearFormIntegrator *lfi)</div><div class="ttdoc">Adds new Boundary Integrator. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00033">linearform.cpp:33</a></div></div>
+<div class="ttc" id="classmfem_1_1DeltaLFIntegrator_html_a11bb1daa84b11539836acfda16f8e6f3"><div class="ttname"><a href="classmfem_1_1DeltaLFIntegrator.html#a11bb1daa84b11539836acfda16f8e6f3">mfem::DeltaLFIntegrator::IsDelta</a></div><div class="ttdeci">bool IsDelta() const </div><div class="ttdoc">Returns true if the derived class instance uses a delta coefficient. </div><div class="ttdef"><b>Definition:</b> <a href="lininteg_8hpp_source.html#l00070">lininteg.hpp:70</a></div></div>
+<div class="ttc" id="namespacemfem_1_1superlu_html_a23ebba8bf788fd79ffc54e930f33b243"><div class="ttname"><a href="namespacemfem_1_1superlu.html#a23ebba8bf788fd79ffc54e930f33b243">mfem::superlu::Trans</a></div><div class="ttdeci">Trans</div><div class="ttdef"><b>Definition:</b> <a href="superlu_8hpp_source.html#l00039">superlu.hpp:39</a></div></div>
 <div class="ttc" id="classmfem_1_1Vector_html_a6b60ed4dac14bacad367a02ac8fc973c"><div class="ttname"><a href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">mfem::Vector::AddElementVector</a></div><div class="ttdeci">void AddElementVector(const Array&lt; int &gt; &amp;dofs, const Vector &amp;elemvect)</div><div class="ttdoc">Add (element) subvector to the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00550">vector.cpp:550</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_ada2086bdd3f3125dfc1b55ce0090695d"><div class="ttname"><a href="classmfem_1_1Mesh.html#ada2086bdd3f3125dfc1b55ce0090695d">mfem::Mesh::SpaceDimension</a></div><div class="ttdeci">int SpaceDimension() const </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00642">mesh.hpp:642</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a3c39f4ceae2f7d09e63a86ecbef9016a"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a3c39f4ceae2f7d09e63a86ecbef9016a">mfem::FiniteElementSpace::GetElementTransformation</a></div><div class="ttdeci">ElementTransformation * GetElementTransformation(int i) const </div><div class="ttdoc">Returns ElementTransformation for the i&#39;th element. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00205">fespace.hpp:205</a></div></div>
 <div class="ttc" id="classmfem_1_1LinearForm_html_a0f2a60d80255f2574823d57bc9acef43"><div class="ttname"><a href="classmfem_1_1LinearForm.html#a0f2a60d80255f2574823d57bc9acef43">mfem::LinearForm::AddDomainIntegrator</a></div><div class="ttdeci">void AddDomainIntegrator(LinearFormIntegrator *lfi)</div><div class="ttdoc">Adds new Domain Integrator. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00019">linearform.cpp:19</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a16254ab9e08be6fa84e8b12cb551271a"><div class="ttname"><a href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">mfem::Mesh::bdr_attributes</a></div><div class="ttdeci">Array&lt; int &gt; bdr_attributes</div><div class="ttdoc">A list of all unique boundary attributes used by the Mesh. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00142">mesh.hpp:142</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a16254ab9e08be6fa84e8b12cb551271a"><div class="ttname"><a href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">mfem::Mesh::bdr_attributes</a></div><div class="ttdeci">Array&lt; int &gt; bdr_attributes</div><div class="ttdoc">A list of all unique boundary attributes used by the Mesh. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00172">mesh.hpp:172</a></div></div>
 <div class="ttc" id="classmfem_1_1FiniteElementSpace_html"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html">mfem::FiniteElementSpace</a></div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00060">fespace.hpp:60</a></div></div>
 <div class="ttc" id="fem_8hpp_html"><div class="ttname"><a href="fem_8hpp.html">fem.hpp</a></div></div>
-<div class="ttc" id="classmfem_1_1LinearForm_html_a95fca38aa8e9c052026c75e702573798"><div class="ttname"><a href="classmfem_1_1LinearForm.html#a95fca38aa8e9c052026c75e702573798">mfem::LinearForm::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="linearform_8hpp_source.html#l00065">linearform.hpp:65</a></div></div>
-<div class="ttc" id="classmfem_1_1LinearForm_html_ab4d5a0426cc2a25b2bd888d614c27f82"><div class="ttname"><a href="classmfem_1_1LinearForm.html#ab4d5a0426cc2a25b2bd888d614c27f82">mfem::LinearForm::~LinearForm</a></div><div class="ttdeci">~LinearForm()</div><div class="ttdoc">Destroys linear form. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00131">linearform.cpp:131</a></div></div>
+<div class="ttc" id="classmfem_1_1DenseMatrix_html_a3fcf25ab0c89b54024f0e3249c12710e"><div class="ttname"><a href="classmfem_1_1DenseMatrix.html#a3fcf25ab0c89b54024f0e3249c12710e">mfem::DenseMatrix::GetColumnReference</a></div><div class="ttdeci">void GetColumnReference(int c, Vector &amp;col)</div><div class="ttdef"><b>Definition:</b> <a href="densemat_8hpp_source.html#l00243">densemat.hpp:243</a></div></div>
+<div class="ttc" id="classmfem_1_1DeltaLFIntegrator_html"><div class="ttname"><a href="classmfem_1_1DeltaLFIntegrator.html">mfem::DeltaLFIntegrator</a></div><div class="ttdoc">Abstract class for integrators that support delta coefficients. </div><div class="ttdef"><b>Definition:</b> <a href="lininteg_8hpp_source.html#l00047">lininteg.hpp:47</a></div></div>
+<div class="ttc" id="classmfem_1_1LinearForm_html_a153a0228d6cd187572f911ff5947d679"><div class="ttname"><a href="classmfem_1_1LinearForm.html#a153a0228d6cd187572f911ff5947d679">mfem::LinearForm::AssembleDelta</a></div><div class="ttdeci">void AssembleDelta()</div><div class="ttdoc">Assembles delta functions of the linear form. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00143">linearform.cpp:143</a></div></div>
+<div class="ttc" id="classmfem_1_1LinearForm_html_a95fca38aa8e9c052026c75e702573798"><div class="ttname"><a href="classmfem_1_1LinearForm.html#a95fca38aa8e9c052026c75e702573798">mfem::LinearForm::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="linearform_8hpp_source.html#l00090">linearform.hpp:90</a></div></div>
+<div class="ttc" id="classmfem_1_1IntegrationPoint_html"><div class="ttname"><a href="classmfem_1_1IntegrationPoint.html">mfem::IntegrationPoint</a></div><div class="ttdoc">Class for integration point with weight. </div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00025">intrules.hpp:25</a></div></div>
+<div class="ttc" id="classmfem_1_1LinearForm_html_ab4d5a0426cc2a25b2bd888d614c27f82"><div class="ttname"><a href="classmfem_1_1LinearForm.html#ab4d5a0426cc2a25b2bd888d614c27f82">mfem::LinearForm::~LinearForm</a></div><div class="ttdeci">~LinearForm()</div><div class="ttdoc">Destroys linear form. </div><div class="ttdef"><b>Definition:</b> <a href="linearform_8cpp_source.html#l00183">linearform.cpp:183</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00023">eltrans.hpp:23</a></div></div>
-<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a28ed193224e108a8616e62843d507836"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">mfem::FiniteElementSpace::GetFE</a></div><div class="ttdeci">const FiniteElement * GetFE(int i) const </div><div class="ttdoc">Returns pointer to the FiniteElement associated with i&#39;th element. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l01134">fespace.cpp:1134</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00036">vector.hpp:36</a></div></div>
-<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a5fbd5ddd42996bd7197f3c54208b34ee"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a5fbd5ddd42996bd7197f3c54208b34ee">mfem::FiniteElementSpace::GetBE</a></div><div class="ttdeci">const FiniteElement * GetBE(int i) const </div><div class="ttdoc">Returns pointer to the FiniteElement for the i&#39;th boundary element. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l01369">fespace.cpp:1369</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a28ed193224e108a8616e62843d507836"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">mfem::FiniteElementSpace::GetFE</a></div><div class="ttdeci">const FiniteElement * GetFE(int i) const </div><div class="ttdoc">Returns pointer to the FiniteElement associated with i&#39;th element. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l01171">fespace.cpp:1171</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_ac4a77cf819f394d9e5097d5f4edc3845"><div class="ttname"><a href="classmfem_1_1Mesh.html#ac4a77cf819f394d9e5097d5f4edc3845">mfem::Mesh::FindPoints</a></div><div class="ttdeci">virtual int FindPoints(DenseMatrix &amp;point_mat, Array&lt; int &gt; &amp;elem_ids, Array&lt; IntegrationPoint &gt; &amp;ips, bool warn=true, InverseElementTransformation *inv_trans=NULL)</div><div class="ttdoc">Find the ids of the elements that contain the given points, and their corresponding reference coordin...</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l08539">mesh.cpp:8539</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00041">vector.hpp:41</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a5fbd5ddd42996bd7197f3c54208b34ee"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a5fbd5ddd42996bd7197f3c54208b34ee">mfem::FiniteElementSpace::GetBE</a></div><div class="ttdeci">const FiniteElement * GetBE(int i) const </div><div class="ttdoc">Returns pointer to the FiniteElement for the i&#39;th boundary element. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l01406">fespace.cpp:1406</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 22:09:09 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 10 2017 13:28:58 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
