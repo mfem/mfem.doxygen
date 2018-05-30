@@ -19,6 +19,8 @@ var searchData=
   ['blockdiagonalpreconditioner',['BlockDiagonalPreconditioner',['../classmfem_1_1BlockDiagonalPreconditioner.html',1,'mfem']]],
   ['blocklowertriangularpreconditioner',['BlockLowerTriangularPreconditioner',['../classmfem_1_1BlockLowerTriangularPreconditioner.html',1,'mfem']]],
   ['blockmatrix',['BlockMatrix',['../classmfem_1_1BlockMatrix.html',1,'mfem']]],
+  ['blocknonlinearform',['BlockNonlinearForm',['../classmfem_1_1BlockNonlinearForm.html',1,'mfem']]],
+  ['blocknonlinearformintegrator',['BlockNonlinearFormIntegrator',['../classmfem_1_1BlockNonlinearFormIntegrator.html',1,'mfem']]],
   ['blockoperator',['BlockOperator',['../classmfem_1_1BlockOperator.html',1,'mfem']]],
   ['blockvector',['BlockVector',['../classmfem_1_1BlockVector.html',1,'mfem']]],
   ['boundaryflowintegrator',['BoundaryFlowIntegrator',['../classmfem_1_1BoundaryFlowIntegrator.html',1,'mfem']]],

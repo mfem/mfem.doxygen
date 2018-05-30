@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mode',['Mode',['../classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944',1,'mfem::GroupCommunicator']]]
+  ['format',['Format',['../classmfem_1_1DataCollection.html#aa818f30a7ff0c9615cc83fe180194135',1,'mfem::DataCollection']]]
 ];

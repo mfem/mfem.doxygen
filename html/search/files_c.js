@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['ex1_2ecpp',['ex1.cpp',['../miniapps_2performance_2ex1_8cpp.html',1,'']]],
-  ['ex1p_2ecpp',['ex1p.cpp',['../miniapps_2performance_2ex1p_8cpp.html',1,'']]],
   ['matrix_2ecpp',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
   ['matrix_2ehpp',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
+  ['maxwell_2ecpp',['maxwell.cpp',['../maxwell_8cpp.html',1,'']]],
+  ['maxwell_5fsolver_2ecpp',['maxwell_solver.cpp',['../maxwell__solver_8cpp.html',1,'']]],
+  ['maxwell_5fsolver_2ehpp',['maxwell_solver.hpp',['../maxwell__solver_8hpp.html',1,'']]],
   ['mem_5falloc_2ehpp',['mem_alloc.hpp',['../mem__alloc_8hpp.html',1,'']]],
   ['mesh_2dexplorer_2ecpp',['mesh-explorer.cpp',['../mesh-explorer_8cpp.html',1,'']]],
   ['mesh_2doptimizer_2ecpp',['mesh-optimizer.cpp',['../mesh-optimizer_8cpp.html',1,'']]],

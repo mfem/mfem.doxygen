@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['ex10p_2ecpp',['ex10p.cpp',['../petsc_2ex10p_8cpp.html',1,'']]],
-  ['ex2p_2ecpp',['ex2p.cpp',['../petsc_2ex2p_8cpp.html',1,'']]],
-  ['ex3p_2ecpp',['ex3p.cpp',['../petsc_2ex3p_8cpp.html',1,'']]],
-  ['ex4p_2ecpp',['ex4p.cpp',['../petsc_2ex4p_8cpp.html',1,'']]],
-  ['ex5p_2ecpp',['ex5p.cpp',['../petsc_2ex5p_8cpp.html',1,'']]],
-  ['ex6p_2ecpp',['ex6p.cpp',['../petsc_2ex6p_8cpp.html',1,'']]],
-  ['ex9p_2ecpp',['ex9p.cpp',['../petsc_2ex9p_8cpp.html',1,'']]],
   ['pbilinearform_2ecpp',['pbilinearform.cpp',['../pbilinearform_8cpp.html',1,'']]],
   ['pbilinearform_2ehpp',['pbilinearform.hpp',['../pbilinearform_8hpp.html',1,'']]],
   ['petsc_2ecpp',['petsc.cpp',['../petsc_8cpp.html',1,'']]],
@@ -27,5 +20,7 @@ var searchData=
   ['pnonlinearform_2ecpp',['pnonlinearform.cpp',['../pnonlinearform_8cpp.html',1,'']]],
   ['pnonlinearform_2ehpp',['pnonlinearform.hpp',['../pnonlinearform_8hpp.html',1,'']]],
   ['point_2ecpp',['point.cpp',['../point_8cpp.html',1,'']]],
-  ['point_2ehpp',['point.hpp',['../point_8hpp.html',1,'']]]
+  ['point_2ehpp',['point.hpp',['../point_8hpp.html',1,'']]],
+  ['pumi_2ecpp',['pumi.cpp',['../pumi_8cpp.html',1,'']]],
+  ['pumi_2ehpp',['pumi.hpp',['../pumi_8hpp.html',1,'']]]
 ];

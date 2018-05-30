@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowperm',['RowPerm',['../namespacemfem_1_1superlu.html#a8765532204c46371fd0240492ce001f1',1,'mfem::superlu']]]
+  ['mode',['Mode',['../classmfem_1_1GroupCommunicator.html#a1a77683f9ab6236ef67d3a4731f22944',1,'mfem::GroupCommunicator']]]
 ];

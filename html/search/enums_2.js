@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['evalmasks',['EvalMasks',['../classmfem_1_1InvariantsEvaluator2D.html#a7cf33c9172d4d080a33f240aa0d140c4',1,'mfem::InvariantsEvaluator2D::EvalMasks()'],['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576',1,'mfem::InvariantsEvaluator3D::EvalMasks()']]],
-  ['evaloperations',['EvalOperations',['../classmfem_1_1TElementTransformation.html#a6e567765c4de90cff852d7adee4187ab',1,'mfem::TElementTransformation']]]
+  ['diagonalpolicy',['DiagonalPolicy',['../classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d',1,'mfem::Matrix']]],
+  ['dofmaptype',['DofMapType',['../classmfem_1_1TensorBasisElement.html#a43fc42f250c0b45defd904902475bb3e',1,'mfem::TensorBasisElement']]]
 ];

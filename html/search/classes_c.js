@@ -10,6 +10,7 @@ var searchData=
   ['matrixfunctioncoefficient',['MatrixFunctionCoefficient',['../classmfem_1_1MatrixFunctionCoefficient.html',1,'mfem']]],
   ['matrixinverse',['MatrixInverse',['../classmfem_1_1MatrixInverse.html',1,'mfem']]],
   ['matrixrestrictedcoefficient',['MatrixRestrictedCoefficient',['../classmfem_1_1MatrixRestrictedCoefficient.html',1,'mfem']]],
+  ['maxwellsolver',['MaxwellSolver',['../classmfem_1_1electromagnetics_1_1MaxwellSolver.html',1,'mfem::electromagnetics']]],
   ['memalloc',['MemAlloc',['../classmfem_1_1MemAlloc.html',1,'mfem']]],
   ['memalloc_3c_20mfem_3a_3astable3dnode_2c_201024_20_3e',['MemAlloc&lt; mfem::STable3DNode, 1024 &gt;',['../classmfem_1_1MemAlloc.html',1,'mfem']]],
   ['memalloc_3c_20mfem_3a_3atetrahedron_2c_201024_20_3e',['MemAlloc&lt; mfem::Tetrahedron, 1024 &gt;',['../classmfem_1_1MemAlloc.html',1,'mfem']]],
@@ -66,5 +67,7 @@ var searchData=
   ['mixedweakdivcrossintegrator',['MixedWeakDivCrossIntegrator',['../classmfem_1_1MixedWeakDivCrossIntegrator.html',1,'mfem']]],
   ['mixedweakgraddotintegrator',['MixedWeakGradDotIntegrator',['../classmfem_1_1MixedWeakGradDotIntegrator.html',1,'mfem']]],
   ['mpi_5fsession',['MPI_Session',['../classmfem_1_1MPI__Session.html',1,'mfem']]],
-  ['mpitypemap',['MPITypeMap',['../structmfem_1_1MPITypeMap.html',1,'mfem']]]
+  ['mpitypemap',['MPITypeMap',['../structmfem_1_1MPITypeMap.html',1,'mfem']]],
+  ['mpitypemap_3c_20double_20_3e',['MPITypeMap&lt; double &gt;',['../structmfem_1_1MPITypeMap_3_01double_01_4.html',1,'mfem']]],
+  ['mpitypemap_3c_20int_20_3e',['MPITypeMap&lt; int &gt;',['../structmfem_1_1MPITypeMap_3_01int_01_4.html',1,'mfem']]]
 ];

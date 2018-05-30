@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['seg_5ft',['seg_t',['../classmfem_1_1Mesh.html#a53c7787f16f6841e738cca633696e26a',1,'mfem::Mesh']]],
-  ['shapeeval',['ShapeEval',['../classmfem_1_1TElementTransformation.html#ae1557d0dae0d27b47049665de42709ec',1,'mfem::TElementTransformation']]],
-  ['shapeeval_5ftype',['ShapeEval_type',['../classmfem_1_1TGridFunctionCoefficient.html#a5c5bb02a49ed2fee1c84b8782696fef8',1,'mfem::TGridFunctionCoefficient::ShapeEval_type()'],['../classmfem_1_1FieldEvaluator__base.html#ae03e38dd1ad501b82502af93dba7c626',1,'mfem::FieldEvaluator_base::ShapeEval_type()'],['../classmfem_1_1FieldEvaluator.html#ae612e46044f1bed041e5f4a6bf834502',1,'mfem::FieldEvaluator::ShapeEval_type()']]],
-  ['socklen_5ft',['socklen_t',['../isockstream_8cpp.html#a6b82106923cc13b3a9734520ecc29514',1,'isockstream.cpp']]],
-  ['sol_5ffe_5ft',['sol_fe_t',['../miniapps_2performance_2ex1_8cpp.html#a1aa1edd99a4f3d467374a3638eca8b05',1,'sol_fe_t():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#a1aa1edd99a4f3d467374a3638eca8b05',1,'sol_fe_t():&#160;ex1p.cpp']]],
-  ['sol_5ffes_5ft',['sol_fes_t',['../miniapps_2performance_2ex1_8cpp.html#a2c2150995aac21fa954e6bb038d16497',1,'sol_fes_t():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#a2c2150995aac21fa954e6bb038d16497',1,'sol_fes_t():&#160;ex1p.cpp']]],
-  ['solfe_5ftype',['solFE_type',['../classmfem_1_1TBilinearForm.html#a89ccdfbd34f6fb54c93bd54323236f44',1,'mfem::TBilinearForm']]],
-  ['solfieldeval',['solFieldEval',['../classmfem_1_1TBilinearForm.html#a5ef8aae43ea78a2a25daba91b17c3e54',1,'mfem::TBilinearForm']]],
-  ['solshapeeval',['solShapeEval',['../classmfem_1_1TBilinearForm.html#a40e216138f07a24f152dba229353f9d5',1,'mfem::TBilinearForm']]],
-  ['solveclayout_5ftype',['solVecLayout_type',['../classmfem_1_1TBilinearForm.html#ad2b36ce586252dae197696e2d7f03018',1,'mfem::TBilinearForm']]],
-  ['spec',['Spec',['../structmfem_1_1TBilinearForm_1_1S__spec.html#a6b7c8e1b4d9e1a6a18f6e25f55821fb2',1,'mfem::TBilinearForm::S_spec']]],
-  ['ssize_5ft',['ssize_t',['../isockstream_8cpp.html#af629ed855824cf5955b54529adf78ad6',1,'ssize_t():&#160;isockstream.cpp'],['../socketstream_8cpp.html#af629ed855824cf5955b54529adf78ad6',1,'ssize_t():&#160;socketstream.cpp']]]
+  ['real_5ftype',['real_type',['../classmfem_1_1TBilinearForm.html#addcd39caf375f3f212e7de6abf16b52e',1,'mfem::TBilinearForm::real_type()'],['../classmfem_1_1TElementTransformation.html#a42b136fd7a24f7b4ead7cd4f90fccfd7',1,'mfem::TElementTransformation::real_type()'],['../classmfem_1_1ShapeEvaluator.html#a30e5d269c0e07f704c6199a2d04241d9',1,'mfem::ShapeEvaluator::real_type()'],['../classmfem_1_1GenericIntegrationRule.html#a2b7756ff2d431f88263c44c82669fd26',1,'mfem::GenericIntegrationRule::real_type()'],['../classmfem_1_1TProductIntegrationRule.html#aac7864bd140df0fcd1f3b2c1b50ae303',1,'mfem::TProductIntegrationRule::real_type()']]],
+  ['refpathmap',['RefPathMap',['../classmfem_1_1NCMesh.html#abdfac962041dc7075255c9736d42e2b8',1,'mfem::NCMesh']]],
+  ['result_5ft',['result_t',['../structmfem_1_1IntRuleCoefficient_1_1Aux_3_01false_00_01dummy_01_4.html#a19c0fadb905ca744845b0f0ec156d142',1,'mfem::IntRuleCoefficient::Aux&lt; false, dummy &gt;']]],
+  ['rownodealloc',['RowNodeAlloc',['../classmfem_1_1SparseMatrix.html#a242a98350e8483e67e32d12c7b069381',1,'mfem::SparseMatrix']]]
 ];

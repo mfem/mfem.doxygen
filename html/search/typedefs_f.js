@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['real_5ftype',['real_type',['../classmfem_1_1TBilinearForm.html#addcd39caf375f3f212e7de6abf16b52e',1,'mfem::TBilinearForm::real_type()'],['../classmfem_1_1TElementTransformation.html#a42b136fd7a24f7b4ead7cd4f90fccfd7',1,'mfem::TElementTransformation::real_type()'],['../classmfem_1_1ShapeEvaluator.html#a30e5d269c0e07f704c6199a2d04241d9',1,'mfem::ShapeEvaluator::real_type()'],['../classmfem_1_1GenericIntegrationRule.html#a2b7756ff2d431f88263c44c82669fd26',1,'mfem::GenericIntegrationRule::real_type()'],['../classmfem_1_1TProductIntegrationRule.html#aac7864bd140df0fcd1f3b2c1b50ae303',1,'mfem::TProductIntegrationRule::real_type()']]],
-  ['refpathmap',['RefPathMap',['../classmfem_1_1NCMesh.html#abdfac962041dc7075255c9736d42e2b8',1,'mfem::NCMesh']]],
-  ['result_5ft',['result_t',['../structmfem_1_1IntRuleCoefficient_1_1Aux_3_01false_00_01dummy_01_4.html#a19c0fadb905ca744845b0f0ec156d142',1,'mfem::IntRuleCoefficient::Aux&lt; false, dummy &gt;']]],
-  ['rownodealloc',['RowNodeAlloc',['../classmfem_1_1SparseMatrix.html#a242a98350e8483e67e32d12c7b069381',1,'mfem::SparseMatrix']]]
+  ['qfieldmapconstiterator',['QFieldMapConstIterator',['../classmfem_1_1DataCollection.html#a53366729705a1548b440cf2d9b50309d',1,'mfem::DataCollection']]],
+  ['qfieldmapiterator',['QFieldMapIterator',['../classmfem_1_1DataCollection.html#a1825fdaeea7c0655c5a391f5d07f1f56',1,'mfem::DataCollection']]],
+  ['qfieldmaptype',['QFieldMapType',['../classmfem_1_1DataCollection.html#ad9db412eaab6a2bb704e62b8171feb9f',1,'mfem::DataCollection']]],
+  ['quad_5ft',['quad_t',['../classmfem_1_1Mesh.html#a58b968e12d2572af409b6410ffbdd3a5',1,'mfem::Mesh']]]
 ];

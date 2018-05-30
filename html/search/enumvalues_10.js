@@ -7,5 +7,5 @@ var searchData=
   ['refine',['REFINE',['../classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294ba691c033cad8c39ea9637b56e86fa167e',1,'mfem::Mesh']]],
   ['refined',['REFINED',['../classmfem_1_1MeshOperator.html#acd132269e7e6fb22f306e77e5541c7beac7820f9ac70ca1213f81db68dd8616e9',1,'mfem::MeshOperator']]],
   ['repeat',['REPEAT',['../classmfem_1_1MeshOperator.html#a89136204becccd73a1b4645374e53a0fa21911691cafd0ab3c5cfc791ff9ce9c3',1,'mfem::MeshOperator']]],
-  ['rqk',['rQk',['../classmfem_1_1FunctionSpace.html#a8e0d07298fd4576a08d62538b820f9aaa8af9d892dfd8bde058976894b3c64444',1,'mfem::FunctionSpace']]]
+  ['rqk',['rQk',['../classmfem_1_1FunctionSpace.html#ac2bda2b2920f722f8e5764f6e867a6eca8af9d892dfd8bde058976894b3c64444',1,'mfem::FunctionSpace']]]
 ];

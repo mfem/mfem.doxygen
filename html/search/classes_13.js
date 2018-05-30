@@ -16,6 +16,7 @@ var searchData=
   ['telementmatrix_3c_201_2c_201_2c_20ne_20_3e',['TElementMatrix&lt; 1, 1, NE &gt;',['../structmfem_1_1FieldEvaluator_1_1TElementMatrix_3_011_00_011_00_01NE_01_4.html',1,'mfem::FieldEvaluator']]],
   ['telementmatrix_3c_202_2c_202_2c_20ne_20_3e',['TElementMatrix&lt; 2, 2, NE &gt;',['../structmfem_1_1FieldEvaluator_1_1TElementMatrix_3_012_00_012_00_01NE_01_4.html',1,'mfem::FieldEvaluator']]],
   ['telementtransformation',['TElementTransformation',['../classmfem_1_1TElementTransformation.html',1,'mfem']]],
+  ['tensorbasiselement',['TensorBasisElement',['../classmfem_1_1TensorBasisElement.html',1,'mfem']]],
   ['teslasolver',['TeslaSolver',['../classmfem_1_1electromagnetics_1_1TeslaSolver.html',1,'mfem::electromagnetics']]],
   ['tetrahedron',['Tetrahedron',['../classmfem_1_1Tetrahedron.html',1,'mfem']]],
   ['tfiniteelementspace_5fsimple',['TFiniteElementSpace_simple',['../classmfem_1_1TFiniteElementSpace__simple.html',1,'mfem']]],

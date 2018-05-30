@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['ex10_2ecpp',['ex10.cpp',['../sundials_2ex10_8cpp.html',1,'']]],
-  ['ex10p_2ecpp',['ex10p.cpp',['../sundials_2ex10p_8cpp.html',1,'']]],
-  ['ex16_2ecpp',['ex16.cpp',['../sundials_2ex16_8cpp.html',1,'']]],
-  ['ex16p_2ecpp',['ex16p.cpp',['../sundials_2ex16p_8cpp.html',1,'']]],
-  ['ex9_2ecpp',['ex9.cpp',['../sundials_2ex9_8cpp.html',1,'']]],
-  ['ex9p_2ecpp',['ex9p.cpp',['../sundials_2ex9p_8cpp.html',1,'']]],
   ['segment_2ecpp',['segment.cpp',['../segment_8cpp.html',1,'']]],
   ['segment_2ehpp',['segment.hpp',['../segment_8hpp.html',1,'']]],
   ['sets_2ecpp',['sets.cpp',['../sets_8cpp.html',1,'']]],

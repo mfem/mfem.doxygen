@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['h_5fcurl',['H_CURL',['../classmfem_1_1FiniteElement.html#af38d099727e50517742e676daf46f518a6e5364fb09ec9d0faa0c99d3b24a677d',1,'mfem::FiniteElement']]],
-  ['h_5fdiv',['H_DIV',['../classmfem_1_1FiniteElement.html#af38d099727e50517742e676daf46f518a499761dded78b2759290145f820212bf',1,'mfem::FiniteElement']]],
+  ['h1_5fdof_5fmap',['H1_DOF_MAP',['../classmfem_1_1TensorBasisElement.html#a43fc42f250c0b45defd904902475bb3eab03230bf2d3b21b267c5d88d6860c6d9',1,'mfem::TensorBasisElement']]],
+  ['h_5fcurl',['H_CURL',['../classmfem_1_1FiniteElement.html#a634abda650ac6117fbef32d4b080e2dba6e5364fb09ec9d0faa0c99d3b24a677d',1,'mfem::FiniteElement']]],
+  ['h_5fdiv',['H_DIV',['../classmfem_1_1FiniteElement.html#a634abda650ac6117fbef32d4b080e2dba499761dded78b2759290145f820212bf',1,'mfem::FiniteElement']]],
   ['harmonic',['HARMONIC',['../classmfem_1_1GridFunction.html#ad90ba935602718b9365f0a8341e72afda42995d1828874812f54a5e011960792a',1,'mfem::GridFunction']]],
   ['have_5fb_5foffd',['HAVE_B_offd',['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576ac2d559c10b81075235132e3cae85940c',1,'mfem::InvariantsEvaluator3D']]],
   ['have_5fdaj',['HAVE_DaJ',['../classmfem_1_1InvariantsEvaluator2D.html#a7cf33c9172d4d080a33f240aa0d140c4af126457af2f34aad9fe866744ffef5ed',1,'mfem::InvariantsEvaluator2D::HAVE_DaJ()'],['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576ace515b43bc4af3bf77e71eba06c04080',1,'mfem::InvariantsEvaluator3D::HAVE_DaJ()']]],
@@ -19,6 +20,7 @@ var searchData=
   ['have_5fi2b',['HAVE_I2b',['../classmfem_1_1InvariantsEvaluator2D.html#a7cf33c9172d4d080a33f240aa0d140c4a9f2c09524bfd0d1fbf4c9a4cefbb227b',1,'mfem::InvariantsEvaluator2D::HAVE_I2b()'],['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576a789af4e28831355af1378958817e8fa8',1,'mfem::InvariantsEvaluator3D::HAVE_I2b()']]],
   ['have_5fi3b',['HAVE_I3b',['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576a39cb7288b052fa4c514aa30088a286aa',1,'mfem::InvariantsEvaluator3D']]],
   ['have_5fi3b_5fp',['HAVE_I3b_p',['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576ac59394d09ebaf3779af9d24f2525a825',1,'mfem::InvariantsEvaluator3D']]],
+  ['hermitian',['HERMITIAN',['../classmfem_1_1ComplexOperator.html#ac3f1afa81d23559eb9341b71ac0ed393a1af53bae2cbc6405bbf83fbea29adb20',1,'mfem::ComplexOperator']]],
   ['hexahedron',['HEXAHEDRON',['../classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78a56670b7e34dd8ed02029799ee21619b7',1,'mfem::Element']]],
   ['homogeneous',['HOMOGENEOUS',['../classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c',1,'mfem::TimeDependentOperator']]],
   ['hypre_5fparcsr',['Hypre_ParCSR',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a4387eb0ca1b04ce84b728325a98ea82c',1,'mfem::Operator']]]
