@@ -2,6 +2,8 @@ var searchData=
 [
   ['quad1dfiniteelement',['Quad1DFiniteElement',['../classmfem_1_1Quad1DFiniteElement.html#ac5d9b2695547bbd6145ba94c0d7777da',1,'mfem::Quad1DFiniteElement']]],
   ['quad2dfiniteelement',['Quad2DFiniteElement',['../classmfem_1_1Quad2DFiniteElement.html#a9331e67b4a7d59312bbc397a8e2143f6',1,'mfem::Quad2DFiniteElement']]],
+  ['quadfacesplitlevel',['QuadFaceSplitLevel',['../classmfem_1_1NCMesh.html#ad10d147e7a0d7bcfe4d5f6952c9d1fa6',1,'mfem::NCMesh']]],
+  ['quadfacesplittype',['QuadFaceSplitType',['../classmfem_1_1NCMesh.html#aed9a87d8e4733fb563b16443963e580e',1,'mfem::NCMesh']]],
   ['quadpos1dfiniteelement',['QuadPos1DFiniteElement',['../classmfem_1_1QuadPos1DFiniteElement.html#a80aea66c06200533df42111112855bb0',1,'mfem::QuadPos1DFiniteElement']]],
   ['quadratic3dfiniteelement',['Quadratic3DFiniteElement',['../classmfem_1_1Quadratic3DFiniteElement.html#a498661727da84add0d696ac44162f6f2',1,'mfem::Quadratic3DFiniteElement']]],
   ['quadraticdiscont2dfecollection',['QuadraticDiscont2DFECollection',['../classmfem_1_1QuadraticDiscont2DFECollection.html#afc2a90e851a217ae69de6349685306d8',1,'mfem::QuadraticDiscont2DFECollection']]],

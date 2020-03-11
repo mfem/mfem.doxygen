@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -104,18 +104,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Base abstract class for time dependent operators.  
+<p>Base abstract class for first order time dependent operators.  
  <a href="classmfem_1_1TimeDependentOperator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="operator_8hpp_source.html">operator.hpp</a>&gt;</code></p>
 
 <p>Inherits <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a>.</p>
 
-<p>Inherited by ConductionOperator, ConductionOperator, ConductionOperator, ConductionOperator, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html">mfem::electromagnetics::MaxwellSolver</a>, NegGradV, and NegGradV.</p>
+<p>Inherited by ConductionOperator, ConductionOperator, ConductionOperator, ConductionOperator, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html">mfem::electromagnetics::MaxwellSolver</a>, <a class="el" href="classmfem_1_1ParAdvectorCGOper.html">mfem::ParAdvectorCGOper</a>, <a class="el" href="classmfem_1_1SecondOrderTimeDependentOperator.html">mfem::SecondOrderTimeDependentOperator</a>, <a class="el" href="classmfem_1_1SerialAdvectorCGOper.html">mfem::SerialAdvectorCGOper</a>, NegGradV, and NegGradV.</p>
 <div class="dynheader">
 Collaboration diagram for mfem::TimeDependentOperator:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1TimeDependentOperator__coll__graph.svg" width="291" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1TimeDependentOperator__coll__graph.svg" width="342" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -126,6 +126,12 @@ Public Types</h2></td></tr>
 <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c">HOMOGENEOUS</a>
  }</td></tr>
 <tr class="separator:a67e1f39cc26e360912317f57f5d95519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5c1e2def3399f0f992d1acd9ecfd08"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a> { <a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08a3fe6b32f4097d9134c3be4da4580a3f2">NORMAL</a>, 
+<a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08ab0fcfd0d2e135afa508e561776526936">ADDITIVE_TERM_1</a>, 
+<a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08a6e7e5efebfedaa7c09ae24a592650952">ADDITIVE_TERM_2</a>
+ }</td></tr>
+<tr class="memdesc:a0b5c1e2def3399f0f992d1acd9ecfd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluation mode. See <a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512" title="Set the evaluation mode of the time-dependent operator. ">SetEvalMode()</a> for details.  <a href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">More...</a><br/></td></tr>
+<tr class="separator:a0b5c1e2def3399f0f992d1acd9ecfd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
 <tr class="memitem:aaa033bcf10ca8783218f5d98d8c54288 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Type</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78">ANY_TYPE</a>, 
@@ -138,7 +144,10 @@ Public Types</h2></td></tr>
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288ac6ccd4cee4911480b3bc263f8eb5ccc9">PETSC_MATNEST</a>, 
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a4922890a0fdb0d26b4f17b94f97d55cb">PETSC_MATHYPRE</a>, 
 <br/>
-&#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a90d024f742e7251e0c2c7859ebc9a95f">PETSC_MATGENERIC</a>
+&#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a90d024f742e7251e0c2c7859ebc9a95f">PETSC_MATGENERIC</a>, 
+<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a5d81cf6cc4f3caaf3ec0bdaf404da127">Complex_Operator</a>, 
+<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a3c58ec3f81eb14bd6711d09801ea288d">MFEM_ComplexSparseMat</a>, 
+<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288abcf503a2b9cc42f5fd2d52bf5ca267d6">Complex_Hypre_ParCSR</a>
 <br/>
  }</td></tr>
 <tr class="memdesc:aaa033bcf10ca8783218f5d98d8c54288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration defining IDs for some classes derived from <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>.  <a href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">More...</a><br/></td></tr>
@@ -147,10 +156,10 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aab2b63948c2841000364af066198125a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#aab2b63948c2841000364af066198125a">TimeDependentOperator</a> (int n=0, double t_=0.0, <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519">Type</a> type_=<a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a7a09128aa3a47c6879ee2a43c3eab517">EXPLICIT</a>)</td></tr>
-<tr class="memdesc:aab2b63948c2841000364af066198125a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a "square" <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have the same dimension <em>n</em>.  <a href="#aab2b63948c2841000364af066198125a">More...</a><br/></td></tr>
+<tr class="memdesc:aab2b63948c2841000364af066198125a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a "square" <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have the same dimension <em>n</em>.  <a href="#aab2b63948c2841000364af066198125a">More...</a><br/></td></tr>
 <tr class="separator:aab2b63948c2841000364af066198125a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a603eb04b85d40edfbd5ca51b7e03111d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a603eb04b85d40edfbd5ca51b7e03111d">TimeDependentOperator</a> (int h, int w, double t_=0.0, <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519">Type</a> type_=<a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a7a09128aa3a47c6879ee2a43c3eab517">EXPLICIT</a>)</td></tr>
-<tr class="memdesc:a603eb04b85d40edfbd5ca51b7e03111d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have dimensions <em>w</em> and <em>h</em>, respectively.  <a href="#a603eb04b85d40edfbd5ca51b7e03111d">More...</a><br/></td></tr>
+<tr class="memdesc:a603eb04b85d40edfbd5ca51b7e03111d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have dimensions <em>w</em> and <em>h</em>, respectively.  <a href="#a603eb04b85d40edfbd5ca51b7e03111d">More...</a><br/></td></tr>
 <tr class="separator:a603eb04b85d40edfbd5ca51b7e03111d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf2cbafd1933c7259c275994af829e43"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#adf2cbafd1933c7259c275994af829e43">GetTime</a> () const </td></tr>
 <tr class="memdesc:adf2cbafd1933c7259c275994af829e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the currently set time.  <a href="#adf2cbafd1933c7259c275994af829e43">More...</a><br/></td></tr>
@@ -167,27 +176,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe9d932f811a5581ad71c6558add54f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#abe9d932f811a5581ad71c6558add54f5">isHomogeneous</a> () const </td></tr>
 <tr class="memdesc:abe9d932f811a5581ad71c6558add54f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c" title="This type assumes that G(x,t) = 0. ">HOMOGENEOUS</a>.  <a href="#abe9d932f811a5581ad71c6558add54f5">More...</a><br/></td></tr>
 <tr class="separator:abe9d932f811a5581ad71c6558add54f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2a91979031984cef847a1a2a00473d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#ae2a91979031984cef847a1a2a00473d4">ExplicitMult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
-<tr class="memdesc:ae2a91979031984cef847a1a2a00473d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the action of the explicit part of the operator, G: <em>y</em> = G(<em>x</em>, t) where t is the current time.  <a href="#ae2a91979031984cef847a1a2a00473d4">More...</a><br/></td></tr>
-<tr class="separator:ae2a91979031984cef847a1a2a00473d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ead69b28288d3855ff9eee53b7be7b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a3ead69b28288d3855ff9eee53b7be7b2">ImplicitMult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;k, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
-<tr class="memdesc:a3ead69b28288d3855ff9eee53b7be7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the action of the implicit part of the operator, F: <em>y</em> = F(<em>x</em>, <em>k</em>, t) where t is the current time.  <a href="#a3ead69b28288d3855ff9eee53b7be7b2">More...</a><br/></td></tr>
-<tr class="separator:a3ead69b28288d3855ff9eee53b7be7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bdd53deba3fe7849e77d0ef0168887d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a9bdd53deba3fe7849e77d0ef0168887d">Mult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
-<tr class="memdesc:a9bdd53deba3fe7849e77d0ef0168887d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the action of the operator: <em>y</em> = k = f(<em>x</em>, t), where k solves the algebraic equation F(<em>x</em>, k, t) = G(<em>x</em>, t) and t is the current time.  <a href="#a9bdd53deba3fe7849e77d0ef0168887d">More...</a><br/></td></tr>
-<tr class="separator:a9bdd53deba3fe7849e77d0ef0168887d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eab069da588ca05b5ec89d682f62ae9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0eab069da588ca05b5ec89d682f62ae9">ImplicitSolve</a> (const double dt, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;k)</td></tr>
-<tr class="memdesc:a0eab069da588ca05b5ec89d682f62ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the equation: <em>k</em> = f(<em>x</em> + <em>dt</em> <em>k</em>, t), for the unknown <em>k</em> at the current time t.  <a href="#a0eab069da588ca05b5ec89d682f62ae9">More...</a><br/></td></tr>
-<tr class="separator:a0eab069da588ca05b5ec89d682f62ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7ef314862d18e354e135c1e149a9ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a2c7ef314862d18e354e135c1e149a9ff">GetImplicitGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;k, double shift) const </td></tr>
-<tr class="memdesc:a2c7ef314862d18e354e135c1e149a9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> representing (dF/dk <em>shift</em> + dF/dx) at the given <em>x</em>, <em>k</em>, and the currently set time.  <a href="#a2c7ef314862d18e354e135c1e149a9ff">More...</a><br/></td></tr>
-<tr class="separator:a2c7ef314862d18e354e135c1e149a9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe3bdbc74e263f7241bf8b73d6b0a645"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#afe3bdbc74e263f7241bf8b73d6b0a645">GetExplicitGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x) const </td></tr>
-<tr class="memdesc:afe3bdbc74e263f7241bf8b73d6b0a645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> representing dG/dx at the given point <em>x</em> and the currently set time.  <a href="#afe3bdbc74e263f7241bf8b73d6b0a645">More...</a><br/></td></tr>
-<tr class="separator:afe3bdbc74e263f7241bf8b73d6b0a645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac570f89156709a645e562e63de24045f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#ac570f89156709a645e562e63de24045f">GetEvalMode</a> () const </td></tr>
+<tr class="memdesc:ac570f89156709a645e562e63de24045f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current evaluation mode. See <a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512" title="Set the evaluation mode of the time-dependent operator. ">SetEvalMode()</a> for details.  <a href="#ac570f89156709a645e562e63de24045f">More...</a><br/></td></tr>
+<tr class="separator:ac570f89156709a645e562e63de24045f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe1a5d6d5ecb419abcbcd872d4f0512"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512">SetEvalMode</a> (const <a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a> new_eval_mode)</td></tr>
+<tr class="memdesc:abbe1a5d6d5ecb419abcbcd872d4f0512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the evaluation mode of the time-dependent operator.  <a href="#abbe1a5d6d5ecb419abcbcd872d4f0512">More...</a><br/></td></tr>
+<tr class="separator:abbe1a5d6d5ecb419abcbcd872d4f0512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2e462cdf596d10c5fba154a1a59a72"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#abd2e462cdf596d10c5fba154a1a59a72">ExplicitMult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
+<tr class="memdesc:abd2e462cdf596d10c5fba154a1a59a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the action of the explicit part of the operator, G: <em>y</em> = G(<em>x</em>, t) where t is the current time.  <a href="#abd2e462cdf596d10c5fba154a1a59a72">More...</a><br/></td></tr>
+<tr class="separator:abd2e462cdf596d10c5fba154a1a59a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1b46d7d1f8f03c0ced4a89c5587e2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#aeb1b46d7d1f8f03c0ced4a89c5587e2f">ImplicitMult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;k, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
+<tr class="memdesc:aeb1b46d7d1f8f03c0ced4a89c5587e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the action of the implicit part of the operator, F: <em>y</em> = F(<em>x</em>, <em>k</em>, t) where t is the current time.  <a href="#aeb1b46d7d1f8f03c0ced4a89c5587e2f">More...</a><br/></td></tr>
+<tr class="separator:aeb1b46d7d1f8f03c0ced4a89c5587e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ae0abebb9788d39366a8d2f5c178e5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#ac1ae0abebb9788d39366a8d2f5c178e5">Mult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
+<tr class="memdesc:ac1ae0abebb9788d39366a8d2f5c178e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the action of the operator: <em>y</em> = k = f(<em>x</em>, t), where k solves the algebraic equation F(<em>x</em>, k, t) = G(<em>x</em>, t) and t is the current time.  <a href="#ac1ae0abebb9788d39366a8d2f5c178e5">More...</a><br/></td></tr>
+<tr class="separator:ac1ae0abebb9788d39366a8d2f5c178e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355f2e3d814516044791b3ad25f5d81a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a355f2e3d814516044791b3ad25f5d81a">ImplicitSolve</a> (const double dt, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;k)</td></tr>
+<tr class="memdesc:a355f2e3d814516044791b3ad25f5d81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the equation: <em>k</em> = f(<em>x</em> + <em>dt</em> <em>k</em>, t), for the unknown <em>k</em> at the current time t.  <a href="#a355f2e3d814516044791b3ad25f5d81a">More...</a><br/></td></tr>
+<tr class="separator:a355f2e3d814516044791b3ad25f5d81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8551121998316364eba6d7e5db0dfd6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#ad8551121998316364eba6d7e5db0dfd6">GetImplicitGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;k, double shift) const </td></tr>
+<tr class="memdesc:ad8551121998316364eba6d7e5db0dfd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> representing (dF/dk <em>shift</em> + dF/dx) at the given <em>x</em>, <em>k</em>, and the currently set time.  <a href="#ad8551121998316364eba6d7e5db0dfd6">More...</a><br/></td></tr>
+<tr class="separator:ad8551121998316364eba6d7e5db0dfd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10942e8fd919ca961716ba4da2799ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#af10942e8fd919ca961716ba4da2799ff">GetExplicitGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x) const </td></tr>
+<tr class="memdesc:af10942e8fd919ca961716ba4da2799ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> representing dG/dx at the given point <em>x</em> and the currently set time.  <a href="#af10942e8fd919ca961716ba4da2799ff">More...</a><br/></td></tr>
+<tr class="separator:af10942e8fd919ca961716ba4da2799ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d4a78f19ecfac318d6733589e4d5d5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#ae1d4a78f19ecfac318d6733589e4d5d5">SUNImplicitSetup</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;fx, int jok, int *jcur, double gamma)</td></tr>
+<tr class="memdesc:ae1d4a78f19ecfac318d6733589e4d5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the ODE linear system \( A(x,t) = (I - gamma J) \) or \( A = (M - gamma J) \), where \( J(x,t) = \frac{df}{dt(x,t)} \).  <a href="#ae1d4a78f19ecfac318d6733589e4d5d5">More...</a><br/></td></tr>
+<tr class="separator:ae1d4a78f19ecfac318d6733589e4d5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4303d50b04590a0e6afc890cec18f58d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a4303d50b04590a0e6afc890cec18f58d">SUNImplicitSolve</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, double tol)</td></tr>
+<tr class="memdesc:a4303d50b04590a0e6afc890cec18f58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the ODE linear system \( A x = b \) as setup by the method <a class="el" href="classmfem_1_1TimeDependentOperator.html#ae1d4a78f19ecfac318d6733589e4d5d5" title="Setup the ODE linear system  or , where . ">SUNImplicitSetup()</a>.  <a href="#a4303d50b04590a0e6afc890cec18f58d">More...</a><br/></td></tr>
+<tr class="separator:a4303d50b04590a0e6afc890cec18f58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c10a565ad546c610fd0cf01260a572f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a7c10a565ad546c610fd0cf01260a572f">SUNMassSetup</a> ()</td></tr>
+<tr class="memdesc:a7c10a565ad546c610fd0cf01260a572f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the mass matrix in the ODE system \( M y&#39; = f(y,t) \) .  <a href="#a7c10a565ad546c610fd0cf01260a572f">More...</a><br/></td></tr>
+<tr class="separator:a7c10a565ad546c610fd0cf01260a572f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2af294d6f808d90cfa5f42fbc7d833"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#aed2af294d6f808d90cfa5f42fbc7d833">SUNMassSolve</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, double tol)</td></tr>
+<tr class="memdesc:aed2af294d6f808d90cfa5f42fbc7d833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the mass matrix linear system \( M x = b \) as setup by the method <a class="el" href="classmfem_1_1TimeDependentOperator.html#a7c10a565ad546c610fd0cf01260a572f" title="Setup the mass matrix in the ODE system  . ">SUNMassSetup()</a>.  <a href="#aed2af294d6f808d90cfa5f42fbc7d833">More...</a><br/></td></tr>
+<tr class="separator:aed2af294d6f808d90cfa5f42fbc7d833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603fa10f2f5d0508b164b93f322ff7d6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a603fa10f2f5d0508b164b93f322ff7d6">SUNMassMult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
+<tr class="memdesc:a603fa10f2f5d0508b164b93f322ff7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the mass matrix-vector product \( v = M x \) .  <a href="#a603fa10f2f5d0508b164b93f322ff7d6">More...</a><br/></td></tr>
+<tr class="separator:a603fa10f2f5d0508b164b93f322ff7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2173d3a3de6c5a3c2dda927cd2531bea"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a2173d3a3de6c5a3c2dda927cd2531bea">~TimeDependentOperator</a> ()</td></tr>
 <tr class="separator:a2173d3a3de6c5a3c2dda927cd2531bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#af05141bf6d86d28444889d58216dc7ed">InitTVectors</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Ri, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B) const </td></tr>
+<tr class="memdesc:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes memory for true vectors of linear system.  <a href="#af05141bf6d86d28444889d58216dc7ed">More...</a><br/></td></tr>
+<tr class="separator:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int s=0)</td></tr>
 <tr class="memdesc:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a square <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> with given size s (default 0).  <a href="#a527f8d742df2102735a094a357cecaaa">More...</a><br/></td></tr>
 <tr class="separator:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,12 +254,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79aca30fcf346fe6057ec409d0b1461d inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a79aca30fcf346fe6057ec409d0b1461d">GetRestriction</a> () const </td></tr>
 <tr class="memdesc:a79aca30fcf346fe6057ec409d0b1461d inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restriction operator from input vectors for the operator to linear algebra (linear system) vectors. <code>NULL</code> means identity.  <a href="#a79aca30fcf346fe6057ec409d0b1461d">More...</a><br/></td></tr>
 <tr class="separator:a79aca30fcf346fe6057ec409d0b1461d inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a110b300f31b8142d809fc32a37b1547e inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a110b300f31b8142d809fc32a37b1547e">FormLinearSystem</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;b, <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&amp;A, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B, int copy_interior=0)</td></tr>
+<tr class="memitem:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a680658a766b75b188ea3d87fb8a1c759">GetOutputProlongation</a> () const </td></tr>
+<tr class="memdesc:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to output vectors for the operator. <code>NULL</code> means identity.  <a href="#a680658a766b75b188ea3d87fb8a1c759">More...</a><br/></td></tr>
+<tr class="separator:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ad595ad2ea6e806fafa14141b4591b98f">GetOutputRestriction</a> () const </td></tr>
+<tr class="memdesc:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restriction operator from output vectors for the operator to linear algebra (linear system) vectors. <code>NULL</code> means identity.  <a href="#ad595ad2ea6e806fafa14141b4591b98f">More...</a><br/></td></tr>
+<tr class="separator:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110b300f31b8142d809fc32a37b1547e inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a110b300f31b8142d809fc32a37b1547e">FormLinearSystem</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&amp;A, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B, int copy_interior=0)</td></tr>
 <tr class="memdesc:a110b300f31b8142d809fc32a37b1547e inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Form a constrained linear system using a matrix-free approach.  <a href="#a110b300f31b8142d809fc32a37b1547e">More...</a><br/></td></tr>
 <tr class="separator:a110b300f31b8142d809fc32a37b1547e inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abad756b327262545c350d7280cc22643 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#abad756b327262545c350d7280cc22643">RecoverFEMSolution</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;b, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x)</td></tr>
-<tr class="memdesc:abad756b327262545c350d7280cc22643 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct a solution vector <em>x</em> (e.g. a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>) from the solution <em>X</em> of a constrained linear system obtained from <a class="el" href="classmfem_1_1Operator.html#a110b300f31b8142d809fc32a37b1547e" title="Form a constrained linear system using a matrix-free approach. ">Operator::FormLinearSystem()</a>.  <a href="#abad756b327262545c350d7280cc22643">More...</a><br/></td></tr>
+<tr class="memitem:a059ebb07070744a542a6fec3ea04a84b inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a059ebb07070744a542a6fec3ea04a84b">FormRectangularLinearSystem</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;trial_tdof_list, const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;test_tdof_list, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&amp;A, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B)</td></tr>
+<tr class="memdesc:a059ebb07070744a542a6fec3ea04a84b inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Form a column-constrained linear system using a matrix-free approach.  <a href="#a059ebb07070744a542a6fec3ea04a84b">More...</a><br/></td></tr>
+<tr class="separator:a059ebb07070744a542a6fec3ea04a84b inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad756b327262545c350d7280cc22643 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#abad756b327262545c350d7280cc22643">RecoverFEMSolution</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x)</td></tr>
+<tr class="memdesc:abad756b327262545c350d7280cc22643 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct a solution vector <em>x</em> (e.g. a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>) from the solution <em>X</em> of a constrained linear system obtained from <a class="el" href="classmfem_1_1Operator.html#a110b300f31b8142d809fc32a37b1547e" title="Form a constrained linear system using a matrix-free approach. ">Operator::FormLinearSystem()</a> or <a class="el" href="classmfem_1_1Operator.html#a059ebb07070744a542a6fec3ea04a84b" title="Form a column-constrained linear system using a matrix-free approach. ">Operator::FormRectangularLinearSystem()</a>.  <a href="#abad756b327262545c350d7280cc22643">More...</a><br/></td></tr>
 <tr class="separator:abad756b327262545c350d7280cc22643 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c2496db1f13189e4c915627c12d94a inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a22c2496db1f13189e4c915627c12d94a">FormSystemOperator</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&amp;A)</td></tr>
+<tr class="memdesc:a22c2496db1f13189e4c915627c12d94a inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return in <em>A</em> a parallel (on truedofs) version of this square operator.  <a href="#a22c2496db1f13189e4c915627c12d94a">More...</a><br/></td></tr>
+<tr class="separator:a22c2496db1f13189e4c915627c12d94a inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab275cd1cdcff5ce31e8ea1842585dd19 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19">FormRectangularSystemOperator</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;trial_tdof_list, const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;test_tdof_list, <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&amp;A)</td></tr>
+<tr class="memdesc:ab275cd1cdcff5ce31e8ea1842585dd19 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return in <em>A</em> a parallel (on truedofs) version of this rectangular operator (including constraints).  <a href="#ab275cd1cdcff5ce31e8ea1842585dd19">More...</a><br/></td></tr>
+<tr class="separator:ab275cd1cdcff5ce31e8ea1842585dd19 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4626fca8e92c602f67122b283860db93 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a4626fca8e92c602f67122b283860db93">FormDiscreteOperator</a> (<a class="el" href="classmfem_1_1Operator.html">Operator</a> *&amp;A)</td></tr>
+<tr class="memdesc:a4626fca8e92c602f67122b283860db93 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return in <em>A</em> a parallel (on truedofs) version of this rectangular operator.  <a href="#a4626fca8e92c602f67122b283860db93">More...</a><br/></td></tr>
+<tr class="separator:a4626fca8e92c602f67122b283860db93 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0e1eadb8f77aeb244e6ead783c51b6 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aff0e1eadb8f77aeb244e6ead783c51b6">PrintMatlab</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int n=0, int m=0) const </td></tr>
 <tr class="memdesc:aff0e1eadb8f77aeb244e6ead783c51b6 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints operator with input size n and output size m in Matlab format.  <a href="#aff0e1eadb8f77aeb244e6ead783c51b6">More...</a><br/></td></tr>
 <tr class="separator:aff0e1eadb8f77aeb244e6ead783c51b6 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,8 +294,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a7046de17de698cc45775bf9f5e6cc14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current time.  <a href="#a7046de17de698cc45775bf9f5e6cc14b">More...</a><br/></td></tr>
 <tr class="separator:a7046de17de698cc45775bf9f5e6cc14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceda6db8329f8dad6d7903e5f01019a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9">type</a></td></tr>
-<tr class="memdesc:aceda6db8329f8dad6d7903e5f01019a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the form of the <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for time dependent operators. ">TimeDependentOperator</a>.  <a href="#aceda6db8329f8dad6d7903e5f01019a9">More...</a><br/></td></tr>
+<tr class="memdesc:aceda6db8329f8dad6d7903e5f01019a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the form of the <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a>.  <a href="#aceda6db8329f8dad6d7903e5f01019a9">More...</a><br/></td></tr>
 <tr class="separator:aceda6db8329f8dad6d7903e5f01019a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e831b5ec7efaeb1b1bec884c2c6d23b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0e831b5ec7efaeb1b1bec884c2c6d23b">eval_mode</a></td></tr>
+<tr class="memdesc:a0e831b5ec7efaeb1b1bec884c2c6d23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current evaluation mode.  <a href="#a0e831b5ec7efaeb1b1bec884c2c6d23b">More...</a><br/></td></tr>
+<tr class="separator:a0e831b5ec7efaeb1b1bec884c2c6d23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
 <tr class="memitem:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6">height</a></td></tr>
 <tr class="memdesc:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the output / number of rows in the matrix.  <a href="#a62d74ad697f481c1e139404ca892afa6">More...</a><br/></td></tr>
@@ -252,13 +306,53 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a19823327e636510bfcd9f8c5e4bf48fa">width</a></td></tr>
 <tr class="memdesc:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the input / number of columns in the matrix.  <a href="#a19823327e636510bfcd9f8c5e4bf48fa">More...</a><br/></td></tr>
 <tr class="separator:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a0e93d5e7be66d3d54bfeb26e8f2d2c74 inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a0e93d5e7be66d3d54bfeb26e8f2d2c74">FormConstrainedSystemOperator</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1ConstrainedOperator.html">ConstrainedOperator</a> *&amp;Aout)</td></tr>
+<tr class="memdesc:a0e93d5e7be66d3d54bfeb26e8f2d2c74 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#a22c2496db1f13189e4c915627c12d94a" title="Return in A a parallel (on truedofs) version of this square operator. ">FormSystemOperator()</a>  <a href="#a0e93d5e7be66d3d54bfeb26e8f2d2c74">More...</a><br/></td></tr>
+<tr class="separator:a0e93d5e7be66d3d54bfeb26e8f2d2c74 inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ae17b1734b2b2bbbc3b13810f90f3f398">FormRectangularConstrainedSystemOperator</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;trial_tdof_list, const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;test_tdof_list, <a class="el" href="classmfem_1_1RectangularConstrainedOperator.html">RectangularConstrainedOperator</a> *&amp;Aout)</td></tr>
+<tr class="memdesc:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19" title="Return in A a parallel (on truedofs) version of this rectangular operator (including constraints)...">FormRectangularSystemOperator()</a>  <a href="#ae17b1734b2b2bbbc3b13810f90f3f398">More...</a><br/></td></tr>
+<tr class="separator:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab860076188a32acbd2f1a7d428aba00d">SetupRAP</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po)</td></tr>
+<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, taking in input/output Prolongation matrices.  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
+<tr class="separator:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base abstract class for time dependent operators. </p>
+<div class="textblock"><p>Base abstract class for first order time dependent operators. </p>
 <p><a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of the form: (x,t) -&gt; f(x,t), where k = f(x,t) generally solves the algebraic equation F(x,k,t) = G(x,t). The functions F and G represent the <em>implicit</em> and <em>explicit</em> parts of the operator, respectively. For explicit operators, F(x,k,t) = k, so f(x,t) = G(x,t). </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00162">162</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00259">259</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a0b5c1e2def3399f0f992d1acd9ecfd08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">mfem::TimeDependentOperator::EvalMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluation mode. See <a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512" title="Set the evaluation mode of the time-dependent operator. ">SetEvalMode()</a> for details. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a0b5c1e2def3399f0f992d1acd9ecfd08a3fe6b32f4097d9134c3be4da4580a3f2"></a>NORMAL</em>&nbsp;</td><td class="fielddoc">
+<p>Normal evaluation. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a0b5c1e2def3399f0f992d1acd9ecfd08ab0fcfd0d2e135afa508e561776526936"></a>ADDITIVE_TERM_1</em>&nbsp;</td><td class="fielddoc">
+<p>Assuming additive split, f(x,t) = f1(x,t) + f2(x,t), evaluate the first term, f1. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a0b5c1e2def3399f0f992d1acd9ecfd08a6e7e5efebfedaa7c09ae24a592650952"></a>ADDITIVE_TERM_2</em>&nbsp;</td><td class="fielddoc">
+<p>Assuming additive split, f(x,t) = f1(x,t) + f2(x,t), evaluate the second term, f2. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00270">270</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a67e1f39cc26e360912317f57f5d95519"></a>
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +374,7 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00165">165</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00262">262</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -323,9 +417,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a "square" <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have the same dimension <em>n</em>. </p>
+<p>Construct a "square" <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have the same dimension <em>n</em>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00179">179</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00290">290</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,9 +467,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have dimensions <em>w</em> and <em>h</em>, respectively. </p>
+<p>Construct a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have dimensions <em>w</em> and <em>h</em>, respectively. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00185">185</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00296">296</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -400,12 +494,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00275">275</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00442">442</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae2a91979031984cef847a1a2a00473d4"></a>
+<a class="anchor" id="abd2e462cdf596d10c5fba154a1a59a72"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -413,7 +507,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void mfem::TimeDependentOperator::ExplicitMult </td>
+          <td class="memname">void mfem::TimeDependentOperator::ExplicitMult </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -432,7 +526,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -442,11 +536,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classFE__Evolution.html#acee7d0cc7dad44d54063a1fea1f3a947">FE_Evolution</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00206">206</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00214">214</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afe3bdbc74e263f7241bf8b73d6b0a645"></a>
+<a class="anchor" id="ac570f89156709a645e562e63de24045f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -454,7 +548,34 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a>&amp; mfem::TimeDependentOperator::GetExplicitGradient </td>
+          <td class="memname"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a> mfem::TimeDependentOperator::GetEvalMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the current evaluation mode. See <a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512" title="Set the evaluation mode of the time-dependent operator. ">SetEvalMode()</a> for details. </p>
+
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00313">313</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af10942e8fd919ca961716ba4da2799ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp; mfem::TimeDependentOperator::GetExplicitGradient </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
@@ -463,7 +584,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -473,11 +594,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classFE__Evolution.html#a35acbea4eac6de0ebbb3bf6a5436fc0a">FE_Evolution</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00268">268</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00244">244</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2c7ef314862d18e354e135c1e149a9ff"></a>
+<a class="anchor" id="ad8551121998316364eba6d7e5db0dfd6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -485,7 +606,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a>&amp; mfem::TimeDependentOperator::GetImplicitGradient </td>
+          <td class="memname"><a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp; mfem::TimeDependentOperator::GetImplicitGradient </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -510,7 +631,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -520,7 +641,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classFE__Evolution.html#a8bd08a34f8d20437419031b0a411150d">FE_Evolution</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00255">255</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00236">236</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
@@ -547,11 +668,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Read the currently set time. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00189">189</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00300">300</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3ead69b28288d3855ff9eee53b7be7b2"></a>
+<a class="anchor" id="aeb1b46d7d1f8f03c0ced4a89c5587e2f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -559,7 +680,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void mfem::TimeDependentOperator::ImplicitMult </td>
+          <td class="memname">void mfem::TimeDependentOperator::ImplicitMult </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -584,7 +705,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -594,11 +715,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classFE__Evolution.html#acfb7538a5df75a2523b1437831da40eb">FE_Evolution</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00216">216</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00219">219</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0eab069da588ca05b5ec89d682f62ae9"></a>
+<a class="anchor" id="a355f2e3d814516044791b3ad25f5d81a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -606,7 +727,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void mfem::TimeDependentOperator::ImplicitSolve </td>
+          <td class="memname">void mfem::TimeDependentOperator::ImplicitSolve </td>
           <td>(</td>
           <td class="paramtype">const double&#160;</td>
           <td class="paramname"><em>dt</em>, </td>
@@ -631,7 +752,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -642,9 +763,9 @@ Protected Attributes</h2></td></tr>
 <p>This method allows for the abstract implementation of some time integration methods, including diagonal implicit Runge-Kutta (DIRK) methods and the backward Euler method in particular.</p>
 <p>If not re-implemented, this method simply generates an error. </p>
 
-<p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#aad63faaa4f1f5801be838117d1d15db8">mfem::electromagnetics::MagneticDiffusionEOperator</a>, and <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#adc7d3b9cfa7eff0f2f71ab0d21001bf8">mfem::electromagnetics::MaxwellSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#aad63faaa4f1f5801be838117d1d15db8">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#aa885e8441f0ebb01d9e0fc108258fde0">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#ad612b4435cb3917121e38e7ec255f2c0">FE_Evolution</a>, and <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#adc7d3b9cfa7eff0f2f71ab0d21001bf8">mfem::electromagnetics::MaxwellSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00245">245</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00230">230</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
@@ -671,7 +792,7 @@ Protected Attributes</h2></td></tr>
 
 <p>True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a7a09128aa3a47c6879ee2a43c3eab517" title="This type assumes F(x,k,t) = k, i.e. k = f(x,t) = G(x,t). ">EXPLICIT</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00195">195</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00306">306</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +819,7 @@ Protected Attributes</h2></td></tr>
 
 <p>True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c" title="This type assumes that G(x,t) = 0. ">HOMOGENEOUS</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00199">199</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00310">310</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -725,11 +846,11 @@ Protected Attributes</h2></td></tr>
 
 <p>True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519ab36684e1b823310a8f8d82a3a78e27a3" title="This is the most general type, no assumptions on F and G. ">IMPLICIT</a> or <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c" title="This type assumes that G(x,t) = 0. ">HOMOGENEOUS</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00197">197</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00308">308</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9bdd53deba3fe7849e77d0ef0168887d"></a>
+<a class="anchor" id="ac1ae0abebb9788d39366a8d2f5c178e5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -737,7 +858,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void mfem::TimeDependentOperator::Mult </td>
+          <td class="memname">void mfem::TimeDependentOperator::Mult </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -756,7 +877,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -765,9 +886,39 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Operator.html#a700c3008b5ab43155cdfd279c8360472">mfem::Operator</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#a31570ddbb77e85401f69cca0ff815e4e">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#a7ae32fd1436fb8ca44dd1fd0167c508d">mfem::electromagnetics::MaxwellSolver</a>, and <a class="el" href="classFE__Evolution.html#a7a89c5319af2b11e71259aad0722aa36">FE_Evolution</a>.</p>
+<p>Reimplemented in <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#a31570ddbb77e85401f69cca0ff815e4e">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1ParAdvectorCGOper.html#a7ca569ce0c6f7e0aa626eb042f73c5d7">mfem::ParAdvectorCGOper</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#a7ae32fd1436fb8ca44dd1fd0167c508d">mfem::electromagnetics::MaxwellSolver</a>, <a class="el" href="classmfem_1_1SerialAdvectorCGOper.html#a3bec8cdada6a82312490924c3038161f">mfem::SerialAdvectorCGOper</a>, and <a class="el" href="classFE__Evolution.html#a7a89c5319af2b11e71259aad0722aa36">FE_Evolution</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00224">224</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00225">225</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abbe1a5d6d5ecb419abcbcd872d4f0512"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void mfem::TimeDependentOperator::SetEvalMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a>&#160;</td>
+          <td class="paramname"><em>new_eval_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the evaluation mode of the time-dependent operator. </p>
+<p>The evaluation mode is a switch that allows time-stepping methods to request evaluation of separate components/terms of the time-dependent operator. For example, IMEX methods typically assume additive split of the operator: f(x,t) = f1(x,t) + f2(x,t) and they rely on the ability to evaluate the two terms separately.</p>
+<p>Generally, setting the evaluation mode should affect the behavior of all evaluation-related methods in the class, such as <a class="el" href="classmfem_1_1TimeDependentOperator.html#ac1ae0abebb9788d39366a8d2f5c178e5" title="Perform the action of the operator: y = k = f(x, t), where k solves the algebraic equation F(x...">Mult()</a>, <a class="el" href="classmfem_1_1TimeDependentOperator.html#a355f2e3d814516044791b3ad25f5d81a" title="Solve the equation: k = f(x + dt k, t), for the unknown k at the current time t. ">ImplicitSolve()</a>, etc. However, the exact list of methods that need to support a specific mode will depend on the used time-stepping method. </p>
+
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00326">326</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -797,11 +948,287 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#ae0b00818672d414fb820f0dbecd64436">mfem::electromagnetics::MagneticDiffusionEOperator</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00192">192</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00303">303</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1d4a78f19ecfac318d6733589e4d5d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::TimeDependentOperator::SUNImplicitSetup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>fx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>jok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>jcur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gamma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup the ODE linear system \( A(x,t) = (I - gamma J) \) or \( A = (M - gamma J) \), where \( J(x,t) = \frac{df}{dt(x,t)} \). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The state at which \(A(x,t)\) should be evaluated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fx</td><td>The current value of the ODE rhs function, \(f(x,t)\). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">jok</td><td>Flag indicating if the Jacobian should be updated. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">jcur</td><td>Flag to signal if the Jacobian was updated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gamma</td><td>The scaled time step value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If not re-implemented, this method simply generates an error.</p>
+<p>Presently, this method is used by SUNDIALS ODE solvers, for more details, see the SUNDIALS User Guides. </p>
+
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00251">251</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4303d50b04590a0e6afc890cec18f58d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::TimeDependentOperator::SUNImplicitSolve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solve the ODE linear system \( A x = b \) as setup by the method <a class="el" href="classmfem_1_1TimeDependentOperator.html#ae1d4a78f19ecfac318d6733589e4d5d5" title="Setup the ODE linear system  or , where . ">SUNImplicitSetup()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>The linear system right-hand side. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">x</td><td>On input, the initial guess. On output, the solution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Linear solve tolerance.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If not re-implemented, this method simply generates an error.</p>
+<p>Presently, this method is used by SUNDIALS ODE solvers, for more details, see the SUNDIALS User Guides. </p>
+
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00259">259</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a603fa10f2f5d0508b164b93f322ff7d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::TimeDependentOperator::SUNMassMult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the mass matrix-vector product \( v = M x \) . </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The vector to multiply. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">v</td><td>The result of the matrix-vector product.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If not re-implemented, this method simply generates an error.</p>
+<p>Presently, this method is used by SUNDIALS ARKStep integrator, for more details, see the ARKode User Guide. </p>
+
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00277">277</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c10a565ad546c610fd0cf01260a572f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::TimeDependentOperator::SUNMassSetup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup the mass matrix in the ODE system \( M y&#39; = f(y,t) \) . </p>
+<p>If not re-implemented, this method simply generates an error.</p>
+<p>Presently, this method is used by SUNDIALS ARKStep integrator, for more details, see the ARKode User Guide. </p>
+
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00265">265</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed2af294d6f808d90cfa5f42fbc7d833"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::TimeDependentOperator::SUNMassSolve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solve the mass matrix linear system \( M x = b \) as setup by the method <a class="el" href="classmfem_1_1TimeDependentOperator.html#a7c10a565ad546c610fd0cf01260a572f" title="Setup the mass matrix in the ODE system  . ">SUNMassSetup()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>The linear system right-hand side. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">x</td><td>On input, the initial guess. On output, the solution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Linear solve tolerance.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If not re-implemented, this method simply generates an error.</p>
+<p>Presently, this method is used by SUNDIALS ARKStep integrator, for more details, see the ARKode User Guide. </p>
+
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00271">271</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0e831b5ec7efaeb1b1bec884c2c6d23b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">EvalMode</a> mfem::TimeDependentOperator::eval_mode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Current evaluation mode. </p>
+
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00285">285</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7046de17de698cc45775bf9f5e6cc14b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -822,7 +1249,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Current time. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00173">173</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00283">283</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -844,19 +1271,20 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Describes the form of the <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for time dependent operators. ">TimeDependentOperator</a>. </p>
+<p>Describes the form of the <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00174">174</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00284">284</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>linalg/<a class="el" href="operator_8hpp_source.html">operator.hpp</a></li>
+<li>linalg/<a class="el" href="operator_8cpp_source.html">operator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

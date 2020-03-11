@@ -1,8 +1,8 @@
 var searchData=
 [
   ['h1_5fdof_5fmap',['H1_DOF_MAP',['../classmfem_1_1TensorBasisElement.html#a43fc42f250c0b45defd904902475bb3eab03230bf2d3b21b267c5d88d6860c6d9',1,'mfem::TensorBasisElement']]],
-  ['h_5fcurl',['H_CURL',['../classmfem_1_1FiniteElement.html#ad6c816345ad8c4a2fea0bcb35a1195cda6e5364fb09ec9d0faa0c99d3b24a677d',1,'mfem::FiniteElement']]],
-  ['h_5fdiv',['H_DIV',['../classmfem_1_1FiniteElement.html#ad6c816345ad8c4a2fea0bcb35a1195cda499761dded78b2759290145f820212bf',1,'mfem::FiniteElement']]],
+  ['h_5fcurl',['H_CURL',['../classmfem_1_1FiniteElement.html#a634abda650ac6117fbef32d4b080e2dba6e5364fb09ec9d0faa0c99d3b24a677d',1,'mfem::FiniteElement']]],
+  ['h_5fdiv',['H_DIV',['../classmfem_1_1FiniteElement.html#a634abda650ac6117fbef32d4b080e2dba499761dded78b2759290145f820212bf',1,'mfem::FiniteElement']]],
   ['harmonic',['HARMONIC',['../classmfem_1_1GridFunction.html#ad90ba935602718b9365f0a8341e72afda42995d1828874812f54a5e011960792a',1,'mfem::GridFunction']]],
   ['have_5fb_5foffd',['HAVE_B_offd',['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576ac2d559c10b81075235132e3cae85940c',1,'mfem::InvariantsEvaluator3D']]],
   ['have_5fdaj',['HAVE_DaJ',['../classmfem_1_1InvariantsEvaluator2D.html#a7cf33c9172d4d080a33f240aa0d140c4af126457af2f34aad9fe866744ffef5ed',1,'mfem::InvariantsEvaluator2D::HAVE_DaJ()'],['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576ace515b43bc4af3bf77e71eba06c04080',1,'mfem::InvariantsEvaluator3D::HAVE_DaJ()']]],
@@ -21,10 +21,15 @@ var searchData=
   ['have_5fi3b',['HAVE_I3b',['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576a39cb7288b052fa4c514aa30088a286aa',1,'mfem::InvariantsEvaluator3D']]],
   ['have_5fi3b_5fp',['HAVE_I3b_p',['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576ac59394d09ebaf3779af9d24f2525a825',1,'mfem::InvariantsEvaluator3D']]],
   ['hermitian',['HERMITIAN',['../classmfem_1_1ComplexOperator.html#ac3f1afa81d23559eb9341b71ac0ed393a1af53bae2cbc6405bbf83fbea29adb20',1,'mfem::ComplexOperator']]],
+  ['hessian_5fmask',['HESSIAN_MASK',['../classmfem_1_1ElementTransformation.html#a78dc6cc15c2f240fc976acd5470be0e0a321467359ae95d84457cfce0fbdb41ec',1,'mfem::ElementTransformation']]],
   ['hexahedron',['HEXAHEDRON',['../classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78a56670b7e34dd8ed02029799ee21619b7',1,'mfem::Element']]],
+  ['hip',['HIP',['../structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3a7abd501a2b99031fc9eb155a4eb495ee',1,'mfem::Backend']]],
+  ['hip_5fmask',['HIP_MASK',['../structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a84574f112b17af9e41bf268dcee8cecf',1,'mfem::Backend']]],
   ['homogeneous',['HOMOGENEOUS',['../classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c',1,'mfem::TimeDependentOperator']]],
   ['host',['HOST',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5',1,'mfem::HOST()'],['../namespacemfem.html#a4c3f8b89617067ca6e03323849eec9adab9361011891280a44d85b967739cc6a5',1,'mfem::HOST()']]],
   ['host_5f32',['HOST_32',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a555b1d3aa2852d6ae66286cbb2010860',1,'mfem::HOST_32()'],['../namespacemfem.html#a4c3f8b89617067ca6e03323849eec9ada555b1d3aa2852d6ae66286cbb2010860',1,'mfem::HOST_32()']]],
   ['host_5f64',['HOST_64',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a8afb7916b4248f155a47d9e4b5895e7e',1,'mfem::HOST_64()'],['../namespacemfem.html#a4c3f8b89617067ca6e03323849eec9ada8afb7916b4248f155a47d9e4b5895e7e',1,'mfem::HOST_64()']]],
+  ['host_5fdebug',['HOST_DEBUG',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6adf3f692434ae1392e33d9e4ce3ceecf7',1,'mfem']]],
+  ['host_5fumpire',['HOST_UMPIRE',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a893197ffac0e617f659bb2cc61327268',1,'mfem']]],
   ['hypre_5fparcsr',['Hypre_ParCSR',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a4387eb0ca1b04ce84b728325a98ea82c',1,'mfem::Operator']]]
 ];

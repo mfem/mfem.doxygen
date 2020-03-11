@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -117,12 +117,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a670a645ef8bc753522e8216ab607f598"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a670a645ef8bc753522e8216ab607f598">mfem::ParNormlp</a> (const Vector &amp;vec, double p, MPI_Comm comm)</td></tr>
 <tr class="memdesc:a670a645ef8bc753522e8216ab607f598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the l_p norm of the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> which is split without overlap across the given communicator.  <a href="#a670a645ef8bc753522e8216ab607f598">More...</a><br/></td></tr>
 <tr class="separator:a670a645ef8bc753522e8216ab607f598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e19b833543c66452ecc0948397eb8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a01e19b833543c66452ecc0948397eb8d">mfem::delete_hypre_CSRMatrixData</a> (hypre_CSRMatrix *M)</td></tr>
+<tr class="separator:a01e19b833543c66452ecc0948397eb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85012e9a7a4a95ba1c2321565e17d4cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a85012e9a7a4a95ba1c2321565e17d4cb">mfem::delete_hypre_ParCSRMatrixColMapOffd</a> (hypre_ParCSRMatrix *A)</td></tr>
+<tr class="separator:a85012e9a7a4a95ba1c2321565e17d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfad50306a1f7bf5aaa93d737d886adb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#abfad50306a1f7bf5aaa93d737d886adb">mfem::delete_hypre_CSRMatrixI</a> (hypre_CSRMatrix *M)</td></tr>
+<tr class="separator:abfad50306a1f7bf5aaa93d737d886adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1c1e031fba15df3b730a72b653e59e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a5a1c1e031fba15df3b730a72b653e59e">mfem::delete_hypre_CSRMatrixJ</a> (hypre_CSRMatrix *M)</td></tr>
+<tr class="separator:a5a1c1e031fba15df3b730a72b653e59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1aa4c3bf696e8e71a228903268e710b"><td class="memItemLeft" align="right" valign="top">HypreParMatrix *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aa1aa4c3bf696e8e71a228903268e710b">mfem::Add</a> (double <a class="el" href="ex15p_8cpp.html#adeedc97114c5a704906c8e26bdbd2451">alpha</a>, const HypreParMatrix &amp;A, double beta, const HypreParMatrix &amp;B)</td></tr>
 <tr class="memdesc:aa1aa4c3bf696e8e71a228903268e710b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new matrix <code>C = alpha*A + beta*B</code>, assuming that both <code>A</code> and <code>B</code> use the same row and column partitions and the same <code>col_map_offd</code> arrays.  <a href="#aa1aa4c3bf696e8e71a228903268e710b">More...</a><br/></td></tr>
 <tr class="separator:aa1aa4c3bf696e8e71a228903268e710b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae7a4e2b11398ce395166a723f129c1"><td class="memItemLeft" align="right" valign="top">HypreParMatrix *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a8ae7a4e2b11398ce395166a723f129c1">mfem::ParMult</a> (const HypreParMatrix *A, const HypreParMatrix *B)</td></tr>
-<tr class="memdesc:a8ae7a4e2b11398ce395166a723f129c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix A * B.  <a href="#a8ae7a4e2b11398ce395166a723f129c1">More...</a><br/></td></tr>
-<tr class="separator:a8ae7a4e2b11398ce395166a723f129c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0ca1f147dff828a18e0c38d1eabf63"><td class="memItemLeft" align="right" valign="top">HypreParMatrix *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aac0ca1f147dff828a18e0c38d1eabf63">mfem::ParMult</a> (const HypreParMatrix *A, const HypreParMatrix *B, bool own_matrix)</td></tr>
+<tr class="separator:aac0ca1f147dff828a18e0c38d1eabf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8966369121252942355d7a5216aa6f29"><td class="memItemLeft" align="right" valign="top">HypreParMatrix *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a8966369121252942355d7a5216aa6f29">mfem::ParAdd</a> (const HypreParMatrix *A, const HypreParMatrix *B)</td></tr>
 <tr class="memdesc:a8966369121252942355d7a5216aa6f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix A + B.  <a href="#a8966369121252942355d7a5216aa6f29">More...</a><br/></td></tr>
 <tr class="separator:a8966369121252942355d7a5216aa6f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,7 +149,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

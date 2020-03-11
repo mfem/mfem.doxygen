@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['w',['w',['../classmfem_1_1ConstrainedOperator.html#aae82923af0810282546d6ed093801e0e',1,'mfem::ConstrainedOperator::w()'],['../classmfem_1_1SLBQPOptimizer.html#a77aba5596b6125e6ee663c6561fa367d',1,'mfem::SLBQPOptimizer::w()'],['../structmfem_1_1IntRuleCoefficient_1_1Aux_3_01false_00_01dummy_01_4.html#ae0d1437df7ccc6e31749f8c2e841b648',1,'mfem::IntRuleCoefficient::Aux&lt; false, dummy &gt;::w()']]],
+  ['w',['w',['../classmfem_1_1ConstrainedOperator.html#aae82923af0810282546d6ed093801e0e',1,'mfem::ConstrainedOperator::w()'],['../classmfem_1_1RectangularConstrainedOperator.html#a1e9b16fe7938a41d528447ea9cbcfe4c',1,'mfem::RectangularConstrainedOperator::w()'],['../classmfem_1_1SLBQPOptimizer.html#a77aba5596b6125e6ee663c6561fa367d',1,'mfem::SLBQPOptimizer::w()'],['../structmfem_1_1IntRuleCoefficient_1_1Aux_3_01false_00_01dummy_01_4.html#ae0d1437df7ccc6e31749f8c2e841b648',1,'mfem::IntRuleCoefficient::Aux&lt; false, dummy &gt;::w()']]],
   ['w0',['w0',['../classmfem_1_1MINRESSolver.html#aa95d0161ed1b464a95ae37dfce9e68c3',1,'mfem::MINRESSolver']]],
   ['w1',['w1',['../classmfem_1_1MINRESSolver.html#a85b7d1d3342c7ead56b0874099d4cd4e',1,'mfem::MINRESSolver']]],
   ['weakcurl',['weakCurl',['../classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#ae4c4c9e4927992943d5d6021b879952a',1,'mfem::electromagnetics::MagneticDiffusionEOperator']]],
@@ -14,6 +14,7 @@ var searchData=
   ['wh',['Wh',['../lor-transfer_8cpp.html#aa4ad9c48749297e4eaf0a2fa03384fb3',1,'lor-transfer.cpp']]],
   ['width',['width',['../classmfem_1_1Operator.html#a19823327e636510bfcd9f8c5e4bf48fa',1,'mfem::Operator::width()'],['../classmfem_1_1MatrixCoefficient.html#af5c9f05abebfc5d4fa46d9bc589cba1b',1,'mfem::MatrixCoefficient::width()']]],
   ['window_5fparams',['window_params',['../classmfem_1_1HypreSmoother.html#a7309c6ae1c64a7354894483cc699ff69',1,'mfem::HypreSmoother']]],
+  ['with_5fcoeff',['with_coeff',['../classmfem_1_1ZienkiewiczZhuEstimator.html#a6dee7e6263ebfd3608b3b82917ebb3e9',1,'mfem::ZienkiewiczZhuEstimator']]],
   ['world_5frank',['world_rank',['../classmfem_1_1MPI__Session.html#a28caef8fbcd9bc330c0cf33f2a8aeab0',1,'mfem::MPI_Session']]],
   ['world_5fsize',['world_size',['../classmfem_1_1MPI__Session.html#a5e8b1948979256a993f547a450aa8c6c',1,'mfem::MPI_Session']]],
   ['ww',['Ww',['../lor-transfer_8cpp.html#a14b667219a30b9d672dd3989fcf02999',1,'lor-transfer.cpp']]],

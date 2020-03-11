@@ -1,7 +1,8 @@
 var searchData=
 [
   ['kernel',['kernel',['../structmfem_1_1TIntegrator_1_1kernel.html',1,'mfem::TIntegrator']]],
-  ['kinsolver',['KinSolver',['../classmfem_1_1KinSolver.html',1,'mfem']]],
+  ['key_5fhash',['key_hash',['../structmfem_1_1FiniteElementSpace_1_1key__hash.html',1,'mfem::FiniteElementSpace']]],
+  ['kinsolver',['KINSolver',['../classmfem_1_1KINSolver.html',1,'mfem']]],
   ['klusolver',['KLUSolver',['../classmfem_1_1KLUSolver.html',1,'mfem']]],
   ['knotvector',['KnotVector',['../classmfem_1_1KnotVector.html',1,'mfem']]]
 ];

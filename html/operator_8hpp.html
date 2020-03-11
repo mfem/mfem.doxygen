@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -94,7 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">operator.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -108,13 +109,19 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract operator.  <a href="classmfem_1_1Operator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TimeDependentOperator.html">mfem::TimeDependentOperator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base abstract class for time dependent operators.  <a href="classmfem_1_1TimeDependentOperator.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base abstract class for first order time dependent operators.  <a href="classmfem_1_1TimeDependentOperator.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SecondOrderTimeDependentOperator.html">mfem::SecondOrderTimeDependentOperator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base abstract class for second order time dependent operators.  <a href="classmfem_1_1SecondOrderTimeDependentOperator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Solver.html">mfem::Solver</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for solvers.  <a href="classmfem_1_1Solver.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IdentityOperator.html">mfem::IdentityOperator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> I: x -&gt; x.  <a href="classmfem_1_1IdentityOperator.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScaledOperator.html">mfem::ScaledOperator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaled <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> B: x -&gt; a A(x).  <a href="classmfem_1_1ScaledOperator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1TransposeOperator.html">mfem::TransposeOperator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transpose of a given operator. Switches the roles of the methods <a class="el" href="classmfem_1_1TransposeOperator.html#a095b8b2e5e924030a078da384b905318" title="Operator application. Apply the transpose of the original Operator. ">Mult()</a> and <a class="el" href="classmfem_1_1TransposeOperator.html#a7570cbe6384e82fea7c9f6c34675171b" title="Application of the transpose. Apply the original Operator. ">MultTranspose()</a>.  <a href="classmfem_1_1TransposeOperator.html#details">More...</a><br/></td></tr>
@@ -131,16 +138,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ConstrainedOperator.html">mfem::ConstrainedOperator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> for imposing essential boundary conditions using only the action, <a class="el" href="classmfem_1_1ConstrainedOperator.html#a402949ba62b76e50e9d5636f8ce62cb8" title="Constrained operator action. ">Mult()</a>, of a given unconstrained <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>.  <a href="classmfem_1_1ConstrainedOperator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RectangularConstrainedOperator.html">mfem::RectangularConstrainedOperator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangular <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> for imposing essential boundary conditions on the input space using only the action, <a class="el" href="classmfem_1_1RectangularConstrainedOperator.html#a0ee61333333244753c73e76ce65f139d" title="Rectangular-constrained operator action. ">Mult()</a>, of a given unconstrained <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>.  <a href="classmfem_1_1RectangularConstrainedOperator.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacemfem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html">mfem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7c6a603b8553000d256e9398ac65aec2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a7c6a603b8553000d256e9398ac65aec2">mfem::IsIdentityProlongation</a> (const Operator *P)</td></tr>
+<tr class="separator:a7c6a603b8553000d256e9398ac65aec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

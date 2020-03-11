@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -107,13 +107,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for mfem::VectorMassIntegrator:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1VectorMassIntegrator__inherit__graph.svg" width="286" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1VectorMassIntegrator__inherit__graph.svg" width="339" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for mfem::VectorMassIntegrator:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1VectorMassIntegrator__coll__graph.svg" width="100%" height="465"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1VectorMassIntegrator__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -141,13 +141,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8029d50850d98022fac894c82eed8767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a685efb1ae24765c74115a90aac66bf91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a685efb1ae24765c74115a90aac66bf91">AssembleElementMatrix2</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;trial_fe, const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;test_fe, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
 <tr class="separator:a685efb1ae24765c74115a90aac66bf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3844e6fa7130b63c15c70ebaf67e96"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a6c3844e6fa7130b63c15c70ebaf67e96">AssemblePA</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes)</td></tr>
+<tr class="memdesc:a6c3844e6fa7130b63c15c70ebaf67e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method defining partial assembly.  <a href="#a6c3844e6fa7130b63c15c70ebaf67e96">More...</a><br/></td></tr>
+<tr class="separator:a6c3844e6fa7130b63c15c70ebaf67e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57906e478a48251329f4402b589fd618"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a57906e478a48251329f4402b589fd618">AssembleDiagonalPA</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag)</td></tr>
+<tr class="memdesc:a57906e478a48251329f4402b589fd618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble diagonal and add it to <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> <em>diag</em>.  <a href="#a57906e478a48251329f4402b589fd618">More...</a><br/></td></tr>
+<tr class="separator:a57906e478a48251329f4402b589fd618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2135cc337dce35efe9a30bf88323eb6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a2135cc337dce35efe9a30bf88323eb6f">AddMultPA</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
+<tr class="memdesc:a2135cc337dce35efe9a30bf88323eb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for partially assembled action.  <a href="#a2135cc337dce35efe9a30bf88323eb6f">More...</a><br/></td></tr>
+<tr class="separator:a2135cc337dce35efe9a30bf88323eb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1BilinearFormIntegrator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1BilinearFormIntegrator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">mfem::BilinearFormIntegrator</a></td></tr>
-<tr class="memitem:a116d397620e14cca02ae8959830fe8f9 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a116d397620e14cca02ae8959830fe8f9">AssemblePA</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes)</td></tr>
-<tr class="memdesc:a116d397620e14cca02ae8959830fe8f9 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method defining partial assembly.  <a href="#a116d397620e14cca02ae8959830fe8f9">More...</a><br/></td></tr>
-<tr class="separator:a116d397620e14cca02ae8959830fe8f9 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40dcf3c35953e86fc0f1d1d72f526634 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a40dcf3c35953e86fc0f1d1d72f526634">AddMultPA</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
-<tr class="memdesc:a40dcf3c35953e86fc0f1d1d72f526634 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for partially assembled action.  <a href="#a40dcf3c35953e86fc0f1d1d72f526634">More...</a><br/></td></tr>
-<tr class="separator:a40dcf3c35953e86fc0f1d1d72f526634 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b70d23c842b88baf07ca3598a71653 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#ae2b70d23c842b88baf07ca3598a71653">AssemblePA</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;trial_fes, const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;test_fes)</td></tr>
+<tr class="separator:ae2b70d23c842b88baf07ca3598a71653 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc899de5136a0fdc625c4a24d7b0b27 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a4cc899de5136a0fdc625c4a24d7b0b27">AssemblePAInteriorFaces</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes)</td></tr>
+<tr class="separator:a4cc899de5136a0fdc625c4a24d7b0b27 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4471556b5ec0eec32e00c0e453f2870c inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a4471556b5ec0eec32e00c0e453f2870c">AssemblePABoundaryFaces</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes)</td></tr>
+<tr class="separator:a4471556b5ec0eec32e00c0e453f2870c inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a201061d6dd01dc3ccbb32394b3112d02 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a201061d6dd01dc3ccbb32394b3112d02">AddMultTransposePA</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
 <tr class="memdesc:a201061d6dd01dc3ccbb32394b3112d02 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for partially assembled transposed action.  <a href="#a201061d6dd01dc3ccbb32394b3112d02">More...</a><br/></td></tr>
 <tr class="separator:a201061d6dd01dc3ccbb32394b3112d02 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,9 +173,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaec460da1d28c7be12dd3ae0bc039a13 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#aaec460da1d28c7be12dd3ae0bc039a13">AssembleFaceGrad</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el1, const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el2, <a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> &amp;Tr, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elfun, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;elmat)</td></tr>
 <tr class="memdesc:aaec460da1d28c7be12dd3ae0bc039a13 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the local action of the gradient of the <a class="el" href="classmfem_1_1NonlinearFormIntegrator.html">NonlinearFormIntegrator</a> resulting from a face integral term.  <a href="#aaec460da1d28c7be12dd3ae0bc039a13">More...</a><br/></td></tr>
 <tr class="separator:aaec460da1d28c7be12dd3ae0bc039a13 inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b82bf3b1c13fe19dc0f36b3f49dc5bd inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a7b82bf3b1c13fe19dc0f36b3f49dc5bd">ComputeElementFlux</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;u, const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;fluxelem, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;flux, int with_coef=1)</td></tr>
-<tr class="memdesc:a7b82bf3b1c13fe19dc0f36b3f49dc5bd inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method required for Zienkiewicz-Zhu type error estimators.  <a href="#a7b82bf3b1c13fe19dc0f36b3f49dc5bd">More...</a><br/></td></tr>
-<tr class="separator:a7b82bf3b1c13fe19dc0f36b3f49dc5bd inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7751b10a5406efd07fd2a85e73eca87a inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a7751b10a5406efd07fd2a85e73eca87a">ComputeElementFlux</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;u, const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;fluxelem, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;flux, bool with_coef=true)</td></tr>
+<tr class="memdesc:a7751b10a5406efd07fd2a85e73eca87a inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method required for Zienkiewicz-Zhu type error estimators.  <a href="#a7751b10a5406efd07fd2a85e73eca87a">More...</a><br/></td></tr>
+<tr class="separator:a7751b10a5406efd07fd2a85e73eca87a inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39b247ac3ba9b2233c61bc195702ee1e inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a39b247ac3ba9b2233c61bc195702ee1e">ComputeFluxEnergy</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;fluxelem, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;flux, <a class="el" href="classmfem_1_1Vector.html">Vector</a> *d_energy=NULL)</td></tr>
 <tr class="memdesc:a39b247ac3ba9b2233c61bc195702ee1e inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method required for Zienkiewicz-Zhu type error estimators.  <a href="#a39b247ac3ba9b2233c61bc195702ee1e">More...</a><br/></td></tr>
 <tr class="separator:a39b247ac3ba9b2233c61bc195702ee1e inherit pub_methods_classmfem_1_1BilinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +205,24 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a0540a27511dfa0638c698f7979dc1958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3089787fbf3690de6e28b93e16de68a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1MatrixCoefficient.html">MatrixCoefficient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#ab3089787fbf3690de6e28b93e16de68a">MQ</a></td></tr>
 <tr class="separator:ab3089787fbf3690de6e28b93e16de68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15c8b58d246e9c01f84182584433b77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#af15c8b58d246e9c01f84182584433b77">pa_data</a></td></tr>
+<tr class="separator:af15c8b58d246e9c01f84182584433b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5468ef042f35c9428cc151281f6411c5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1DofToQuad.html">DofToQuad</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a5468ef042f35c9428cc151281f6411c5">maps</a></td></tr>
+<tr class="memdesc:a5468ef042f35c9428cc151281f6411c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not owned.  <a href="#a5468ef042f35c9428cc151281f6411c5">More...</a><br/></td></tr>
+<tr class="separator:a5468ef042f35c9428cc151281f6411c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cc58d1c85fd1869ba4808447af2102"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1GeometricFactors.html">GeometricFactors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#ac9cc58d1c85fd1869ba4808447af2102">geom</a></td></tr>
+<tr class="memdesc:ac9cc58d1c85fd1869ba4808447af2102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not owned.  <a href="#ac9cc58d1c85fd1869ba4808447af2102">More...</a><br/></td></tr>
+<tr class="separator:ac9cc58d1c85fd1869ba4808447af2102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830dcb20e1eeb4eea1a34f1f3559e18d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a830dcb20e1eeb4eea1a34f1f3559e18d">dim</a></td></tr>
+<tr class="separator:a830dcb20e1eeb4eea1a34f1f3559e18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e392d2d49c44ffce3d4779104890ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a35e392d2d49c44ffce3d4779104890ad">ne</a></td></tr>
+<tr class="separator:a35e392d2d49c44ffce3d4779104890ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14bf5d04aa373bd7e9431e4f559f1f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#af14bf5d04aa373bd7e9431e4f559f1f5">nq</a></td></tr>
+<tr class="separator:af14bf5d04aa373bd7e9431e4f559f1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1c91844d8d16cde6c66e4fc369cc3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#a8d1c91844d8d16cde6c66e4fc369cc3d">dofs1D</a></td></tr>
+<tr class="separator:a8d1c91844d8d16cde6c66e4fc369cc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe230163c03457d894edca3c57a07713"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorMassIntegrator.html#abe230163c03457d894edca3c57a07713">quad1D</a></td></tr>
+<tr class="separator:abe230163c03457d894edca3c57a07713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1NonlinearFormIntegrator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1NonlinearFormIntegrator')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1NonlinearFormIntegrator.html">mfem::NonlinearFormIntegrator</a></td></tr>
 <tr class="memitem:ad00af16cc9461003f3a0705c2e3d66df inherit pro_attribs_classmfem_1_1NonlinearFormIntegrator"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NonlinearFormIntegrator.html#ad00af16cc9461003f3a0705c2e3d66df">IntRule</a></td></tr>
 <tr class="separator:ad00af16cc9461003f3a0705c2e3d66df inherit pro_attribs_classmfem_1_1NonlinearFormIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,7 +239,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for integrating the bilinear form a(u,v) := (Q u, v), where u=(u1,...,un) and v=(v1,...,vn); ui and vi are defined by scalar FE through standard transformation. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01825">1825</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02022">2022</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac2c71c653b80173246616cba11856932"></a>
 <div class="memitem">
@@ -237,7 +264,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct an integrator with coefficient 1.0. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01841">1841</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02043">2043</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Construct an integrator with scalar coefficient q. If possible, save memory by using a scalar integrator since the resulting matrix is block diagonal with the same diagonal block repeated. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01847">1847</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02048">2048</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01849">1849</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02050">2050</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -348,7 +375,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct an integrator with diagonal coefficient q. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01853">1853</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02054">2054</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,11 +413,83 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct an integrator with matrix coefficient q. </p>
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01856">1856</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02057">2057</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2135cc337dce35efe9a30bf88323eb6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::VectorMassIntegrator::AddMultPA </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method for partially assembled action. </p>
+<p>Perform the action of integrator on the input <em>x</em> and add the result to the output <em>y</em>. Both <em>x</em> and <em>y</em> are E-vectors, i.e. they represent the element-wise discontinuous version of the FE space.</p>
+<p>This method can be called only after the method <a class="el" href="classmfem_1_1VectorMassIntegrator.html#a6c3844e6fa7130b63c15c70ebaf67e96" title="Method defining partial assembly. ">AssemblePA()</a> has been called. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a40dcf3c35953e86fc0f1d1d72f526634">mfem::BilinearFormIntegrator</a>.</p>
+
+<p>Definition at line <a class="el" href="bilininteg__vecmass_8cpp_source.html#l00362">362</a> of file <a class="el" href="bilininteg__vecmass_8cpp_source.html">bilininteg_vecmass.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57906e478a48251329f4402b589fd618"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::VectorMassIntegrator::AssembleDiagonalPA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>diag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assemble diagonal and add it to <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> <em>diag</em>. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a470ea0611f989dae696abca7b55fa026">mfem::BilinearFormIntegrator</a>.</p>
+
+<p>Definition at line <a class="el" href="bilininteg__vecmass_8cpp_source.html#l00515">515</a> of file <a class="el" href="bilininteg__vecmass_8cpp_source.html">bilininteg_vecmass.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8029d50850d98022fac894c82eed8767"></a>
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +532,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a5a822902bb6bd8331f6a46b9d1c4eec3">mfem::BilinearFormIntegrator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l00927">927</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l01031">1031</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +583,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearFormIntegrator.html#aa279d2025b20a15c7a6441a35a6adbfd">mfem::BilinearFormIntegrator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l01008">1008</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8cpp_source.html#l01112">1112</a> of file <a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c3844e6fa7130b63c15c70ebaf67e96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::VectorMassIntegrator::AssemblePA </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;&#160;</td>
+          <td class="paramname"><em>fes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method defining partial assembly. </p>
+<p>The result of the partial assembly is stored internally so that it can be used later in the methods <a class="el" href="classmfem_1_1VectorMassIntegrator.html#a2135cc337dce35efe9a30bf88323eb6f" title="Method for partially assembled action. ">AddMultPA()</a> and <a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a201061d6dd01dc3ccbb32394b3112d02" title="Method for partially assembled transposed action. ">AddMultTransposePA()</a>. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1BilinearFormIntegrator.html#a116d397620e14cca02ae8959830fe8f9">mfem::BilinearFormIntegrator</a>.</p>
+
+<p>Definition at line <a class="el" href="bilininteg__vecmass_8cpp_source.html#l00024">24</a> of file <a class="el" href="bilininteg__vecmass_8cpp_source.html">bilininteg_vecmass.cpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +639,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01859">1859</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02060">2060</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -535,11 +665,103 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01860">1860</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02061">2061</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a830dcb20e1eeb4eea1a34f1f3559e18d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::VectorMassIntegrator::dim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02039">2039</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d1c91844d8d16cde6c66e4fc369cc3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::VectorMassIntegrator::dofs1D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02039">2039</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9cc58d1c85fd1869ba4808447af2102"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1GeometricFactors.html">GeometricFactors</a>* mfem::VectorMassIntegrator::geom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Not owned. </p>
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02038">2038</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5468ef042f35c9428cc151281f6411c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1DofToQuad.html">DofToQuad</a>* mfem::VectorMassIntegrator::maps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Not owned. </p>
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02037">2037</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab3089787fbf3690de6e28b93e16de68a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +780,73 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01837">1837</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02034">2034</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a35e392d2d49c44ffce3d4779104890ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::VectorMassIntegrator::ne</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02039">2039</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af14bf5d04aa373bd7e9431e4f559f1f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::VectorMassIntegrator::nq</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02039">2039</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af15c8b58d246e9c01f84182584433b77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::VectorMassIntegrator::pa_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02036">2036</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +868,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01835">1835</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02032">2032</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe230163c03457d894edca3c57a07713"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::VectorMassIntegrator::quad1D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02039">2039</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
@@ -602,18 +912,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l01836">1836</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilininteg_8hpp_source.html#l02033">2033</a> of file <a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>fem/<a class="el" href="bilininteg_8hpp_source.html">bilininteg.hpp</a></li>
 <li>fem/<a class="el" href="bilininteg_8cpp_source.html">bilininteg.cpp</a></li>
+<li>fem/<a class="el" href="bilininteg__vecmass_8cpp_source.html">bilininteg_vecmass.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:23 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

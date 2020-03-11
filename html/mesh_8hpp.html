@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -95,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">mesh.hpp File Reference</div>  </div>
@@ -117,16 +118,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeometricFactors.html">mfem::GeometricFactors</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for storing mesh geometric factors: coordinates, Jacobians, and determinants of the Jacobians.  <a href="classmfem_1_1GeometricFactors.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FaceGeometricFactors.html">mfem::FaceGeometricFactors</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for storing face geometric factors: coordinates, Jacobians, determinants of the Jacobians, and normal vectors.  <a href="classmfem_1_1FaceGeometricFactors.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NodeExtrudeCoefficient.html">mfem::NodeExtrudeCoefficient</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class used to extrude the nodes of a mesh.  <a href="classmfem_1_1NodeExtrudeCoefficient.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1named__ifgzstream.html">mfem::named_ifgzstream</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacemfem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html">mfem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:af736ce0d62a2894982a1eda9dbe93fb7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7">mfem::FaceType</a> : bool { <a class="el" href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7aebbcc9b3b8fc5c7d79d0126910b82a69">mfem::FaceType::Interior</a>, 
+<a class="el" href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7ae234de581c9c5ef91322f1469a585f9e">mfem::FaceType::Boundary</a>
+ }</td></tr>
+<tr class="separator:af736ce0d62a2894982a1eda9dbe93fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -138,11 +147,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a6747219c2bd03b44c145705948d7b763"><td class="memItemLeft" align="right" valign="top">Mesh *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a6747219c2bd03b44c145705948d7b763">mfem::Extrude2D</a> (Mesh *mesh, const int nz, const double sz)</td></tr>
 <tr class="memdesc:a6747219c2bd03b44c145705948d7b763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrude a 2D mesh.  <a href="#a6747219c2bd03b44c145705948d7b763">More...</a><br/></td></tr>
 <tr class="separator:a6747219c2bd03b44c145705948d7b763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d41fc88f57d8f2806f909e35eabd648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a4d41fc88f57d8f2806f909e35eabd648">mfem::ShiftRight</a> (int &amp;<a class="el" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, int &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, int &amp;c)</td></tr>
+<tr class="separator:a4d41fc88f57d8f2806f909e35eabd648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

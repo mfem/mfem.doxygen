@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -114,13 +114,17 @@ Functions</h2></td></tr>
 <tr class="memitem:ac7931477701845ea0cba3f2d7cf1131f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ac7931477701845ea0cba3f2d7cf1131f">mfem::OmpWrap</a> (const int N, HBODY &amp;&amp;h_body)</td></tr>
 <tr class="memdesc:ac7931477701845ea0cba3f2d7cf1131f"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenMP backend.  <a href="#ac7931477701845ea0cba3f2d7cf1131f">More...</a><br/></td></tr>
 <tr class="separator:ac7931477701845ea0cba3f2d7cf1131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b4bdf462b8f419d33ebf94b28d5f7ae"><td class="memTemplParams" colspan="2">template&lt;int BLOCKS, typename DBODY &gt; </td></tr>
-<tr class="memitem:a7b4bdf462b8f419d33ebf94b28d5f7ae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a7b4bdf462b8f419d33ebf94b28d5f7ae">mfem::RajaCudaWrap</a> (const int N, DBODY &amp;&amp;d_body)</td></tr>
-<tr class="memdesc:a7b4bdf462b8f419d33ebf94b28d5f7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAJA Cuda backend.  <a href="#a7b4bdf462b8f419d33ebf94b28d5f7ae">More...</a><br/></td></tr>
-<tr class="separator:a7b4bdf462b8f419d33ebf94b28d5f7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fe528237206f6e93c893d198ad1172"><td class="memTemplParams" colspan="2">template&lt;const int BLOCKS = MFEM_CUDA_BLOCKS, typename DBODY &gt; </td></tr>
+<tr class="memitem:ae5fe528237206f6e93c893d198ad1172"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ae5fe528237206f6e93c893d198ad1172">mfem::RajaCudaWrap1D</a> (const int N, DBODY &amp;&amp;d_body)</td></tr>
+<tr class="separator:ae5fe528237206f6e93c893d198ad1172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f31cef10b68319a8e4424ec14829eb4"><td class="memTemplParams" colspan="2">template&lt;typename DBODY &gt; </td></tr>
+<tr class="memitem:a7f31cef10b68319a8e4424ec14829eb4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a7f31cef10b68319a8e4424ec14829eb4">mfem::RajaCudaWrap2D</a> (const int N, DBODY &amp;&amp;d_body, const int X, const int Y, const int BZ)</td></tr>
+<tr class="separator:a7f31cef10b68319a8e4424ec14829eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7dd501a2596d7c4110a563726851cca"><td class="memTemplParams" colspan="2">template&lt;typename DBODY &gt; </td></tr>
+<tr class="memitem:ab7dd501a2596d7c4110a563726851cca"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ab7dd501a2596d7c4110a563726851cca">mfem::RajaCudaWrap3D</a> (const int N, DBODY &amp;&amp;d_body, const int X, const int Y, const int Z)</td></tr>
+<tr class="separator:ab7dd501a2596d7c4110a563726851cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a068e11a553c96deba6fdc9e0534db694"><td class="memTemplParams" colspan="2">template&lt;typename HBODY &gt; </td></tr>
 <tr class="memitem:a068e11a553c96deba6fdc9e0534db694"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a068e11a553c96deba6fdc9e0534db694">mfem::RajaOmpWrap</a> (const int N, HBODY &amp;&amp;h_body)</td></tr>
-<tr class="memdesc:a068e11a553c96deba6fdc9e0534db694"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAJA OpenMP backend.  <a href="#a068e11a553c96deba6fdc9e0534db694">More...</a><br/></td></tr>
 <tr class="separator:a068e11a553c96deba6fdc9e0534db694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10938ab554d5a9ad42776c8b70f00c76"><td class="memTemplParams" colspan="2">template&lt;typename HBODY &gt; </td></tr>
 <tr class="memitem:a10938ab554d5a9ad42776c8b70f00c76"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a10938ab554d5a9ad42776c8b70f00c76">mfem::RajaSeqWrap</a> (const int N, HBODY &amp;&amp;h_body)</td></tr>
@@ -135,6 +139,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a7baee487676de4052df0261a7c1121f5"><td class="memTemplParams" colspan="2">template&lt;typename DBODY &gt; </td></tr>
 <tr class="memitem:a7baee487676de4052df0261a7c1121f5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a7baee487676de4052df0261a7c1121f5">mfem::CuWrap3D</a> (const int N, DBODY &amp;&amp;d_body, const int X, const int Y, const int Z)</td></tr>
 <tr class="separator:a7baee487676de4052df0261a7c1121f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98a26077e2060342214babc7dc3aa27"><td class="memTemplParams" colspan="2">template&lt;const int BLCK = MFEM_HIP_BLOCKS, typename DBODY &gt; </td></tr>
+<tr class="memitem:ae98a26077e2060342214babc7dc3aa27"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ae98a26077e2060342214babc7dc3aa27">mfem::HipWrap1D</a> (const int N, DBODY &amp;&amp;d_body)</td></tr>
+<tr class="separator:ae98a26077e2060342214babc7dc3aa27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48fcfbbd1b9b69676fd2d0cce461f0e"><td class="memTemplParams" colspan="2">template&lt;typename DBODY &gt; </td></tr>
+<tr class="memitem:ab48fcfbbd1b9b69676fd2d0cce461f0e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ab48fcfbbd1b9b69676fd2d0cce461f0e">mfem::HipWrap2D</a> (const int N, DBODY &amp;&amp;d_body, const int X, const int Y, const int BZ)</td></tr>
+<tr class="separator:ab48fcfbbd1b9b69676fd2d0cce461f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4056630c49a3cf614ecbcac4f15befdb"><td class="memTemplParams" colspan="2">template&lt;typename DBODY &gt; </td></tr>
+<tr class="memitem:a4056630c49a3cf614ecbcac4f15befdb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a4056630c49a3cf614ecbcac4f15befdb">mfem::HipWrap3D</a> (const int N, DBODY &amp;&amp;d_body, const int X, const int Y, const int Z)</td></tr>
+<tr class="separator:a4056630c49a3cf614ecbcac4f15befdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15002bf1639c3b361e5e6a99c867da50"><td class="memTemplParams" colspan="2">template&lt;const int DIM, typename DBODY , typename HBODY &gt; </td></tr>
 <tr class="memitem:a15002bf1639c3b361e5e6a99c867da50"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a15002bf1639c3b361e5e6a99c867da50">mfem::ForallWrap</a> (const bool use_dev, const int N, DBODY &amp;&amp;d_body, HBODY &amp;&amp;h_body, const int X=0, const int Y=0, const int Z=0)</td></tr>
 <tr class="memdesc:a15002bf1639c3b361e5e6a99c867da50"><td class="mdescLeft">&#160;</td><td class="mdescRight">The forall kernel body wrapper.  <a href="#a15002bf1639c3b361e5e6a99c867da50">More...</a><br/></td></tr>
@@ -142,15 +155,15 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a5aebd4a4c03683152fecdddeadeea063"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a5aebd4a4c03683152fecdddeadeea063">mfem::MAX_D1D</a> = 16</td></tr>
+<tr class="memitem:a5aebd4a4c03683152fecdddeadeea063"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a5aebd4a4c03683152fecdddeadeea063">mfem::MAX_D1D</a> = 14</td></tr>
 <tr class="separator:a5aebd4a4c03683152fecdddeadeea063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5e61b8655c24492141bdee04eeb871"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a9e5e61b8655c24492141bdee04eeb871">mfem::MAX_Q1D</a> = 16</td></tr>
+<tr class="memitem:a9e5e61b8655c24492141bdee04eeb871"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a9e5e61b8655c24492141bdee04eeb871">mfem::MAX_Q1D</a> = 14</td></tr>
 <tr class="separator:a9e5e61b8655c24492141bdee04eeb871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

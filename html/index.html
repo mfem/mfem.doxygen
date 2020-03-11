@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -89,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>Main mesh classes</h3>
 <ul>
 <li><a class="el" href="classmfem_1_1Mesh.html">Mesh</a></li>
-<li><a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a></li>
+<li><a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a></li>
 <li><a class="el" href="classmfem_1_1Element.html" title="Abstract data type element. ">Element</a></li>
 <li><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a></li>
 </ul>
@@ -167,6 +167,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a href="ex20p_8cpp_source.html" class="el">Example 20p</a>: parallel symplectic ODE integration</li>
 <li><a href="ex21_8cpp_source.html" class="el">Example 21</a>: adaptive mesh refinement for linear elasticity</li>
 <li><a href="ex21p_8cpp_source.html" class="el">Example 21p</a>: parallel adaptive mesh refinement for linear elasticity</li>
+<li><a href="ex22_8cpp_source.html" class="el">Example 22</a>: complex-valued linear systems for damped harmonic oscillators</li>
+<li><a href="ex22p_8cpp_source.html" class="el">Example 22p</a>: parallel complex-valued linear systems for damped harmonic oscillators</li>
+<li><a href="ex23_8cpp_source.html" class="el">Example 23</a>: second order in time wave equation</li>
+<li><a href="ex24_8cpp_source.html" class="el">Example 24</a>: mixed finite element spaces and interpolators</li>
+<li><a href="ex24p_8cpp_source.html" class="el">Example 24p</a>: parallel mixed finite element spaces and interpolators</li>
 </ul>
 <h4>SUNDIALS Examples</h4>
 <ul>
@@ -179,6 +184,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h4>PUMI Examples</h4>
 <ul>
 <li>Variants of Examples <a href="examples_2pumi_2ex1_8cpp_source.html" class="el">1</a>, <a href="examples_2pumi_2ex1p_8cpp_source.html" class="el">1p</a>, <a href="pumi_2ex2_8cpp_source.html" class="el">2</a>, and <a href="pumi_2ex6p_8cpp_source.html" class="el">6p</a> demonstrating the use of MFEM's <a class="el" href="pumi_8hpp.html">PUMI classes</a></li>
+</ul>
+<h4>HiOp Examples</h4>
+<ul>
+<li>Variants of Examples <a href="hiop_2ex9_8cpp_source.html" class="el">9</a> and <a href="hiop_2ex9p_8cpp_source.html" class="el">9p</a>, demonstrating the use of MFEM's <a class="el" href="hiop_8hpp.html">HiOp classes</a></li>
+</ul>
+<h4>Ginkgo Examples</h4>
+<ul>
+<li>Variants of Example <a href="ginkgo_2ex1_8cpp_source.html" class="el">1</a> demonstrating the use of MFEM's <a class="el" href="ginkgo_8hpp.html">Ginkgo classes</a></li>
 </ul>
 <h3>Miniapps</h3>
 <ul>
@@ -194,9 +207,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a href="mesh-explorer_8cpp_source.html" class="el">Mesh Explorer</a>: visualize and manipulate meshes</li>
 <li><a href="mesh-optimizer_8cpp_source.html" class="el">Mesh Optimizer</a>: optimize high-order meshes, <a href="mesh-optimizer_8cpp_source.html" class="el">serial</a> and <a href="pmesh-optimizer_8cpp_source.html" class="el">parallel</a> versions</li>
 <li><a href="display-basis_8cpp_source.html" class="el">Display Basis</a>: visualize finite element basis functions</li>
+<li><a href="get-values_8cpp_source.html" class="el">Get Values</a>: extract field values via <a class="el" href="classmfem_1_1DataCollection.html">DataCollection</a> classes</li>
 <li><a href="load-dc_8cpp_source.html" class="el">Load DC</a>: visualize fields saved via <a class="el" href="classmfem_1_1DataCollection.html">DataCollection</a> classes</li>
-<li><a href="convert-dc_8cpp_source.html" class="el">Convert DC</a>: convert between diffirent <a class="el" href="classmfem_1_1DataCollection.html">DataCollection</a> formats</li>
+<li><a href="convert-dc_8cpp_source.html" class="el">Convert DC</a>: convert between different <a class="el" href="classmfem_1_1DataCollection.html">DataCollection</a> formats</li>
 <li><a href="lor-transfer_8cpp_source.html" class="el">LOR Transfer</a>: map functions between high-order and low-order refined spaces</li>
+<li><a href="findpts_8cpp_source.html" class="el">Find Points</a>: evaluate grid function in physical space, <a href="findpts_8cpp_source.html" class="el">serial</a> and <a href="pfindpts_8cpp_source.html" class="el">parallel</a> versions</li>
+<li><a href="field-diff_8cpp_source.html" class="el">Field Diff</a>: compare grid functions on different meshes</li>
 <li><a href="miniapps_2performance_2ex1_8cpp_source.html" class="el">HPC Example 1</a>: high-performance nodal H1 FEM for the Laplace problem</li>
 <li><a href="miniapps_2performance_2ex1p_8cpp_source.html" class="el">HPC Example 1p</a>: high-performance parallel nodal H1 FEM for the Laplace problem</li>
 </ul>
@@ -204,7 +220,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:25 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -150,14 +150,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1RAPOperator.html#a769d421be3becf733685ec2ee673e02e">mfem::RAPOperator</a>
 </li>
 <li>rdbuf()
-: <a class="el" href="classmfem_1_1igzstream.html#a83bb6d0fb3c9ab251f8b1a6e4aa93610">mfem::igzstream</a>
-, <a class="el" href="classmfem_1_1ogzstream.html#aa72c93d7395b1fe4ee268a4b84498d25">mfem::ogzstream</a>
-, <a class="el" href="classmfem_1_1socketstream.html#a7630a300e189711ec51ba31e3dac55ad">mfem::socketstream</a>
-, <a class="el" href="classmfem_1_1gzstreambase.html#a414dd675df7d84ab2cb4870ad92419df">mfem::gzstreambase</a>
+: <a class="el" href="classmfem_1_1socketstream.html#a7630a300e189711ec51ba31e3dac55ad">mfem::socketstream</a>
 </li>
 <li>Read()
 : <a class="el" href="classmfem_1_1Array.html#a36c78fb2a325fa53845d64a4ae91202d">mfem::Array&lt; T &gt;</a>
 , <a class="el" href="classmfem_1_1Memory.html#a8a5c11ddc964f3e9828e9a2049a5210d">mfem::Memory&lt; T &gt;</a>
+, <a class="el" href="classmfem_1_1DenseMatrix.html#abd58613af2a81043e443b821ea0161be">mfem::DenseMatrix</a>
+, <a class="el" href="classmfem_1_1DenseTensor.html#a4e45a37f22b9e1b71b366c1e088a49f0">mfem::DenseTensor</a>
 , <a class="el" href="classmfem_1_1HypreParMatrix.html#a0fedd66ef933253e58b1af1c8c9b3ac1">mfem::HypreParMatrix</a>
 , <a class="el" href="classmfem_1_1Vector.html#afb0fdfe8ce56af76f247c402c313cd8b">mfem::Vector</a>
 </li>
@@ -166,6 +165,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>ReadCubit()
 : <a class="el" href="classmfem_1_1Mesh.html#a5f1a1462a795bab6670f8f89a5baaa62">mfem::Mesh</a>
+</li>
+<li>ReadData()
+: <a class="el" href="classmfem_1_1SparseMatrix.html#a02ba178cc6eb277abb6939dc6c11e503">mfem::SparseMatrix</a>
 </li>
 <li>ReadElement()
 : <a class="el" href="classmfem_1_1Mesh.html#a2ce287f0767fb8ba677f0303c3a6655a">mfem::Mesh</a>
@@ -178,8 +180,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ReadGmshMesh()
 : <a class="el" href="classmfem_1_1Mesh.html#af057846e77c36c7752004498c485f816">mfem::Mesh</a>
 </li>
+<li>ReadI()
+: <a class="el" href="classmfem_1_1SparseMatrix.html#aeae8065e7d510ea6b1bd773a5cf89604">mfem::SparseMatrix</a>
+</li>
 <li>ReadInlineMesh()
 : <a class="el" href="classmfem_1_1Mesh.html#a32eff618d74bb0f37affb9b46adad238">mfem::Mesh</a>
+</li>
+<li>ReadJ()
+: <a class="el" href="classmfem_1_1SparseMatrix.html#a6b04636a1448f2d50bdac18a96aa04af">mfem::SparseMatrix</a>
 </li>
 <li>ReadLineMesh()
 : <a class="el" href="classmfem_1_1Mesh.html#a3a40047a4bdd5f22330a5d273008d8b6">mfem::Mesh</a>
@@ -206,19 +214,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1Mesh.html#aa99b8090619e564cfdc1b550d9c025f9">mfem::Mesh</a>
 </li>
 <li>ReadWrite()
-: <a class="el" href="classmfem_1_1Memory.html#a41c5196970fcdb804fda39b12ce33a89">mfem::Memory&lt; T &gt;</a>
+: <a class="el" href="classmfem_1_1Array.html#a3d694da248b3156ab1efde1c05871e85">mfem::Array&lt; T &gt;</a>
+, <a class="el" href="classmfem_1_1Memory.html#a41c5196970fcdb804fda39b12ce33a89">mfem::Memory&lt; T &gt;</a>
+, <a class="el" href="classmfem_1_1DenseMatrix.html#ae142a263871d8b7903309b9ec4f2cff5">mfem::DenseMatrix</a>
+, <a class="el" href="classmfem_1_1DenseTensor.html#ae6ec8c084253d20f3c0bf9b8de022494">mfem::DenseTensor</a>
 , <a class="el" href="classmfem_1_1Vector.html#a9f4d6e643c51ac628fa6eacc74c5f37f">mfem::Vector</a>
-, <a class="el" href="classmfem_1_1Array.html#a3d694da248b3156ab1efde1c05871e85">mfem::Array&lt; T &gt;</a>
+</li>
+<li>ReadWriteData()
+: <a class="el" href="classmfem_1_1SparseMatrix.html#a0647e4dabf338660a61d47dc7976e7d4">mfem::SparseMatrix</a>
+</li>
+<li>ReadWriteI()
+: <a class="el" href="classmfem_1_1SparseMatrix.html#a2442cf5c89d395a8dabadd2fbdddd83a">mfem::SparseMatrix</a>
+</li>
+<li>ReadWriteJ()
+: <a class="el" href="classmfem_1_1SparseMatrix.html#ace699344e80b45a05c4fa6340b9d6e8a">mfem::SparseMatrix</a>
+</li>
+<li>real()
+: <a class="el" href="classmfem_1_1ComplexOperator.html#a664af64083589a552001fd0410b10f55">mfem::ComplexOperator</a>
+, <a class="el" href="classmfem_1_1ComplexSparseMatrix.html#ab0f72bf902c448ed67cdd41d144b8875">mfem::ComplexSparseMatrix</a>
+, <a class="el" href="classmfem_1_1ComplexHypreParMatrix.html#af1ba630fcb81017fdbd3f793e0633d2e">mfem::ComplexHypreParMatrix</a>
+, <a class="el" href="classmfem_1_1ComplexGridFunction.html#afb56b90291bf936b0f9a7b0be6b770a4">mfem::ComplexGridFunction</a>
+, <a class="el" href="classmfem_1_1ComplexLinearForm.html#a65a08d4ee35733ed8ccdc6f1bfd46b38">mfem::ComplexLinearForm</a>
+, <a class="el" href="classmfem_1_1SesquilinearForm.html#a144db6c20caaef3116d0e5188807f8ff">mfem::SesquilinearForm</a>
+, <a class="el" href="classmfem_1_1ParComplexGridFunction.html#ac59e6954ee44a0c3555868efd9d2ce31">mfem::ParComplexGridFunction</a>
+, <a class="el" href="classmfem_1_1ParComplexLinearForm.html#a1ba8a6fed3840630f8fc93aa0ce8ac48">mfem::ParComplexLinearForm</a>
+, <a class="el" href="classmfem_1_1ParSesquilinearForm.html#aa0f312298e84377ca1125b793fd583e3">mfem::ParSesquilinearForm</a>
 </li>
 <li>RealTime()
 : <a class="el" href="classmfem_1_1StopWatch.html#a1aac7642b6cefb1357f7c19ad4c9e514">mfem::StopWatch</a>
 </li>
 <li>Rebalance()
 : <a class="el" href="classmfem_1_1ParMesh.html#a80761f9e9a934d1a5e16efdc5e611446">mfem::ParMesh</a>
-, <a class="el" href="classmfem_1_1ParNCMesh.html#a6ac4f799ff465c055e47bb6b4d7cd5df">mfem::ParNCMesh</a>
+, <a class="el" href="classmfem_1_1ParNCMesh.html#a8881cbed07da54396b41b87b0bb50810">mfem::ParNCMesh</a>
 </li>
 <li>Rebalanced()
 : <a class="el" href="classmfem_1_1MeshOperator.html#a04113e9f6fffa57229013de24fe44295">mfem::MeshOperator</a>
+</li>
+<li>RebalanceImpl()
+: <a class="el" href="classmfem_1_1ParMesh.html#ac4218963b161bfae267b6ff9c22e1bbc">mfem::ParMesh</a>
 </li>
 <li>RebuildElementToDofTable()
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#a48e90866da8ba86bab3a0a3193e19991">mfem::FiniteElementSpace</a>
@@ -229,10 +262,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>RecoverFEMSolution()
 : <a class="el" href="classmfem_1_1Operator.html#abad756b327262545c350d7280cc22643">mfem::Operator</a>
 , <a class="el" href="classmfem_1_1BilinearForm.html#a66cf7872bc97ad5729cb8b5df5869f68">mfem::BilinearForm</a>
+, <a class="el" href="classmfem_1_1SesquilinearForm.html#a63ea5dd8eb0b011e3221e2be3953523d">mfem::SesquilinearForm</a>
+, <a class="el" href="classmfem_1_1ParSesquilinearForm.html#a001d892ef1e148a73adb299e18582e35">mfem::ParSesquilinearForm</a>
 , <a class="el" href="classmfem_1_1ParBilinearForm.html#a55ea0833e875b6e2062457a882ca2f1a">mfem::ParBilinearForm</a>
 </li>
 <li>Recreate()
 : <a class="el" href="classmfem_1_1IntegerSet.html#a46792e0e26ddc11a27cfed8812ec04fa">mfem::IntegerSet</a>
+</li>
+<li>RectangularConstrainedOperator()
+: <a class="el" href="classmfem_1_1RectangularConstrainedOperator.html#a099439bf8bf7dd0f685f3d113083e917">mfem::RectangularConstrainedOperator</a>
 </li>
 <li>Recv()
 : <a class="el" href="structmfem_1_1VarMessage.html#ace94a1fe96a1ccea5af90fcdb25e8e4a">mfem::VarMessage&lt; Tag &gt;</a>
@@ -258,8 +296,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ReduceBegin()
 : <a class="el" href="classmfem_1_1GroupCommunicator.html#aed9720c614c52a043f1df056e39e375f">mfem::GroupCommunicator</a>
 </li>
+<li>ReduceBeginCopy()
+: <a class="el" href="classmfem_1_1DeviceConformingProlongationOperator.html#a05fa0d11a9f95119ea5ad14388a9b952">mfem::DeviceConformingProlongationOperator</a>
+</li>
 <li>ReduceEnd()
 : <a class="el" href="classmfem_1_1GroupCommunicator.html#a899b20cf07127c58a34065ab0bdd631a">mfem::GroupCommunicator</a>
+</li>
+<li>ReduceEndAssemble()
+: <a class="el" href="classmfem_1_1DeviceConformingProlongationOperator.html#a284647fce17637eb9856b72199f8afd5">mfem::DeviceConformingProlongationOperator</a>
 </li>
 <li>ReduceGroupFromBuffer()
 : <a class="el" href="classmfem_1_1GroupCommunicator.html#aa49b55a40a905c2c7825298831030fee">mfem::GroupCommunicator</a>
@@ -267,6 +311,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ReduceInt()
 : <a class="el" href="classmfem_1_1Mesh.html#aeb8c41461250f20dcc636c1654b51f70">mfem::Mesh</a>
 , <a class="el" href="classmfem_1_1ParMesh.html#a0c087210812532a6cae3a4c82c7271e0">mfem::ParMesh</a>
+</li>
+<li>ReduceLocalCopy()
+: <a class="el" href="classmfem_1_1DeviceConformingProlongationOperator.html#af1223c72f0b0f2e70c20b076c4dd5516">mfem::DeviceConformingProlongationOperator</a>
 </li>
 <li>ReduceMeshGen()
 : <a class="el" href="classmfem_1_1ParMesh.html#a3cee7765b3ce1a6a8f5fe82b69e7166e">mfem::ParMesh</a>
@@ -284,8 +331,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ReduceSystem()
 : <a class="el" href="classmfem_1_1StaticCondensation.html#ab26c53780b2075c02b3700afa6a2e41e">mfem::StaticCondensation</a>
 </li>
-<li>RefElement()
-: <a class="el" href="classmfem_1_1NCMesh.html#a3bc47c88ced598ac3c58e7be1932b49a">mfem::NCMesh</a>
+<li>ReferenceElement()
+: <a class="el" href="classmfem_1_1NCMesh.html#a50d302c196f491e537ba4b90bb8a5757">mfem::NCMesh</a>
 </li>
 <li>Refine()
 : <a class="el" href="classmfem_1_1NCMesh.html#af2de6a703ab8986d06a9269f1d562b76">mfem::NCMesh</a>
@@ -343,6 +390,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>RefinementOperator()
 : <a class="el" href="classmfem_1_1FiniteElementSpace_1_1RefinementOperator.html#a6d68df030215ce71ea28c641e85d0603">mfem::FiniteElementSpace::RefinementOperator</a>
 </li>
+<li>RefPath()
+: <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementSet.html#acf17bc1c60c8e5d1f288fa7684d44d80">mfem::ParNCMesh::ElementSet</a>
+</li>
 <li>Register()
 : <a class="el" href="classmfem_1_1NamedFieldsMap.html#a07ae6d1927fd5774b1a5bfa7a5841de2">mfem::NamedFieldsMap&lt; T &gt;</a>
 </li>
@@ -350,7 +400,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1SidreDataCollection.html#a0a72fa52c8ccaf1d7eb66a1ee4c7354c">mfem::SidreDataCollection</a>
 </li>
 <li>RegisterCheck()
-: <a class="el" href="classmfem_1_1MemoryManager.html#a32f2d0ef907d963ed4c85af4cc933183">mfem::MemoryManager</a>
+: <a class="el" href="classmfem_1_1MemoryManager.html#a2d3dad3bd88ad423f0096b022b761849">mfem::MemoryManager</a>
 </li>
 <li>RegisterElement()
 : <a class="el" href="structmfem_1_1NCMesh_1_1Face.html#a616b9884255409166ce5984241da3059">mfem::NCMesh::Face</a>
@@ -359,9 +409,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1NCMesh.html#ada5cef66827a6ed2955d6897f853328e">mfem::NCMesh</a>
 </li>
 <li>RegisterField()
-: <a class="el" href="classmfem_1_1DataCollection.html#a53e71d4d52f2eb251600fed9872d6f3e">mfem::DataCollection</a>
-, <a class="el" href="classmfem_1_1VisItDataCollection.html#ac81e0e9d3db3b70ac9e6a82b7f9e637e">mfem::VisItDataCollection</a>
+: <a class="el" href="classmfem_1_1VisItDataCollection.html#ac81e0e9d3db3b70ac9e6a82b7f9e637e">mfem::VisItDataCollection</a>
+, <a class="el" href="classmfem_1_1ParaViewDataCollection.html#a57b64ef94a74271b2566c7f10799dde8">mfem::ParaViewDataCollection</a>
 , <a class="el" href="classmfem_1_1SidreDataCollection.html#a62018ee0b4de65d410e3595fda5b1e4d">mfem::SidreDataCollection</a>
+, <a class="el" href="classmfem_1_1DataCollection.html#a53e71d4d52f2eb251600fed9872d6f3e">mfem::DataCollection</a>
 </li>
 <li>RegisterQField()
 : <a class="el" href="classmfem_1_1DataCollection.html#a2fd97ec30d773c45ac0227681de82e4e">mfem::DataCollection</a>
@@ -408,6 +459,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Reparent()
 : <a class="el" href="classmfem_1_1HashTable.html#a4f4dca745d7c7cced286292b1f9bd28d">mfem::HashTable&lt; T &gt;</a>
 </li>
+<li>ReparentNode()
+: <a class="el" href="classmfem_1_1NCMesh.html#a5291a9d4b39abb9378f0106b0c66626c">mfem::NCMesh</a>
+</li>
 <li>Repeat()
 : <a class="el" href="classmfem_1_1MeshOperator.html#a484608a26a5fba1156eab190af890ab3">mfem::MeshOperator</a>
 </li>
@@ -416,20 +470,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a24ee14474bcbfa9e7abafc001d117eac">mfem::ParNCMesh::ElementValueMessage&lt; ValueType, RefTypes, Tag &gt;</a>
 </li>
 <li>Reset()
-: <a class="el" href="classmfem_1_1Hybridization.html#a0909dc3319eec655bb770a8c49b37bf7">mfem::Hybridization</a>
-, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#ae315d4f96cd1da1ea59bcc85fbd60a64">mfem::L2ZienkiewiczZhuEstimator</a>
-, <a class="el" href="classmfem_1_1NURBSFiniteElement.html#a7b978aeabc9505ad3eaff1981dee8b44">mfem::NURBSFiniteElement</a>
+: <a class="el" href="classmfem_1_1NURBSFiniteElement.html#a7b978aeabc9505ad3eaff1981dee8b44">mfem::NURBSFiniteElement</a>
 , <a class="el" href="classmfem_1_1NURBSFECollection.html#ae67b4a80cc52040bd582ec85fec55283">mfem::NURBSFECollection</a>
-, <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a41f824779601ce2f8db2dcca478a450f">mfem::ZienkiewiczZhuEstimator</a>
-, <a class="el" href="classmfem_1_1ThresholdRefiner.html#a7c068f7a9a3b0d456464c9907ba3fe96">mfem::ThresholdRefiner</a>
-, <a class="el" href="classmfem_1_1DenseMatrix.html#acf21ee0f4de4fac3d8ab9c0bf710e719">mfem::DenseMatrix</a>
+, <a class="el" href="classmfem_1_1ErrorEstimator.html#aa860228bbfec89bb2bbe10ff220792cf">mfem::ErrorEstimator</a>
 , <a class="el" href="classmfem_1_1Memory.html#ae0cb658936a2f7ef0033e7144b8f2ded">mfem::Memory&lt; T &gt;</a>
+, <a class="el" href="classmfem_1_1DenseMatrix.html#acf21ee0f4de4fac3d8ab9c0bf710e719">mfem::DenseMatrix</a>
 , <a class="el" href="classmfem_1_1OperatorHandle.html#ab5c65466ab64a9b6a9c1958472c6d7ca">mfem::OperatorHandle</a>
 , <a class="el" href="classmfem_1_1MeshOperator.html#a061d16f98be59e3dab25e77deebbbd49">mfem::MeshOperator</a>
-, <a class="el" href="classmfem_1_1MeshOperatorSequence.html#a4a082a97fa470fe10bf919137351e7e9">mfem::MeshOperatorSequence</a>
+, <a class="el" href="classmfem_1_1ThresholdRefiner.html#a7c068f7a9a3b0d456464c9907ba3fe96">mfem::ThresholdRefiner</a>
 , <a class="el" href="classmfem_1_1ThresholdDerefiner.html#ae69f4f5df04499638e0affb8847c0139">mfem::ThresholdDerefiner</a>
 , <a class="el" href="classmfem_1_1Rebalancer.html#a2eaa7ab07ff82ed8492498794bb91708">mfem::Rebalancer</a>
-, <a class="el" href="classmfem_1_1ErrorEstimator.html#aa860228bbfec89bb2bbe10ff220792cf">mfem::ErrorEstimator</a>
+, <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a41f824779601ce2f8db2dcca478a450f">mfem::ZienkiewiczZhuEstimator</a>
+, <a class="el" href="classmfem_1_1Memory.html#a52ac2ae58da2383aa01e8f812292fe0a">mfem::Memory&lt; T &gt;</a>
+, <a class="el" href="classmfem_1_1Hybridization.html#a0909dc3319eec655bb770a8c49b37bf7">mfem::Hybridization</a>
+, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#ae315d4f96cd1da1ea59bcc85fbd60a64">mfem::L2ZienkiewiczZhuEstimator</a>
+, <a class="el" href="classmfem_1_1MeshOperatorSequence.html#a4a082a97fa470fe10bf919137351e7e9">mfem::MeshOperatorSequence</a>
 </li>
 <li>ResetArray()
 : <a class="el" href="classmfem_1_1PetscParVector.html#ac8c46d640558858db4143866c9229eec">mfem::PetscParVector</a>
@@ -440,13 +495,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ResetError()
 : <a class="el" href="classmfem_1_1DataCollection.html#ad117c9671d330b2ff3be3408327baea5">mfem::DataCollection</a>
 </li>
+<li>ResetLazyData()
+: <a class="el" href="classmfem_1_1Mesh.html#ab29031fb80d570dc4d7847a14cf78f91">mfem::Mesh</a>
+</li>
 <li>ResetTransform()
-: <a class="el" href="classmfem_1_1Tetrahedron.html#ac1c13e0aca8d34dd42990ef741f955d1">mfem::Tetrahedron</a>
+: <a class="el" href="classmfem_1_1Element.html#a1b20cb0f7d55063f674fa18e66c7598b">mfem::Element</a>
+, <a class="el" href="classmfem_1_1Tetrahedron.html#ac1c13e0aca8d34dd42990ef741f955d1">mfem::Tetrahedron</a>
 , <a class="el" href="classmfem_1_1Triangle.html#a48a1a60b87eeaf0beaa62db33496cd5b">mfem::Triangle</a>
-, <a class="el" href="classmfem_1_1Element.html#a1b20cb0f7d55063f674fa18e66c7598b">mfem::Element</a>
 </li>
 <li>ResetTranspose()
 : <a class="el" href="classmfem_1_1SparseMatrix.html#ad21252ff6b8e510527c0772fc5b4ef34">mfem::SparseMatrix</a>
+</li>
+<li>ResidualLogger()
+: <a class="el" href="structmfem_1_1GinkgoWrappers_1_1ResidualLogger.html#a917e7dfed0f23b9b9542bcddd2e45c9a">mfem::GinkgoWrappers::ResidualLogger&lt; ValueType &gt;</a>
 </li>
 <li>Resolution()
 : <a class="el" href="classmfem_1_1StopWatch.html#ac0ed4ef4f7a5a29ae387316bd12669a6">mfem::StopWatch</a>
@@ -455,19 +516,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1RestrictedCoefficient.html#abd88731ef30e506118c9a40369c32b37">mfem::RestrictedCoefficient</a>
 </li>
 <li>result()
-: <a class="el" href="classmfem_1_1Init_3_01Dim_00_01Dim_00_01T_00_01Args_8_8_8_4.html#ab06f2bd53f7a16afc4ade25ae4c61640">mfem::Init&lt; Dim, Dim, T, Args...&gt;</a>
-, <a class="el" href="classmfem_1_1TensorInd.html#a16edcdd90b109c21677acdd3570e7211">mfem::TensorInd&lt; N, Dim, T, Args &gt;</a>
-, <a class="el" href="classmfem_1_1TensorInd_3_01Dim_00_01Dim_00_01T_00_01Args_8_8_8_4.html#a1e4346acd1ae2341bec3924562ea0379">mfem::TensorInd&lt; Dim, Dim, T, Args...&gt;</a>
+: <a class="el" href="classmfem_1_1TensorInd.html#a16edcdd90b109c21677acdd3570e7211">mfem::TensorInd&lt; N, Dim, T, Args &gt;</a>
 , <a class="el" href="classmfem_1_1Init.html#a326a2fab114f1f56195da3b03b749109">mfem::Init&lt; N, Dim, T, Args &gt;</a>
+, <a class="el" href="classmfem_1_1Init_3_01Dim_00_01Dim_00_01T_00_01Args_8_8_8_4.html#ab06f2bd53f7a16afc4ade25ae4c61640">mfem::Init&lt; Dim, Dim, T, Args...&gt;</a>
+, <a class="el" href="classmfem_1_1TensorInd_3_01Dim_00_01Dim_00_01T_00_01Args_8_8_8_4.html#a1e4346acd1ae2341bec3924562ea0379">mfem::TensorInd&lt; Dim, Dim, T, Args...&gt;</a>
 </li>
 <li>RetrieveNode()
 : <a class="el" href="classmfem_1_1NCMesh.html#a81c0a07d265dd9e55590ad9a30a90dbc">mfem::NCMesh</a>
+</li>
+<li>RHS()
+: <a class="el" href="classmfem_1_1CVODESolver.html#af555d58aa125f8975c81d21593440f1c">mfem::CVODESolver</a>
+</li>
+<li>RHS1()
+: <a class="el" href="classmfem_1_1ARKStepSolver.html#add8407447014edc502248e31e674d06a">mfem::ARKStepSolver</a>
+</li>
+<li>RHS2()
+: <a class="el" href="classmfem_1_1ARKStepSolver.html#a4cf01a93241fbca607c91feb744a70a3">mfem::ARKStepSolver</a>
 </li>
 <li>RiemannSolver()
 : <a class="el" href="classRiemannSolver.html#a4218dd57466a7616066b5397cfefa4e1">RiemannSolver</a>
 </li>
 <li>RightScaling()
 : <a class="el" href="classmfem_1_1DenseMatrix.html#a2c9425d6d8325fda1ff17b24705f80c6">mfem::DenseMatrix</a>
+</li>
+<li>RightSolve()
+: <a class="el" href="classmfem_1_1LUFactors.html#abb66317b5e50c464502071342abe5e10">mfem::LUFactors</a>
 </li>
 <li>RK2Solver()
 : <a class="el" href="classmfem_1_1RK2Solver.html#a0f2b9e610af73543cb67544409299e04">mfem::RK2Solver</a>
@@ -484,9 +557,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>RootFileName()
 : <a class="el" href="classmfem_1_1ConduitDataCollection.html#a0dd0d4245e151817dee979c7937b868b">mfem::ConduitDataCollection</a>
 </li>
-<li>Rotate3()
-: <a class="el" href="classmfem_1_1Mesh.html#a3e8f2ffe4dc525a78031287bbf052b64">mfem::Mesh</a>
-</li>
 <li>Rotate3D()
 : <a class="el" href="classmfem_1_1NURBSPatch.html#a7fe0e82270a64ce541c16482d155abf2">mfem::NURBSPatch</a>
 </li>
@@ -500,16 +570,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1DSTable_1_1RowIterator.html#a47cae42c7dda3cf447ab6d751fdaba9d">mfem::DSTable::RowIterator</a>
 </li>
 <li>RowOffsets()
-: <a class="el" href="classmfem_1_1BlockMatrix.html#a8169146400ae81a7814a13d74c8c8678">mfem::BlockMatrix</a>
+: <a class="el" href="classmfem_1_1BlockMatrix.html#a4fb4297e58a6fc4d9a8b7cc70453b6e9">mfem::BlockMatrix</a>
 , <a class="el" href="classmfem_1_1BlockOperator.html#ad7b9f9df3f2e5457a237c936e89e05a9">mfem::BlockOperator</a>
-, <a class="el" href="classmfem_1_1BlockMatrix.html#a4fb4297e58a6fc4d9a8b7cc70453b6e9">mfem::BlockMatrix</a>
 </li>
 <li>RowPart()
-: <a class="el" href="classmfem_1_1HypreParMatrix.html#a486dba96e8be3272a77d5f231ba40405">mfem::HypreParMatrix</a>
+: <a class="el" href="classmfem_1_1HypreParMatrix.html#a2ba82b18eca6205b0c6ac81da40c92d2">mfem::HypreParMatrix</a>
 </li>
 <li>RowSize()
-: <a class="el" href="classmfem_1_1BlockMatrix.html#a630704536df51509e84e653c95ba4e80">mfem::BlockMatrix</a>
-, <a class="el" href="classmfem_1_1Table.html#a7b2a7ca70cafddc5742421c83e97515d">mfem::Table</a>
+: <a class="el" href="classmfem_1_1Table.html#a7b2a7ca70cafddc5742421c83e97515d">mfem::Table</a>
+, <a class="el" href="classmfem_1_1BlockMatrix.html#a630704536df51509e84e653c95ba4e80">mfem::BlockMatrix</a>
 , <a class="el" href="classmfem_1_1SparseMatrix.html#a445868f20dc16e80bbf6e5e27422a24c">mfem::SparseMatrix</a>
 </li>
 <li>RT0_2DFECollection()
@@ -558,13 +627,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1RT__FECollection.html#ae707149ecfb81592c9ad2c6ee31bdfcb">mfem::RT_FECollection</a>
 </li>
 <li>RT_FESpace()
-: <a class="el" href="classmfem_1_1miniapps_1_1RT__FESpace.html#a5c48a87e8b700ba3f22393395ce68cdb">mfem::miniapps::RT_FESpace</a>
+: <a class="el" href="classmfem_1_1common_1_1RT__FESpace.html#a6267062176eb52b9be8652472d956d31">mfem::common::RT_FESpace</a>
 </li>
 <li>RT_HexahedronElement()
 : <a class="el" href="classmfem_1_1RT__HexahedronElement.html#aa88733c45d5e01737ad9a55c5c6023df">mfem::RT_HexahedronElement</a>
 </li>
 <li>RT_ParFESpace()
-: <a class="el" href="classmfem_1_1miniapps_1_1RT__ParFESpace.html#af899867af397a0fadff91273d86d1385">mfem::miniapps::RT_ParFESpace</a>
+: <a class="el" href="classmfem_1_1common_1_1RT__ParFESpace.html#a125d05809140692922db21fb86f55378">mfem::common::RT_ParFESpace</a>
 </li>
 <li>RT_QuadrilateralElement()
 : <a class="el" href="classmfem_1_1RT__QuadrilateralElement.html#af60fd4429bde023b52f2192d0897a632">mfem::RT_QuadrilateralElement</a>
@@ -579,15 +648,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1RT__TriangleElement.html#a64368ca04b4b3d605d2edb63a0c7fea8">mfem::RT_TriangleElement</a>
 </li>
 <li>Run()
-: <a class="el" href="classmfem_1_1SIASolver.html#a024a0d6a0a53ef0bd80507646a06ebe6">mfem::SIASolver</a>
+: <a class="el" href="classmfem_1_1ODESolver.html#a4ec5ef42a722aa08bf5a789a9faba17f">mfem::ODESolver</a>
+, <a class="el" href="classmfem_1_1SIASolver.html#a024a0d6a0a53ef0bd80507646a06ebe6">mfem::SIASolver</a>
 , <a class="el" href="classmfem_1_1PetscODESolver.html#aa0f29ae34ad0dabf3afd88c9aa64b523">mfem::PetscODESolver</a>
-, <a class="el" href="classmfem_1_1ODESolver.html#a4ec5ef42a722aa08bf5a789a9faba17f">mfem::ODESolver</a>
+, <a class="el" href="classmfem_1_1SecondOrderODESolver.html#af59b1b025a2f3d1645320b1de45e1279">mfem::SecondOrderODESolver</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:25 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

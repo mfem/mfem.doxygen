@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classmfem_1_1SundialsSolver-members.html">List of all members</a>  </div>
@@ -106,24 +105,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A base class for the MFEM classes wrapping SUNDIALS' solvers.  
+<p>Base class for interfacing with SUNDIALS packages.  
  <a href="classmfem_1_1SundialsSolver.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for mfem::SundialsSolver:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1SundialsSolver__inherit__graph.svg" width="616" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1SundialsSolver__inherit__graph.svg" width="100%" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9873a87d6ab45f5d3d2249588c09d78a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a9873a87d6ab45f5d3d2249588c09d78a">SundialsMem</a> () const </td></tr>
-<tr class="memdesc:a9873a87d6ab45f5d3d2249588c09d78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the underlying SUNDIALS object.  <a href="#a9873a87d6ab45f5d3d2249588c09d78a">More...</a><br/></td></tr>
-<tr class="separator:a9873a87d6ab45f5d3d2249588c09d78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534364e747dc231b0d262f4ebf229589"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a534364e747dc231b0d262f4ebf229589">GetMem</a> () const </td></tr>
+<tr class="memdesc:a534364e747dc231b0d262f4ebf229589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the SUNDIALS memory structure.  <a href="#a534364e747dc231b0d262f4ebf229589">More...</a><br/></td></tr>
+<tr class="separator:a534364e747dc231b0d262f4ebf229589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8701af5ea28dbea14210fdfba407aa12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a8701af5ea28dbea14210fdfba407aa12">GetFlag</a> () const </td></tr>
-<tr class="memdesc:a8701af5ea28dbea14210fdfba407aa12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the flag returned by the last call to a SUNDIALS function.  <a href="#a8701af5ea28dbea14210fdfba407aa12">More...</a><br/></td></tr>
+<tr class="memdesc:a8701af5ea28dbea14210fdfba407aa12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last flag retured by a call to a SUNDIALS function.  <a href="#a8701af5ea28dbea14210fdfba407aa12">More...</a><br/></td></tr>
 <tr class="separator:a8701af5ea28dbea14210fdfba407aa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -132,42 +131,56 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ae2951f5c399820209622bda247039ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2951f5c399820209622bda247039ab6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#ae2951f5c399820209622bda247039ab6">Parallel</a> () const </td></tr>
 <tr class="separator:ae2951f5c399820209622bda247039ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">The constructors are protected</div></td></tr>
 <tr class="memitem:a7073275424fd5e862c9a99d1c0ab91e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a7073275424fd5e862c9a99d1c0ab91e7">SundialsSolver</a> ()</td></tr>
+<tr class="memdesc:a7073275424fd5e862c9a99d1c0ab91e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected constructor: objects of this type should be constructed only as part of a derived class.  <a href="#a7073275424fd5e862c9a99d1c0ab91e7">More...</a><br/></td></tr>
 <tr class="separator:a7073275424fd5e862c9a99d1c0ab91e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92947d5b714381497fd516245f1247fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a92947d5b714381497fd516245f1247fa">SundialsSolver</a> (void *mem)</td></tr>
-<tr class="separator:a92947d5b714381497fd516245f1247fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8e4bc466c4daeb1fa5f18b26d81f3488"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a8e4bc466c4daeb1fa5f18b26d81f3488">ODEMult</a> (realtype t, const N_Vector <a class="el" href="classmfem_1_1SundialsSolver.html#a16b3bea7b7635e2d5455428efc020937">y</a>, N_Vector ydot, void *td_oper)</td></tr>
-<tr class="memdesc:a8e4bc466c4daeb1fa5f18b26d81f3488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function used in <a class="el" href="classmfem_1_1CVODESolver.html" title="Wrapper for SUNDIALS&#39; CVODE library – Multi-step time integration. ">CVODESolver</a> and <a class="el" href="classmfem_1_1ARKODESolver.html" title="Wrapper for SUNDIALS&#39; ARKODE library – Runge-Kutta time integration. ">ARKODESolver</a>.  <a href="#a8e4bc466c4daeb1fa5f18b26d81f3488">More...</a><br/></td></tr>
-<tr class="separator:a8e4bc466c4daeb1fa5f18b26d81f3488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab0334d59fd3743b45f7c91880cca333f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#ab0334d59fd3743b45f7c91880cca333f">sundials_mem</a></td></tr>
-<tr class="memdesc:ab0334d59fd3743b45f7c91880cca333f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the SUNDIALS mem object.  <a href="#ab0334d59fd3743b45f7c91880cca333f">More...</a><br/></td></tr>
+<tr class="memdesc:ab0334d59fd3743b45f7c91880cca333f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SUNDIALS mem structure.  <a href="#ab0334d59fd3743b45f7c91880cca333f">More...</a><br/></td></tr>
 <tr class="separator:ab0334d59fd3743b45f7c91880cca333f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67cd8b430ba8807d09e8b9acda1c73f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a67cd8b430ba8807d09e8b9acda1c73f1">flag</a></td></tr>
-<tr class="memdesc:a67cd8b430ba8807d09e8b9acda1c73f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag returned by the last call to SUNDIALS.  <a href="#a67cd8b430ba8807d09e8b9acda1c73f1">More...</a><br/></td></tr>
+<tr class="memdesc:a67cd8b430ba8807d09e8b9acda1c73f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last flag returned from a call to SUNDIALS.  <a href="#a67cd8b430ba8807d09e8b9acda1c73f1">More...</a><br/></td></tr>
 <tr class="separator:a67cd8b430ba8807d09e8b9acda1c73f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef73e63ca200734c23c16a5f1ff5c2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a9ef73e63ca200734c23c16a5f1ff5c2e">reinit</a></td></tr>
+<tr class="memdesc:a9ef73e63ca200734c23c16a5f1ff5c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to signal memory reinitialization is need.  <a href="#a9ef73e63ca200734c23c16a5f1ff5c2e">More...</a><br/></td></tr>
+<tr class="separator:a9ef73e63ca200734c23c16a5f1ff5c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de7bb1125a0d304faa1814c4cb1da4b"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a6de7bb1125a0d304faa1814c4cb1da4b">saved_global_size</a></td></tr>
+<tr class="memdesc:a6de7bb1125a0d304faa1814c4cb1da4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global vector length on last initialization.  <a href="#a6de7bb1125a0d304faa1814c4cb1da4b">More...</a><br/></td></tr>
+<tr class="separator:a6de7bb1125a0d304faa1814c4cb1da4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b3bea7b7635e2d5455428efc020937"><td class="memItemLeft" align="right" valign="top">N_Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a16b3bea7b7635e2d5455428efc020937">y</a></td></tr>
-<tr class="memdesc:a16b3bea7b7635e2d5455428efc020937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary N_Vector.  <a href="#a16b3bea7b7635e2d5455428efc020937">More...</a><br/></td></tr>
+<tr class="memdesc:a16b3bea7b7635e2d5455428efc020937"><td class="mdescLeft">&#160;</td><td class="mdescRight">State vector.  <a href="#a16b3bea7b7635e2d5455428efc020937">More...</a><br/></td></tr>
 <tr class="separator:a16b3bea7b7635e2d5455428efc020937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20124c4a77a539eeb6b23c6138c9d6bd"><td class="memItemLeft" align="right" valign="top">SUNMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a20124c4a77a539eeb6b23c6138c9d6bd">A</a></td></tr>
+<tr class="memdesc:a20124c4a77a539eeb6b23c6138c9d6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear system A = I - gamma J, M - gamma J, or J.  <a href="#a20124c4a77a539eeb6b23c6138c9d6bd">More...</a><br/></td></tr>
+<tr class="separator:a20124c4a77a539eeb6b23c6138c9d6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301ab3aa79a6f35dce8d41e3bc01d047"><td class="memItemLeft" align="right" valign="top">SUNMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a301ab3aa79a6f35dce8d41e3bc01d047">M</a></td></tr>
+<tr class="memdesc:a301ab3aa79a6f35dce8d41e3bc01d047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass matrix M.  <a href="#a301ab3aa79a6f35dce8d41e3bc01d047">More...</a><br/></td></tr>
+<tr class="separator:a301ab3aa79a6f35dce8d41e3bc01d047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6342dd250eb1134c632ee23c401375e"><td class="memItemLeft" align="right" valign="top">SUNLinearSolver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#ad6342dd250eb1134c632ee23c401375e">LSA</a></td></tr>
+<tr class="memdesc:ad6342dd250eb1134c632ee23c401375e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear solver for A.  <a href="#ad6342dd250eb1134c632ee23c401375e">More...</a><br/></td></tr>
+<tr class="separator:ad6342dd250eb1134c632ee23c401375e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4ca198c7628da222ff0b31853e8342"><td class="memItemLeft" align="right" valign="top">SUNLinearSolver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#aeb4ca198c7628da222ff0b31853e8342">LSM</a></td></tr>
+<tr class="memdesc:aeb4ca198c7628da222ff0b31853e8342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear solver for M.  <a href="#aeb4ca198c7628da222ff0b31853e8342">More...</a><br/></td></tr>
+<tr class="separator:aeb4ca198c7628da222ff0b31853e8342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e8169e7cdf49ad4816215e9e7dc262"><td class="memItemLeft" align="right" valign="top">SUNNonlinearSolver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#af7e8169e7cdf49ad4816215e9e7dc262">NLS</a></td></tr>
+<tr class="memdesc:af7e8169e7cdf49ad4816215e9e7dc262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nonlinear solver.  <a href="#af7e8169e7cdf49ad4816215e9e7dc262">More...</a><br/></td></tr>
+<tr class="separator:af7e8169e7cdf49ad4816215e9e7dc262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a679ec985a97dc6b5b62ca1207ed9ded9"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a679ec985a97dc6b5b62ca1207ed9ded9">default_rel_tol</a> = 1e-4</td></tr>
-<tr class="separator:a679ec985a97dc6b5b62ca1207ed9ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b194f92671b004eb107223066289e27"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a6b194f92671b004eb107223066289e27">default_abs_tol</a> = 1e-9</td></tr>
-<tr class="separator:a6b194f92671b004eb107223066289e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79856392dab9ed2cafbb353fdcac9672"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a79856392dab9ed2cafbb353fdcac9672">default_rel_tol</a> = 1e-4</td></tr>
+<tr class="memdesc:a79856392dab9ed2cafbb353fdcac9672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default scalar relative tolerance.  <a href="#a79856392dab9ed2cafbb353fdcac9672">More...</a><br/></td></tr>
+<tr class="separator:a79856392dab9ed2cafbb353fdcac9672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270ce0efa61c585c3a4d523047cc6c00"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SundialsSolver.html#a270ce0efa61c585c3a4d523047cc6c00">default_abs_tol</a> = 1e-9</td></tr>
+<tr class="memdesc:a270ce0efa61c585c3a4d523047cc6c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default scalar absolute tolerance.  <a href="#a270ce0efa61c585c3a4d523047cc6c00">More...</a><br/></td></tr>
+<tr class="separator:a270ce0efa61c585c3a4d523047cc6c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A base class for the MFEM classes wrapping SUNDIALS' solvers. </p>
-<p>This class defines some common data and functions used by the SUNDIALS solvers, e.g the common <em><a class="el" href="classmfem_1_1SundialsSolver.html#ab0334d59fd3743b45f7c91880cca333f" title="Pointer to the SUNDIALS mem object. ">sundials_mem</a></em> pointer and return <em><a class="el" href="classmfem_1_1SundialsSolver.html#a67cd8b430ba8807d09e8b9acda1c73f1" title="Flag returned by the last call to SUNDIALS. ">flag</a></em>. </p>
+<div class="textblock"><p>Base class for interfacing with SUNDIALS packages. </p>
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00087">87</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00045">45</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7073275424fd5e862c9a99d1c0ab91e7"></a>
 <div class="memitem">
@@ -190,33 +203,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00111">111</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Protected constructor: objects of this type should be constructed only as part of a derived class. </p>
 
-</div>
-</div>
-<a class="anchor" id="a92947d5b714381497fd516245f1247fa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">mfem::SundialsSolver::SundialsSolver </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>mem</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00112">112</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00074">74</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
@@ -242,13 +231,13 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the flag returned by the last call to a SUNDIALS function. </p>
+<p>Returns the last flag retured by a call to a SUNDIALS function. </p>
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00120">120</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00083">83</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8e4bc466c4daeb1fa5f18b26d81f3488"></a>
+<a class="anchor" id="a534364e747dc231b0d262f4ebf229589"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -256,107 +245,7 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mfem::SundialsSolver::ODEMult </td>
-          <td>(</td>
-          <td class="paramtype">realtype&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const N_Vector&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">N_Vector&#160;</td>
-          <td class="paramname"><em>ydot</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>td_oper</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Callback function used in <a class="el" href="classmfem_1_1CVODESolver.html" title="Wrapper for SUNDIALS&#39; CVODE library – Multi-step time integration. ">CVODESolver</a> and <a class="el" href="classmfem_1_1ARKODESolver.html" title="Wrapper for SUNDIALS&#39; ARKODE library – Runge-Kutta time integration. ">ARKODESolver</a>. </p>
-
-<p>Definition at line <a class="el" href="sundials_8cpp_source.html#l00157">157</a> of file <a class="el" href="sundials_8cpp_source.html">sundials.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae2951f5c399820209622bda247039ab6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::SundialsSolver::Parallel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00095">95</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae2951f5c399820209622bda247039ab6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::SundialsSolver::Parallel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00098">98</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9873a87d6ab45f5d3d2249588c09d78a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* mfem::SundialsSolver::SundialsMem </td>
+          <td class="memname">void* mfem::SundialsSolver::GetMem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -369,14 +258,64 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Access the underlying SUNDIALS object. </p>
+<p>Access the SUNDIALS memory structure. </p>
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00117">117</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00080">80</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2951f5c399820209622bda247039ab6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::SundialsSolver::Parallel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00061">61</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2951f5c399820209622bda247039ab6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::SundialsSolver::Parallel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00064">64</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a6b194f92671b004eb107223066289e27"></a>
+<a class="anchor" id="a20124c4a77a539eeb6b23c6138c9d6bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -384,7 +323,31 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double mfem::SundialsSolver::default_abs_tol = 1e-9</td>
+          <td class="memname">SUNMatrix mfem::SundialsSolver::A</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linear system A = I - gamma J, M - gamma J, or J. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00054">54</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a270ce0efa61c585c3a4d523047cc6c00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double mfem::SundialsSolver::default_abs_tol = 1e-9</td>
         </tr>
       </table>
   </td>
@@ -394,11 +357,13 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00102">102</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Default scalar absolute tolerance. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00070">70</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a679ec985a97dc6b5b62ca1207ed9ded9"></a>
+<a class="anchor" id="a79856392dab9ed2cafbb353fdcac9672"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -406,7 +371,7 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double mfem::SundialsSolver::default_rel_tol = 1e-4</td>
+          <td class="memname">constexpr double mfem::SundialsSolver::default_rel_tol = 1e-4</td>
         </tr>
       </table>
   </td>
@@ -416,7 +381,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00101">101</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Default scalar relative tolerance. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00068">68</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
@@ -438,9 +405,153 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Flag returned by the last call to SUNDIALS. </p>
+<p>Last flag returned from a call to SUNDIALS. </p>
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00091">91</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00049">49</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6342dd250eb1134c632ee23c401375e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUNLinearSolver mfem::SundialsSolver::LSA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linear solver for A. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00056">56</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb4ca198c7628da222ff0b31853e8342"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUNLinearSolver mfem::SundialsSolver::LSM</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linear solver for M. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00057">57</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a301ab3aa79a6f35dce8d41e3bc01d047"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUNMatrix mfem::SundialsSolver::M</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mass matrix M. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00055">55</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7e8169e7cdf49ad4816215e9e7dc262"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SUNNonlinearSolver mfem::SundialsSolver::NLS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nonlinear solver. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00058">58</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ef73e63ca200734c23c16a5f1ff5c2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::SundialsSolver::reinit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to signal memory reinitialization is need. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00050">50</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6de7bb1125a0d304faa1814c4cb1da4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long mfem::SundialsSolver::saved_global_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Global vector length on last initialization. </p>
+
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00051">51</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
@@ -462,9 +573,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to the SUNDIALS mem object. </p>
+<p>SUNDIALS mem structure. </p>
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00090">90</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00048">48</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
@@ -486,20 +597,19 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Auxiliary N_Vector. </p>
+<p>State vector. </p>
 
-<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00093">93</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sundials_8hpp_source.html#l00053">53</a> of file <a class="el" href="sundials_8hpp_source.html">sundials.hpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>linalg/<a class="el" href="sundials_8hpp_source.html">sundials.hpp</a></li>
-<li>linalg/<a class="el" href="sundials_8cpp_source.html">sundials.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

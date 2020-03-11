@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
@@ -110,14 +111,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes.  
+<p>A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular meshes.  
  <a href="classmfem_1_1NCMesh.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for mfem::NCMesh:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1NCMesh__inherit__graph.svg" width="190" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1NCMesh__inherit__graph.svg" width="208" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -138,7 +139,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1NCMesh_1_1Master.html">Master</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies a vertex/edge/face in both <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> and <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a>.  <a href="structmfem_1_1NCMesh_1_1MeshId.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies a vertex/edge/face in both <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> and <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a>.  <a href="structmfem_1_1NCMesh_1_1MeshId.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1NCMesh_1_1NCList.html">NCList</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists all edges/faces in the nonconforming mesh.  <a href="structmfem_1_1NCMesh_1_1NCList.html#details">More...</a><br/></td></tr>
@@ -154,6 +155,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1NCMesh_1_1TmpVertex.html">TmpVertex</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9803d9f8c7027d9f7d691f85f5e2ba4f"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a9803d9f8c7027d9f7d691f85f5e2ba4f">RefCoord</a></td></tr>
+<tr class="separator:a9803d9f8c7027d9f7d691f85f5e2ba4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -208,21 +214,29 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a47928516e152d376a46fb5fb141b2e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9ee69c2b18d6a2f964aa74d27c053d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aa9ee69c2b18d6a2f964aa74d27c053d5">GetEdgeNCOrientation</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a> &amp;edge_id) const </td></tr>
 <tr class="separator:aa9ee69c2b18d6a2f964aa74d27c053d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d555daa132bc2b402b5fe37609c1f4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a5d555daa132bc2b402b5fe37609c1f4c">GetFaceVerticesEdges</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a> &amp;face_id, int vert_index[4], int edge_index[4], int edge_orientation[4]) const </td></tr>
-<tr class="memdesc:a5d555daa132bc2b402b5fe37609c1f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> vertex and edge indices of a face identified by 'face_id'.  <a href="#a5d555daa132bc2b402b5fe37609c1f4c">More...</a><br/></td></tr>
-<tr class="separator:a5d555daa132bc2b402b5fe37609c1f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae878ee91f13a301143d30ae16b8739af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae878ee91f13a301143d30ae16b8739af">GetFaceVerticesEdges</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a> &amp;face_id, int vert_index[4], int edge_index[4], int edge_orientation[4]) const </td></tr>
+<tr class="separator:ae878ee91f13a301143d30ae16b8739af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122c33a1fe4949e8b77de98afe107971"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a122c33a1fe4949e8b77de98afe107971">GetEdgeMaster</a> (int v1, int v2) const </td></tr>
 <tr class="separator:a122c33a1fe4949e8b77de98afe107971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a196539a6ae81741e71e6095bea6d4aef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a196539a6ae81741e71e6095bea6d4aef">GetBoundaryClosure</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;bdr_attr_is_ess, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;bdr_vertices, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;bdr_edges)</td></tr>
 <tr class="separator:a196539a6ae81741e71e6095bea6d4aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1ad27a0956e38b9662570f9ca9d741"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a8b1ad27a0956e38b9662570f9ca9d741">GetElementGeometry</a> () const </td></tr>
-<tr class="memdesc:a8b1ad27a0956e38b9662570f9ca9d741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type of elements in the mesh.  <a href="#a8b1ad27a0956e38b9662570f9ca9d741">More...</a><br/></td></tr>
-<tr class="separator:a8b1ad27a0956e38b9662570f9ca9d741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf8d6e4a2cd4a488e11f6305aefde50f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#adf8d6e4a2cd4a488e11f6305aefde50f">GetFaceGeometry</a> () const </td></tr>
-<tr class="separator:adf8d6e4a2cd4a488e11f6305aefde50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213e9b35265fa46a2f22d13c898ed10d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a213e9b35265fa46a2f22d13c898ed10d">GetElementGeometry</a> (int <a class="el" href="life_8cpp.html#a3b0ebfb1ea55d7ef281731142fe7e93d">index</a>) const </td></tr>
+<tr class="memdesc:a213e9b35265fa46a2f22d13c898ed10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return element geometry type. <em>index</em> is the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> element number.  <a href="#a213e9b35265fa46a2f22d13c898ed10d">More...</a><br/></td></tr>
+<tr class="separator:a213e9b35265fa46a2f22d13c898ed10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411282d7358be62afa0a73f003d6ab02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a411282d7358be62afa0a73f003d6ab02">GetFaceGeometry</a> (int <a class="el" href="life_8cpp.html#a3b0ebfb1ea55d7ef281731142fe7e93d">index</a>) const </td></tr>
+<tr class="memdesc:a411282d7358be62afa0a73f003d6ab02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return face geometry type. <em>index</em> is the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> face number.  <a href="#a411282d7358be62afa0a73f003d6ab02">More...</a><br/></td></tr>
+<tr class="separator:a411282d7358be62afa0a73f003d6ab02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b183105d2efd298ae86d3ab3890014"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a81b183105d2efd298ae86d3ab3890014">GetNumRootElements</a> ()</td></tr>
+<tr class="memdesc:a81b183105d2efd298ae86d3ab3890014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of root elements.  <a href="#a81b183105d2efd298ae86d3ab3890014">More...</a><br/></td></tr>
+<tr class="separator:a81b183105d2efd298ae86d3ab3890014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279712688518fa4be7f6d76ea0be34ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a279712688518fa4be7f6d76ea0be34ee">GetElementDepth</a> (int i) const </td></tr>
 <tr class="memdesc:a279712688518fa4be7f6d76ea0be34ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the distance of leaf 'i' from the root.  <a href="#a279712688518fa4be7f6d76ea0be34ee">More...</a><br/></td></tr>
 <tr class="separator:a279712688518fa4be7f6d76ea0be34ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de836759b06734cdf6129ecd5fc9560"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a2de836759b06734cdf6129ecd5fc9560">GetElementSizeReduction</a> (int i) const </td></tr>
+<tr class="separator:a2de836759b06734cdf6129ecd5fc9560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b287a7b416c142047f12c114c71f04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a71b287a7b416c142047f12c114c71f04">GetElementFacesAttributes</a> (int i, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;<a class="el" href="classmfem_1_1NCMesh.html#a450ca38b2c425eef740b2c0730c8e3d5">faces</a>, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;fattr) const </td></tr>
+<tr class="memdesc:a71b287a7b416c142047f12c114c71f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the faces and face attributes of leaf element 'i'.  <a href="#a71b287a7b416c142047f12c114c71f04">More...</a><br/></td></tr>
+<tr class="separator:a71b287a7b416c142047f12c114c71f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72869feda95885f216153f15cc3fcfa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a72869feda95885f216153f15cc3fcfa0">PrintVertexParents</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
 <tr class="memdesc:a72869feda95885f216153f15cc3fcfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">I/O: Print the "vertex_parents" section of the mesh file (ver. &gt;= 1.1).  <a href="#a72869feda95885f216153f15cc3fcfa0">More...</a><br/></td></tr>
 <tr class="separator:a72869feda95885f216153f15cc3fcfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,9 +294,9 @@ int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac462a50f410acabd1973350f41091e91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ac462a50f410acabd1973350f41091e91">GetMeshComponents</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Vertex.html">mfem::Vertex</a> &gt; &amp;mvertices, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">mfem::Element</a> * &gt; &amp;melements, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">mfem::Element</a> * &gt; &amp;mboundary) const </td></tr>
-<tr class="memdesc:ac462a50f410acabd1973350f41091e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the basic <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> arrays for the current finest level.  <a href="#ac462a50f410acabd1973350f41091e91">More...</a><br/></td></tr>
-<tr class="separator:ac462a50f410acabd1973350f41091e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1030878adb5665d5587fd235aa8047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a7c1030878adb5665d5587fd235aa8047">GetMeshComponents</a> (<a class="el" href="classmfem_1_1Mesh.html">Mesh</a> &amp;mesh) const </td></tr>
+<tr class="memdesc:a7c1030878adb5665d5587fd235aa8047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>::{vertices,elements,boundary} for the current finest level.  <a href="#a7c1030878adb5665d5587fd235aa8047">More...</a><br/></td></tr>
+<tr class="separator:a7c1030878adb5665d5587fd235aa8047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0333c5d35901cd957d7fb56df0801b1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a0333c5d35901cd957d7fb56df0801b1c">OnMeshUpdated</a> (<a class="el" href="classmfem_1_1Mesh.html">Mesh</a> *mesh)</td></tr>
 <tr class="separator:a0333c5d35901cd957d7fb56df0801b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a083effe1fd091d5058a4dac371738ece"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a083effe1fd091d5058a4dac371738ece">Update</a> ()</td></tr>
@@ -304,6 +318,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a99866202164a4896d193bda383e3427d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8a721da76292361ab8781e292e0a87b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ac8a721da76292361ab8781e292e0a87b">GetNumGhostVertices</a> () const </td></tr>
 <tr class="separator:ac8a721da76292361ab8781e292e0a87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4dfc79d23b8ae298504f35e8dfdcdf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae4dfc79d23b8ae298504f35e8dfdcdf2">InitGeomFlags</a> ()</td></tr>
+<tr class="separator:ae4dfc79d23b8ae298504f35e8dfdcdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fb3d0a6bb5a292fb5bcae8c116f0bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae6fb3d0a6bb5a292fb5bcae8c116f0bf">HavePrisms</a> () const </td></tr>
+<tr class="separator:ae6fb3d0a6bb5a292fb5bcae8c116f0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4e5cacfd78818b55d0c86a1b30523a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a4c4e5cacfd78818b55d0c86a1b30523a">HaveTets</a> () const </td></tr>
+<tr class="separator:a4c4e5cacfd78818b55d0c86a1b30523a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f84e1390b55bdcaed1cd413c20f72c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a8f84e1390b55bdcaed1cd413c20f72c8">RefineElement</a> (int elem, char ref_type)</td></tr>
 <tr class="separator:a8f84e1390b55bdcaed1cd413c20f72c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af134176d2bc3db50d4d3ee610ccd7bd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#af134176d2bc3db50d4d3ee610ccd7bd6">DerefineElement</a> (int elem)</td></tr>
@@ -314,60 +334,64 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a098aa084b66fd0f4fdf30e25ff522645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a427bb64e4c1d76b656a035346c45050f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a427bb64e4c1d76b656a035346c45050f">NewHexahedron</a> (int n0, int n1, int n2, int n3, int n4, int n5, int n6, int n7, int attr, int fattr0, int fattr1, int fattr2, int fattr3, int fattr4, int fattr5)</td></tr>
 <tr class="separator:a427bb64e4c1d76b656a035346c45050f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73461fb1107b4ba0fe2d91fbaf02296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ab73461fb1107b4ba0fe2d91fbaf02296">NewWedge</a> (int n0, int n1, int n2, int n3, int n4, int n5, int attr, int fattr0, int fattr1, int fattr2, int fattr3, int fattr4)</td></tr>
+<tr class="separator:ab73461fb1107b4ba0fe2d91fbaf02296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ffc4d29ef367e1e3f7139e6da470b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae5ffc4d29ef367e1e3f7139e6da470b6">NewTetrahedron</a> (int n0, int n1, int n2, int n3, int attr, int fattr0, int fattr1, int fattr2, int fattr3)</td></tr>
+<tr class="separator:ae5ffc4d29ef367e1e3f7139e6da470b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a925302b78a99b9e693ff78e6e14c4548"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a925302b78a99b9e693ff78e6e14c4548">NewQuadrilateral</a> (int n0, int n1, int n2, int n3, int attr, int eattr0, int eattr1, int eattr2, int eattr3)</td></tr>
 <tr class="separator:a925302b78a99b9e693ff78e6e14c4548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb3951ad14d95e07d00a8ee8b6edefc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a1fb3951ad14d95e07d00a8ee8b6edefc">NewTriangle</a> (int n0, int n1, int n2, int attr, int eattr0, int eattr1, int eattr2)</td></tr>
 <tr class="separator:a1fb3951ad14d95e07d00a8ee8b6edefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed9aab2bb38bacecad378bc472268c5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Element.html">mfem::Element</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aed9aab2bb38bacecad378bc472268c5c">NewMeshElement</a> (int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>) const </td></tr>
 <tr class="separator:aed9aab2bb38bacecad378bc472268c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc9ccd722aeda52a055d2d1fd36988f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#adc9ccd722aeda52a055d2d1fd36988f7">GetMidEdgeNode</a> (int vn1, int vn2)</td></tr>
-<tr class="separator:adc9ccd722aeda52a055d2d1fd36988f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa2863ef4f316b85199ced26a6d22d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aefa2863ef4f316b85199ced26a6d22d5">GetMidFaceNode</a> (int en1, int en2, int en3, int en4)</td></tr>
-<tr class="separator:aefa2863ef4f316b85199ced26a6d22d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae727f9b69d6e271561de83ace1b2afd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae727f9b69d6e271561de83ace1b2afd7">FaceSplitType</a> (int v1, int v2, int v3, int v4, int mid[4]=NULL) const </td></tr>
-<tr class="separator:ae727f9b69d6e271561de83ace1b2afd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9a87d8e4733fb563b16443963e580e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aed9a87d8e4733fb563b16443963e580e">QuadFaceSplitType</a> (int v1, int v2, int v3, int v4, int mid[5]=NULL) const </td></tr>
+<tr class="separator:aed9a87d8e4733fb563b16443963e580e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84ca7ecad973da2a711fd786d73a23e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ac84ca7ecad973da2a711fd786d73a23e">TriFaceSplit</a> (int v1, int v2, int v3, int mid[3]=NULL) const </td></tr>
+<tr class="separator:ac84ca7ecad973da2a711fd786d73a23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93a9e86595e6b4d6ad5b08d3841cbc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a93a9e86595e6b4d6ad5b08d3841cbc98">ForceRefinement</a> (int vn1, int vn2, int vn3, int vn4)</td></tr>
 <tr class="separator:a93a9e86595e6b4d6ad5b08d3841cbc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db73bae7fda9aef6dd839dd237e21f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a6db73bae7fda9aef6dd839dd237e21f3">FindEdgeElements</a> (int vn1, int vn2, int vn3, int vn4, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a> &gt; &amp;prisms) const </td></tr>
+<tr class="separator:a6db73bae7fda9aef6dd839dd237e21f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d2470bbec7b28dd9bdb1a7eba1c6eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a63d2470bbec7b28dd9bdb1a7eba1c6eb">CheckAnisoPrism</a> (int vn1, int vn2, int vn3, int vn4, const <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> *refs, int nref)</td></tr>
+<tr class="separator:a63d2470bbec7b28dd9bdb1a7eba1c6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5adb92a136c093ae22469a8c0f2d400"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ab5adb92a136c093ae22469a8c0f2d400">CheckAnisoFace</a> (int vn1, int vn2, int vn3, int vn4, int mid12, int mid34, int level=0)</td></tr>
 <tr class="separator:ab5adb92a136c093ae22469a8c0f2d400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa651ccc00f3d44ef5680c1d1db1b280b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aa651ccc00f3d44ef5680c1d1db1b280b">CheckIsoFace</a> (int vn1, int vn2, int vn3, int vn4, int en1, int en2, int en3, int en4, int midf)</td></tr>
 <tr class="separator:aa651ccc00f3d44ef5680c1d1db1b280b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc47c88ced598ac3c58e7be1932b49a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a3bc47c88ced598ac3c58e7be1932b49a">RefElement</a> (int elem)</td></tr>
-<tr class="separator:a3bc47c88ced598ac3c58e7be1932b49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c5d319596c7ff13715dc0a18a299d9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a1c5d319596c7ff13715dc0a18a299d9b">UnrefElement</a> (int elem, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elemFaces)</td></tr>
-<tr class="separator:a1c5d319596c7ff13715dc0a18a299d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5291a9d4b39abb9378f0106b0c66626c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a5291a9d4b39abb9378f0106b0c66626c">ReparentNode</a> (int node, int new_p1, int new_p2)</td></tr>
+<tr class="separator:a5291a9d4b39abb9378f0106b0c66626c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab108aa25e61b80452bd70aa4181b329a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ab108aa25e61b80452bd70aa4181b329a">FindMidEdgeNode</a> (int node1, int node2) const </td></tr>
+<tr class="separator:ab108aa25e61b80452bd70aa4181b329a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c277d1137fc02fc9026f582048f18b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a9c277d1137fc02fc9026f582048f18b2">GetMidEdgeNode</a> (int node1, int node2)</td></tr>
+<tr class="separator:a9c277d1137fc02fc9026f582048f18b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa2863ef4f316b85199ced26a6d22d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aefa2863ef4f316b85199ced26a6d22d5">GetMidFaceNode</a> (int en1, int en2, int en3, int en4)</td></tr>
+<tr class="separator:aefa2863ef4f316b85199ced26a6d22d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50d302c196f491e537ba4b90bb8a5757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a50d302c196f491e537ba4b90bb8a5757">ReferenceElement</a> (int elem)</td></tr>
+<tr class="separator:a50d302c196f491e537ba4b90bb8a5757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15b9629acb977820834b2d18e82887c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ad15b9629acb977820834b2d18e82887c">UnreferenceElement</a> (int elem, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elemFaces)</td></tr>
+<tr class="separator:ad15b9629acb977820834b2d18e82887c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba5477e5a86ff703ae1ccdad4728081f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmfem_1_1NCMesh_1_1Face.html">Face</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aba5477e5a86ff703ae1ccdad4728081f">GetFace</a> (<a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;elem, int face_no)</td></tr>
 <tr class="separator:aba5477e5a86ff703ae1ccdad4728081f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5cef66827a6ed2955d6897f853328e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ada5cef66827a6ed2955d6897f853328e">RegisterFaces</a> (int elem, int *fattr=NULL)</td></tr>
 <tr class="separator:ada5cef66827a6ed2955d6897f853328e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a312b400d5c21f539cbec01f81e4ba813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a312b400d5c21f539cbec01f81e4ba813">DeleteUnusedFaces</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elemFaces)</td></tr>
 <tr class="separator:a312b400d5c21f539cbec01f81e4ba813"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7924b6807984e8761fab8c700a8fb62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aa7924b6807984e8761fab8c700a8fb62">FindAltParents</a> (int node1, int node2)</td></tr>
-<tr class="separator:aa7924b6807984e8761fab8c700a8fb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff5c16b5a93e373b3a0f8fb8b2489c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a6ff5c16b5a93e373b3a0f8fb8b2489c3">NodeSetX1</a> (int node, int *n)</td></tr>
-<tr class="separator:a6ff5c16b5a93e373b3a0f8fb8b2489c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1b280b07033c2a0d46524d781a5ef38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae1b280b07033c2a0d46524d781a5ef38">NodeSetX2</a> (int node, int *n)</td></tr>
-<tr class="separator:ae1b280b07033c2a0d46524d781a5ef38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7f2eb8e8262e11c9d0edd6381eca742"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aa7f2eb8e8262e11c9d0edd6381eca742">NodeSetY1</a> (int node, int *n)</td></tr>
-<tr class="separator:aa7f2eb8e8262e11c9d0edd6381eca742"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c77c8ec59ce3b95e2e6c445bbab224"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ac2c77c8ec59ce3b95e2e6c445bbab224">NodeSetY2</a> (int node, int *n)</td></tr>
-<tr class="separator:ac2c77c8ec59ce3b95e2e6c445bbab224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54bbd9de088e2ad29f009e91b212c839"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a54bbd9de088e2ad29f009e91b212c839">NodeSetZ1</a> (int node, int *n)</td></tr>
-<tr class="separator:a54bbd9de088e2ad29f009e91b212c839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1387442dfe749bebad65a0752954d241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a1387442dfe749bebad65a0752954d241">NodeSetZ2</a> (int node, int *n)</td></tr>
-<tr class="separator:a1387442dfe749bebad65a0752954d241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ab8b2b634477c27d33094bb19e10ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a8ab8b2b634477c27d33094bb19e10ffd">CollectDerefinements</a> (int elem, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="structmfem_1_1Connection.html">Connection</a> &gt; &amp;list)</td></tr>
 <tr class="separator:a8ab8b2b634477c27d33094bb19e10ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c0a07d265dd9e55590ad9a30a90dbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a81c0a07d265dd9e55590ad9a30a90dbc">RetrieveNode</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int index)</td></tr>
+<tr class="memitem:a81c0a07d265dd9e55590ad9a30a90dbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a81c0a07d265dd9e55590ad9a30a90dbc">RetrieveNode</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int <a class="el" href="life_8cpp.html#a3b0ebfb1ea55d7ef281731142fe7e93d">index</a>)</td></tr>
 <tr class="memdesc:a81c0a07d265dd9e55590ad9a30a90dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return el.node[index] correctly, even if the element is refined.  <a href="#a81c0a07d265dd9e55590ad9a30a90dbc">More...</a><br/></td></tr>
 <tr class="separator:a81c0a07d265dd9e55590ad9a30a90dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee9fab9b9c2c1e73c2e3596114c4a6d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a3ee9fab9b9c2c1e73c2e3596114c4a6d">FindNodeExt</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int node, bool abort=false)</td></tr>
-<tr class="memdesc:a3ee9fab9b9c2c1e73c2e3596114c4a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended version of find_node: works if 'el' is refined; optional abort.  <a href="#a3ee9fab9b9c2c1e73c2e3596114c4a6d">More...</a><br/></td></tr>
-<tr class="separator:a3ee9fab9b9c2c1e73c2e3596114c4a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59357a4af171acdb72039db96e5de76f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a59357a4af171acdb72039db96e5de76f">FindNodeExt</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int node, bool abort=true)</td></tr>
+<tr class="memdesc:a59357a4af171acdb72039db96e5de76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended version of find_node: works if 'el' is refined.  <a href="#a59357a4af171acdb72039db96e5de76f">More...</a><br/></td></tr>
+<tr class="separator:a59357a4af171acdb72039db96e5de76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a4ec0a951332753137a5b5b6b745aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a39a4ec0a951332753137a5b5b6b745aa">ReorderFacePointMat</a> (int v0, int v1, int v2, int v3, int elem, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;mat) const </td></tr>
 <tr class="separator:a39a4ec0a951332753137a5b5b6b745aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b4186dd5d0398574a15b3d12265282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a06b4186dd5d0398574a15b3d12265282">TraverseFace</a> (int vn0, int vn1, int vn2, int vn3, const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a> &amp;pm, int level)</td></tr>
-<tr class="separator:a06b4186dd5d0398574a15b3d12265282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea513065f28f9f2c54efaf83533f83b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aea513065f28f9f2c54efaf83533f83b8">TraverseQuadFace</a> (int vn0, int vn1, int vn2, int vn3, const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a> &amp;pm, int level, <a class="el" href="structmfem_1_1NCMesh_1_1Face.html">Face</a> *eface[4])</td></tr>
+<tr class="separator:aea513065f28f9f2c54efaf83533f83b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d4ac5d2b80b469be47ed9d982e221a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae2d4ac5d2b80b469be47ed9d982e221a">TraverseTriFace</a> (int vn0, int vn1, int vn2, const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a> &amp;pm, int level)</td></tr>
+<tr class="separator:ae2d4ac5d2b80b469be47ed9d982e221a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae4e5f9382fdc8beb40e97cedfcc286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a0ae4e5f9382fdc8beb40e97cedfcc286">TraverseTetEdge</a> (int vn0, int vn1, const <a class="el" href="structmfem_1_1NCMesh_1_1Point.html">Point</a> &amp;p0, const <a class="el" href="structmfem_1_1NCMesh_1_1Point.html">Point</a> &amp;p1)</td></tr>
+<tr class="separator:a0ae4e5f9382fdc8beb40e97cedfcc286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e70df882689c55e19fa9b7de5982363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a2e70df882689c55e19fa9b7de5982363">TraverseEdge</a> (int vn0, int vn1, double t0, double t1, int flags, int level)</td></tr>
 <tr class="separator:a2e70df882689c55e19fa9b7de5982363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63bb269853d5f9aa5312d2629f25d0c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a63bb269853d5f9aa5312d2629f25d0c4">BuildFaceList</a> ()</td></tr>
@@ -390,14 +414,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a288fdd4bddc6764be0d569288049f567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93aaf370deffa738b2913c698787b74c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a93aaf370deffa738b2913c698787b74c">CollectEdgeVertices</a> (int v0, int v1, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;indices)</td></tr>
 <tr class="separator:a93aaf370deffa738b2913c698787b74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92d4a89702140215b024c9a20193c57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#af92d4a89702140215b024c9a20193c57">CollectFaceVertices</a> (int v0, int v1, int v2, int v3, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;indices)</td></tr>
-<tr class="separator:af92d4a89702140215b024c9a20193c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9899711bbbf8d6e8d15e24da8e8135d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a9899711bbbf8d6e8d15e24da8e8135d0">CollectTriFaceVertices</a> (int v0, int v1, int v2, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;indices)</td></tr>
+<tr class="separator:a9899711bbbf8d6e8d15e24da8e8135d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec895373049cac0f8bdc76ff49763f5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aec895373049cac0f8bdc76ff49763f5c">CollectQuadFaceVertices</a> (int v0, int v1, int v2, int v3, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;indices)</td></tr>
+<tr class="separator:aec895373049cac0f8bdc76ff49763f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365c960ba9c3554188c8f67a720ea0ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a365c960ba9c3554188c8f67a720ea0ac">BuildElementToVertexTable</a> ()</td></tr>
 <tr class="separator:a365c960ba9c3554188c8f67a720ea0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a516369f29717e0a850773e5bc30ee68d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a516369f29717e0a850773e5bc30ee68d">UpdateElementToVertexTable</a> ()</td></tr>
 <tr class="separator:a516369f29717e0a850773e5bc30ee68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cd4b5ddbc1bd0c65afd8157602d9655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a8cd4b5ddbc1bd0c65afd8157602d9655">GetPointMatrix</a> (int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>, const char *ref_path, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;matrix)</td></tr>
-<tr class="separator:a8cd4b5ddbc1bd0c65afd8157602d9655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8b1cc928da42cf74d56207cbd1daa3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#afa8b1cc928da42cf74d56207cbd1daa3">GetVertexRootCoord</a> (int elem, <a class="el" href="classmfem_1_1NCMesh.html#a9803d9f8c7027d9f7d691f85f5e2ba4f">RefCoord</a> coord[3]) const </td></tr>
+<tr class="separator:afa8b1cc928da42cf74d56207cbd1daa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8996fd1c5aedb5f941f86de85fdd1541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a8996fd1c5aedb5f941f86de85fdd1541">CollectIncidentElements</a> (int elem, const <a class="el" href="classmfem_1_1NCMesh.html#a9803d9f8c7027d9f7d691f85f5e2ba4f">RefCoord</a> coord[3], <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;list) const </td></tr>
+<tr class="separator:a8996fd1c5aedb5f941f86de85fdd1541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f17fc9b7fe7f861ed146b9c12d711fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a6f17fc9b7fe7f861ed146b9c12d711fe">FindVertexCousins</a> (int elem, int local, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;cousins) const </td></tr>
+<tr class="separator:a6f17fc9b7fe7f861ed146b9c12d711fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6048ffc8429397e0e3aac8e6b2424b13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a6048ffc8429397e0e3aac8e6b2424b13">GetPointMatrix</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>, const char *ref_path, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;matrix)</td></tr>
+<tr class="separator:a6048ffc8429397e0e3aac8e6b2424b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b1e30f76a2ca307a1f496d15a26d03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a00b1e30f76a2ca307a1f496d15a26d03">TraverseRefinements</a> (int elem, int coarse_index, std::string &amp;ref_path, <a class="el" href="classmfem_1_1NCMesh.html#abdfac962041dc7075255c9736d42e2b8">RefPathMap</a> &amp;map)</td></tr>
 <tr class="separator:a00b1e30f76a2ca307a1f496d15a26d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a712c5717817070bcfab89beee0c74051"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a712c5717817070bcfab89beee0c74051">InitDerefTransforms</a> ()</td></tr>
@@ -412,8 +444,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a05db1b202d1989758fb4a1cb87389dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca33fe3034ec45c49451541b76f4cb0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aca33fe3034ec45c49451541b76f4cb0d">EdgeSplitLevel</a> (int vn1, int vn2) const </td></tr>
 <tr class="separator:aca33fe3034ec45c49451541b76f4cb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2083a90ab6aca73f6fe2f58818219b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a2083a90ab6aca73f6fe2f58818219b55">FaceSplitLevel</a> (int vn1, int vn2, int vn3, int vn4, int &amp;h_level, int &amp;v_level) const </td></tr>
-<tr class="separator:a2083a90ab6aca73f6fe2f58818219b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab945d36cffd9ce895feee6ae1da6ab30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ab945d36cffd9ce895feee6ae1da6ab30">TriFaceSplitLevel</a> (int vn1, int vn2, int vn3) const </td></tr>
+<tr class="separator:ab945d36cffd9ce895feee6ae1da6ab30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10d147e7a0d7bcfe4d5f6952c9d1fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ad10d147e7a0d7bcfe4d5f6952c9d1fa6">QuadFaceSplitLevel</a> (int vn1, int vn2, int vn3, int vn4, int &amp;h_level, int &amp;v_level) const </td></tr>
+<tr class="separator:ad10d147e7a0d7bcfe4d5f6952c9d1fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d95f8c25fc3480d13762f709ceb8fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a81d95f8c25fc3480d13762f709ceb8fe">CountSplits</a> (int elem, int splits[3]) const </td></tr>
 <tr class="separator:a81d95f8c25fc3480d13762f709ceb8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa75e7521210568451137c65e11afeea5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aa75e7521210568451137c65e11afeea5">GetLimitRefinements</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> &gt; &amp;refinements, int max_level)</td></tr>
@@ -427,12 +461,12 @@ Protected Member Functions</h2></td></tr>
 Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a30cfbc14e490f22644ca105bd4c24e62"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a30cfbc14e490f22644ca105bd4c24e62">find_node</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int node)</td></tr>
 <tr class="separator:a30cfbc14e490f22644ca105bd4c24e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad518f0ddb0983ef1ec3409ee7d720911"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ad518f0ddb0983ef1ec3409ee7d720911">find_element_edge</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int vn0, int vn1)</td></tr>
-<tr class="separator:ad518f0ddb0983ef1ec3409ee7d720911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3648bc89a5a967aa750443359e5a853"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae3648bc89a5a967aa750443359e5a853">find_hex_face</a> (int a, int b, int c)</td></tr>
-<tr class="separator:ae3648bc89a5a967aa750443359e5a853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1e08760ca30075eb1843bc671e03433"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ab1e08760ca30075eb1843bc671e03433">GetGeomIdentity</a> (int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>)</td></tr>
-<tr class="separator:ab1e08760ca30075eb1843bc671e03433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5f570f87003bca08f366ee279b19cf"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a3b5f570f87003bca08f366ee279b19cf">find_element_edge</a> (const <a class="el" href="structmfem_1_1NCMesh_1_1Element.html">Element</a> &amp;el, int vn0, int vn1, bool abort=true)</td></tr>
+<tr class="separator:a3b5f570f87003bca08f366ee279b19cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd473a17fba9e83c68615747cfec296c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#afd473a17fba9e83c68615747cfec296c">find_local_face</a> (int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>, int <a class="el" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, int <a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, int c)</td></tr>
+<tr class="separator:afd473a17fba9e83c68615747cfec296c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0249551c32f6f4348b9d3c75580e150"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ab0249551c32f6f4348b9d3c75580e150">GetGeomIdentity</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>)</td></tr>
+<tr class="separator:ab0249551c32f6f4348b9d3c75580e150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -444,6 +478,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aaa0be85240a691ff6a224f53d2d10727"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#aaa0be85240a691ff6a224f53d2d10727">Iso</a></td></tr>
 <tr class="memdesc:aaa0be85240a691ff6a224f53d2d10727"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the mesh only contains isotropic refinements  <a href="#aaa0be85240a691ff6a224f53d2d10727">More...</a><br/></td></tr>
 <tr class="separator:aaa0be85240a691ff6a224f53d2d10727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd4a8f03e1f476f953f4f72bbe27f7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a6cd4a8f03e1f476f953f4f72bbe27f7e">Geoms</a></td></tr>
+<tr class="memdesc:a6cd4a8f03e1f476f953f4f72bbe27f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">bit mask of element geometries present, see <a class="el" href="classmfem_1_1NCMesh.html#ae4dfc79d23b8ae298504f35e8dfdcdf2">InitGeomFlags()</a>  <a href="#a6cd4a8f03e1f476f953f4f72bbe27f7e">More...</a><br/></td></tr>
+<tr class="separator:a6cd4a8f03e1f476f953f4f72bbe27f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e6e5adbb44404859ded75e308c8f56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HashTable.html">HashTable</a>&lt; <a class="el" href="structmfem_1_1NCMesh_1_1Node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a29e6e5adbb44404859ded75e308c8f56">nodes</a></td></tr>
 <tr class="separator:a29e6e5adbb44404859ded75e308c8f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450ca38b2c425eef740b2c0730c8e3d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HashTable.html">HashTable</a>&lt; <a class="el" href="structmfem_1_1NCMesh_1_1Face.html">Face</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a450ca38b2c425eef740b2c0730c8e3d5">faces</a></td></tr>
@@ -479,12 +516,21 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a4d06c644e6281f36db77ff4cede065f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a4d06c644e6281f36db77ff4cede065f3">boundary_faces</a></td></tr>
 <tr class="memdesc:a4d06c644e6281f36db77ff4cede065f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">subset of all faces, set by BuildFaceList  <a href="#a4d06c644e6281f36db77ff4cede065f3">More...</a><br/></td></tr>
 <tr class="separator:a4d06c644e6281f36db77ff4cede065f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd7435aedd532b0135b65cac0a2a89e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a5dd7435aedd532b0135b65cac0a2a89e">face_geom</a></td></tr>
+<tr class="memdesc:a5dd7435aedd532b0135b65cac0a2a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">face geometry by face index, set by OnMeshUpdated  <a href="#a5dd7435aedd532b0135b65cac0a2a89e">More...</a><br/></td></tr>
+<tr class="separator:a5dd7435aedd532b0135b65cac0a2a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61510cd65ba91bcac7b5e4cc56c633fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a61510cd65ba91bcac7b5e4cc56c633fe">element_vertex</a></td></tr>
 <tr class="memdesc:a61510cd65ba91bcac7b5e4cc56c633fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">leaf-element to vertex table, see FindSetNeighbors  <a href="#a61510cd65ba91bcac7b5e4cc56c633fe">More...</a><br/></td></tr>
 <tr class="separator:a61510cd65ba91bcac7b5e4cc56c633fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f0007423bcde898cd3c8cbb4aa9bae6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a0f0007423bcde898cd3c8cbb4aa9bae6">ref_stack</a></td></tr>
 <tr class="memdesc:a0f0007423bcde898cd3c8cbb4aa9bae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">stack of scheduled refinements (temporary)  <a href="#a0f0007423bcde898cd3c8cbb4aa9bae6">More...</a><br/></td></tr>
 <tr class="separator:a0f0007423bcde898cd3c8cbb4aa9bae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c6180975447aca4b74416dac196bbe1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HashTable.html">HashTable</a>&lt; <a class="el" href="structmfem_1_1NCMesh_1_1Node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a0c6180975447aca4b74416dac196bbe1">shadow</a></td></tr>
+<tr class="memdesc:a0c6180975447aca4b74416dac196bbe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">temporary storage for reparented nodes  <a href="#a0c6180975447aca4b74416dac196bbe1">More...</a><br/></td></tr>
+<tr class="separator:a0c6180975447aca4b74416dac196bbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e52da15fef484c22a6a63a55324c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Triple.html">Triple</a>&lt; int, int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a62e52da15fef484c22a6a63a55324c1a">reparents</a></td></tr>
+<tr class="memdesc:a62e52da15fef484c22a6a63a55324c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">scheduled node reparents (tmp)  <a href="#a62e52da15fef484c22a6a63a55324c1a">More...</a><br/></td></tr>
+<tr class="separator:a62e52da15fef484c22a6a63a55324c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59215194f3a6187e54f80add675bbef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a59215194f3a6187e54f80add675bbef7">derefinements</a></td></tr>
 <tr class="memdesc:a59215194f3a6187e54f80add675bbef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">possible derefinements, see GetDerefinementTable  <a href="#a59215194f3a6187e54f80add675bbef7">More...</a><br/></td></tr>
 <tr class="separator:a59215194f3a6187e54f80add675bbef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -503,16 +549,14 @@ Static Protected Attributes</h2></td></tr>
 <tr class="separator:af61c2d357a89d2e73404e68e469e3383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a509686371a908c7d100910c2548978f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a509686371a908c7d100910c2548978f0">pm_quad_identity</a></td></tr>
 <tr class="separator:a509686371a908c7d100910c2548978f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ca6f7a503b2587f58121402a17c620"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a02ca6f7a503b2587f58121402a17c620">pm_tet_identity</a></td></tr>
+<tr class="separator:a02ca6f7a503b2587f58121402a17c620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dbe28d9401556e7d53f19dbcb2193ad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a2dbe28d9401556e7d53f19dbcb2193ad">pm_prism_identity</a></td></tr>
+<tr class="separator:a2dbe28d9401556e7d53f19dbcb2193ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64380c06b9ff471f9ade1a948a66c84"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#af64380c06b9ff471f9ade1a948a66c84">pm_hex_identity</a></td></tr>
 <tr class="separator:af64380c06b9ff471f9ade1a948a66c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a054d4e4827069db2fe385d4f48e4bcc2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">GeomInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">GI</a> [<a class="el" href="classmfem_1_1Geometry.html#a07cb10cb32e9f1ec00b59f909352a38e">Geometry::NumGeom</a>]</td></tr>
 <tr class="separator:a054d4e4827069db2fe385d4f48e4bcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd3ee23fa1cfa8f0758fc90a23042adb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">GeomInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#afd3ee23fa1cfa8f0758fc90a23042adb">gi_hex</a> = <a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">NCMesh::GI</a>[<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805ac812b0ab34c8feda27273aeb7d9f6cfb">Geometry::CUBE</a>]</td></tr>
-<tr class="separator:afd3ee23fa1cfa8f0758fc90a23042adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af539a0fb56fd69fc6fc2fdec81b589cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">GeomInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#af539a0fb56fd69fc6fc2fdec81b589cc">gi_quad</a> = <a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">NCMesh::GI</a>[<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805abbe96d7ec4feeeeaf8fcb297e3f196ed">Geometry::SQUARE</a>]</td></tr>
-<tr class="separator:af539a0fb56fd69fc6fc2fdec81b589cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae985089a566e1e1700b8813563cab0c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">GeomInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1NCMesh.html#ae985089a566e1e1700b8813563cab0c1">gi_tri</a> = <a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">NCMesh::GI</a>[<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805aa33f4004c01f4f9f4a1763d73f97c88c">Geometry::TRIANGLE</a>]</td></tr>
-<tr class="separator:ae985089a566e1e1700b8813563cab0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -524,13 +568,13 @@ Friends</h2></td></tr>
 <tr class="separator:a7271d74b84ac53e2537c5825a9408907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes. </p>
+<div class="textblock"><p>A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular meshes. </p>
 <p>The class is used as follows:</p>
 <ol type="1">
-<li><a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a> is constructed from elements of an existing <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>. The elements are copied and become roots of the refinement hierarchy.</li>
+<li><a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a> is constructed from elements of an existing <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>. The elements are copied and become roots of the refinement hierarchy.</li>
 <li>Some elements are refined with the <a class="el" href="classmfem_1_1NCMesh.html#af2de6a703ab8986d06a9269f1d562b76">Refine()</a> method. Both isotropic and anisotropic refinements of quads/hexes are supported.</li>
-<li>A new <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> is created from <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a> containing the leaf elements. This new mesh may have non-conforming (hanging) edges and faces.</li>
-<li><a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> asks <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a> for a list of conforming, master and slave edges/faces and creates the conforming interpolation matrix P.</li>
+<li>A new <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> is created from <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a> containing the leaf elements. This new mesh may have non-conforming (hanging) edges and faces.</li>
+<li><a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> asks <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a> for a list of conforming, master and slave edges/faces and creates the conforming interpolation matrix P.</li>
 <li>A continuous/conforming solution is obtained by solving P'*A*P x = P'*b.</li>
 <li>Repeat from step 2. </li>
 </ol>
@@ -555,7 +599,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00450">450</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00477">477</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +621,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00449">449</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00476">476</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +643,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00447">447</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00474">474</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +665,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00448">448</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00475">475</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -643,7 +687,21 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00446">446</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00473">473</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9803d9f8c7027d9f7d691f85f5e2ba4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int64_t <a class="el" href="classmfem_1_1NCMesh.html#a9803d9f8c7027d9f7d691f85f5e2ba4f">mfem::NCMesh::RefCoord</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00365">365</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -665,7 +723,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00716">716</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00784">784</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +761,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Initialize with elements from 'mesh'. If an already nonconforming mesh is being loaded, 'vertex_parents' must point to a stream at the appropriate section of the mesh file which contains the vertex hierarchy. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00193">193</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00072">72</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +779,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00304">304</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00188">188</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -746,7 +804,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00330">330</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00225">225</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -773,7 +831,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00504">504</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00539">539</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -800,7 +858,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a16f6c3868813ba0beec88fe68924d8d0">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01646">1646</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01918">1918</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -827,7 +885,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a1dd0a5330a044d6782797a3bc2e44c0f">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02154">2154</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02656">2656</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -852,7 +910,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02422">2422</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02971">2971</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -879,7 +937,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#af0ad12947763aff56ec56006fc3cef68">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02044">2044</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02542">2542</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -906,7 +964,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a2562ae65acd309994503a381bab49b5e">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02254">2254</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02757">2757</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -932,7 +990,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01730">1730</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02004">2004</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1056,67 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00713">713</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00747">747</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63d2470bbec7b28dd9bdb1a7eba1c6eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::CheckAnisoPrism </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> *&#160;</td>
+          <td class="paramname"><em>refs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00722">722</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1161,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a9936001a545c5777a996f1e4066514c7">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01436">1436</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01748">1748</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1239,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00779">779</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00842">842</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1140,7 +1258,7 @@ Friends</h2></td></tr>
 
 <p>Free all internal data created by the above three functions. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03201">3201</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04127">4127</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1176,7 +1294,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01388">1388</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01700">1700</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1218,11 +1336,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02386">2386</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02901">2901</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af92d4a89702140215b024c9a20193c57"></a>
+<a class="anchor" id="a8996fd1c5aedb5f941f86de85fdd1541"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1230,7 +1348,85 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::NCMesh::CollectFaceVertices </td>
+          <td class="memname">void mfem::NCMesh::CollectIncidentElements </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1NCMesh.html#a9803d9f8c7027d9f7d691f85f5e2ba4f">RefCoord</a>&#160;</td>
+          <td class="paramname"><em>coord</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03352">3352</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d15c1a2d32eace7004f7ce96f9c3397"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::CollectLeafElements </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01865">1865</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec895373049cac0f8bdc76ff49763f5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::CollectQuadFaceVertices </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>v0</em>, </td>
@@ -1272,11 +1468,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02398">2398</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02937">2937</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3d15c1a2d32eace7004f7ce96f9c3397"></a>
+<a class="anchor" id="a9899711bbbf8d6e8d15e24da8e8135d0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1284,16 +1480,28 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::NCMesh::CollectLeafElements </td>
+          <td class="memname">void mfem::NCMesh::CollectTriFaceVertices </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>elem</em>, </td>
+          <td class="paramname"><em>v0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>state</em>&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1308,7 +1516,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01591">1591</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02913">2913</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1558,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03920">3920</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04965">4965</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1386,7 +1594,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03715">3715</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04727">4727</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1612,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04199">4199</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l05241">5241</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1422,7 +1630,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04174">4174</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l05216">5216</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1448,7 +1656,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00449">449</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00391">391</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1477,7 +1685,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#ae0d6fbb5a3078ba054a640ed88c5a104">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01465">1465</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01777">1777</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1503,7 +1711,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01296">1296</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01574">1574</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1564,7 +1772,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03675">3675</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04676">4676</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1608,7 +1816,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#ad8ccc8d62fe1fbea2eb35b5ba7b8bba4">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00595">595</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00643">643</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -1652,7 +1860,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a3aa1850031427d444ee73e2209d74f07">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00594">594</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00642">642</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -1696,125 +1904,11 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#acaa13c09956d60b97f28f9bd8c8cb2c6">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00596">596</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00644">644</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2083a90ab6aca73f6fe2f58818219b55"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mfem::NCMesh::FaceSplitLevel </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn3</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn4</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>h_level</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>v_level</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03682">3682</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae727f9b69d6e271561de83ace1b2afd7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int mfem::NCMesh::FaceSplitType </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>v1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>v2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>v3</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>v4</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mid</em>[4] = <code>NULL</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01883">1883</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad518f0ddb0983ef1ec3409ee7d720911"></a>
+<a class="anchor" id="a3b5f570f87003bca08f366ee279b19cf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1837,7 +1931,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn1</em>&#160;</td>
+          <td class="paramname"><em>vn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>abort</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1852,11 +1952,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01930">1930</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02270">2270</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae3648bc89a5a967aa750443359e5a853"></a>
+<a class="anchor" id="afd473a17fba9e83c68615747cfec296c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1864,8 +1964,14 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mfem::NCMesh::find_hex_face </td>
+          <td class="memname">int mfem::NCMesh::find_local_face </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>geom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
@@ -1894,7 +2000,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01946">1946</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02288">2288</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1930,11 +2036,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01910">1910</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02250">2250</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa7924b6807984e8761fab8c700a8fb62"></a>
+<a class="anchor" id="a6db73bae7fda9aef6dd839dd237e21f3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1942,21 +2048,39 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mfem::NCMesh::FindAltParents </td>
+          <td class="memname">void mfem::NCMesh::FindEdgeElements </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node1</em>, </td>
+          <td class="paramname"><em>vn1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node2</em>&#160;</td>
+          <td class="paramname"><em>vn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prisms</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -1966,7 +2090,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00496">496</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00675">675</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2002,7 +2126,43 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03593">3593</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04579">4579</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab108aa25e61b80452bd70aa4181b329a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::FindMidEdgeNode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>node1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>node2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00272">272</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2045,11 +2205,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return all vertex-, edge- and face-neighbors of a single element. You can limit the number of elements being checked using 'search_set'. The complexity of the function is linear in the size of the search set. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02597">2597</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03154">3154</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3ee9fab9b9c2c1e73c2e3596114c4a6d"></a>
+<a class="anchor" id="a59357a4af171acdb72039db96e5de76f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2072,7 +2232,7 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>abort</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>abort</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2087,9 +2247,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Extended version of find_node: works if 'el' is refined; optional abort. </p>
+<p>Extended version of find_node: works if 'el' is refined. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01920">1920</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02260">2260</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2132,7 +2292,50 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return all vertex-, edge- and face-neighbors of a set of elements. The neighbors are returned as a list (neighbors != NULL), as a set (neighbor_set != NULL), or both. The sizes of the set arrays must match that of leaf_elements. The function is intended to be used for large sets of elements and its complexity is linear in the number of leaf elements in the mesh. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02494">2494</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03051">3051</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f17fc9b7fe7f861ed146b9c12d711fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::FindVertexCousins </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>local</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cousins</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return elements neighboring to a local vertex of element 'elem'. Only elements from within the same refinement tree ('cousins') are returned. Complexity is proportional to the depth of elem's refinement tree. </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03375">3375</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2180,7 +2383,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00679">679</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00617">617</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2206,7 +2409,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00515">515</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00550">550</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2251,7 +2454,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a7008eefd4cb06685904a4bf5b148ad0b">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03616">3616</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04603">4603</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2269,7 +2472,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return a list of derefinement opportunities. Each row of the table contains <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> indices of existing elements that can be derefined to form a single new coarse element. Row numbers are then passed to Derefine. This function works both in serial and parallel. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01421">1421</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01733">1733</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2287,7 +2490,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>After derefinement, calculate the relations of previous fine elements (some of which may no longer exist) to the current leaf elements. Unlike for refinement, <a class="el" href="classmfem_1_1NCMesh.html#aa9d21a5c05107c9c209a3cce8919a5fc">Derefine()</a> may only be called once before this function so there is no MarkFineLevel(). </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03156">3156</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03954">3954</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2314,7 +2517,7 @@ Friends</h2></td></tr>
 
 <p>Return the current list of conforming and nonconforming edges. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00212">212</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00219">219</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2343,7 +2546,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Given an edge (by its vertex indices v1 and v2) return the first (geometric) parent edge that exists in the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> or -1 if there is no such parent. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03572">3572</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04523">4523</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2369,7 +2572,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03540">3540</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04491">4491</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2388,7 +2591,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return "NC" orientation of an edge. As opposed to standard <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> edge orientation based on vertex IDs, "NC" edge orientation follows the local edge orientation within the element 'edge_id.element' and is thus processor independent. TODO: this seems only partially true? </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03502">3502</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04441">4441</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2424,7 +2627,7 @@ Friends</h2></td></tr>
 
 <p>Return <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> vertex indices of an edge identified by 'edge_id'. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03483">3483</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04422">4422</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2444,11 +2647,47 @@ Friends</h2></td></tr>
 
 <p>Return the distance of leaf 'i' from the root. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03581">3581</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04532">4532</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8b1ad27a0956e38b9662570f9ca9d741"></a>
+<a class="anchor" id="a71b287a7b416c142047f12c114c71f04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::GetElementFacesAttributes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>faces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fattr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the faces and face attributes of leaf element 'i'. </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04558">4558</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a213e9b35265fa46a2f22d13c898ed10d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2458,7 +2697,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> mfem::NCMesh::GetElementGeometry </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2469,9 +2709,28 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the type of elements in the mesh. </p>
+<p>Return element geometry type. <em>index</em> is the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> element number. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00309">309</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00317">317</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2de836759b06734cdf6129ecd5fc9560"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::GetElementSizeReduction </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the size reduction compared to the root element (ignoring local stretching and curvature). </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04544">4544</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2507,11 +2766,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00474">474</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00416">416</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adf8d6e4a2cd4a488e11f6305aefde50f"></a>
+<a class="anchor" id="a411282d7358be62afa0a73f003d6ab02"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2521,7 +2780,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> mfem::NCMesh::GetFaceGeometry </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2532,7 +2792,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00311">311</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Return face geometry type. <em>index</em> is the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> face number. </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00321">321</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2559,16 +2821,16 @@ Friends</h2></td></tr>
 
 <p>Return the current list of conforming and nonconforming faces. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00205">205</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00212">212</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5d555daa132bc2b402b5fe37609c1f4c"></a>
+<a class="anchor" id="ae878ee91f13a301143d30ae16b8739af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::NCMesh::GetFaceVerticesEdges </td>
+          <td class="memname">int mfem::NCMesh::GetFaceVerticesEdges </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structmfem_1_1NCMesh_1_1MeshId.html">MeshId</a> &amp;&#160;</td>
           <td class="paramname"><em>face_id</em>, </td>
@@ -2598,14 +2860,13 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> vertex and edge indices of a face identified by 'face_id'. The return value is the number of face vertices. </p>
 
-<p>Return <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> vertex and edge indices of a face identified by 'face_id'. </p>
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03514">3514</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04453">4453</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab1e08760ca30075eb1843bc671e03433"></a>
+<a class="anchor" id="ab0249551c32f6f4348b9d3c75580e150"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2615,7 +2876,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">NCMesh::PointMatrix</a> &amp; mfem::NCMesh::GetGeomIdentity </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td>
           <td class="paramname"><em>geom</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2627,7 +2888,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02765">2765</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03422">3422</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2663,11 +2924,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03763">3763</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04810">4810</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac462a50f410acabd1973350f41091e91"></a>
+<a class="anchor" id="a7c1030878adb5665d5587fd235aa8047"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2677,25 +2938,9 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void mfem::NCMesh::GetMeshComponents </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Vertex.html">mfem::Vertex</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mvertices</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">mfem::Element</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>melements</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">mfem::Element</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mboundary</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Mesh.html">Mesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2705,13 +2950,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the basic <a class="el" href="classmfem_1_1Mesh.html">Mesh</a> arrays for the current finest level. </p>
+<p>Fill <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>::{vertices,elements,boundary} for the current finest level. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01759">1759</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02033">2033</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adc9ccd722aeda52a055d2d1fd36988f7"></a>
+<a class="anchor" id="a9c277d1137fc02fc9026f582048f18b2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2722,13 +2967,13 @@ Friends</h2></td></tr>
           <td class="memname">int mfem::NCMesh::GetMidEdgeNode </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn1</em>, </td>
+          <td class="paramname"><em>node1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vn2</em>&#160;</td>
+          <td class="paramname"><em>node2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2743,7 +2988,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00643">643</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00288">288</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2791,7 +3036,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00651">651</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00295">295</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2819,7 +3064,7 @@ Friends</h2></td></tr>
 
 <p>Return vertex/edge/face list (entity = 0/1/2, respectively). </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00227">227</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00234">234</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2858,6 +3103,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">int mfem::NCMesh::GetNFaces </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
@@ -2896,7 +3142,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a6a8ef5da6303b2e3fe59c5afedd1e17c">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00491">491</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00519">519</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2923,7 +3169,34 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a9503a8dc19497457a189c2b078cbf28d">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00492">492</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00520">520</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81b183105d2efd298ae86d3ab3890014"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::GetNumRootElements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the number of root elements. </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00325">325</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2952,7 +3225,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8cd4b5ddbc1bd0c65afd8157602d9655"></a>
+<a class="anchor" id="a6048ffc8429397e0e3aac8e6b2424b13"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2962,7 +3235,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void mfem::NCMesh::GetPointMatrix </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td>
           <td class="paramname"><em>geom</em>, </td>
         </tr>
         <tr>
@@ -2990,7 +3263,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02778">2778</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03437">3437</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3008,7 +3281,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>After refinement, calculate the relation of each fine element to its parent coarse element. Note that <a class="el" href="classmfem_1_1NCMesh.html#af2de6a703ab8986d06a9269f1d562b76">Refine()</a> or <a class="el" href="classmfem_1_1NCMesh.html#a7255eda516a5f617b3fe6567bc40ee23">LimitNCLevel()</a> can be called multiple times between <a class="el" href="classmfem_1_1NCMesh.html#adbdecc1f97835142cdf9dbb52743d083">MarkCoarseLevel()</a> and this function. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03119">3119</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03903">3903</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3034,7 +3307,43 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return a list of vertices (in 'conforming'); this function is provided for uniformity/completeness. Needed in ParNCMesh/ParFESpace. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00220">220</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00227">227</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa8b1cc928da42cf74d56207cbd1daa3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::GetVertexRootCoord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1NCMesh.html#a9803d9f8c7027d9f7d691f85f5e2ba4f">RefCoord</a>&#160;</td>
+          <td class="paramname"><em>coord</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03304">3304</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3077,7 +3386,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return a space filling curve for a rectangular grid of elements. Implemented is a generalized Hilbert curve for arbitrary grid dimensions. If the width is odd, height should be odd too, otherwise one diagonal (vertex-neighbor) step cannot be avoided in the curve. Even dimensions are recommended. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03436">3436</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04375">4375</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3126,7 +3435,57 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Return a space filling curve for a 3D rectangular grid of elements. The Hilbert-curve-like algorithm works well for even dimensions. For odd width/height/depth it tends to produce some diagonal (edge-neighbor) steps. Even dimensions are recommended. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03451">3451</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04390">4390</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6fb3d0a6bb5a292fb5bcae8c116f0bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::NCMesh::HavePrisms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00524">524</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c4e5cacfd78818b55d0c86a1b30523a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::NCMesh::HaveTets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00525">525</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3151,7 +3510,32 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01501">1501</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01813">1813</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4dfc79d23b8ae298504f35e8dfdcdf2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::InitGeomFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00204">204</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3176,9 +3560,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Try to find a space-filling curve friendly orientation of the root elements: set 'root_state' based on the ordering of coarse elements. Note that the coarse mesh itself must be ordered as an SFC by e.g. <a class="el" href="classmfem_1_1Mesh.html#aacae7b1dfdd4e7699d6eadd0a137d9d9">Mesh::GetGeckoElementReordering</a>. </p>
+<p>Try to find a space-filling curve friendly orientation of the root elements: set 'root_state' based on the ordering of coarse elements. Note that the coarse mesh itself must be ordered as an SFC by e.g. <a class="el" href="classmfem_1_1Mesh.html#a368a9423113a4efb78c542758a87d0e3">Mesh::GetGeckoElementOrdering</a>. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01655">1655</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01927">1927</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3206,7 +3590,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a76cfa5f49900fb17570f7e5b694aad6a">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00490">490</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00518">518</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3235,7 +3619,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#aef8e191581f226d508953d16a8c159d7">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03793">3793</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04840">4840</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3255,7 +3639,7 @@ Friends</h2></td></tr>
 
 <p>I/O: Load the element refinement hierarchy from a mesh file. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03940">3940</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04985">4985</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3274,7 +3658,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>I/O: Load the vertex parent hierarchy from a mesh file. NOTE: called indirectly through the constructor. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03835">3835</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04882">4882</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3292,7 +3676,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Remember the current layer of leaf elements before the mesh is refined. Needed by <a class="el" href="classmfem_1_1NCMesh.html#a53e1966c61327fe693e377b40f090ffe">GetRefinementTransforms()</a>, must be called before <a class="el" href="classmfem_1_1NCMesh.html#af2de6a703ab8986d06a9269f1d562b76">Refine()</a>. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03075">3075</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03857">3857</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3311,7 +3695,7 @@ Friends</h2></td></tr>
 
 <p>Return total number of bytes allocated. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04072">4072</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l05114">5114</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3354,7 +3738,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Expand a set of elements by all vertex-, edge- and face-neighbors. The output array 'expanded' will contain all items from 'elems' (provided they are in 'search_set') plus their neighbors. The neighbor search can be limited to the optional search set. The complexity is linear in the sum of the sizes of 'elems' and 'search_set'. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02680">2680</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03237">3237</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3468,7 +3852,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00565">565</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00453">453</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3494,7 +3878,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01718">1718</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01990">1990</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3572,7 +3956,85 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00594">594</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00541">541</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5ffc4d29ef367e1e3f7139e6da470b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::NewTetrahedron </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00515">515</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3638,11 +4100,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00619">619</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00567">567</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6ff5c16b5a93e373b3a0f8fb8b2489c3"></a>
+<a class="anchor" id="ab73461fb1107b4ba0fe2d91fbaf02296"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3650,16 +4112,76 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool mfem::NCMesh::NodeSetX1 </td>
+          <td class="memname">int mfem::NCMesh::NewWedge </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
+          <td class="paramname"><em>n0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fattr4</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3669,192 +4191,12 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00660">660</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae1b280b07033c2a0d46524d781a5ef38"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::NCMesh::NodeSetX2 </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00663">663</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa7f2eb8e8262e11c9d0edd6381eca742"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::NCMesh::NodeSetY1 </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00666">666</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac2c77c8ec59ce3b95e2e6c445bbab224"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::NCMesh::NodeSetY2 </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00669">669</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a54bbd9de088e2ad29f009e91b212c839"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::NCMesh::NodeSetZ1 </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00672">672</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1387442dfe749bebad65a0752954d241"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::NCMesh::NodeSetZ2 </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00675">675</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00483">483</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3883,7 +4225,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a60a585001a0f916ee2c45fd3595ebb30">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01834">1834</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02120">2120</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3903,7 +4245,7 @@ Friends</h2></td></tr>
 
 <p>I/O: Print the "coarse_elements" section of the mesh file (ver. &gt;= 1.1). </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03906">3906</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04951">4951</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3945,7 +4287,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03880">3880</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04925">4925</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3962,7 +4304,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04094">4094</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l05136">5136</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3980,7 +4322,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04120">4120</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l05162">5162</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4000,11 +4342,11 @@ Friends</h2></td></tr>
 
 <p>I/O: Print the "vertex_parents" section of the mesh file (ver. &gt;= 1.1). </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03808">3808</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04855">4855</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3bc47c88ced598ac3c58e7be1932b49a"></a>
+<a class="anchor" id="ad10d147e7a0d7bcfe4d5f6952c9d1fa6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4012,7 +4354,121 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::NCMesh::RefElement </td>
+          <td class="memname">void mfem::NCMesh::QuadFaceSplitLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>h_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>v_level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04700">4700</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed9a87d8e4733fb563b16443963e580e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::QuadFaceSplitType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mid</em>[5] = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02186">2186</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50d302c196f491e537ba4b90bb8a5757"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::ReferenceElement </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>elem</em></td><td>)</td>
@@ -4026,7 +4482,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00361">361</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00303">303</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4055,7 +4511,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a4669b97f16600aa70a2ceadf08c15d2e">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01205">1205</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01492">1492</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4091,7 +4547,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00796">796</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00859">859</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4127,7 +4583,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00435">435</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00377">377</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4187,7 +4643,49 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01962">1962</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02305">2305</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5291a9d4b39abb9378f0106b0c66626c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::ReparentNode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00256">256</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4225,7 +4723,7 @@ Friends</h2></td></tr>
 
 <p>Return el.node[index] correctly, even if the element is refined. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01267">1267</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01538">1538</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4261,7 +4759,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01521">1521</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01828">1828</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4281,7 +4779,7 @@ Friends</h2></td></tr>
 
 <p>I/O: Set positions of all vertices (used by mesh loader). </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03857">3857</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04904">4904</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4366,11 +4864,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02115">2115</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02626">2626</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a06b4186dd5d0398574a15b3d12265282"></a>
+<a class="anchor" id="aea513065f28f9f2c54efaf83533f83b8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4378,7 +4876,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::NCMesh::TraverseFace </td>
+          <td class="memname">void mfem::NCMesh::TraverseQuadFace </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>vn0</em>, </td>
@@ -4411,7 +4909,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>level</em>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmfem_1_1NCMesh_1_1Face.html">Face</a> *&#160;</td>
+          <td class="paramname"><em>eface</em>[4]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4426,7 +4930,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01995">1995</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02339">2339</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4474,7 +4978,199 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03089">3089</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l03871">3871</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ae4e5f9382fdc8beb40e97cedfcc286"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::NCMesh::TraverseTetEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmfem_1_1NCMesh_1_1Point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmfem_1_1NCMesh_1_1Point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02451">2451</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2d4ac5d2b80b469be47ed9d982e221a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::NCMesh::TraverseTriFace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">PointMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02487">2487</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac84ca7ecad973da2a711fd786d73a23e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::NCMesh::TriFaceSplit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mid</em>[3] = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l02233">2233</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab945d36cffd9ce895feee6ae1da6ab30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::TriFaceSplitLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vn3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04683">4683</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4503,11 +5199,11 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#abf5ceb286d75a95d29c21775b2ec9217">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l04032">4032</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l05078">5078</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1c5d319596c7ff13715dc0a18a299d9b"></a>
+<a class="anchor" id="ad15b9629acb977820834b2d18e82887c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4515,7 +5211,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::NCMesh::UnrefElement </td>
+          <td class="memname">void mfem::NCMesh::UnreferenceElement </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
@@ -4539,7 +5235,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00392">392</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00334">334</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4567,7 +5263,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a54465e513289c114aeaa1c655a404b6a">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00318">318</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l00213">213</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4592,7 +5288,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00633">633</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00682">682</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4617,7 +5313,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01632">1632</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01907">1907</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4646,7 +5342,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh.html#a85adb4db7e8b5da93183a14c23efd6f9">mfem::ParNCMesh</a>.</p>
 
-<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01540">1540</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8cpp_source.html#l01847">1847</a> of file <a class="el" href="ncmesh_8cpp_source.html">ncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -4669,7 +5365,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00788">788</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00856">856</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4691,7 +5387,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00345">345</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00370">370</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4713,7 +5409,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00787">787</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00855">855</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4738,7 +5434,7 @@ Friends</h2></td></tr>
 
 <p>subset of all faces, set by BuildFaceList </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00472">472</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00499">499</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4762,7 +5458,7 @@ Friends</h2></td></tr>
 
 <p>state of leaf_elements before <a class="el" href="classmfem_1_1NCMesh.html#af2de6a703ab8986d06a9269f1d562b76">Refine()</a>, set by <a class="el" href="classmfem_1_1NCMesh.html#adbdecc1f97835142cdf9dbb52743d083">MarkCoarseLevel()</a> </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00725">725</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00793">793</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4786,7 +5482,7 @@ Friends</h2></td></tr>
 
 <p>possible derefinements, see GetDerefinementTable </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00499">499</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00534">534</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4808,7 +5504,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00359">359</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00382">382</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4832,7 +5528,7 @@ Friends</h2></td></tr>
 
 <p>lazy-initialized list of edges, see GetEdgeList </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00469">469</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00496">496</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4856,7 +5552,7 @@ Friends</h2></td></tr>
 
 <p>leaf-element to vertex table, see FindSetNeighbors </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00474">474</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00502">502</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4878,7 +5574,31 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00435">435</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00462">462</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dd7435aedd532b0135b65cac0a2a89e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt;char&gt; mfem::NCMesh::face_geom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>face geometry by face index, set by OnMeshUpdated </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00500">500</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4902,7 +5622,7 @@ Friends</h2></td></tr>
 
 <p>lazy-initialized list of faces, see GetFaceList </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00468">468</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00495">495</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4924,7 +5644,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00433">433</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00460">460</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4946,7 +5666,31 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00436">436</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00463">463</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cd4a8f03e1f476f953f4f72bbe27f7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::NCMesh::Geoms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bit mask of element geometries present, see <a class="el" href="classmfem_1_1NCMesh.html#ae4dfc79d23b8ae298504f35e8dfdcdf2">InitGeomFlags()</a> </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00384">384</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4968,73 +5712,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00777">777</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afd3ee23fa1cfa8f0758fc90a23042adb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">NCMesh::GeomInfo</a> &amp; mfem::NCMesh::gi_hex = <a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">NCMesh::GI</a>[<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805ac812b0ab34c8feda27273aeb7d9f6cfb">Geometry::CUBE</a>]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00779">779</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af539a0fb56fd69fc6fc2fdec81b589cc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">NCMesh::GeomInfo</a> &amp; mfem::NCMesh::gi_quad = <a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">NCMesh::GI</a>[<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805abbe96d7ec4feeeeaf8fcb297e3f196ed">Geometry::SQUARE</a>]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00779">779</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae985089a566e1e1700b8813563cab0c1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structmfem_1_1NCMesh_1_1GeomInfo.html">NCMesh::GeomInfo</a> &amp; mfem::NCMesh::gi_tri = <a class="el" href="classmfem_1_1NCMesh.html#a054d4e4827069db2fe385d4f48e4bcc2">NCMesh::GI</a>[<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805aa33f4004c01f4f9f4a1763d73f97c88c">Geometry::TRIANGLE</a>]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00779">779</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00847">847</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5058,7 +5736,7 @@ Friends</h2></td></tr>
 
 <p>true if the mesh only contains isotropic refinements </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00360">360</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00383">383</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5080,7 +5758,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00465">465</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00492">492</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5102,7 +5780,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00463">463</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00490">490</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5124,7 +5802,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00463">463</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00490">490</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5146,7 +5824,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00432">432</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00459">459</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5168,7 +5846,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00462">462</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00489">489</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5190,7 +5868,29 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00710">710</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00777">777</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dbe28d9401556e7d53f19dbcb2193ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">NCMesh::PointMatrix</a> mfem::NCMesh::pm_prism_identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00776">776</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5212,7 +5912,29 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00709">709</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00774">774</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02ca6f7a503b2587f58121402a17c620"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmfem_1_1NCMesh_1_1PointMatrix.html">NCMesh::PointMatrix</a> mfem::NCMesh::pm_tet_identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00775">775</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5234,7 +5956,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00708">708</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00773">773</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5258,7 +5980,31 @@ Friends</h2></td></tr>
 
 <p>stack of scheduled refinements (temporary) </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00497">497</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00530">530</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62e52da15fef484c22a6a63a55324c1a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt;<a class="el" href="classmfem_1_1Triple.html">Triple</a>&lt;int, int, int&gt; &gt; mfem::NCMesh::reparents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>scheduled node reparents (tmp) </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00532">532</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5281,7 +6027,31 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Initial traversal state (~ element orientation) for each root element NOTE: M = root_state.Size() is the number of root elements. NOTE: the first M items of 'elements' is the coarse mesh. </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00441">441</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00468">468</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c6180975447aca4b74416dac196bbe1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1HashTable.html">HashTable</a>&lt;<a class="el" href="structmfem_1_1NCMesh_1_1Node.html">Node</a>&gt; mfem::NCMesh::shadow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>temporary storage for reparented nodes </p>
+
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00531">531</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5305,7 +6075,7 @@ Friends</h2></td></tr>
 
 <p>dimensions of the elements and the vertex coordinates </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00359">359</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00382">382</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5327,7 +6097,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00740">740</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00808">808</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5351,7 +6121,7 @@ Friends</h2></td></tr>
 
 <p>coordinates of top-level vertices (organized as triples) </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00444">444</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00471">471</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5375,7 +6145,7 @@ Friends</h2></td></tr>
 
 <p>storage for data returned by Get[De]RefinementTransforms() </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00722">722</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00790">790</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5399,7 +6169,7 @@ Friends</h2></td></tr>
 
 <p>lazy-initialized list of vertices, see GetVertexList </p>
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00470">470</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00497">497</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5421,7 +6191,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00466">466</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ncmesh_8hpp_source.html#l00493">493</a> of file <a class="el" href="ncmesh_8hpp_source.html">ncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -5432,7 +6202,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:18 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

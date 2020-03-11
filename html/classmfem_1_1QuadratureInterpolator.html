@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>A class that performs interpolation from an E-vector to quadrature point values and/or derivatives (Q-vectors).  
  <a href="classmfem_1_1QuadratureInterpolator.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for mfem::QuadratureInterpolator:</div>
 <div class="dyncontent">
@@ -135,9 +135,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a29d0f76b0ba2b5b9a7dc7f76b902edf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a29d0f76b0ba2b5b9a7dc7f76b902edf3">DisableTensorProducts</a> (bool disable=true) const </td></tr>
 <tr class="memdesc:a29d0f76b0ba2b5b9a7dc7f76b902edf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the use of tensor product evaluations, for tensor-product elements, e.g. quads and hexes.  <a href="#a29d0f76b0ba2b5b9a7dc7f76b902edf3">More...</a><br/></td></tr>
 <tr class="separator:a29d0f76b0ba2b5b9a7dc7f76b902edf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a3278f479c1b23509d28dfb916a6a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72ab">QVectorLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a82a3278f479c1b23509d28dfb916a6a7">GetOutputLayout</a> () const </td></tr>
+<tr class="memdesc:a82a3278f479c1b23509d28dfb916a6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the current output Q-vector layout. The default value is <a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72aba12c28ef17ed97b10156f75213c7a30c8" title="NQPT x VDIM x NE. ">QVectorLayout::byNODES</a>.  <a href="#a82a3278f479c1b23509d28dfb916a6a7">More...</a><br/></td></tr>
+<tr class="separator:a82a3278f479c1b23509d28dfb916a6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3364252715adb47e4f8df1779afe3768"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a3364252715adb47e4f8df1779afe3768">SetOutputLayout</a> (<a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72ab">QVectorLayout</a> out_layout) const </td></tr>
+<tr class="memdesc:a3364252715adb47e4f8df1779afe3768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the desired output Q-vector layout. The default value is <a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72aba12c28ef17ed97b10156f75213c7a30c8" title="NQPT x VDIM x NE. ">QVectorLayout::byNODES</a>.  <a href="#a3364252715adb47e4f8df1779afe3768">More...</a><br/></td></tr>
+<tr class="separator:a3364252715adb47e4f8df1779afe3768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ce4b1e5d91cf0bf173ca90f80b2a0c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a1ce4b1e5d91cf0bf173ca90f80b2a0c4">Mult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;e_vec, unsigned eval_flags, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_val, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_der, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_det) const </td></tr>
 <tr class="memdesc:a1ce4b1e5d91cf0bf173ca90f80b2a0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate the E-vector <em>e_vec</em> to quadrature points.  <a href="#a1ce4b1e5d91cf0bf173ca90f80b2a0c4">More...</a><br/></td></tr>
 <tr class="separator:a1ce4b1e5d91cf0bf173ca90f80b2a0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9722616f1ea6893a348353438adaf4ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a9722616f1ea6893a348353438adaf4ed">Values</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;e_vec, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_val) const </td></tr>
+<tr class="memdesc:a9722616f1ea6893a348353438adaf4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate the values of the E-vector <em>e_vec</em> at quadrature points.  <a href="#a9722616f1ea6893a348353438adaf4ed">More...</a><br/></td></tr>
+<tr class="separator:a9722616f1ea6893a348353438adaf4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f28408716b8e3e754f7abd5b4f4497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a61f28408716b8e3e754f7abd5b4f4497">Derivatives</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;e_vec, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_der) const </td></tr>
+<tr class="memdesc:a61f28408716b8e3e754f7abd5b4f4497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate the derivatives of the E-vector <em>e_vec</em> at quadrature points.  <a href="#a61f28408716b8e3e754f7abd5b4f4497">More...</a><br/></td></tr>
+<tr class="separator:a61f28408716b8e3e754f7abd5b4f4497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6b99d68417e09ebef7ae6533772c4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a0f6b99d68417e09ebef7ae6533772c4e">PhysDerivatives</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;e_vec, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_der) const </td></tr>
+<tr class="memdesc:a0f6b99d68417e09ebef7ae6533772c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate the derivatives in physical space of the E-vector <em>e_vec</em> at quadrature points.  <a href="#a0f6b99d68417e09ebef7ae6533772c4e">More...</a><br/></td></tr>
+<tr class="separator:a0f6b99d68417e09ebef7ae6533772c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f4ea6741a91fd5c52cf2b13da4041d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#ae9f4ea6741a91fd5c52cf2b13da4041d">MultTranspose</a> (unsigned eval_flags, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_val, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q_der, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;e_vec) const </td></tr>
 <tr class="memdesc:ae9f4ea6741a91fd5c52cf2b13da4041d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the transpose operation of <a class="el" href="classmfem_1_1QuadratureInterpolator.html#a1ce4b1e5d91cf0bf173ca90f80b2a0c4" title="Interpolate the E-vector e_vec to quadrature points. ">Mult()</a>. (TODO)  <a href="#ae9f4ea6741a91fd5c52cf2b13da4041d">More...</a><br/></td></tr>
 <tr class="separator:ae9f4ea6741a91fd5c52cf2b13da4041d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +179,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad67e4b479452b6a82fa40d8a5c9c1775"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#ad67e4b479452b6a82fa40d8a5c9c1775">IntRule</a></td></tr>
 <tr class="memdesc:ad67e4b479452b6a82fa40d8a5c9c1775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not owned.  <a href="#ad67e4b479452b6a82fa40d8a5c9c1775">More...</a><br/></td></tr>
 <tr class="separator:ad67e4b479452b6a82fa40d8a5c9c1775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf638e78208430229d8844b8eab29feb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72ab">QVectorLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#abf638e78208430229d8844b8eab29feb">q_layout</a></td></tr>
+<tr class="memdesc:abf638e78208430229d8844b8eab29feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Q-vector layout.  <a href="#abf638e78208430229d8844b8eab29feb">More...</a><br/></td></tr>
+<tr class="separator:abf638e78208430229d8844b8eab29feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1449b608626e898a66a7151a20a6bf6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1QuadratureInterpolator.html#a1449b608626e898a66a7151a20a6bf6a">use_tensor_products</a></td></tr>
 <tr class="separator:a1449b608626e898a66a7151a20a6bf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -192,7 +210,7 @@ Friends</h2></td></tr>
 <p>An E-vector represents the element-wise discontinuous version of the FE space and can be obtained, for example, from a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a> using the <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> returned by <a class="el" href="classmfem_1_1FiniteElementSpace.html#adad0c6bac28bd12e5997a9f25a932308" title="Return an Operator that converts L-vectors to E-vectors. ">FiniteElementSpace::GetElementRestriction()</a>.</p>
 <p>The target quadrature points in the elements can be described either by an <a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a> (all mesh elements must be of the same type in this case) or by a <a class="el" href="classmfem_1_1QuadratureSpace.html" title="Class representing the storage layout of a QuadratureFunction. ">QuadratureSpace</a>. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00909">909</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00036">36</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a1bbad2359b602892105e24d8d6e814ca"></a>
 <div class="memitem">
@@ -215,7 +233,7 @@ Friends</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00929">929</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00057">57</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +262,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02769">2769</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00020">20</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
 
 </div>
 </div>
@@ -272,11 +290,41 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02783">2783</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00035">35</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a61f28408716b8e3e754f7abd5b4f4497"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::QuadratureInterpolator::Derivatives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>e_vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>q_der</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interpolate the derivatives of the E-vector <em>e_vec</em> at quadrature points. </p>
+
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l01284">1284</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a29d0f76b0ba2b5b9a7dc7f76b902edf3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +350,7 @@ Friends</h2></td></tr>
 <p>Disable the use of tensor product evaluations, for tensor-product elements, e.g. quads and hexes. </p>
 <p>Currently, tensor product evaluations are not implemented and this method has no effect. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00949">949</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00077">77</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -378,7 +426,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 
 <p>Template compute kernel for 2D. </p>
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02798">2798</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00051">51</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +502,34 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 
 <p>Template compute kernel for 3D. </p>
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02886">2886</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00139">139</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82a3278f479c1b23509d28dfb916a6a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72ab">QVectorLayout</a> mfem::QuadratureInterpolator::GetOutputLayout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Query the current output Q-vector layout. The default value is <a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72aba12c28ef17ed97b10156f75213c7a30c8" title="NQPT x VDIM x NE. ">QVectorLayout::byNODES</a>. </p>
+
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00082">82</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +578,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 <p>Interpolate the E-vector <em>e_vec</em> to quadrature points. </p>
 <p>The <em>eval_flags</em> are a bitwise mask of constants from the EvalFlags enumeration. When the VALUES flag is set, the values at quadrature points are computed and stored in the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> <em>q_val</em>. Similarly, when the flag DERIVATIVES is set, the derivatives are computed and stored in <em>q_der</em>. When the DETERMINANTS flags is set, it is assumed that the derivatives form a matrix at each quadrature point (i.e. the associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> is a vector space) and their determinants are computed and stored in <em>q_det</em>. </p>
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02978">2978</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00229">229</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
 
 </div>
 </div>
@@ -545,7 +620,95 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 
 <p>Perform the transpose operation of <a class="el" href="classmfem_1_1QuadratureInterpolator.html#a1ce4b1e5d91cf0bf173ca90f80b2a0c4" title="Interpolate the E-vector e_vec to quadrature points. ">Mult()</a>. (TODO) </p>
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l03119">3119</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00383">383</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f6b99d68417e09ebef7ae6533772c4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::QuadratureInterpolator::PhysDerivatives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>e_vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>q_der</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interpolate the derivatives in physical space of the E-vector <em>e_vec</em> at quadrature points. </p>
+
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l01302">1302</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3364252715adb47e4f8df1779afe3768"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::QuadratureInterpolator::SetOutputLayout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72ab">QVectorLayout</a>&#160;</td>
+          <td class="paramname"><em>out_layout</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the desired output Q-vector layout. The default value is <a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72aba12c28ef17ed97b10156f75213c7a30c8" title="NQPT x VDIM x NE. ">QVectorLayout::byNODES</a>. </p>
+
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00086">86</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9722616f1ea6893a348353438adaf4ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::QuadratureInterpolator::Values </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>e_vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>q_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interpolate the values of the E-vector <em>e_vec</em> at quadrature points. </p>
+
+<p>Definition at line <a class="el" href="quadinterpolator_8cpp_source.html#l00649">649</a> of file <a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +731,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00912">912</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00039">39</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -593,7 +756,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 
 <p>Not owned. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00914">914</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00041">41</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -617,7 +780,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 
 <p>Not owned. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00916">916</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00043">43</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +802,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00921">921</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00049">49</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -661,7 +824,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00925">925</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00053">53</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -683,7 +846,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00920">920</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00048">48</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -705,7 +868,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00924">924</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00052">52</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +890,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00922">922</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00050">50</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -749,7 +912,31 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00926">926</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00054">54</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf638e78208430229d8844b8eab29feb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemfem.html#ac235e896683c3fa8c6e3109de02f72ab">QVectorLayout</a> mfem::QuadratureInterpolator::q_layout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output Q-vector layout. </p>
+
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00044">44</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -773,7 +960,7 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 
 <p>Not owned. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00915">915</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00042">42</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
@@ -795,18 +982,18 @@ template&lt;const int T_VDIM, const int T_ND, const int T_NQ&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00918">918</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="quadinterpolator_8hpp_source.html#l00046">46</a> of file <a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>fem/<a class="el" href="fespace_8hpp_source.html">fespace.hpp</a></li>
-<li>fem/<a class="el" href="fespace_8cpp_source.html">fespace.cpp</a></li>
+<li>fem/<a class="el" href="quadinterpolator_8hpp_source.html">quadinterpolator.hpp</a></li>
+<li>fem/<a class="el" href="quadinterpolator_8cpp_source.html">quadinterpolator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:24 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -143,6 +143,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a47c0753cdec100a57ff96dbec3b36f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6287e71f51173f57ad4f3cb59a2a32ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParNCMesh_1_1ElementSet.html#a6287e71f51173f57ad4f3cb59a2a32ef">FlagElements</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;<a class="el" href="classmfem_1_1NCMesh.html#a52de15077df362665239cd6645feadfb">elements</a>, char flag)</td></tr>
 <tr class="separator:a6287e71f51173f57ad4f3cb59a2a32ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf17bc1c60c8e5d1f288fa7684d44d80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParNCMesh_1_1ElementSet.html#acf17bc1c60c8e5d1f288fa7684d44d80">RefPath</a> () const </td></tr>
+<tr class="separator:acf17bc1c60c8e5d1f288fa7684d44d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -153,11 +155,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae44cacbd36c1e2b070b9ac0ba5bd2695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a751d0739433df41a8608a93acac378ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParNCMesh_1_1ElementSet.html#a751d0739433df41a8608a93acac378ea">include_ref_types</a></td></tr>
 <tr class="separator:a751d0739433df41a8608a93acac378ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbf9a2f8a0f53e545a703d3b043ee1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParNCMesh_1_1ElementSet.html#a4cbf9a2f8a0f53e545a703d3b043ee1f">ref_path</a></td></tr>
+<tr class="separator:a4cbf9a2f8a0f53e545a703d3b043ee1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Uniquely encodes a set of leaf elements in the refinement hierarchy of an <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a>. Can be dumped to a stream, sent to another processor, loaded, and decoded to identify the same set of elements (refinements) in a different but compatible <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, quadrilateral or triangular meshes...">NCMesh</a>. The encoding can optionally include the refinement types needed to reach the leaves, so the element set can be decoded (recreated) even if the receiver has an incomplete tree. </p>
+<div class="textblock"><p>Uniquely encodes a set of leaf elements in the refinement hierarchy of an <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a>. Can be dumped to a stream, sent to another processor, loaded, and decoded to identify the same set of elements (refinements) in a different but compatible <a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a>. The encoding can optionally include the refinement types needed to reach the leaves, so the element set can be decoded (recreated) even if the receiver has an incomplete tree. </p>
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00347">347</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00355">355</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a33a509c581768e1d2ef785cab861a211"></a>
 <div class="memitem">
@@ -191,7 +195,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00350">350</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00358">358</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +213,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02029">2029</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02195">2195</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,7 +232,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02157">2157</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02352">2352</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -270,7 +274,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02125">2125</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02310">2310</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -288,7 +292,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02167">2167</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02362">2362</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -306,7 +310,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02105">2105</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02271">2271</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +336,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02068">2068</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02234">2234</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -368,7 +372,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02053">2053</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02219">2219</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +398,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02044">2044</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02210">2210</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +423,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00361">361</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00369">369</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +441,32 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02173">2173</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02368">2368</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf17bc1c60c8e5d1f288fa7684d44d80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mfem::ParNCMesh::ElementSet::RefPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02292">2292</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -463,7 +492,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00360">360</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00368">368</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -489,7 +518,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02035">2035</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8cpp_source.html#l02201">2201</a> of file <a class="el" href="pncmesh_8cpp_source.html">pncmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +543,7 @@ Protected Attributes</h2></td></tr>
 
 <p>encoded refinement (sub-)trees </p>
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00364">364</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00372">372</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +565,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00366">366</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00374">374</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -558,7 +587,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00365">365</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00373">373</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cbf9a2f8a0f53e545a703d3b043ee1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt;int&gt; mfem::ParNCMesh::ElementSet::ref_path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pncmesh_8hpp_source.html#l00384">384</a> of file <a class="el" href="pncmesh_8hpp_source.html">pncmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -569,7 +620,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:18 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

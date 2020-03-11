@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.0</span>
+   &#160;<span id="projectnumber">v4.1.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -119,9 +119,13 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a159e5480515aa909234daf78250a0cec"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a159e5480515aa909234daf78250a0cec"><td class="memTemplItemLeft" align="right" valign="top">MemoryClass&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a159e5480515aa909234daf78250a0cec">mfem::GetMemoryClass</a> (const Memory&lt; T &gt; &amp;mem, bool on_dev)</td></tr>
+<tr class="memdesc:a159e5480515aa909234daf78250a0cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the memory class to be used by the functions <a class="el" href="namespacemfem.html#a0147997e7a0eb1d6ee4f6641a1c31e08" title="Get a pointer for read access to mem with the mfem::Device&#39;s DeviceMemoryClass, if on_dev = true...">Read()</a>, <a class="el" href="namespacemfem.html#a9c1509c10e81fe9c848891fea56032f9" title="Get a pointer for write access to mem with the mfem::Device&#39;s DeviceMemoryClass, if on_dev = true...">Write()</a>, and <a class="el" href="namespacemfem.html#a5a0acd469def65d7eea4894812d6c64e" title="Get a pointer for read+write access to mem with the mfem::Device&#39;s DeviceMemoryClass, if on_dev = true, or the mfem::Device&#39;s HostMemoryClass, otherwise. ">ReadWrite()</a>, while setting the device use flag in <em>mem</em>, if <em>on_dev</em> is true.  <a href="#a159e5480515aa909234daf78250a0cec">More...</a><br/></td></tr>
+<tr class="separator:a159e5480515aa909234daf78250a0cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0147997e7a0eb1d6ee4f6641a1c31e08"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0147997e7a0eb1d6ee4f6641a1c31e08"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a0147997e7a0eb1d6ee4f6641a1c31e08">mfem::Read</a> (const Memory&lt; T &gt; &amp;mem, int size, bool on_dev=true)</td></tr>
-<tr class="memdesc:a0147997e7a0eb1d6ee4f6641a1c31e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer for read access to <em>mem</em> with the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a> MemoryClass, if <em>on_dev</em> = true, or <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5" title="Host memory; using new[] and delete[]. ">MemoryClass::HOST</a>, otherwise.  <a href="#a0147997e7a0eb1d6ee4f6641a1c31e08">More...</a><br/></td></tr>
+<tr class="memdesc:a0147997e7a0eb1d6ee4f6641a1c31e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer for read access to <em>mem</em> with the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a>'s DeviceMemoryClass, if <em>on_dev</em> = true, or the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a>'s HostMemoryClass, otherwise.  <a href="#a0147997e7a0eb1d6ee4f6641a1c31e08">More...</a><br/></td></tr>
 <tr class="separator:a0147997e7a0eb1d6ee4f6641a1c31e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa451af5d1ff63d0f8112831089414b78"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa451af5d1ff63d0f8112831089414b78"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aa451af5d1ff63d0f8112831089414b78">mfem::HostRead</a> (const Memory&lt; T &gt; &amp;mem, int size)</td></tr>
@@ -129,25 +133,25 @@ Functions</h2></td></tr>
 <tr class="separator:aa451af5d1ff63d0f8112831089414b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1509c10e81fe9c848891fea56032f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9c1509c10e81fe9c848891fea56032f9"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a9c1509c10e81fe9c848891fea56032f9">mfem::Write</a> (Memory&lt; T &gt; &amp;mem, int size, bool on_dev=true)</td></tr>
-<tr class="memdesc:a9c1509c10e81fe9c848891fea56032f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer for write access to <em>mem</em> with the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a> MemoryClass, if <em>on_dev</em> = true, or <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5" title="Host memory; using new[] and delete[]. ">MemoryClass::HOST</a>, otherwise.  <a href="#a9c1509c10e81fe9c848891fea56032f9">More...</a><br/></td></tr>
+<tr class="memdesc:a9c1509c10e81fe9c848891fea56032f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer for write access to <em>mem</em> with the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a>'s DeviceMemoryClass, if <em>on_dev</em> = true, or the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a>'s HostMemoryClass, otherwise.  <a href="#a9c1509c10e81fe9c848891fea56032f9">More...</a><br/></td></tr>
 <tr class="separator:a9c1509c10e81fe9c848891fea56032f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8846553073c431d4a6def62a7a1b1b95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8846553073c431d4a6def62a7a1b1b95"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a8846553073c431d4a6def62a7a1b1b95">mfem::HostWrite</a> (const Memory&lt; T &gt; &amp;mem, int size)</td></tr>
-<tr class="memdesc:a8846553073c431d4a6def62a7a1b1b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to Write(const Memory&lt;T&gt; &amp;mem, int size, false)  <a href="#a8846553073c431d4a6def62a7a1b1b95">More...</a><br/></td></tr>
-<tr class="separator:a8846553073c431d4a6def62a7a1b1b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb93a6e057ffd0d1a15418ffd0dd66e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9cb93a6e057ffd0d1a15418ffd0dd66e"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a9cb93a6e057ffd0d1a15418ffd0dd66e">mfem::HostWrite</a> (Memory&lt; T &gt; &amp;mem, int size)</td></tr>
+<tr class="memdesc:a9cb93a6e057ffd0d1a15418ffd0dd66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to Write(const Memory&lt;T&gt; &amp;mem, int size, false)  <a href="#a9cb93a6e057ffd0d1a15418ffd0dd66e">More...</a><br/></td></tr>
+<tr class="separator:a9cb93a6e057ffd0d1a15418ffd0dd66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a0acd469def65d7eea4894812d6c64e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5a0acd469def65d7eea4894812d6c64e"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a5a0acd469def65d7eea4894812d6c64e">mfem::ReadWrite</a> (Memory&lt; T &gt; &amp;mem, int size, bool on_dev=true)</td></tr>
-<tr class="memdesc:a5a0acd469def65d7eea4894812d6c64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer for read+write access to <em>mem</em> with the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a> MemoryClass, if <em>on_dev</em> = true, or <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5" title="Host memory; using new[] and delete[]. ">MemoryClass::HOST</a>, otherwise.  <a href="#a5a0acd469def65d7eea4894812d6c64e">More...</a><br/></td></tr>
+<tr class="memdesc:a5a0acd469def65d7eea4894812d6c64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer for read+write access to <em>mem</em> with the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a>'s DeviceMemoryClass, if <em>on_dev</em> = true, or the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">mfem::Device</a>'s HostMemoryClass, otherwise.  <a href="#a5a0acd469def65d7eea4894812d6c64e">More...</a><br/></td></tr>
 <tr class="separator:a5a0acd469def65d7eea4894812d6c64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2846cb47a1d9173145d419de8ccea5f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab2846cb47a1d9173145d419de8ccea5f"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ab2846cb47a1d9173145d419de8ccea5f">mfem::HostReadWrite</a> (const Memory&lt; T &gt; &amp;mem, int size)</td></tr>
-<tr class="memdesc:ab2846cb47a1d9173145d419de8ccea5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to ReadWrite(const Memory&lt;T&gt; &amp;mem, int size, false)  <a href="#ab2846cb47a1d9173145d419de8ccea5f">More...</a><br/></td></tr>
-<tr class="separator:ab2846cb47a1d9173145d419de8ccea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ee3b9c30423d603a05229d797d1581"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a50ee3b9c30423d603a05229d797d1581"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a50ee3b9c30423d603a05229d797d1581">mfem::HostReadWrite</a> (Memory&lt; T &gt; &amp;mem, int size)</td></tr>
+<tr class="memdesc:a50ee3b9c30423d603a05229d797d1581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to ReadWrite(Memory&lt;T&gt; &amp;mem, int size, false)  <a href="#a50ee3b9c30423d603a05229d797d1581">More...</a><br/></td></tr>
+<tr class="separator:a50ee3b9c30423d603a05229d797d1581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 24 2019 19:43:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
