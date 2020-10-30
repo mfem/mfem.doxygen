@@ -20,9 +20,18 @@ var searchData=
   ['finiteelement',['FiniteElement',['../classmfem_1_1FiniteElement.html',1,'mfem']]],
   ['finiteelementcollection',['FiniteElementCollection',['../classmfem_1_1FiniteElementCollection.html',1,'mfem']]],
   ['finiteelementspace',['FiniteElementSpace',['../classmfem_1_1FiniteElementSpace.html',1,'mfem']]],
+  ['finiteelementspacehierarchy',['FiniteElementSpaceHierarchy',['../classmfem_1_1FiniteElementSpaceHierarchy.html',1,'mfem']]],
   ['forwardeulersolver',['ForwardEulerSolver',['../classmfem_1_1ForwardEulerSolver.html',1,'mfem']]],
   ['foxgoodwinsolver',['FoxGoodwinSolver',['../classmfem_1_1FoxGoodwinSolver.html',1,'mfem']]],
   ['fstream',['fstream',['../classstrict__fstream_1_1fstream.html',1,'strict_fstream']]],
+  ['functional',['Functional',['../classGecko_1_1Functional.html',1,'Gecko']]],
+  ['functionalarithmetic',['FunctionalArithmetic',['../classGecko_1_1FunctionalArithmetic.html',1,'Gecko']]],
+  ['functionalgeometric',['FunctionalGeometric',['../classGecko_1_1FunctionalGeometric.html',1,'Gecko']]],
+  ['functionalharmonic',['FunctionalHarmonic',['../classGecko_1_1FunctionalHarmonic.html',1,'Gecko']]],
+  ['functionalmaximum',['FunctionalMaximum',['../classGecko_1_1FunctionalMaximum.html',1,'Gecko']]],
+  ['functionalquasiconvex',['FunctionalQuasiconvex',['../classGecko_1_1FunctionalQuasiconvex.html',1,'Gecko']]],
+  ['functionalrms',['FunctionalRMS',['../classGecko_1_1FunctionalRMS.html',1,'Gecko']]],
+  ['functionalsmr',['FunctionalSMR',['../classGecko_1_1FunctionalSMR.html',1,'Gecko']]],
   ['functioncoefficient',['FunctionCoefficient',['../classmfem_1_1FunctionCoefficient.html',1,'mfem']]],
   ['functionspace',['FunctionSpace',['../classmfem_1_1FunctionSpace.html',1,'mfem']]]
 ];

@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -96,7 +97,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classmfem_1_1ParPumiMesh-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">mfem::ParPumiMesh Class Reference</div>  </div>
@@ -122,24 +122,36 @@ Collaboration diagram for mfem::ParPumiMesh:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaef6d95487d9b04466394533a2fd013c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#aaef6d95487d9b04466394533a2fd013c">ParPumiMesh</a> (MPI_Comm comm, apf::Mesh2 *apf_mesh)</td></tr>
-<tr class="memdesc:aaef6d95487d9b04466394533a2fd013c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a parallel MFEM mesh from a parallel PUMI mesh.  <a href="#aaef6d95487d9b04466394533a2fd013c">More...</a><br/></td></tr>
-<tr class="separator:aaef6d95487d9b04466394533a2fd013c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad19bb354f46fc4a0784fc34a4b98b166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#ad19bb354f46fc4a0784fc34a4b98b166">FieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *Vel, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *Pr, apf::Field *VelField, apf::Field *PrField, apf::Field *VelMagField)</td></tr>
-<tr class="memdesc:ad19bb354f46fc4a0784fc34a4b98b166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer field from MFEM mesh to PUMI mesh [Mixed].  <a href="#ad19bb354f46fc4a0784fc34a4b98b166">More...</a><br/></td></tr>
-<tr class="separator:ad19bb354f46fc4a0784fc34a4b98b166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e86badadcad1b0f3afcec5cc2398586"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a1e86badadcad1b0f3afcec5cc2398586">FieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *Pr, apf::Field *PrField, apf::Field *PrMagField)</td></tr>
-<tr class="memdesc:a1e86badadcad1b0f3afcec5cc2398586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer field from MFEM mesh to PUMI mesh [Scalar].  <a href="#a1e86badadcad1b0f3afcec5cc2398586">More...</a><br/></td></tr>
-<tr class="separator:a1e86badadcad1b0f3afcec5cc2398586"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ddec0f25a5da4993b2ec36b7992d0ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a0ddec0f25a5da4993b2ec36b7992d0ff">VectorFieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *Vel, apf::Field *VelField, apf::Field *VelMagField)</td></tr>
-<tr class="memdesc:a0ddec0f25a5da4993b2ec36b7992d0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer field from MFEM mesh to PUMI mesh [<a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>].  <a href="#a0ddec0f25a5da4993b2ec36b7992d0ff">More...</a><br/></td></tr>
-<tr class="separator:a0ddec0f25a5da4993b2ec36b7992d0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9098a89a9410d3d53026f0b726dba62d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a9098a89a9410d3d53026f0b726dba62d">ParPumiMesh</a> (MPI_Comm comm, apf::Mesh2 *apf_mesh, int refine=1, bool fix_orientation=true)</td></tr>
+<tr class="memdesc:a9098a89a9410d3d53026f0b726dba62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a parallel MFEM mesh from a parallel PUMI mesh.  <a href="#a9098a89a9410d3d53026f0b726dba62d">More...</a><br/></td></tr>
+<tr class="separator:a9098a89a9410d3d53026f0b726dba62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6c72f1e7333ecd5369c9845628945d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a8b6c72f1e7333ecd5369c9845628945d">RotationPUMItoMFEM</a> (apf::Mesh2 *apf_mesh, apf::MeshEntity *tet, int elemId)</td></tr>
+<tr class="memdesc:a8b6c72f1e7333ecd5369c9845628945d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PUMI-to-MFEM permutation (aka rotation, aka orientation)  <a href="#a8b6c72f1e7333ecd5369c9845628945d">More...</a><br/></td></tr>
+<tr class="separator:a8b6c72f1e7333ecd5369c9845628945d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79b4730d23921950e9cfb5c625dd30e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#ad79b4730d23921950e9cfb5c625dd30e">ParentXisPUMItoMFEM</a> (apf::Mesh2 *apf_mesh, apf::MeshEntity *tet, int elemId, apf::NewArray&lt; apf::Vector3 &gt; &amp;pumi_xi, bool checkOrientation=true)</td></tr>
+<tr class="memdesc:ad79b4730d23921950e9cfb5c625dd30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the parent coordinate from PUMI to MFEM.  <a href="#ad79b4730d23921950e9cfb5c625dd30e">More...</a><br/></td></tr>
+<tr class="separator:ad79b4730d23921950e9cfb5c625dd30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6f70e071cbaee9ade1c912e4f3ca00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a6c6f70e071cbaee9ade1c912e4f3ca00">ParentXisMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, int elemId, apf::MeshEntity *tet, const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;mfem_xi, apf::NewArray&lt; apf::Vector3 &gt; &amp;pumi_xi, bool checkOrientation=true)</td></tr>
+<tr class="memdesc:a6c6f70e071cbaee9ade1c912e4f3ca00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the parent coordinate from MFEM to PUMI.  <a href="#a6c6f70e071cbaee9ade1c912e4f3ca00">More...</a><br/></td></tr>
+<tr class="separator:a6c6f70e071cbaee9ade1c912e4f3ca00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de367232c15337536e968132c66af70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a1de367232c15337536e968132c66af70">FieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *grid_vel, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *grid_pr, apf::Field *vel_field, apf::Field *pr_field, apf::Field *vel_mag_field)</td></tr>
+<tr class="memdesc:a1de367232c15337536e968132c66af70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer field from MFEM mesh to PUMI mesh [Mixed].  <a href="#a1de367232c15337536e968132c66af70">More...</a><br/></td></tr>
+<tr class="separator:a1de367232c15337536e968132c66af70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911cdb6e4a06067b9668873cfe39d218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a911cdb6e4a06067b9668873cfe39d218">FieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *grid_pr, apf::Field *pr_field, apf::Field *pr_mag_field)</td></tr>
+<tr class="memdesc:a911cdb6e4a06067b9668873cfe39d218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer field from MFEM mesh to PUMI mesh [Scalar].  <a href="#a911cdb6e4a06067b9668873cfe39d218">More...</a><br/></td></tr>
+<tr class="separator:a911cdb6e4a06067b9668873cfe39d218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a088ce0058f58c187ad132daaad8bad93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a088ce0058f58c187ad132daaad8bad93">VectorFieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *grid_vel, apf::Field *vel_field, apf::Field *vel_mag_field)</td></tr>
+<tr class="memdesc:a088ce0058f58c187ad132daaad8bad93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer field from MFEM mesh to PUMI mesh [<a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>].  <a href="#a088ce0058f58c187ad132daaad8bad93">More...</a><br/></td></tr>
+<tr class="separator:a088ce0058f58c187ad132daaad8bad93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe9fce10e09795b02390b6f858c89b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#affe9fce10e09795b02390b6f858c89b0">NedelecFieldMFEMtoPUMI</a> (apf::Mesh2 *apf_mesh, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *gf, apf::Field *nedelec_field)</td></tr>
+<tr class="memdesc:affe9fce10e09795b02390b6f858c89b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer Nedelec field from MFEM mesh to PUMI mesh [<a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>].  <a href="#affe9fce10e09795b02390b6f858c89b0">More...</a><br/></td></tr>
+<tr class="separator:affe9fce10e09795b02390b6f858c89b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6c1afc8dae146659581225ca3122a2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#ab6c1afc8dae146659581225ca3122a2a">UpdateMesh</a> (const <a class="el" href="classmfem_1_1ParMesh.html">ParMesh</a> *AdaptedpMesh)</td></tr>
 <tr class="memdesc:ab6c1afc8dae146659581225ca3122a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the mesh after adaptation.  <a href="#ab6c1afc8dae146659581225ca3122a2a">More...</a><br/></td></tr>
 <tr class="separator:ab6c1afc8dae146659581225ca3122a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acea905269e8751cfcaed24e19f466472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#acea905269e8751cfcaed24e19f466472">FieldPUMItoMFEM</a> (apf::Mesh2 *apf_mesh, apf::Field *ScalarField, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *Pr)</td></tr>
-<tr class="memdesc:acea905269e8751cfcaed24e19f466472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a field from PUMI to MFEM after mesh adapt [Scalar].  <a href="#acea905269e8751cfcaed24e19f466472">More...</a><br/></td></tr>
-<tr class="separator:acea905269e8751cfcaed24e19f466472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003ed7789a14b31521b2b067121c9a04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a003ed7789a14b31521b2b067121c9a04">FieldPUMItoMFEM</a> (apf::Mesh2 *apf_mesh, apf::Field *field, <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *grid)</td></tr>
+<tr class="memdesc:a003ed7789a14b31521b2b067121c9a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a field from PUMI to MFEM after mesh adapt [Scalar and <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>].  <a href="#a003ed7789a14b31521b2b067121c9a04">More...</a><br/></td></tr>
+<tr class="separator:a003ed7789a14b31521b2b067121c9a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f32ab6f84030373edc80f706749422e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a1f32ab6f84030373edc80f706749422e">~ParPumiMesh</a> ()</td></tr>
 <tr class="separator:a1f32ab6f84030373edc80f706749422e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1ParMesh"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1ParMesh')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></td></tr>
@@ -164,6 +176,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6fe3936d7a51f4b3573e09a7c6f0903e inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a088e44810ba0277a3ef58052b644aa65 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a088e44810ba0277a3ef58052b644aa65">GetMyRank</a> () const </td></tr>
 <tr class="separator:a088e44810ba0277a3ef58052b644aa65 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5710cb3f7e03e0e29884c6c1ec2336de inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a5710cb3f7e03e0e29884c6c1ec2336de">GetLocalElementNum</a> (long global_element_num) const </td></tr>
+<tr class="separator:a5710cb3f7e03e0e29884c6c1ec2336de inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9013ad057b45d6f81d35a9bceeed17c8 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a9013ad057b45d6f81d35a9bceeed17c8">GetGlobalElementNum</a> (int local_element_num) const </td></tr>
+<tr class="memdesc:a9013ad057b45d6f81d35a9bceeed17c8 inherit pub_methods_classmfem_1_1ParMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map a local element number to a global element number.  <a href="#a9013ad057b45d6f81d35a9bceeed17c8">More...</a><br/></td></tr>
+<tr class="separator:a9013ad057b45d6f81d35a9bceeed17c8 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acad8338cf336920b5a0030cbd1de3f34 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#acad8338cf336920b5a0030cbd1de3f34">GetNGroups</a> () const </td></tr>
 <tr class="separator:acad8338cf336920b5a0030cbd1de3f34 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17e8b728656d4da0fd070a43bf3d1112 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a17e8b728656d4da0fd070a43bf3d1112">GenerateOffsets</a> (int N, HYPRE_Int loc_sizes[], <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; HYPRE_Int &gt; *offsets[]) const </td></tr>
@@ -184,6 +201,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3fc6dbc8e0f0d3118f67a5276b5014fa inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f90bec4d091ae5adc160fb74d89ca1 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ae6f90bec4d091ae5adc160fb74d89ca1">GetSharedFaceTransformations</a> (int sf, bool fill2=true)</td></tr>
 <tr class="separator:ae6f90bec4d091ae5adc160fb74d89ca1 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd96bade3acfe385bec8cdb2b649a018 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#acd96bade3acfe385bec8cdb2b649a018">GetFaceNbrElementTransformation</a> (int i)</td></tr>
+<tr class="separator:acd96bade3acfe385bec8cdb2b649a018 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc1182af5d97959e831ae78462720156 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#adc1182af5d97959e831ae78462720156">GetNSharedFaces</a> () const </td></tr>
 <tr class="memdesc:adc1182af5d97959e831ae78462720156 inherit pub_methods_classmfem_1_1ParMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of shared faces (3D), edges (2D), vertices (1D)  <a href="#adc1182af5d97959e831ae78462720156">More...</a><br/></td></tr>
 <tr class="separator:adc1182af5d97959e831ae78462720156 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +221,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a54b3f168f4380ebfe4d70e7de234a3bb inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484f9cd829aeb465bdd4837d6080da5e inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a484f9cd829aeb465bdd4837d6080da5e">Print</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>) const </td></tr>
 <tr class="separator:a484f9cd829aeb465bdd4837d6080da5e inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc7d75f212e59d4bddbb2a2c1c5f0c8 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#adbc7d75f212e59d4bddbb2a2c1c5f0c8">Print</a> (<a class="el" href="classmfem_1_1adios2stream.html">adios2stream</a> &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
+<tr class="separator:adbc7d75f212e59d4bddbb2a2c1c5f0c8 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac703e9661f8aa3e37ba458bf6e853292 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ac703e9661f8aa3e37ba458bf6e853292">PrintXG</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>) const </td></tr>
 <tr class="separator:ac703e9661f8aa3e37ba458bf6e853292 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee2f3bd7eb6d484b36cfedd481d349d inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a6ee2f3bd7eb6d484b36cfedd481d349d">PrintAsOne</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>)</td></tr>
@@ -219,6 +240,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52c35d5d3a884affdcf50dca8bd095d1 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a52c35d5d3a884affdcf50dca8bd095d1">ParPrint</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
 <tr class="memdesc:a52c35d5d3a884affdcf50dca8bd095d1 inherit pub_methods_classmfem_1_1ParMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the mesh in a parallel mesh format.  <a href="#a52c35d5d3a884affdcf50dca8bd095d1">More...</a><br/></td></tr>
 <tr class="separator:a52c35d5d3a884affdcf50dca8bd095d1 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbedd02945b264aca720fceeeaef8bbe inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#acbedd02945b264aca720fceeeaef8bbe">PrintVTU</a> (std::string pathname, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0, bool bdr=false)</td></tr>
+<tr class="separator:acbedd02945b264aca720fceeeaef8bbe inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac45000bb042ab1cac2be7a8d09a1c504 inherit pub_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ac45000bb042ab1cac2be7a8d09a1c504">FindPoints</a> (<a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;point_mat, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elem_ids, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &gt; &amp;ips, bool warn=true, <a class="el" href="classmfem_1_1InverseElementTransformation.html">InverseElementTransformation</a> *inv_trans=NULL)</td></tr>
 <tr class="memdesc:ac45000bb042ab1cac2be7a8d09a1c504 inherit pub_methods_classmfem_1_1ParMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the ids of the elements that contain the given points, and their corresponding reference coordinates.  <a href="#ac45000bb042ab1cac2be7a8d09a1c504">More...</a><br/></td></tr>
 <tr class="separator:ac45000bb042ab1cac2be7a8d09a1c504 inherit pub_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,8 +280,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d5f2a1b3e88520e2063feac1ec006ab inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5d5f2a1b3e88520e2063feac1ec006ab">FinalizeTopology</a> (bool generate_bdr=true)</td></tr>
 <tr class="memdesc:a5d5f2a1b3e88520e2063feac1ec006ab inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize the construction of the secondary topology (connectivity) data of a <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>.  <a href="#a5d5f2a1b3e88520e2063feac1ec006ab">More...</a><br/></td></tr>
 <tr class="separator:a5d5f2a1b3e88520e2063feac1ec006ab inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368a9423113a4efb78c542758a87d0e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a368a9423113a4efb78c542758a87d0e3">GetGeckoElementOrdering</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering, int iterations=1, int window=2, int period=1, int seed=0)</td></tr>
-<tr class="separator:a368a9423113a4efb78c542758a87d0e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3835cd0ffbe86a2e3f2cf63eaa83138 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad3835cd0ffbe86a2e3f2cf63eaa83138">GetGeckoElementOrdering</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering, int iterations=4, int window=4, int period=2, int seed=0, bool verbose=false, double time_limit=0)</td></tr>
+<tr class="separator:ad3835cd0ffbe86a2e3f2cf63eaa83138 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa55f419dcf535780b56285ac17b2c39f inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa55f419dcf535780b56285ac17b2c39f">GetHilbertElementOrdering</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering)</td></tr>
 <tr class="separator:aa55f419dcf535780b56285ac17b2c39f inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c20ae2bb169beb667dd3321f5c5bce8 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a6c20ae2bb169beb667dd3321f5c5bce8">ReorderElements</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering, bool reorder_vertices=true)</td></tr>
@@ -544,7 +567,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a242e73d6b3c5a08f583be64337d39d51 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaefc2612b26b0e4a6de3ca00d64c0851 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aaefc2612b26b0e4a6de3ca00d64c0851">GeneralRefinement</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;el_to_refine, int nonconforming=-1, int nc_limit=0)</td></tr>
 <tr class="separator:aaefc2612b26b0e4a6de3ca00d64c0851 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a78aef6a688b0e30e5ddd4c594cf372ed">RandomRefinement</a> (double prob, bool aniso=false, int nonconforming=-1, int nc_limit=0)</td></tr>
+<tr class="memitem:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a78aef6a688b0e30e5ddd4c594cf372ed">RandomRefinement</a> (double <a class="el" href="ex25p_8cpp.html#ad4a94974c059a3834c510611331e5ca0">prob</a>, bool aniso=false, int nonconforming=-1, int nc_limit=0)</td></tr>
 <tr class="memdesc:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine each element with given probability. Uses GeneralRefinement.  <a href="#a78aef6a688b0e30e5ddd4c594cf372ed">More...</a><br/></td></tr>
 <tr class="separator:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81f424e53aff1017c1b36e34aea52511 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a81f424e53aff1017c1b36e34aea52511">RefineAtVertex</a> (const <a class="el" href="classmfem_1_1Vertex.html">Vertex</a> &amp;vert, double eps=0.0, int nonconforming=-1)</td></tr>
@@ -576,10 +599,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae0739a8d419536651ba0a22694fcd7b7 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeb41cd6df28d1d9351cb4cbf9c35a2a inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#adeb41cd6df28d1d9351cb4cbf9c35a2a">PrintVTK</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int ref, int field_data=0)</td></tr>
 <tr class="separator:adeb41cd6df28d1d9351cb4cbf9c35a2a inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac67435e50c0e20ff695c309eb06f54a0 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ac67435e50c0e20ff695c309eb06f54a0">PrintVTU</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int ref=1, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0)</td></tr>
-<tr class="separator:ac67435e50c0e20ff695c309eb06f54a0 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f48de9274f0cefed1edbbcf198e52f6 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a4f48de9274f0cefed1edbbcf198e52f6">PrintVTU</a> (std::string fname, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0)</td></tr>
-<tr class="separator:a4f48de9274f0cefed1edbbcf198e52f6 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7830040f4679102c682f933563cf545b inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a7830040f4679102c682f933563cf545b">PrintVTU</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int ref=1, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0, bool bdr_elements=false)</td></tr>
+<tr class="separator:a7830040f4679102c682f933563cf545b inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa086182bab5e6c3685aba2815db44ca4 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa086182bab5e6c3685aba2815db44ca4">PrintBdrVTU</a> (std::string fname, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0)</td></tr>
+<tr class="separator:aa086182bab5e6c3685aba2815db44ca4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f57b75ca04a92bf52c2c398a2fbcd9 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a14f57b75ca04a92bf52c2c398a2fbcd9">GetElementColoring</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;colors, int el0=0)</td></tr>
 <tr class="separator:a14f57b75ca04a92bf52c2c398a2fbcd9 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f2e04303a4931b4da081f1f5fcc7ec8 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2f2e04303a4931b4da081f1f5fcc7ec8">PrintWithPartitioning</a> (int *partitioning, std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int elem_attr=0) const </td></tr>
@@ -594,7 +617,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8f129df1053897eb48a358b98a9ce31f inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac564ba7b08adfad5aadbe24cd96bb8a1 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ac564ba7b08adfad5aadbe24cd96bb8a1">ScaleElements</a> (double sf)</td></tr>
 <tr class="separator:ac564ba7b08adfad5aadbe24cd96bb8a1 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb0d76e6b659cf5b5380dad50b6e2853 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aeb0d76e6b659cf5b5380dad50b6e2853">Transform</a> (void(*f)(const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;))</td></tr>
+<tr class="memitem:aeb0d76e6b659cf5b5380dad50b6e2853 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aeb0d76e6b659cf5b5380dad50b6e2853">Transform</a> (void(*<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>)(const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;))</td></tr>
 <tr class="separator:aeb0d76e6b659cf5b5380dad50b6e2853 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96590a6c47bdc1b6c0289c71755c4d66 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a96590a6c47bdc1b6c0289c71755c4d66">Transform</a> (<a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;deformation)</td></tr>
 <tr class="separator:a96590a6c47bdc1b6c0289c71755c4d66 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -610,6 +633,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af9c36780cf75d57cebbb92ab4ea20dd4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006667bb20af5915348cf9c7d7db7cfc inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a006667bb20af5915348cf9c7d7db7cfc">GetElementVolume</a> (int i)</td></tr>
 <tr class="separator:a006667bb20af5915348cf9c7d7db7cfc inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9752bc7b7140fecb7733a9742c96b1 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aba9752bc7b7140fecb7733a9742c96b1">GetElementCenter</a> (int i, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;center)</td></tr>
+<tr class="separator:aba9752bc7b7140fecb7733a9742c96b1 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66adc8ca8fb91fbe3684ae31fd1b3255 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a66adc8ca8fb91fbe3684ae31fd1b3255">GetBoundingBox</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;min, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;max, int ref=2)</td></tr>
 <tr class="memdesc:a66adc8ca8fb91fbe3684ae31fd1b3255 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum and maximum corners of the mesh bounding box.  <a href="#a66adc8ca8fb91fbe3684ae31fd1b3255">More...</a><br/></td></tr>
 <tr class="separator:a66adc8ca8fb91fbe3684ae31fd1b3255 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -628,37 +653,60 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b6c8e426828c7f0d42c05fe350bbe59 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a085464fbf2a801f2a98a724af938b5ba inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Element.html">Element</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a085464fbf2a801f2a98a724af938b5ba">NewElement</a> (int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>)</td></tr>
 <tr class="separator:a085464fbf2a801f2a98a724af938b5ba inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe28779bbf2ddacf27e8d74cf3ac6087 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">AddVertex</a> (const double *)</td></tr>
-<tr class="separator:abe28779bbf2ddacf27e8d74cf3ac6087 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a28fc4b9763fb49a136c46e4ee6f33c inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1a28fc4b9763fb49a136c46e4ee6f33c">AddSegment</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a1a28fc4b9763fb49a136c46e4ee6f33c inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cefc9878092cdd4a017d5e4bab96918 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5cefc9878092cdd4a017d5e4bab96918">AddTri</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a5cefc9878092cdd4a017d5e4bab96918 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00e79fa33fedf9714806651b46d6a81c inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a00e79fa33fedf9714806651b46d6a81c">AddTriangle</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a00e79fa33fedf9714806651b46d6a81c inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d4aaa3646cd2868f1ead0d7cfed86f2 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3d4aaa3646cd2868f1ead0d7cfed86f2">AddQuad</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a3d4aaa3646cd2868f1ead0d7cfed86f2 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bfbe43c0b5841bee8e90d65cbff6da4 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2bfbe43c0b5841bee8e90d65cbff6da4">AddTet</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a2bfbe43c0b5841bee8e90d65cbff6da4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430f319c21f14ee0301de535eb949255 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a430f319c21f14ee0301de535eb949255">AddWedge</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a430f319c21f14ee0301de535eb949255 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcdf2d9a98ea1cb20ccfeddc79075918 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#abcdf2d9a98ea1cb20ccfeddc79075918">AddHex</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:abcdf2d9a98ea1cb20ccfeddc79075918 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9950e1768fac1c8ee0a54f219c4a9ba inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">AddVertex</a> (double x, double y=0.0, double z=0.0)</td></tr>
+<tr class="separator:ad9950e1768fac1c8ee0a54f219c4a9ba inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0528b0d460641fb20527a1353a03092 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa0528b0d460641fb20527a1353a03092">AddVertex</a> (const double *coords)</td></tr>
+<tr class="separator:aa0528b0d460641fb20527a1353a03092 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83cdaa00a258633c9d09419d3a627970 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a83cdaa00a258633c9d09419d3a627970">AddVertexParents</a> (int i, int p1, int p2)</td></tr>
+<tr class="memdesc:a83cdaa00a258633c9d09419d3a627970 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark vertex <em>i</em> as non-conforming, with parent vertices <em>p1</em> and <em>p2</em>.  <a href="#a83cdaa00a258633c9d09419d3a627970">More...</a><br/></td></tr>
+<tr class="separator:a83cdaa00a258633c9d09419d3a627970 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122d0897fc1f61d6d3e5f98a48442eb9 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a122d0897fc1f61d6d3e5f98a48442eb9">AddSegment</a> (int v1, int v2, int attr=1)</td></tr>
+<tr class="separator:a122d0897fc1f61d6d3e5f98a48442eb9 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e0e246837652a4a0ed5a6fa0e7228b inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a05e0e246837652a4a0ed5a6fa0e7228b">AddSegment</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a05e0e246837652a4a0ed5a6fa0e7228b inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4755087b6a10d3dd3a05d05390d3562e inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a4755087b6a10d3dd3a05d05390d3562e">AddTriangle</a> (int v1, int v2, int v3, int attr=1)</td></tr>
+<tr class="separator:a4755087b6a10d3dd3a05d05390d3562e inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adddf671adddd53108aa7b1129743ce51 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#adddf671adddd53108aa7b1129743ce51">AddTriangle</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:adddf671adddd53108aa7b1129743ce51 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28276e4d5e0bd9869aad0a5eb733ca34 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a28276e4d5e0bd9869aad0a5eb733ca34">AddTri</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a28276e4d5e0bd9869aad0a5eb733ca34 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5fa142fea0b8b987b62093217c2ff1 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2b5fa142fea0b8b987b62093217c2ff1">AddQuad</a> (int v1, int v2, int v3, int v4, int attr=1)</td></tr>
+<tr class="separator:a2b5fa142fea0b8b987b62093217c2ff1 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fe5f724c5d68c9c1ddd18d938ccf17 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a92fe5f724c5d68c9c1ddd18d938ccf17">AddQuad</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a92fe5f724c5d68c9c1ddd18d938ccf17 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6675ff9b61ab5482719380789f1c3aa6 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a6675ff9b61ab5482719380789f1c3aa6">AddTet</a> (int v1, int v2, int v3, int v4, int attr=1)</td></tr>
+<tr class="separator:a6675ff9b61ab5482719380789f1c3aa6 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2d1272dfde6f48f586b443dca511b7 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5e2d1272dfde6f48f586b443dca511b7">AddTet</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a5e2d1272dfde6f48f586b443dca511b7 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312f687de40dca4c6dc9159be8dea1e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a312f687de40dca4c6dc9159be8dea1e3">AddWedge</a> (int v1, int v2, int v3, int v4, int v5, int v6, int attr=1)</td></tr>
+<tr class="separator:a312f687de40dca4c6dc9159be8dea1e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ba3c242549f474f2a29a834449b097 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af1ba3c242549f474f2a29a834449b097">AddWedge</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:af1ba3c242549f474f2a29a834449b097 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7f6391e632b8acb1d3edadb805102a inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#abc7f6391e632b8acb1d3edadb805102a">AddHex</a> (int v1, int v2, int v3, int v4, int v5, int v6, int v7, int v8, int attr=1)</td></tr>
+<tr class="separator:abc7f6391e632b8acb1d3edadb805102a inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860e8fd136897e6172ffc0a5c1f64f5a inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a860e8fd136897e6172ffc0a5c1f64f5a">AddHex</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a860e8fd136897e6172ffc0a5c1f64f5a inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add065f637bf3bacb430a5835d98c45fb inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#add065f637bf3bacb430a5835d98c45fb">AddHexAsTets</a> (const int *vi, int attr=1)</td></tr>
 <tr class="separator:add065f637bf3bacb430a5835d98c45fb inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39b817f304b7d346634ac6c38e46c20 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ae39b817f304b7d346634ac6c38e46c20">AddHexAsWedges</a> (const int *vi, int attr=1)</td></tr>
 <tr class="separator:ae39b817f304b7d346634ac6c38e46c20 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68750229940dc13b9d914ea01cd98ef3 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a68750229940dc13b9d914ea01cd98ef3">AddElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
-<tr class="memdesc:a68750229940dc13b9d914ea01cd98ef3 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parameter <em>elem</em> should be allocated using the <a class="el" href="classmfem_1_1Mesh.html#a085464fbf2a801f2a98a724af938b5ba">NewElement()</a> method.  <a href="#a68750229940dc13b9d914ea01cd98ef3">More...</a><br/></td></tr>
-<tr class="separator:a68750229940dc13b9d914ea01cd98ef3 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b90dbc229329e9ea5808e53fb7c5608 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1b90dbc229329e9ea5808e53fb7c5608">AddBdrElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
-<tr class="separator:a1b90dbc229329e9ea5808e53fb7c5608 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6a866f0fdb25eb6b3f2281fa9c79b2 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3d6a866f0fdb25eb6b3f2281fa9c79b2">AddBdrSegment</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a3d6a866f0fdb25eb6b3f2281fa9c79b2 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa1500f32ab77d4156b3837cf14ae79 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#affa1500f32ab77d4156b3837cf14ae79">AddBdrTriangle</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:affa1500f32ab77d4156b3837cf14ae79 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff3f5c8145ec249b47326f04d709234 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2ff3f5c8145ec249b47326f04d709234">AddBdrQuad</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a2ff3f5c8145ec249b47326f04d709234 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0ebfbab71ebba875e7b45223899167 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a7b0ebfbab71ebba875e7b45223899167">AddElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
+<tr class="memdesc:a7b0ebfbab71ebba875e7b45223899167 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parameter <em>elem</em> should be allocated using the <a class="el" href="classmfem_1_1Mesh.html#a085464fbf2a801f2a98a724af938b5ba">NewElement()</a> method.  <a href="#a7b0ebfbab71ebba875e7b45223899167">More...</a><br/></td></tr>
+<tr class="separator:a7b0ebfbab71ebba875e7b45223899167 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143ec47e53707b29accd8994058830b9 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a143ec47e53707b29accd8994058830b9">AddBdrElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
+<tr class="separator:a143ec47e53707b29accd8994058830b9 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ce98b7ed0452cbf4bfde3b8f04a0c7 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a78ce98b7ed0452cbf4bfde3b8f04a0c7">AddBdrSegment</a> (int v1, int v2, int attr=1)</td></tr>
+<tr class="separator:a78ce98b7ed0452cbf4bfde3b8f04a0c7 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13297de7ba2d6f13f5f56acb0836e79d inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a13297de7ba2d6f13f5f56acb0836e79d">AddBdrSegment</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a13297de7ba2d6f13f5f56acb0836e79d inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2abf2f67b36ea9c7812d439cde7808e inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa2abf2f67b36ea9c7812d439cde7808e">AddBdrTriangle</a> (int v1, int v2, int v3, int attr=1)</td></tr>
+<tr class="separator:aa2abf2f67b36ea9c7812d439cde7808e inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b9762208dd505999bfc4c8f5d6001c inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab4b9762208dd505999bfc4c8f5d6001c">AddBdrTriangle</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:ab4b9762208dd505999bfc4c8f5d6001c inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc124a3649da13fba481c724d8d7032 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1dc124a3649da13fba481c724d8d7032">AddBdrQuad</a> (int v1, int v2, int v3, int v4, int attr=1)</td></tr>
+<tr class="separator:a1dc124a3649da13fba481c724d8d7032 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3854131e552758a9908311d1043e8dfd inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3854131e552758a9908311d1043e8dfd">AddBdrQuad</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a3854131e552758a9908311d1043e8dfd inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a355361d950038e4d4d8ea52f66fbb1b4 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a355361d950038e4d4d8ea52f66fbb1b4">AddBdrQuadAsTriangles</a> (const int *vi, int attr=1)</td></tr>
 <tr class="separator:a355361d950038e4d4d8ea52f66fbb1b4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0cc30875ce9544e6b0205b1f8d67f80 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab0cc30875ce9544e6b0205b1f8d67f80">GenerateBoundaryElements</a> ()</td></tr>
@@ -688,13 +736,90 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6c9ef71e9f4156291f68cf3a42a70ce inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab6c9ef71e9f4156291f68cf3a42a70ce">DegreeElevate</a> (int rel_degree, int degree=16)</td></tr>
 <tr class="separator:ab6c9ef71e9f4156291f68cf3a42a70ce inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a58ca131dc10d7f752b44a5e4aacc0ae9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Element.html">Element</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParPumiMesh.html#a58ca131dc10d7f752b44a5e4aacc0ae9">ReadElement</a> (apf::MeshEntity *Ent, const int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>, apf::Downward Verts, const int Attr, apf::Numbering *vert_num)</td></tr>
-<tr class="separator:a58ca131dc10d7f752b44a5e4aacc0ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
+<tr class="memitem:a2fd34bafce89dcad12039f80760c294b inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294b">Operation</a> { <a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294baaea4d1acdc8d15ed86f0f809243d0456">NONE</a>, 
+<a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294ba691c033cad8c39ea9637b56e86fa167e">REFINE</a>, 
+<a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294baa1fafee4d375682ea8c579adfbaffd61">DEREFINE</a>, 
+<a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294ba0ad85359958a23db9b0e91fb5ecf521d">REBALANCE</a>
+ }</td></tr>
+<tr class="separator:a2fd34bafce89dcad12039f80760c294b inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c7787f16f6841e738cca633696e26a inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
+&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805a8f7e0d60f1bd0d6fb536dd2ab2536ed5">Geometry::SEGMENT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a53c7787f16f6841e738cca633696e26a">seg_t</a></td></tr>
+<tr class="separator:a53c7787f16f6841e738cca633696e26a inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7577d4a8ba9d7064b07eaeaaa39d1e99 inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
+&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805aa33f4004c01f4f9f4a1763d73f97c88c">Geometry::TRIANGLE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a7577d4a8ba9d7064b07eaeaaa39d1e99">tri_t</a></td></tr>
+<tr class="separator:a7577d4a8ba9d7064b07eaeaaa39d1e99 inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b968e12d2572af409b6410ffbdd3a5 inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
+&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805abbe96d7ec4feeeeaf8fcb297e3f196ed">Geometry::SQUARE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a58b968e12d2572af409b6410ffbdd3a5">quad_t</a></td></tr>
+<tr class="separator:a58b968e12d2572af409b6410ffbdd3a5 inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018f6f6b6714e5f4ea3923db27858a90 inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
+&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805a1038282255f14f1056c8cde9247b0864">Geometry::TETRAHEDRON</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a018f6f6b6714e5f4ea3923db27858a90">tet_t</a></td></tr>
+<tr class="separator:a018f6f6b6714e5f4ea3923db27858a90 inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705b3e9dfdc01c8d3332b750f31beccd inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
+&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805ac812b0ab34c8feda27273aeb7d9f6cfb">Geometry::CUBE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a705b3e9dfdc01c8d3332b750f31beccd">hex_t</a></td></tr>
+<tr class="separator:a705b3e9dfdc01c8d3332b750f31beccd inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556a733e5aff0164097f65920573fa0c inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
+&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805ae1d2a82c44cce8bd65fa68ac3a8788f3">Geometry::PRISM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a556a733e5aff0164097f65920573fa0c">pri_t</a></td></tr>
+<tr class="separator:a556a733e5aff0164097f65920573fa0c inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
+<tr class="memitem:a1d2e8f696ea28c4ed0dc738de6bcd009 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1d2e8f696ea28c4ed0dc738de6bcd009">GetTransformationFEforElementType</a> (<a class="el" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a>)</td></tr>
+<tr class="separator:a1d2e8f696ea28c4ed0dc738de6bcd009 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8e6c09aafc537d7eaaf6a29e04ecf6 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a6d8e6c09aafc537d7eaaf6a29e04ecf6">PrintElementsByGeometry</a> (int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;num_elems_by_geom, std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>)</td></tr>
+<tr class="memdesc:a6d8e6c09aafc537d7eaaf6a29e04ecf6 inherit pub_static_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary method used by <a class="el" href="classmfem_1_1Mesh.html#a8315c3a8b68d65fe0518cf1abdb64dd2" title="Compute and print mesh characteristics such as number of vertices, number of elements, number of boundary elements, minimal and maximal element sizes, minimal and maximal element aspect ratios, etc. ">PrintCharacteristics()</a>.  <a href="#a6d8e6c09aafc537d7eaaf6a29e04ecf6">More...</a><br/></td></tr>
+<tr class="separator:a6d8e6c09aafc537d7eaaf6a29e04ecf6 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classmfem_1_1ParMesh"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmfem_1_1ParMesh')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></td></tr>
+<tr class="memitem:aa2f85a29cd1bfa7d58e0bfadbf9ba14a inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#aa2f85a29cd1bfa7d58e0bfadbf9ba14a">gtopo</a></td></tr>
+<tr class="separator:aa2f85a29cd1bfa7d58e0bfadbf9ba14a inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8187ff0c6703b4729a13bc8d81b7f151 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a8187ff0c6703b4729a13bc8d81b7f151">have_face_nbr_data</a></td></tr>
+<tr class="separator:a8187ff0c6703b4729a13bc8d81b7f151 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab759883803589739cc115f96d4e78a8b inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ab759883803589739cc115f96d4e78a8b">face_nbr_group</a></td></tr>
+<tr class="separator:ab759883803589739cc115f96d4e78a8b inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7843d6f686e1e85227238b19965ba12 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ab7843d6f686e1e85227238b19965ba12">face_nbr_elements_offset</a></td></tr>
+<tr class="separator:ab7843d6f686e1e85227238b19965ba12 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092fe433b60220af5f2059d482d64639 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a092fe433b60220af5f2059d482d64639">face_nbr_vertices_offset</a></td></tr>
+<tr class="separator:a092fe433b60220af5f2059d482d64639 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05882a7f334e436c4bddec9c8658509 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">Element</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#aa05882a7f334e436c4bddec9c8658509">face_nbr_elements</a></td></tr>
+<tr class="separator:aa05882a7f334e436c4bddec9c8658509 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cf5ab424326223e352175024a59e3d inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Vertex.html">Vertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a75cf5ab424326223e352175024a59e3d">face_nbr_vertices</a></td></tr>
+<tr class="separator:a75cf5ab424326223e352175024a59e3d inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090f20ad3e657d8fb7db3168230656b5 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a090f20ad3e657d8fb7db3168230656b5">send_face_nbr_elements</a></td></tr>
+<tr class="separator:a090f20ad3e657d8fb7db3168230656b5 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894a8464eb263bbd5c99ad177cfc7185 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a894a8464eb263bbd5c99ad177cfc7185">send_face_nbr_vertices</a></td></tr>
+<tr class="separator:a894a8464eb263bbd5c99ad177cfc7185 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae130412ac93da80414fa47ad93902bc1 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ParNCMesh.html">ParNCMesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ae130412ac93da80414fa47ad93902bc1">pncmesh</a></td></tr>
+<tr class="separator:ae130412ac93da80414fa47ad93902bc1 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
+<tr class="memitem:af90b0afb96358056d9beae25806dab47 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af90b0afb96358056d9beae25806dab47">attributes</a></td></tr>
+<tr class="memdesc:af90b0afb96358056d9beae25806dab47 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of all unique element attributes used by the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>.  <a href="#af90b0afb96358056d9beae25806dab47">More...</a><br/></td></tr>
+<tr class="separator:af90b0afb96358056d9beae25806dab47 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16254ab9e08be6fa84e8b12cb551271a inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">bdr_attributes</a></td></tr>
+<tr class="memdesc:a16254ab9e08be6fa84e8b12cb551271a inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of all unique boundary attributes used by the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>.  <a href="#a16254ab9e08be6fa84e8b12cb551271a">More...</a><br/></td></tr>
+<tr class="separator:a16254ab9e08be6fa84e8b12cb551271a inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1995b5687a77992652d76edc04149e36 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1NURBSExtension.html">NURBSExtension</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1995b5687a77992652d76edc04149e36">NURBSext</a></td></tr>
+<tr class="memdesc:a1995b5687a77992652d76edc04149e36 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional NURBS mesh extension.  <a href="#a1995b5687a77992652d76edc04149e36">More...</a><br/></td></tr>
+<tr class="separator:a1995b5687a77992652d76edc04149e36 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf0f0075e05fbd2e8086f81027f5b38 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1NCMesh.html">NCMesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#accf0f0075e05fbd2e8086f81027f5b38">ncmesh</a></td></tr>
+<tr class="memdesc:accf0f0075e05fbd2e8086f81027f5b38 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional non-conforming mesh extension.  <a href="#accf0f0075e05fbd2e8086f81027f5b38">More...</a><br/></td></tr>
+<tr class="separator:accf0f0075e05fbd2e8086f81027f5b38 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94fc7cc00c1be2f53a9180dbd95f9ab inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1GeometricFactors.html">GeometricFactors</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad94fc7cc00c1be2f53a9180dbd95f9ab">geom_factors</a></td></tr>
+<tr class="memdesc:ad94fc7cc00c1be2f53a9180dbd95f9ab inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional geometric factors.  <a href="#ad94fc7cc00c1be2f53a9180dbd95f9ab">More...</a><br/></td></tr>
+<tr class="separator:ad94fc7cc00c1be2f53a9180dbd95f9ab inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1FaceGeometricFactors.html">FaceGeometricFactors</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a71f60a4e8458c236511235cab1104768">face_geom_factors</a></td></tr>
+<tr class="memdesc:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional face geometric factors.  <a href="#a71f60a4e8458c236511235cab1104768">More...</a><br/></td></tr>
+<tr class="separator:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c306a7dc941acd91aecd1c4f7361a7 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Triple.html">Triple</a>&lt; int, int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab0c306a7dc941acd91aecd1c4f7361a7">tmp_vertex_parents</a></td></tr>
+<tr class="memdesc:ab0c306a7dc941acd91aecd1c4f7361a7 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used during initialization only.  <a href="#ab0c306a7dc941acd91aecd1c4f7361a7">More...</a><br/></td></tr>
+<tr class="separator:ab0c306a7dc941acd91aecd1c4f7361a7 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
+<tr class="memitem:a87b03a563dce7673e4364b3ad6bedac9 inherit pub_static_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a87b03a563dce7673e4364b3ad6bedac9">remove_unused_vertices</a> = true</td></tr>
+<tr class="separator:a87b03a563dce7673e4364b3ad6bedac9 inherit pub_static_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classmfem_1_1ParMesh"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmfem_1_1ParMesh')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></td></tr>
 <tr class="memitem:a894c32c7197aa5864be115b6f3a3b967 inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a894c32c7197aa5864be115b6f3a3b967">ParMesh</a> ()</td></tr>
 <tr class="separator:a894c32c7197aa5864be115b6f3a3b967 inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcca1e61ae29e29a54da410df348479e inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#afcca1e61ae29e29a54da410df348479e">ComputeGlobalElementOffset</a> () const </td></tr>
+<tr class="separator:afcca1e61ae29e29a54da410df348479e inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a186366645d4778f9c3156af8697f17a7 inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a186366645d4778f9c3156af8697f17a7">ParMesh</a> (const <a class="el" href="classmfem_1_1ParNCMesh.html">ParNCMesh</a> &amp;<a class="el" href="classmfem_1_1ParMesh.html#ae130412ac93da80414fa47ad93902bc1">pncmesh</a>)</td></tr>
 <tr class="memdesc:a186366645d4778f9c3156af8697f17a7 inherit pro_methods_classmfem_1_1ParMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create from a nonconforming mesh.  <a href="#a186366645d4778f9c3156af8697f17a7">More...</a><br/></td></tr>
 <tr class="separator:a186366645d4778f9c3156af8697f17a7 inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -714,8 +839,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a9079e68a3e311bef9d312a464d1c385a inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c8bc6cc12e67bd8a952b6bb94a415b inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a95c8bc6cc12e67bd8a952b6bb94a415b">GetFaceNbrElementTransformation</a> (int i, <a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> *ElTr)</td></tr>
 <tr class="separator:a95c8bc6cc12e67bd8a952b6bb94a415b inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c310ce9ec41c8cc90451fd876bf8cc inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a33c310ce9ec41c8cc90451fd876bf8cc">GetGhostFaceTransformation</a> (<a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *FETr, <a class="el" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a> face_type, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> face_geom)</td></tr>
-<tr class="separator:a33c310ce9ec41c8cc90451fd876bf8cc inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d29bf3cd15d1796cb8c78d5805c2c5 inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a57d29bf3cd15d1796cb8c78d5805c2c5">GetGhostFaceTransformation</a> (<a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *FETr, <a class="el" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a> face_type, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> face_geom)</td></tr>
+<tr class="separator:a57d29bf3cd15d1796cb8c78d5805c2c5 inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a778ec440848d25becb69798b48e781 inherit pro_methods_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a1a778ec440848d25becb69798b48e781">RefineGroups</a> (const <a class="el" href="classmfem_1_1DSTable.html">DSTable</a> &amp;v_to_v, int *middle)</td></tr>
 <tr class="memdesc:a1a778ec440848d25becb69798b48e781 inherit pro_methods_classmfem_1_1ParMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the groups after triangle refinement.  <a href="#a1a778ec440848d25becb69798b48e781">More...</a><br/></td></tr>
 <tr class="separator:a1a778ec440848d25becb69798b48e781 inherit pro_methods_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -819,8 +944,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ac10ae07acb09a411ac9ca121d50a15fc inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32eff618d74bb0f37affb9b46adad238 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a32eff618d74bb0f37affb9b46adad238">ReadInlineMesh</a> (std::istream &amp;input, bool generate_edges=false)</td></tr>
 <tr class="separator:a32eff618d74bb0f37affb9b46adad238 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af057846e77c36c7752004498c485f816 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af057846e77c36c7752004498c485f816">ReadGmshMesh</a> (std::istream &amp;input)</td></tr>
-<tr class="separator:af057846e77c36c7752004498c485f816 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030075788ddeaa63adb29fcd064887c8 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a030075788ddeaa63adb29fcd064887c8">ReadGmshMesh</a> (std::istream &amp;input, int &amp;curved, int &amp;read_gf)</td></tr>
+<tr class="separator:a030075788ddeaa63adb29fcd064887c8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f1a1462a795bab6670f8f89a5baaa62 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5f1a1462a795bab6670f8f89a5baaa62">ReadCubit</a> (const char *filename, int &amp;curved, int &amp;read_gf)</td></tr>
 <tr class="separator:a5f1a1462a795bab6670f8f89a5baaa62 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad96a1f7ebda1728b3683893b16671eae inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad96a1f7ebda1728b3683893b16671eae">SetMeshGen</a> ()</td></tr>
@@ -831,8 +956,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:acda2175292624c5c8c94162f5fad93d6 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c463f733d1052e424c2b0c26cd46591 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5c463f733d1052e424c2b0c26cd46591">GetElementJacobian</a> (int i, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;J)</td></tr>
 <tr class="separator:a5c463f733d1052e424c2b0c26cd46591 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba9752bc7b7140fecb7733a9742c96b1 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aba9752bc7b7140fecb7733a9742c96b1">GetElementCenter</a> (int i, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;center)</td></tr>
-<tr class="separator:aba9752bc7b7140fecb7733a9742c96b1 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ac1602edd994f6b98418f2cc8462167 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a0ac1602edd994f6b98418f2cc8462167">MarkForRefinement</a> ()</td></tr>
 <tr class="separator:a0ac1602edd994f6b98418f2cc8462167 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af881801f296de0385d9cb466839634b4 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af881801f296de0385d9cb466839634b4">MarkTriMeshForRefinement</a> ()</td></tr>
@@ -905,8 +1028,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4e19bab06aa9b76f283e023ee6a91be9 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a4e19bab06aa9b76f283e023ee6a91be9">GetLocalQuadToWdgTransformation</a> (<a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> &amp;loc, int i)</td></tr>
 <tr class="memdesc:a4e19bab06aa9b76f283e023ee6a91be9 inherit pro_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used in GetFaceElementTransformations (...)  <a href="#a4e19bab06aa9b76f283e023ee6a91be9">More...</a><br/></td></tr>
 <tr class="separator:a4e19bab06aa9b76f283e023ee6a91be9 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc75593f1e2daeec779f4b816730bd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#afdc75593f1e2daeec779f4b816730bd8">ApplyLocalSlaveTransformation</a> (<a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> &amp;transf, const <a class="el" href="structmfem_1_1Mesh_1_1FaceInfo.html">FaceInfo</a> &amp;fi)</td></tr>
-<tr class="separator:afdc75593f1e2daeec779f4b816730bd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81129a94d35bb7bf3746e92fc61cdff9 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a81129a94d35bb7bf3746e92fc61cdff9">ApplyLocalSlaveTransformation</a> (<a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> &amp;FT, const <a class="el" href="structmfem_1_1Mesh_1_1FaceInfo.html">FaceInfo</a> &amp;fi, bool is_ghost)</td></tr>
+<tr class="separator:a81129a94d35bb7bf3746e92fc61cdff9 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66fb23d317596ad65c29fd917cdcccd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a66fb23d317596ad65c29fd917cdcccd8">IsSlaveFace</a> (const <a class="el" href="structmfem_1_1Mesh_1_1FaceInfo.html">FaceInfo</a> &amp;fi) const </td></tr>
 <tr class="separator:a66fb23d317596ad65c29fd917cdcccd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae208486fb87568e8c8cd6a756c0433ec inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ae208486fb87568e8c8cd6a756c0433ec">GetVertexToVertexTable</a> (<a class="el" href="classmfem_1_1DSTable.html">DSTable</a> &amp;) const </td></tr>
@@ -956,83 +1079,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ab09c17e5079c7c7f854949ec959882a8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9be8ac7908e2cda44c8a5b44863e575f inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a9be8ac7908e2cda44c8a5b44863e575f">GetElementData</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">Element</a> * &gt; &amp;elem_array, int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elem_vtx, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;attr) const </td></tr>
 <tr class="separator:a9be8ac7908e2cda44c8a5b44863e575f inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
-<tr class="memitem:a2fd34bafce89dcad12039f80760c294b inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294b">Operation</a> { <a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294baaea4d1acdc8d15ed86f0f809243d0456">NONE</a>, 
-<a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294ba691c033cad8c39ea9637b56e86fa167e">REFINE</a>, 
-<a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294baa1fafee4d375682ea8c579adfbaffd61">DEREFINE</a>, 
-<a class="el" href="classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294ba0ad85359958a23db9b0e91fb5ecf521d">REBALANCE</a>
- }</td></tr>
-<tr class="separator:a2fd34bafce89dcad12039f80760c294b inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c7787f16f6841e738cca633696e26a inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
-&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805a8f7e0d60f1bd0d6fb536dd2ab2536ed5">Geometry::SEGMENT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a53c7787f16f6841e738cca633696e26a">seg_t</a></td></tr>
-<tr class="separator:a53c7787f16f6841e738cca633696e26a inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7577d4a8ba9d7064b07eaeaaa39d1e99 inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
-&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805aa33f4004c01f4f9f4a1763d73f97c88c">Geometry::TRIANGLE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a7577d4a8ba9d7064b07eaeaaa39d1e99">tri_t</a></td></tr>
-<tr class="separator:a7577d4a8ba9d7064b07eaeaaa39d1e99 inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b968e12d2572af409b6410ffbdd3a5 inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
-&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805abbe96d7ec4feeeeaf8fcb297e3f196ed">Geometry::SQUARE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a58b968e12d2572af409b6410ffbdd3a5">quad_t</a></td></tr>
-<tr class="separator:a58b968e12d2572af409b6410ffbdd3a5 inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a018f6f6b6714e5f4ea3923db27858a90 inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
-&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805a1038282255f14f1056c8cde9247b0864">Geometry::TETRAHEDRON</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a018f6f6b6714e5f4ea3923db27858a90">tet_t</a></td></tr>
-<tr class="separator:a018f6f6b6714e5f4ea3923db27858a90 inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705b3e9dfdc01c8d3332b750f31beccd inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
-&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805ac812b0ab34c8feda27273aeb7d9f6cfb">Geometry::CUBE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a705b3e9dfdc01c8d3332b750f31beccd">hex_t</a></td></tr>
-<tr class="separator:a705b3e9dfdc01c8d3332b750f31beccd inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556a733e5aff0164097f65920573fa0c inherit pub_types_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmfem_1_1Geometry_1_1Constants.html">Geometry::Constants</a><br class="typebreak"/>
-&lt; <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805ae1d2a82c44cce8bd65fa68ac3a8788f3">Geometry::PRISM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a556a733e5aff0164097f65920573fa0c">pri_t</a></td></tr>
-<tr class="separator:a556a733e5aff0164097f65920573fa0c inherit pub_types_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
-<tr class="memitem:a1d2e8f696ea28c4ed0dc738de6bcd009 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1d2e8f696ea28c4ed0dc738de6bcd009">GetTransformationFEforElementType</a> (<a class="el" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a>)</td></tr>
-<tr class="separator:a1d2e8f696ea28c4ed0dc738de6bcd009 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d8e6c09aafc537d7eaaf6a29e04ecf6 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a6d8e6c09aafc537d7eaaf6a29e04ecf6">PrintElementsByGeometry</a> (int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;num_elems_by_geom, std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>)</td></tr>
-<tr class="memdesc:a6d8e6c09aafc537d7eaaf6a29e04ecf6 inherit pub_static_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary method used by <a class="el" href="classmfem_1_1Mesh.html#a8315c3a8b68d65fe0518cf1abdb64dd2" title="Compute and print mesh characteristics such as number of vertices, number of elements, number of boundary elements, minimal and maximal element sizes, minimal and maximal element aspect ratios, etc. ">PrintCharacteristics()</a>.  <a href="#a6d8e6c09aafc537d7eaaf6a29e04ecf6">More...</a><br/></td></tr>
-<tr class="separator:a6d8e6c09aafc537d7eaaf6a29e04ecf6 inherit pub_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classmfem_1_1ParMesh"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmfem_1_1ParMesh')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></td></tr>
-<tr class="memitem:aa2f85a29cd1bfa7d58e0bfadbf9ba14a inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#aa2f85a29cd1bfa7d58e0bfadbf9ba14a">gtopo</a></td></tr>
-<tr class="separator:aa2f85a29cd1bfa7d58e0bfadbf9ba14a inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8187ff0c6703b4729a13bc8d81b7f151 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a8187ff0c6703b4729a13bc8d81b7f151">have_face_nbr_data</a></td></tr>
-<tr class="separator:a8187ff0c6703b4729a13bc8d81b7f151 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab759883803589739cc115f96d4e78a8b inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ab759883803589739cc115f96d4e78a8b">face_nbr_group</a></td></tr>
-<tr class="separator:ab759883803589739cc115f96d4e78a8b inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7843d6f686e1e85227238b19965ba12 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ab7843d6f686e1e85227238b19965ba12">face_nbr_elements_offset</a></td></tr>
-<tr class="separator:ab7843d6f686e1e85227238b19965ba12 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a092fe433b60220af5f2059d482d64639 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a092fe433b60220af5f2059d482d64639">face_nbr_vertices_offset</a></td></tr>
-<tr class="separator:a092fe433b60220af5f2059d482d64639 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa05882a7f334e436c4bddec9c8658509 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">Element</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#aa05882a7f334e436c4bddec9c8658509">face_nbr_elements</a></td></tr>
-<tr class="separator:aa05882a7f334e436c4bddec9c8658509 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75cf5ab424326223e352175024a59e3d inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Vertex.html">Vertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a75cf5ab424326223e352175024a59e3d">face_nbr_vertices</a></td></tr>
-<tr class="separator:a75cf5ab424326223e352175024a59e3d inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a090f20ad3e657d8fb7db3168230656b5 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a090f20ad3e657d8fb7db3168230656b5">send_face_nbr_elements</a></td></tr>
-<tr class="separator:a090f20ad3e657d8fb7db3168230656b5 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a894a8464eb263bbd5c99ad177cfc7185 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a894a8464eb263bbd5c99ad177cfc7185">send_face_nbr_vertices</a></td></tr>
-<tr class="separator:a894a8464eb263bbd5c99ad177cfc7185 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae130412ac93da80414fa47ad93902bc1 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ParNCMesh.html">ParNCMesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ae130412ac93da80414fa47ad93902bc1">pncmesh</a></td></tr>
-<tr class="separator:ae130412ac93da80414fa47ad93902bc1 inherit pub_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
-<tr class="memitem:af90b0afb96358056d9beae25806dab47 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af90b0afb96358056d9beae25806dab47">attributes</a></td></tr>
-<tr class="memdesc:af90b0afb96358056d9beae25806dab47 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of all unique element attributes used by the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>.  <a href="#af90b0afb96358056d9beae25806dab47">More...</a><br/></td></tr>
-<tr class="separator:af90b0afb96358056d9beae25806dab47 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16254ab9e08be6fa84e8b12cb551271a inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a">bdr_attributes</a></td></tr>
-<tr class="memdesc:a16254ab9e08be6fa84e8b12cb551271a inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of all unique boundary attributes used by the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>.  <a href="#a16254ab9e08be6fa84e8b12cb551271a">More...</a><br/></td></tr>
-<tr class="separator:a16254ab9e08be6fa84e8b12cb551271a inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1995b5687a77992652d76edc04149e36 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1NURBSExtension.html">NURBSExtension</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1995b5687a77992652d76edc04149e36">NURBSext</a></td></tr>
-<tr class="memdesc:a1995b5687a77992652d76edc04149e36 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional NURBS mesh extension.  <a href="#a1995b5687a77992652d76edc04149e36">More...</a><br/></td></tr>
-<tr class="separator:a1995b5687a77992652d76edc04149e36 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accf0f0075e05fbd2e8086f81027f5b38 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1NCMesh.html">NCMesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#accf0f0075e05fbd2e8086f81027f5b38">ncmesh</a></td></tr>
-<tr class="memdesc:accf0f0075e05fbd2e8086f81027f5b38 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional non-conforming mesh extension.  <a href="#accf0f0075e05fbd2e8086f81027f5b38">More...</a><br/></td></tr>
-<tr class="separator:accf0f0075e05fbd2e8086f81027f5b38 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad94fc7cc00c1be2f53a9180dbd95f9ab inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1GeometricFactors.html">GeometricFactors</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad94fc7cc00c1be2f53a9180dbd95f9ab">geom_factors</a></td></tr>
-<tr class="memdesc:ad94fc7cc00c1be2f53a9180dbd95f9ab inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional geometric factors.  <a href="#ad94fc7cc00c1be2f53a9180dbd95f9ab">More...</a><br/></td></tr>
-<tr class="separator:ad94fc7cc00c1be2f53a9180dbd95f9ab inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1FaceGeometricFactors.html">FaceGeometricFactors</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a71f60a4e8458c236511235cab1104768">face_geom_factors</a></td></tr>
-<tr class="memdesc:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional face geometric factors.  <a href="#a71f60a4e8458c236511235cab1104768">More...</a><br/></td></tr>
-<tr class="separator:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
-<tr class="memitem:a87b03a563dce7673e4364b3ad6bedac9 inherit pub_static_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a87b03a563dce7673e4364b3ad6bedac9">remove_unused_vertices</a> = true</td></tr>
-<tr class="separator:a87b03a563dce7673e4364b3ad6bedac9 inherit pub_static_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
 <tr class="memitem:adcd7f6847376f842163a624c47c5345f inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#adcd7f6847376f842163a624c47c5345f">PrintElementWithoutAttr</a> (const <a class="el" href="classmfem_1_1Element.html">Element</a> *, std::ostream &amp;)</td></tr>
 <tr class="separator:adcd7f6847376f842163a624c47c5345f inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1044,6 +1090,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a1e1467c385205e8958089ae090156c9d inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1e1467c385205e8958089ae090156c9d">GetQuadOrientation</a> (const int *base, const int *test)</td></tr>
 <tr class="memdesc:a1e1467c385205e8958089ae090156c9d inherit pro_static_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the orientation of "test" relative to "base".  <a href="#a1e1467c385205e8958089ae090156c9d">More...</a><br/></td></tr>
 <tr class="separator:a1e1467c385205e8958089ae090156c9d inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553919924b4f237da6f8a754be12b1d3 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a553919924b4f237da6f8a754be12b1d3">GetTetOrientation</a> (const int *base, const int *test)</td></tr>
+<tr class="memdesc:a553919924b4f237da6f8a754be12b1d3 inherit pro_static_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the orientation of "test" relative to "base".  <a href="#a553919924b4f237da6f8a754be12b1d3">More...</a><br/></td></tr>
+<tr class="separator:a553919924b4f237da6f8a754be12b1d3 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1765ca57a981387500e2d4a7afecb31 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab1765ca57a981387500e2d4a7afecb31">GetElementArrayEdgeTable</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">Element</a> * &gt; &amp;elem_array, const <a class="el" href="classmfem_1_1DSTable.html">DSTable</a> &amp;v_to_v, <a class="el" href="classmfem_1_1Table.html">Table</a> &amp;<a class="el" href="classmfem_1_1Mesh.html#a7c806ae04b773836db7c9493b0d4b6e5">el_to_edge</a>)</td></tr>
 <tr class="separator:ab1765ca57a981387500e2d4a7afecb31 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1ParMesh"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1ParMesh')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></td></tr>
@@ -1075,6 +1124,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a9f7b4db97a116cc7d2b988f3b74e50f7 inherit pro_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a230d2d88bbb44659679eba0c7d389bf2 inherit pro_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a230d2d88bbb44659679eba0c7d389bf2">sface_lface</a></td></tr>
 <tr class="separator:a230d2d88bbb44659679eba0c7d389bf2 inherit pro_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50948e61dfd47d8d1742e551ae4b3ffd inherit pro_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a50948e61dfd47d8d1742e551ae4b3ffd">FaceNbrTransformation</a></td></tr>
+<tr class="separator:a50948e61dfd47d8d1742e551ae4b3ffd inherit pro_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3098097a5fbd54dcbf306b039638263 inherit pro_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#aa3098097a5fbd54dcbf306b039638263">glob_elem_offset</a></td></tr>
+<tr class="separator:aa3098097a5fbd54dcbf306b039638263 inherit pro_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668bf760c232f6ddbaeb0fa94909ca3c inherit pro_attribs_classmfem_1_1ParMesh"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a668bf760c232f6ddbaeb0fa94909ca3c">glob_offset_sequence</a></td></tr>
+<tr class="separator:a668bf760c232f6ddbaeb0fa94909ca3c inherit pro_attribs_classmfem_1_1ParMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
 <tr class="memitem:a3c3a04ba890632835c2d766bab361970 inherit pro_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3c3a04ba890632835c2d766bab361970">Dim</a></td></tr>
 <tr class="separator:a3c3a04ba890632835c2d766bab361970 inherit pro_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1161,9 +1216,9 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for PUMI parallel meshes. </p>
 
-<p>Definition at line <a class="el" href="pumi_8hpp_source.html#l00072">72</a> of file <a class="el" href="pumi_8hpp_source.html">pumi.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8hpp_source.html#l00070">70</a> of file <a class="el" href="pumi_8hpp_source.html">pumi.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aaef6d95487d9b04466394533a2fd013c"></a>
+<a class="anchor" id="a9098a89a9410d3d53026f0b726dba62d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1177,7 +1232,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Mesh2 *&#160;</td>
-          <td class="paramname"><em>apf_mesh</em>&#160;</td>
+          <td class="paramname"><em>apf_mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>refine</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fix_orientation</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1189,7 +1256,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Build a parallel MFEM mesh from a parallel PUMI mesh. </p>
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00270">270</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00248">248</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
@@ -1214,12 +1281,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pumi_8hpp_source.html#l00113">113</a> of file <a class="el" href="pumi_8hpp_source.html">pumi.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8hpp_source.html#l00148">148</a> of file <a class="el" href="pumi_8hpp_source.html">pumi.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad19bb354f46fc4a0784fc34a4b98b166"></a>
+<a class="anchor" id="a1de367232c15337536e968132c66af70"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1233,31 +1300,31 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *&#160;</td>
-          <td class="paramname"><em>Vel</em>, </td>
+          <td class="paramname"><em>grid_vel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *&#160;</td>
-          <td class="paramname"><em>Pr</em>, </td>
+          <td class="paramname"><em>grid_pr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>VelField</em>, </td>
+          <td class="paramname"><em>vel_field</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>PrField</em>, </td>
+          <td class="paramname"><em>pr_field</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>VelMagField</em>&#160;</td>
+          <td class="paramname"><em>vel_mag_field</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1269,11 +1336,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Transfer field from MFEM mesh to PUMI mesh [Mixed]. </p>
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00928">928</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01005">1005</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1e86badadcad1b0f3afcec5cc2398586"></a>
+<a class="anchor" id="a911cdb6e4a06067b9668873cfe39d218"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1287,19 +1354,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *&#160;</td>
-          <td class="paramname"><em>Pr</em>, </td>
+          <td class="paramname"><em>grid_pr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>PrField</em>, </td>
+          <td class="paramname"><em>pr_field</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>PrMagField</em>&#160;</td>
+          <td class="paramname"><em>pr_mag_field</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1311,11 +1378,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Transfer field from MFEM mesh to PUMI mesh [Scalar]. </p>
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01149">1149</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01057">1057</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acea905269e8751cfcaed24e19f466472"></a>
+<a class="anchor" id="a003ed7789a14b31521b2b067121c9a04"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1329,13 +1396,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>ScalarField</em>, </td>
+          <td class="paramname"><em>field</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *&#160;</td>
-          <td class="paramname"><em>Pr</em>&#160;</td>
+          <td class="paramname"><em>grid</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1345,48 +1412,33 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Transfer a field from PUMI to MFEM after mesh adapt [Scalar]. </p>
+<p>Transfer a field from PUMI to MFEM after mesh adapt [Scalar and <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>]. </p>
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01555">1555</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01206">1206</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a58ca131dc10d7f752b44a5e4aacc0ae9"></a>
+<a class="anchor" id="affe9fce10e09795b02390b6f858c89b0"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmfem_1_1Element.html">Element</a> * mfem::ParPumiMesh::ReadElement </td>
+          <td class="memname">void mfem::ParPumiMesh::NedelecFieldMFEMtoPUMI </td>
           <td>(</td>
-          <td class="paramtype">apf::MeshEntity *&#160;</td>
-          <td class="paramname"><em>Ent</em>, </td>
+          <td class="paramtype">apf::Mesh2 *&#160;</td>
+          <td class="paramname"><em>apf_mesh</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>geom</em>, </td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *&#160;</td>
+          <td class="paramname"><em>gf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">apf::Downward&#160;</td>
-          <td class="paramname"><em>Verts</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>Attr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">apf::Numbering *&#160;</td>
-          <td class="paramname"><em>vert_num</em>&#160;</td>
+          <td class="paramtype">apf::Field *&#160;</td>
+          <td class="paramname"><em>nedelec_field</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1394,14 +1446,152 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00244">244</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Transfer Nedelec field from MFEM mesh to PUMI mesh [<a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>]. </p>
+
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01151">1151</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c6f70e071cbaee9ade1c912e4f3ca00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParPumiMesh::ParentXisMFEMtoPUMI </td>
+          <td>(</td>
+          <td class="paramtype">apf::Mesh2 *&#160;</td>
+          <td class="paramname"><em>apf_mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elemId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">apf::MeshEntity *&#160;</td>
+          <td class="paramname"><em>tet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;&#160;</td>
+          <td class="paramname"><em>mfem_xi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">apf::NewArray&lt; apf::Vector3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pumi_xi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>checkOrientation</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert the parent coordinate from MFEM to PUMI. </p>
+<p>This is the inverse of ParentXisPUMItoMFEM. By default this functions assumes that there is always change in the orientations of some of the elements. In case it is known for sure that there is NO change in the orientation, call the functions with last argument = false </p>
+
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00971">971</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad79b4730d23921950e9cfb5c625dd30e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> mfem::ParPumiMesh::ParentXisPUMItoMFEM </td>
+          <td>(</td>
+          <td class="paramtype">apf::Mesh2 *&#160;</td>
+          <td class="paramname"><em>apf_mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">apf::MeshEntity *&#160;</td>
+          <td class="paramname"><em>tet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elemId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">apf::NewArray&lt; apf::Vector3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pumi_xi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>checkOrientation</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert the parent coordinate from PUMI to MFEM. </p>
+<p>By default this functions assumes that there is always change in the orientations of some of the elements. In case it is known for sure that there is NO change in the orientation, call the functions with last argument = false </p>
+
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00946">946</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b6c72f1e7333ecd5369c9845628945d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::ParPumiMesh::RotationPUMItoMFEM </td>
+          <td>(</td>
+          <td class="paramtype">apf::Mesh2 *&#160;</td>
+          <td class="paramname"><em>apf_mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">apf::MeshEntity *&#160;</td>
+          <td class="paramname"><em>tet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elemId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the PUMI-to-MFEM permutation (aka rotation, aka orientation) </p>
+<p>This represents the change in tet-to-vertex connectivity between the PUMI and MFEM meshes. E.g., PUMI_tet{v0,v1,v2,v3} &mdash;&gt; MFEM_tet{v1,v0,v3,v2} Note that change in the orientation can be caused by a) fixing wrong boundary element orientations b) a call to <a class="el" href="classmfem_1_1ParMesh.html#ab6d0cf437d9225a9c5bbfa1c1b34a48b" title="See the remarks for the serial version in mesh.hpp. ">ReorientTetMesh()</a> which is required for Nedelec </p>
+
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00912">912</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
@@ -1421,11 +1611,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Update the mesh after adaptation. </p>
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00766">766</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l00752">752</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0ddec0f25a5da4993b2ec36b7992d0ff"></a>
+<a class="anchor" id="a088ce0058f58c187ad132daaad8bad93"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1439,19 +1629,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> *&#160;</td>
-          <td class="paramname"><em>Vel</em>, </td>
+          <td class="paramname"><em>grid_vel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>VelField</em>, </td>
+          <td class="paramname"><em>vel_field</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">apf::Field *&#160;</td>
-          <td class="paramname"><em>VelMagField</em>&#160;</td>
+          <td class="paramname"><em>vel_mag_field</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1463,7 +1653,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Transfer field from MFEM mesh to PUMI mesh [<a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>]. </p>
 
-<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01349">1349</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pumi_8cpp_source.html#l01105">1105</a> of file <a class="el" href="pumi_8cpp_source.html">pumi.cpp</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1664,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:18 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:05 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -108,10 +109,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classmfem_1_1TimeDependentOperator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="operator_8hpp_source.html">operator.hpp</a>&gt;</code></p>
-
-<p>Inherits <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a>.</p>
-
-<p>Inherited by ConductionOperator, ConductionOperator, ConductionOperator, ConductionOperator, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html">FE_Evolution</a>, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, HyperelasticOperator, <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html">mfem::electromagnetics::MaxwellSolver</a>, <a class="el" href="classmfem_1_1ParAdvectorCGOper.html">mfem::ParAdvectorCGOper</a>, <a class="el" href="classmfem_1_1SecondOrderTimeDependentOperator.html">mfem::SecondOrderTimeDependentOperator</a>, <a class="el" href="classmfem_1_1SerialAdvectorCGOper.html">mfem::SerialAdvectorCGOper</a>, NegGradV, and NegGradV.</p>
+<div class="dynheader">
+Inheritance diagram for mfem::TimeDependentOperator:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1TimeDependentOperator__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for mfem::TimeDependentOperator:</div>
 <div class="dyncontent">
@@ -133,6 +136,12 @@ Public Types</h2></td></tr>
 <tr class="memdesc:a0b5c1e2def3399f0f992d1acd9ecfd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluation mode. See <a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512" title="Set the evaluation mode of the time-dependent operator. ">SetEvalMode()</a> for details.  <a href="classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08">More...</a><br/></td></tr>
 <tr class="separator:a0b5c1e2def3399f0f992d1acd9ecfd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> { <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373">DIAG_KEEP</a>
+ }</td></tr>
+<tr class="memdesc:a7f3e99434bf268ccbaae6863fe5e6bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines operator diagonal policy upon elimination of rows and/or columns.  <a href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">More...</a><br/></td></tr>
+<tr class="separator:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa033bcf10ca8783218f5d98d8c54288 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Type</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78">ANY_TYPE</a>, 
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a1149a94d7b60f7432d9106f29bea24ac">MFEM_SPARSEMAT</a>, 
@@ -324,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Base abstract class for first order time dependent operators. </p>
 <p><a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of the form: (x,t) -&gt; f(x,t), where k = f(x,t) generally solves the algebraic equation F(x,k,t) = G(x,t). The functions F and G represent the <em>implicit</em> and <em>explicit</em> parts of the operator, respectively. For explicit operators, F(x,k,t) = k, so f(x,t) = G(x,t). </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00259">259</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00267">267</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a0b5c1e2def3399f0f992d1acd9ecfd08"></a>
 <div class="memitem">
@@ -349,7 +358,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00270">270</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00278">278</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -374,7 +383,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00262">262</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00270">270</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct a "square" <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have the same dimension <em>n</em>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00290">290</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00298">298</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -469,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> y = f(x,t), where x and y have dimensions <em>w</em> and <em>h</em>, respectively. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00296">296</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00304">304</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -494,7 +503,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00442">442</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00450">450</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +572,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the current evaluation mode. See <a class="el" href="classmfem_1_1TimeDependentOperator.html#abbe1a5d6d5ecb419abcbcd872d4f0512" title="Set the evaluation mode of the time-dependent operator. ">SetEvalMode()</a> for details. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00313">313</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00321">321</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -668,7 +677,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Read the currently set time. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00300">300</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00308">308</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -763,7 +772,7 @@ Additional Inherited Members</h2></td></tr>
 <p>This method allows for the abstract implementation of some time integration methods, including diagonal implicit Runge-Kutta (DIRK) methods and the backward Euler method in particular.</p>
 <p>If not re-implemented, this method simply generates an error. </p>
 
-<p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#aad63faaa4f1f5801be838117d1d15db8">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#aa885e8441f0ebb01d9e0fc108258fde0">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#ad612b4435cb3917121e38e7ec255f2c0">FE_Evolution</a>, and <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#adc7d3b9cfa7eff0f2f71ab0d21001bf8">mfem::electromagnetics::MaxwellSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#aad63faaa4f1f5801be838117d1d15db8">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#aa885e8441f0ebb01d9e0fc108258fde0">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#aa885e8441f0ebb01d9e0fc108258fde0">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#ad612b4435cb3917121e38e7ec255f2c0">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#aa885e8441f0ebb01d9e0fc108258fde0">FE_Evolution</a>, and <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#adc7d3b9cfa7eff0f2f71ab0d21001bf8">mfem::electromagnetics::MaxwellSolver</a>.</p>
 
 <p>Definition at line <a class="el" href="operator_8cpp_source.html#l00230">230</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
@@ -792,7 +801,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a7a09128aa3a47c6879ee2a43c3eab517" title="This type assumes F(x,k,t) = k, i.e. k = f(x,t) = G(x,t). ">EXPLICIT</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00306">306</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00314">314</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -819,7 +828,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c" title="This type assumes that G(x,t) = 0. ">HOMOGENEOUS</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00310">310</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00318">318</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -846,7 +855,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>True if <a class="el" href="classmfem_1_1TimeDependentOperator.html#aceda6db8329f8dad6d7903e5f01019a9" title="Describes the form of the TimeDependentOperator. ">type</a> is <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519ab36684e1b823310a8f8d82a3a78e27a3" title="This is the most general type, no assumptions on F and G. ">IMPLICIT</a> or <a class="el" href="classmfem_1_1TimeDependentOperator.html#a67e1f39cc26e360912317f57f5d95519a2d167b8d6c2180a1d35f5fa2f6adb09c" title="This type assumes that G(x,t) = 0. ">HOMOGENEOUS</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00308">308</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00316">316</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -886,7 +895,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Operator.html#a700c3008b5ab43155cdfd279c8360472">mfem::Operator</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#a31570ddbb77e85401f69cca0ff815e4e">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1ParAdvectorCGOper.html#a7ca569ce0c6f7e0aa626eb042f73c5d7">mfem::ParAdvectorCGOper</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#a7ae32fd1436fb8ca44dd1fd0167c508d">mfem::electromagnetics::MaxwellSolver</a>, <a class="el" href="classmfem_1_1SerialAdvectorCGOper.html#a3bec8cdada6a82312490924c3038161f">mfem::SerialAdvectorCGOper</a>, and <a class="el" href="classFE__Evolution.html#a7a89c5319af2b11e71259aad0722aa36">FE_Evolution</a>.</p>
+<p>Reimplemented in <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#a31570ddbb77e85401f69cca0ff815e4e">mfem::electromagnetics::MagneticDiffusionEOperator</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1ParAdvectorCGOper.html#a7ca569ce0c6f7e0aa626eb042f73c5d7">mfem::ParAdvectorCGOper</a>, <a class="el" href="classmfem_1_1SerialAdvectorCGOper.html#a3bec8cdada6a82312490924c3038161f">mfem::SerialAdvectorCGOper</a>, <a class="el" href="classFE__Evolution.html#a93868ed1c1bcf8f658ac3dc9e6886146">FE_Evolution</a>, <a class="el" href="classmfem_1_1electromagnetics_1_1MaxwellSolver.html#a7ae32fd1436fb8ca44dd1fd0167c508d">mfem::electromagnetics::MaxwellSolver</a>, and <a class="el" href="classFE__Evolution.html#a7a89c5319af2b11e71259aad0722aa36">FE_Evolution</a>.</p>
 
 <p>Definition at line <a class="el" href="operator_8cpp_source.html#l00225">225</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
@@ -918,7 +927,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The evaluation mode is a switch that allows time-stepping methods to request evaluation of separate components/terms of the time-dependent operator. For example, IMEX methods typically assume additive split of the operator: f(x,t) = f1(x,t) + f2(x,t) and they rely on the ability to evaluate the two terms separately.</p>
 <p>Generally, setting the evaluation mode should affect the behavior of all evaluation-related methods in the class, such as <a class="el" href="classmfem_1_1TimeDependentOperator.html#ac1ae0abebb9788d39366a8d2f5c178e5" title="Perform the action of the operator: y = k = f(x, t), where k solves the algebraic equation F(x...">Mult()</a>, <a class="el" href="classmfem_1_1TimeDependentOperator.html#a355f2e3d814516044791b3ad25f5d81a" title="Solve the equation: k = f(x + dt k, t), for the unknown k at the current time t. ">ImplicitSolve()</a>, etc. However, the exact list of methods that need to support a specific mode will depend on the used time-stepping method. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00326">326</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00334">334</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -948,7 +957,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#ae0b00818672d414fb820f0dbecd64436">mfem::electromagnetics::MagneticDiffusionEOperator</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00303">303</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00311">311</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1225,7 +1234,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Current evaluation mode. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00285">285</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00293">293</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1249,7 +1258,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Current time. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00283">283</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00291">291</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1282,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Describes the form of the <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00284">284</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00292">292</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1293,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

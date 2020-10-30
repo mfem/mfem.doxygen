@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -120,7 +121,7 @@ Collaboration diagram for mfem::GroupCommunicator:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1GroupCommunicator_1_1OpData.html">OpData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure on which we define reduce operations.  <a href="structmfem_1_1GroupCommunicator_1_1OpData.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure on which we define reduce operations. The data is associated with (and the operation is performed on) one group at a time.  <a href="structmfem_1_1GroupCommunicator_1_1OpData.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -269,7 +270,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Communicator performing operations within groups defined by a <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> with arbitrary-size data associated with each group. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00120">120</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00142">142</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a1a77683f9ab6236ef67d3a4731f22944"></a>
 <div class="memitem">
@@ -291,7 +292,7 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00124">124</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00146">146</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +390,7 @@ template&lt;class T &gt; </div>
 <p>The data <em>layout</em> can be either 0 or 1.</p>
 <p>For a description of <em>layout</em>, see <a class="el" href="classmfem_1_1GroupCommunicator.html#aa2d13e0ccb34f498cde48411f10305e0" title="Copy the entries corresponding to the group group from the local array ldata to the buffer buf...">CopyGroupToBuffer()</a>. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00249">249</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00270">270</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +420,7 @@ template&lt;class T &gt; </div>
 
 <p>Broadcast within each group where the master is the root. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00256">256</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00277">277</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -449,7 +450,7 @@ template&lt;class T &gt; </div>
 
 <p>Broadcast within each group where the master is the root. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00258">258</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00279">279</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +714,7 @@ template&lt;class T &gt; </div>
 
 <p>Get a reference to the associated <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> object. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00177">177</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00199">199</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -740,7 +741,7 @@ template&lt;class T &gt; </div>
 
 <p>Get a const reference to the associated <a class="el" href="classmfem_1_1GroupTopology.html">GroupTopology</a> object. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00180">180</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00202">202</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -807,7 +808,7 @@ template&lt;class T &gt; </div>
 
 <p>Fill-in the returned <a class="el" href="classmfem_1_1Table.html">Table</a> reference to initialize the <a class="el" href="classmfem_1_1GroupCommunicator.html" title="Communicator performing operations within groups defined by a GroupTopology with arbitrary-size data ...">GroupCommunicator</a> then call <a class="el" href="classmfem_1_1GroupCommunicator.html#ae49365321f5af65337d7fe5c2b69c19d" title="Allocate internal buffers after the GroupLDofTable is defined. ">Finalize()</a>. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00163">163</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00185">185</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -834,7 +835,7 @@ template&lt;class T &gt; </div>
 
 <p>Read-only access to group-ldof <a class="el" href="classmfem_1_1Table.html">Table</a>. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00166">166</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00188">188</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -955,7 +956,7 @@ template&lt;class T &gt; </div>
 <p>Reduce within each group where the master is the root. </p>
 <p>The reduce operation is given by the second argument (see below for list of the supported operations.) </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00290">290</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00311">311</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -995,7 +996,7 @@ template&lt;class T &gt; </div>
 
 <p>Reduce within each group where the master is the root. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00297">297</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00318">318</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1187,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00144">144</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00166">166</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1209,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00141">141</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00163">163</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1231,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00137">137</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00159">159</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1252,7 +1253,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00136">136</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00158">158</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1275,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00134">134</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00156">156</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1296,7 +1297,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00135">135</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00157">157</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1318,7 +1319,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00132">132</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00154">154</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1340,7 +1341,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00133">133</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00155">155</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1362,7 +1363,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00145">145</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00167">167</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1384,7 +1385,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00145">145</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00167">167</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1406,7 +1407,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00142">142</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00164">164</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1428,7 +1429,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00143">143</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00165">165</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1450,7 +1451,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00138">138</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00160">160</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1462,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -104,9 +105,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The memory manager class.  
- <a href="classmfem_1_1MemoryManager.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -158,9 +156,9 @@ Friends</h2></td></tr>
 <tr class="separator:a8ee4f2423a4c0a508d9eb57479653aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The memory manager class. </p>
+<div class="textblock"><p>The MFEM memory manager class. Host-side pointers are inserted into this manager which keeps track of the associated device pointer, and where the data currently resides. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00420">420</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00477">477</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2c929b758e9f3cd3829f0197baac161c"></a>
 <div class="memitem">
@@ -175,7 +173,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01257">1257</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01266">1266</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -192,7 +190,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01259">1259</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01268">1268</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,7 +220,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Configure the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> manager with given default host and device types This method will be called when configuring a device. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01261">1261</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01270">1270</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +239,7 @@ Friends</h2></td></tr>
 
 <p>Free all the device memories. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01278">1278</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01287">1287</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +264,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00598">598</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00656">656</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +289,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00597">597</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00655">655</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +314,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00574">574</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00632">632</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +339,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00573">573</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00631">631</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +358,7 @@ Friends</h2></td></tr>
 
 <p>Initialize the memory manager. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01248">1248</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01257">1257</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +386,7 @@ Friends</h2></td></tr>
 
 <p>Return true if the pointer is known by the memory manager as an alias. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00584">584</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00642">642</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +414,7 @@ Friends</h2></td></tr>
 
 <p>Return true if the pointer is known by the memory manager. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00581">581</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00639">639</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +433,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Prints all aliases known by the memory manager returning the number of printed pointers </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01321">1321</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01330">1330</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +452,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Prints all pointers known by the memory manager, returning the number of printed pointers </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01306">1306</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01315">1315</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +472,7 @@ Friends</h2></td></tr>
 
 <p>Check if the host pointer has been registered in the memory manager. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01295">1295</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01304">1304</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -504,7 +502,7 @@ Friends</h2></td></tr>
 
 <p>Set the host and device UMpire allocator names. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01270">1270</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01279">1279</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -529,7 +527,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00427">427</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00484">484</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -540,7 +538,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

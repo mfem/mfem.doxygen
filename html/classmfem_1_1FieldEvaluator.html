@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -107,6 +108,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>complex_t - dof/qpt data type, real_t - <a class="el" href="classmfem_1_1ShapeEvaluator.html" title="General ShapeEvaluator for any scalar FE type (L2 or H1) ">ShapeEvaluator</a> (FE basis) data type  
+ <a href="classmfem_1_1FieldEvaluator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;:</div>
@@ -124,6 +128,7 @@ Collaboration diagram for mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, c
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1Action.html">Action</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct implements the input (Eval, EvalSerialized) and output (Assemble, AssembleSerialized) operations for the given Ops. Ops is "bitwise or" of constants from the enum InOutData.  <a href="structmfem_1_1FieldEvaluator_1_1Action.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1Action_3_010_00_01dummy_01_4.html">Action&lt; 0, dummy &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,24 +139,27 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1Action_3_013_00_01dummy_01_4.html">Action&lt; 3, dummy &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData.html">AData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary templated struct <a class="el" href="structmfem_1_1FieldEvaluator_1_1AData.html" title="Auxiliary templated struct AData, used by the Eval() and Assemble() methods. ">AData</a>, used by the <a class="el" href="classmfem_1_1FieldEvaluator.html#ab4da979c443094c9645d1f0bcb555106">Eval()</a> and <a class="el" href="classmfem_1_1FieldEvaluator.html#ab85acd836fce0a5042ad751a6cc83ed5">Assemble()</a> methods.  <a href="structmfem_1_1FieldEvaluator_1_1AData.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_010_00_01NE_01_4.html">AData&lt; 0, NE &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_010_00_01it__t_01_4.html">AData&lt; 0, it_t &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_011_00_01NE_01_4.html">AData&lt; 1, NE &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_011_00_01it__t_01_4.html">AData&lt; 1, it_t &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_012_00_01NE_01_4.html">AData&lt; 2, NE &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_012_00_01it__t_01_4.html">AData&lt; 2, it_t &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_013_00_01NE_01_4.html">AData&lt; 3, NE &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1AData_3_013_00_01it__t_01_4.html">AData&lt; 3, it_t &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1BData.html">BData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct is similar to struct <a class="el" href="structmfem_1_1FieldEvaluator_1_1AData.html" title="Auxiliary templated struct AData, used by the Eval() and Assemble() methods. ">AData</a>, adding separate static data members for the input (InData) and output (OutData) data types.  <a href="structmfem_1_1FieldEvaluator_1_1BData.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1Spec.html">Spec</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1TElementMatrix.html">TElementMatrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct implements element matrix computation for some combinations of input (InOps) and output (OutOps) operations.  <a href="structmfem_1_1FieldEvaluator_1_1TElementMatrix.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1TElementMatrix_3_011_00_011_00_01NE_01_4.html">TElementMatrix&lt; 1, 1, NE &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1TElementMatrix_3_011_00_011_00_01it__t_01_4.html">TElementMatrix&lt; 1, 1, it_t &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1TElementMatrix_3_012_00_012_00_01NE_01_4.html">TElementMatrix&lt; 2, 2, NE &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1FieldEvaluator_1_1TElementMatrix_3_012_00_012_00_01it__t_01_4.html">TElementMatrix&lt; 2, 2, it_t &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -160,6 +168,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classmfem_1_1FieldEvaluator.html#a0d2f0e6b6540929bb5210b1c950e4902a8bb2271adaeab4fbf6d4121f83286660">Values</a> = 1, 
 <a class="el" href="classmfem_1_1FieldEvaluator.html#a0d2f0e6b6540929bb5210b1c950e4902ac2d164f7e5ce134402e75474d0175ac7">Gradients</a> = 2
  }</td></tr>
+<tr class="memdesc:a0d2f0e6b6540929bb5210b1c950e4902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for the data type used by the <a class="el" href="classmfem_1_1FieldEvaluator.html#ab4da979c443094c9645d1f0bcb555106">Eval()</a> and <a class="el" href="classmfem_1_1FieldEvaluator.html#ab85acd836fce0a5042ad751a6cc83ed5">Assemble()</a> methods. The types can be obtained by summing constants from this enumeration and used as a template parameter in struct Data.  <a href="classmfem_1_1FieldEvaluator.html#a0d2f0e6b6540929bb5210b1c950e4902">More...</a><br/></td></tr>
 <tr class="separator:a0d2f0e6b6540929bb5210b1c950e4902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c6c486ef4e0d6104a7c0c670028f08"><td class="memItemLeft" align="right" valign="top">typedef complex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#ad1c6c486ef4e0d6104a7c0c670028f08">complex_type</a></td></tr>
 <tr class="separator:ad1c6c486ef4e0d6104a7c0c670028f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,10 +189,13 @@ complex_t, real_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a218e0a714b37eb98a595ecf44a8db1b6"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a218e0a714b37eb98a595ecf44a8db1b6">FieldEvaluator</a> (const FESpace_t &amp;tfes, const <a class="el" href="classmfem_1_1FieldEvaluator__base.html#ae03e38dd1ad501b82502af93dba7c626">ShapeEval_type</a> &amp;shape_eval, const <a class="el" href="classmfem_1_1FieldEvaluator.html#a3c4aa964f1a7d96e07213815c63ba073">VecLayout_type</a> &amp;<a class="el" href="classmfem_1_1FieldEvaluator__base.html#a04c89004f63bfef822276680294bbbde">vec_layout</a>, const complex_t *global_data_in, complex_t *global_data_out)</td></tr>
+<tr class="memdesc:a218e0a714b37eb98a595ecf44a8db1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">With this constructor, fespace is a shallow copy of tfes.  <a href="#a218e0a714b37eb98a595ecf44a8db1b6">More...</a><br/></td></tr>
 <tr class="separator:a218e0a714b37eb98a595ecf44a8db1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac149be423e6cf2ed7ae0f34d7619d30b"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#ac149be423e6cf2ed7ae0f34d7619d30b">FieldEvaluator</a> (const <a class="el" href="classmfem_1_1FieldEvaluator.html">FieldEvaluator</a> &amp;f, const complex_t *global_data_in, complex_t *global_data_out)</td></tr>
+<tr class="memitem:ac149be423e6cf2ed7ae0f34d7619d30b"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#ac149be423e6cf2ed7ae0f34d7619d30b">FieldEvaluator</a> (const <a class="el" href="classmfem_1_1FieldEvaluator.html">FieldEvaluator</a> &amp;<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, const complex_t *global_data_in, complex_t *global_data_out)</td></tr>
+<tr class="memdesc:ac149be423e6cf2ed7ae0f34d7619d30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">With this constructor, fespace is a shallow copy of f.fespace.  <a href="#ac149be423e6cf2ed7ae0f34d7619d30b">More...</a><br/></td></tr>
 <tr class="separator:ac149be423e6cf2ed7ae0f34d7619d30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b8a30aa309388a85ed933f3945e1c6"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a69b8a30aa309388a85ed933f3945e1c6">FieldEvaluator</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes, const complex_t *global_data_in, complex_t *global_data_out)</td></tr>
+<tr class="memdesc:a69b8a30aa309388a85ed933f3945e1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor creates a new fespace, not a shallow copy.  <a href="#a69b8a30aa309388a85ed933f3945e1c6">More...</a><br/></td></tr>
 <tr class="separator:a69b8a30aa309388a85ed933f3945e1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26f43f187efaff4730dc9c6182c3c6a9"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE <a class="el" href="classmfem_1_1FieldEvaluator.html#a901bdfef52ca47ce3f7030806096816b">FESpace_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a26f43f187efaff4730dc9c6182c3c6a9">FESpace</a> ()</td></tr>
 <tr class="separator:a26f43f187efaff4730dc9c6182c3c6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,9 +207,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af7e39228e88866ac65bcbd638389c2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01db9afb0e0418142966ae258b21b646"><td class="memTemplParams" colspan="2">template&lt;typename val_layout_t , typename val_data_t &gt; </td></tr>
 <tr class="memitem:a01db9afb0e0418142966ae258b21b646"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a01db9afb0e0418142966ae258b21b646">GetValues</a> (int el, const val_layout_t &amp;l, val_data_t &amp;vals)</td></tr>
+<tr class="memdesc:a01db9afb0e0418142966ae258b21b646"><td class="mdescLeft">&#160;</td><td class="mdescRight">val_layout_t is (qpts x vdim x NE)  <a href="#a01db9afb0e0418142966ae258b21b646">More...</a><br/></td></tr>
 <tr class="separator:a01db9afb0e0418142966ae258b21b646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdceab5c30516efbd26d5551cdb5709d"><td class="memTemplParams" colspan="2">template&lt;typename grad_layout_t , typename grad_data_t &gt; </td></tr>
 <tr class="memitem:afdceab5c30516efbd26d5551cdb5709d"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#afdceab5c30516efbd26d5551cdb5709d">GetGradients</a> (int el, const grad_layout_t &amp;l, grad_data_t &amp;grad)</td></tr>
+<tr class="memdesc:afdceab5c30516efbd26d5551cdb5709d"><td class="mdescLeft">&#160;</td><td class="mdescRight">grad_layout_t is (qpts x dim x vdim x NE)  <a href="#afdceab5c30516efbd26d5551cdb5709d">More...</a><br/></td></tr>
 <tr class="separator:afdceab5c30516efbd26d5551cdb5709d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4da979c443094c9645d1f0bcb555106"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
 <tr class="memitem:ab4da979c443094c9645d1f0bcb555106"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#ab4da979c443094c9645d1f0bcb555106">Eval</a> (DataType &amp;F)</td></tr>
@@ -211,12 +225,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f315d563f8cea8e3e087d6f11875f7d"><td class="memTemplParams" colspan="2">template&lt;bool Add, typename DataType &gt; </td></tr>
 <tr class="memitem:a8f315d563f8cea8e3e087d6f11875f7d"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a8f315d563f8cea8e3e087d6f11875f7d">Assemble</a> (int el, DataType &amp;F)</td></tr>
 <tr class="separator:a8f315d563f8cea8e3e087d6f11875f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96e55b34031d55dad119192d53650a51"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
-<tr class="memitem:a96e55b34031d55dad119192d53650a51"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a96e55b34031d55dad119192d53650a51">EvalSerialized</a> (const complex_t *loc_dofs, DataType &amp;F)</td></tr>
-<tr class="separator:a96e55b34031d55dad119192d53650a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac61871284b3fad16da13b2c32b01577"><td class="memTemplParams" colspan="2">template&lt;bool Add, typename DataType &gt; </td></tr>
-<tr class="memitem:aac61871284b3fad16da13b2c32b01577"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#aac61871284b3fad16da13b2c32b01577">AssembleSerialized</a> (const DataType &amp;F, complex_t *loc_dofs)</td></tr>
-<tr class="separator:aac61871284b3fad16da13b2c32b01577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e40a7ddb8247327ee1657054321558d"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:a0e40a7ddb8247327ee1657054321558d"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#a0e40a7ddb8247327ee1657054321558d">EvalSerialized</a> (const typename DataType::vcomplex_t *loc_dofs, DataType &amp;F)</td></tr>
+<tr class="separator:a0e40a7ddb8247327ee1657054321558d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98c2c224a7c86b9cf7e239892376163"><td class="memTemplParams" colspan="2">template&lt;bool Add, typename DataType &gt; </td></tr>
+<tr class="memitem:aa98c2c224a7c86b9cf7e239892376163"><td class="memTemplItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator.html#aa98c2c224a7c86b9cf7e239892376163">AssembleSerialized</a> (const DataType &amp;F, typename DataType::vcomplex_t *loc_dofs)</td></tr>
+<tr class="separator:aa98c2c224a7c86b9cf7e239892376163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -260,16 +274,19 @@ Protected Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classmfem_1_1FieldEvaluator__base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmfem_1_1FieldEvaluator__base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classmfem_1_1FieldEvaluator__base.html">mfem::FieldEvaluator_base&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a></td></tr>
 <tr class="memitem:a1adc7af948f541870f90fcbef7dfc147 inherit pro_methods_classmfem_1_1FieldEvaluator__base"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator__base.html#a1adc7af948f541870f90fcbef7dfc147">FieldEvaluator_base</a> (const FESpace_t &amp;tfes, const <a class="el" href="classmfem_1_1FieldEvaluator__base.html#ae03e38dd1ad501b82502af93dba7c626">ShapeEval_type</a> &amp;shape_eval, const VecLayout_t &amp;<a class="el" href="classmfem_1_1FieldEvaluator__base.html#a04c89004f63bfef822276680294bbbde">vec_layout</a>)</td></tr>
+<tr class="memdesc:a1adc7af948f541870f90fcbef7dfc147 inherit pro_methods_classmfem_1_1FieldEvaluator__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">With this constructor, fespace is a shallow copy.  <a href="#a1adc7af948f541870f90fcbef7dfc147">More...</a><br/></td></tr>
 <tr class="separator:a1adc7af948f541870f90fcbef7dfc147 inherit pro_methods_classmfem_1_1FieldEvaluator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4769a01d70953c7717163ff3dc64b86 inherit pro_methods_classmfem_1_1FieldEvaluator__base"><td class="memItemLeft" align="right" valign="top">MFEM_ALWAYS_INLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FieldEvaluator__base.html#ad4769a01d70953c7717163ff3dc64b86">FieldEvaluator_base</a> (const <a class="el" href="classmfem_1_1FieldEvaluator__base.html#a71a276ab837a4ac2770a9b5709ec8dfd">FE_type</a> &amp;fe, const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes)</td></tr>
+<tr class="memdesc:ad4769a01d70953c7717163ff3dc64b86 inherit pro_methods_classmfem_1_1FieldEvaluator__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor creates new fespace, not a shallow copy.  <a href="#ad4769a01d70953c7717163ff3dc64b86">More...</a><br/></td></tr>
 <tr class="separator:ad4769a01d70953c7717163ff3dc64b86 inherit pro_methods_classmfem_1_1FieldEvaluator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename FESpace_t, typename VecLayout_t, typename IR, typename complex_t = double, typename real_t = double&gt;<br/>
 class mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</h3>
 
+<p>complex_t - dof/qpt data type, real_t - <a class="el" href="classmfem_1_1ShapeEvaluator.html" title="General ShapeEvaluator for any scalar FE type (L2 or H1) ">ShapeEvaluator</a> (FE basis) data type </p>
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00982">982</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00997">997</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a4c69020f13594bf8e7591050aea3aeb9"></a>
 <div class="memitem">
@@ -291,7 +308,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01003">1003</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01018">1018</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +324,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00986">986</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01001">1001</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -323,7 +340,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00988">988</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01003">1003</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +356,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00987">987</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01002">1002</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +372,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00989">989</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01004">1004</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +388,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00993">993</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01008">1008</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +404,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00990">990</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01005">1005</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,6 +420,8 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration for the data type used by the <a class="el" href="classmfem_1_1FieldEvaluator.html#ab4da979c443094c9645d1f0bcb555106">Eval()</a> and <a class="el" href="classmfem_1_1FieldEvaluator.html#ab85acd836fce0a5042ad751a6cc83ed5">Assemble()</a> methods. The types can be obtained by summing constants from this enumeration and used as a template parameter in struct Data. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a0d2f0e6b6540929bb5210b1c950e4902a2408cbd9a00434d622495a7a0f2048ff"></a>None</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
@@ -412,7 +431,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01132">1132</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01149">1149</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -469,7 +488,9 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01014">1014</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>With this constructor, fespace is a shallow copy of tfes. </p>
+
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01029">1029</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -513,7 +534,9 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01024">1024</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>With this constructor, fespace is a shallow copy of f.fespace. </p>
+
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01039">1039</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -557,7 +580,9 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01033">1033</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>This constructor creates a new fespace, not a shallow copy. </p>
+
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01048">1048</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -588,7 +613,7 @@ template&lt;bool Add, typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01097">1097</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01112">1112</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -628,11 +653,11 @@ template&lt;bool Add, typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01106">1106</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01121">1121</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aac61871284b3fad16da13b2c32b01577"></a>
+<a class="anchor" id="aa98c2c224a7c86b9cf7e239892376163"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -652,7 +677,7 @@ template&lt;bool Add, typename DataType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">complex_t *&#160;</td>
+          <td class="paramtype">typename DataType::vcomplex_t *&#160;</td>
           <td class="paramname"><em>loc_dofs</em>&#160;</td>
         </tr>
         <tr>
@@ -668,7 +693,7 @@ template&lt;bool Add, typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01122">1122</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01138">1138</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +723,7 @@ template&lt;typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01081">1081</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01096">1096</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -738,11 +763,11 @@ template&lt;typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01089">1089</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01104">1104</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a96e55b34031d55dad119192d53650a51"></a>
+<a class="anchor" id="a0e40a7ddb8247327ee1657054321558d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -756,7 +781,7 @@ template&lt;typename DataType &gt; </div>
         <tr>
           <td class="memname">MFEM_ALWAYS_INLINE void <a class="el" href="classmfem_1_1FieldEvaluator.html">mfem::FieldEvaluator</a>&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;::EvalSerialized </td>
           <td>(</td>
-          <td class="paramtype">const complex_t *&#160;</td>
+          <td class="paramtype">const typename DataType::vcomplex_t *&#160;</td>
           <td class="paramname"><em>loc_dofs</em>, </td>
         </tr>
         <tr>
@@ -778,7 +803,7 @@ template&lt;typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01115">1115</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01130">1130</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -805,7 +830,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01042">1042</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01057">1057</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -851,7 +876,9 @@ template&lt;typename grad_layout_t , typename grad_data_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01067">1067</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>grad_layout_t is (qpts x dim x vdim x NE) </p>
+
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01082">1082</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -897,7 +924,9 @@ template&lt;typename val_layout_t , typename val_data_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01055">1055</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>val_layout_t is (qpts x vdim x NE) </p>
+
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01070">1070</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -925,7 +954,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01047">1047</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01062">1062</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -952,7 +981,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01043">1043</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01058">1058</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -979,7 +1008,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01044">1044</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01059">1059</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1033,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01008">1008</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01023">1023</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1057,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01009">1009</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01024">1024</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1081,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00996">996</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01011">1011</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1105,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00995">995</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01010">1010</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1129,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00997">997</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01012">1012</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1153,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l00998">998</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tevaluator_8hpp_source.html#l01013">1013</a> of file <a class="el" href="tevaluator_8hpp_source.html">tevaluator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1163,7 @@ template&lt;typename FESpace_t , typename VecLayout_t , typename IR , typename c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

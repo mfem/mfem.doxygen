@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -163,8 +164,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf1732b41042d72dcdb835546bace3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e79b56354be74789e8ca64a7e5883cd"><td class="memItemLeft" align="right" valign="top">virtual const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Element.html#a2e79b56354be74789e8ca64a7e5883cd">GetEdgeVertices</a> (int) const =0</td></tr>
 <tr class="separator:a2e79b56354be74789e8ca64a7e5883cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7412ab7ae0feb6018148d7a947fa0716"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Element.html#a7412ab7ae0feb6018148d7a947fa0716">GetNFaces</a> (int &amp;nFaceVertices) const =0</td></tr>
-<tr class="separator:a7412ab7ae0feb6018148d7a947fa0716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a783300d766ab20ec48fb23ef92b62"><td class="memItemLeft" align="right" valign="top">virtual MFEM_DEPRECATED int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Element.html#a03a783300d766ab20ec48fb23ef92b62">GetNFaces</a> (int &amp;nFaceVertices) const =0</td></tr>
+<tr class="separator:a03a783300d766ab20ec48fb23ef92b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7047708b25802065f30497343e06bce4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Element.html#a7047708b25802065f30497343e06bce4">GetNFaces</a> () const =0</td></tr>
 <tr class="separator:a7047708b25802065f30497343e06bce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f05bd8272240c0b8f47d03a8f7d1b9a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Element.html#a4f05bd8272240c0b8f47d03a8f7d1b9a">GetNFaceVertices</a> (int fi) const =0</td></tr>
@@ -450,7 +451,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7412ab7ae0feb6018148d7a947fa0716"></a>
+<a class="anchor" id="a03a783300d766ab20ec48fb23ef92b62"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -458,7 +459,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int mfem::Element::GetNFaces </td>
+          <td class="memname">virtual MFEM_DEPRECATED int mfem::Element::GetNFaces </td>
           <td>(</td>
           <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>nFaceVertices</em></td><td>)</td>
@@ -471,9 +472,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1Element.html#a7047708b25802065f30497343e06bce4">GetNFaces(void)</a> and GetNFaceVertices(int) instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1Element.html#a7047708b25802065f30497343e06bce4">GetNFaces(void)</a> and GetNFaceVertices(int) instead. </dd></dl>
 
-<p>Implemented in <a class="el" href="classmfem_1_1Tetrahedron.html#afd1865e2a5d20acaed597f5be9bbbc5f">mfem::Tetrahedron</a>, <a class="el" href="classmfem_1_1Triangle.html#a01914e917af7d93d6c9e7a0064f9d012">mfem::Triangle</a>, <a class="el" href="classmfem_1_1Wedge.html#ac39fb0cdbc592580738738571c4ce4d1">mfem::Wedge</a>, <a class="el" href="classmfem_1_1Quadrilateral.html#acb9bc91cf18aefb2b797ddc5e2fd1210">mfem::Quadrilateral</a>, <a class="el" href="classmfem_1_1Segment.html#a85bcb8ad0fee45f391b06ccc1ed3682a">mfem::Segment</a>, <a class="el" href="classmfem_1_1Hexahedron.html#ac5aa3f0ab6bdfd882f7c24eb4f481279">mfem::Hexahedron</a>, and <a class="el" href="classmfem_1_1Point.html#aae912fc726c7d7811f6e811015645e36">mfem::Point</a>.</p>
+<p>Implemented in <a class="el" href="classmfem_1_1Tetrahedron.html#ae77de351da4fde61bc0ac3daa8801e96">mfem::Tetrahedron</a>, <a class="el" href="classmfem_1_1Triangle.html#a436c3e04500922655c03b1d07f1cd0d0">mfem::Triangle</a>, <a class="el" href="classmfem_1_1Wedge.html#ac39fb0cdbc592580738738571c4ce4d1">mfem::Wedge</a>, <a class="el" href="classmfem_1_1Quadrilateral.html#a2a870ec584787fff796c55fd1e9e460c">mfem::Quadrilateral</a>, <a class="el" href="classmfem_1_1Segment.html#ad14afc7f689cdbb5d83b9469c6df39eb">mfem::Segment</a>, <a class="el" href="classmfem_1_1Hexahedron.html#a237d4d78c34096fe82596731cfc879fb">mfem::Hexahedron</a>, and <a class="el" href="classmfem_1_1Point.html#a0e6f696a34b2f42856fcb0b09bbb80b8">mfem::Point</a>.</p>
 
 </div>
 </div>
@@ -931,7 +932,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:04 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

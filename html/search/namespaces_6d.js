@@ -6,6 +6,8 @@ var searchData=
   ['ginkgowrappers',['GinkgoWrappers',['../namespacemfem_1_1GinkgoWrappers.html',1,'mfem']]],
   ['kernels',['kernels',['../namespacemfem_1_1kernels.html',1,'mfem']]],
   ['mfem',['mfem',['../namespacemfem.html',1,'']]],
+  ['navier',['navier',['../namespacemfem_1_1navier.html',1,'mfem']]],
   ['superlu',['superlu',['../namespacemfem_1_1superlu.html',1,'mfem']]],
-  ['superlu_5finternal',['superlu_internal',['../namespacemfem_1_1superlu__internal.html',1,'mfem']]]
+  ['superlu_5finternal',['superlu_internal',['../namespacemfem_1_1superlu__internal.html',1,'mfem']]],
+  ['transferkernels',['TransferKernels',['../namespacemfem_1_1TransferKernels.html',1,'mfem']]]
 ];

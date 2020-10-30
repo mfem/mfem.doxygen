@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -118,8 +119,8 @@ Collaboration diagram for mfem::AdvectorCG:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7386fb0ecf774fb01db9a4c782788cb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdvectorCG.html#a7386fb0ecf774fb01db9a4c782788cb6">AdvectorCG</a> ()</td></tr>
-<tr class="separator:a7386fb0ecf774fb01db9a4c782788cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa592e0cc5de25ca0946d3842cc41d66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdvectorCG.html#afa592e0cc5de25ca0946d3842cc41d66">AdvectorCG</a> (double timestep_scale=0.5)</td></tr>
+<tr class="separator:afa592e0cc5de25ca0946d3842cc41d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac6b28c25ccee432cdf76cb8ed572cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdvectorCG.html#a9ac6b28c25ccee432cdf76cb8ed572cd">SetInitialField</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;init_nodes, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;init_field)</td></tr>
 <tr class="separator:a9ac6b28c25ccee432cdf76cb8ed572cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af472ace51a1296ce07d6162f092659c6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdvectorCG.html#af472ace51a1296ce07d6162f092659c6">ComputeAtNewPosition</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;new_nodes, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;new_field)</td></tr>
@@ -146,12 +147,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a5beb8a48da4d57b9b7092e78a7b0c126 inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4bf7e86c55aa2a9c56eea19fd90fd49 inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ParFiniteElementSpace.html">ParFiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdaptivityEvaluator.html#af4bf7e86c55aa2a9c56eea19fd90fd49">pfes</a></td></tr>
 <tr class="separator:af4bf7e86c55aa2a9c56eea19fd90fd49 inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5c0de4a771db461279806ab81182bd inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdaptivityEvaluator.html#a0c5c0de4a771db461279806ab81182bd">dim</a></td></tr>
+<tr class="separator:a0c5c0de4a771db461279806ab81182bd inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4eb63469a3ca031125ffed26dd2adc9 inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1AdaptivityEvaluator.html#aa4eb63469a3ca031125ffed26dd2adc9">ncomp</a></td></tr>
+<tr class="separator:aa4eb63469a3ca031125ffed26dd2adc9 inherit pro_attribs_classmfem_1_1AdaptivityEvaluator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="tmop__tools_8hpp_source.html#l00023">23</a> of file <a class="el" href="tmop__tools_8hpp_source.html">tmop_tools.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tmop__tools_8hpp_source.html#l00024">24</a> of file <a class="el" href="tmop__tools_8hpp_source.html">tmop_tools.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7386fb0ecf774fb01db9a4c782788cb6"></a>
+<a class="anchor" id="afa592e0cc5de25ca0946d3842cc41d66"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -161,7 +166,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">mfem::AdvectorCG::AdvectorCG </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timestep_scale</em> = <code>0.5</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -172,7 +178,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tmop__tools_8hpp_source.html#l00031">31</a> of file <a class="el" href="tmop__tools_8hpp_source.html">tmop_tools.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tmop__tools_8hpp_source.html#l00034">34</a> of file <a class="el" href="tmop__tools_8hpp_source.html">tmop_tools.hpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +266,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

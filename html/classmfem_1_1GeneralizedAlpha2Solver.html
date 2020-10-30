@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -121,14 +122,25 @@ Collaboration diagram for mfem::GeneralizedAlpha2Solver:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad96d2c971ea87e7fc072bb2743156501"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#ad96d2c971ea87e7fc072bb2743156501">GeneralizedAlpha2Solver</a> (double rho_inf=1.0)</td></tr>
 <tr class="separator:ad96d2c971ea87e7fc072bb2743156501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab748cf0a5bd279150a6904f34cad048"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#aab748cf0a5bd279150a6904f34cad048">PrintProperties</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>)</td></tr>
+<tr class="memitem:aab748cf0a5bd279150a6904f34cad048"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#aab748cf0a5bd279150a6904f34cad048">PrintProperties</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>)</td></tr>
 <tr class="separator:aab748cf0a5bd279150a6904f34cad048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5320be0abaff5869bcc8c3210a79bfb0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a5320be0abaff5869bcc8c3210a79bfb0">Init</a> (<a class="el" href="classmfem_1_1SecondOrderTimeDependentOperator.html">SecondOrderTimeDependentOperator</a> &amp;_f)</td></tr>
-<tr class="memdesc:a5320be0abaff5869bcc8c3210a79bfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> with the ODE solver.  <a href="#a5320be0abaff5869bcc8c3210a79bfb0">More...</a><br/></td></tr>
-<tr class="separator:a5320be0abaff5869bcc8c3210a79bfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ea46bd40d25512919aded15baa53ccd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a3ea46bd40d25512919aded15baa53ccd">Step</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;dxdt, double &amp;t, double &amp;dt)</td></tr>
-<tr class="memdesc:a3ea46bd40d25512919aded15baa53ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a time step from time <em>t</em> [in] to time <em>t</em> [out] based on the requested step size <em>dt</em> [in].  <a href="#a3ea46bd40d25512919aded15baa53ccd">More...</a><br/></td></tr>
-<tr class="separator:a3ea46bd40d25512919aded15baa53ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0ae58d220fb9e505388f117e3e308e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#abb0ae58d220fb9e505388f117e3e308e">Init</a> (<a class="el" href="classmfem_1_1SecondOrderTimeDependentOperator.html">SecondOrderTimeDependentOperator</a> &amp;_f) override</td></tr>
+<tr class="memdesc:abb0ae58d220fb9e505388f117e3e308e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> with the ODE solver.  <a href="#abb0ae58d220fb9e505388f117e3e308e">More...</a><br/></td></tr>
+<tr class="separator:abb0ae58d220fb9e505388f117e3e308e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408ecefbc22c40a52ce5d39695d076f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a408ecefbc22c40a52ce5d39695d076f7">Step</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;dxdt, double &amp;t, double &amp;dt) override</td></tr>
+<tr class="memdesc:a408ecefbc22c40a52ce5d39695d076f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a time step from time <em>t</em> [in] to time <em>t</em> [out] based on the requested step size <em>dt</em> [in].  <a href="#a408ecefbc22c40a52ce5d39695d076f7">More...</a><br/></td></tr>
+<tr class="separator:a408ecefbc22c40a52ce5d39695d076f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfa19c362c031966ee42d532869f5a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a7bfa19c362c031966ee42d532869f5a2">GetMaxStateSize</a> () override</td></tr>
+<tr class="memdesc:a7bfa19c362c031966ee42d532869f5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for getting and setting the state vectors.  <a href="#a7bfa19c362c031966ee42d532869f5a2">More...</a><br/></td></tr>
+<tr class="separator:a7bfa19c362c031966ee42d532869f5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e45f42fbd48b1af3270105f84d081d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a74e45f42fbd48b1af3270105f84d081d">GetStateSize</a> () override</td></tr>
+<tr class="separator:a74e45f42fbd48b1af3270105f84d081d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8d47b8f4fdc7b5b7fbc555855e4e42"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#adb8d47b8f4fdc7b5b7fbc555855e4e42">GetStateVector</a> (int i) override</td></tr>
+<tr class="separator:adb8d47b8f4fdc7b5b7fbc555855e4e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b27edad98bf4b3b3d09884269108e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a2b27edad98bf4b3b3d09884269108e29">GetStateVector</a> (int i, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;state) override</td></tr>
+<tr class="separator:a2b27edad98bf4b3b3d09884269108e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ce611f0a6936b7e77bdeeae626523c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a78ce611f0a6936b7e77bdeeae626523c">SetStateVector</a> (int i, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;state) override</td></tr>
+<tr class="separator:a78ce611f0a6936b7e77bdeeae626523c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1SecondOrderODESolver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1SecondOrderODESolver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1SecondOrderODESolver.html">mfem::SecondOrderODESolver</a></td></tr>
 <tr class="memitem:aeb5fca0c23456f30fd80933d52254540 inherit pub_methods_classmfem_1_1SecondOrderODESolver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SecondOrderODESolver.html#aeb5fca0c23456f30fd80933d52254540">SecondOrderODESolver</a> ()</td></tr>
 <tr class="separator:aeb5fca0c23456f30fd80933d52254540 inherit pub_methods_classmfem_1_1SecondOrderODESolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,8 +168,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a95c232923e431c91aadfda100415c099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16773e8af0b560944b7844718636d2fa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a16773e8af0b560944b7844718636d2fa">gamma</a></td></tr>
 <tr class="separator:a16773e8af0b560944b7844718636d2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b167faca88a8dfd691f853c77ec1299"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a5b167faca88a8dfd691f853c77ec1299">first</a></td></tr>
-<tr class="separator:a5b167faca88a8dfd691f853c77ec1299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9947e236c0e49efe3efd5cc9a7b5a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#adc9947e236c0e49efe3efd5cc9a7b5a2">nstate</a></td></tr>
+<tr class="separator:adc9947e236c0e49efe3efd5cc9a7b5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1SecondOrderODESolver"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1SecondOrderODESolver')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1SecondOrderODESolver.html">mfem::SecondOrderODESolver</a></td></tr>
 <tr class="memitem:a0833d6350859ffaa4ce16ba400f94159 inherit pro_attribs_classmfem_1_1SecondOrderODESolver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1SecondOrderTimeDependentOperator.html">SecondOrderTimeDependentOperator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SecondOrderODESolver.html#a0833d6350859ffaa4ce16ba400f94159">f</a></td></tr>
 <tr class="memdesc:a0833d6350859ffaa4ce16ba400f94159 inherit pro_attribs_classmfem_1_1SecondOrderODESolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the associated <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a>.  <a href="#a0833d6350859ffaa4ce16ba400f94159">More...</a><br/></td></tr>
@@ -168,7 +180,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generalized-alpha ODE solver A Time Integration Algorithm for Structural Dynamics With Improved Numerical Dissipation: The Generalized-α Method J.Chung and G.M. Hulbert, J. Appl. Mech 60(2), 371-375, 1993 <a href="https://doi.org/10.1115/1.2900803">https://doi.org/10.1115/1.2900803</a> rho_inf in [0,1] </p>
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00659">659</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00709">709</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad96d2c971ea87e7fc072bb2743156501"></a>
 <div class="memitem">
@@ -192,12 +204,134 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00667">667</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00717">717</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5320be0abaff5869bcc8c3210a79bfb0"></a>
+<a class="anchor" id="a7bfa19c362c031966ee42d532869f5a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::GeneralizedAlpha2Solver::GetMaxStateSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function for getting and setting the state vectors. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1SecondOrderODESolver.html#a742eb171e38c09b630369eafd0964120">mfem::SecondOrderODESolver</a>.</p>
+
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00734">734</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74e45f42fbd48b1af3270105f84d081d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::GeneralizedAlpha2Solver::GetStateSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1SecondOrderODESolver.html#aabe8774a31f58796df54e11d2b5fb3a3">mfem::SecondOrderODESolver</a>.</p>
+
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00735">735</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb8d47b8f4fdc7b5b7fbc555855e4e42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp; mfem::GeneralizedAlpha2Solver::GetStateVector </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1SecondOrderODESolver.html#ad79905e54953eeafa1328385ed2593ed">mfem::SecondOrderODESolver</a>.</p>
+
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00975">975</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b27edad98bf4b3b3d09884269108e29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GeneralizedAlpha2Solver::GetStateVector </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1SecondOrderODESolver.html#a814969828f3f40a27ad5eed8dad5d6c9">mfem::SecondOrderODESolver</a>.</p>
+
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00984">984</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb0ae58d220fb9e505388f117e3e308e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -214,7 +348,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -222,7 +356,7 @@ Protected Attributes</h2></td></tr>
 <p>Associate a <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> with the ODE solver. </p>
 <p>This method has to be called:</p>
 <ul>
-<li>Before the first call to <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a3ea46bd40d25512919aded15baa53ccd" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a>.</li>
+<li>Before the first call to <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a408ecefbc22c40a52ce5d39695d076f7" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a>.</li>
 <li>When the dimensions of the associated <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a> change.</li>
 <li>When a time stepping sequence has to be restarted.</li>
 <li>To change the associated <a class="el" href="classmfem_1_1TimeDependentOperator.html" title="Base abstract class for first order time dependent operators. ">TimeDependentOperator</a>. </li>
@@ -230,16 +364,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1SecondOrderODESolver.html#abc72b67b651c68d97d5a0e8d359ad697">mfem::SecondOrderODESolver</a>.</p>
 
-<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00887">887</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00964">964</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="aab748cf0a5bd279150a6904f34cad048"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void mfem::GeneralizedAlpha2Solver::PrintProperties </td>
@@ -249,18 +380,51 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l01001">1001</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78ce611f0a6936b7e77bdeeae626523c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::GeneralizedAlpha2Solver::SetStateVector </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00898">898</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classmfem_1_1SecondOrderODESolver.html#a95aba2e2be69a8dc81bb60f6ac24a705">mfem::SecondOrderODESolver</a>.</p>
+
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00992">992</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3ea46bd40d25512919aded15baa53ccd"></a>
+<a class="anchor" id="a408ecefbc22c40a52ce5d39695d076f7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -299,7 +463,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -325,14 +489,14 @@ Protected Attributes</h2></td></tr>
 <li>The method may perform more than one time step internally; in this case <em>dt</em> [out] is the last internal time step size.</li>
 <li>The output value of <em>t</em> [out] may be smaller or larger than t [target], however, it is not smaller than <em>t</em> [in] + <em>dt</em> [out], if at least one internal time step was performed.</li>
 <li>The value <em>x</em> [out] may be obtained by interpolation using internally stored data.</li>
-<li>In some cases, the contents of <em>x</em> [in] may not be used, e.g. when <em>x</em> [out] from a previous <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a3ea46bd40d25512919aded15baa53ccd" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> call was obtained by interpolation.</li>
-<li>In consecutive calls to this method, the output <em>t</em> [out] of one <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a3ea46bd40d25512919aded15baa53ccd" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> call has to be the same as the input <em>t</em> [in] to the next <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a3ea46bd40d25512919aded15baa53ccd" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> call.</li>
-<li>If the previous rule has to be broken, e.g. to restart a time stepping sequence, then the ODE solver must be re-initialized by calling <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a5320be0abaff5869bcc8c3210a79bfb0" title="Associate a TimeDependentOperator with the ODE solver. ">Init()</a> between the two <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a3ea46bd40d25512919aded15baa53ccd" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> calls. </li>
+<li>In some cases, the contents of <em>x</em> [in] may not be used, e.g. when <em>x</em> [out] from a previous <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a408ecefbc22c40a52ce5d39695d076f7" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> call was obtained by interpolation.</li>
+<li>In consecutive calls to this method, the output <em>t</em> [out] of one <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a408ecefbc22c40a52ce5d39695d076f7" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> call has to be the same as the input <em>t</em> [in] to the next <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a408ecefbc22c40a52ce5d39695d076f7" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> call.</li>
+<li>If the previous rule has to be broken, e.g. to restart a time stepping sequence, then the ODE solver must be re-initialized by calling <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#abb0ae58d220fb9e505388f117e3e308e" title="Associate a TimeDependentOperator with the ODE solver. ">Init()</a> between the two <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#a408ecefbc22c40a52ce5d39695d076f7" title="Perform a time step from time t [in] to time t [out] based on the requested step size dt [in]...">Step()</a> calls. </li>
 </ul>
 
 <p>Implements <a class="el" href="classmfem_1_1SecondOrderODESolver.html#a62e42dfba84569e006231832cc847f94">mfem::SecondOrderODESolver</a>.</p>
 
-<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00927">927</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l01030">1030</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +519,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00662">662</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00712">712</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +541,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00663">663</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00713">713</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +563,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00663">663</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00713">713</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +585,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00663">663</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00713">713</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -443,29 +607,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00662">662</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5b167faca88a8dfd691f853c77ec1299"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mfem::GeneralizedAlpha2Solver::first</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00664">664</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00712">712</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +629,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00663">663</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00713">713</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc9947e236c0e49efe3efd5cc9a7b5a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::GeneralizedAlpha2Solver::nstate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00714">714</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +673,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00662">662</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00712">712</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +695,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00662">662</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00712">712</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -542,7 +706,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

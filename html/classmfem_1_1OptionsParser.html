@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -124,32 +125,44 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a21a61ef6c8ca9688a4c2854b8fdd1b31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a21a61ef6c8ca9688a4c2854b8fdd1b31">OptionsParser</a> (int _argc, char *_argv[])</td></tr>
+<tr class="memdesc:a21a61ef6c8ca9688a4c2854b8fdd1b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a command line option parser with '_argc' and '_argv'.  <a href="#a21a61ef6c8ca9688a4c2854b8fdd1b31">More...</a><br/></td></tr>
 <tr class="separator:a21a61ef6c8ca9688a4c2854b8fdd1b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89d9b7f6e802eee842a4405279ec49f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a89d9b7f6e802eee842a4405279ec49f8">AddOption</a> (bool *var, const char *enable_short_name, const char *enable_long_name, const char *disable_short_name, const char *disable_long_name, const char *description, bool required=false)</td></tr>
+<tr class="memdesc:a89d9b7f6e802eee842a4405279ec49f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a boolean option and set 'var' to receive the value. Enable/disable tags are used to set the bool to true/false respectively.  <a href="#a89d9b7f6e802eee842a4405279ec49f8">More...</a><br/></td></tr>
 <tr class="separator:a89d9b7f6e802eee842a4405279ec49f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0d60fe0529ab0301ffe13bc45582b7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#ac0d60fe0529ab0301ffe13bc45582b7f">AddOption</a> (int *var, const char *short_name, const char *long_name, const char *description, bool required=false)</td></tr>
+<tr class="memdesc:ac0d60fe0529ab0301ffe13bc45582b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an integer option and set 'var' to receive the value.  <a href="#ac0d60fe0529ab0301ffe13bc45582b7f">More...</a><br/></td></tr>
 <tr class="separator:ac0d60fe0529ab0301ffe13bc45582b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a73dc7b374a2e047fb9dd683d181906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a7a73dc7b374a2e047fb9dd683d181906">AddOption</a> (double *var, const char *short_name, const char *long_name, const char *description, bool required=false)</td></tr>
+<tr class="memdesc:a7a73dc7b374a2e047fb9dd683d181906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a double option and set 'var' to receive the value.  <a href="#a7a73dc7b374a2e047fb9dd683d181906">More...</a><br/></td></tr>
 <tr class="separator:a7a73dc7b374a2e047fb9dd683d181906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd5fb46018cc834d13c3674eff283a84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#abd5fb46018cc834d13c3674eff283a84">AddOption</a> (const char **var, const char *short_name, const char *long_name, const char *description, bool required=false)</td></tr>
+<tr class="memdesc:abd5fb46018cc834d13c3674eff283a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a string (char*) option and set 'var' to receive the value.  <a href="#abd5fb46018cc834d13c3674eff283a84">More...</a><br/></td></tr>
 <tr class="separator:abd5fb46018cc834d13c3674eff283a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc95cd3535aa76e78a22990f57bd7a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a7bc95cd3535aa76e78a22990f57bd7a3">AddOption</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; *var, const char *short_name, const char *long_name, const char *description, bool required=false)</td></tr>
 <tr class="separator:a7bc95cd3535aa76e78a22990f57bd7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca159221b3e948ad83bd6ceb9d01fe24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#aca159221b3e948ad83bd6ceb9d01fe24">AddOption</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> *var, const char *short_name, const char *long_name, const char *description, bool required=false)</td></tr>
 <tr class="separator:aca159221b3e948ad83bd6ceb9d01fe24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c1d9865e6d5f27331951c94ca34b9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a40c1d9865e6d5f27331951c94ca34b9c">Parse</a> ()</td></tr>
+<tr class="memdesc:a40c1d9865e6d5f27331951c94ca34b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the command-line options. Note that this function expects all the options provided through the command line to have a corresponding AddOption. In particular, this function cannot be used for partial parsing.  <a href="#a40c1d9865e6d5f27331951c94ca34b9c">More...</a><br/></td></tr>
 <tr class="separator:a40c1d9865e6d5f27331951c94ca34b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa9687aac8aa3a1fc78534191ada68a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#aaa9687aac8aa3a1fc78534191ada68a3">Good</a> () const </td></tr>
+<tr class="memdesc:aaa9687aac8aa3a1fc78534191ada68a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the command line options were parsed successfully.  <a href="#aaa9687aac8aa3a1fc78534191ada68a3">More...</a><br/></td></tr>
 <tr class="separator:aaa9687aac8aa3a1fc78534191ada68a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad31420f69c2b4fb30c4e128f626a612e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#ad31420f69c2b4fb30c4e128f626a612e">Help</a> () const </td></tr>
+<tr class="memdesc:ad31420f69c2b4fb30c4e128f626a612e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if we are flagged to print the help message.  <a href="#ad31420f69c2b4fb30c4e128f626a612e">More...</a><br/></td></tr>
 <tr class="separator:ad31420f69c2b4fb30c4e128f626a612e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aa607c1f15b1385489ebaf588b7ffa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a8aa607c1f15b1385489ebaf588b7ffa1">PrintOptions</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
+<tr class="memdesc:a8aa607c1f15b1385489ebaf588b7ffa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the options.  <a href="#a8aa607c1f15b1385489ebaf588b7ffa1">More...</a><br/></td></tr>
 <tr class="separator:a8aa607c1f15b1385489ebaf588b7ffa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6708876a087d6d2f41b14a8ec8dcee2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a6708876a087d6d2f41b14a8ec8dcee2c">PrintError</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
+<tr class="memdesc:a6708876a087d6d2f41b14a8ec8dcee2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the error message.  <a href="#a6708876a087d6d2f41b14a8ec8dcee2c">More...</a><br/></td></tr>
 <tr class="separator:a6708876a087d6d2f41b14a8ec8dcee2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed29a2620a54e2a4c05ecb911e2ac7d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#aed29a2620a54e2a4c05ecb911e2ac7d7">PrintHelp</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
+<tr class="memdesc:aed29a2620a54e2a4c05ecb911e2ac7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the help message.  <a href="#aed29a2620a54e2a4c05ecb911e2ac7d7">More...</a><br/></td></tr>
 <tr class="separator:aed29a2620a54e2a4c05ecb911e2ac7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39c517420a3718e49674f49188a59e34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1OptionsParser.html#a39c517420a3718e49674f49188a59e34">PrintUsage</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
+<tr class="memdesc:a39c517420a3718e49674f49188a59e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the usage message.  <a href="#a39c517420a3718e49674f49188a59e34">More...</a><br/></td></tr>
 <tr class="separator:a39c517420a3718e49674f49188a59e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -222,7 +235,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00071">71</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Construct a command line option parser with '_argc' and '_argv'. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00073">73</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +304,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00076">76</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Add a boolean option and set 'var' to receive the value. Enable/disable tags are used to set the bool to true/false respectively. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00082">82</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -343,7 +360,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00086">86</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Add an integer option and set 'var' to receive the value. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00094">94</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -397,7 +416,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00092">92</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Add a double option and set 'var' to receive the value. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00102">102</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +472,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00098">98</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Add a string (char*) option and set 'var' to receive the value. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00110">110</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -504,8 +527,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Add an integer array (separated by spaces) option and set 'var' to receive the values. </p>
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00105">105</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00120">120</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -558,8 +582,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Add a vector (doubles separated by spaces) option and set 'var' to receive the values. </p>
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00112">112</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00130">130</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -584,7 +609,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00125">125</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Return true if the command line options were parsed successfully. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00145">145</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +636,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00126">126</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
+<p>Return true if we are flagged to print the help message. </p>
+
+<p>Definition at line <a class="el" href="optparser_8hpp_source.html#l00148">148</a> of file <a class="el" href="optparser_8hpp_source.html">optparser.hpp</a>.</p>
 
 </div>
 </div>
@@ -625,6 +654,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Parse the command-line options. Note that this function expects all the options provided through the command line to have a corresponding AddOption. In particular, this function cannot be used for partial parsing. </p>
 
 <p>Definition at line <a class="el" href="optparser_8cpp_source.html#l00150">150</a> of file <a class="el" href="optparser_8cpp_source.html">optparser.cpp</a>.</p>
@@ -645,6 +675,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Print the error message. </p>
+
 <p>Definition at line <a class="el" href="optparser_8cpp_source.html#l00335">335</a> of file <a class="el" href="optparser_8cpp_source.html">optparser.cpp</a>.</p>
 
 </div>
@@ -662,6 +694,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Print the help message. </p>
 
 <p>Definition at line <a class="el" href="optparser_8cpp_source.html#l00378">378</a> of file <a class="el" href="optparser_8cpp_source.html">optparser.cpp</a>.</p>
 
@@ -681,6 +715,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Print the options. </p>
+
 <p>Definition at line <a class="el" href="optparser_8cpp_source.html#l00304">304</a> of file <a class="el" href="optparser_8cpp_source.html">optparser.cpp</a>.</p>
 
 </div>
@@ -699,6 +735,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Print the usage message. </p>
+
 <p>Definition at line <a class="el" href="optparser_8cpp_source.html#l00434">434</a> of file <a class="el" href="optparser_8cpp_source.html">optparser.cpp</a>.</p>
 
 </div>
@@ -710,7 +748,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

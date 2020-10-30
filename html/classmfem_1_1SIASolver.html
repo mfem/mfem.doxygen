@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -123,9 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afbbc947151cecc44f5248960a07f5642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3ba28dc9f96c56bc0ab228876755c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SIASolver.html#a5a3ba28dc9f96c56bc0ab228876755c7">Init</a> (<a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;P, <a class="el" href="classmfem_1_1TimeDependentOperator.html">TimeDependentOperator</a> &amp;F)</td></tr>
 <tr class="separator:a5a3ba28dc9f96c56bc0ab228876755c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6857df1e19981942632823fb38db8f3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SIASolver.html#a6857df1e19981942632823fb38db8f3e">Step</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;p, double &amp;t, double &amp;dt)=0</td></tr>
+<tr class="memitem:a6857df1e19981942632823fb38db8f3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SIASolver.html#a6857df1e19981942632823fb38db8f3e">Step</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, double &amp;t, double &amp;dt)=0</td></tr>
 <tr class="separator:a6857df1e19981942632823fb38db8f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a024a0d6a0a53ef0bd80507646a06ebe6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SIASolver.html#a024a0d6a0a53ef0bd80507646a06ebe6">Run</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;p, double &amp;t, double &amp;dt, double tf)</td></tr>
+<tr class="memitem:a024a0d6a0a53ef0bd80507646a06ebe6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SIASolver.html#a024a0d6a0a53ef0bd80507646a06ebe6">Run</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;q, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, double &amp;t, double &amp;dt, double tf)</td></tr>
 <tr class="separator:a024a0d6a0a53ef0bd80507646a06ebe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86fd7e5c1e910aee37d993b0669f2185"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SIASolver.html#a86fd7e5c1e910aee37d993b0669f2185">~SIASolver</a> ()</td></tr>
 <tr class="separator:a86fd7e5c1e910aee37d993b0669f2185"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +146,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classmfem_1_1SIASolver.html">SIASolver</a> class is based on the Symplectic Integration Algorithm described in "A Symplectic Integration Algorithm for Separable Hamiltonian
 Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92, pages 230-256 (1991). The Symplectic Integration Algorithm (SIA) is designed for systems of first order ODEs derived from a Hamiltonian. H(q,p,t) = T(p) + V(q,t) Which leads to the equations: dq/dt = dT/dp dp/dt = -dV/dq In the integrator the operators P and F are defined to be: P = dT/dp F = -dV/dq </p>
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00471">471</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00506">506</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afbbc947151cecc44f5248960a07f5642"></a>
 <div class="memitem">
@@ -168,7 +169,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00474">474</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00509">509</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -193,7 +194,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00485">485</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00520">520</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,7 +231,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00713">713</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8cpp_source.html#l00790">790</a> of file <a class="el" href="ode_8cpp_source.html">ode.cpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +285,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00480">480</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00515">515</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +333,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classmfem_1_1SIAVSolver.html#a9802ab6a09e44f4f6bf29b38c9080ef9">mfem::SIAVSolver</a>, <a class="el" href="classmfem_1_1SIA2Solver.html#ad55ae3caf9752cfbf7e85b5bc8cba3e4">mfem::SIA2Solver</a>, and <a class="el" href="classmfem_1_1SIA1Solver.html#ab226318d8d8730dd3b43062489aaf62f">mfem::SIA1Solver</a>.</p>
+<p>Implemented in <a class="el" href="classmfem_1_1SIAVSolver.html#a86185bd64b2e421299ad859949097c16">mfem::SIAVSolver</a>, <a class="el" href="classmfem_1_1SIA2Solver.html#a3b2e488cd234109293268e355fee483a">mfem::SIA2Solver</a>, and <a class="el" href="classmfem_1_1SIA1Solver.html#aaee20b4ff9a3cf09392eed71095fd32a">mfem::SIA1Solver</a>.</p>
 
 </div>
 </div>
@@ -355,7 +356,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00491">491</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00526">526</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +378,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00492">492</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00527">527</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +400,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00488">488</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00523">523</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +422,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00489">489</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ode_8hpp_source.html#l00524">524</a> of file <a class="el" href="ode_8hpp_source.html">ode.hpp</a>.</p>
 
 </div>
 </div>
@@ -432,7 +433,7 @@ Functions" by J. Candy and W. Rozmus, Journal of Computational Physics, Vol. 92,
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

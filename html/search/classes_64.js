@@ -35,6 +35,7 @@ var searchData=
   ['divergenceinterpolator',['DivergenceInterpolator',['../classmfem_1_1DivergenceInterpolator.html',1,'mfem']]],
   ['doftoquad',['DofToQuad',['../classmfem_1_1DofToQuad.html',1,'mfem']]],
   ['domainintegrator',['DomainIntegrator',['../classDomainIntegrator.html',1,'']]],
+  ['domainlfgradintegrator',['DomainLFGradIntegrator',['../classmfem_1_1DomainLFGradIntegrator.html',1,'mfem']]],
   ['domainlfintegrator',['DomainLFIntegrator',['../classmfem_1_1DomainLFIntegrator.html',1,'mfem']]],
   ['dsmoother',['DSmoother',['../classmfem_1_1DSmoother.html',1,'mfem']]],
   ['dstable',['DSTable',['../classmfem_1_1DSTable.html',1,'mfem']]],

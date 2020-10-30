@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -157,7 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7623b5c885ddb3aefa0a64ba36bef03d inherit pub_methods_classmfem_1_1PetscSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97e0a0bf020c95315cb75a28675bd2ee inherit pub_methods_classmfem_1_1PetscSolver"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PetscSolver.html#a97e0a0bf020c95315cb75a28675bd2ee">GetFinalNorm</a> ()</td></tr>
 <tr class="separator:a97e0a0bf020c95315cb75a28675bd2ee inherit pub_methods_classmfem_1_1PetscSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6c6a6d5df822ede5761ccbe963249a9 inherit pub_methods_classmfem_1_1PetscSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PetscSolver.html#ac6c6a6d5df822ede5761ccbe963249a9">SetMonitor</a> (<a class="el" href="classmfem_1_1PetscSolverMonitor.html">PetscSolverMonitor</a> *ctx)</td></tr>
+<tr class="memitem:ac6c6a6d5df822ede5761ccbe963249a9 inherit pub_methods_classmfem_1_1PetscSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PetscSolver.html#ac6c6a6d5df822ede5761ccbe963249a9">SetMonitor</a> (<a class="el" href="classmfem_1_1PetscSolverMonitor.html">PetscSolverMonitor</a> *<a class="el" href="navier__tgv_8cpp.html#a131dc2ab0dd9a8dff37d04cf15d7d0ab">ctx</a>)</td></tr>
 <tr class="memdesc:ac6c6a6d5df822ede5761ccbe963249a9 inherit pub_methods_classmfem_1_1PetscSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets user-defined monitoring routine.  <a href="#ac6c6a6d5df822ede5761ccbe963249a9">More...</a><br/></td></tr>
 <tr class="separator:ac6c6a6d5df822ede5761ccbe963249a9 inherit pub_methods_classmfem_1_1PetscSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f950e72424b1ac9e8383fdaf7e3ce3f inherit pub_methods_classmfem_1_1PetscSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PetscSolver.html#a5f950e72424b1ac9e8383fdaf7e3ce3f">SetBCHandler</a> (<a class="el" href="classmfem_1_1PetscBCHandler.html">PetscBCHandler</a> *bch)</td></tr>
@@ -260,6 +261,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> { <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373">DIAG_KEEP</a>
+ }</td></tr>
+<tr class="memdesc:a7f3e99434bf268ccbaae6863fe5e6bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines operator diagonal policy upon elimination of rows and/or columns.  <a href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">More...</a><br/></td></tr>
+<tr class="separator:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa033bcf10ca8783218f5d98d8c54288 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Type</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78">ANY_TYPE</a>, 
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a1149a94d7b60f7432d9106f29bea24ac">MFEM_SPARSEMAT</a>, 
@@ -359,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02630">2630</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02612">2612</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +394,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02641">2641</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02623">2623</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02653">2653</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02635">2635</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +453,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02759">2759</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02741">2741</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +494,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Operator.html#a700c3008b5ab43155cdfd279c8360472">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02749">2749</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02731">2731</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -527,7 +534,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Operator.html#a2d8a7d98fd35870efb23db6e0472894b">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02754">2754</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02736">2736</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -584,7 +591,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Solver.html#ab70f2a66818a847fb6fcd9b119e22f59">mfem::Solver</a>.</p>
 
-<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02665">2665</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="petsc_8cpp_source.html#l02647">2647</a> of file <a class="el" href="petsc_8cpp_source.html">petsc.cpp</a>.</p>
 
 </div>
 </div>
@@ -595,7 +602,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:04 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

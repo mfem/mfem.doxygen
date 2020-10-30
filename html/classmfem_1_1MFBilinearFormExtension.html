@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -96,6 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classmfem_1_1MFBilinearFormExtension-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">mfem::MFBilinearFormExtension Class Reference</div>  </div>
@@ -124,8 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6cf356160f9dfb9f8a293b1098f9d8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#af6cf356160f9dfb9f8a293b1098f9d8d">MFBilinearFormExtension</a> (<a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a> *form)</td></tr>
 <tr class="separator:af6cf356160f9dfb9f8a293b1098f9d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03328059265607ac5c8cf0f4d64afe3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a03328059265607ac5c8cf0f4d64afe3c">Assemble</a> ()</td></tr>
-<tr class="memdesc:a03328059265607ac5c8cf0f4d64afe3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO.  <a href="#a03328059265607ac5c8cf0f4d64afe3c">More...</a><br/></td></tr>
+<tr class="memdesc:a03328059265607ac5c8cf0f4d64afe3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble at the level given for the <a class="el" href="classmfem_1_1BilinearFormExtension.html" title="Class extending the BilinearForm class to support different AssemblyLevels. ">BilinearFormExtension</a> subclass.  <a href="#a03328059265607ac5c8cf0f4d64afe3c">More...</a><br/></td></tr>
 <tr class="separator:a03328059265607ac5c8cf0f4d64afe3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5478597d3a2ddbb8953c1be312b7c87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#ac5478597d3a2ddbb8953c1be312b7c87">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
+<tr class="separator:ac5478597d3a2ddbb8953c1be312b7c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8f0f3d594e880cb89f4bd86e15c5927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#ad8f0f3d594e880cb89f4bd86e15c5927">FormSystemMatrix</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1OperatorHandle.html">OperatorHandle</a> &amp;A)</td></tr>
 <tr class="separator:ad8f0f3d594e880cb89f4bd86e15c5927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd10a5cc49643e2d3f2d881027fa956a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#abd10a5cc49643e2d3f2d881027fa956a">FormLinearSystem</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1OperatorHandle.html">OperatorHandle</a> &amp;A, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B, int copy_interior=0)</td></tr>
@@ -138,8 +142,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a73477648d89eab9da5322a87d58a438e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f02ecf48d7ea2bcc5aba810da663e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a44f02ecf48d7ea2bcc5aba810da663e6">Update</a> ()</td></tr>
 <tr class="separator:a44f02ecf48d7ea2bcc5aba810da663e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f165e0e9678338130f4169615ff878"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a37f165e0e9678338130f4169615ff878">~MFBilinearFormExtension</a> ()</td></tr>
-<tr class="separator:a37f165e0e9678338130f4169615ff878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1BilinearFormExtension"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1BilinearFormExtension')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1BilinearFormExtension.html">mfem::BilinearFormExtension</a></td></tr>
 <tr class="memitem:a060005df1cbc0f9e1b18dea82f90622f inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormExtension.html#a060005df1cbc0f9e1b18dea82f90622f">BilinearFormExtension</a> (<a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a> *form)</td></tr>
 <tr class="separator:a060005df1cbc0f9e1b18dea82f90622f inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,8 +154,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aad9404f26180c0f8fb03727bdbc4a0f1 inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormExtension.html#aad9404f26180c0f8fb03727bdbc4a0f1">GetRestriction</a> () const </td></tr>
 <tr class="memdesc:aad9404f26180c0f8fb03727bdbc4a0f1 inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the finite element space restriction matrix.  <a href="#aad9404f26180c0f8fb03727bdbc4a0f1">More...</a><br/></td></tr>
 <tr class="separator:aad9404f26180c0f8fb03727bdbc4a0f1 inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31f3805a3656633ea57ab6e9bccf67c8 inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormExtension.html#a31f3805a3656633ea57ab6e9bccf67c8">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
-<tr class="separator:a31f3805a3656633ea57ab6e9bccf67c8 inherit pub_methods_classmfem_1_1BilinearFormExtension"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
 <tr class="memitem:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#af05141bf6d86d28444889d58216dc7ed">InitTVectors</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Ri, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B) const </td></tr>
 <tr class="memdesc:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes memory for true vectors of linear system.  <a href="#af05141bf6d86d28444889d58216dc7ed">More...</a><br/></td></tr>
@@ -213,9 +213,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae8d0080fbdc5979d1fc10d00526bc9cd inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type ID of the <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> class.  <a href="#ae8d0080fbdc5979d1fc10d00526bc9cd">More...</a><br/></td></tr>
 <tr class="separator:ae8d0080fbdc5979d1fc10d00526bc9cd inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aca50525f253687c81df76f2b58bfc802"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#aca50525f253687c81df76f2b58bfc802">trialFes</a></td></tr>
+<tr class="separator:aca50525f253687c81df76f2b58bfc802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86eb2f7f190e821b05d9416a1641b1ea"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a86eb2f7f190e821b05d9416a1641b1ea">testFes</a></td></tr>
+<tr class="separator:a86eb2f7f190e821b05d9416a1641b1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc88ad032ae8a7690c2b85f2390064c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#aadc88ad032ae8a7690c2b85f2390064c">localX</a></td></tr>
+<tr class="separator:aadc88ad032ae8a7690c2b85f2390064c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5ab653f9303851f5de5219fa06b4bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a2f5ab653f9303851f5de5219fa06b4bd">localY</a></td></tr>
+<tr class="separator:a2f5ab653f9303851f5de5219fa06b4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee869d6d5396868b1ed7163fee3af24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#aaee869d6d5396868b1ed7163fee3af24">faceIntX</a></td></tr>
+<tr class="separator:aaee869d6d5396868b1ed7163fee3af24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e14a86579755beda8f61804078291f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a5e14a86579755beda8f61804078291f9">faceIntY</a></td></tr>
+<tr class="separator:a5e14a86579755beda8f61804078291f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a329f43c46fa2fcaf800a20e963f4da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a0a329f43c46fa2fcaf800a20e963f4da">faceBdrX</a></td></tr>
+<tr class="separator:a0a329f43c46fa2fcaf800a20e963f4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149f4086b55dd076398c30a65664eefe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a149f4086b55dd076398c30a65664eefe">faceBdrY</a></td></tr>
+<tr class="separator:a149f4086b55dd076398c30a65664eefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3da8f1350332decf046705e744ceee5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#ab3da8f1350332decf046705e744ceee5">elem_restrict</a></td></tr>
+<tr class="separator:ab3da8f1350332decf046705e744ceee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52eed931df316081a55274be611e8b65"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a52eed931df316081a55274be611e8b65">int_face_restrict_lex</a></td></tr>
+<tr class="separator:a52eed931df316081a55274be611e8b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdb2954936848f4d45700f22c2879be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a1fdb2954936848f4d45700f22c2879be">bdr_face_restrict_lex</a></td></tr>
+<tr class="separator:a1fdb2954936848f4d45700f22c2879be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classmfem_1_1BilinearFormExtension"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1BilinearFormExtension')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1BilinearFormExtension.html">mfem::BilinearFormExtension</a></td></tr>
+<tr class="memitem:a7c9dc6253c7927028a00744f6745f057 inherit pro_attribs_classmfem_1_1BilinearFormExtension"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormExtension.html#a7c9dc6253c7927028a00744f6745f057">a</a></td></tr>
+<tr class="memdesc:a7c9dc6253c7927028a00744f6745f057 inherit pro_attribs_classmfem_1_1BilinearFormExtension"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not owned.  <a href="#a7c9dc6253c7927028a00744f6745f057">More...</a><br/></td></tr>
+<tr class="separator:a7c9dc6253c7927028a00744f6745f057 inherit pro_attribs_classmfem_1_1BilinearFormExtension"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6">height</a></td></tr>
+<tr class="memdesc:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the output / number of rows in the matrix.  <a href="#a62d74ad697f481c1e139404ca892afa6">More...</a><br/></td></tr>
+<tr class="separator:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a19823327e636510bfcd9f8c5e4bf48fa">width</a></td></tr>
+<tr class="memdesc:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the input / number of columns in the matrix.  <a href="#a19823327e636510bfcd9f8c5e4bf48fa">More...</a><br/></td></tr>
+<tr class="separator:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> { <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373">DIAG_KEEP</a>
+ }</td></tr>
+<tr class="memdesc:a7f3e99434bf268ccbaae6863fe5e6bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines operator diagonal policy upon elimination of rows and/or columns.  <a href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">More...</a><br/></td></tr>
+<tr class="separator:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa033bcf10ca8783218f5d98d8c54288 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Type</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78">ANY_TYPE</a>, 
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a1149a94d7b60f7432d9106f29bea24ac">MFEM_SPARSEMAT</a>, 
@@ -245,29 +287,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab860076188a32acbd2f1a7d428aba00d">SetupRAP</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po)</td></tr>
 <tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, taking in input/output Prolongation matrices.  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
 <tr class="separator:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classmfem_1_1BilinearFormExtension"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1BilinearFormExtension')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1BilinearFormExtension.html">mfem::BilinearFormExtension</a></td></tr>
-<tr class="memitem:a7c9dc6253c7927028a00744f6745f057 inherit pro_attribs_classmfem_1_1BilinearFormExtension"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearFormExtension.html#a7c9dc6253c7927028a00744f6745f057">a</a></td></tr>
-<tr class="memdesc:a7c9dc6253c7927028a00744f6745f057 inherit pro_attribs_classmfem_1_1BilinearFormExtension"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not owned.  <a href="#a7c9dc6253c7927028a00744f6745f057">More...</a><br/></td></tr>
-<tr class="separator:a7c9dc6253c7927028a00744f6745f057 inherit pro_attribs_classmfem_1_1BilinearFormExtension"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
-<tr class="memitem:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6">height</a></td></tr>
-<tr class="memdesc:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the output / number of rows in the matrix.  <a href="#a62d74ad697f481c1e139404ca892afa6">More...</a><br/></td></tr>
-<tr class="separator:a62d74ad697f481c1e139404ca892afa6 inherit pro_attribs_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a19823327e636510bfcd9f8c5e4bf48fa">width</a></td></tr>
-<tr class="memdesc:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the input / number of columns in the matrix.  <a href="#a19823327e636510bfcd9f8c5e4bf48fa">More...</a><br/></td></tr>
-<tr class="separator:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data and methods for matrix-free bilinear forms. </p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00132">132</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00134">134</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af6cf356160f9dfb9f8a293b1098f9d8d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">mfem::MFBilinearFormExtension::MFBilinearFormExtension </td>
@@ -277,39 +305,9 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00135">135</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a37f165e0e9678338130f4169615ff878"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">mfem::MFBilinearFormExtension::~MFBilinearFormExtension </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00148">148</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00040">40</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
@@ -330,16 +328,44 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>TODO. </p>
+<p>Assemble at the level given for the <a class="el" href="classmfem_1_1BilinearFormExtension.html" title="Class extending the BilinearForm class to support different AssemblyLevels. ">BilinearFormExtension</a> subclass. </p>
 
 <p>Implements <a class="el" href="classmfem_1_1BilinearFormExtension.html#a04c627208d4334b0d47368ee9b6183aa">mfem::BilinearFormExtension</a>.</p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00139">139</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00050">50</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5478597d3a2ddbb8953c1be312b7c87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::MFBilinearFormExtension::AssembleDiagonal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>diag</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1BilinearFormExtension.html#a31f3805a3656633ea57ab6e9bccf67c8">mfem::BilinearFormExtension</a>.</p>
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00060">60</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
@@ -400,14 +426,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classmfem_1_1BilinearFormExtension.html#a382863af6e2667b73e084ef56b3831cf">mfem::BilinearFormExtension</a>.</p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00141">141</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00114">114</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
@@ -438,14 +464,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classmfem_1_1BilinearFormExtension.html#a1cfae8584acd8e5465755ea3ea9bff00">mfem::BilinearFormExtension</a>.</p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00140">140</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00106">106</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
@@ -476,7 +502,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -485,7 +511,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Operator.html#a700c3008b5ab43155cdfd279c8360472">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00145">145</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00125">125</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +542,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -525,7 +551,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Operator.html#a2d8a7d98fd35870efb23db6e0472894b">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00146">146</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00183">183</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
@@ -545,24 +571,268 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classmfem_1_1BilinearFormExtension.html#af2fb1dcafc6f821818107de206627b6d">mfem::BilinearFormExtension</a>.</p>
 
-<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00147">147</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bilinearform__ext_8cpp_source.html#l00094">94</a> of file <a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a1fdb2954936848f4d45700f22c2879be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1Operator.html">Operator</a>* mfem::MFBilinearFormExtension::bdr_face_restrict_lex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00143">143</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3da8f1350332decf046705e744ceee5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1Operator.html">Operator</a>* mfem::MFBilinearFormExtension::elem_restrict</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00141">141</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a329f43c46fa2fcaf800a20e963f4da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::MFBilinearFormExtension::faceBdrX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00140">140</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a149f4086b55dd076398c30a65664eefe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::MFBilinearFormExtension::faceBdrY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00140">140</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaee869d6d5396868b1ed7163fee3af24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::MFBilinearFormExtension::faceIntX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00139">139</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e14a86579755beda8f61804078291f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::MFBilinearFormExtension::faceIntY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00139">139</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52eed931df316081a55274be611e8b65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1Operator.html">Operator</a>* mfem::MFBilinearFormExtension::int_face_restrict_lex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00142">142</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aadc88ad032ae8a7690c2b85f2390064c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::MFBilinearFormExtension::localX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00138">138</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f5ab653f9303851f5de5219fa06b4bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Vector.html">Vector</a> mfem::MFBilinearFormExtension::localY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00138">138</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a86eb2f7f190e821b05d9416a1641b1ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> * mfem::MFBilinearFormExtension::testFes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00137">137</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca50525f253687c81df76f2b58bfc802"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a>* mfem::MFBilinearFormExtension::trialFes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bilinearform__ext_8hpp_source.html#l00137">137</a> of file <a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>fem/<a class="el" href="bilinearform__ext_8hpp_source.html">bilinearform_ext.hpp</a></li>
+<li>fem/<a class="el" href="bilinearform__ext_8cpp_source.html">bilinearform_ext.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:18 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:05 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

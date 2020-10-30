@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -128,16 +129,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1a18badd9dbe0eedb888b283e2ca4e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#ac1a18badd9dbe0eedb888b283e2ca4e4">socketbuf</a> (const char hostname[], int port)</td></tr>
 <tr class="separator:ac1a18badd9dbe0eedb888b283e2ca4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a9c890e99c52b6a82bfab7200b405f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#a09a9c890e99c52b6a82bfab7200b405f">attach</a> (int sd)</td></tr>
+<tr class="memdesc:a09a9c890e99c52b6a82bfab7200b405f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach a new socket descriptor to the socketbuf. Returns the old socket descriptor which is NOT closed.  <a href="#a09a9c890e99c52b6a82bfab7200b405f">More...</a><br/></td></tr>
 <tr class="separator:a09a9c890e99c52b6a82bfab7200b405f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39ffc990dbdacafaf4c31e5ce11d5e2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#a39ffc990dbdacafaf4c31e5ce11d5e2f">detach</a> ()</td></tr>
+<tr class="memdesc:a39ffc990dbdacafaf4c31e5ce11d5e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach the current socket descriptor from the socketbuf.  <a href="#a39ffc990dbdacafaf4c31e5ce11d5e2f">More...</a><br/></td></tr>
 <tr class="separator:a39ffc990dbdacafaf4c31e5ce11d5e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6260f4e47e74749a92eaa1ae3439b81"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#af6260f4e47e74749a92eaa1ae3439b81">open</a> (const char hostname[], int port)</td></tr>
+<tr class="memdesc:af6260f4e47e74749a92eaa1ae3439b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a socket on the 'port' at 'hostname' and store the socket descriptor. Returns 0 if there is no error, otherwise returns -1.  <a href="#af6260f4e47e74749a92eaa1ae3439b81">More...</a><br/></td></tr>
 <tr class="separator:af6260f4e47e74749a92eaa1ae3439b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4196e0f1bcbc832291007ddcb09a7577"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#a4196e0f1bcbc832291007ddcb09a7577">close</a> ()</td></tr>
+<tr class="memdesc:a4196e0f1bcbc832291007ddcb09a7577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the current socket descriptor.  <a href="#a4196e0f1bcbc832291007ddcb09a7577">More...</a><br/></td></tr>
 <tr class="separator:a4196e0f1bcbc832291007ddcb09a7577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa39c2729fb7d794887f062d43e3365ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#aa39c2729fb7d794887f062d43e3365ea">getsocketdescriptor</a> ()</td></tr>
+<tr class="memdesc:aa39c2729fb7d794887f062d43e3365ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attached socket descriptor.  <a href="#aa39c2729fb7d794887f062d43e3365ea">More...</a><br/></td></tr>
 <tr class="separator:aa39c2729fb7d794887f062d43e3365ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4c0111bcf5d7e8207761cede9dc2d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#a9d4c0111bcf5d7e8207761cede9dc2d0">is_open</a> ()</td></tr>
+<tr class="memdesc:a9d4c0111bcf5d7e8207761cede9dc2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the socket is open and has a valid socket descriptor. Otherwise returns false.  <a href="#a9d4c0111bcf5d7e8207761cede9dc2d0">More...</a><br/></td></tr>
 <tr class="separator:a9d4c0111bcf5d7e8207761cede9dc2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af586d921a58a1d204b643088f8743091"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1socketbuf.html#af586d921a58a1d204b643088f8743091">~socketbuf</a> ()</td></tr>
 <tr class="separator:af586d921a58a1d204b643088f8743091"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,7 +288,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00070">70</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
+<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00077">77</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
 
 </div>
 </div>
@@ -307,6 +314,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Attach a new socket descriptor to the socketbuf. Returns the old socket descriptor which is NOT closed. </p>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1GnuTLS__socketbuf.html#a55fcc129024fb2a666c7aa8e232eeb72">mfem::GnuTLS_socketbuf</a>.</p>
@@ -336,6 +344,8 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Close the current socket descriptor. </p>
+
 <p>Reimplemented in <a class="el" href="classmfem_1_1GnuTLS__socketbuf.html#a0c8215796a0ca67413db0a7121524d81">mfem::GnuTLS_socketbuf</a>.</p>
 
 <p>Definition at line <a class="el" href="socketstream_8cpp_source.html#l00106">106</a> of file <a class="el" href="socketstream_8cpp_source.html">socketstream.cpp</a>.</p>
@@ -363,7 +373,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00060">60</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
+<p>Detach the current socket descriptor from the socketbuf. </p>
+
+<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00061">61</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +400,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00066">66</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
+<p>Returns the attached socket descriptor. </p>
+
+<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00071">71</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +427,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00068">68</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
+<p>Returns true if the socket is open and has a valid socket descriptor. Otherwise returns false. </p>
+
+<p>Definition at line <a class="el" href="socketstream_8hpp_source.html#l00075">75</a> of file <a class="el" href="socketstream_8hpp_source.html">socketstream.hpp</a>.</p>
 
 </div>
 </div>
@@ -448,6 +464,8 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Open a socket on the 'port' at 'hostname' and store the socket descriptor. Returns 0 if there is no error, otherwise returns -1. </p>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1GnuTLS__socketbuf.html#aae2725de9662e4cc5fe050779ae836c8">mfem::GnuTLS_socketbuf</a>.</p>
 
@@ -707,7 +725,7 @@ Static Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

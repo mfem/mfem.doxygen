@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -132,13 +133,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a647f7768429f9612c3c16a40020a3ab3"><td class="memTemplItemLeft" align="right" valign="top">MFEM_HOST_DEVICE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#a647f7768429f9612c3c16a40020a3ab3">MultABt</a> (const int Aheight, const int Awidth, const int Bheight, const TA *Adata, const TB *Bdata, TC *ABtdata)</td></tr>
 <tr class="memdesc:a647f7768429f9612c3c16a40020a3ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a matrix of size <em>Aheight</em> x <em>Awidth</em> and data <em>Adata</em> with the transpose of a matrix of size <em>Bheight</em> x <em>Awidth</em> and data <em>Bdata:</em> A * Bt. Return the result in a matrix with data <em>ABtdata</em>.  <a href="#a647f7768429f9612c3c16a40020a3ab3">More...</a><br/></td></tr>
 <tr class="separator:a647f7768429f9612c3c16a40020a3ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f46677ebde466631f20ef99f2de3d41"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
-<tr class="memitem:a4f46677ebde466631f20ef99f2de3d41"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#a4f46677ebde466631f20ef99f2de3d41">CalcEigenvalues</a> (const double *data, double *lambda, double *vec)</td></tr>
-<tr class="separator:a4f46677ebde466631f20ef99f2de3d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf7240d1290002f16f30b1845164a78"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
-<tr class="memitem:afdf7240d1290002f16f30b1845164a78"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#afdf7240d1290002f16f30b1845164a78">CalcSingularvalue</a> (const double *data, const int i)</td></tr>
-<tr class="memdesc:afdf7240d1290002f16f30b1845164a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th singular value of the matrix of size dim with given <em>data</em>.  <a href="#afdf7240d1290002f16f30b1845164a78">More...</a><br/></td></tr>
-<tr class="separator:afdf7240d1290002f16f30b1845164a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65466fa8fa1a8f84e23ba16fd21e8fa"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
+<tr class="memitem:af65466fa8fa1a8f84e23ba16fd21e8fa"><td class="memTemplItemLeft" align="right" valign="top">MFEM_HOST_DEVICE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#af65466fa8fa1a8f84e23ba16fd21e8fa">CalcEigenvalues</a> (const double *data, double *lambda, double *vec)</td></tr>
+<tr class="separator:af65466fa8fa1a8f84e23ba16fd21e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bfbfcb50282a199d91dc73f50e54a6"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
+<tr class="memitem:ac4bfbfcb50282a199d91dc73f50e54a6"><td class="memTemplItemLeft" align="right" valign="top">MFEM_HOST_DEVICE double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#ac4bfbfcb50282a199d91dc73f50e54a6">CalcSingularvalue</a> (const double *data, const int i)</td></tr>
+<tr class="memdesc:ac4bfbfcb50282a199d91dc73f50e54a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th singular value of the matrix of size dim with given <em>data</em>.  <a href="#ac4bfbfcb50282a199d91dc73f50e54a6">More...</a><br/></td></tr>
+<tr class="separator:ac4bfbfcb50282a199d91dc73f50e54a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46baf5b16a971cb68dd9638df53c79e8"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a46baf5b16a971cb68dd9638df53c79e8"><td class="memTemplItemLeft" align="right" valign="top">MFEM_HOST_DEVICE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#a46baf5b16a971cb68dd9638df53c79e8">CalcEigenvalues&lt; 2 &gt;</a> (const double *data, double *lambda, double *vec)</td></tr>
 <tr class="separator:a46baf5b16a971cb68dd9638df53c79e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:afb0f7c785e52abc7eb8ce26c2776a493"><td class="memTemplItemLeft" align="right" valign="top">MFEM_HOST_DEVICE double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#afb0f7c785e52abc7eb8ce26c2776a493">CalcSingularvalue&lt; 3 &gt;</a> (const double *data, const int i)</td></tr>
 <tr class="memdesc:afb0f7c785e52abc7eb8ce26c2776a493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th singular value of the matrix of size 3 with given <em>data</em>.  <a href="#afb0f7c785e52abc7eb8ce26c2776a493">More...</a><br/></td></tr>
 <tr class="separator:afb0f7c785e52abc7eb8ce26c2776a493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecaffa8713871184f3ef84a4762ece12"><td class="memItemLeft" align="right" valign="top">MFEM_HOST_DEVICE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem_1_1kernels.html#aecaffa8713871184f3ef84a4762ece12">LUSolve</a> (const double *data, const int m, const int *ipiv, double *x)</td></tr>
+<tr class="memdesc:aecaffa8713871184f3ef84a4762ece12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assuming L.U = P.A for a factored matrix (m x m),.  <a href="#aecaffa8713871184f3ef84a4762ece12">More...</a><br/></td></tr>
+<tr class="separator:aecaffa8713871184f3ef84a4762ece12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a306edb67e82f5e63f02f768021206743"></a>
@@ -219,14 +223,14 @@ template&lt;typename TALPHA , typename TA , typename TB , typename TC &gt; </div
 
 </div>
 </div>
-<a class="anchor" id="a4f46677ebde466631f20ef99f2de3d41"></a>
+<a class="anchor" id="af65466fa8fa1a8f84e23ba16fd21e8fa"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::kernels::CalcEigenvalues </td>
+          <td class="memname">MFEM_HOST_DEVICE void mfem::kernels::CalcEigenvalues </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -264,7 +268,7 @@ template&lt;&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MFEM_HOST_DEVICE void <a class="el" href="namespacemfem_1_1kernels.html#a4f46677ebde466631f20ef99f2de3d41">mfem::kernels::CalcEigenvalues</a>&lt; 2 &gt; </td>
+          <td class="memname">MFEM_HOST_DEVICE void <a class="el" href="namespacemfem_1_1kernels.html#af65466fa8fa1a8f84e23ba16fd21e8fa">mfem::kernels::CalcEigenvalues</a>&lt; 2 &gt; </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -309,7 +313,7 @@ template&lt;&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MFEM_HOST_DEVICE void <a class="el" href="namespacemfem_1_1kernels.html#a4f46677ebde466631f20ef99f2de3d41">mfem::kernels::CalcEigenvalues</a>&lt; 3 &gt; </td>
+          <td class="memname">MFEM_HOST_DEVICE void <a class="el" href="namespacemfem_1_1kernels.html#af65466fa8fa1a8f84e23ba16fd21e8fa">mfem::kernels::CalcEigenvalues</a>&lt; 3 &gt; </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -384,14 +388,14 @@ template&lt;int dim, typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="afdf7240d1290002f16f30b1845164a78"></a>
+<a class="anchor" id="ac4bfbfcb50282a199d91dc73f50e54a6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">double mfem::kernels::CalcSingularvalue </td>
+          <td class="memname">MFEM_HOST_DEVICE double mfem::kernels::CalcSingularvalue </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -424,7 +428,7 @@ template&lt;&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MFEM_HOST_DEVICE double <a class="el" href="namespacemfem_1_1kernels.html#afdf7240d1290002f16f30b1845164a78">mfem::kernels::CalcSingularvalue</a>&lt; 2 &gt; </td>
+          <td class="memname">MFEM_HOST_DEVICE double <a class="el" href="namespacemfem_1_1kernels.html#ac4bfbfcb50282a199d91dc73f50e54a6">mfem::kernels::CalcSingularvalue</a>&lt; 2 &gt; </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -464,7 +468,7 @@ template&lt;&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MFEM_HOST_DEVICE double <a class="el" href="namespacemfem_1_1kernels.html#afdf7240d1290002f16f30b1845164a78">mfem::kernels::CalcSingularvalue</a>&lt; 3 &gt; </td>
+          <td class="memname">MFEM_HOST_DEVICE double <a class="el" href="namespacemfem_1_1kernels.html#ac4bfbfcb50282a199d91dc73f50e54a6">mfem::kernels::CalcSingularvalue</a>&lt; 3 &gt; </td>
           <td>(</td>
           <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -521,6 +525,56 @@ template&lt;int dim, typename T &gt; </div>
 <p>Compute the determinant of a square matrix of size dim with given <em>data</em>. </p>
 
 <p>Definition at line <a class="el" href="kernels_8hpp_source.html#l00121">121</a> of file <a class="el" href="kernels_8hpp_source.html">kernels.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aecaffa8713871184f3ef84a4762ece12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MFEM_HOST_DEVICE void mfem::kernels::LUSolve </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>ipiv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assuming L.U = P.A for a factored matrix (m x m),. </p>
+
+<p>Definition at line <a class="el" href="kernels_8hpp_source.html#l01388">1388</a> of file <a class="el" href="kernels_8hpp_source.html">kernels.hpp</a>.</p>
 
 </div>
 </div>
@@ -793,7 +847,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

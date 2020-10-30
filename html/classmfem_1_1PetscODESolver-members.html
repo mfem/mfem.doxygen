@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -112,7 +113,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a8bbd9d3862153bf6049033a2a0b8abeb">GetComm</a>() const </td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a317eaf1d0378155edcec0e8ebdbbb3ef">GetConverged</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a97e0a0bf020c95315cb75a28675bd2ee">GetFinalNorm</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a7623b5c885ddb3aefa0a64ba36bef03d">GetNumIterations</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#ad7585f2758af15a5d9906219ae3b40ee">GetMaxStateSize</a>()</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a7623b5c885ddb3aefa0a64ba36bef03d">GetNumIterations</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#af146eaf62827e57a8df0929685068a78">GetStateSize</a>()</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#a84beeba569a2c8691f7c53e84c2f49db">GetStateVector</a>(int i)</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#a1d674fd0c2fea5b64cade517fa10b61a">GetStateVector</a>(int i, Vector &amp;state)</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a6de33929b4db922626dc03f1a5838eeb">GetType</a>() const </td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a468596cfa1af8fe516a1064e1b040617">Init</a>(TimeDependentOperator &amp;f_, enum PetscODESolver::Type type)</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a1c6d2e1895388e916fd0a6da67f7c8c9">Init</a>(TimeDependentOperator &amp;f_)</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
@@ -136,18 +141,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#ae81108235cd4ddc924441fb007e6a8b4">SetPreconditionerFactory</a>(PetscPreconditionerFactory *factory)</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a4e6d2d293d1285a937599cecf55c8930">SetPrintLevel</a>(int plev)</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a10e3c5fbfcbecfa53cd28390c47bf351">SetRelTol</a>(double tol)</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#ad8fd43818b1bcde5dd380896a7a6274e">SetTol</a>(double tol)</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a9e6beb1c4b46715314b97847e349f63e">SetType</a>(PetscODESolver::Type)</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a605300bd02393d7ebceae189ece64341">Step</a>(Vector &amp;x, double &amp;t, double &amp;dt)</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a9c7f9a622ac5b0c7a39e56cbbf00add5">Type</a> enum name</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a6daf54a2761a0585d486dfca135792df">X</a></td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"><span class="mlabel">mutable</span><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#a442c003248efd9c9cf7db7725ee5203e">~ODESolver</a>()</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#ad4192f0327db94b724b117ff3053b789">~PetscODESolver</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a6ff85c1f9228a1053b0d4819c5ece560">~PetscSolver</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#a8de4ae10a89784ceaf2e20f66295ec1e">SetStateVector</a>(int i, Vector &amp;state)</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#ad8fd43818b1bcde5dd380896a7a6274e">SetTol</a>(double tol)</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a9e6beb1c4b46715314b97847e349f63e">SetType</a>(PetscODESolver::Type)</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a605300bd02393d7ebceae189ece64341">Step</a>(Vector &amp;x, double &amp;t, double &amp;dt)</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#a9c7f9a622ac5b0c7a39e56cbbf00add5">Type</a> enum name</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a6daf54a2761a0585d486dfca135792df">X</a></td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"><span class="mlabel">mutable</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html#a442c003248efd9c9cf7db7725ee5203e">~ODESolver</a>()</td><td class="entry"><a class="el" href="classmfem_1_1ODESolver.html">mfem::ODESolver</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html#ad4192f0327db94b724b117ff3053b789">~PetscODESolver</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscODESolver.html">mfem::PetscODESolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html#a6ff85c1f9228a1053b0d4819c5ece560">~PetscSolver</a>()</td><td class="entry"><a class="el" href="classmfem_1_1PetscSolver.html">mfem::PetscSolver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:04 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

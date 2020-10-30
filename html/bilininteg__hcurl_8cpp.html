@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -94,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">bilininteg_hcurl.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -107,17 +108,53 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacemfem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html">mfem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aed9d2fa3a15a757a8cc2014a68032408"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aed9d2fa3a15a757a8cc2014a68032408">mfem::HCURL_MAX_D1D</a> = 5</td></tr>
-<tr class="separator:aed9d2fa3a15a757a8cc2014a68032408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab1229216cdd97f00835db549c83de90"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aab1229216cdd97f00835db549c83de90">mfem::HCURL_MAX_Q1D</a> = 6</td></tr>
-<tr class="separator:aab1229216cdd97f00835db549c83de90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa03c4b000d0abb39799697f9735f06f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aa03c4b000d0abb39799697f9735f06f4">mfem::PAHcurlMassApply2D</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:aa03c4b000d0abb39799697f9735f06f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6e591cc959da35437dd5e5f1673880"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a7d6e591cc959da35437dd5e5f1673880">mfem::PAHcurlMassAssembleDiagonal2D</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:a7d6e591cc959da35437dd5e5f1673880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcd2b9d336b4b38fc3c9cfd4cb58a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a0dcd2b9d336b4b38fc3c9cfd4cb58a32">mfem::PAHcurlMassAssembleDiagonal3D</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:a0dcd2b9d336b4b38fc3c9cfd4cb58a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c9f90fac533481c1038bb69f32c72b"><td class="memTemplParams" colspan="2">template&lt;int T_D1D, int T_Q1D&gt; </td></tr>
+<tr class="memitem:a84c9f90fac533481c1038bb69f32c72b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a84c9f90fac533481c1038bb69f32c72b">mfem::SmemPAHcurlMassAssembleDiagonal3D</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:a84c9f90fac533481c1038bb69f32c72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2438e7e8b19f2f7a695c72a8b713fcda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a2438e7e8b19f2f7a695c72a8b713fcda">mfem::PAHcurlMassApply3D</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a2438e7e8b19f2f7a695c72a8b713fcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e150a95f24b080409b791a2c6e04775"><td class="memTemplParams" colspan="2">template&lt;int T_D1D, int T_Q1D&gt; </td></tr>
+<tr class="memitem:a7e150a95f24b080409b791a2c6e04775"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a7e150a95f24b080409b791a2c6e04775">mfem::SmemPAHcurlMassApply3D</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a7e150a95f24b080409b791a2c6e04775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ff4de530d65401baddb76a7c1f23aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ab4ff4de530d65401baddb76a7c1f23aa">mfem::PAHcurlH1Apply3D</a> (const int D1D, const int Q1D, const int NE, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;gc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:ab4ff4de530d65401baddb76a7c1f23aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a42e089b56329e1caf77b412418cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aa3a42e089b56329e1caf77b412418cbd">mfem::PAHcurlH1Apply2D</a> (const int D1D, const int Q1D, const int NE, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;gc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:aa3a42e089b56329e1caf77b412418cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b18d966c7e040b69affe2fea7e5057a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a3b18d966c7e040b69affe2fea7e5057a">mfem::PAHcurlL2Setup</a> (const int NQ, const int coeffDim, const int NE, const Array&lt; double &gt; &amp;w, Vector &amp;coeff, Vector &amp;op)</td></tr>
+<tr class="separator:a3b18d966c7e040b69affe2fea7e5057a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b4257027f415d55dfbd586a22ac312"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#ab9b4257027f415d55dfbd586a22ac312">mfem::SmemPAHcurlMassAssembleDiagonal3D&lt; 0, 0 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:ab9b4257027f415d55dfbd586a22ac312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe84e56c8b173a11c2c116794b9c46c"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#aebe84e56c8b173a11c2c116794b9c46c">mfem::SmemPAHcurlMassAssembleDiagonal3D&lt; 2, 3 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:aebe84e56c8b173a11c2c116794b9c46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f9ff8e76e7cf5977652f8cabc0046b"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a48f9ff8e76e7cf5977652f8cabc0046b">mfem::SmemPAHcurlMassAssembleDiagonal3D&lt; 3, 4 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:a48f9ff8e76e7cf5977652f8cabc0046b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79af152fa8a64a9b850da0cead29ee4f"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a79af152fa8a64a9b850da0cead29ee4f">mfem::SmemPAHcurlMassAssembleDiagonal3D&lt; 4, 5 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:a79af152fa8a64a9b850da0cead29ee4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4b380900d39e0a4a982b55d00d0b5c"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a5c4b380900d39e0a4a982b55d00d0b5c">mfem::SmemPAHcurlMassAssembleDiagonal3D&lt; 5, 6 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Vector &amp;pa_data, Vector &amp;diag)</td></tr>
+<tr class="separator:a5c4b380900d39e0a4a982b55d00d0b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a8302f29b7d2c47cf17f4e49201e3e"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a44a8302f29b7d2c47cf17f4e49201e3e">mfem::SmemPAHcurlMassApply3D&lt; 0, 0 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a44a8302f29b7d2c47cf17f4e49201e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664f1b370385066d2227c4ec1ca29ce2"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a664f1b370385066d2227c4ec1ca29ce2">mfem::SmemPAHcurlMassApply3D&lt; 2, 3 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a664f1b370385066d2227c4ec1ca29ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6c70b1b24c65b9391d1958aa32bd50"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a8c6c70b1b24c65b9391d1958aa32bd50">mfem::SmemPAHcurlMassApply3D&lt; 3, 4 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a8c6c70b1b24c65b9391d1958aa32bd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3763b3685ceb9f235de59b2f49ac2116"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a3763b3685ceb9f235de59b2f49ac2116">mfem::SmemPAHcurlMassApply3D&lt; 4, 5 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a3763b3685ceb9f235de59b2f49ac2116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c64edecf1beccc78f6abcfc66bc836"><td class="memItemLeft" align="right" valign="top">template void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemfem.html#a22c64edecf1beccc78f6abcfc66bc836">mfem::SmemPAHcurlMassApply3D&lt; 5, 6 &gt;</a> (const int D1D, const int Q1D, const int NE, const bool symmetric, const Array&lt; double &gt; &amp;bo, const Array&lt; double &gt; &amp;bc, const Array&lt; double &gt; &amp;bot, const Array&lt; double &gt; &amp;bct, const Vector &amp;pa_data, const Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="separator:a22c64edecf1beccc78f6abcfc66bc836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:02 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

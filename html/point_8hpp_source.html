@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -145,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classmfem_1_1Point.html#a85885a4d90c3a1fd50984b92eb0d7b80">   47</a></span>&#160;   <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *<a class="code" href="classmfem_1_1Point.html#a85885a4d90c3a1fd50984b92eb0d7b80">GetEdgeVertices</a>(<span class="keywordtype">int</span> ei)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> NULL; }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">   /// @deprecated Use GetNFaces(void) and GetNFaceVertices(int) instead.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classmfem_1_1Point.html#aae912fc726c7d7811f6e811015645e36">   50</a></span>&#160;<span class="comment"></span>   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Point.html#aae912fc726c7d7811f6e811015645e36">GetNFaces</a>(<span class="keywordtype">int</span> &amp;nFaceVertices)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classmfem_1_1Point.html#a0e6f696a34b2f42856fcb0b09bbb80b8">   50</a></span>&#160;<span class="comment"></span>   MFEM_DEPRECATED <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Point.html#a0e6f696a34b2f42856fcb0b09bbb80b8">GetNFaces</a>(<span class="keywordtype">int</span> &amp;nFaceVertices)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">   </span>{ nFaceVertices = 0; <span class="keywordflow">return</span> 0; }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classmfem_1_1Point.html#a2f9d8538da897a029b81485930a8e24d">   53</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1Point.html#a2f9d8538da897a029b81485930a8e24d">GetNFaces</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 0; }</div>
@@ -166,10 +167,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00049">mesh.hpp:49</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00052">mesh.hpp:52</a></div></div>
+<div class="ttc" id="classmfem_1_1Point_html_a0e6f696a34b2f42856fcb0b09bbb80b8"><div class="ttname"><a href="classmfem_1_1Point.html#a0e6f696a34b2f42856fcb0b09bbb80b8">mfem::Point::GetNFaces</a></div><div class="ttdeci">virtual MFEM_DEPRECATED int GetNFaces(int &amp;nFaceVertices) const </div><div class="ttdef"><b>Definition:</b> <a href="point_8hpp_source.html#l00050">point.hpp:50</a></div></div>
 <div class="ttc" id="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1POINT_01_4_html"><div class="ttname"><a href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1POINT_01_4.html">mfem::Geometry::Constants&lt; Geometry::POINT &gt;</a></div><div class="ttdef"><b>Definition:</b> <a href="geom_8hpp_source.html#l00109">geom.hpp:109</a></div></div>
 <div class="ttc" id="classmfem_1_1Point_html_a85885a4d90c3a1fd50984b92eb0d7b80"><div class="ttname"><a href="classmfem_1_1Point.html#a85885a4d90c3a1fd50984b92eb0d7b80">mfem::Point::GetEdgeVertices</a></div><div class="ttdeci">virtual const int * GetEdgeVertices(int ei) const </div><div class="ttdef"><b>Definition:</b> <a href="point_8hpp_source.html#l00047">point.hpp:47</a></div></div>
-<div class="ttc" id="classmfem_1_1Point_html_aae912fc726c7d7811f6e811015645e36"><div class="ttname"><a href="classmfem_1_1Point.html#aae912fc726c7d7811f6e811015645e36">mfem::Point::GetNFaces</a></div><div class="ttdeci">virtual int GetNFaces(int &amp;nFaceVertices) const </div><div class="ttdef"><b>Definition:</b> <a href="point_8hpp_source.html#l00050">point.hpp:50</a></div></div>
 <div class="ttc" id="classmfem_1_1Point_html_a5974e7385c58c64c1862640dc2cb5fb2"><div class="ttname"><a href="classmfem_1_1Point.html#a5974e7385c58c64c1862640dc2cb5fb2">mfem::Point::GetType</a></div><div class="ttdeci">virtual Type GetType() const </div><div class="ttdoc">Return element&amp;#39;s type. </div><div class="ttdef"><b>Definition:</b> <a href="point_8hpp_source.html#l00036">point.hpp:36</a></div></div>
 <div class="ttc" id="namespacemfem_html_a959c4ab908a8b147b463914a05d9a2ce"><div class="ttname"><a href="namespacemfem.html#a959c4ab908a8b147b463914a05d9a2ce">mfem::PointFE</a></div><div class="ttdeci">PointFiniteElement PointFE</div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00030">point.cpp:30</a></div></div>
 <div class="ttc" id="classmfem_1_1Element_html_aaac293c18ce91216ee202754eed37a78a6b3da80399e6d2501f223b9b9200af24"><div class="ttname"><a href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78a6b3da80399e6d2501f223b9b9200af24">mfem::Element::POINT</a></div><div class="ttdef"><b>Definition:</b> <a href="element_8hpp_source.html#l00041">element.hpp:41</a></div></div>
@@ -194,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:02 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

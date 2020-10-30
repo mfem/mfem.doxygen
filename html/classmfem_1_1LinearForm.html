@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -104,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Class for linear form - <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with associated FE space and LFIntegrators.  
+<p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with associated FE space and LinearFormIntegrators.  
  <a href="classmfem_1_1LinearForm.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>&gt;</code></p>
@@ -123,24 +124,25 @@ Collaboration diagram for mfem::LinearForm:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3ab784509949d326e32238e244965ca4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a3ab784509949d326e32238e244965ca4">LinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f)</td></tr>
+<tr class="memitem:a3ab784509949d326e32238e244965ca4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a3ab784509949d326e32238e244965ca4">LinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>)</td></tr>
 <tr class="memdesc:a3ab784509949d326e32238e244965ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates linear form associated with FE space <em>*f</em>.  <a href="#a3ab784509949d326e32238e244965ca4">More...</a><br/></td></tr>
 <tr class="separator:a3ab784509949d326e32238e244965ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb95cc365b95a2777d6facf9efae73c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a5cb95cc365b95a2777d6facf9efae73c">LinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f, <a class="el" href="classmfem_1_1LinearForm.html">LinearForm</a> *lf)</td></tr>
-<tr class="memdesc:a5cb95cc365b95a2777d6facf9efae73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> on the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> <em>f</em>, using the same integrators as the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> <em>lf</em>.  <a href="#a5cb95cc365b95a2777d6facf9efae73c">More...</a><br/></td></tr>
+<tr class="memitem:a5cb95cc365b95a2777d6facf9efae73c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a5cb95cc365b95a2777d6facf9efae73c">LinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, <a class="el" href="classmfem_1_1LinearForm.html">LinearForm</a> *lf)</td></tr>
+<tr class="memdesc:a5cb95cc365b95a2777d6facf9efae73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> on the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> <em>f</em>, using the same integrators as the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> <em>lf</em>.  <a href="#a5cb95cc365b95a2777d6facf9efae73c">More...</a><br/></td></tr>
 <tr class="separator:a5cb95cc365b95a2777d6facf9efae73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30159b890b94f36f5b9174cabe2ef7f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a30159b890b94f36f5b9174cabe2ef7f8">LinearForm</a> ()</td></tr>
-<tr class="memdesc:a30159b890b94f36f5b9174cabe2ef7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> without an associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>.  <a href="#a30159b890b94f36f5b9174cabe2ef7f8">More...</a><br/></td></tr>
+<tr class="memdesc:a30159b890b94f36f5b9174cabe2ef7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> without an associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>.  <a href="#a30159b890b94f36f5b9174cabe2ef7f8">More...</a><br/></td></tr>
 <tr class="separator:a30159b890b94f36f5b9174cabe2ef7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240340f62bd89413995425110f75f8ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a240340f62bd89413995425110f75f8ed">LinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f, double *<a class="el" href="classmfem_1_1Vector.html#adc2dd421332811f1a80da7aef2524281">data</a>)</td></tr>
-<tr class="memdesc:a240340f62bd89413995425110f75f8ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> using previously allocated array <em>data</em>.  <a href="#a240340f62bd89413995425110f75f8ed">More...</a><br/></td></tr>
+<tr class="memitem:a240340f62bd89413995425110f75f8ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a240340f62bd89413995425110f75f8ed">LinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, double *<a class="el" href="classmfem_1_1Vector.html#adc2dd421332811f1a80da7aef2524281">data</a>)</td></tr>
+<tr class="memdesc:a240340f62bd89413995425110f75f8ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> using previously allocated array <em>data</em>.  <a href="#a240340f62bd89413995425110f75f8ed">More...</a><br/></td></tr>
 <tr class="separator:a240340f62bd89413995425110f75f8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1f0b438e4a0c5f1f5986a7bf4363320"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1LinearForm.html">LinearForm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#ac1f0b438e4a0c5f1f5986a7bf4363320">operator=</a> (const <a class="el" href="classmfem_1_1LinearForm.html">LinearForm</a> &amp;rhs)</td></tr>
 <tr class="memdesc:ac1f0b438e4a0c5f1f5986a7bf4363320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment. Only the data of the base class <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> is copied.  <a href="#ac1f0b438e4a0c5f1f5986a7bf4363320">More...</a><br/></td></tr>
 <tr class="separator:ac1f0b438e4a0c5f1f5986a7bf4363320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48842fe58d5412e3189d10f16b4bb79f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a48842fe58d5412e3189d10f16b4bb79f">GetFES</a> ()</td></tr>
-<tr class="memdesc:a48842fe58d5412e3189d10f16b4bb79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Return the FE space associated with the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a>.  <a href="#a48842fe58d5412e3189d10f16b4bb79f">More...</a><br/></td></tr>
-<tr class="separator:a48842fe58d5412e3189d10f16b4bb79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954d8719c3ba6fd6bb9710da11558ca2"><td class="memItemLeft" align="right" valign="top">MFEM_DEPRECATED <br class="typebreak"/>
+<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a954d8719c3ba6fd6bb9710da11558ca2">GetFES</a> ()</td></tr>
+<tr class="memdesc:a954d8719c3ba6fd6bb9710da11558ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Return the FE space associated with the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a>.  <a href="#a954d8719c3ba6fd6bb9710da11558ca2">More...</a><br/></td></tr>
+<tr class="separator:a954d8719c3ba6fd6bb9710da11558ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6db9cc8f3c56425638d69b7c16a18709"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a6db9cc8f3c56425638d69b7c16a18709">FESpace</a> ()</td></tr>
 <tr class="memdesc:a6db9cc8f3c56425638d69b7c16a18709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read+write access to the associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>.  <a href="#a6db9cc8f3c56425638d69b7c16a18709">More...</a><br/></td></tr>
 <tr class="separator:a6db9cc8f3c56425638d69b7c16a18709"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,17 +188,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a95fca38aa8e9c052026c75e702573798"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a95fca38aa8e9c052026c75e702573798">Update</a> ()</td></tr>
 <tr class="memdesc:a95fca38aa8e9c052026c75e702573798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the object according to the associated FE space <a class="el" href="classmfem_1_1LinearForm.html#a7a4c4ec7f6005e34d0bffd3d5c4362c6" title="FE space on which the LinearForm lives. Not owned. ">fes</a>.  <a href="#a95fca38aa8e9c052026c75e702573798">More...</a><br/></td></tr>
 <tr class="separator:a95fca38aa8e9c052026c75e702573798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3f0078623d56566617fdff84499ad86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#ab3f0078623d56566617fdff84499ad86">Update</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f)</td></tr>
+<tr class="memitem:ab3f0078623d56566617fdff84499ad86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#ab3f0078623d56566617fdff84499ad86">Update</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>)</td></tr>
 <tr class="memdesc:ab3f0078623d56566617fdff84499ad86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a new FE space, <em>*f</em>, with this object and <a class="el" href="classmfem_1_1LinearForm.html#a95fca38aa8e9c052026c75e702573798" title="Update the object according to the associated FE space fes. ">Update()</a> it. */.  <a href="#ab3f0078623d56566617fdff84499ad86">More...</a><br/></td></tr>
 <tr class="separator:ab3f0078623d56566617fdff84499ad86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabf72b85774b13b92cec33fe0fbaee20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#aabf72b85774b13b92cec33fe0fbaee20">Update</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *f, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v, int v_offset)</td></tr>
+<tr class="memitem:aabf72b85774b13b92cec33fe0fbaee20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#aabf72b85774b13b92cec33fe0fbaee20">Update</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v, int v_offset)</td></tr>
 <tr class="memdesc:aabf72b85774b13b92cec33fe0fbaee20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate a new FE space, <em>*f</em>, with this object and use the data of <em>v</em>, offset by <em>v_offset</em>, to initialize this object's <a class="el" href="classmfem_1_1Vector.html#adc2dd421332811f1a80da7aef2524281">Vector::data</a>.  <a href="#aabf72b85774b13b92cec33fe0fbaee20">More...</a><br/></td></tr>
 <tr class="separator:aabf72b85774b13b92cec33fe0fbaee20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227eba0248027f173896c5be04c6487e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a227eba0248027f173896c5be04c6487e">MakeRef</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v, int v_offset)</td></tr>
+<tr class="memdesc:a227eba0248027f173896c5be04c6487e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> reference external data on a new <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>.  <a href="#a227eba0248027f173896c5be04c6487e">More...</a><br/></td></tr>
+<tr class="separator:a227eba0248027f173896c5be04c6487e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace0646e04c68d4c145d22833b2f34146"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#ace0646e04c68d4c145d22833b2f34146">operator()</a> (const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> &amp;gf) const </td></tr>
-<tr class="memdesc:ace0646e04c68d4c145d22833b2f34146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the action of the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> as a linear mapping.  <a href="#ace0646e04c68d4c145d22833b2f34146">More...</a><br/></td></tr>
+<tr class="memdesc:ace0646e04c68d4c145d22833b2f34146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the action of the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> as a linear mapping.  <a href="#ace0646e04c68d4c145d22833b2f34146">More...</a><br/></td></tr>
 <tr class="separator:ace0646e04c68d4c145d22833b2f34146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e9f01b4fd3ce528c1cafe1bfe66132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1LinearForm.html">LinearForm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a36e9f01b4fd3ce528c1cafe1bfe66132">operator=</a> (double value)</td></tr>
-<tr class="memdesc:a36e9f01b4fd3ce528c1cafe1bfe66132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefine '=' for <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> = constant.  <a href="#a36e9f01b4fd3ce528c1cafe1bfe66132">More...</a><br/></td></tr>
+<tr class="memdesc:a36e9f01b4fd3ce528c1cafe1bfe66132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefine '=' for <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> = constant.  <a href="#a36e9f01b4fd3ce528c1cafe1bfe66132">More...</a><br/></td></tr>
 <tr class="separator:a36e9f01b4fd3ce528c1cafe1bfe66132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0327914d17ad0977981835647d268a8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1LinearForm.html">LinearForm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a0327914d17ad0977981835647d268a8a">operator=</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="memdesc:a0327914d17ad0977981835647d268a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the data from <em>v</em>.  <a href="#a0327914d17ad0977981835647d268a8a">More...</a><br/></td></tr>
@@ -297,7 +302,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17cb7d5dd99cd51b737e49910d06a965 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a17cb7d5dd99cd51b737e49910d06a965">OwnsData</a> () const </td></tr>
 <tr class="memdesc:a17cb7d5dd99cd51b737e49910d06a965 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> data (host pointer) ownership flag.  <a href="#a17cb7d5dd99cd51b737e49910d06a965">More...</a><br/></td></tr>
 <tr class="separator:a17cb7d5dd99cd51b737e49910d06a965 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a55e44382f2860e0cb80642513910073f">StealData</a> (double **p)</td></tr>
+<tr class="memitem:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a55e44382f2860e0cb80642513910073f">StealData</a> (double **<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>)</td></tr>
 <tr class="memdesc:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the ownership of the data; after the call the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> is empty.  <a href="#a55e44382f2860e0cb80642513910073f">More...</a><br/></td></tr>
 <tr class="separator:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04bf130f15c61345c6b095ebd3171025 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a04bf130f15c61345c6b095ebd3171025">StealData</a> ()</td></tr>
@@ -338,6 +343,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02e54576470a59ccf4d20a5a58fb6ef6 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e463b4c3b2cabfeeaf297f961bae61 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ad5e463b4c3b2cabfeeaf297f961bae61">operator-=</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="separator:ad5e463b4c3b2cabfeeaf297f961bae61 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa245a25b1b49bd112f09b964f97dd99d inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#aa245a25b1b49bd112f09b964f97dd99d">operator+=</a> (double c)</td></tr>
+<tr class="separator:aa245a25b1b49bd112f09b964f97dd99d inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22792f443dedb1cf48ecdb32a84d8620 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a22792f443dedb1cf48ecdb32a84d8620">operator+=</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="separator:a22792f443dedb1cf48ecdb32a84d8620 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d3e17a103977e3e5d3fe41da0b47c07 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a8d3e17a103977e3e5d3fe41da0b47c07">Add</a> (const double <a class="el" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;Va)</td></tr>
@@ -358,29 +365,37 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2bce958d41c9392c8002f76b33b6d025 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">v = median(v,lo,hi) entrywise. Implementation assumes lo &lt;= hi.  <a href="#a2bce958d41c9392c8002f76b33b6d025">More...</a><br/></td></tr>
 <tr class="separator:a2bce958d41c9392c8002f76b33b6d025 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca621edcd2c8b45bd358f484cf57ff9 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a8ca621edcd2c8b45bd358f484cf57ff9">GetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect) const </td></tr>
+<tr class="memdesc:a8ca621edcd2c8b45bd358f484cf57ff9 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract entries listed in <em>dofs</em> to the output <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> <em>elemvect</em>.  <a href="#a8ca621edcd2c8b45bd358f484cf57ff9">More...</a><br/></td></tr>
 <tr class="separator:a8ca621edcd2c8b45bd358f484cf57ff9 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c7d3042cd34980425491c3fe54d8ca6 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a0c7d3042cd34980425491c3fe54d8ca6">GetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, double *elem_data) const </td></tr>
+<tr class="memdesc:a0c7d3042cd34980425491c3fe54d8ca6 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract entries listed in <em>dofs</em> to the output array <em>elem_data</em>.  <a href="#a0c7d3042cd34980425491c3fe54d8ca6">More...</a><br/></td></tr>
 <tr class="separator:a0c7d3042cd34980425491c3fe54d8ca6 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a9cce8215d185deab7fb54f6d727b5e51">SetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const double value)</td></tr>
-<tr class="memdesc:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <code>dofs</code> to the given <code>value</code>.  <a href="#a9cce8215d185deab7fb54f6d727b5e51">More...</a><br/></td></tr>
+<tr class="memdesc:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <em>dofs</em> to the given <em>value</em>.  <a href="#a9cce8215d185deab7fb54f6d727b5e51">More...</a><br/></td></tr>
 <tr class="separator:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71a7efe7e9ea6aa87a0ef7b9f169fe97 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a71a7efe7e9ea6aa87a0ef7b9f169fe97">SetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</td></tr>
+<tr class="memdesc:a71a7efe7e9ea6aa87a0ef7b9f169fe97 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <em>dofs</em> to the values given in the <em>elemvect</em> <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to receive the -val from <em>elemvect</em>.  <a href="#a71a7efe7e9ea6aa87a0ef7b9f169fe97">More...</a><br/></td></tr>
 <tr class="separator:a71a7efe7e9ea6aa87a0ef7b9f169fe97 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a6ef8f5fc7d5e2b44f4710604847f33 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a4a6ef8f5fc7d5e2b44f4710604847f33">SetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, double *elem_data)</td></tr>
+<tr class="memdesc:a4a6ef8f5fc7d5e2b44f4710604847f33 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <em>dofs</em> to the values given the <em></em>, elem_data array. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to receive the -val from <em>elem_data</em>.  <a href="#a4a6ef8f5fc7d5e2b44f4710604847f33">More...</a><br/></td></tr>
 <tr class="separator:a4a6ef8f5fc7d5e2b44f4710604847f33 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</td></tr>
-<tr class="memdesc:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add (element) subvector to the vector.  <a href="#a6b60ed4dac14bacad367a02ac8fc973c">More...</a><br/></td></tr>
+<tr class="memdesc:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add elements of the <em>elemvect</em> <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to the entries listed in <em>dofs</em>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to add the -val from <em>elemvect</em>.  <a href="#a6b60ed4dac14bacad367a02ac8fc973c">More...</a><br/></td></tr>
 <tr class="separator:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd3a81244376b6a747f475f5b7ba24f inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#abdd3a81244376b6a747f475f5b7ba24f">AddElementVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, double *elem_data)</td></tr>
+<tr class="memdesc:abdd3a81244376b6a747f475f5b7ba24f inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add elements of the <em>elem_data</em> array to the entries listed in <em>dofs</em>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to add the -val from <em>elem_data</em>.  <a href="#abdd3a81244376b6a747f475f5b7ba24f">More...</a><br/></td></tr>
 <tr class="separator:abdd3a81244376b6a747f475f5b7ba24f inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df5321091250399750bae8b0ebc7881 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a7df5321091250399750bae8b0ebc7881">AddElementVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const double <a class="el" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</td></tr>
+<tr class="memdesc:a7df5321091250399750bae8b0ebc7881 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <em>times</em> the elements of the <em>elemvect</em> <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to the entries listed in <em>dofs</em>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to add the -a*val from <em>elemvect</em>.  <a href="#a7df5321091250399750bae8b0ebc7881">More...</a><br/></td></tr>
 <tr class="separator:a7df5321091250399750bae8b0ebc7881 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">SetSubVectorComplement</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const double val)</td></tr>
-<tr class="memdesc:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all vector entries NOT in the 'dofs' array to the given 'val'.  <a href="#aab941790a2f15dd6dafcba2446078599">More...</a><br/></td></tr>
+<tr class="memdesc:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all vector entries NOT in the <em>dofs</em> <a class="el" href="classmfem_1_1Array.html">Array</a> to the given <em>val</em>.  <a href="#aab941790a2f15dd6dafcba2446078599">More...</a><br/></td></tr>
 <tr class="separator:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9daeb026103f7cb7cb235bbd74b2cc1 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">Print</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>, int width=8) const </td></tr>
 <tr class="memdesc:ad9daeb026103f7cb7cb235bbd74b2cc1 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints vector to stream out.  <a href="#ad9daeb026103f7cb7cb235bbd74b2cc1">More...</a><br/></td></tr>
 <tr class="separator:ad9daeb026103f7cb7cb235bbd74b2cc1 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3a2a97b9ef48f26ad050f83b8ab366 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a0c3a2a97b9ef48f26ad050f83b8ab366">Print</a> (<a class="el" href="classmfem_1_1adios2stream.html">adios2stream</a> &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, const std::string &amp;variable_name) const </td></tr>
+<tr class="separator:a0c3a2a97b9ef48f26ad050f83b8ab366 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0b8fc3d3050cdf77ba179e36baa3a2 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">Print_HYPRE</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
 <tr class="memdesc:a9e0b8fc3d3050cdf77ba179e36baa3a2 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints vector to stream out in HYPRE_Vector format.  <a href="#a9e0b8fc3d3050cdf77ba179e36baa3a2">More...</a><br/></td></tr>
 <tr class="separator:a9e0b8fc3d3050cdf77ba179e36baa3a2 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -396,7 +411,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2179778c9280164d67965c1928ac323b inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">Norml1</a> () const </td></tr>
 <tr class="memdesc:a2179778c9280164d67965c1928ac323b inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the l_1 norm of the vector.  <a href="#a2179778c9280164d67965c1928ac323b">More...</a><br/></td></tr>
 <tr class="separator:a2179778c9280164d67965c1928ac323b inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">Normlp</a> (double p) const </td></tr>
+<tr class="memitem:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">Normlp</a> (double <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>) const </td></tr>
 <tr class="memdesc:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the l_p norm of the vector.  <a href="#acb6cb38c9c66d2bb8b3b787a56dc9c17">More...</a><br/></td></tr>
 <tr class="separator:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd093a12adfa89412e68a29d2f2d855e inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">Max</a> () const </td></tr>
@@ -408,10 +423,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a944c4f53027b4437376f155eef3e783e inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">Sum</a> () const </td></tr>
 <tr class="memdesc:a944c4f53027b4437376f155eef3e783e inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the sum of the vector entries.  <a href="#a944c4f53027b4437376f155eef3e783e">More...</a><br/></td></tr>
 <tr class="separator:a944c4f53027b4437376f155eef3e783e inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a3250b9853962eafc7fb8d1ccde54625d">DistanceSquaredTo</a> (const double *p) const </td></tr>
+<tr class="memitem:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a3250b9853962eafc7fb8d1ccde54625d">DistanceSquaredTo</a> (const double *<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>) const </td></tr>
 <tr class="memdesc:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the square of the Euclidean distance to another vector.  <a href="#a3250b9853962eafc7fb8d1ccde54625d">More...</a><br/></td></tr>
 <tr class="separator:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">DistanceTo</a> (const double *p) const </td></tr>
+<tr class="memitem:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">DistanceTo</a> (const double *<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>) const </td></tr>
 <tr class="memdesc:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Euclidean distance to another vector.  <a href="#adbf3230332957c7ead495539244b7c92">More...</a><br/></td></tr>
 <tr class="separator:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af810eb5fef8f501c70a0968b235545a5 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#af810eb5fef8f501c70a0968b235545a5">CheckFinite</a> () const </td></tr>
@@ -438,15 +453,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d2681c547a61144de51b5c2ebac3b49 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a9d2681c547a61144de51b5c2ebac3b49">HostReadWrite</a> ()</td></tr>
 <tr class="memdesc:a9d2681c547a61144de51b5c2ebac3b49 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for <a class="el" href="namespacemfem.html#a5a0acd469def65d7eea4894812d6c64e" title="Get a pointer for read+write access to mem with the mfem::Device&#39;s DeviceMemoryClass, if on_dev = true, or the mfem::Device&#39;s HostMemoryClass, otherwise. ">mfem::ReadWrite</a>(vec.GetMemory(), vec.Size(), false).  <a href="#a9d2681c547a61144de51b5c2ebac3b49">More...</a><br/></td></tr>
 <tr class="separator:a9d2681c547a61144de51b5c2ebac3b49 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afb59ea4e6f9be4e43fc4aea5bba8ac32">Vector</a> (N_Vector nv)</td></tr>
-<tr class="memdesc:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a wrapper <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> from SUNDIALS N_Vector.  <a href="#afb59ea4e6f9be4e43fc4aea5bba8ac32">More...</a><br/></td></tr>
+<tr class="memitem:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">MFEM_DEPRECATED&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afb59ea4e6f9be4e43fc4aea5bba8ac32">Vector</a> (N_Vector nv)</td></tr>
+<tr class="memdesc:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Construct a wrapper <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> from SUNDIALS N_Vector.  <a href="#afb59ea4e6f9be4e43fc4aea5bba8ac32">More...</a><br/></td></tr>
 <tr class="separator:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae57e28986cba33973ceda52cb4b924be inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual N_Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">ToNVector</a> ()</td></tr>
-<tr class="memdesc:ae57e28986cba33973ceda52cb4b924be inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new wrapper SUNDIALS N_Vector of type SUNDIALS_NVEC_SERIAL.  <a href="#ae57e28986cba33973ceda52cb4b924be">More...</a><br/></td></tr>
-<tr class="separator:ae57e28986cba33973ceda52cb4b924be inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111395885732d77556d6c1b9a3000399 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a111395885732d77556d6c1b9a3000399">ToNVector</a> (N_Vector &amp;nv)</td></tr>
-<tr class="memdesc:a111395885732d77556d6c1b9a3000399 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an existing wrapper SUNDIALS N_Vector to point to this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>.  <a href="#a111395885732d77556d6c1b9a3000399">More...</a><br/></td></tr>
-<tr class="separator:a111395885732d77556d6c1b9a3000399 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f20e5244675bd11273dc016b4d00668 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual MFEM_DEPRECATED N_Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a4f20e5244675bd11273dc016b4d00668">ToNVector</a> ()</td></tr>
+<tr class="memdesc:a4f20e5244675bd11273dc016b4d00668 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Return a new wrapper SUNDIALS N_Vector of type SUNDIALS_NVEC_SERIAL.  <a href="#a4f20e5244675bd11273dc016b4d00668">More...</a><br/></td></tr>
+<tr class="separator:a4f20e5244675bd11273dc016b4d00668 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6b5ed8dd5b767fba31a69b6d423ccb inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual MFEM_DEPRECATED void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a2d6b5ed8dd5b767fba31a69b6d423ccb">ToNVector</a> (N_Vector &amp;nv, long global_length=0)</td></tr>
+<tr class="memdesc:a2d6b5ed8dd5b767fba31a69b6d423ccb inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an existing wrapper SUNDIALS N_Vector to point to this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>.  <a href="#a2d6b5ed8dd5b767fba31a69b6d423ccb">More...</a><br/></td></tr>
+<tr class="separator:a2d6b5ed8dd5b767fba31a69b6d423ccb inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -460,10 +475,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7a4c4ec7f6005e34d0bffd3d5c4362c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a7a4c4ec7f6005e34d0bffd3d5c4362c6">fes</a></td></tr>
-<tr class="memdesc:a7a4c4ec7f6005e34d0bffd3d5c4362c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">FE space on which the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> lives. Not owned.  <a href="#a7a4c4ec7f6005e34d0bffd3d5c4362c6">More...</a><br/></td></tr>
+<tr class="memdesc:a7a4c4ec7f6005e34d0bffd3d5c4362c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">FE space on which the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> lives. Not owned.  <a href="#a7a4c4ec7f6005e34d0bffd3d5c4362c6">More...</a><br/></td></tr>
 <tr class="separator:a7a4c4ec7f6005e34d0bffd3d5c4362c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebb83820acb45a44a2c29aebd2c9c706"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#aebb83820acb45a44a2c29aebd2c9c706">extern_lfs</a></td></tr>
-<tr class="memdesc:aebb83820acb45a44a2c29aebd2c9c706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the LinerFormIntegrators stored in <a class="el" href="classmfem_1_1LinearForm.html#a760522f71e39767cdf5fad7b3734e817" title="Set of Domain Integrators to be applied. ">dlfi</a>, <a class="el" href="classmfem_1_1LinearForm.html#a94a167b363bf5c2b4ecd2ae36a12a285" title="Separate array for integrators with delta function coefficients. ">dlfi_delta</a>, <a class="el" href="classmfem_1_1LinearForm.html#a37d7f85f80ac8358f7e8adeb4a43b213" title="Set of Boundary Integrators to be applied. ">blfi</a>, and <a class="el" href="classmfem_1_1LinearForm.html#a10a96cdc0ebe3ca189ff17201390b5a4" title="Set of Boundary Face Integrators to be applied. ">flfi</a> are owned by another <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a>.  <a href="#aebb83820acb45a44a2c29aebd2c9c706">More...</a><br/></td></tr>
+<tr class="memdesc:aebb83820acb45a44a2c29aebd2c9c706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the <a class="el" href="classmfem_1_1LinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator. ">LinearFormIntegrator</a>s stored in <a class="el" href="classmfem_1_1LinearForm.html#a760522f71e39767cdf5fad7b3734e817" title="Set of Domain Integrators to be applied. ">dlfi</a>, <a class="el" href="classmfem_1_1LinearForm.html#a94a167b363bf5c2b4ecd2ae36a12a285" title="Separate array for integrators with delta function coefficients. ">dlfi_delta</a>, <a class="el" href="classmfem_1_1LinearForm.html#a37d7f85f80ac8358f7e8adeb4a43b213" title="Set of Boundary Integrators to be applied. ">blfi</a>, and <a class="el" href="classmfem_1_1LinearForm.html#a10a96cdc0ebe3ca189ff17201390b5a4" title="Set of Boundary Face Integrators to be applied. ">flfi</a> are owned by another <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a>.  <a href="#aebb83820acb45a44a2c29aebd2c9c706">More...</a><br/></td></tr>
 <tr class="separator:aebb83820acb45a44a2c29aebd2c9c706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a760522f71e39767cdf5fad7b3734e817"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1LinearFormIntegrator.html">LinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearForm.html#a760522f71e39767cdf5fad7b3734e817">dlfi</a></td></tr>
 <tr class="memdesc:a760522f71e39767cdf5fad7b3734e817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of Domain Integrators to be applied.  <a href="#a760522f71e39767cdf5fad7b3734e817">More...</a><br/></td></tr>
@@ -496,7 +511,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a2e607211a08993ec77d30f9609b84661 inherit pro_attribs_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class for linear form - <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with associated FE space and LFIntegrators. </p>
+<div class="textblock"><p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with associated FE space and LinearFormIntegrators. </p>
 
 <p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00023">23</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -553,9 +568,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> on the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> <em>f</em>, using the same integrators as the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> <em>lf</em>. </p>
+<p>Create a <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> on the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> <em>f</em>, using the same integrators as the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> <em>lf</em>. </p>
 <p>The pointer <em>f</em> is not owned by the newly constructed object.</p>
-<p>The integrators in <em>lf</em> are copied as pointers and they are not owned by the newly constructed <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a>. </p>
+<p>The integrators in <em>lf</em> are copied as pointers and they are not owned by the newly constructed <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a>. </p>
 
 <p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00019">19</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
 
@@ -582,7 +597,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create an empty <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> without an associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>. </p>
+<p>Create an empty <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> without an associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>. </p>
 <p>The associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> can be set later using one of the methods: <a class="el" href="classmfem_1_1LinearForm.html#ab3f0078623d56566617fdff84499ad86" title="Associate a new FE space, *f, with this object and Update() it. */. ">Update(FiniteElementSpace *)</a> or <a class="el" href="classmfem_1_1LinearForm.html#aabf72b85774b13b92cec33fe0fbaee20" title="Associate a new FE space, *f, with this object and use the data of v, offset by v_offset, to initialize this object&#39;s Vector::data. ">Update(FiniteElementSpace *, Vector &amp;, int)</a>. </p>
 
 <p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00082">82</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
@@ -621,8 +636,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> using previously allocated array <em>data</em>. </p>
-<p>The <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> does not assume ownership of <em>data</em> which is assumed to be of size at least <code>f-&gt;GetVSize()</code>. Similar to the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> constructor for externally allocated array, the pointer <em>data</em> can be NULL. The data array can be replaced later using the method <a class="el" href="classmfem_1_1Vector.html#a631158f850b835e3a7ec3359b44d1d40">SetData()</a>. </p>
+<p>Construct a <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> using previously allocated array <em>data</em>. </p>
+<p>The <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> does not assume ownership of <em>data</em> which is assumed to be of size at least <code>f-&gt;GetVSize()</code>. Similar to the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> constructor for externally allocated array, the pointer <em>data</em> can be NULL. The data array can be replaced later using the method <a class="el" href="classmfem_1_1Vector.html#a631158f850b835e3a7ec3359b44d1d40">SetData()</a>. </p>
 
 <p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00089">89</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
 
@@ -643,7 +658,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Destroys linear form. </p>
 
-<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00259">259</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00268">268</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +819,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Assembles delta functions of the linear form. </p>
 
-<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00206">206</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00215">215</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +958,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a48842fe58d5412e3189d10f16b4bb79f"></a>
+<a class="anchor" id="a954d8719c3ba6fd6bb9710da11558ca2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -951,7 +966,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a>* mfem::LinearForm::GetFES </td>
+          <td class="memname">MFEM_DEPRECATED <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a>* mfem::LinearForm::GetFES </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -964,8 +979,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>(DEPRECATED) Return the FE space associated with the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a>. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1LinearForm.html#a6db9cc8f3c56425638d69b7c16a18709" title="Read+write access to the associated FiniteElementSpace. ">FESpace()</a> instead. </dd></dl>
+<p>(DEPRECATED) Return the FE space associated with the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a>. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1LinearForm.html#a6db9cc8f3c56425638d69b7c16a18709" title="Read+write access to the associated FiniteElementSpace. ">FESpace()</a> instead. </dd></dl>
 
 <p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00103">103</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
 
@@ -1052,6 +1067,54 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a227eba0248027f173896c5be04c6487e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::LinearForm::MakeRef </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v_offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> reference external data on a new <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a>. </p>
+<p>This method changes the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> associated with the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> <em>*f</em> and sets the data of the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> <em>v</em> (plus the <em>v_offset</em>) as external data in the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This version of the method will also perform bounds checks when the build option MFEM_DEBUG is enabled. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classmfem_1_1ParLinearForm.html#a39f5a9639005f8659ba2f0abe39bf39c">mfem::ParLinearForm</a>.</p>
+
+<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00207">207</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ace0646e04c68d4c145d22833b2f34146"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1074,10 +1137,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the action of the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> as a linear mapping. </p>
-<p>Linear forms are linear functionals which map GridFunctions to the real numbers. This method performs this mapping which in this case is equivalent as an inner product of the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> and <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. </p>
+<p>Return the action of the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> as a linear mapping. </p>
+<p>Linear forms are linear functionals which map GridFunctions to the real numbers. This method performs this mapping which in this case is equivalent as an inner product of the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> and <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. </p>
 
-<p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00183">183</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00193">193</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1125,9 +1188,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Redefine '=' for <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> = constant. </p>
+<p>Redefine '=' for <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> = constant. </p>
 
-<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00246">246</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00255">255</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1148,7 +1211,7 @@ Protected Attributes</h2></td></tr>
 <p>Copy the data from <em>v</em>. </p>
 <p>The size of <em>v</em> must be equal to the size of the associated <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> <a class="el" href="classmfem_1_1LinearForm.html#a7a4c4ec7f6005e34d0bffd3d5c4362c6" title="FE space on which the LinearForm lives. Not owned. ">fes</a>. </p>
 
-<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00252">252</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="linearform_8cpp_source.html#l00261">261</a> of file <a class="el" href="linearform_8cpp_source.html">linearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1499,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates the LinerFormIntegrators stored in <a class="el" href="classmfem_1_1LinearForm.html#a760522f71e39767cdf5fad7b3734e817" title="Set of Domain Integrators to be applied. ">dlfi</a>, <a class="el" href="classmfem_1_1LinearForm.html#a94a167b363bf5c2b4ecd2ae36a12a285" title="Separate array for integrators with delta function coefficients. ">dlfi_delta</a>, <a class="el" href="classmfem_1_1LinearForm.html#a37d7f85f80ac8358f7e8adeb4a43b213" title="Set of Boundary Integrators to be applied. ">blfi</a>, and <a class="el" href="classmfem_1_1LinearForm.html#a10a96cdc0ebe3ca189ff17201390b5a4" title="Set of Boundary Face Integrators to be applied. ">flfi</a> are owned by another <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a>. </p>
+<p>Indicates the <a class="el" href="classmfem_1_1LinearFormIntegrator.html" title="Abstract base class LinearFormIntegrator. ">LinearFormIntegrator</a>s stored in <a class="el" href="classmfem_1_1LinearForm.html#a760522f71e39767cdf5fad7b3734e817" title="Set of Domain Integrators to be applied. ">dlfi</a>, <a class="el" href="classmfem_1_1LinearForm.html#a94a167b363bf5c2b4ecd2ae36a12a285" title="Separate array for integrators with delta function coefficients. ">dlfi_delta</a>, <a class="el" href="classmfem_1_1LinearForm.html#a37d7f85f80ac8358f7e8adeb4a43b213" title="Set of Boundary Integrators to be applied. ">blfi</a>, and <a class="el" href="classmfem_1_1LinearForm.html#a10a96cdc0ebe3ca189ff17201390b5a4" title="Set of Boundary Face Integrators to be applied. ">flfi</a> are owned by another <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a>. </p>
 
 <p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00031">31</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
 
@@ -1460,7 +1523,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>FE space on which the <a class="el" href="classmfem_1_1LinearForm.html" title="Class for linear form - Vector with associated FE space and LFIntegrators. ">LinearForm</a> lives. Not owned. </p>
+<p>FE space on which the <a class="el" href="classmfem_1_1LinearForm.html" title="Vector with associated FE space and LinearFormIntegrators. ">LinearForm</a> lives. Not owned. </p>
 
 <p>Definition at line <a class="el" href="linearform_8hpp_source.html#l00027">27</a> of file <a class="el" href="linearform_8hpp_source.html">linearform.hpp</a>.</p>
 
@@ -1521,7 +1584,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

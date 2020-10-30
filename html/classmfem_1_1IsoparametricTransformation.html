@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -102,11 +103,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>A standard isoparametric element transformation.  
+ <a href="classmfem_1_1IsoparametricTransformation.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for mfem::IsoparametricTransformation:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1IsoparametricTransformation__inherit__graph.svg" width="379" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1IsoparametricTransformation__inherit__graph.svg" width="379" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -118,75 +122,113 @@ Collaboration diagram for mfem::IsoparametricTransformation:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a16c5a796e5db4e188ed4a5c2b7823bd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a16c5a796e5db4e188ed4a5c2b7823bd0">IsoparametricTransformation</a> ()</td></tr>
+<tr class="separator:a16c5a796e5db4e188ed4a5c2b7823bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a156708114d0bfeb6e9aadc664ad68d2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a156708114d0bfeb6e9aadc664ad68d2c">SetFE</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *FE)</td></tr>
+<tr class="memdesc:a156708114d0bfeb6e9aadc664ad68d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the element that will be used to compute the transformations.  <a href="#a156708114d0bfeb6e9aadc664ad68d2c">More...</a><br/></td></tr>
 <tr class="separator:a156708114d0bfeb6e9aadc664ad68d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4beb8fe99f89e277d98c5dbb3336af5f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a4beb8fe99f89e277d98c5dbb3336af5f">GetFE</a> () const </td></tr>
+<tr class="memdesc:a4beb8fe99f89e277d98c5dbb3336af5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current element used to compute the transformations.  <a href="#a4beb8fe99f89e277d98c5dbb3336af5f">More...</a><br/></td></tr>
 <tr class="separator:a4beb8fe99f89e277d98c5dbb3336af5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb4699e7a415687126d982bac7a746b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a0cb4699e7a415687126d982bac7a746b">SetPointMat</a> (const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;pm)</td></tr>
+<tr class="memdesc:a0cb4699e7a415687126d982bac7a746b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the underlying point matrix describing the transformation.  <a href="#a0cb4699e7a415687126d982bac7a746b">More...</a><br/></td></tr>
+<tr class="separator:a0cb4699e7a415687126d982bac7a746b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b9f5873986a70eff4c8e1a06bac1fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a15b9f5873986a70eff4c8e1a06bac1fe">GetPointMat</a> () const </td></tr>
+<tr class="memdesc:a15b9f5873986a70eff4c8e1a06bac1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the stored point matrix.  <a href="#a15b9f5873986a70eff4c8e1a06bac1fe">More...</a><br/></td></tr>
+<tr class="separator:a15b9f5873986a70eff4c8e1a06bac1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30149b7c39320a0971b3a08ce3196324"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a30149b7c39320a0971b3a08ce3196324">GetPointMat</a> ()</td></tr>
-<tr class="memdesc:a30149b7c39320a0971b3a08ce3196324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and write access to the underlying point matrix describing the transformation.  <a href="#a30149b7c39320a0971b3a08ce3196324">More...</a><br/></td></tr>
+<tr class="memdesc:a30149b7c39320a0971b3a08ce3196324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write access to the stored point matrix. Use with caution.  <a href="#a30149b7c39320a0971b3a08ce3196324">More...</a><br/></td></tr>
 <tr class="separator:a30149b7c39320a0971b3a08ce3196324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9c6f183bc7e7458053a349beff42fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#ae9c6f183bc7e7458053a349beff42fbe">FinalizeTransformation</a> ()</td></tr>
-<tr class="separator:ae9c6f183bc7e7458053a349beff42fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822105712794aaa723251a5ed17d260a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a822105712794aaa723251a5ed17d260a">SetIdentityTransformation</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> GeomType)</td></tr>
+<tr class="memdesc:a822105712794aaa723251a5ed17d260a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> <a class="el" href="classmfem_1_1Geometry.html">Geometry</a> for the reference elements being used.  <a href="#a822105712794aaa723251a5ed17d260a">More...</a><br/></td></tr>
 <tr class="separator:a822105712794aaa723251a5ed17d260a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac419a601440e8e33fcb24610263ff57c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#ac419a601440e8e33fcb24610263ff57c">Transform</a> (const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;)</td></tr>
+<tr class="memdesc:ac419a601440e8e33fcb24610263ff57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform integration point from reference coordinates to physical coordinates and store them in the vector.  <a href="#ac419a601440e8e33fcb24610263ff57c">More...</a><br/></td></tr>
 <tr class="separator:ac419a601440e8e33fcb24610263ff57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef96a13853edf98ee34a7c0c9e9808b6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#aef96a13853edf98ee34a7c0c9e9808b6">Transform</a> (const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> &amp;, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;)</td></tr>
+<tr class="memdesc:aef96a13853edf98ee34a7c0c9e9808b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform all the integration points from the integration rule from reference coordinates to physical coordinates and store them as column vectors in the matrix.  <a href="#aef96a13853edf98ee34a7c0c9e9808b6">More...</a><br/></td></tr>
 <tr class="separator:aef96a13853edf98ee34a7c0c9e9808b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f9c5d5e3265b1bded4ef1914c662cd5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a7f9c5d5e3265b1bded4ef1914c662cd5">Transform</a> (const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;matrix, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;result)</td></tr>
-<tr class="memdesc:a7f9c5d5e3265b1bded4ef1914c662cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform columns of 'matrix', store result in 'result'.  <a href="#a7f9c5d5e3265b1bded4ef1914c662cd5">More...</a><br/></td></tr>
+<tr class="memdesc:a7f9c5d5e3265b1bded4ef1914c662cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform all the integration points from the column vectors of <em>matrix</em> from reference coordinates to physical coordinates and store them as column vectors in <em>result</em>.  <a href="#a7f9c5d5e3265b1bded4ef1914c662cd5">More...</a><br/></td></tr>
 <tr class="separator:a7f9c5d5e3265b1bded4ef1914c662cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af015de552569db0ef5916374ed5dd0c2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#af015de552569db0ef5916374ed5dd0c2">Order</a> ()</td></tr>
-<tr class="separator:af015de552569db0ef5916374ed5dd0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c48df29c16699562370f91ac18ae1e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a18c48df29c16699562370f91ac18ae1e">OrderJ</a> ()</td></tr>
-<tr class="separator:a18c48df29c16699562370f91ac18ae1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8d04dfc34e043ccaaabc1fba48237a9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#ae8d04dfc34e043ccaaabc1fba48237a9">OrderW</a> ()</td></tr>
-<tr class="separator:ae8d04dfc34e043ccaaabc1fba48237a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c9648b48a1bcfe411ad37ef59481ed3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a0c9648b48a1bcfe411ad37ef59481ed3">OrderGrad</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *fe)</td></tr>
-<tr class="memdesc:a0c9648b48a1bcfe411ad37ef59481ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order of adj(J)^t.grad(fi)  <a href="#a0c9648b48a1bcfe411ad37ef59481ed3">More...</a><br/></td></tr>
-<tr class="separator:a0c9648b48a1bcfe411ad37ef59481ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f39efc6790d5d90a904b38161f6f902"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a3f39efc6790d5d90a904b38161f6f902">Order</a> () const </td></tr>
+<tr class="memdesc:a3f39efc6790d5d90a904b38161f6f902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the order of the current element we are using for the transformation.  <a href="#a3f39efc6790d5d90a904b38161f6f902">More...</a><br/></td></tr>
+<tr class="separator:a3f39efc6790d5d90a904b38161f6f902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9715148eb6def178abc7b4c394393d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#aac9715148eb6def178abc7b4c394393d">OrderJ</a> () const </td></tr>
+<tr class="memdesc:aac9715148eb6def178abc7b4c394393d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the order of the elements of the Jacobian of the transformation.  <a href="#aac9715148eb6def178abc7b4c394393d">More...</a><br/></td></tr>
+<tr class="separator:aac9715148eb6def178abc7b4c394393d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f3e37bf46de8b92cd7ba3c58889a61"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a77f3e37bf46de8b92cd7ba3c58889a61">OrderW</a> () const </td></tr>
+<tr class="memdesc:a77f3e37bf46de8b92cd7ba3c58889a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the order of the determinant of the Jacobian (weight) of the transformation.  <a href="#a77f3e37bf46de8b92cd7ba3c58889a61">More...</a><br/></td></tr>
+<tr class="separator:a77f3e37bf46de8b92cd7ba3c58889a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce3fae67e9051c21704d44b35fc5706"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a6ce3fae67e9051c21704d44b35fc5706">OrderGrad</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *fe) const </td></tr>
+<tr class="memdesc:a6ce3fae67e9051c21704d44b35fc5706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the order of \( adj(J)^T \nabla fi \).  <a href="#a6ce3fae67e9051c21704d44b35fc5706">More...</a><br/></td></tr>
+<tr class="separator:a6ce3fae67e9051c21704d44b35fc5706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee8e56fd12f5690fc3601d51b9b2149"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a3ee8e56fd12f5690fc3601d51b9b2149">GetSpaceDim</a> () const </td></tr>
+<tr class="memdesc:a3ee8e56fd12f5690fc3601d51b9b2149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the target (physical) space.  <a href="#a3ee8e56fd12f5690fc3601d51b9b2149">More...</a><br/></td></tr>
+<tr class="separator:a3ee8e56fd12f5690fc3601d51b9b2149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9762489fc9f125ab5fa82b6781efc2a8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a9762489fc9f125ab5fa82b6781efc2a8">TransformBack</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v, <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
 <tr class="memdesc:a9762489fc9f125ab5fa82b6781efc2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a point <em>pt</em> from physical space to a point <em>ip</em> in reference space.  <a href="#a9762489fc9f125ab5fa82b6781efc2a8">More...</a><br/></td></tr>
 <tr class="separator:a9762489fc9f125ab5fa82b6781efc2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c9807a14489b618e292bda171312dce"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#a1c9807a14489b618e292bda171312dce">~IsoparametricTransformation</a> ()</td></tr>
 <tr class="separator:a1c9807a14489b618e292bda171312dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe20ed9bdfd547ba999bc196e6db053c"><td class="memItemLeft" align="right" valign="top">MFEM_DEPRECATED void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1IsoparametricTransformation.html#abe20ed9bdfd547ba999bc196e6db053c">FinalizeTransformation</a> ()</td></tr>
+<tr class="separator:abe20ed9bdfd547ba999bc196e6db053c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1ElementTransformation"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1ElementTransformation')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></td></tr>
 <tr class="memitem:ae5c4c82e07921c8cd72c9b6aa1ce2c62 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#ae5c4c82e07921c8cd72c9b6aa1ce2c62">ElementTransformation</a> ()</td></tr>
 <tr class="separator:ae5c4c82e07921c8cd72c9b6aa1ce2c62 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ce116fc288a679459e369af376e435 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#ae5ce116fc288a679459e369af376e435">Reset</a> ()</td></tr>
+<tr class="memdesc:ae5ce116fc288a679459e369af376e435 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the reevaluation of the Jacobian in the next call.  <a href="#ae5ce116fc288a679459e369af376e435">More...</a><br/></td></tr>
+<tr class="separator:ae5ce116fc288a679459e369af376e435 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa8411e550ce8afa85bf1015bfe6ba8 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint</a> (const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> *ip)</td></tr>
+<tr class="memdesc:abfa8411e550ce8afa85bf1015bfe6ba8 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the integration point <em>ip</em> that weights and Jacobians will be evaluated at.  <a href="#abfa8411e550ce8afa85bf1015bfe6ba8">More...</a><br/></td></tr>
 <tr class="separator:abfa8411e550ce8afa85bf1015bfe6ba8 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f41810efdbeb3095775dd2dd96f975a inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a2f41810efdbeb3095775dd2dd96f975a">GetIntPoint</a> ()</td></tr>
+<tr class="memdesc:a2f41810efdbeb3095775dd2dd96f975a inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const reference to the currently set integration point. This will return NULL if no integration point is set.  <a href="#a2f41810efdbeb3095775dd2dd96f975a">More...</a><br/></td></tr>
 <tr class="separator:a2f41810efdbeb3095775dd2dd96f975a inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc656a73cdd8c896cf8ecec1618eecc0 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#acc656a73cdd8c896cf8ecec1618eecc0">Jacobian</a> ()</td></tr>
-<tr class="memdesc:acc656a73cdd8c896cf8ecec1618eecc0 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Jacobian matrix of the transformation at the currently set <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a>, using the method <a class="el" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8">SetIntPoint()</a>.  <a href="#acc656a73cdd8c896cf8ecec1618eecc0">More...</a><br/></td></tr>
+<tr class="memdesc:acc656a73cdd8c896cf8ecec1618eecc0 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Jacobian matrix of the transformation at the currently set <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a>, using the method <a class="el" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8" title="Set the integration point ip that weights and Jacobians will be evaluated at. ">SetIntPoint()</a>.  <a href="#acc656a73cdd8c896cf8ecec1618eecc0">More...</a><br/></td></tr>
 <tr class="separator:acc656a73cdd8c896cf8ecec1618eecc0 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c6e3cc607c87f6ee091723dd1616320 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a7c6e3cc607c87f6ee091723dd1616320">Hessian</a> ()</td></tr>
+<tr class="memdesc:a7c6e3cc607c87f6ee091723dd1616320 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Hessian matrix of the transformation at the currently set <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a>, using the method <a class="el" href="classmfem_1_1ElementTransformation.html#abfa8411e550ce8afa85bf1015bfe6ba8" title="Set the integration point ip that weights and Jacobians will be evaluated at. ">SetIntPoint()</a>.  <a href="#a7c6e3cc607c87f6ee091723dd1616320">More...</a><br/></td></tr>
 <tr class="separator:a7c6e3cc607c87f6ee091723dd1616320 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4ec517bc8aac5af4505d76d838aa4f6 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#aa4ec517bc8aac5af4505d76d838aa4f6">Weight</a> ()</td></tr>
+<tr class="memdesc:aa4ec517bc8aac5af4505d76d838aa4f6 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the weight of the Jacobian matrix of the transformation at the currently set <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a>. The Weight evaluates to \( \sqrt{\lvert J^T J \rvert} \).  <a href="#aa4ec517bc8aac5af4505d76d838aa4f6">More...</a><br/></td></tr>
 <tr class="separator:aa4ec517bc8aac5af4505d76d838aa4f6 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511c52d46da5424955a4807363e32aef inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a511c52d46da5424955a4807363e32aef">AdjugateJacobian</a> ()</td></tr>
+<tr class="memdesc:a511c52d46da5424955a4807363e32aef inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the adjugate of the Jacobian matrix of the transformation at the currently set <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a>.  <a href="#a511c52d46da5424955a4807363e32aef">More...</a><br/></td></tr>
 <tr class="separator:a511c52d46da5424955a4807363e32aef inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a247275a6b84fa971e56b68a17e3f1b inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a5a247275a6b84fa971e56b68a17e3f1b">InverseJacobian</a> ()</td></tr>
+<tr class="memdesc:a5a247275a6b84fa971e56b68a17e3f1b inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the inverse of the Jacobian matrix of the transformation at the currently set <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a>.  <a href="#a5a247275a6b84fa971e56b68a17e3f1b">More...</a><br/></td></tr>
 <tr class="separator:a5a247275a6b84fa971e56b68a17e3f1b inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a015335abd68e3ba53a3fb86c84f0aaa6 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a015335abd68e3ba53a3fb86c84f0aaa6">GetGeometryType</a> () const </td></tr>
 <tr class="memdesc:a015335abd68e3ba53a3fb86c84f0aaa6 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> of the reference element.  <a href="#a015335abd68e3ba53a3fb86c84f0aaa6">More...</a><br/></td></tr>
 <tr class="separator:a015335abd68e3ba53a3fb86c84f0aaa6 inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580f5240ef8c276499d8560f4864a85c inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a580f5240ef8c276499d8560f4864a85c">GetDimension</a> () const </td></tr>
-<tr class="memdesc:a580f5240ef8c276499d8560f4864a85c inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dimension of the reference element.  <a href="#a580f5240ef8c276499d8560f4864a85c">More...</a><br/></td></tr>
+<tr class="memdesc:a580f5240ef8c276499d8560f4864a85c inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the topological dimension of the reference element.  <a href="#a580f5240ef8c276499d8560f4864a85c">More...</a><br/></td></tr>
 <tr class="separator:a580f5240ef8c276499d8560f4864a85c inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0196d7515500b25297fb14fc986e657f inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a0196d7515500b25297fb14fc986e657f">GetSpaceDim</a> () const </td></tr>
-<tr class="memdesc:a0196d7515500b25297fb14fc986e657f inherit pub_methods_classmfem_1_1ElementTransformation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the target (physical) space.  <a href="#a0196d7515500b25297fb14fc986e657f">More...</a><br/></td></tr>
-<tr class="separator:a0196d7515500b25297fb14fc986e657f inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b69a09f127a3c50ebd6f605b043f0be inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a3b69a09f127a3c50ebd6f605b043f0be">~ElementTransformation</a> ()</td></tr>
 <tr class="separator:a3b69a09f127a3c50ebd6f605b043f0be inherit pub_methods_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classmfem_1_1ElementTransformation"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1ElementTransformation')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></td></tr>
+<tr class="memitem:a834c0aad85673c58221bba458c50b418 inherit pub_types_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br/>
+&#160;&#160;<a class="el" href="classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418aaaa97da9eb1848fb638687a9635fab78">ELEMENT</a> = 1, 
+<a class="el" href="classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418ac2abcd0ef85a005bc4cefe88710b6bae">BDR_ELEMENT</a> = 2, 
+<a class="el" href="classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418a1c406f0732d9e1021f9ef79bc0c7fffc">EDGE</a> = 3, 
+<a class="el" href="classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418a3f54c9a05b9831b2540cb50d7c9df78d">FACE</a> = 4, 
+<br/>
+&#160;&#160;<a class="el" href="classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418a4e03a9086649ddf8ed7b23e2cf3d1f55">BDR_FACE</a> = 5
+<br/>
+ }</td></tr>
+<tr class="separator:a834c0aad85673c58221bba458c50b418 inherit pub_types_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classmfem_1_1ElementTransformation"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmfem_1_1ElementTransformation')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></td></tr>
 <tr class="memitem:adcbe93689e9f88e401464c49f0d4fb2e inherit pub_attribs_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#adcbe93689e9f88e401464c49f0d4fb2e">Attribute</a></td></tr>
 <tr class="separator:adcbe93689e9f88e401464c49f0d4fb2e inherit pub_attribs_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945a5eda543ab04aa8cf38b5caeaf4f0 inherit pub_attribs_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a945a5eda543ab04aa8cf38b5caeaf4f0">ElementNo</a></td></tr>
 <tr class="separator:a945a5eda543ab04aa8cf38b5caeaf4f0 inherit pub_attribs_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5039577a5f025c51136dfddbf59358 inherit pub_attribs_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#afa5039577a5f025c51136dfddbf59358">ElementType</a></td></tr>
+<tr class="separator:afa5039577a5f025c51136dfddbf59358 inherit pub_attribs_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classmfem_1_1ElementTransformation"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classmfem_1_1ElementTransformation')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></td></tr>
 <tr class="memitem:a78dc6cc15c2f240fc976acd5470be0e0 inherit pro_types_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a78dc6cc15c2f240fc976acd5470be0e0">StateMasks</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1ElementTransformation.html#a78dc6cc15c2f240fc976acd5470be0e0a375079e405d951c3fe8c040c60bb6ccf">JACOBIAN_MASK</a> = 1, 
@@ -222,13 +264,37 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4c29463321278e3cebee77dd689014de inherit pro_attribs_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aa9adb0f5a41e3e4760cfa3a405e3d4 inherit pro_attribs_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#a4aa9adb0f5a41e3e4760cfa3a405e3d4">geom</a></td></tr>
 <tr class="separator:a4aa9adb0f5a41e3e4760cfa3a405e3d4 inherit pro_attribs_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff323007b5bb92e75641232f93356e87 inherit pro_attribs_classmfem_1_1ElementTransformation"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ElementTransformation.html#aff323007b5bb92e75641232f93356e87">space_dim</a></td></tr>
-<tr class="separator:aff323007b5bb92e75641232f93356e87 inherit pro_attribs_classmfem_1_1ElementTransformation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00291">291</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<div class="textblock"><p>A standard isoparametric element transformation. </p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00348">348</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a16c5a796e5db4e188ed4a5c2b7823bd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mfem::IsoparametricTransformation::IsoparametricTransformation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00365">365</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1c9807a14489b618e292bda171312dce"></a>
 <div class="memitem">
 <div class="memproto">
@@ -250,12 +316,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00341">341</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00443">443</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae9c6f183bc7e7458053a349beff42fbe"></a>
+<a class="anchor" id="abe20ed9bdfd547ba999bc196e6db053c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -263,7 +329,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::IsoparametricTransformation::FinalizeTransformation </td>
+          <td class="memname">MFEM_DEPRECATED void mfem::IsoparametricTransformation::FinalizeTransformation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -276,7 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00322">322</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00445">445</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
@@ -301,7 +367,36 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00308">308</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Get the current element used to compute the transformations. </p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00376">376</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15b9f5873986a70eff4c8e1a06bac1fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a>&amp; mfem::IsoparametricTransformation::GetPointMat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the stored point matrix. </p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00391">391</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
@@ -326,16 +421,44 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Read and write access to the underlying point matrix describing the transformation. </p>
-<p>The dimensions of the matrix are space-dim x dof. The transformation is defined as </p>
-<pre class="fragment">x=F(xh)=P.phi(xh),
-</pre><p>where xh (x hat) is the reference point, x is the corresponding physical point, P is the point matrix, and phi(xh) is the column-vector of all basis functions evaluated at xh. The columns of P represent the control points in physical space defining the transformation. </p>
+<p>Write access to the stored point matrix. Use with caution. </p>
+<p>If the point matrix is altered using this member function the Reset function should also be called to force the reevaluation of the Jacobian, etc.. </p>
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00321">321</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00397">397</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af015de552569db0ef5916374ed5dd0c2"></a>
+<a class="anchor" id="a3ee8e56fd12f5690fc3601d51b9b2149"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int mfem::IsoparametricTransformation::GetSpaceDim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the dimension of the target (physical) space. </p>
+<p>We support 2D meshes embedded in 3D; in this case the function will return "3". </p>
+
+<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a59579bcb0eda85557a9d99cd0a530cb7">mfem::ElementTransformation</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00429">429</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f39efc6790d5d90a904b38161f6f902"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -346,7 +469,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">virtual int mfem::IsoparametricTransformation::Order </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -356,13 +479,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#afe901f87d1e7ace3489b4f337609eaca">mfem::ElementTransformation</a>.</p>
+<p>Return the order of the current element we are using for the transformation. </p>
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00330">330</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a103e62a99f4ba413479c2bfbebcc84c0">mfem::ElementTransformation</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00417">417</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0c9648b48a1bcfe411ad37ef59481ed3"></a>
+<a class="anchor" id="a6ce3fae67e9051c21704d44b35fc5706"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -374,7 +499,7 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td>
           <td class="paramname"><em>fe</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -384,15 +509,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Order of adj(J)^t.grad(fi) </p>
+<p>Return the order of \( adj(J)^T \nabla fi \). </p>
 
-<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a36a63f9de99b255591f7706a38a6e5a5">mfem::ElementTransformation</a>.</p>
+<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a1f6c77fa12b5749d9c34732c16d4cfda">mfem::ElementTransformation</a>.</p>
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00464">464</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00458">458</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a18c48df29c16699562370f91ac18ae1e"></a>
+<a class="anchor" id="aac9715148eb6def178abc7b4c394393d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -403,7 +528,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">int mfem::IsoparametricTransformation::OrderJ </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -413,13 +538,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a9611a710ee1934354f4a5d42f36d9e4f">mfem::ElementTransformation</a>.</p>
+<p>Return the order of the elements of the Jacobian of the transformation. </p>
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00436">436</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a66f2b028d5e2f0f349f48590261a8fae">mfem::ElementTransformation</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00430">430</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae8d04dfc34e043ccaaabc1fba48237a9"></a>
+<a class="anchor" id="a77f3e37bf46de8b92cd7ba3c58889a61"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -430,7 +557,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">int mfem::IsoparametricTransformation::OrderW </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -440,9 +567,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a4beef0854033a0a60e973be674355ec3">mfem::ElementTransformation</a>.</p>
+<p>Return the order of the determinant of the Jacobian (weight) of the transformation. </p>
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00450">450</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#aabbc4df08b6807368b3c4c66fca300bc">mfem::ElementTransformation</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00444">444</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +597,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00307">307</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Set the element that will be used to compute the transformations. </p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00368">368</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
@@ -486,7 +617,39 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00370">370</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Set the <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> <a class="el" href="classmfem_1_1Geometry.html">Geometry</a> for the reference elements being used. </p>
+
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00371">371</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cb4699e7a415687126d982bac7a746b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::IsoparametricTransformation::SetPointMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the underlying point matrix describing the transformation. </p>
+<p>The dimensions of the matrix are space-dim x dof. The transformation is defined as \( x = F( \hat x ) = P \phi( \hat x ) \)</p>
+<p>where \( \hat x \) is the reference point, <em>x</em> is the corresponding physical point, <em>P</em> is the point matrix, and \( \phi( \hat x ) \) is the column-vector of all basis functions evaluated at \( \hat x \) . The columns of <em>P</em> represent the control points in physical space defining the transformation. </p>
+
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00388">388</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
@@ -522,9 +685,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Transform integration point from reference coordinates to physical coordinates and store them in the vector. </p>
+
 <p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#ac5bf9371c58dac27dda644e11b18a47c">mfem::ElementTransformation</a>.</p>
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00483">483</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classmfem_1_1FaceElementTransformations.html#ab9fabd47a63d91dcf0a5a2313c243202">mfem::FaceElementTransformations</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00479">479</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
 
 </div>
 </div>
@@ -560,9 +727,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Transform all the integration points from the integration rule from reference coordinates to physical coordinates and store them as column vectors in the matrix. </p>
+
 <p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a1a174db650ec863f6ecae1db8fdd14c4">mfem::ElementTransformation</a>.</p>
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00493">493</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classmfem_1_1FaceElementTransformations.html#a2422325b975d81005ac89bba5733a646">mfem::FaceElementTransformations</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00489">489</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
 
 </div>
 </div>
@@ -598,11 +769,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transform columns of 'matrix', store result in 'result'. </p>
+<p>Transform all the integration points from the column vectors of <em>matrix</em> from reference coordinates to physical coordinates and store them as column vectors in <em>result</em>. </p>
 
 <p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#ada2df44a802bea373c44f154f0af2158">mfem::ElementTransformation</a>.</p>
 
-<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00519">519</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classmfem_1_1FaceElementTransformations.html#ac8edebf2ba6f982bed356b2519ebbeaa">mfem::FaceElementTransformations</a>.</p>
+
+<p>Definition at line <a class="el" href="eltrans_8cpp_source.html#l00515">515</a> of file <a class="el" href="eltrans_8cpp_source.html">eltrans.cpp</a>.</p>
 
 </div>
 </div>
@@ -617,7 +790,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">virtual int mfem::IsoparametricTransformation::TransformBack </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>pt</em>, </td>
+          <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -643,7 +816,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1ElementTransformation.html#a92cab2b7812d99740881f90d9793a2fc">mfem::ElementTransformation</a>.</p>
 
-<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00335">335</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
+<p>Definition at line <a class="el" href="eltrans_8hpp_source.html#l00437">437</a> of file <a class="el" href="eltrans_8hpp_source.html">eltrans.hpp</a>.</p>
 
 </div>
 </div>
@@ -654,7 +827,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

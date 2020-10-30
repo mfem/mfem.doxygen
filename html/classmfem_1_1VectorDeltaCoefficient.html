@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -103,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html" title="VectorDeltaCoefficient: DeltaCoefficient with a direction. ">VectorDeltaCoefficient</a>: <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient. ">DeltaCoefficient</a> with a direction.  
+<p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> coefficient defined by a scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a> and a constant vector direction.  
  <a href="classmfem_1_1VectorDeltaCoefficient.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>&gt;</code></p>
@@ -123,20 +124,25 @@ Collaboration diagram for mfem::VectorDeltaCoefficient:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f0a2468a4b110b19fee1f1f221918df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a7f0a2468a4b110b19fee1f1f221918df">VectorDeltaCoefficient</a> (int _vdim)</td></tr>
+<tr class="memdesc:a7f0a2468a4b110b19fee1f1f221918df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a vector of dimension <em>_vdim</em>.  <a href="#a7f0a2468a4b110b19fee1f1f221918df">More...</a><br/></td></tr>
 <tr class="separator:a7f0a2468a4b110b19fee1f1f221918df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41e802308456900c759d7d92019d9f7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a41e802308456900c759d7d92019d9f7c">VectorDeltaCoefficient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;_dir)</td></tr>
+<tr class="memdesc:a41e802308456900c759d7d92019d9f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a unit delta function centered at (0.0,0.0,0.0)  <a href="#a41e802308456900c759d7d92019d9f7c">More...</a><br/></td></tr>
 <tr class="separator:a41e802308456900c759d7d92019d9f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c2af21fcb0ac3afb82deae827b78e14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a0c2af21fcb0ac3afb82deae827b78e14">VectorDeltaCoefficient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;_dir, double x, double s)</td></tr>
+<tr class="memdesc:a0c2af21fcb0ac3afb82deae827b78e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a delta function scaled by <em>s</em> and centered at (x,0.0,0.0)  <a href="#a0c2af21fcb0ac3afb82deae827b78e14">More...</a><br/></td></tr>
 <tr class="separator:a0c2af21fcb0ac3afb82deae827b78e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a221edf494c4672cf04fd01c12cd6a6a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a221edf494c4672cf04fd01c12cd6a6a9">VectorDeltaCoefficient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;_dir, double x, double y, double s)</td></tr>
+<tr class="memdesc:a221edf494c4672cf04fd01c12cd6a6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a delta function scaled by <em>s</em> and centered at (x,y,0.0)  <a href="#a221edf494c4672cf04fd01c12cd6a6a9">More...</a><br/></td></tr>
 <tr class="separator:a221edf494c4672cf04fd01c12cd6a6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cce5b3ce69cd9fe75e1ce61d0d28ca3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a6cce5b3ce69cd9fe75e1ce61d0d28ca3">VectorDeltaCoefficient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;_dir, double x, double y, double z, double s)</td></tr>
+<tr class="memdesc:a6cce5b3ce69cd9fe75e1ce61d0d28ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a delta function scaled by <em>s</em> and centered at (x,y,z)  <a href="#a6cce5b3ce69cd9fe75e1ce61d0d28ca3">More...</a><br/></td></tr>
 <tr class="separator:a6cce5b3ce69cd9fe75e1ce61d0d28ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f739b283b7fd96b603a08350e959128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a0f739b283b7fd96b603a08350e959128">SetDeltaCoefficient</a> (const <a class="el" href="classmfem_1_1DeltaCoefficient.html">DeltaCoefficient</a> &amp;_d)</td></tr>
-<tr class="memdesc:a0f739b283b7fd96b603a08350e959128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the associated DeltaCoeficient with a new DeltaCoeficient.  <a href="#a0f739b283b7fd96b603a08350e959128">More...</a><br/></td></tr>
+<tr class="memdesc:a0f739b283b7fd96b603a08350e959128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the associated <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a> with a new <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a>.  <a href="#a0f739b283b7fd96b603a08350e959128">More...</a><br/></td></tr>
 <tr class="separator:a0f739b283b7fd96b603a08350e959128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82010c24876f472edf1401c943050015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1DeltaCoefficient.html">DeltaCoefficient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a82010c24876f472edf1401c943050015">GetDeltaCoefficient</a> ()</td></tr>
-<tr class="memdesc:a82010c24876f472edf1401c943050015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient. ">DeltaCoefficient</a>.  <a href="#a82010c24876f472edf1401c943050015">More...</a><br/></td></tr>
+<tr class="memdesc:a82010c24876f472edf1401c943050015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a>.  <a href="#a82010c24876f472edf1401c943050015">More...</a><br/></td></tr>
 <tr class="separator:a82010c24876f472edf1401c943050015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92bc0510fad404d8c435edfb4b4cf09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#af92bc0510fad404d8c435edfb4b4cf09">SetScale</a> (double s)</td></tr>
 <tr class="separator:af92bc0510fad404d8c435edfb4b4cf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,7 +153,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c2bf84a58ae0fc3ea30f4a56cd1aac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a0c2bf84a58ae0fc3ea30f4a56cd1aac8">GetDeltaCenter</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;center)</td></tr>
 <tr class="separator:a0c2bf84a58ae0fc3ea30f4a56cd1aac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a795ce432eb9d11a4285fd926902c7df2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a795ce432eb9d11a4285fd926902c7df2">EvalDelta</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;V, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
-<tr class="memdesc:a795ce432eb9d11a4285fd926902c7df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the specified direction vector multiplied by the value returned by <a class="el" href="classmfem_1_1DeltaCoefficient.html#a8c6f933b3b2b5213a9222ef326ae8c6e" title="Return the Scale() multiplied by the weight Coefficient, if any. ">DeltaCoefficient::EvalDelta()</a> of the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient. ">DeltaCoefficient</a>.  <a href="#a795ce432eb9d11a4285fd926902c7df2">More...</a><br/></td></tr>
+<tr class="memdesc:a795ce432eb9d11a4285fd926902c7df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the specified direction vector multiplied by the value returned by <a class="el" href="classmfem_1_1DeltaCoefficient.html#a8c6f933b3b2b5213a9222ef326ae8c6e" title="The value of the function assuming we are evaluating at the delta center. ">DeltaCoefficient::EvalDelta()</a> of the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a>.  <a href="#a795ce432eb9d11a4285fd926902c7df2">More...</a><br/></td></tr>
 <tr class="separator:a795ce432eb9d11a4285fd926902c7df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0acc45a9ba82afc7ee150278579ae78e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html#a0acc45a9ba82afc7ee150278579ae78e">Eval</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;V, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
 <tr class="memdesc:a0acc45a9ba82afc7ee150278579ae78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A VectorDeltaFunction cannot be evaluated. Calling this method will cause an MFEM error, terminating the application.  <a href="#a0acc45a9ba82afc7ee150278579ae78e">More...</a><br/></td></tr>
@@ -156,10 +162,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a333d95c08c152de4fafbf2f684beb0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1VectorCoefficient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1VectorCoefficient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1VectorCoefficient.html">mfem::VectorCoefficient</a></td></tr>
 <tr class="memitem:a7ade618123af0f0d32f6a4a6e95552ca inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#a7ade618123af0f0d32f6a4a6e95552ca">VectorCoefficient</a> (int vd)</td></tr>
+<tr class="memdesc:a7ade618123af0f0d32f6a4a6e95552ca inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classmfem_1_1VectorCoefficient.html" title="Base class for vector Coefficients that optionally depend on time and space. ">VectorCoefficient</a> with vector dimension <em>vd</em>.  <a href="#a7ade618123af0f0d32f6a4a6e95552ca">More...</a><br/></td></tr>
 <tr class="separator:a7ade618123af0f0d32f6a4a6e95552ca inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648fc730a13a7faca1515309c89eabf5 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#a648fc730a13a7faca1515309c89eabf5">SetTime</a> (double t)</td></tr>
+<tr class="memdesc:a648fc730a13a7faca1515309c89eabf5 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time for time dependent coefficients.  <a href="#a648fc730a13a7faca1515309c89eabf5">More...</a><br/></td></tr>
 <tr class="separator:a648fc730a13a7faca1515309c89eabf5 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5022bc578464dea2c84506812b806f4 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#ac5022bc578464dea2c84506812b806f4">GetTime</a> ()</td></tr>
+<tr class="memdesc:ac5022bc578464dea2c84506812b806f4 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time for time dependent coefficients.  <a href="#ac5022bc578464dea2c84506812b806f4">More...</a><br/></td></tr>
 <tr class="separator:ac5022bc578464dea2c84506812b806f4 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47cd974a280f20e0d4b7f8ce43ea1597 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#a47cd974a280f20e0d4b7f8ce43ea1597">GetVDim</a> ()</td></tr>
 <tr class="memdesc:a47cd974a280f20e0d4b7f8ce43ea1597 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns dimension of the vector.  <a href="#a47cd974a280f20e0d4b7f8ce43ea1597">More...</a><br/></td></tr>
@@ -183,9 +192,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3a39c0e23f4ad9446aa2dfc7fb342b32 inherit pro_attribs_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classmfem_1_1VectorDeltaCoefficient.html" title="VectorDeltaCoefficient: DeltaCoefficient with a direction. ">VectorDeltaCoefficient</a>: <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient. ">DeltaCoefficient</a> with a direction. </p>
+<div class="textblock"><p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> coefficient defined by a scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a> and a constant vector direction. </p>
+<p>WARNING this cannot be used as a normal coefficient. The usual Eval method is disabled. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00480">480</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00603">603</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7f0a2468a4b110b19fee1f1f221918df"></a>
 <div class="memitem">
@@ -209,7 +219,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00487">487</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Construct with a vector of dimension <em>_vdim</em>. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00611">611</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +247,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00489">489</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a unit delta function centered at (0.0,0.0,0.0) </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00616">616</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -277,7 +291,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00491">491</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a delta function scaled by <em>s</em> and centered at (x,0.0,0.0) </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00621">621</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +341,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00493">493</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a delta function scaled by <em>s</em> and centered at (x,y,0.0) </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00626">626</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +397,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00495">495</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Construct with a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> object representing the direction and a delta function scaled by <em>s</em> and centered at (x,y,z) </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00631">631</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +424,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00523">523</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00661">661</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +471,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1VectorCoefficient.html#ac85f5bb9e09019b15c9543f4f41b37d5">mfem::VectorCoefficient</a>.</p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00520">520</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00658">658</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,9 +513,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the specified direction vector multiplied by the value returned by <a class="el" href="classmfem_1_1DeltaCoefficient.html#a8c6f933b3b2b5213a9222ef326ae8c6e" title="Return the Scale() multiplied by the weight Coefficient, if any. ">DeltaCoefficient::EvalDelta()</a> of the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient. ">DeltaCoefficient</a>. </p>
+<p>Return the specified direction vector multiplied by the value returned by <a class="el" href="classmfem_1_1DeltaCoefficient.html#a8c6f933b3b2b5213a9222ef326ae8c6e" title="The value of the function assuming we are evaluating at the delta center. ">DeltaCoefficient::EvalDelta()</a> of the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a>. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00250">250</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00256">256</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +541,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00510">510</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00647">647</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -546,9 +566,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient. ">DeltaCoefficient</a>. </p>
+<p>Return the associated scalar <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a>. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00504">504</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00641">641</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -574,7 +594,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00509">509</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00646">646</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -600,10 +620,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Replace the associated DeltaCoeficient with a new DeltaCoeficient. </p>
-<p>The new DeltaCoeficient cannot have a specified weight <a class="el" href="classmfem_1_1Coefficient.html" title="Base class Coefficient that may optionally depend on time. ">Coefficient</a>, i.e. DeltaCoeficient::Weight() should return NULL. </p>
+<p>Replace the associated <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a> with a new <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a>. </p>
+<p>The new <a class="el" href="classmfem_1_1DeltaCoefficient.html" title="Delta function coefficient optionally multiplied by a weight coefficient and a scaled time dependent ...">DeltaCoefficient</a> cannot have a specified weight <a class="el" href="classmfem_1_1Coefficient.html" title="Base class Coefficients that optionally depend on space and time. These are used by the BilinearFormI...">Coefficient</a>, i.e. <a class="el" href="classmfem_1_1DeltaCoefficient.html#af2d7ac67bf90948527ab68d38106138c" title="See SetWeight() for description of the weight Coefficient. ">DeltaCoefficient::Weight()</a> should return NULL. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00502">502</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00638">638</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +641,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00244">244</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00250">250</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +667,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00506">506</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00643">643</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -670,7 +690,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00484">484</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00607">607</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,7 +712,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00483">483</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00606">606</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +723,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:06 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -95,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
@@ -104,10 +106,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>&gt;</code></p>
+<p>Collection of finite elements from the same family in multiple dimensions. This class is used to match the degrees of freedom of a <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> between elements, and to provide the finite element restriction from an element to its boundary.  
+ <a href="classmfem_1_1FiniteElementCollection.html#details">More...</a></p>
 
-<p>Inherited by <a class="el" href="classmfem_1_1Const2DFECollection.html">mfem::Const2DFECollection</a>, <a class="el" href="classmfem_1_1Const3DFECollection.html">mfem::Const3DFECollection</a>, <a class="el" href="classmfem_1_1CrouzeixRaviartFECollection.html">mfem::CrouzeixRaviartFECollection</a>, <a class="el" href="classmfem_1_1CubicDiscont2DFECollection.html">mfem::CubicDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1CubicFECollection.html">mfem::CubicFECollection</a>, <a class="el" href="classmfem_1_1GaussLinearDiscont2DFECollection.html">mfem::GaussLinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1GaussQuadraticDiscont2DFECollection.html">mfem::GaussQuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1H1__FECollection.html">mfem::H1_FECollection</a>, <a class="el" href="classmfem_1_1L2__FECollection.html">mfem::L2_FECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont2DFECollection.html">mfem::LinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont3DFECollection.html">mfem::LinearDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1LinearFECollection.html">mfem::LinearFECollection</a>, <a class="el" href="classmfem_1_1LinearNonConf3DFECollection.html">mfem::LinearNonConf3DFECollection</a>, <a class="el" href="classmfem_1_1Local__FECollection.html">mfem::Local_FECollection</a>, <a class="el" href="classmfem_1_1ND1__3DFECollection.html">mfem::ND1_3DFECollection</a>, <a class="el" href="classmfem_1_1ND__FECollection.html">mfem::ND_FECollection</a>, <a class="el" href="classmfem_1_1NURBSFECollection.html">mfem::NURBSFECollection</a>, <a class="el" href="classmfem_1_1P1OnQuadFECollection.html">mfem::P1OnQuadFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont2DFECollection.html">mfem::QuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont3DFECollection.html">mfem::QuadraticDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticFECollection.html">mfem::QuadraticFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosDiscont2DFECollection.html">mfem::QuadraticPosDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosFECollection.html">mfem::QuadraticPosFECollection</a>, <a class="el" href="classmfem_1_1RefinedLinearFECollection.html">mfem::RefinedLinearFECollection</a>, <a class="el" href="classmfem_1_1RT0__2DFECollection.html">mfem::RT0_2DFECollection</a>, <a class="el" href="classmfem_1_1RT0__3DFECollection.html">mfem::RT0_3DFECollection</a>, <a class="el" href="classmfem_1_1RT1__2DFECollection.html">mfem::RT1_2DFECollection</a>, <a class="el" href="classmfem_1_1RT1__3DFECollection.html">mfem::RT1_3DFECollection</a>, <a class="el" href="classmfem_1_1RT2__2DFECollection.html">mfem::RT2_2DFECollection</a>, and <a class="el" href="classmfem_1_1RT__FECollection.html">mfem::RT_FECollection</a>.</p>
+<p><code>#include &lt;<a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for mfem::FiniteElementCollection:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1FiniteElementCollection__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9aeaa2b626d565a06380af9c927ce48d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da346183a0c130fc8c0dfc9de300277698">CONTINUOUS</a>, 
+<a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48daf91b8685b60603fd88213afd57ea64c9">TANGENTIAL</a>, 
+<a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da5ef68da0eaf8cb369c1c4b01471f378d">NORMAL</a>, 
+<a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da14bf72f096dab054cd2603534c07e28b">DISCONTINUOUS</a>
+ }</td></tr>
+<tr class="memdesc:a9aeaa2b626d565a06380af9c927ce48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for ContType: defines the continuity of the field across element interfaces.  <a href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48d">More...</a><br/></td></tr>
+<tr class="separator:a9aeaa2b626d565a06380af9c927ce48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8f117fa1884d4276daf171172e2c7aa"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#ab8f117fa1884d4276daf171172e2c7aa">FiniteElementForGeometry</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> GeomType) const =0</td></tr>
@@ -119,6 +138,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8f8bfe746d389b3404d460c5a15139a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b93b7c00224958c79d22115a224ecfd"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a4b93b7c00224958c79d22115a224ecfd">Name</a> () const </td></tr>
 <tr class="separator:a4b93b7c00224958c79d22115a224ecfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1728b5be2609a4b59c86738d596b57"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a1e1728b5be2609a4b59c86738d596b57">GetContType</a> () const =0</td></tr>
+<tr class="separator:a1e1728b5be2609a4b59c86738d596b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31e1a5b97e9f43304bf13d2ab4289be3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a31e1a5b97e9f43304bf13d2ab4289be3">HasFaceDofs</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> GeomType) const </td></tr>
 <tr class="separator:a31e1a5b97e9f43304bf13d2ab4289be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ae7990e3e953d222a40c563f2a7591"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#ae2ae7990e3e953d222a40c563f2a7591">TraceFiniteElementForGeometry</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> GeomType) const </td></tr>
@@ -134,7 +155,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a15fcfa553d4949eb08f9926ac74d1e80"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmfem_1_1FiniteElementCollection.html">FiniteElementCollection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a15fcfa553d4949eb08f9926ac74d1e80">New</a> (const char *name)</td></tr>
-<tr class="memdesc:a15fcfa553d4949eb08f9926ac74d1e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: return a newly allocated <a class="el" href="classmfem_1_1FiniteElementCollection.html">FiniteElementCollection</a> according to the given name.  <a href="#a15fcfa553d4949eb08f9926ac74d1e80">More...</a><br/></td></tr>
+<tr class="memdesc:a15fcfa553d4949eb08f9926ac74d1e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: return a newly allocated <a class="el" href="classmfem_1_1FiniteElementCollection.html" title="Collection of finite elements from the same family in multiple dimensions. This class is used to matc...">FiniteElementCollection</a> according to the given name.  <a href="#a15fcfa553d4949eb08f9926ac74d1e80">More...</a><br/></td></tr>
 <tr class="separator:a15fcfa553d4949eb08f9926ac74d1e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
@@ -146,14 +167,45 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a75a75abfe31260c746fbdca87af4b146"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a75a75abfe31260c746fbdca87af4b146">GetEdge</a> (int &amp;nv, v_t &amp;v, int &amp;ne, int &amp;e, int &amp;eo, const int edge_info)</td></tr>
 <tr class="separator:a75a75abfe31260c746fbdca87af4b146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9740560a653615f8a108d20860518aa2"><td class="memTemplParams" colspan="2">template&lt;Geometry::Type geom, Geometry::Type f_geom, typename v_t , typename e_t , typename eo_t &gt; </td></tr>
-<tr class="memitem:a9740560a653615f8a108d20860518aa2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a9740560a653615f8a108d20860518aa2">GetFace</a> (int &amp;nv, v_t &amp;v, int &amp;ne, e_t &amp;e, eo_t &amp;eo, int &amp;nf, int &amp;f, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> &amp;fg, int &amp;fo, const int face_info)</td></tr>
+<tr class="memitem:a9740560a653615f8a108d20860518aa2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a9740560a653615f8a108d20860518aa2">GetFace</a> (int &amp;nv, v_t &amp;v, int &amp;ne, e_t &amp;e, eo_t &amp;eo, int &amp;nf, int &amp;<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> &amp;fg, int &amp;fo, const int face_info)</td></tr>
 <tr class="separator:a9740560a653615f8a108d20860518aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Collection of finite elements from the same family in multiple dimensions. This class is used to match the degrees of freedom of a <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> between elements, and to provide the finite element restriction from an element to its boundary. </p>
 
 <p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00026">26</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a9aeaa2b626d565a06380af9c927ce48d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration for ContType: defines the continuity of the field across element interfaces. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a9aeaa2b626d565a06380af9c927ce48da346183a0c130fc8c0dfc9de300277698"></a>CONTINUOUS</em>&nbsp;</td><td class="fielddoc">
+<p>Field is continuous across element interfaces. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9aeaa2b626d565a06380af9c927ce48daf91b8685b60603fd88213afd57ea64c9"></a>TANGENTIAL</em>&nbsp;</td><td class="fielddoc">
+<p>Tangential components of vector field. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9aeaa2b626d565a06380af9c927ce48da5ef68da0eaf8cb369c1c4b01471f378d"></a>NORMAL</em>&nbsp;</td><td class="fielddoc">
+<p>Normal component of vector field. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9aeaa2b626d565a06380af9c927ce48da14bf72f096dab054cd2603534c07e28b"></a>DISCONTINUOUS</em>&nbsp;</td><td class="fielddoc">
+<p>Field is discontinuous across element interfaces. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00045">45</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a70f036dee4f687a65d25b55d8f8f861b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +227,7 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00065">65</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00075">75</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,6 +319,31 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classmfem_1_1Local__FECollection.html#a54c1b1bde370afe177e39fe5b6df2ced">mfem::Local_FECollection</a>, <a class="el" href="classmfem_1_1RT1__3DFECollection.html#a0a1463b82195ad7cc1abb6457f6c1ebf">mfem::RT1_3DFECollection</a>, <a class="el" href="classmfem_1_1RT0__3DFECollection.html#a2c2fbf68755a4a3c577028774cad50bf">mfem::RT0_3DFECollection</a>, <a class="el" href="classmfem_1_1ND1__3DFECollection.html#a44156abea60cfbac026d0a0e26c10d0d">mfem::ND1_3DFECollection</a>, <a class="el" href="classmfem_1_1RefinedLinearFECollection.html#aa317cdaa6bfab2fadef51c1b691801ce">mfem::RefinedLinearFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont3DFECollection.html#af73e953c166e55fc2195b24a08af5e11">mfem::QuadraticDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont3DFECollection.html#afe2c7fab7827cfb69baf4ffe1470bcb8">mfem::LinearDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1Const3DFECollection.html#add01c9ce67529208c1e85878158322cb">mfem::Const3DFECollection</a>, <a class="el" href="classmfem_1_1CubicDiscont2DFECollection.html#a522d6243626de288616669edb82fefe3">mfem::CubicDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1GaussQuadraticDiscont2DFECollection.html#a12bbe2ec97832a30c5b9c156d4a16084">mfem::GaussQuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosDiscont2DFECollection.html#a35d73030c71c520fdde1e94fbee083eb">mfem::QuadraticPosDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont2DFECollection.html#ae519cc87853285f33ebbfbbd6693c43b">mfem::QuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1P1OnQuadFECollection.html#a140e6b938064af7b52fbaf9f8760f1d7">mfem::P1OnQuadFECollection</a>, <a class="el" href="classmfem_1_1GaussLinearDiscont2DFECollection.html#a1d8b83558292700ce1ba484308dc08a6">mfem::GaussLinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont2DFECollection.html#a91980326850989319088f70d0afd2372">mfem::LinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1Const2DFECollection.html#ad2e1e1bbc83ca9cd7a23975cacb2ee40">mfem::Const2DFECollection</a>, <a class="el" href="classmfem_1_1RT2__2DFECollection.html#a8a281d769ef2e1861354f2248aedd168">mfem::RT2_2DFECollection</a>, <a class="el" href="classmfem_1_1RT1__2DFECollection.html#af1b897006d6f66ee65af97ed182a87b7">mfem::RT1_2DFECollection</a>, <a class="el" href="classmfem_1_1RT0__2DFECollection.html#a43a09166e2c259557fbc25f4a79b7a6c">mfem::RT0_2DFECollection</a>, <a class="el" href="classmfem_1_1LinearNonConf3DFECollection.html#a71dda19231ec917b276b942e89149be7">mfem::LinearNonConf3DFECollection</a>, <a class="el" href="classmfem_1_1CrouzeixRaviartFECollection.html#a0e7b295d86766bb41a526bc596dcca4b">mfem::CrouzeixRaviartFECollection</a>, <a class="el" href="classmfem_1_1CubicFECollection.html#a203f6a782fa90809717df7773cb30037">mfem::CubicFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosFECollection.html#aa69d6cf26c5828d1aa270f8dddd9eecf">mfem::QuadraticPosFECollection</a>, <a class="el" href="classmfem_1_1QuadraticFECollection.html#a34079cee3e457da08c82e307f2807106">mfem::QuadraticFECollection</a>, <a class="el" href="classmfem_1_1LinearFECollection.html#a03be3b8c196e0a474049bb9ef12872ad">mfem::LinearFECollection</a>, <a class="el" href="classmfem_1_1NURBSFECollection.html#a570aedec32a0b1c37f76260d6d621ed4">mfem::NURBSFECollection</a>, <a class="el" href="classmfem_1_1ND__FECollection.html#a87bcb7eaacadf82a3a75c7672c2d1e4e">mfem::ND_FECollection</a>, <a class="el" href="classmfem_1_1RT__FECollection.html#a56ea88c185dfc3cf25e460b83e73e379">mfem::RT_FECollection</a>, <a class="el" href="classmfem_1_1L2__FECollection.html#a7cdc87fef7859755bdd0fb12810254ea">mfem::L2_FECollection</a>, and <a class="el" href="classmfem_1_1H1__FECollection.html#a9fb3a4b1f615763867b1ab7cfafb0e39">mfem::H1_FECollection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e1728b5be2609a4b59c86738d596b57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int mfem::FiniteElementCollection::GetContType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classmfem_1_1Local__FECollection.html#a21e7eca7e80560c28aa27c7cfe9c61eb">mfem::Local_FECollection</a>, <a class="el" href="classmfem_1_1RT1__3DFECollection.html#a385769a818515a80030d47c3951cb345">mfem::RT1_3DFECollection</a>, <a class="el" href="classmfem_1_1RT0__3DFECollection.html#acf489697e578607ce0e4caaced54ab1e">mfem::RT0_3DFECollection</a>, <a class="el" href="classmfem_1_1ND1__3DFECollection.html#a554e53cd7c092eca424ea5e18829c762">mfem::ND1_3DFECollection</a>, <a class="el" href="classmfem_1_1RefinedLinearFECollection.html#aa2e7f0a69d40f9869fd7b8b5364bc016">mfem::RefinedLinearFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont3DFECollection.html#ae7a4cb8da51826445fd823954074a56e">mfem::QuadraticDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont3DFECollection.html#a577ebd258a6b5e95e1b18e17fd8e7df2">mfem::LinearDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1Const3DFECollection.html#a5450370a4daf787b4af6687f9779fad6">mfem::Const3DFECollection</a>, <a class="el" href="classmfem_1_1CubicDiscont2DFECollection.html#a401dfadcf7d010845424c722d8cf7d59">mfem::CubicDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1GaussQuadraticDiscont2DFECollection.html#ad489106a303df5d00c7de47ab379fc2c">mfem::GaussQuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosDiscont2DFECollection.html#ac0de906662c1ddc434098c474f2291c9">mfem::QuadraticPosDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont2DFECollection.html#a8964a9e014f125b1ecd04c99ef4bdcec">mfem::QuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1P1OnQuadFECollection.html#a17895fe191fc03b88e42c772ca7b0bd7">mfem::P1OnQuadFECollection</a>, <a class="el" href="classmfem_1_1GaussLinearDiscont2DFECollection.html#aabb2014d0db881cda8d5d0a4b7f0236a">mfem::GaussLinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont2DFECollection.html#ab082bacc3f55c478b2568ed66253a56b">mfem::LinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1Const2DFECollection.html#a37304c505e7d0263453f4a03fd9b2bab">mfem::Const2DFECollection</a>, <a class="el" href="classmfem_1_1RT2__2DFECollection.html#af9ebd24cfa9b2836ecd033da0dbb8f09">mfem::RT2_2DFECollection</a>, <a class="el" href="classmfem_1_1RT1__2DFECollection.html#a63eee32bd43be90728860238d757aa78">mfem::RT1_2DFECollection</a>, <a class="el" href="classmfem_1_1RT0__2DFECollection.html#aec3c9a9695bc45644771d851d35a6ecf">mfem::RT0_2DFECollection</a>, <a class="el" href="classmfem_1_1LinearNonConf3DFECollection.html#a7e9ee7652ce1a61d8f8130f9778c4f09">mfem::LinearNonConf3DFECollection</a>, <a class="el" href="classmfem_1_1CrouzeixRaviartFECollection.html#a8d89d46b81aa3f0828355e8a3bf72f0d">mfem::CrouzeixRaviartFECollection</a>, <a class="el" href="classmfem_1_1CubicFECollection.html#a92a69eefddfd03e5ecc4469ed235d12c">mfem::CubicFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosFECollection.html#ad29ffeb4f92466728e937af0a053d2d6">mfem::QuadraticPosFECollection</a>, <a class="el" href="classmfem_1_1QuadraticFECollection.html#a281a83c33d96dfd370d320e212660536">mfem::QuadraticFECollection</a>, <a class="el" href="classmfem_1_1LinearFECollection.html#a17a589102e9b2e52e0b0fb298bae4c0c">mfem::LinearFECollection</a>, <a class="el" href="classmfem_1_1NURBSFECollection.html#ae88d1c085e72eb440cfc85d6b6de5cb8">mfem::NURBSFECollection</a>, <a class="el" href="classmfem_1_1ND__FECollection.html#af72ae7f9d4f35f61ee1d30ef1411f9c0">mfem::ND_FECollection</a>, <a class="el" href="classmfem_1_1RT__FECollection.html#a37bab7079126d28b1354a321dce7c9c1">mfem::RT_FECollection</a>, <a class="el" href="classmfem_1_1L2__FECollection.html#aa3ab22c8fc2950f36b58ca7af652f25f">mfem::L2_FECollection</a>, and <a class="el" href="classmfem_1_1H1__FECollection.html#a3983eb56e56a03a497de778ad059c646">mfem::H1_FECollection</a>.</p>
 
 </div>
 </div>
@@ -524,7 +601,7 @@ template&lt;Geometry::Type geom&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1Local__FECollection.html#a1c44aa89035645587acc9912a329510e">mfem::Local_FECollection</a>, <a class="el" href="classmfem_1_1RT1__3DFECollection.html#ac8a3d951752da6ff49a8ac673ad079e3">mfem::RT1_3DFECollection</a>, <a class="el" href="classmfem_1_1RT0__3DFECollection.html#aaeee08e369df9689fa46c7b9b9de7576">mfem::RT0_3DFECollection</a>, <a class="el" href="classmfem_1_1ND1__3DFECollection.html#a22242ef0326317a1db50059d2dcc074d">mfem::ND1_3DFECollection</a>, <a class="el" href="classmfem_1_1RefinedLinearFECollection.html#a99c85c784951ac973d1732e8d90d8be8">mfem::RefinedLinearFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont3DFECollection.html#a239d10058c1521e37a3211faa32b64b1">mfem::QuadraticDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont3DFECollection.html#a0deb6d93a79c38fd1086ec684bef89c9">mfem::LinearDiscont3DFECollection</a>, <a class="el" href="classmfem_1_1Const3DFECollection.html#ad48b8698317b0b3785a840544b2858e8">mfem::Const3DFECollection</a>, <a class="el" href="classmfem_1_1CubicDiscont2DFECollection.html#aa42afec5c951c29289db73531ffbf742">mfem::CubicDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1GaussQuadraticDiscont2DFECollection.html#ac86b5f1e9caeb1f8fefa033c75f5854f">mfem::GaussQuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosDiscont2DFECollection.html#a237154b7b4dfdca3d4814f72648ab300">mfem::QuadraticPosDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1QuadraticDiscont2DFECollection.html#a674f2c98e590f55e37d7e23e8de1f7be">mfem::QuadraticDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1P1OnQuadFECollection.html#a59121b5086db45fe87a06495d11100e4">mfem::P1OnQuadFECollection</a>, <a class="el" href="classmfem_1_1GaussLinearDiscont2DFECollection.html#a57c745feaef312f3c8848098d90b0126">mfem::GaussLinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1LinearDiscont2DFECollection.html#ab9b85cd7d5bc555817b19041614148e4">mfem::LinearDiscont2DFECollection</a>, <a class="el" href="classmfem_1_1Const2DFECollection.html#a62e06859927015dbadf2ce46081d703e">mfem::Const2DFECollection</a>, <a class="el" href="classmfem_1_1RT2__2DFECollection.html#a6704bc7bc60429d3fd7c7cc98f93d964">mfem::RT2_2DFECollection</a>, <a class="el" href="classmfem_1_1RT1__2DFECollection.html#ae81344c89f1ee1c5324a2208bf4e77c7">mfem::RT1_2DFECollection</a>, <a class="el" href="classmfem_1_1RT0__2DFECollection.html#ac6379d2e0200be9733f5230ea29f729c">mfem::RT0_2DFECollection</a>, <a class="el" href="classmfem_1_1LinearNonConf3DFECollection.html#a7886ad0cfecf80ac184084cc5feb83f2">mfem::LinearNonConf3DFECollection</a>, <a class="el" href="classmfem_1_1CrouzeixRaviartFECollection.html#a166f5e828df6ce1960551f6ac460ecb8">mfem::CrouzeixRaviartFECollection</a>, <a class="el" href="classmfem_1_1CubicFECollection.html#a56934e568f31ccd0d6bd52476789d958">mfem::CubicFECollection</a>, <a class="el" href="classmfem_1_1QuadraticPosFECollection.html#a670530804cac59f47ba9b1e8dfd0497d">mfem::QuadraticPosFECollection</a>, <a class="el" href="classmfem_1_1QuadraticFECollection.html#a793ec1343d1f9c33a5b0e5679a16a6ff">mfem::QuadraticFECollection</a>, <a class="el" href="classmfem_1_1LinearFECollection.html#a48890d7e90dd91426d6ca8748767ffa3">mfem::LinearFECollection</a>, <a class="el" href="classmfem_1_1NURBSFECollection.html#a82ddde7883ddfae2425e8359c6ccba94">mfem::NURBSFECollection</a>, <a class="el" href="classmfem_1_1ND__FECollection.html#aea4681c1fa1c7d96342e2e03c3df1b85">mfem::ND_FECollection</a>, <a class="el" href="classmfem_1_1RT__FECollection.html#a1886f28f15d72e2ba818d59d777a5f5f">mfem::RT_FECollection</a>, <a class="el" href="classmfem_1_1L2__FECollection.html#abf0bc46ef6500a2c0e20e215ba008ef5">mfem::L2_FECollection</a>, and <a class="el" href="classmfem_1_1H1__FECollection.html#a203ce65d4dd240a36a7669d99e0d083f">mfem::H1_FECollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00053">53</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00061">61</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -550,7 +627,126 @@ template&lt;Geometry::Type geom&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Factory method: return a newly allocated <a class="el" href="classmfem_1_1FiniteElementCollection.html">FiniteElementCollection</a> according to the given name. </p>
+<p>Factory method: return a newly allocated <a class="el" href="classmfem_1_1FiniteElementCollection.html" title="Collection of finite elements from the same family in multiple dimensions. This class is used to matc...">FiniteElementCollection</a> according to the given name. </p>
+<table class="doxtable">
+<tr>
+<th align="center">FEC Name </th><th align="center">Space </th><th align="center">Order </th><th align="center"><a class="el" href="classmfem_1_1BasisType.html" title="Possible basis types. Note that not all elements can use all BasisType(s). ">BasisType</a> </th><th align="center">FiniteElement::MapT </th><th align="center">Notes  </th></tr>
+<tr>
+<td align="center">H1_[DIM]_[ORDER] </td><td align="center">H1 </td><td align="center">* </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">H1 nodal elements </td></tr>
+<tr>
+<td align="center">H1@[BTYPE]_[DIM]_[ORDER] </td><td align="center">H1 </td><td align="center">* </td><td align="center">* </td><td align="center">VALUE </td><td align="center">H1 nodal elements </td></tr>
+<tr>
+<td align="center">H1Pos_[DIM]_[ORDER] </td><td align="center">H1 </td><td align="center">* </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">H1 nodal elements </td></tr>
+<tr>
+<td align="center">H1Pos_Trace_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">2 </td><td align="center">VALUE </td><td align="center">H^{1/2}-conforming trace elements for H1 defined on the interface between mesh elements (faces,edges,vertices) </td></tr>
+<tr>
+<td align="center">H1_Trace_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">H^{1/2}-conforming trace elements for H1 defined on the interface between mesh elements (faces,edges,vertices) </td></tr>
+<tr>
+<td align="center">H1_Trace@[BTYPE]_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">H^{1/2}-conforming trace elements for H1 defined on the interface between mesh elements (faces,edges,vertices) </td></tr>
+<tr>
+<td align="center">ND_[DIM]_[ORDER] </td><td align="center">H(curl) </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">H_CURL </td><td align="center">Nedelec vector elements </td></tr>
+<tr>
+<td align="center">ND@[CBTYPE][OBTYPE]_[DIM]_[ORDER] </td><td align="center">H(curl) </td><td align="center">* </td><td align="center">* / * </td><td align="center">H_CURL </td><td align="center">Nedelec vector elements </td></tr>
+<tr>
+<td align="center">ND_Trace_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">H_CURL </td><td align="center">H^{1/2}-conforming trace elements for H(curl) defined on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">ND_Trace@[CBTYPE][OBTYPE]_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">H_CURL </td><td align="center">H^{1/2}-conforming trace elements for H(curl) defined on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">RT_[DIM]_[ORDER] </td><td align="center">H(div) </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">H_DIV </td><td align="center">Raviart-Thomas vector elements </td></tr>
+<tr>
+<td align="center">RT@[CBTYPE][OBTYPE]_[DIM]_[ORDER] </td><td align="center">H(div) </td><td align="center">* </td><td align="center">* / * </td><td align="center">H_DIV </td><td align="center">Raviart-Thomas vector elements </td></tr>
+<tr>
+<td align="center">RT_Trace_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">INTEGRAL </td><td align="center">H^{1/2}-conforming trace elements for H(div) defined on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">RT_ValTrace_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">VALUE </td><td align="center">H^{1/2}-conforming trace elements for H(div) defined on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">RT_Trace@[BTYPE]_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">INTEGRAL </td><td align="center">H^{1/2}-conforming trace elements for H(div) defined on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">RT_ValTrace@[BTYPE]_[DIM]_[ORDER] </td><td align="center">H^{1/2} </td><td align="center">* </td><td align="center">1 / 0 </td><td align="center">VALUE </td><td align="center">H^{1/2}-conforming trace elements for H(div) defined on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">L2_[DIM]_[ORDER] </td><td align="center">L2 </td><td align="center">* </td><td align="center">0 </td><td align="center">VALUE </td><td align="center">Discontinous L2 elements </td></tr>
+<tr>
+<td align="center">L2_T[BTYPE]_[DIM]_[ORDER] </td><td align="center">L2 </td><td align="center">* </td><td align="center">0 </td><td align="center">VALUE </td><td align="center">Discontinous L2 elements </td></tr>
+<tr>
+<td align="center">L2Int_[DIM]_[ORDER] </td><td align="center">L2 </td><td align="center">* </td><td align="center">0 </td><td align="center">INTEGRAL </td><td align="center">Discontinous L2 elements </td></tr>
+<tr>
+<td align="center">L2Int_T[BTYPE]_[DIM]_[ORDER] </td><td align="center">L2 </td><td align="center">* </td><td align="center">0 </td><td align="center">INTEGRAL </td><td align="center">Discontinous L2 elements </td></tr>
+<tr>
+<td align="center">DG_Iface_[DIM]_[ORDER] </td><td align="center">- </td><td align="center">* </td><td align="center">0 </td><td align="center">VALUE </td><td align="center">Discontinuous elements on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">DG_Iface@[BTYPE]_[DIM]_[ORDER] </td><td align="center">- </td><td align="center">* </td><td align="center">0 </td><td align="center">VALUE </td><td align="center">Discontinuous elements on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">DG_IntIface_[DIM]_[ORDER] </td><td align="center">- </td><td align="center">* </td><td align="center">0 </td><td align="center">INTEGRAL </td><td align="center">Discontinuous elements on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">DG_IntIface@[BTYPE]_[DIM]_[ORDER] </td><td align="center">- </td><td align="center">* </td><td align="center">0 </td><td align="center">INTEGRAL </td><td align="center">Discontinuous elements on the interface between mesh elements (faces) </td></tr>
+<tr>
+<td align="center">NURBS[ORDER] </td><td align="center">- </td><td align="center">* </td><td align="center">- </td><td align="center">VALUE </td><td align="center">Non-Uniform Rational B-Splines (NURBS) elements </td></tr>
+<tr>
+<td align="center">LinearNonConf3D </td><td align="center">- </td><td align="center">1 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Piecewise-linear nonconforming finite elements in 3D </td></tr>
+<tr>
+<td align="center">CrouzeixRaviart </td><td align="center">- </td><td align="center">- </td><td align="center">- </td><td align="center">- </td><td align="center">Crouzeix-Raviart nonconforming elements in 2D </td></tr>
+<tr>
+<td align="center">Local_[FENAME] </td><td align="center">- </td><td align="center">- </td><td align="center">- </td><td align="center">- </td><td align="center">Special collection that builds a local version out of the FENAME collection </td></tr>
+<tr>
+<td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">- </td></tr>
+<tr>
+<td align="center">Linear </td><td align="center">H1 </td><td align="center">1 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using H1_ </td></tr>
+<tr>
+<td align="center">Quadratic </td><td align="center">H1 </td><td align="center">2 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using H1_ </td></tr>
+<tr>
+<td align="center">QuadraticPos </td><td align="center">H1 </td><td align="center">2 </td><td align="center">2 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using H1_ </td></tr>
+<tr>
+<td align="center">Cubic </td><td align="center">H1 </td><td align="center">2 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using H1_ </td></tr>
+<tr>
+<td align="center">Const2D </td><td align="center">L2 </td><td align="center">0 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">Const3D </td><td align="center">L2 </td><td align="center">0 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">LinearDiscont2D </td><td align="center">L2 </td><td align="center">1 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">GaussLinearDiscont2D </td><td align="center">L2 </td><td align="center">1 </td><td align="center">0 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">P1OnQuad </td><td align="center">H1 </td><td align="center">1 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Linear P1 element with 3 nodes on a square </td></tr>
+<tr>
+<td align="center">QuadraticDiscont2D </td><td align="center">L2 </td><td align="center">2 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">QuadraticPosDiscont2D </td><td align="center">L2 </td><td align="center">2 </td><td align="center">2 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">GaussQuadraticDiscont2D </td><td align="center">L2 </td><td align="center">2 </td><td align="center">0 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">CubicDiscont2D </td><td align="center">L2 </td><td align="center">3 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">LinearDiscont3D </td><td align="center">L2 </td><td align="center">1 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">QuadraticDiscont3D </td><td align="center">L2 </td><td align="center">2 </td><td align="center">1 </td><td align="center">VALUE </td><td align="center">Left in for backward compatibility, consider using L2_ </td></tr>
+<tr>
+<td align="center">ND1_3D </td><td align="center">H(Curl) </td><td align="center">1 </td><td align="center">1 / 0 </td><td align="center">H_CURL </td><td align="center">Left in for backward compatibility, consider using ND_ </td></tr>
+<tr>
+<td align="center">RT0_2D </td><td align="center">H(Div) </td><td align="center">1 </td><td align="center">1 / 0 </td><td align="center">H_DIV </td><td align="center">Left in for backward compatibility, consider using RT_ </td></tr>
+<tr>
+<td align="center">RT1_2D </td><td align="center">H(Div) </td><td align="center">2 </td><td align="center">1 / 0 </td><td align="center">H_DIV </td><td align="center">Left in for backward compatibility, consider using RT_ </td></tr>
+<tr>
+<td align="center">RT2_2D </td><td align="center">H(Div) </td><td align="center">3 </td><td align="center">1 / 0 </td><td align="center">H_DIV </td><td align="center">Left in for backward compatibility, consider using RT_ </td></tr>
+<tr>
+<td align="center">RT0_3D </td><td align="center">H(Div) </td><td align="center">1 </td><td align="center">1 / 0 </td><td align="center">H_DIV </td><td align="center">Left in for backward compatibility, consider using RT_ </td></tr>
+<tr>
+<td align="center">RT1_3D </td><td align="center">H(Div) </td><td align="center">2 </td><td align="center">1 / 0 </td><td align="center">H_DIV </td><td align="center">Left in for backward compatibility, consider using RT_ </td></tr>
+</table>
+<table class="doxtable">
+<tr>
+<th align="center">Tag </th><th align="center">Description  </th></tr>
+<tr>
+<td align="center">[DIM] </td><td align="center">Dimension of the elements (1D, 2D, 3D) </td></tr>
+<tr>
+<td align="center">[ORDER] </td><td align="center">Approximation order of the elements (P0, P1, P2, ...) </td></tr>
+<tr>
+<td align="center">[BTYPE] </td><td align="center"><a class="el" href="classmfem_1_1BasisType.html" title="Possible basis types. Note that not all elements can use all BasisType(s). ">BasisType</a> of the element (0-GaussLegendre, 1 - GaussLobatto, 2-Bernstein, 3-OpenUniform, 4-CloseUniform, 5-OpenHalfUniform) </td></tr>
+<tr>
+<td align="center">[OBTYPE] </td><td align="center">Open <a class="el" href="classmfem_1_1BasisType.html" title="Possible basis types. Note that not all elements can use all BasisType(s). ">BasisType</a> of the element for elements which have both types </td></tr>
+<tr>
+<td align="center">[CBTYPE] </td><td align="center">Closed <a class="el" href="classmfem_1_1BasisType.html" title="Possible basis types. Note that not all elements can use all BasisType(s). ">BasisType</a> of the element for elements which have both types </td></tr>
+</table>
+<p>[FENAME] Is a special case for the Local FEC which generates a local version of a given FEC. It is selected from one of (<a class="el" href="classmfem_1_1BiCubic2DFiniteElement.html" title="A 2D bi-cubic element on a square with uniformly spaces nodes. ">BiCubic2DFiniteElement</a>, Quad_Q3, <a class="el" href="classmfem_1_1Nedelec1HexFiniteElement.html" title="A 3D 1st order Nedelec element on a cube. ">Nedelec1HexFiniteElement</a>, Hex_ND1, H1_[DIM]_[ORDER],H1Pos_[DIM]_[ORDER], L2_[DIM]_[ORDER] ) </p>
 
 <p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l00047">47</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
@@ -593,7 +789,10 @@ template&lt;Geometry::Type geom&gt; </div>
 </div><div class="memdoc">
 
 <p>Get the local dofs for a given sub-manifold. </p>
-<p>Return the local dofs for a SDim-dimensional sub-manifold (0D - vertex, 1D - edge, 2D - face) including those on its boundary. The local index of the sub-manifold (inside Geom) and its orientation are given by the parameter Info = 64 * SubIndex + SubOrientation. Naturally, it is assumed that 0 &lt;= SDim &lt;= Dim(Geom). </p>
+<p>Return the local dofs for a SDim-dimensional sub-manifold (0D - vertex, 1D</p>
+<ul>
+<li>edge, 2D - face) including those on its boundary. The local index of the sub-manifold (inside Geom) and its orientation are given by the parameter Info = 64 * SubIndex + SubOrientation. Naturally, it is assumed that 0 &lt;= SDim &lt;= Dim(Geom). </li>
+</ul>
 
 <p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l00368">368</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
@@ -623,7 +822,7 @@ template&lt;Geometry::Type geom&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1L2__FECollection.html#affd4cf1592b5db4b149b1a0b13ea027b">mfem::L2_FECollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00057">57</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00067">67</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -634,7 +833,7 @@ template&lt;Geometry::Type geom&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:20 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:09 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

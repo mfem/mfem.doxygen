@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -125,18 +126,21 @@ Collaboration diagram for mfem::VarMessage&lt; Tag &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3aaed4e46a5b4953e2a3a2e31f0f02d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a3aaed4e46a5b4953e2a3a2e31f0f02d8">Isend</a> (int rank, MPI_Comm comm)</td></tr>
+<tr class="memdesc:a3aaed4e46a5b4953e2a3a2e31f0f02d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-blocking send to processor 'rank'. Returns immediately. Completion (as tested by MPI_Wait/Test) does not mean the message was received &ndash; it may be on its way or just buffered locally.  <a href="#a3aaed4e46a5b4953e2a3a2e31f0f02d8">More...</a><br/></td></tr>
 <tr class="separator:a3aaed4e46a5b4953e2a3a2e31f0f02d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06eab735f82cc920465c97060b990338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a06eab735f82cc920465c97060b990338">Issend</a> (int rank, MPI_Comm comm)</td></tr>
+<tr class="memdesc:a06eab735f82cc920465c97060b990338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-blocking synchronous send to processor 'rank'. Returns immediately. Completion (MPI_Wait/Test) means that the message was received.  <a href="#a06eab735f82cc920465c97060b990338">More...</a><br/></td></tr>
 <tr class="separator:a06eab735f82cc920465c97060b990338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace94a1fe96a1ccea5af90fcdb25e8e4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#ace94a1fe96a1ccea5af90fcdb25e8e4a">Recv</a> (int rank, int size, MPI_Comm comm)</td></tr>
 <tr class="memdesc:ace94a1fe96a1ccea5af90fcdb25e8e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-probe receive from processor 'rank' of message size 'size'.  <a href="#ace94a1fe96a1ccea5af90fcdb25e8e4a">More...</a><br/></td></tr>
 <tr class="separator:ace94a1fe96a1ccea5af90fcdb25e8e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab80c51bde1843c6506e88f6edc256124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#ab80c51bde1843c6506e88f6edc256124">RecvDrop</a> (int rank, int size, MPI_Comm comm)</td></tr>
-<tr class="memdesc:ab80c51bde1843c6506e88f6edc256124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="structmfem_1_1VarMessage.html#ace94a1fe96a1ccea5af90fcdb25e8e4a" title="Post-probe receive from processor &#39;rank&#39; of message size &#39;size&#39;. ">Recv()</a>, but throw away the messsage.  <a href="#ab80c51bde1843c6506e88f6edc256124">More...</a><br/></td></tr>
+<tr class="memdesc:ab80c51bde1843c6506e88f6edc256124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="structmfem_1_1VarMessage.html#ace94a1fe96a1ccea5af90fcdb25e8e4a" title="Post-probe receive from processor &#39;rank&#39; of message size &#39;size&#39;. ">Recv()</a>, but throw away the message.  <a href="#ab80c51bde1843c6506e88f6edc256124">More...</a><br/></td></tr>
 <tr class="separator:ab80c51bde1843c6506e88f6edc256124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a901b01732ed9bedea9610fe695c53da5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a901b01732ed9bedea9610fe695c53da5">VarMessage</a> ()</td></tr>
 <tr class="separator:a901b01732ed9bedea9610fe695c53da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c049400bfb681a2c451d7b4ef96ca8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a9c049400bfb681a2c451d7b4ef96ca8b">Clear</a> ()</td></tr>
+<tr class="memdesc:a9c049400bfb681a2c451d7b4ef96ca8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the message and associated request.  <a href="#a9c049400bfb681a2c451d7b4ef96ca8b">More...</a><br/></td></tr>
 <tr class="separator:a9c049400bfb681a2c451d7b4ef96ca8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e0f36c34993a04a0c2b1b620439eedc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a7e0f36c34993a04a0c2b1b620439eedc">~VarMessage</a> ()</td></tr>
 <tr class="separator:a7e0f36c34993a04a0c2b1b620439eedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,10 +159,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a264a4b5f41ea56f285681a83af283bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a380f093e3c13abdd2d8e4d0a1c04702f"><td class="memTemplParams" colspan="2">template&lt;typename MapT &gt; </td></tr>
 <tr class="memitem:a380f093e3c13abdd2d8e4d0a1c04702f"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a380f093e3c13abdd2d8e4d0a1c04702f">TestAllSent</a> (MapT &amp;rank_msg)</td></tr>
+<tr class="memdesc:a380f093e3c13abdd2d8e4d0a1c04702f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if all messages in the map container were sent, otherwise return false, without waiting.  <a href="#a380f093e3c13abdd2d8e4d0a1c04702f">More...</a><br/></td></tr>
 <tr class="separator:a380f093e3c13abdd2d8e4d0a1c04702f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d0e2ef791324a8ec9baef61410714f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#ae3d0e2ef791324a8ec9baef61410714f">Probe</a> (int &amp;rank, int &amp;size, MPI_Comm comm)</td></tr>
+<tr class="memdesc:ae3d0e2ef791324a8ec9baef61410714f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking probe for incoming message of this type from any rank. Returns the rank and message size.  <a href="#ae3d0e2ef791324a8ec9baef61410714f">More...</a><br/></td></tr>
 <tr class="separator:ae3d0e2ef791324a8ec9baef61410714f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf6413701df9129d0ea9c4b67a9b5d4c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#abf6413701df9129d0ea9c4b67a9b5d4c">IProbe</a> (int &amp;rank, int &amp;size, MPI_Comm comm)</td></tr>
+<tr class="memdesc:abf6413701df9129d0ea9c4b67a9b5d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-blocking probe for incoming message of this type from any rank. If there is an incoming message, returns true and sets 'rank' and 'size'. Otherwise returns false.  <a href="#abf6413701df9129d0ea9c4b67a9b5d4c">More...</a><br/></td></tr>
 <tr class="separator:abf6413701df9129d0ea9c4b67a9b5d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94019c40a8a71d296db80c02b59a8383"><td class="memTemplParams" colspan="2">template&lt;typename MapT &gt; </td></tr>
 <tr class="memitem:a94019c40a8a71d296db80c02b59a8383"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmfem_1_1VarMessage.html#a94019c40a8a71d296db80c02b59a8383">RecvAll</a> (MapT &amp;rank_msg, MPI_Comm comm)</td></tr>
@@ -185,7 +192,7 @@ struct mfem::VarMessage&lt; Tag &gt;</h3>
 
 <p>Variable-length MPI message containing unspecific binary data. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00320">320</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00341">341</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a901b01732ed9bedea9610fe695c53da5"></a>
 <div class="memitem">
@@ -210,7 +217,7 @@ template&lt;int Tag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00450">450</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00473">473</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,7 +244,7 @@ template&lt;int Tag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00453">453</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00478">478</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -265,7 +272,7 @@ template&lt;int Tag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00459">459</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00484">484</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +300,9 @@ template&lt;int Tag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00451">451</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Clear the message and associated request. </p>
+
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00476">476</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -323,7 +332,7 @@ template&lt;int Tag&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh_1_1RebalanceDofMessage.html#a776eba9daccdaa61a109e4d4f1519fa9">mfem::ParNCMesh::RebalanceDofMessage</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#ad8a1e3c649cf9f8c25817faedef3c2cc">mfem::ParNCMesh::ElementValueMessage&lt; ValueType, RefTypes, Tag &gt;</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#ad8a1e3c649cf9f8c25817faedef3c2cc">mfem::ParNCMesh::ElementValueMessage&lt; int, true, 157 &gt;</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#ad8a1e3c649cf9f8c25817faedef3c2cc">mfem::ParNCMesh::ElementValueMessage&lt; int, false, 290 &gt;</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#ad8a1e3c649cf9f8c25817faedef3c2cc">mfem::ParNCMesh::ElementValueMessage&lt; char, false, 289 &gt;</a>, and <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#ad8a1e3c649cf9f8c25817faedef3c2cc">mfem::ParNCMesh::ElementValueMessage&lt; int, false, 156 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00468">468</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00493">493</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +362,7 @@ template&lt;int Tag&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1ParNCMesh_1_1RebalanceDofMessage.html#a7dc8f4f42dea14d9223bb969ce9c62ef">mfem::ParNCMesh::RebalanceDofMessage</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a7c1046bf1ff87caaffe4d16e0a3b44af">mfem::ParNCMesh::ElementValueMessage&lt; ValueType, RefTypes, Tag &gt;</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a7c1046bf1ff87caaffe4d16e0a3b44af">mfem::ParNCMesh::ElementValueMessage&lt; int, true, 157 &gt;</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a7c1046bf1ff87caaffe4d16e0a3b44af">mfem::ParNCMesh::ElementValueMessage&lt; int, false, 290 &gt;</a>, <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a7c1046bf1ff87caaffe4d16e0a3b44af">mfem::ParNCMesh::ElementValueMessage&lt; char, false, 289 &gt;</a>, and <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementValueMessage.html#a7c1046bf1ff87caaffe4d16e0a3b44af">mfem::ParNCMesh::ElementValueMessage&lt; int, false, 156 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00467">467</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00492">492</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -396,9 +405,10 @@ template&lt;int Tag&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Non-blocking probe for incoming message of this type from any rank. If there is an incoming message, returns true and sets 'rank' and 'size'. Otherwise returns false. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00397">397</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00420">420</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,9 +445,10 @@ template&lt;int Tag&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Non-blocking send to processor 'rank'. Returns immediately. Completion (as tested by MPI_Wait/Test) does not mean the message was received &ndash; it may be on its way or just buffered locally. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00328">328</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00350">350</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +490,7 @@ template&lt;typename MapT &gt; </div>
 
 <p>Helper to send all messages in a rank-to-message map container. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00346">346</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00369">369</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,9 +527,10 @@ template&lt;int Tag&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Non-blocking synchronous send to processor 'rank'. Returns immediately. Completion (MPI_Wait/Test) means that the message was received. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00337">337</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00360">360</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -561,9 +573,10 @@ template&lt;int Tag&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Blocking probe for incoming message of this type from any rank. Returns the rank and message size. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00386">386</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00409">409</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +622,7 @@ template&lt;int Tag&gt; </div>
 
 <p>Post-probe receive from processor 'rank' of message size 'size'. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00410">410</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00433">433</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -651,7 +664,7 @@ template&lt;typename MapT &gt; </div>
 
 <p>Helper to receive all messages in a rank-to-message map container. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00435">435</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00458">458</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -695,9 +708,9 @@ template&lt;int Tag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Like <a class="el" href="structmfem_1_1VarMessage.html#ace94a1fe96a1ccea5af90fcdb25e8e4a" title="Post-probe receive from processor &#39;rank&#39; of message size &#39;size&#39;. ">Recv()</a>, but throw away the messsage. </p>
+<p>Like <a class="el" href="structmfem_1_1VarMessage.html#ace94a1fe96a1ccea5af90fcdb25e8e4a" title="Post-probe receive from processor &#39;rank&#39; of message size &#39;size&#39;. ">Recv()</a>, but throw away the message. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00425">425</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00448">448</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -726,9 +739,10 @@ template&lt;typename MapT &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Return true if all messages in the map container were sent, otherwise return false, without waiting. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00368">368</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00391">391</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,7 +774,7 @@ template&lt;typename MapT &gt; </div>
 
 <p>Helper to wait for all messages in a map container to be sent. </p>
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00356">356</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00379">379</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -777,7 +791,7 @@ template&lt;int Tag&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00322">322</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00343">343</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -793,7 +807,7 @@ template&lt;int Tag&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00323">323</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
+<p>Definition at line <a class="el" href="communication_8hpp_source.html#l00344">344</a> of file <a class="el" href="communication_8hpp_source.html">communication.hpp</a>.</p>
 
 </div>
 </div>
@@ -803,7 +817,7 @@ template&lt;int Tag&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

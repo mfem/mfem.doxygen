@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -254,7 +255,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classmfem_1_1Mesh.html">Mesh</a> refinement operator using an error threshold. </p>
 <p>This class uses the given <a class="el" href="classmfem_1_1ErrorEstimator.html" title="Base class for all element based error estimators. ">ErrorEstimator</a> to estimate local element errors and then marks for refinement all elements i such that loc_err_i &gt; threshold. The threshold is computed as </p>
-<div class="fragment"><div class="line"><a class="code" href="classmfem_1_1ThresholdRefiner.html#aa3ea9a93a710840b93b439dc428995e5">threshold</a> = max(total_err * <a class="code" href="classmfem_1_1ThresholdRefiner.html#a07393441f8d070f8b73b3a589bc5561d">total_fraction</a> * pow(num_elements,-1.0/p),</div>
+<div class="fragment"><div class="line"><a class="code" href="classmfem_1_1ThresholdRefiner.html#aa3ea9a93a710840b93b439dc428995e5">threshold</a> = max(total_err * <a class="code" href="classmfem_1_1ThresholdRefiner.html#a07393441f8d070f8b73b3a589bc5561d">total_fraction</a> * pow(num_elements,-1.0/<a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>),</div>
 <div class="line">                <a class="code" href="classmfem_1_1ThresholdRefiner.html#a92c3a5b605523d9d372f2ffe96e126ed">local_err_goal</a>);</div>
 </div><!-- fragment --><p> where p (=total_norm_p), total_fraction, and local_err_goal are settable parameters, total_err = (sum_i local_err_i^p)^{1/p}, when p &lt; inf, or total_err = max_i local_err_i, when p = inf. </p>
 
@@ -949,7 +950,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:04 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -99,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classmfem_1_1SparseMatrix-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">mfem::SparseMatrix Class Reference</div>  </div>
@@ -145,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae054982bd5c6d24f17308ebc27c6fd02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ae054982bd5c6d24f17308ebc27c6fd02">SparseMatrix</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="memdesc:ae054982bd5c6d24f17308ebc27c6fd02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> with diagonal <em>v</em>, i.e. A = Diag(v)  <a href="#ae054982bd5c6d24f17308ebc27c6fd02">More...</a><br/></td></tr>
 <tr class="separator:ae054982bd5c6d24f17308ebc27c6fd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ee097119dbba58e347ca002a49d205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a83ee097119dbba58e347ca002a49d205">UseCuSparse</a> (bool _useCuSparse=true)</td></tr>
+<tr class="separator:a83ee097119dbba58e347ca002a49d205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c308a78d67cca6eb489cb54a8cce31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#aa3c308a78d67cca6eb489cb54a8cce31">operator=</a> (const <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;rhs)</td></tr>
 <tr class="memdesc:aa3c308a78d67cca6eb489cb54a8cce31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator: deep copy.  <a href="#aa3c308a78d67cca6eb489cb54a8cce31">More...</a><br/></td></tr>
 <tr class="separator:aa3c308a78d67cca6eb489cb54a8cce31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,6 +311,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb9a767bf23b63bdc7524a1d45e48c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#aeb9a767bf23b63bdc7524a1d45e48c79">BooleanMultTranspose</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;x, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;y) const </td></tr>
 <tr class="memdesc:aeb9a767bf23b63bdc7524a1d45e48c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">y = At * x, treating all entries as booleans (zero=false, nonzero=true).  <a href="#aeb9a767bf23b63bdc7524a1d45e48c79">More...</a><br/></td></tr>
 <tr class="separator:aeb9a767bf23b63bdc7524a1d45e48c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a3d39e6aeaaf9ce29fcca7332de1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ac7a3d39e6aeaaf9ce29fcca7332de1b2">AbsMult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
+<tr class="memdesc:ac7a3d39e6aeaaf9ce29fcca7332de1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">y = |A| * x, using entry-wise absolute values of matrix A  <a href="#ac7a3d39e6aeaaf9ce29fcca7332de1b2">More...</a><br/></td></tr>
+<tr class="separator:ac7a3d39e6aeaaf9ce29fcca7332de1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda540857213d10b420074529de7c144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#acda540857213d10b420074529de7c144">AbsMultTranspose</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
+<tr class="memdesc:acda540857213d10b420074529de7c144"><td class="mdescLeft">&#160;</td><td class="mdescRight">y = |At| * x, using entry-wise absolute values of the transpose of matrix A  <a href="#acda540857213d10b420074529de7c144">More...</a><br/></td></tr>
+<tr class="separator:acda540857213d10b420074529de7c144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4c281975e1fe929015a619147b957ec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ad4c281975e1fe929015a619147b957ec">InnerProduct</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
 <tr class="memdesc:ad4c281975e1fe929015a619147b957ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute y^t A x.  <a href="#ad4c281975e1fe929015a619147b957ec">More...</a><br/></td></tr>
 <tr class="separator:ad4c281975e1fe929015a619147b957ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,10 +332,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ab36d393f4530e372688ef8bafdc6bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a8ab36d393f4530e372688ef8bafdc6bd">EliminateRow</a> (int row, const double sol, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a8ab36d393f4530e372688ef8bafdc6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminates a column from the transpose matrix.  <a href="#a8ab36d393f4530e372688ef8bafdc6bd">More...</a><br/></td></tr>
 <tr class="separator:a8ab36d393f4530e372688ef8bafdc6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae10af00eba64e4c7feff17cecf994997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ae10af00eba64e4c7feff17cecf994997">EliminateRow</a> (int row, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509">DIAG_ZERO</a>)</td></tr>
+<tr class="memitem:ae10af00eba64e4c7feff17cecf994997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ae10af00eba64e4c7feff17cecf994997">EliminateRow</a> (int row, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>)</td></tr>
 <tr class="memdesc:ae10af00eba64e4c7feff17cecf994997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminates a row from the matrix.  <a href="#ae10af00eba64e4c7feff17cecf994997">More...</a><br/></td></tr>
 <tr class="separator:ae10af00eba64e4c7feff17cecf994997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8c9f0e4b03907551e05a5a7f3bf778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a4c8c9f0e4b03907551e05a5a7f3bf778">EliminateCol</a> (int col, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509">DIAG_ZERO</a>)</td></tr>
+<tr class="memitem:a4c8c9f0e4b03907551e05a5a7f3bf778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a4c8c9f0e4b03907551e05a5a7f3bf778">EliminateCol</a> (int col, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>)</td></tr>
 <tr class="memdesc:a4c8c9f0e4b03907551e05a5a7f3bf778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminates the column <em>col</em> from the matrix.  <a href="#a4c8c9f0e4b03907551e05a5a7f3bf778">More...</a><br/></td></tr>
 <tr class="separator:a4c8c9f0e4b03907551e05a5a7f3bf778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adecec0ebe29a85a994b8e47638de408a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#adecec0ebe29a85a994b8e47638de408a">EliminateCols</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;cols, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> *x=NULL, <a class="el" href="classmfem_1_1Vector.html">Vector</a> *<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>=NULL)</td></tr>
@@ -334,19 +344,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a757a5977489b26fecac40a217c13c4b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a757a5977489b26fecac40a217c13c4b6">EliminateCols</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;col_marker, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;Ae)</td></tr>
 <tr class="memdesc:a757a5977489b26fecac40a217c13c4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to EliminateCols + save the eliminated entries into <em>Ae</em> so that (*this) + Ae is equal to the original matrix.  <a href="#a757a5977489b26fecac40a217c13c4b6">More...</a><br/></td></tr>
 <tr class="separator:a757a5977489b26fecac40a217c13c4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3803b1d1b11d9ea3648d7fcf05af47e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a3803b1d1b11d9ea3648d7fcf05af47e2">EliminateRowCol</a> (int rc, const double sol, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;rhs, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a>)</td></tr>
+<tr class="memitem:a3803b1d1b11d9ea3648d7fcf05af47e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a3803b1d1b11d9ea3648d7fcf05af47e2">EliminateRowCol</a> (int rc, const double sol, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;rhs, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>)</td></tr>
 <tr class="memdesc:a3803b1d1b11d9ea3648d7fcf05af47e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate row <em>rc</em> and column <em>rc</em> and modify the <em>rhs</em> using <em>sol</em>.  <a href="#a3803b1d1b11d9ea3648d7fcf05af47e2">More...</a><br/></td></tr>
 <tr class="separator:a3803b1d1b11d9ea3648d7fcf05af47e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd1e5d1925322b0ea2b12cb498e60f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a3cd1e5d1925322b0ea2b12cb498e60f3">EliminateRowColMultipleRHS</a> (int rc, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;sol, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;rhs, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a>)</td></tr>
+<tr class="memitem:a3cd1e5d1925322b0ea2b12cb498e60f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a3cd1e5d1925322b0ea2b12cb498e60f3">EliminateRowColMultipleRHS</a> (int rc, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;sol, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;rhs, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>)</td></tr>
 <tr class="memdesc:a3cd1e5d1925322b0ea2b12cb498e60f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#a3803b1d1b11d9ea3648d7fcf05af47e2" title="Eliminate row rc and column rc and modify the rhs using sol. ">EliminateRowCol(int, const double, Vector &amp;, DiagonalPolicy)</a>, but multiple values for eliminated unknowns are accepted, and accordingly multiple right-hand-sides are used.  <a href="#a3cd1e5d1925322b0ea2b12cb498e60f3">More...</a><br/></td></tr>
 <tr class="separator:a3cd1e5d1925322b0ea2b12cb498e60f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2185dd37c751b6a3fb8d53048185f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ae2185dd37c751b6a3fb8d53048185f85">EliminateRowColDiag</a> (int rc, double value)</td></tr>
 <tr class="memdesc:ae2185dd37c751b6a3fb8d53048185f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform elimination and set the diagonal entry to the given value.  <a href="#ae2185dd37c751b6a3fb8d53048185f85">More...</a><br/></td></tr>
 <tr class="separator:ae2185dd37c751b6a3fb8d53048185f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0f6c97a87965c8b32cea877aace29a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ad0f6c97a87965c8b32cea877aace29a6">EliminateRowCol</a> (int rc, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a>)</td></tr>
+<tr class="memitem:ad0f6c97a87965c8b32cea877aace29a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ad0f6c97a87965c8b32cea877aace29a6">EliminateRowCol</a> (int rc, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>)</td></tr>
 <tr class="memdesc:ad0f6c97a87965c8b32cea877aace29a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate row <em>rc</em> and column <em>rc</em>.  <a href="#ad0f6c97a87965c8b32cea877aace29a6">More...</a><br/></td></tr>
 <tr class="separator:ad0f6c97a87965c8b32cea877aace29a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa7665dfd356daa9a4ac35fb66468f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#afa7665dfd356daa9a4ac35fb66468f95">EliminateRowCol</a> (int rc, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;Ae, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a>)</td></tr>
+<tr class="memitem:afa7665dfd356daa9a4ac35fb66468f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#afa7665dfd356daa9a4ac35fb66468f95">EliminateRowCol</a> (int rc, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;Ae, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> dpolicy=<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>)</td></tr>
 <tr class="memdesc:afa7665dfd356daa9a4ac35fb66468f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#ad0f6c97a87965c8b32cea877aace29a6" title="Eliminate row rc and column rc. ">EliminateRowCol(int, DiagonalPolicy)</a> + save the eliminated entries into <em>Ae</em> so that (*this) + Ae is equal to the original matrix.  <a href="#afa7665dfd356daa9a4ac35fb66468f95">More...</a><br/></td></tr>
 <tr class="separator:afa7665dfd356daa9a4ac35fb66468f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e97f12ce53ceebe57d0381c4fc19de0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a3e97f12ce53ceebe57d0381c4fc19de0">SetDiagIdentity</a> ()</td></tr>
@@ -607,6 +617,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:af13b48e45ab2dd3a9c6fe2ad726c38ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8996d27fe92ab456e80ab17bf82e29e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a8996d27fe92ab456e80ab17bf82e29e2">SetEmpty</a> ()</td></tr>
 <tr class="separator:a8996d27fe92ab456e80ab17bf82e29e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4fcb0abfd171a9d8dac9736d36cf23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#abd4fcb0abfd171a9d8dac9736d36cf23">InitCuSparse</a> ()</td></tr>
+<tr class="separator:abd4fcb0abfd171a9d8dac9736d36cf23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
 <tr class="memitem:a0e93d5e7be66d3d54bfeb26e8f2d2c74 inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a0e93d5e7be66d3d54bfeb26e8f2d2c74">FormConstrainedSystemOperator</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list, <a class="el" href="classmfem_1_1ConstrainedOperator.html">ConstrainedOperator</a> *&amp;Aout)</td></tr>
 <tr class="memdesc:a0e93d5e7be66d3d54bfeb26e8f2d2c74 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#a22c2496db1f13189e4c915627c12d94a" title="Return in A a parallel (on truedofs) version of this square operator. ">FormSystemOperator()</a>  <a href="#a0e93d5e7be66d3d54bfeb26e8f2d2c74">More...</a><br/></td></tr>
@@ -637,6 +649,20 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a10b13a612551ae5e7a87ffc605916e93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a10b13a612551ae5e7a87ffc605916e93">isSorted</a></td></tr>
 <tr class="memdesc:a10b13a612551ae5e7a87ffc605916e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are the columns sorted already.  <a href="#a10b13a612551ae5e7a87ffc605916e93">More...</a><br/></td></tr>
 <tr class="separator:a10b13a612551ae5e7a87ffc605916e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1908ef98342c4492378ab5ae1322938"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ac1908ef98342c4492378ab5ae1322938">useCuSparse</a> {true}</td></tr>
+<tr class="separator:ac1908ef98342c4492378ab5ae1322938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab022f2e251722c191f100b75da15e8a7"><td class="memItemLeft" align="right" valign="top">cusparseStatus_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ab022f2e251722c191f100b75da15e8a7">status</a></td></tr>
+<tr class="separator:ab022f2e251722c191f100b75da15e8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356df15bed316584948460a11d83ca5e"><td class="memItemLeft" align="right" valign="top">cusparseMatDescr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a356df15bed316584948460a11d83ca5e">descr</a> =0</td></tr>
+<tr class="separator:a356df15bed316584948460a11d83ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1621e60cb7343580248a2a17945004aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a1621e60cb7343580248a2a17945004aa">initBuffers</a> {false}</td></tr>
+<tr class="separator:a1621e60cb7343580248a2a17945004aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ddf6f78901951d6d5303384f29d6d6"><td class="memItemLeft" align="right" valign="top">cusparseSpMatDescr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a56ddf6f78901951d6d5303384f29d6d6">matA_descr</a></td></tr>
+<tr class="separator:a56ddf6f78901951d6d5303384f29d6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6514fa3680a7ef058cc66dc0f672f75"><td class="memItemLeft" align="right" valign="top">cusparseDnVecDescr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ae6514fa3680a7ef058cc66dc0f672f75">vecX_descr</a></td></tr>
+<tr class="separator:ae6514fa3680a7ef058cc66dc0f672f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7705681ca34dc598514c21ed9b4f4bf4"><td class="memItemLeft" align="right" valign="top">cusparseDnVecDescr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a7705681ca34dc598514c21ed9b4f4bf4">vecY_descr</a></td></tr>
+<tr class="separator:a7705681ca34dc598514c21ed9b4f4bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Arrays used by the CSR storage format.</div></td></tr>
 <tr class="memitem:a6956cdd8d0a79cfc419faf53709d430d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Memory.html">Memory</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d">I</a></td></tr>
 <tr class="memdesc:a6956cdd8d0a79cfc419faf53709d430d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array with size (<a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6" title="Dimension of the output / number of rows in the matrix. ">height</a>+1) containing the row offsets.  <a href="#a6956cdd8d0a79cfc419faf53709d430d">More...</a><br/></td></tr>
@@ -655,15 +681,26 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimension of the input / number of columns in the matrix.  <a href="#a19823327e636510bfcd9f8c5e4bf48fa">More...</a><br/></td></tr>
 <tr class="separator:a19823327e636510bfcd9f8c5e4bf48fa inherit pro_attribs_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:ab051e02ffbd218ff58bf31c78c087ccb"><td class="memItemLeft" align="right" valign="top">static cusparseHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#ab051e02ffbd218ff58bf31c78c087ccb">handle</a></td></tr>
+<tr class="separator:ab051e02ffbd218ff58bf31c78c087ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dca9feb06ed30c37ed99cf2624cedf"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a78dca9feb06ed30c37ed99cf2624cedf">bufferSize</a> = 0</td></tr>
+<tr class="separator:a78dca9feb06ed30c37ed99cf2624cedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf45a13384db38fcdd0ee301d556220"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#adbf45a13384db38fcdd0ee301d556220">dBuffer</a> = nullptr</td></tr>
+<tr class="separator:adbf45a13384db38fcdd0ee301d556220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82933875f9fed60e007727bb16062e79"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1SparseMatrix.html#a82933875f9fed60e007727bb16062e79">SparseMatrixCount</a> = 0</td></tr>
+<tr class="separator:a82933875f9fed60e007727bb16062e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classmfem_1_1Matrix"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Matrix')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Matrix.html">mfem::Matrix</a></td></tr>
-<tr class="memitem:afcd60541326a5a70961716e7efb7370d inherit pub_types_classmfem_1_1Matrix"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a> { <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509">DIAG_ZERO</a>, 
-<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a>, 
-<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf3052559fce7687ad573ea3bfda41113">DIAG_KEEP</a>
- }</td></tr>
-<tr class="separator:afcd60541326a5a70961716e7efb7370d inherit pub_types_classmfem_1_1Matrix"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> { <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373">DIAG_KEEP</a>
+ }</td></tr>
+<tr class="memdesc:a7f3e99434bf268ccbaae6863fe5e6bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines operator diagonal policy upon elimination of rows and/or columns.  <a href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">More...</a><br/></td></tr>
+<tr class="separator:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa033bcf10ca8783218f5d98d8c54288 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Type</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78">ANY_TYPE</a>, 
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a1149a94d7b60f7432d9106f29bea24ac">MFEM_SPARSEMAT</a>, 
@@ -687,7 +724,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data type sparse matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00040">40</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00046">46</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a242a98350e8483e67e32d12c7b069381"></a>
 <div class="memitem">
@@ -707,7 +744,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00073">73</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00079">79</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -735,7 +772,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Create an empty <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00085">85</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00110">110</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -774,7 +811,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create a sparse matrix with flexible sparsity structure using a row-wise linked list (LIL) format. </p>
 <p>New entries are added as needed by methods like <a class="el" href="classmfem_1_1SparseMatrix.html#a8314383608e3ac5119fdf193bd16ef8a">AddSubMatrix()</a>, <a class="el" href="classmfem_1_1SparseMatrix.html#a5f7ff664f1383ddbe1bcf18254862af6">SetSubMatrix()</a>, etc. Calling <a class="el" href="classmfem_1_1SparseMatrix.html#abca7edc5bc315d2a671f9b55b630765b" title="Finalize the matrix initialization, switching the storage format from LIL to CSR. ...">Finalize()</a> will convert the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> to the more compact compressed sparse row (CSR) format. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00031">31</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00050">50</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -822,7 +859,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Create a sparse matrix in CSR format. Ownership of <em>i</em>, <em>j</em>, and <em>data</em> is transferred to the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00055">55</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00076">76</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -889,7 +926,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create a sparse matrix in CSR format. Ownership of <em>i</em>, <em>j</em>, and <em>data</em> is optionally transferred to the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>. </p>
 <p>If the parameter <em>data</em> is NULL, then the internal <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a> array is allocated by this constructor (initializing it with zeros and taking ownership, regardless of the parameter <em>owna</em>). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00072">72</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00095">95</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -926,7 +963,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create a sparse matrix in CSR format where each row has space allocated for exactly <em>rowsize</em> entries. </p>
 <p><a class="el" href="classmfem_1_1SparseMatrix.html#ac0e268ba71290813299f645730a7552c">SetRow()</a> can then be called or the <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a>, <a class="el" href="classmfem_1_1SparseMatrix.html#a49bd26540a71040c019ed5e18dc0fa3d" title="Array with size I[height], containing the column indices for all matrix entries, as indexed by the I ...">J</a>, <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a> arrays can be used directly. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00103">103</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00128">128</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -957,7 +994,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Copy constructor (deep copy). </p>
 <p>If <em>mat</em> is finalized and <em>copy_graph</em> is false, the <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a> and <a class="el" href="classmfem_1_1SparseMatrix.html#a49bd26540a71040c019ed5e18dc0fa3d" title="Array with size I[height], containing the column indices for all matrix entries, as indexed by the I ...">J</a> arrays will use a shallow copy (copy the pointers only) without transferring ownership. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00124">124</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00151">151</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -977,7 +1014,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Create a <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> with diagonal <em>v</em>, i.e. A = Diag(v) </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00189">189</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00218">218</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1041,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Destroys sparse matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00576">576</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00614">614</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1080,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add a value to an entry in the "current row". See <a class="el" href="classmfem_1_1SparseMatrix.html#a72af8da377dc45cd073da8333d431106" title="Initialize the SparseMatrix for fast access to the entries of the given row which becomes the &quot;curren...">SetColPtr()</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00461">461</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00499">499</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1122,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00470">470</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00508">508</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1150,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Read the value of an entry in the "current row". See <a class="el" href="classmfem_1_1SparseMatrix.html#a72af8da377dc45cd073da8333d431106" title="Initialize the SparseMatrix for fast access to the entries of the given row which becomes the &quot;curren...">SetColPtr()</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00737">737</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00792">792</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1188,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set an entry in the "current row". See <a class="el" href="classmfem_1_1SparseMatrix.html#a72af8da377dc45cd073da8333d431106" title="Initialize the SparseMatrix for fast access to the entries of the given row which becomes the &quot;curren...">SetColPtr()</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00464">464</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00502">502</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1193,7 +1230,67 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00472">472</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00510">510</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7a3d39e6aeaaf9ce29fcca7332de1b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::SparseMatrix::AbsMult </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>y = |A| * x, using entry-wise absolute values of matrix A </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00884">884</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acda540857213d10b420074529de7c144"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::SparseMatrix::AbsMultTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>y = |At| * x, using entry-wise absolute values of the transpose of matrix A </p>
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00933">933</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1310,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the actual Width of the matrix. </p>
 <p>This method can be called for matrices finalized or not. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02943">2943</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03169">3169</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1247,7 +1344,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02281">2281</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02493">2493</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1374,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add the sparse matrix 'B' scaled by the scalar 'a' into '*this'. Only entries in the sparsity pattern of '*this' are added. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02653">2653</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02865">2865</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1323,7 +1420,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#a61f2691c3bdc0d5124b70026e883ca78">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00555">555</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00601">601</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1369,7 +1466,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#a52134b277b85fb074ad25f8e0186b103">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00626">626</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00728">728</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1500,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02504">2504</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02716">2716</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1443,7 +1540,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02224">2224</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02436">2436</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1472,9 +1569,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>y = A * x, treating all entries as booleans (zero=false, nonzero=true). </p>
-<p>The actual values stored in the data array, <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a>, are not used - this means and that all entries in the sparsity pattern are considered to be true by this method. </p>
+<p>The actual values stored in the data array, <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a>, are not used - this means that all entries in the sparsity pattern are considered to be true by this method. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00729">729</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00831">831</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1503,9 +1600,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>y = At * x, treating all entries as booleans (zero=false, nonzero=true). </p>
-<p>The actual values stored in the data array, <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a>, are not used - this means and that all entries in the sparsity pattern are considered to be true by this method. </p>
+<p>The actual values stored in the data array, <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a>, are not used - this means that all entries in the sparsity pattern are considered to be true by this method. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00759">759</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00861">861</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1528,7 +1625,7 @@ Additional Inherited Members</h2></td></tr>
 <p>When any non-default backend is enabled, i.e. <a class="el" href="classmfem_1_1Device.html#aed9f070e70c34fc31376de48128f8d9c" title="Return true if any backend other than Backend::CPU is enabled. ">Device::IsEnabled()</a> is true, the methods <a class="el" href="classmfem_1_1SparseMatrix.html#a3c7faf3b5ebb083e8c13f0fd240cbbc2" title="y += At * x (default) or y += a * At * x ">AddMultTranspose()</a>, and <a class="el" href="classmfem_1_1SparseMatrix.html#a8e4c518ab9c99ebfc247782661212420" title="Multiply a vector with the transposed matrix. y = At * x. ">MultTranspose()</a>, require the internal transpose to be built. If that is not the case (i.e. the internal transpose is not built), these methods will raise an error with an appropriate message pointing to this method. When using the default backend, calling this method is optional.</p>
 <p>This method can only be used when the sparse matrix is finalized. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00671">671</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00773">773</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1644,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Count the number of entries that are NOT finite, i.e. Inf or Nan. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01237">1237</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01434">1434</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1671,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Clear the contents of the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00135">135</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00167">167</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1601,7 +1698,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the "current row" set by calling <a class="el" href="classmfem_1_1SparseMatrix.html#a72af8da377dc45cd073da8333d431106" title="Initialize the SparseMatrix for fast access to the entries of the given row which becomes the &quot;curren...">SetColPtr()</a>. This method must be called between any two calls to <a class="el" href="classmfem_1_1SparseMatrix.html#a72af8da377dc45cd073da8333d431106" title="Initialize the SparseMatrix for fast access to the entries of the given row which becomes the &quot;curren...">SetColPtr()</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00691">691</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00746">746</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1725,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns whether or not the columns are sorted. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00430">430</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00468">468</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -1648,7 +1745,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Count the number of entries with |a_ij| &lt;= tol. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01209">1209</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01406">1406</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1673,7 +1770,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02912">2912</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03128">3128</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1804,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02144">2144</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02341">2341</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1747,7 +1844,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Matrix.html#a36664d2bd946afbc4ca856dec340525e">mfem::Matrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00421">421</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00462">462</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1787,7 +1884,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Matrix.html#ae7c4ad7bb24580f13fafcd76ff5f1e60">mfem::Matrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00426">426</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00467">467</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1804,8 +1901,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a>&#160;</td>
-          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509">DIAG_ZERO</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a>&#160;</td>
+          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1817,12 +1914,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Eliminates the column <em>col</em> from the matrix. </p>
 <ul>
-<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509" title="Set the diagonal value to zero. ">DIAG_ZERO</a>, all entries in the column will be set to 0.</li>
-<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293" title="Set the diagonal value to one. ">DIAG_ONE</a> (matrix must be square), the diagonal entry will be set equal to 1 and all other entries in the column to 0.</li>
-<li>The policy <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf3052559fce7687ad573ea3bfda41113" title="Keep the diagonal value. ">DIAG_KEEP</a> is not supported. </li>
+<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1" title="Set the diagonal value to zero. ">DIAG_ZERO</a>, all entries in the column will be set to 0.</li>
+<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2" title="Set the diagonal value to one. ">DIAG_ONE</a> (matrix must be square), the diagonal entry will be set equal to 1 and all other entries in the column to 0.</li>
+<li>The policy <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373" title="Keep the diagonal value. ">DIAG_KEEP</a> is not supported. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01314">1314</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01511">1511</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1859,7 +1956,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Eliminate all columns i for which <em>cols</em>[i] != 0. </p>
 <p>Elimination of a column means that all entries in the column are set to zero. In addition, if the pointers <em>x</em> and <em>b</em> are not NULL, the eliminated matrix entries are multiplied by the corresponding solution value in <em>*x</em> and subtracted from the r.h.s. vector, <em>*b</em>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01354">1354</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01551">1551</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1889,7 +1986,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Similar to EliminateCols + save the eliminated entries into <em>Ae</em> so that (*this) + Ae is equal to the original matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01393">1393</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01590">1590</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1925,7 +2022,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Eliminates a column from the transpose matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01266">1266</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01463">1463</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1942,8 +2039,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a>&#160;</td>
-          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509">DIAG_ZERO</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a>&#160;</td>
+          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1955,12 +2052,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Eliminates a row from the matrix. </p>
 <ul>
-<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf6f3ac0c1a43170d744fc14047625509" title="Set the diagonal value to zero. ">DIAG_ZERO</a>, all the entries in the row will be set to 0.</li>
-<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293" title="Set the diagonal value to one. ">DIAG_ONE</a> (matrix must be square), the diagonal entry will be set equal to 1 and all other entries in the row to 0.</li>
-<li>The policy <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370daf3052559fce7687ad573ea3bfda41113" title="Keep the diagonal value. ">DIAG_KEEP</a> is not supported. </li>
+<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1" title="Set the diagonal value to zero. ">DIAG_ZERO</a>, all the entries in the row will be set to 0.</li>
+<li>If <em>dpolicy</em> = <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2" title="Set the diagonal value to one. ">DIAG_ONE</a> (matrix must be square), the diagonal entry will be set equal to 1 and all other entries in the row to 0.</li>
+<li>The policy <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373" title="Keep the diagonal value. ">DIAG_KEEP</a> is not supported. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01282">1282</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01479">1479</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1989,8 +2086,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a>&#160;</td>
-          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a>&#160;</td>
+          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2003,7 +2100,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Eliminate row <em>rc</em> and column <em>rc</em> and modify the <em>rhs</em> using <em>sol</em>. </p>
 <p>Eliminates the column <em>rc</em> to the <em>rhs</em>, deletes the row <em>rc</em> and replaces the element (rc,rc) with 1.0; assumes that element (i,rc) is assembled if and only if the element (rc,i) is assembled. By default, elements (rc,rc) are set to 1.0, although this behavior can be adjusted by changing the <em>dpolicy</em> parameter. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01427">1427</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01624">1624</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2020,8 +2117,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a>&#160;</td>
-          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a>&#160;</td>
+          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2033,7 +2130,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Eliminate row <em>rc</em> and column <em>rc</em>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01647">1647</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01844">1844</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2056,8 +2153,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a>&#160;</td>
-          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a>&#160;</td>
+          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2069,7 +2166,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#ad0f6c97a87965c8b32cea877aace29a6" title="Eliminate row rc and column rc. ">EliminateRowCol(int, DiagonalPolicy)</a> + save the eliminated entries into <em>Ae</em> so that (*this) + Ae is equal to the original matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01789">1789</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01986">1986</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2099,7 +2196,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Perform elimination and set the diagonal entry to the given value. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01726">1726</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01923">1923</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2128,8 +2225,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">DiagonalPolicy</a>&#160;</td>
-          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370da21f8b8bce58c17a448fcb4d8f4e54293">DIAG_ONE</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a>&#160;</td>
+          <td class="paramname"><em>dpolicy</em> = <code><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2141,7 +2238,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#a3803b1d1b11d9ea3648d7fcf05af47e2" title="Eliminate row rc and column rc and modify the rhs using sol. ">EliminateRowCol(int, const double, Vector &amp;, DiagonalPolicy)</a>, but multiple values for eliminated unknowns are accepted, and accordingly multiple right-hand-sides are used. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01523">1523</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01720">1720</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2171,7 +2268,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#aab6203e2a2eeedcecaf8fcc8067860cb">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01894">1894</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02091">2091</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2198,7 +2295,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Check if the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> is empty. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00138">138</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00170">170</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2229,7 +2326,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Matrix.html#aa692e2c40aaff32204c4488ffce79a88">mfem::Matrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00422">422</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00460">460</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2259,7 +2356,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>A slightly more general version of the <a class="el" href="classmfem_1_1SparseMatrix.html#abca7edc5bc315d2a671f9b55b630765b" title="Finalize the matrix initialization, switching the storage format from LIL to CSR. ...">Finalize(int)</a> method. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00931">931</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01128">1128</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2286,7 +2383,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns whether or not CSR format has been finalized. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00428">428</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00466">466</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2314,7 +2411,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01997">1997</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02194">2194</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2344,7 +2441,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gauss-Seidel forward and backward iterations over a vector x. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01913">1913</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02110">2110</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2363,7 +2460,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Split the matrix into M x N blocks of sparse matrices in CSR format. The 'blocks' array is M x N (i.e. M and N are determined by its dimensions) and its entries are overwritten by the new blocks. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01011">1011</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01208">1208</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2390,7 +2487,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the element data, i.e. the array <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00151">151</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00183">183</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2417,7 +2514,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the element data, i.e. the array <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a>, const version. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00153">153</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00185">185</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2437,7 +2534,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the Diagonal of A. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00489">489</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00530">530</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2464,7 +2561,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the array <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00141">141</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00173">173</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2491,7 +2588,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the array <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a>, const version. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00143">143</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00175">175</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2518,7 +2615,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the array <a class="el" href="classmfem_1_1SparseMatrix.html#a49bd26540a71040c019ed5e18dc0fa3d" title="Array with size I[height], containing the column indices for all matrix entries, as indexed by the I ...">J</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00146">146</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00178">178</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2545,7 +2642,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the array <a class="el" href="classmfem_1_1SparseMatrix.html#a49bd26540a71040c019ed5e18dc0fa3d" title="Array with size I[height], containing the column indices for all matrix entries, as indexed by the I ...">J</a>, const version. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00148">148</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00180">180</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2564,7 +2661,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Determine appropriate scaling for Jacobi iteration. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02080">2080</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02277">2277</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2596,7 +2693,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Operator.html#a99d91417c9690ac2c8fe708b7b52f789">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00261">261</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00293">293</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2621,7 +2718,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00188">188</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00220">220</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2646,7 +2743,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00189">189</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00221">221</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2671,7 +2768,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00156">156</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00188">188</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2696,7 +2793,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00157">157</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00189">189</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2721,7 +2818,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00172">172</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00204">204</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2746,7 +2843,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00173">173</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00205">205</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -2798,7 +2895,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#acf90ba3f4c736b6ced8e97420c0ce841">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02417">2417</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02629">2629</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2818,7 +2915,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return a pointer to the column indices in a row. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00302">302</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00343">343</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2838,7 +2935,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return a pointer to the column indices in a row, const version. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00309">309</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00350">350</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2858,7 +2955,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return a pointer to the entries in a row. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00316">316</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00357">357</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2878,7 +2975,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return a pointer to the entries in a row, const version. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00323">323</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00364">364</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2898,7 +2995,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>For i = irow compute \( x_i = \sum_j | A_{i, j} | \). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00846">846</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01043">1043</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2918,7 +3015,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>For all i compute \( x_i = \sum_j A_{ij} \). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00823">823</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01020">1020</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2952,7 +3049,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02368">2368</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02580">2580</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -2977,7 +3074,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00578">578</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00627">627</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3002,7 +3099,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00196">196</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00228">228</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3027,7 +3124,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00164">164</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00196">196</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3052,7 +3149,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00180">180</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00212">212</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3077,7 +3174,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00200">200</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00232">232</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3102,7 +3199,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00168">168</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00200">200</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3127,7 +3224,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00184">184</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00216">216</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3152,7 +3249,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00198">198</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00230">230</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3177,7 +3274,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00166">166</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00198">198</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3202,7 +3299,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00182">182</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00214">214</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd4fcb0abfd171a9d8dac9736d36cf23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::SparseMatrix::InitCuSparse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00038">38</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3232,7 +3354,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Compute y^t A x. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00782">782</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00979">979</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3261,7 +3383,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Matrix.html#aa1c5ad5d47073d1729aac6c1ea26fc60">mfem::Matrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01261">1261</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01458">1458</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3280,7 +3402,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns max_{i,j} |(i,j)-(j,i)| for a finalized matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01101">1101</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01298">1298</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3321,7 +3443,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>One scaled Jacobi iteration for the system A x = b. x1 = x0 + sc D^{-1} (b - A x0) where D is the diag of A. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02113">2113</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02310">2310</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3362,7 +3484,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>x1 = x0 + sc D^{-1} (b - A x0) where \( D_{ii} = \sum_j |A_{ij}| \). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02176">2176</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02388">2388</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3403,7 +3525,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>x1 = x0 + sc D^{-1} (b - A x0) where \( D_{ii} = \sum_j A_{ij} \). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02200">2200</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02412">2412</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3430,7 +3552,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Lose the ownership of the graph (I, J) and data (A) arrays. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00571">571</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00609">609</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3451,7 +3573,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Clear the contents of the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> and make it a reference to <em>master</em>. </p>
 <p>After this call, the matrix will point to the same data as <em>master</em> but it will not own its data. The <em>master</em> must be finalized. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00226">226</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00257">257</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3468,7 +3590,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01184">1184</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01381">1381</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3487,7 +3609,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the maximum number of elements among all rows. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00278">278</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00319">319</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3506,7 +3628,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Move the diagonal entry to the first position in each row, preserving the order of the rest of the columns. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00397">397</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00438">438</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3546,7 +3668,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#a2324f5b208d89854fdee20398eae29ff">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00548">548</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00594">594</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3586,7 +3708,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#ac81e7135240fbd4ad1f630e3a74eb0e4">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00619">619</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00721">721</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3615,7 +3737,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1AbstractSparseMatrix.html#a81828dbfde289cccb53c2a19aaf0ab2c">mfem::AbstractSparseMatrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01162">1162</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01359">1359</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3645,7 +3767,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns reference to A[i][j]. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00431">431</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00472">472</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3675,7 +3797,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns reference to A[i][j]. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00454">454</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00495">495</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3693,7 +3815,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02702">2702</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02914">2914</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3713,7 +3835,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add the sparse matrix 'B' to '*this'. This operation will cause an error if '*this' is finalized and 'B' has larger sparsity pattern. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02623">2623</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02835">2835</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3733,7 +3855,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Assignment operator: deep copy. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00216">216</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00247">247</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3751,7 +3873,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02676">2676</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02888">2888</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3778,7 +3900,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the data ownership flag (A array). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00568">568</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00606">606</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3805,7 +3927,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the graph ownership flag (I and J arrays). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00565">565</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00603">603</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -3845,7 +3967,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00711">711</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00813">813</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3879,7 +4001,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00685">685</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00787">787</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3919,7 +4041,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Matrix.html#a02e367d863024a15c239acd889928869">mfem::Matrix</a>.</p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02726">2726</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02938">2938</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3939,7 +4061,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Prints matrix to stream out in hypre_CSRMatrix format. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02812">2812</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03028">3028</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3959,7 +4081,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Prints a sparse matrix to stream out in CSR format. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02836">2836</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03052">3052</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3979,7 +4101,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Print various sparse matrix statistics. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02861">2861</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03077">3077</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -3999,7 +4121,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Prints matrix in matlab format. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02770">2770</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02986">2986</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4019,7 +4141,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Prints matrix in <a class="el" href="classmfem_1_1Matrix.html" title="Abstract data type matrix. ">Matrix</a> Market sparse format. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02790">2790</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03006">3006</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4045,7 +4167,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00190">190</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00222">222</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4071,7 +4193,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00158">158</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00190">190</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4097,7 +4219,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00174">174</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00206">206</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4123,7 +4245,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00194">194</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00226">226</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4149,7 +4271,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00162">162</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00194">194</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4175,7 +4297,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00178">178</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00210">210</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4193,7 +4315,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Reset (destroy) the internal transpose matrix. See <a class="el" href="classmfem_1_1SparseMatrix.html#a7037b16f8d352da776f3a50f2e44250e" title="Build and store internally the transpose of this matrix which will be used in the methods AddMultTran...">BuildTranspose()</a> for more details. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00679">679</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00781">781</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4211,7 +4333,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02396">2396</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02608">2608</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4231,7 +4353,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the number of elements in row <em>i</em>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00255">255</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00296">296</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4251,7 +4373,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>this = this * diag(sr); </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02595">2595</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02807">2807</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4279,7 +4401,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02536">2536</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02748">2748</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4299,7 +4421,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>this = diag(sl) * this; </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02564">2564</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02776">2776</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4328,7 +4450,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Perform a fast search for an entry in the "current row". See <a class="el" href="classmfem_1_1SparseMatrix.html#a72af8da377dc45cd073da8333d431106" title="Initialize the SparseMatrix for fast access to the entries of the given row which becomes the &quot;curren...">SetColPtr()</a>. </p>
 <p>If the matrix is not finalized and the entry is not found in the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>, it will be added to the sparsity pattern initialized with zero. If the matrix is finalized and the entry is not found, an error will be generated. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00710">710</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00765">765</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4364,7 +4486,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00751">751</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00806">806</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4398,7 +4520,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02262">2262</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02474">2474</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4427,7 +4549,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Initialize the <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> for fast access to the entries of the given <em>row</em> which becomes the "current row". </p>
 <p>Fast access to the entries of the "current row" can be performed using the methods: <a class="el" href="classmfem_1_1SparseMatrix.html#a821e132cfe10421bc68d348de7ecb388" title="Perform a fast search for an entry in the &quot;current row&quot;. See SetColPtr(). ">SearchRow(const int)</a>, <em>Add</em>(const int, const double), <em>Set</em>(const int, const double), and <em>Get</em>(const int). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00656">656</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00711">711</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4455,7 +4577,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the data ownership flag (A array). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00562">562</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00600">600</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4474,7 +4596,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If a row contains only one diag entry of zero, set it to 1. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01883">1883</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02080">2080</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4499,7 +4621,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00238">238</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00269">269</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4527,7 +4649,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the graph ownership flag (I and J arrays). </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00558">558</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00596">596</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4561,7 +4683,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02457">2457</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02669">2669</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4601,7 +4723,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02300">2300</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02512">2512</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4641,7 +4763,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02333">2333</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l02545">2545</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4663,7 +4785,7 @@ Additional Inherited Members</h2></td></tr>
 <p>If width_ = -1 (DEFAULT), this routine will set the new width to the actual Width of the matrix awidth = max(J) + 1. Values 0 &lt;= width_ &lt; awidth are not allowed (error check in Debug Mode only)</p>
 <p>This method can be called for matrices finalized or not. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00330">330</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00371">371</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4690,7 +4812,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>For backward compatibility, define <a class="el" href="classmfem_1_1SparseMatrix.html#ad631b1aba7a32449621c9168f580b94e" title="For backward compatibility, define Size() to be synonym of Height(). ">Size()</a> to be synonym of <a class="el" href="classmfem_1_1Operator.html#afbea58230a3ed2a23908cab4551ff583" title="Get the height (size of output) of the Operator. Synonym with NumRows(). ">Height()</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00132">132</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00164">164</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4709,7 +4831,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sort the column indices corresponding to each row. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00368">368</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00409">409</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4727,7 +4849,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03656">3656</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l03882">3882</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4746,7 +4868,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>(*this) = 1/2 ((*this) + (*this)^t) </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01143">1143</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01340">1340</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4776,7 +4898,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Remove entries smaller in absolute value than a given tolerance <em>tol</em>. If <em>fix_empty_rows</em> is true, a zero value is inserted in the diagonal entry (for square matrices only) </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00870">870</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l01067">1067</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4795,7 +4917,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Produces a <a class="el" href="classmfem_1_1DenseMatrix.html" title="Data type dense matrix using column-major storage. ">DenseMatrix</a> from a <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00518">518</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00564">564</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -4815,7 +4937,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Produces a <a class="el" href="classmfem_1_1DenseMatrix.html" title="Data type dense matrix using column-major storage. ">DenseMatrix</a> from a <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a>. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00531">531</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8cpp_source.html#l00577">577</a> of file <a class="el" href="sparsemat_8cpp_source.html">sparsemat.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83ee097119dbba58e347ca002a49d205"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::SparseMatrix::UseCuSparse </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_useCuSparse</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00152">152</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4841,7 +4989,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00192">192</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00224">224</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4867,7 +5015,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00160">160</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00192">192</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4893,7 +5041,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00176">176</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00208">208</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4918,7 +5066,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Array with size <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a>[<a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6" title="Dimension of the output / number of rows in the matrix. ">height</a>], containing the actual entries of the sparse matrix, as indexed by the <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a> array. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00058">58</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00064">64</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4942,7 +5090,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Transpose of A. Owned. Used to perform <a class="el" href="classmfem_1_1SparseMatrix.html#a8e4c518ab9c99ebfc247782661212420" title="Multiply a vector with the transposed matrix. y = At * x. ">MultTranspose()</a> on devices. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00070">70</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00076">76</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78dca9feb06ed30c37ed99cf2624cedf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mfem::SparseMatrix::bufferSize = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00098">98</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4964,7 +5134,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00066">66</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00072">72</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -4986,7 +5156,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00067">67</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00073">73</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5008,7 +5178,73 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00065">65</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00071">71</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adbf45a13384db38fcdd0ee301d556220"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * mfem::SparseMatrix::dBuffer = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00099">99</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a356df15bed316584948460a11d83ca5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cusparseMatDescr_t mfem::SparseMatrix::descr =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00097">97</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab051e02ffbd218ff58bf31c78c087ccb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cusparseHandle_t mfem::SparseMatrix::handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00096">96</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5033,7 +5269,29 @@ Additional Inherited Members</h2></td></tr>
 <p>Array with size (<a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6" title="Dimension of the output / number of rows in the matrix. ">height</a>+1) containing the row offsets. </p>
 <p>The data for row r, 0 &lt;= r &lt; height, is at offsets j, I[r] &lt;= j &lt; I[r+1]. The offsets, j, are indices in the <a class="el" href="classmfem_1_1SparseMatrix.html#a49bd26540a71040c019ed5e18dc0fa3d" title="Array with size I[height], containing the column indices for all matrix entries, as indexed by the I ...">J</a> and <a class="el" href="classmfem_1_1SparseMatrix.html#aee466dd1b97e7c9d323fb948e7bf9948" title="Array with size I[height], containing the actual entries of the sparse matrix, as indexed by the I ar...">A</a> arrays. The first entry in this array is always zero, I[0] = 0, and the last entry, I[height], gives the total number of entries stored (at a minimum, all nonzeros must be represented) in the sparse matrix. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00052">52</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00058">58</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1621e60cb7343580248a2a17945004aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::SparseMatrix::initBuffers {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00100">100</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5057,7 +5315,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Are the columns sorted already. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00078">78</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00084">84</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5081,7 +5339,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Array with size <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a>[<a class="el" href="classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6" title="Dimension of the output / number of rows in the matrix. ">height</a>], containing the column indices for all matrix entries, as indexed by the <a class="el" href="classmfem_1_1SparseMatrix.html#a6956cdd8d0a79cfc419faf53709d430d" title="Array with size (height+1) containing the row offsets. ">I</a> array. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00055">55</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00061">61</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56ddf6f78901951d6d5303384f29d6d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cusparseSpMatDescr_t mfem::SparseMatrix::matA_descr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00103">103</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5103,7 +5383,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00074">74</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00080">80</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5127,7 +5407,117 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Array of linked lists, one for every row. This array represents the linked list (LIL) storage format. </p>
 
-<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00063">63</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00069">69</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82933875f9fed60e007727bb16062e79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::SparseMatrix::SparseMatrixCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00102">102</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab022f2e251722c191f100b75da15e8a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cusparseStatus_t mfem::SparseMatrix::status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00095">95</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1908ef98342c4492378ab5ae1322938"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::SparseMatrix::useCuSparse {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00089">89</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6514fa3680a7ef058cc66dc0f672f75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cusparseDnVecDescr_t mfem::SparseMatrix::vecX_descr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00104">104</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7705681ca34dc598514c21ed9b4f4bf4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cusparseDnVecDescr_t mfem::SparseMatrix::vecY_descr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sparsemat_8hpp_source.html#l00105">105</a> of file <a class="el" href="sparsemat_8hpp_source.html">sparsemat.hpp</a>.</p>
 
 </div>
 </div>
@@ -5138,7 +5528,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:04 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

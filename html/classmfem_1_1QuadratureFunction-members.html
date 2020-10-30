@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -117,6 +118,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#aae4e7927b5dcd1bf8649e1c4182332a7">GetElementIntRule</a>(int idx) const </td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a0b2fee6ef8dee7e52adcb2286373c833">GetElementValues</a>(int idx, Vector &amp;values)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#aa8cbeaf7247a92fe652ca9d0c47f8427">GetElementValues</a>(int idx, Vector &amp;values) const </td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#ab0e0928f2abcc6d880351d64a25c1638">GetElementValues</a>(int idx, const int ip_num, Vector &amp;values)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a3a2658565235693b6a26489a650f7c75">GetElementValues</a>(int idx, const int ip_num, Vector &amp;values) const </td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#acb25036daf79fe8588d4c5d3ea3e370a">GetElementValues</a>(int idx, DenseMatrix &amp;values)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a34f98c5fc7023082f21b91cfb06e42be">GetElementValues</a>(int idx, DenseMatrix &amp;values) const </td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#aa50d7435d03679b4328b0cabadc5c16a">GetMemory</a>()</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -151,18 +154,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a0870a32636c63c0f5ad71d27d24518d3">operator*</a>(const double *) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ab7fde183e70be4b9c927acefab494505">operator*</a>(const Vector &amp;v) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a93447b8ea51df0f800aa7d6679be0fd6">operator*=</a>(double c)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a22792f443dedb1cf48ecdb32a84d8620">operator+=</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a02e54576470a59ccf4d20a5a58fb6ef6">operator-=</a>(double c)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ad5e463b4c3b2cabfeeaf297f961bae61">operator-=</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a2be7529c9bccbb02f999cc22396cc171">operator/=</a>(double c)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a6690eb30d5fd09fd5785d6610d060001">operator=</a>(double value)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#aa3e74e821a11110725b3d21a41df7d69">operator=</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#aa5e8dbeb8cbdd8e3119cd28423c2890d">operator=</a>(const QuadratureFunction &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">mfem::Vector::operator=</a>(const double *v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#afdbbe147ac7aa00599633532821b9c37">own_qspace</a></td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a17cb7d5dd99cd51b737e49910d06a965">OwnsData</a>() const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#ac30c72a2f6214360d76f3be8849eaad5">OwnsSpace</a>()</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">Print</a>(std::ostream &amp;out=mfem::out, int width=8) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#aa245a25b1b49bd112f09b964f97dd99d">operator+=</a>(double c)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a22792f443dedb1cf48ecdb32a84d8620">operator+=</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a02e54576470a59ccf4d20a5a58fb6ef6">operator-=</a>(double c)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ad5e463b4c3b2cabfeeaf297f961bae61">operator-=</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a2be7529c9bccbb02f999cc22396cc171">operator/=</a>(double c)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a6690eb30d5fd09fd5785d6610d060001">operator=</a>(double value)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#aa3e74e821a11110725b3d21a41df7d69">operator=</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#aa5e8dbeb8cbdd8e3119cd28423c2890d">operator=</a>(const QuadratureFunction &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ade208c9337f60afc34f14e2f331bd5f0">mfem::Vector::operator=</a>(const double *v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#afdbbe147ac7aa00599633532821b9c37">own_qspace</a></td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a17cb7d5dd99cd51b737e49910d06a965">OwnsData</a>() const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#ac30c72a2f6214360d76f3be8849eaad5">OwnsSpace</a>()</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">Print</a>(std::ostream &amp;out=mfem::out, int width=8) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a0c3a2a97b9ef48f26ad050f83b8ab366">Print</a>(adios2stream &amp;out, const std::string &amp;variable_name) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">Print_HYPRE</a>(std::ostream &amp;out) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a9cc16768a55f2bea7329df795a19a957">qspace</a></td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#a67dec6bc3d2c0558a4c69e60176bf50d">QuadratureFunction</a>()</td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -197,8 +202,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a7fa7ef0bcbb3f30a5019bf20230500e8">Swap</a>(Vector &amp;other)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#afea5083b2dadfee258741d9c81f0009b">SyncAliasMemory</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#af50b30b29411eca2a96124115cda17b5">SyncMemory</a>(const Vector &amp;v)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">ToNVector</a>()</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a111395885732d77556d6c1b9a3000399">ToNVector</a>(N_Vector &amp;nv)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a4f20e5244675bd11273dc016b4d00668">ToNVector</a>()</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a2d6b5ed8dd5b767fba31a69b6d423ccb">ToNVector</a>(N_Vector &amp;nv, long global_length=0)</td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1Vector.html#a7f8f636001c0ca1c488d622d4ea3a2b7">UseDevice</a>(bool use_dev) const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classmfem_1_1Vector.html#adbf3cd1345b626f32b2665774043493e">UseDevice</a>() const </td><td class="entry"><a class="el" href="classmfem_1_1Vector.html">mfem::Vector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html#ac2ddfb32de326ae1198baee3d4acb50c">vdim</a></td><td class="entry"><a class="el" href="classmfem_1_1QuadratureFunction.html">mfem::QuadratureFunction</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -214,7 +219,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

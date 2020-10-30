@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -138,10 +139,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b137b199aa1f9be3c278d4e4b792965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1StaticCondensation.html#a7b137b199aa1f9be3c278d4e4b792965">SetEssentialTrueDofs</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_tdof_list)</td></tr>
 <tr class="memdesc:a7b137b199aa1f9be3c278d4e4b792965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine and save internally essential reduced true dofs.  <a href="#a7b137b199aa1f9be3c278d4e4b792965">More...</a><br/></td></tr>
 <tr class="separator:a7b137b199aa1f9be3c278d4e4b792965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a2d9144ca8ed576f938d0428abddbb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1StaticCondensation.html#a6a2d9144ca8ed576f938d0428abddbb3">EliminateReducedTrueDofs</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_rtdof_list, <a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">Matrix::DiagonalPolicy</a> dpolicy)</td></tr>
+<tr class="memitem:a6a2d9144ca8ed576f938d0428abddbb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1StaticCondensation.html#a6a2d9144ca8ed576f938d0428abddbb3">EliminateReducedTrueDofs</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ess_rtdof_list, <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">Matrix::DiagonalPolicy</a> dpolicy)</td></tr>
 <tr class="memdesc:a6a2d9144ca8ed576f938d0428abddbb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate the given reduced true dofs from the Schur complement matrix S.  <a href="#a6a2d9144ca8ed576f938d0428abddbb3">More...</a><br/></td></tr>
 <tr class="separator:a6a2d9144ca8ed576f938d0428abddbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bc89a6712881cae7324bebc3adef793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1StaticCondensation.html#a5bc89a6712881cae7324bebc3adef793">EliminateReducedTrueDofs</a> (<a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">Matrix::DiagonalPolicy</a> dpolicy)</td></tr>
+<tr class="memitem:a5bc89a6712881cae7324bebc3adef793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1StaticCondensation.html#a5bc89a6712881cae7324bebc3adef793">EliminateReducedTrueDofs</a> (<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">Matrix::DiagonalPolicy</a> dpolicy)</td></tr>
 <tr class="memdesc:a5bc89a6712881cae7324bebc3adef793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate the internal reduced true dofs (set using <a class="el" href="classmfem_1_1StaticCondensation.html#a7b137b199aa1f9be3c278d4e4b792965" title="Determine and save internally essential reduced true dofs. ">SetEssentialTrueDofs()</a>) from the Schur complement matrix S.  <a href="#a5bc89a6712881cae7324bebc3adef793">More...</a><br/></td></tr>
 <tr class="separator:a5bc89a6712881cae7324bebc3adef793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f894a16802223ba7edf5eed9bd07350"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1StaticCondensation.html#a2f894a16802223ba7edf5eed9bd07350">HasEliminatedBC</a> () const </td></tr>
@@ -183,7 +184,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a80dc0db39273ee9b41f9ea4d49b1bd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Auxiliary class <a class="el" href="classmfem_1_1StaticCondensation.html">StaticCondensation</a>, used to implement static condensation in class <a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a>.</p>
+<div class="textblock"><p>Auxiliary class <a class="el" href="classmfem_1_1StaticCondensation.html">StaticCondensation</a>, used to implement static condensation in class <a class="el" href="classmfem_1_1BilinearForm.html" title="A &quot;square matrix&quot; operator for the associated FE space and BLFIntegrators The sum of all the BLFInteg...">BilinearForm</a>.</p>
 <p>Static condensation is a technique for solving linear systems by eliminating groups/blocks of unknowns and reducing the original system to the remaining interfacial unknowns. The assumption is that unknowns in one group are connected (in the graph of the matrix) only to unknowns in the same group or to interfacial unknowns but not to other groups.</p>
 <p>For finite element systems, the groups correspond to degrees of freedom (DOFs) associated with the interior of the elements. The rest of the DOFs (associated with the element boundaries) are interfacial.</p>
 <p>In block form the matrix of the system can be written as </p>
@@ -422,7 +423,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">Matrix::DiagonalPolicy</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">Matrix::DiagonalPolicy</a>&#160;</td>
           <td class="paramname"><em>dpolicy</em>&#160;</td>
         </tr>
         <tr>
@@ -449,7 +450,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void mfem::StaticCondensation::EliminateReducedTrueDofs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1Matrix.html#afcd60541326a5a70961716e7efb7370d">Matrix::DiagonalPolicy</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">Matrix::DiagonalPolicy</a>&#160;</td>
           <td class="paramname"><em>dpolicy</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1002,7 +1003,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

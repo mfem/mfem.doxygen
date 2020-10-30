@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -113,106 +114,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../config/config.hpp&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">error.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CUDA</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;cuda_runtime.h&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cuda.h&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// CUDA block size used by MFEM.</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define MFEM_CUDA_BLOCKS 256</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CUDA</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_DEVICE __device__</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_HOST_DEVICE __host__ __device__</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span><span class="comment">// Define a CUDA error check macro, MFEM_GPU_CHECK(x), where x returns/is of</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// type &#39;cudaError_t&#39;. This macro evaluates &#39;x&#39; and raises an error if the</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// result is not cudaSuccess.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define MFEM_GPU_CHECK(x) \</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">   do \</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">   { \</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">      cudaError_t err = (x); \</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">      if (err != cudaSuccess) \</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">      { \</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">         mfem_cuda_error(err, #x, _MFEM_FUNC_NAME, __FILE__, __LINE__); \</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">      } \</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">   } \</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">   while (0)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_DEVICE_SYNC MFEM_GPU_CHECK(cudaDeviceSynchronize())</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_STREAM_SYNC MFEM_GPU_CHECK(cudaStreamSynchronize(0))</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // MFEM_USE_CUDA</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// Define the MFEM inner threading macros</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#if defined(MFEM_USE_CUDA) &amp;&amp; defined(__CUDA_ARCH__)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_SHARED __shared__</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_SYNC_THREAD __syncthreads()</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_THREAD_ID(k) threadIdx.k</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_THREAD_SIZE(k) blockDim.k</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_FOREACH_THREAD(i,k,N) for(int i=threadIdx.k; i&lt;N; i+=blockDim.k)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#if !(defined(MFEM_USE_CUDA) || defined(MFEM_USE_HIP))</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_DEVICE</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_HOST_DEVICE</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_DEVICE_SYNC</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_STREAM_SYNC</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#if !((defined(MFEM_USE_CUDA) &amp;&amp; defined(__CUDA_ARCH__)) || \</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">      (defined(MFEM_USE_HIP)  &amp;&amp; defined(__ROCM_ARCH__)))</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_SHARED</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_SYNC_THREAD</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_THREAD_ID(k) 0</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_THREAD_SIZE(k) 1</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_FOREACH_THREAD(i,k,N) for(int i=0; i&lt;N; i++)</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">namespace </span>mfem</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CUDA</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span><span class="comment">// Function used by the macro MFEM_GPU_CHECK.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemfem.html#a626b7716a1cf8e1bd2cb59de91b21475">mfem_cuda_error</a>(cudaError_t <a class="code" href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">err</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *expr, <span class="keyword">const</span> <span class="keywordtype">char</span> *func,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span><span class="comment"></span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/// Allocates device memory</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a085f36f4890d98c3181e331f2c1e6806">CuMemAlloc</a>(<span class="keywordtype">void</span> **d_ptr, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/// Allocates managed device memory</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a3154da8334292b23497b06a4fc997c9d">CuMallocManaged</a>(<span class="keywordtype">void</span> **d_ptr, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/// Frees device memory</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a09dcc05c80284b3d1c9afb1b4a82785e">CuMemFree</a>(<span class="keywordtype">void</span> *d_ptr);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">/// Copies memory from Host to Device</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a628ad2d99b69f7a34a26750fc31eb04f">CuMemcpyHtoD</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *h_src, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">/// Copies memory from Host to Device</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#aa97d4558e9f967fea7fd5e5b85f0eaad">CuMemcpyHtoDAsync</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *h_src, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/// Copies memory from Device to Device</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#ae38a7f9e7f97ec087910b39ffc4da793">CuMemcpyDtoD</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">/// Copies memory from Device to Device</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#ad2124fa1af82ee723a415439c556d2a1">CuMemcpyDtoDAsync</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/// Copies memory from Device to Host</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a323a644e8c0a76f212d0a06bd96d5255">CuMemcpyDtoH</a>(<span class="keywordtype">void</span> *h_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/// Copies memory from Device to Host</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a1cac98208a829e97db8e20b005adc644">CuMemcpyDtoHAsync</a>(<span class="keywordtype">void</span> *h_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/// Check the error code returned by cudaGetLastError(), aborting on error.</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacemfem.html#ac4c591dbef7f803d19a1957771eeba3f">CuCheckLastError</a>();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/// Get the number of CUDA devices</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span><span class="keywordtype">int</span> <a class="code" href="namespacemfem.html#a8618e33f06007b9de6200d0ee2d71c02">CuGetDeviceCount</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// namespace mfem</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // MFEM_CUDA_HPP</span></div>
-<div class="ttc" id="namespacemfem_html_a628ad2d99b69f7a34a26750fc31eb04f"><div class="ttname"><a href="namespacemfem.html#a628ad2d99b69f7a34a26750fc31eb04f">mfem::CuMemcpyHtoD</a></div><div class="ttdeci">void * CuMemcpyHtoD(void *dst, const void *src, size_t bytes)</div><div class="ttdoc">Copies memory from Host to Device. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00079">cuda.cpp:79</a></div></div>
-<div class="ttc" id="namespacemfem_html_a09dcc05c80284b3d1c9afb1b4a82785e"><div class="ttname"><a href="namespacemfem.html#a09dcc05c80284b3d1c9afb1b4a82785e">mfem::CuMemFree</a></div><div class="ttdeci">void * CuMemFree(void *dptr)</div><div class="ttdoc">Frees device memory. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00064">cuda.cpp:64</a></div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// CUDA block size used by MFEM.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define MFEM_CUDA_BLOCKS 256</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CUDA</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_DEVICE __device__</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_LAMBDA __host__</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_HOST_DEVICE __host__ __device__</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_DEVICE_SYNC MFEM_GPU_CHECK(cudaDeviceSynchronize())</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_STREAM_SYNC MFEM_GPU_CHECK(cudaStreamSynchronize(0))</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span><span class="comment">// Define a CUDA error check macro, MFEM_GPU_CHECK(x), where x returns/is of</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// type &#39;cudaError_t&#39;. This macro evaluates &#39;x&#39; and raises an error if the</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// result is not cudaSuccess.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define MFEM_GPU_CHECK(x) \</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">   do \</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">   { \</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">      cudaError_t err = (x); \</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">      if (err != cudaSuccess) \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">      { \</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">         mfem_cuda_error(err, #x, _MFEM_FUNC_NAME, __FILE__, __LINE__); \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">      } \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">   } \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">   while (0)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // MFEM_USE_CUDA</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// Define the MFEM inner threading macros</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#if defined(MFEM_USE_CUDA) &amp;&amp; defined(__CUDA_ARCH__)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_SHARED __shared__</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_SYNC_THREAD __syncthreads()</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_THREAD_ID(k) threadIdx.k</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_THREAD_SIZE(k) blockDim.k</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MFEM_FOREACH_THREAD(i,k,N) for(int i=threadIdx.k; i&lt;N; i+=blockDim.k)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">namespace </span>mfem</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CUDA</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span><span class="comment">// Function used by the macro MFEM_GPU_CHECK.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemfem.html#a626b7716a1cf8e1bd2cb59de91b21475">mfem_cuda_error</a>(cudaError_t <a class="code" href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">err</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *expr, <span class="keyword">const</span> <span class="keywordtype">char</span> *func,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span><span class="comment"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/// Allocates device memory and returns destination ptr.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a085f36f4890d98c3181e331f2c1e6806">CuMemAlloc</a>(<span class="keywordtype">void</span> **d_ptr, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/// Allocates managed device memory</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a3154da8334292b23497b06a4fc997c9d">CuMallocManaged</a>(<span class="keywordtype">void</span> **d_ptr, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/// Frees device memory and returns destination ptr.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a09dcc05c80284b3d1c9afb1b4a82785e">CuMemFree</a>(<span class="keywordtype">void</span> *d_ptr);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/// Copies memory from Host to Device and returns destination ptr.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a628ad2d99b69f7a34a26750fc31eb04f">CuMemcpyHtoD</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *h_src, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">/// Copies memory from Host to Device and returns destination ptr.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#aa97d4558e9f967fea7fd5e5b85f0eaad">CuMemcpyHtoDAsync</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *h_src, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/// Copies memory from Device to Device</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#ae38a7f9e7f97ec087910b39ffc4da793">CuMemcpyDtoD</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">/// Copies memory from Device to Device</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#ad2124fa1af82ee723a415439c556d2a1">CuMemcpyDtoDAsync</a>(<span class="keywordtype">void</span> *d_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/// Copies memory from Device to Host</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a323a644e8c0a76f212d0a06bd96d5255">CuMemcpyDtoH</a>(<span class="keywordtype">void</span> *h_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/// Copies memory from Device to Host</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>* <a class="code" href="namespacemfem.html#a1cac98208a829e97db8e20b005adc644">CuMemcpyDtoHAsync</a>(<span class="keywordtype">void</span> *h_dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *d_src, <span class="keywordtype">size_t</span> bytes);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">/// Check the error code returned by cudaGetLastError(), aborting on error.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacemfem.html#ac4c591dbef7f803d19a1957771eeba3f">CuCheckLastError</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/// Get the number of CUDA devices</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span><span class="keywordtype">int</span> <a class="code" href="namespacemfem.html#a8618e33f06007b9de6200d0ee2d71c02">CuGetDeviceCount</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace mfem</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // MFEM_CUDA_HPP</span></div>
+<div class="ttc" id="namespacemfem_html_a628ad2d99b69f7a34a26750fc31eb04f"><div class="ttname"><a href="namespacemfem.html#a628ad2d99b69f7a34a26750fc31eb04f">mfem::CuMemcpyHtoD</a></div><div class="ttdeci">void * CuMemcpyHtoD(void *dst, const void *src, size_t bytes)</div><div class="ttdoc">Copies memory from Host to Device and returns destination ptr. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00079">cuda.cpp:79</a></div></div>
+<div class="ttc" id="namespacemfem_html_a09dcc05c80284b3d1c9afb1b4a82785e"><div class="ttname"><a href="namespacemfem.html#a09dcc05c80284b3d1c9afb1b4a82785e">mfem::CuMemFree</a></div><div class="ttdeci">void * CuMemFree(void *dptr)</div><div class="ttdoc">Frees device memory and returns destination ptr. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00064">cuda.cpp:64</a></div></div>
 <div class="ttc" id="namespacemfem_html_ac4c591dbef7f803d19a1957771eeba3f"><div class="ttname"><a href="namespacemfem.html#ac4c591dbef7f803d19a1957771eeba3f">mfem::CuCheckLastError</a></div><div class="ttdeci">void CuCheckLastError()</div><div class="ttdoc">Check the error code returned by cudaGetLastError(), aborting on error. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00148">cuda.cpp:148</a></div></div>
 <div class="ttc" id="namespacemfem_html_a8618e33f06007b9de6200d0ee2d71c02"><div class="ttname"><a href="namespacemfem.html#a8618e33f06007b9de6200d0ee2d71c02">mfem::CuGetDeviceCount</a></div><div class="ttdeci">int CuGetDeviceCount()</div><div class="ttdoc">Get the number of CUDA devices. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00155">cuda.cpp:155</a></div></div>
 <div class="ttc" id="namespacemfem_html_a3154da8334292b23497b06a4fc997c9d"><div class="ttname"><a href="namespacemfem.html#a3154da8334292b23497b06a4fc997c9d">mfem::CuMallocManaged</a></div><div class="ttdeci">void * CuMallocManaged(void **dptr, size_t bytes)</div><div class="ttdoc">Allocates managed device memory. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00049">cuda.cpp:49</a></div></div>
@@ -222,13 +203,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacemfem_html_afe45941924fb90ca83973228a5fb8c64"><div class="ttname"><a href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">mfem::err</a></div><div class="ttdeci">OutStream err(std::cerr)</div><div class="ttdoc">Global stream used by the library for standard error output. Initially it uses the same std::streambu...</div><div class="ttdef"><b>Definition:</b> <a href="globals_8hpp_source.html#l00071">globals.hpp:71</a></div></div>
 <div class="ttc" id="error_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
 <div class="ttc" id="namespacemfem_html_a1cac98208a829e97db8e20b005adc644"><div class="ttname"><a href="namespacemfem.html#a1cac98208a829e97db8e20b005adc644">mfem::CuMemcpyDtoHAsync</a></div><div class="ttdeci">void * CuMemcpyDtoHAsync(void *dst, const void *src, size_t bytes)</div><div class="ttdoc">Copies memory from Device to Host. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00140">cuda.cpp:140</a></div></div>
-<div class="ttc" id="namespacemfem_html_aa97d4558e9f967fea7fd5e5b85f0eaad"><div class="ttname"><a href="namespacemfem.html#aa97d4558e9f967fea7fd5e5b85f0eaad">mfem::CuMemcpyHtoDAsync</a></div><div class="ttdeci">void * CuMemcpyHtoDAsync(void *dst, const void *src, size_t bytes)</div><div class="ttdoc">Copies memory from Host to Device. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00094">cuda.cpp:94</a></div></div>
-<div class="ttc" id="namespacemfem_html_a085f36f4890d98c3181e331f2c1e6806"><div class="ttname"><a href="namespacemfem.html#a085f36f4890d98c3181e331f2c1e6806">mfem::CuMemAlloc</a></div><div class="ttdeci">void * CuMemAlloc(void **dptr, size_t bytes)</div><div class="ttdoc">Allocates device memory. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00034">cuda.cpp:34</a></div></div>
+<div class="ttc" id="namespacemfem_html_aa97d4558e9f967fea7fd5e5b85f0eaad"><div class="ttname"><a href="namespacemfem.html#aa97d4558e9f967fea7fd5e5b85f0eaad">mfem::CuMemcpyHtoDAsync</a></div><div class="ttdeci">void * CuMemcpyHtoDAsync(void *dst, const void *src, size_t bytes)</div><div class="ttdoc">Copies memory from Host to Device and returns destination ptr. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00094">cuda.cpp:94</a></div></div>
+<div class="ttc" id="namespacemfem_html_a085f36f4890d98c3181e331f2c1e6806"><div class="ttname"><a href="namespacemfem.html#a085f36f4890d98c3181e331f2c1e6806">mfem::CuMemAlloc</a></div><div class="ttdeci">void * CuMemAlloc(void **dptr, size_t bytes)</div><div class="ttdoc">Allocates device memory and returns destination ptr. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00034">cuda.cpp:34</a></div></div>
 <div class="ttc" id="namespacemfem_html_a323a644e8c0a76f212d0a06bd96d5255"><div class="ttname"><a href="namespacemfem.html#a323a644e8c0a76f212d0a06bd96d5255">mfem::CuMemcpyDtoH</a></div><div class="ttdeci">void * CuMemcpyDtoH(void *dst, const void *src, size_t bytes)</div><div class="ttdoc">Copies memory from Device to Host. </div><div class="ttdef"><b>Definition:</b> <a href="cuda_8cpp_source.html#l00125">cuda.cpp:125</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:13 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:00 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

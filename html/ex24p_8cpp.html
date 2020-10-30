@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -108,6 +109,12 @@ Functions</h2></td></tr>
 <tr class="separator:adbd4059cf6886c758d3bc9e558a2c586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed851becd7eee8d43bc0eb7b521ec31d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#aed851becd7eee8d43bc0eb7b521ec31d">gradp_exact</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;)</td></tr>
 <tr class="separator:aed851becd7eee8d43bc0eb7b521ec31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3acd934e435ab8754dc1e2da553ba65"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#af3acd934e435ab8754dc1e2da553ba65">div_gradp_exact</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x)</td></tr>
+<tr class="separator:af3acd934e435ab8754dc1e2da553ba65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1babf7ac8b6a6f165d4fd8335133e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#a7f1babf7ac8b6a6f165d4fd8335133e6">v_exact</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
+<tr class="separator:a7f1babf7ac8b6a6f165d4fd8335133e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68cd8d50a13d70cd0ce734897cc00c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#a68cd8d50a13d70cd0ce734897cc00c1c">curlv_exact</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;cv)</td></tr>
+<tr class="separator:a68cd8d50a13d70cd0ce734897cc00c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -115,8 +122,54 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a70b5e28b5bc3d1b63a7435c5fe50b837"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a></td></tr>
 <tr class="separator:a70b5e28b5bc3d1b63a7435c5fe50b837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26aea75a25190af8d4bebf654888935d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#a26aea75a25190af8d4bebf654888935d">freq</a> = 1.0</td></tr>
+<tr class="separator:a26aea75a25190af8d4bebf654888935d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ac5235b52a827a368e74ed228dd485"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex24p_8cpp.html#a05ac5235b52a827a368e74ed228dd485">kappa</a></td></tr>
+<tr class="separator:a05ac5235b52a827a368e74ed228dd485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a68cd8d50a13d70cd0ce734897cc00c1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void curlv_exact </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>cv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af3acd934e435ab8754dc1e2da553ba65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double div_gradp_exact </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aed851becd7eee8d43bc0eb7b521ec31d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +220,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ex24p_8cpp_source.html#l00045">45</a> of file <a class="el" href="ex24p_8cpp_source.html">ex24p.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ex24p_8cpp_source.html#l00056">56</a> of file <a class="el" href="ex24p_8cpp_source.html">ex24p.cpp</a>.</p>
 
 </div>
 </div>
@@ -187,6 +240,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7f1babf7ac8b6a6f165d4fd8335133e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void v_exact </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a70b5e28b5bc3d1b63a7435c5fe50b837"></a>
 <div class="memitem">
@@ -198,14 +277,42 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ex24p_8cpp_source.html#l00043">43</a> of file <a class="el" href="ex24p_8cpp_source.html">ex24p.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ex24p_8cpp_source.html#l00053">53</a> of file <a class="el" href="ex24p_8cpp_source.html">ex24p.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26aea75a25190af8d4bebf654888935d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double freq = 1.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ex24p_8cpp_source.html#l00054">54</a> of file <a class="el" href="ex24p_8cpp_source.html">ex24p.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a05ac5235b52a827a368e74ed228dd485"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double kappa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ex24p_8cpp_source.html#l00054">54</a> of file <a class="el" href="ex24p_8cpp_source.html">ex24p.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:02 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

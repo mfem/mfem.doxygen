@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -103,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Structure representing the matrices/tensors needed to evaluate (in reference space) the values, gradients, divergences, or curls of a <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for Finite Elements. ">FiniteElement</a> at a the quadrature points of a given <a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a>.  
+<p>Structure representing the matrices/tensors needed to evaluate (in reference space) the values, gradients, divergences, or curls of a <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> at a the quadrature points of a given <a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a>.  
  <a href="classmfem_1_1DofToQuad.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="fe_8hpp_source.html">fe.hpp</a>&gt;</code></p>
@@ -125,7 +126,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a32ce9458178e4fe5c5b1f70fdf76ebbc"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1DofToQuad.html#a32ce9458178e4fe5c5b1f70fdf76ebbc">FE</a></td></tr>
-<tr class="memdesc:a32ce9458178e4fe5c5b1f70fdf76ebbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for Finite Elements. ">FiniteElement</a> that created and owns this object.  <a href="#a32ce9458178e4fe5c5b1f70fdf76ebbc">More...</a><br/></td></tr>
+<tr class="memdesc:a32ce9458178e4fe5c5b1f70fdf76ebbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> that created and owns this object.  <a href="#a32ce9458178e4fe5c5b1f70fdf76ebbc">More...</a><br/></td></tr>
 <tr class="separator:a32ce9458178e4fe5c5b1f70fdf76ebbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28ea8808626d1f7e2ffd0417db354512"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1DofToQuad.html#a28ea8808626d1f7e2ffd0417db354512">IntRule</a></td></tr>
 <tr class="memdesc:a28ea8808626d1f7e2ffd0417db354512"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a> that defines the quadrature points at which the basis functions of the <a class="el" href="classmfem_1_1DofToQuad.html#a32ce9458178e4fe5c5b1f70fdf76ebbc" title="The FiniteElement that created and owns this object. ">FE</a> are evaluated.  <a href="#a28ea8808626d1f7e2ffd0417db354512">More...</a><br/></td></tr>
@@ -153,10 +154,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a4e1304961495914bd70cc13223a27966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Structure representing the matrices/tensors needed to evaluate (in reference space) the values, gradients, divergences, or curls of a <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for Finite Elements. ">FiniteElement</a> at a the quadrature points of a given <a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a>. </p>
-<p>Object of this type are typically created and owned by the respective <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for Finite Elements. ">FiniteElement</a> object. </p>
+<div class="textblock"><p>Structure representing the matrices/tensors needed to evaluate (in reference space) the values, gradients, divergences, or curls of a <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> at a the quadrature points of a given <a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a>. </p>
+<p>Object of this type are typically created and owned by the respective <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> object. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00128">128</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00131">131</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a7651cb6bf9ee6bcd5f366c3d2257d196"></a>
 <div class="memitem">
@@ -175,11 +176,11 @@ Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a7651cb6bf9ee6bcd5f366c3d2257d196af6dcbea1a7728fca38f995271f9b99d3"></a>TENSOR</em>&nbsp;</td><td class="fielddoc">
 <p>Tensor product representation using 1D matrices/tensors with dimensions using 1D number of quadrature points and degrees of freedom. </p>
-<p>When representing a vector-valued <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for Finite Elements. ">FiniteElement</a>, two <a class="el" href="classmfem_1_1DofToQuad.html" title="Structure representing the matrices/tensors needed to evaluate (in reference space) the values...">DofToQuad</a> objects are used to describe the "closed" and "open" 1D basis functions (TODO). </p>
+<p>When representing a vector-valued <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a>, two <a class="el" href="classmfem_1_1DofToQuad.html" title="Structure representing the matrices/tensors needed to evaluate (in reference space) the values...">DofToQuad</a> objects are used to describe the "closed" and "open" 1D basis functions (TODO). </p>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00141">141</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00144">144</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -205,7 +206,7 @@ Public Attributes</h2></td></tr>
 <li>dim = dimension of the finite element reference space when <a class="el" href="classmfem_1_1DofToQuad.html#a288e8c91661a921e07f76302bc7906d3" title="Describes the contents of the B, Bt, G, and Gt arrays, see Mode. ">mode</a> is FULL, and dim = 1 when <a class="el" href="classmfem_1_1DofToQuad.html#a288e8c91661a921e07f76302bc7906d3" title="Describes the contents of the B, Bt, G, and Gt arrays, see Mode. ">mode</a> is TENSOR. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00177">177</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00180">180</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -226,7 +227,7 @@ Public Attributes</h2></td></tr>
 <li><a class="el" href="classmfem_1_1DofToQuad.html#a900d5a3b879189fde267a7a9817d0a3c" title="Number of degrees of freedom = number of basis functions. When mode is TENSOR, this is the 1D number...">ndof</a> x <a class="el" href="classmfem_1_1DofToQuad.html#ae57004afc954b83b510bca344f6a2394" title="Number of quadrature points. When mode is TENSOR, this is the 1D number. ">nqpt</a> x dim, for vector elements (TODO). </li>
 </ul>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00183">183</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00186">186</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -240,10 +241,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for Finite Elements. ">FiniteElement</a> that created and owns this object. </p>
+<p>The <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> that created and owns this object. </p>
 <p>This pointer is not owned. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00133">133</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00136">136</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -270,7 +271,7 @@ Public Attributes</h2></td></tr>
 <li>cdim = 1/1/3 in 1D/2D/3D, respectively, when <a class="el" href="classmfem_1_1DofToQuad.html#a288e8c91661a921e07f76302bc7906d3" title="Describes the contents of the B, Bt, G, and Gt arrays, see Mode. ">mode</a> is FULL, and cdim = 1 when <a class="el" href="classmfem_1_1DofToQuad.html#a288e8c91661a921e07f76302bc7906d3" title="Describes the contents of the B, Bt, G, and Gt arrays, see Mode. ">mode</a> is TENSOR. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00198">198</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00201">201</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +293,7 @@ Public Attributes</h2></td></tr>
 <li><a class="el" href="classmfem_1_1DofToQuad.html#a900d5a3b879189fde267a7a9817d0a3c" title="Number of degrees of freedom = number of basis functions. When mode is TENSOR, this is the 1D number...">ndof</a> x <a class="el" href="classmfem_1_1DofToQuad.html#ae57004afc954b83b510bca344f6a2394" title="Number of quadrature points. When mode is TENSOR, this is the 1D number. ">nqpt</a> x cdim, for H(curl) vector elements (TODO). </li>
 </ul>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00205">205</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00208">208</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +310,7 @@ Public Attributes</h2></td></tr>
 <p><a class="el" href="classmfem_1_1IntegrationRule.html" title="Class for an integration rule - an Array of IntegrationPoint. ">IntegrationRule</a> that defines the quadrature points at which the basis functions of the <a class="el" href="classmfem_1_1DofToQuad.html#a32ce9458178e4fe5c5b1f70fdf76ebbc" title="The FiniteElement that created and owns this object. ">FE</a> are evaluated. </p>
 <p>This pointer is not owned. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00138">138</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00141">141</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +326,7 @@ Public Attributes</h2></td></tr>
 
 <p>Describes the contents of the <a class="el" href="classmfem_1_1DofToQuad.html#adc721058849c2ed203148f8304dd96a7" title="Basis functions evaluated at quadrature points. ">B</a>, <a class="el" href="classmfem_1_1DofToQuad.html#a748accd4c5f5ea66398d9ef60c63a57a" title="Transpose of B. ">Bt</a>, <a class="el" href="classmfem_1_1DofToQuad.html#a369cec821d2a67b3cdec1d40b188b5fe" title="Gradients/divergences/curls of basis functions evaluated at quadrature points. ">G</a>, and <a class="el" href="classmfem_1_1DofToQuad.html#a4e1304961495914bd70cc13223a27966" title="Transpose of G. ">Gt</a> arrays, see <a class="el" href="classmfem_1_1DofToQuad.html#a7651cb6bf9ee6bcd5f366c3d2257d196" title="Type of data stored in the arrays B, Bt, G, and Gt. ">Mode</a>. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00158">158</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00161">161</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +342,7 @@ Public Attributes</h2></td></tr>
 
 <p>Number of degrees of freedom = number of basis functions. When <a class="el" href="classmfem_1_1DofToQuad.html#a288e8c91661a921e07f76302bc7906d3" title="Describes the contents of the B, Bt, G, and Gt arrays, see Mode. ">mode</a> is TENSOR, this is the 1D number. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00162">162</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00165">165</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +358,7 @@ Public Attributes</h2></td></tr>
 
 <p>Number of quadrature points. When <a class="el" href="classmfem_1_1DofToQuad.html#a288e8c91661a921e07f76302bc7906d3" title="Describes the contents of the B, Bt, G, and Gt arrays, see Mode. ">mode</a> is TENSOR, this is the 1D number. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00166">166</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l00169">169</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +368,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -4,9 +4,10 @@ var searchData=
   ['map_5fl2f',['map_L2F',['../classmfem_1_1FiniteElementSpace.html#a807c7463f67edecef5e3d6ceb61ddd22',1,'mfem::FiniteElementSpace']]],
   ['maptype',['MapType',['../classmfem_1_1NamedFieldsMap.html#a352a86aade815925241b9ce583deadda',1,'mfem::NamedFieldsMap']]],
   ['mat',['Mat',['../petsc_8hpp.html#a28b1c75999a6b1553eb6f83787eb8695',1,'petsc.hpp']]],
+  ['matveccoefficient',['MatVecCoefficient',['../namespacemfem.html#afc92b063574af761f05d489afe878ee3',1,'mfem']]],
   ['mesh_5ffe_5ft',['mesh_fe_t',['../miniapps_2performance_2ex1_8cpp.html#a810aaabf5d7740ea1248e4b4ee0b435a',1,'mesh_fe_t():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#a810aaabf5d7740ea1248e4b4ee0b435a',1,'mesh_fe_t():&#160;ex1p.cpp']]],
   ['mesh_5ffes_5ft',['mesh_fes_t',['../miniapps_2performance_2ex1_8cpp.html#a9cb3e256a2346674649badd37dd3731e',1,'mesh_fes_t():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#a9cb3e256a2346674649badd37dd3731e',1,'mesh_fes_t():&#160;ex1p.cpp']]],
   ['mesh_5ft',['mesh_t',['../miniapps_2performance_2ex1_8cpp.html#abc2115ba9d01db527e665bd1d38aa474',1,'mesh_t():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#abc2115ba9d01db527e665bd1d38aa474',1,'mesh_t():&#160;ex1p.cpp']]],
-  ['meshfe_5ftype',['meshFE_type',['../classmfem_1_1TBilinearForm.html#a47cbc41f34763de1e62d7704b5181dac',1,'mfem::TBilinearForm']]],
-  ['meshshapeeval',['meshShapeEval',['../classmfem_1_1TBilinearForm.html#a7d0c2b2cbc75783f1b84b4666f436888',1,'mfem::TBilinearForm']]]
+  ['meshfe_5ftype',['meshFE_type',['../classmfem_1_1TBilinearForm.html#a1ad18bdcaebeb8c463e476365ce088b8',1,'mfem::TBilinearForm']]],
+  ['meshshapeeval',['meshShapeEval',['../classmfem_1_1TBilinearForm.html#abb064730759a02f841e9e725c6cc8903',1,'mfem::TBilinearForm']]]
 ];

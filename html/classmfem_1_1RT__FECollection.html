@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -123,7 +124,7 @@ Collaboration diagram for mfem::RT_FECollection:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95f4f01885b327a027eb8b1c6bfa5418"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a95f4f01885b327a027eb8b1c6bfa5418">RT_FECollection</a> (const int p, const int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const int cb_type=<a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5289400991b692469b59ad94accfe75b">BasisType::GaussLobatto</a>, const int <a class="el" href="classmfem_1_1RT__FECollection.html#a211d2602c443b2d9cf077ba1ccb40040">ob_type</a>=<a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a>)</td></tr>
+<tr class="memitem:a95f4f01885b327a027eb8b1c6bfa5418"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a95f4f01885b327a027eb8b1c6bfa5418">RT_FECollection</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const int cb_type=<a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5289400991b692469b59ad94accfe75b">BasisType::GaussLobatto</a>, const int <a class="el" href="classmfem_1_1RT__FECollection.html#a211d2602c443b2d9cf077ba1ccb40040">ob_type</a>=<a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a>)</td></tr>
 <tr class="separator:a95f4f01885b327a027eb8b1c6bfa5418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ea88c185dfc3cf25e460b83e73e379"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a56ea88c185dfc3cf25e460b83e73e379">FiniteElementForGeometry</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> GeomType) const </td></tr>
 <tr class="separator:a56ea88c185dfc3cf25e460b83e73e379"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2a0046a1a0d422620aed6fd5d37c3606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1886f28f15d72e2ba818d59d777a5f5f"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a1886f28f15d72e2ba818d59d777a5f5f">Name</a> () const </td></tr>
 <tr class="separator:a1886f28f15d72e2ba818d59d777a5f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37bab7079126d28b1354a321dce7c9c1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a37bab7079126d28b1354a321dce7c9c1">GetContType</a> () const </td></tr>
+<tr class="separator:a37bab7079126d28b1354a321dce7c9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59667dac5471cfb1e4ff19c5ae22e3aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FiniteElementCollection.html">FiniteElementCollection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a59667dac5471cfb1e4ff19c5ae22e3aa">GetTraceCollection</a> () const </td></tr>
 <tr class="separator:a59667dac5471cfb1e4ff19c5ae22e3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59fb8be9621a4cc77304b562202dcb13"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a59fb8be9621a4cc77304b562202dcb13">~RT_FECollection</a> ()</td></tr>
@@ -151,9 +154,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a58116f56e5cb6f9040bf6fa3cd26af99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a58116f56e5cb6f9040bf6fa3cd26af99">InitFaces</a> (const int p, const int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const int map_type, const bool signs)</td></tr>
+<tr class="memitem:a58116f56e5cb6f9040bf6fa3cd26af99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#a58116f56e5cb6f9040bf6fa3cd26af99">InitFaces</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const int map_type, const bool signs)</td></tr>
 <tr class="separator:a58116f56e5cb6f9040bf6fa3cd26af99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae707149ecfb81592c9ad2c6ee31bdfcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#ae707149ecfb81592c9ad2c6ee31bdfcb">RT_FECollection</a> (const int p, const int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const int map_type, const bool signs, const int <a class="el" href="classmfem_1_1RT__FECollection.html#a211d2602c443b2d9cf077ba1ccb40040">ob_type</a>=<a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a>)</td></tr>
+<tr class="memitem:ae707149ecfb81592c9ad2c6ee31bdfcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1RT__FECollection.html#ae707149ecfb81592c9ad2c6ee31bdfcb">RT_FECollection</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const int <a class="el" href="petsc_2ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837">dim</a>, const int map_type, const bool signs, const int <a class="el" href="classmfem_1_1RT__FECollection.html#a211d2602c443b2d9cf077ba1ccb40040">ob_type</a>=<a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a>)</td></tr>
 <tr class="separator:ae707149ecfb81592c9ad2c6ee31bdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -175,9 +178,17 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classmfem_1_1FiniteElementCollection"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1FiniteElementCollection')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1FiniteElementCollection.html">mfem::FiniteElementCollection</a></td></tr>
+<tr class="memitem:a9aeaa2b626d565a06380af9c927ce48d inherit pub_types_classmfem_1_1FiniteElementCollection"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da346183a0c130fc8c0dfc9de300277698">CONTINUOUS</a>, 
+<a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48daf91b8685b60603fd88213afd57ea64c9">TANGENTIAL</a>, 
+<a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da5ef68da0eaf8cb369c1c4b01471f378d">NORMAL</a>, 
+<a class="el" href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da14bf72f096dab054cd2603534c07e28b">DISCONTINUOUS</a>
+ }</td></tr>
+<tr class="memdesc:a9aeaa2b626d565a06380af9c927ce48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for ContType: defines the continuity of the field across element interfaces.  <a href="classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48d">More...</a><br/></td></tr>
+<tr class="separator:a9aeaa2b626d565a06380af9c927ce48d inherit pub_types_classmfem_1_1FiniteElementCollection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classmfem_1_1FiniteElementCollection"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classmfem_1_1FiniteElementCollection')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classmfem_1_1FiniteElementCollection.html">mfem::FiniteElementCollection</a></td></tr>
 <tr class="memitem:a15fcfa553d4949eb08f9926ac74d1e80 inherit pub_static_methods_classmfem_1_1FiniteElementCollection"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmfem_1_1FiniteElementCollection.html">FiniteElementCollection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a15fcfa553d4949eb08f9926ac74d1e80">New</a> (const char *name)</td></tr>
-<tr class="memdesc:a15fcfa553d4949eb08f9926ac74d1e80 inherit pub_static_methods_classmfem_1_1FiniteElementCollection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: return a newly allocated <a class="el" href="classmfem_1_1FiniteElementCollection.html">FiniteElementCollection</a> according to the given name.  <a href="#a15fcfa553d4949eb08f9926ac74d1e80">More...</a><br/></td></tr>
+<tr class="memdesc:a15fcfa553d4949eb08f9926ac74d1e80 inherit pub_static_methods_classmfem_1_1FiniteElementCollection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: return a newly allocated <a class="el" href="classmfem_1_1FiniteElementCollection.html" title="Collection of finite elements from the same family in multiple dimensions. This class is used to matc...">FiniteElementCollection</a> according to the given name.  <a href="#a15fcfa553d4949eb08f9926ac74d1e80">More...</a><br/></td></tr>
 <tr class="separator:a15fcfa553d4949eb08f9926ac74d1e80 inherit pub_static_methods_classmfem_1_1FiniteElementCollection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classmfem_1_1FiniteElementCollection"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classmfem_1_1FiniteElementCollection')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classmfem_1_1FiniteElementCollection.html">mfem::FiniteElementCollection</a></td></tr>
 <tr class="memitem:ae2381c6cf5422cf1601d6d66a136b6cb inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memTemplParams" colspan="2">template&lt;Geometry::Type geom&gt; </td></tr>
@@ -187,13 +198,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a75a75abfe31260c746fbdca87af4b146 inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a75a75abfe31260c746fbdca87af4b146">GetEdge</a> (int &amp;nv, v_t &amp;v, int &amp;ne, int &amp;e, int &amp;eo, const int edge_info)</td></tr>
 <tr class="separator:a75a75abfe31260c746fbdca87af4b146 inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9740560a653615f8a108d20860518aa2 inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memTemplParams" colspan="2">template&lt;Geometry::Type geom, Geometry::Type f_geom, typename v_t , typename e_t , typename eo_t &gt; </td></tr>
-<tr class="memitem:a9740560a653615f8a108d20860518aa2 inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a9740560a653615f8a108d20860518aa2">GetFace</a> (int &amp;nv, v_t &amp;v, int &amp;ne, e_t &amp;e, eo_t &amp;eo, int &amp;nf, int &amp;f, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> &amp;fg, int &amp;fo, const int face_info)</td></tr>
+<tr class="memitem:a9740560a653615f8a108d20860518aa2 inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElementCollection.html#a9740560a653615f8a108d20860518aa2">GetFace</a> (int &amp;nv, v_t &amp;v, int &amp;ne, e_t &amp;e, eo_t &amp;eo, int &amp;nf, int &amp;<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> &amp;fg, int &amp;fo, const int face_info)</td></tr>
 <tr class="separator:a9740560a653615f8a108d20860518aa2 inherit pro_static_methods_classmfem_1_1FiniteElementCollection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arbitrary order H(div)-conforming Raviart-Thomas finite elements. </p>
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00191">191</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00272">272</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae707149ecfb81592c9ad2c6ee31bdfcb"></a>
 <div class="memitem">
@@ -230,7 +241,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>ob_type</em> = <code><a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a></code>&#160;</td>
+          <td class="paramname"><em>ob_type</em> = <code><a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02066">2066</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02262">2262</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,13 +280,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>cb_type</em> = <code><a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5289400991b692469b59ad94accfe75b">BasisType::GaussLobatto</a></code>, </td>
+          <td class="paramname"><em>cb_type</em> = <code><a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5289400991b692469b59ad94accfe75b">BasisType::GaussLobatto</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>ob_type</em> = <code><a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a></code>&#160;</td>
+          <td class="paramname"><em>ob_type</em> = <code><a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5a0697a53a2e7e071279142753913464">BasisType::GaussLegendre</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -285,7 +296,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02004">2004</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02200">2200</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +321,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02231">2231</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02427">2427</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +350,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1FiniteElementCollection.html#a570e8ba38c55aa98c34f9c7821489167">mfem::FiniteElementCollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00218">218</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00299">299</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +390,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1FiniteElementCollection.html#a8f8bfe746d389b3404d460c5a15139a3">mfem::FiniteElementCollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02197">2197</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02393">2393</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +418,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1FiniteElementCollection.html#ab8f117fa1884d4276daf171172e2c7aa">mfem::FiniteElementCollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00215">215</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00296">296</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37bab7079126d28b1354a321dce7c9c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int mfem::RT_FECollection::GetContType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classmfem_1_1FiniteElementCollection.html#a1e1728b5be2609a4b59c86738d596b57">mfem::FiniteElementCollection</a>.</p>
+
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00304">304</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +472,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1FiniteElementCollection.html#a7f020c5f3b515f00ccff18725ac6a919">mfem::FiniteElementCollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02215">2215</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02411">2411</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
 </div>
 </div>
@@ -482,7 +520,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02079">2079</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8cpp_source.html#l02275">2275</a> of file <a class="el" href="fe__coll_8cpp_source.html">fe_coll.cpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +547,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1FiniteElementCollection.html#a4b93b7c00224958c79d22115a224ecfd">mfem::FiniteElementCollection</a>.</p>
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00222">222</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00303">303</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -532,7 +570,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00194">194</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00275">275</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -554,7 +592,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00198">198</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00279">279</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -576,7 +614,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00197">197</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00278">278</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -598,7 +636,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00196">196</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00277">277</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +658,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00195">195</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00276">276</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +680,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00198">198</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00279">279</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +702,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00198">198</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe__coll_8hpp_source.html#l00279">279</a> of file <a class="el" href="fe__coll_8hpp_source.html">fe_coll.hpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +713,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:20 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:09 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

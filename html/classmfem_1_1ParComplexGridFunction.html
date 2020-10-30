@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -120,6 +121,7 @@ Collaboration diagram for mfem::ParComplexGridFunction:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a465f6ce1b31672b452fe7e9ce3fc3485"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#a465f6ce1b31672b452fe7e9ce3fc3485">ParComplexGridFunction</a> (<a class="el" href="classmfem_1_1ParFiniteElementSpace.html">ParFiniteElementSpace</a> *pf)</td></tr>
+<tr class="memdesc:a465f6ce1b31672b452fe7e9ce3fc3485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classmfem_1_1ParComplexGridFunction.html">ParComplexGridFunction</a> associated with the <a class="el" href="classmfem_1_1ParFiniteElementSpace.html" title="Abstract parallel finite element space. ">ParFiniteElementSpace</a> <em>*pf</em>.  <a href="#a465f6ce1b31672b452fe7e9ce3fc3485">More...</a><br/></td></tr>
 <tr class="separator:a465f6ce1b31672b452fe7e9ce3fc3485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23131888f53beee1d004e90ffe62d512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#a23131888f53beee1d004e90ffe62d512">Update</a> ()</td></tr>
 <tr class="separator:a23131888f53beee1d004e90ffe62d512"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +161,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1d4239035e21253aaee93dc23b99ddbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a3dbde8803a7ef4848b99c96187dfc5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1ParGridFunction.html">ParGridFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#a4a3dbde8803a7ef4848b99c96187dfc5">imag</a> () const </td></tr>
 <tr class="separator:a4a3dbde8803a7ef4848b99c96187dfc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e09766f3c832b240a3ac17b0c0f367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#a18e09766f3c832b240a3ac17b0c0f367">Sync</a> ()</td></tr>
+<tr class="separator:a18e09766f3c832b240a3ac17b0c0f367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae576f988770adf15a702b710be8f756a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#ae576f988770adf15a702b710be8f756a">SyncAlias</a> ()</td></tr>
+<tr class="separator:ae576f988770adf15a702b710be8f756a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69bb2225e3eb576611957ee6a117793c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#a69bb2225e3eb576611957ee6a117793c">ComputeL2Error</a> (<a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;exsolr, <a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;exsoli, const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[]=NULL) const </td></tr>
 <tr class="separator:a69bb2225e3eb576611957ee6a117793c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecdb565e1c5b8cb22ad543190f233ddb"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParComplexGridFunction.html#aecdb565e1c5b8cb22ad543190f233ddb">ComputeL2Error</a> (<a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;exsolr, <a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;exsoli, const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *irs[]=NULL, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; *elems=NULL) const </td></tr>
@@ -259,7 +265,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17cb7d5dd99cd51b737e49910d06a965 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a17cb7d5dd99cd51b737e49910d06a965">OwnsData</a> () const </td></tr>
 <tr class="memdesc:a17cb7d5dd99cd51b737e49910d06a965 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> data (host pointer) ownership flag.  <a href="#a17cb7d5dd99cd51b737e49910d06a965">More...</a><br/></td></tr>
 <tr class="separator:a17cb7d5dd99cd51b737e49910d06a965 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a55e44382f2860e0cb80642513910073f">StealData</a> (double **p)</td></tr>
+<tr class="memitem:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a55e44382f2860e0cb80642513910073f">StealData</a> (double **<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>)</td></tr>
 <tr class="memdesc:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the ownership of the data; after the call the <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> is empty.  <a href="#a55e44382f2860e0cb80642513910073f">More...</a><br/></td></tr>
 <tr class="separator:a55e44382f2860e0cb80642513910073f inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04bf130f15c61345c6b095ebd3171025 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a04bf130f15c61345c6b095ebd3171025">StealData</a> ()</td></tr>
@@ -300,6 +306,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02e54576470a59ccf4d20a5a58fb6ef6 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e463b4c3b2cabfeeaf297f961bae61 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ad5e463b4c3b2cabfeeaf297f961bae61">operator-=</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="separator:ad5e463b4c3b2cabfeeaf297f961bae61 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa245a25b1b49bd112f09b964f97dd99d inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#aa245a25b1b49bd112f09b964f97dd99d">operator+=</a> (double c)</td></tr>
+<tr class="separator:aa245a25b1b49bd112f09b964f97dd99d inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22792f443dedb1cf48ecdb32a84d8620 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a22792f443dedb1cf48ecdb32a84d8620">operator+=</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="separator:a22792f443dedb1cf48ecdb32a84d8620 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d3e17a103977e3e5d3fe41da0b47c07 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a8d3e17a103977e3e5d3fe41da0b47c07">Add</a> (const double <a class="el" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;Va)</td></tr>
@@ -320,29 +328,37 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2bce958d41c9392c8002f76b33b6d025 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">v = median(v,lo,hi) entrywise. Implementation assumes lo &lt;= hi.  <a href="#a2bce958d41c9392c8002f76b33b6d025">More...</a><br/></td></tr>
 <tr class="separator:a2bce958d41c9392c8002f76b33b6d025 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca621edcd2c8b45bd358f484cf57ff9 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a8ca621edcd2c8b45bd358f484cf57ff9">GetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect) const </td></tr>
+<tr class="memdesc:a8ca621edcd2c8b45bd358f484cf57ff9 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract entries listed in <em>dofs</em> to the output <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> <em>elemvect</em>.  <a href="#a8ca621edcd2c8b45bd358f484cf57ff9">More...</a><br/></td></tr>
 <tr class="separator:a8ca621edcd2c8b45bd358f484cf57ff9 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c7d3042cd34980425491c3fe54d8ca6 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a0c7d3042cd34980425491c3fe54d8ca6">GetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, double *elem_data) const </td></tr>
+<tr class="memdesc:a0c7d3042cd34980425491c3fe54d8ca6 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract entries listed in <em>dofs</em> to the output array <em>elem_data</em>.  <a href="#a0c7d3042cd34980425491c3fe54d8ca6">More...</a><br/></td></tr>
 <tr class="separator:a0c7d3042cd34980425491c3fe54d8ca6 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a9cce8215d185deab7fb54f6d727b5e51">SetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const double value)</td></tr>
-<tr class="memdesc:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <code>dofs</code> to the given <code>value</code>.  <a href="#a9cce8215d185deab7fb54f6d727b5e51">More...</a><br/></td></tr>
+<tr class="memdesc:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <em>dofs</em> to the given <em>value</em>.  <a href="#a9cce8215d185deab7fb54f6d727b5e51">More...</a><br/></td></tr>
 <tr class="separator:a9cce8215d185deab7fb54f6d727b5e51 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71a7efe7e9ea6aa87a0ef7b9f169fe97 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a71a7efe7e9ea6aa87a0ef7b9f169fe97">SetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</td></tr>
+<tr class="memdesc:a71a7efe7e9ea6aa87a0ef7b9f169fe97 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <em>dofs</em> to the values given in the <em>elemvect</em> <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to receive the -val from <em>elemvect</em>.  <a href="#a71a7efe7e9ea6aa87a0ef7b9f169fe97">More...</a><br/></td></tr>
 <tr class="separator:a71a7efe7e9ea6aa87a0ef7b9f169fe97 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a6ef8f5fc7d5e2b44f4710604847f33 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a4a6ef8f5fc7d5e2b44f4710604847f33">SetSubVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, double *elem_data)</td></tr>
+<tr class="memdesc:a4a6ef8f5fc7d5e2b44f4710604847f33 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entries listed in <em>dofs</em> to the values given the <em></em>, elem_data array. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to receive the -val from <em>elem_data</em>.  <a href="#a4a6ef8f5fc7d5e2b44f4710604847f33">More...</a><br/></td></tr>
 <tr class="separator:a4a6ef8f5fc7d5e2b44f4710604847f33 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a6b60ed4dac14bacad367a02ac8fc973c">AddElementVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</td></tr>
-<tr class="memdesc:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add (element) subvector to the vector.  <a href="#a6b60ed4dac14bacad367a02ac8fc973c">More...</a><br/></td></tr>
+<tr class="memdesc:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add elements of the <em>elemvect</em> <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to the entries listed in <em>dofs</em>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to add the -val from <em>elemvect</em>.  <a href="#a6b60ed4dac14bacad367a02ac8fc973c">More...</a><br/></td></tr>
 <tr class="separator:a6b60ed4dac14bacad367a02ac8fc973c inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd3a81244376b6a747f475f5b7ba24f inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#abdd3a81244376b6a747f475f5b7ba24f">AddElementVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, double *elem_data)</td></tr>
+<tr class="memdesc:abdd3a81244376b6a747f475f5b7ba24f inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add elements of the <em>elem_data</em> array to the entries listed in <em>dofs</em>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to add the -val from <em>elem_data</em>.  <a href="#abdd3a81244376b6a747f475f5b7ba24f">More...</a><br/></td></tr>
 <tr class="separator:abdd3a81244376b6a747f475f5b7ba24f inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df5321091250399750bae8b0ebc7881 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a7df5321091250399750bae8b0ebc7881">AddElementVector</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const double <a class="el" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elemvect)</td></tr>
+<tr class="memdesc:a7df5321091250399750bae8b0ebc7881 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <em>times</em> the elements of the <em>elemvect</em> <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to the entries listed in <em>dofs</em>. Negative dof values cause the -dof-1 position in this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> to add the -a*val from <em>elemvect</em>.  <a href="#a7df5321091250399750bae8b0ebc7881">More...</a><br/></td></tr>
 <tr class="separator:a7df5321091250399750bae8b0ebc7881 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#aab941790a2f15dd6dafcba2446078599">SetSubVectorComplement</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;dofs, const double val)</td></tr>
-<tr class="memdesc:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all vector entries NOT in the 'dofs' array to the given 'val'.  <a href="#aab941790a2f15dd6dafcba2446078599">More...</a><br/></td></tr>
+<tr class="memdesc:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all vector entries NOT in the <em>dofs</em> <a class="el" href="classmfem_1_1Array.html">Array</a> to the given <em>val</em>.  <a href="#aab941790a2f15dd6dafcba2446078599">More...</a><br/></td></tr>
 <tr class="separator:aab941790a2f15dd6dafcba2446078599 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9daeb026103f7cb7cb235bbd74b2cc1 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ad9daeb026103f7cb7cb235bbd74b2cc1">Print</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>, int width=8) const </td></tr>
 <tr class="memdesc:ad9daeb026103f7cb7cb235bbd74b2cc1 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints vector to stream out.  <a href="#ad9daeb026103f7cb7cb235bbd74b2cc1">More...</a><br/></td></tr>
 <tr class="separator:ad9daeb026103f7cb7cb235bbd74b2cc1 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3a2a97b9ef48f26ad050f83b8ab366 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a0c3a2a97b9ef48f26ad050f83b8ab366">Print</a> (<a class="el" href="classmfem_1_1adios2stream.html">adios2stream</a> &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, const std::string &amp;variable_name) const </td></tr>
+<tr class="separator:a0c3a2a97b9ef48f26ad050f83b8ab366 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0b8fc3d3050cdf77ba179e36baa3a2 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a9e0b8fc3d3050cdf77ba179e36baa3a2">Print_HYPRE</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
 <tr class="memdesc:a9e0b8fc3d3050cdf77ba179e36baa3a2 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints vector to stream out in HYPRE_Vector format.  <a href="#a9e0b8fc3d3050cdf77ba179e36baa3a2">More...</a><br/></td></tr>
 <tr class="separator:a9e0b8fc3d3050cdf77ba179e36baa3a2 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,7 +374,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2179778c9280164d67965c1928ac323b inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a2179778c9280164d67965c1928ac323b">Norml1</a> () const </td></tr>
 <tr class="memdesc:a2179778c9280164d67965c1928ac323b inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the l_1 norm of the vector.  <a href="#a2179778c9280164d67965c1928ac323b">More...</a><br/></td></tr>
 <tr class="separator:a2179778c9280164d67965c1928ac323b inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">Normlp</a> (double p) const </td></tr>
+<tr class="memitem:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#acb6cb38c9c66d2bb8b3b787a56dc9c17">Normlp</a> (double <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>) const </td></tr>
 <tr class="memdesc:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the l_p norm of the vector.  <a href="#acb6cb38c9c66d2bb8b3b787a56dc9c17">More...</a><br/></td></tr>
 <tr class="separator:acb6cb38c9c66d2bb8b3b787a56dc9c17 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd093a12adfa89412e68a29d2f2d855e inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afd093a12adfa89412e68a29d2f2d855e">Max</a> () const </td></tr>
@@ -370,10 +386,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a944c4f53027b4437376f155eef3e783e inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a944c4f53027b4437376f155eef3e783e">Sum</a> () const </td></tr>
 <tr class="memdesc:a944c4f53027b4437376f155eef3e783e inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the sum of the vector entries.  <a href="#a944c4f53027b4437376f155eef3e783e">More...</a><br/></td></tr>
 <tr class="separator:a944c4f53027b4437376f155eef3e783e inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a3250b9853962eafc7fb8d1ccde54625d">DistanceSquaredTo</a> (const double *p) const </td></tr>
+<tr class="memitem:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a3250b9853962eafc7fb8d1ccde54625d">DistanceSquaredTo</a> (const double *<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>) const </td></tr>
 <tr class="memdesc:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the square of the Euclidean distance to another vector.  <a href="#a3250b9853962eafc7fb8d1ccde54625d">More...</a><br/></td></tr>
 <tr class="separator:a3250b9853962eafc7fb8d1ccde54625d inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">DistanceTo</a> (const double *p) const </td></tr>
+<tr class="memitem:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#adbf3230332957c7ead495539244b7c92">DistanceTo</a> (const double *<a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>) const </td></tr>
 <tr class="memdesc:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Euclidean distance to another vector.  <a href="#adbf3230332957c7ead495539244b7c92">More...</a><br/></td></tr>
 <tr class="separator:adbf3230332957c7ead495539244b7c92 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af810eb5fef8f501c70a0968b235545a5 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#af810eb5fef8f501c70a0968b235545a5">CheckFinite</a> () const </td></tr>
@@ -400,15 +416,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d2681c547a61144de51b5c2ebac3b49 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a9d2681c547a61144de51b5c2ebac3b49">HostReadWrite</a> ()</td></tr>
 <tr class="memdesc:a9d2681c547a61144de51b5c2ebac3b49 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for <a class="el" href="namespacemfem.html#a5a0acd469def65d7eea4894812d6c64e" title="Get a pointer for read+write access to mem with the mfem::Device&#39;s DeviceMemoryClass, if on_dev = true, or the mfem::Device&#39;s HostMemoryClass, otherwise. ">mfem::ReadWrite</a>(vec.GetMemory(), vec.Size(), false).  <a href="#a9d2681c547a61144de51b5c2ebac3b49">More...</a><br/></td></tr>
 <tr class="separator:a9d2681c547a61144de51b5c2ebac3b49 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afb59ea4e6f9be4e43fc4aea5bba8ac32">Vector</a> (N_Vector nv)</td></tr>
-<tr class="memdesc:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a wrapper <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> from SUNDIALS N_Vector.  <a href="#afb59ea4e6f9be4e43fc4aea5bba8ac32">More...</a><br/></td></tr>
+<tr class="memitem:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">MFEM_DEPRECATED&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#afb59ea4e6f9be4e43fc4aea5bba8ac32">Vector</a> (N_Vector nv)</td></tr>
+<tr class="memdesc:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Construct a wrapper <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> from SUNDIALS N_Vector.  <a href="#afb59ea4e6f9be4e43fc4aea5bba8ac32">More...</a><br/></td></tr>
 <tr class="separator:afb59ea4e6f9be4e43fc4aea5bba8ac32 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae57e28986cba33973ceda52cb4b924be inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual N_Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#ae57e28986cba33973ceda52cb4b924be">ToNVector</a> ()</td></tr>
-<tr class="memdesc:ae57e28986cba33973ceda52cb4b924be inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new wrapper SUNDIALS N_Vector of type SUNDIALS_NVEC_SERIAL.  <a href="#ae57e28986cba33973ceda52cb4b924be">More...</a><br/></td></tr>
-<tr class="separator:ae57e28986cba33973ceda52cb4b924be inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111395885732d77556d6c1b9a3000399 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a111395885732d77556d6c1b9a3000399">ToNVector</a> (N_Vector &amp;nv)</td></tr>
-<tr class="memdesc:a111395885732d77556d6c1b9a3000399 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an existing wrapper SUNDIALS N_Vector to point to this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>.  <a href="#a111395885732d77556d6c1b9a3000399">More...</a><br/></td></tr>
-<tr class="separator:a111395885732d77556d6c1b9a3000399 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f20e5244675bd11273dc016b4d00668 inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual MFEM_DEPRECATED N_Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a4f20e5244675bd11273dc016b4d00668">ToNVector</a> ()</td></tr>
+<tr class="memdesc:a4f20e5244675bd11273dc016b4d00668 inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Return a new wrapper SUNDIALS N_Vector of type SUNDIALS_NVEC_SERIAL.  <a href="#a4f20e5244675bd11273dc016b4d00668">More...</a><br/></td></tr>
+<tr class="separator:a4f20e5244675bd11273dc016b4d00668 inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6b5ed8dd5b767fba31a69b6d423ccb inherit pub_methods_classmfem_1_1Vector"><td class="memItemLeft" align="right" valign="top">virtual MFEM_DEPRECATED void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Vector.html#a2d6b5ed8dd5b767fba31a69b6d423ccb">ToNVector</a> (N_Vector &amp;nv, long global_length=0)</td></tr>
+<tr class="memdesc:a2d6b5ed8dd5b767fba31a69b6d423ccb inherit pub_methods_classmfem_1_1Vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an existing wrapper SUNDIALS N_Vector to point to this <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>.  <a href="#a2d6b5ed8dd5b767fba31a69b6d423ccb">More...</a><br/></td></tr>
+<tr class="separator:a2d6b5ed8dd5b767fba31a69b6d423ccb inherit pub_methods_classmfem_1_1Vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -426,7 +442,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for parallel complex-valued grid function - real + imaginary part <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with associated parallel FE space. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00299">299</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00331">331</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a465f6ce1b31672b452fe7e9ce3fc3485"></a>
 <div class="memitem">
@@ -442,7 +458,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00503">503</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Construct a <a class="el" href="classmfem_1_1ParComplexGridFunction.html">ParComplexGridFunction</a> associated with the <a class="el" href="classmfem_1_1ParFiniteElementSpace.html" title="Abstract parallel finite element space. ">ParFiniteElementSpace</a> <em>*pf</em>. </p>
+
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00640">640</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -469,7 +487,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Destroys grid function. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00373">373</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00414">414</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +530,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00353">353</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00394">394</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -560,7 +578,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00361">361</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00402">402</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +603,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00307">307</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00339">339</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -603,7 +621,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00607">607</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00773">773</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -629,7 +647,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00337">337</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00369">369</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -654,7 +672,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00342">342</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00374">374</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -679,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00343">343</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00375">375</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -704,7 +722,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00349">349</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00381">381</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -729,7 +747,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00351">351</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00383">383</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +775,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Assign constant values to the <a class="el" href="classmfem_1_1ParComplexGridFunction.html">ParComplexGridFunction</a> data. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00318">318</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00350">350</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -777,7 +795,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the vector restricted to the true dofs. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00621">621</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00791">791</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -802,7 +820,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00345">345</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00377">377</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -827,7 +845,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00346">346</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00378">378</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -869,7 +887,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00576">576</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00730">730</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -911,7 +929,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00585">585</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00743">743</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -953,7 +971,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00596">596</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00758">758</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1007,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00560">560</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00706">706</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1043,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00568">568</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00718">718</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1068,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00348">348</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00380">380</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1093,59 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00350">350</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00382">382</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18e09766f3c832b240a3ac17b0c0f367"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParComplexGridFunction::Sync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update the memory location of the real and imaginary <a class="el" href="classmfem_1_1ParGridFunction.html" title="Class for parallel grid function. ">ParGridFunction</a> <em>pgfr</em> and <em>pgfi</em> to match the <a class="el" href="classmfem_1_1ParComplexGridFunction.html">ParComplexGridFunction</a>. </p>
+
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00387">387</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae576f988770adf15a702b710be8f756a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParComplexGridFunction::SyncAlias </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update the alias memory location of the real and imaginary <a class="el" href="classmfem_1_1ParGridFunction.html" title="Class for parallel grid function. ">ParGridFunction</a> <em>pgfr</em> and <em>pgfi</em> to match the <a class="el" href="classmfem_1_1ParComplexGridFunction.html">ParComplexGridFunction</a>. </p>
+
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00391">391</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1162,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00511">511</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00654">654</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1173,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -172,7 +173,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">static</span> <span class="keywordtype">double</span> k_ = 1.0;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// Hamiltonian functional, see below for implementation</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">double</span> <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(<span class="keywordtype">double</span> q, <span class="keywordtype">double</span> p, <span class="keywordtype">double</span> t);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">double</span> <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(<span class="keywordtype">double</span> q, <span class="keywordtype">double</span> <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, <span class="keywordtype">double</span> t);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">class </span>GradT : <span class="keyword">public</span> <a class="code" href="classmfem_1_1Operator.html">Operator</a></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
@@ -250,10 +251,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   <span class="comment">// 4. Set the initial conditions</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;   <span class="keywordtype">double</span> t = 0.0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> q(1), p(1);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> q(1), <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(1);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;   <a class="code" href="classmfem_1_1Vector.html">Vector</a> e(nsteps+1);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;   q(0) = sin(2.0*M_PI*(<span class="keywordtype">double</span>)myid/num_procs);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   p(0) = cos(2.0*M_PI*(<span class="keywordtype">double</span>)myid/num_procs);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0) = cos(2.0*M_PI*(<span class="keywordtype">double</span>)myid/num_procs);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;   <span class="comment">// 5. Prepare GnuPlot output file if needed</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   ostringstream oss;</div>
@@ -262,7 +263,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      oss &lt;&lt; <span class="stringliteral">&quot;ex20p_&quot;</span> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; setw(5) &lt;&lt; myid &lt;&lt; <span class="stringliteral">&quot;.dat&quot;</span>;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      ofs.open(oss.str().c_str());</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      ofs &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; q(0) &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; p(0) &lt;&lt; endl;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      ofs &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; q(0) &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0) &lt;&lt; endl;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;   }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;   <span class="comment">// 6. Create a Mesh for visualization in phase space</span></div>
@@ -283,49 +284,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      <span class="comment">// 7a. Record initial state</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">if</span> (i == 0)</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;         e[0] = <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(q(0),p(0),t);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;         e[0] = <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(q(0),<a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0),t);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;         e_mean += e[0];</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;         <span class="keywordflow">if</span> (visualization)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;         {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            mesh.<a class="code" href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">AddVertex</a>(x0);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            mesh.<a class="code" href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">AddVertex</a>(x0);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_procs; j++)</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            {</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;               x1[0] = q(0);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;               x1[1] = p(0);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;               x1[1] = <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;               x1[2] = 0.0;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;               mesh.<a class="code" href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">AddVertex</a>(x1);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;               mesh.<a class="code" href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">AddVertex</a>(x1);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;         }</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      }</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="comment">// 7b. Advance the state of the system</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      siaSolver.<a class="code" href="classmfem_1_1SIAVSolver.html#a9802ab6a09e44f4f6bf29b38c9080ef9">Step</a>(q,p,t,dt);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      e[i+1] = <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(q(0),p(0),t);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      siaSolver.<a class="code" href="classmfem_1_1SIAVSolver.html#a86185bd64b2e421299ad859949097c16">Step</a>(q,p,t,dt);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      e[i+1] = <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(q(0),<a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0),t);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      e_mean += e[i+1];</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      <span class="comment">// 7c. Record the state of the system</span></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">if</span> (gnuplot)</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;         ofs &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; q(0) &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; p(0) &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; e[i+1] &lt;&lt; endl;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;         ofs &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; q(0) &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0) &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; e[i+1] &lt;&lt; endl;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <span class="comment">// 7d. Add results to GLVis visualization</span></div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">if</span> (visualization)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;         x0[2] = t;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;         mesh.<a class="code" href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">AddVertex</a>(x0);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;         mesh.<a class="code" href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">AddVertex</a>(x0);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_procs; j++)</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;         {</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            x1[0] = q(0);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            x1[1] = p(0);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            x1[1] = <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>(0);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            x1[2] = t;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            mesh.<a class="code" href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">AddVertex</a>(x1);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            mesh.<a class="code" href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">AddVertex</a>(x1);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            v[0] = (num_procs + 1) * i;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            v[1] = (num_procs + 1) * (i + 1);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            v[2] = (num_procs + 1) * (i + 1) + j + 1;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            v[3] = (num_procs + 1) * i + j + 1;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            mesh.<a class="code" href="classmfem_1_1Mesh.html#a3d4aaa3646cd2868f1ead0d7cfed86f2">AddQuad</a>(v);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            mesh.<a class="code" href="classmfem_1_1Mesh.html#a2b5fa142fea0b8b987b62093217c2ff1">AddQuad</a>(v);</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            part[num_procs * i + j] = j;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;         }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      }</div>
@@ -402,8 +403,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;         energy[2*i+1] = e[i];</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      }</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="keywordtype">char</span> vishost[] = <span class="stringliteral">&quot;localhost&quot;</span>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keywordtype">int</span>  visport   = 19916;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="keywordtype">char</span> <a class="code" href="minimal-surface_8cpp.html#a2e0cdf1a7a04e13f9e1929d04f6abd4a">vishost</a>[] = <span class="stringliteral">&quot;localhost&quot;</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keywordtype">int</span>  <a class="code" href="minimal-surface_8cpp.html#a39e4e7c4b54ea995afe2087b803ffe19">visport</a>   = 19916;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <a class="code" href="classmfem_1_1socketstream.html">socketstream</a> sock(vishost, visport);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      sock.precision(8);</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      sock &lt;&lt; <span class="stringliteral">&quot;parallel &quot;</span> &lt;&lt; num_procs &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; myid &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
@@ -415,7 +416,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;   MPI_Finalize();</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keywordtype">double</span> <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(<span class="keywordtype">double</span> q, <span class="keywordtype">double</span> p, <span class="keywordtype">double</span> t)</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keywordtype">double</span> <a class="code" href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a>(<span class="keywordtype">double</span> q, <span class="keywordtype">double</span> <a class="code" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, <span class="keywordtype">double</span> t)</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;   <span class="keywordtype">double</span> h = 1.0 - 0.5 / m_ + 0.5 * p * p / m_;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;   <span class="keywordflow">switch</span> (prob_)</div>
@@ -461,35 +462,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   };</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
 <div class="ttc" id="ex20_8cpp_html_a7138123173eaf7548f2f07454b5b4974"><div class="ttname"><a href="ex20_8cpp.html#a7138123173eaf7548f2f07454b5b4974">hamiltonian</a></div><div class="ttdeci">double hamiltonian(double q, double p, double t)</div><div class="ttdef"><b>Definition:</b> <a href="ex20_8cpp_source.html#l00254">ex20.cpp:254</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00049">mesh.hpp:49</a></div></div>
-<div class="ttc" id="classmfem_1_1SIASolver_html_a5a3ba28dc9f96c56bc0ab228876755c7"><div class="ttname"><a href="classmfem_1_1SIASolver.html#a5a3ba28dc9f96c56bc0ab228876755c7">mfem::SIASolver::Init</a></div><div class="ttdeci">virtual void Init(Operator &amp;P, TimeDependentOperator &amp;F)</div><div class="ttdef"><b>Definition:</b> <a href="ode_8cpp_source.html#l00713">ode.cpp:713</a></div></div>
-<div class="ttc" id="classmfem_1_1TimeDependentOperator_html"><div class="ttname"><a href="classmfem_1_1TimeDependentOperator.html">mfem::TimeDependentOperator</a></div><div class="ttdoc">Base abstract class for first order time dependent operators. </div><div class="ttdef"><b>Definition:</b> <a href="operator_8hpp_source.html#l00259">operator.hpp:259</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00052">mesh.hpp:52</a></div></div>
+<div class="ttc" id="classmfem_1_1SIASolver_html_a5a3ba28dc9f96c56bc0ab228876755c7"><div class="ttname"><a href="classmfem_1_1SIASolver.html#a5a3ba28dc9f96c56bc0ab228876755c7">mfem::SIASolver::Init</a></div><div class="ttdeci">virtual void Init(Operator &amp;P, TimeDependentOperator &amp;F)</div><div class="ttdef"><b>Definition:</b> <a href="ode_8cpp_source.html#l00790">ode.cpp:790</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a2b5fa142fea0b8b987b62093217c2ff1"><div class="ttname"><a href="classmfem_1_1Mesh.html#a2b5fa142fea0b8b987b62093217c2ff1">mfem::Mesh::AddQuad</a></div><div class="ttdeci">int AddQuad(int v1, int v2, int v3, int v4, int attr=1)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l01293">mesh.cpp:1293</a></div></div>
+<div class="ttc" id="classmfem_1_1TimeDependentOperator_html"><div class="ttname"><a href="classmfem_1_1TimeDependentOperator.html">mfem::TimeDependentOperator</a></div><div class="ttdoc">Base abstract class for first order time dependent operators. </div><div class="ttdef"><b>Definition:</b> <a href="operator_8hpp_source.html#l00267">operator.hpp:267</a></div></div>
 <div class="ttc" id="namespacemfem_html_a2e66df64396d3a16eea7b2623380f51b"><div class="ttname"><a href="namespacemfem.html#a2e66df64396d3a16eea7b2623380f51b">mfem::Mult</a></div><div class="ttdeci">void Mult(const Table &amp;A, const Table &amp;B, Table &amp;C)</div><div class="ttdoc">C = A * B (as boolean matrices) </div><div class="ttdef"><b>Definition:</b> <a href="table_8cpp_source.html#l00476">table.cpp:476</a></div></div>
 <div class="ttc" id="classmfem_1_1ParFiniteElementSpace_html"><div class="ttname"><a href="classmfem_1_1ParFiniteElementSpace.html">mfem::ParFiniteElementSpace</a></div><div class="ttdoc">Abstract parallel finite element space. </div><div class="ttdef"><b>Definition:</b> <a href="pfespace_8hpp_source.html#l00028">pfespace.hpp:28</a></div></div>
-<div class="ttc" id="examples_2ex1_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="examples_2ex1_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="examples_2ex1_8cpp_source.html#l00062">ex1.cpp:62</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_abe28779bbf2ddacf27e8d74cf3ac6087"><div class="ttname"><a href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">mfem::Mesh::AddVertex</a></div><div class="ttdeci">void AddVertex(const double *)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l01155">mesh.cpp:1155</a></div></div>
-<div class="ttc" id="classmfem_1_1OptionsParser_html_a40c1d9865e6d5f27331951c94ca34b9c"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a40c1d9865e6d5f27331951c94ca34b9c">mfem::OptionsParser::Parse</a></div><div class="ttdeci">void Parse()</div><div class="ttdef"><b>Definition:</b> <a href="optparser_8cpp_source.html#l00150">optparser.cpp:150</a></div></div>
-<div class="ttc" id="classmfem_1_1OptionsParser_html_a39c517420a3718e49674f49188a59e34"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a39c517420a3718e49674f49188a59e34">mfem::OptionsParser::PrintUsage</a></div><div class="ttdeci">void PrintUsage(std::ostream &amp;out) const </div><div class="ttdef"><b>Definition:</b> <a href="optparser_8cpp_source.html#l00434">optparser.cpp:434</a></div></div>
-<div class="ttc" id="classmfem_1_1socketstream_html"><div class="ttname"><a href="classmfem_1_1socketstream.html">mfem::socketstream</a></div><div class="ttdef"><b>Definition:</b> <a href="socketstream_8hpp_source.html#l00203">socketstream.hpp:203</a></div></div>
+<div class="ttc" id="examples_2ex1_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="examples_2ex1_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="examples_2ex1_8cpp_source.html#l00066">ex1.cpp:66</a></div></div>
+<div class="ttc" id="classmfem_1_1SIAVSolver_html_a86185bd64b2e421299ad859949097c16"><div class="ttname"><a href="classmfem_1_1SIAVSolver.html#a86185bd64b2e421299ad859949097c16">mfem::SIAVSolver::Step</a></div><div class="ttdeci">void Step(Vector &amp;q, Vector &amp;p, double &amp;t, double &amp;dt) override</div><div class="ttdef"><b>Definition:</b> <a href="ode_8cpp_source.html#l00869">ode.cpp:869</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_ad9950e1768fac1c8ee0a54f219c4a9ba"><div class="ttname"><a href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">mfem::Mesh::AddVertex</a></div><div class="ttdeci">int AddVertex(double x, double y=0.0, double z=0.0)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l01232">mesh.cpp:1232</a></div></div>
+<div class="ttc" id="classmfem_1_1OptionsParser_html_a40c1d9865e6d5f27331951c94ca34b9c"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a40c1d9865e6d5f27331951c94ca34b9c">mfem::OptionsParser::Parse</a></div><div class="ttdeci">void Parse()</div><div class="ttdoc">Parse the command-line options. Note that this function expects all the options provided through the ...</div><div class="ttdef"><b>Definition:</b> <a href="optparser_8cpp_source.html#l00150">optparser.cpp:150</a></div></div>
+<div class="ttc" id="minimal-surface_8cpp_html_a2e0cdf1a7a04e13f9e1929d04f6abd4a"><div class="ttname"><a href="minimal-surface_8cpp.html#a2e0cdf1a7a04e13f9e1929d04f6abd4a">vishost</a></div><div class="ttdeci">constexpr char vishost[]</div><div class="ttdef"><b>Definition:</b> <a href="minimal-surface_8cpp_source.html#l00084">minimal-surface.cpp:84</a></div></div>
+<div class="ttc" id="minimal-surface_8cpp_html_a39e4e7c4b54ea995afe2087b803ffe19"><div class="ttname"><a href="minimal-surface_8cpp.html#a39e4e7c4b54ea995afe2087b803ffe19">visport</a></div><div class="ttdeci">constexpr int visport</div><div class="ttdef"><b>Definition:</b> <a href="minimal-surface_8cpp_source.html#l00083">minimal-surface.cpp:83</a></div></div>
+<div class="ttc" id="classmfem_1_1OptionsParser_html_a39c517420a3718e49674f49188a59e34"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a39c517420a3718e49674f49188a59e34">mfem::OptionsParser::PrintUsage</a></div><div class="ttdeci">void PrintUsage(std::ostream &amp;out) const </div><div class="ttdoc">Print the usage message. </div><div class="ttdef"><b>Definition:</b> <a href="optparser_8cpp_source.html#l00434">optparser.cpp:434</a></div></div>
+<div class="ttc" id="classmfem_1_1socketstream_html"><div class="ttname"><a href="classmfem_1_1socketstream.html">mfem::socketstream</a></div><div class="ttdef"><b>Definition:</b> <a href="socketstream_8hpp_source.html#l00210">socketstream.hpp:210</a></div></div>
 <div class="ttc" id="classmfem_1_1OptionsParser_html"><div class="ttname"><a href="classmfem_1_1OptionsParser.html">mfem::OptionsParser</a></div><div class="ttdef"><b>Definition:</b> <a href="optparser_8hpp_source.html#l00031">optparser.hpp:31</a></div></div>
+<div class="ttc" id="navier__mms_8cpp_html_aad69e558efc20c74b91561cc5721ca1a"><div class="ttname"><a href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a></div><div class="ttdeci">double p(const Vector &amp;x, double t)</div><div class="ttdef"><b>Definition:</b> <a href="navier__mms_8cpp_source.html#l00053">navier_mms.cpp:53</a></div></div>
 <div class="ttc" id="mfem_8hpp_html"><div class="ttname"><a href="mfem_8hpp.html">mfem.hpp</a></div></div>
-<div class="ttc" id="classmfem_1_1OptionsParser_html_a89d9b7f6e802eee842a4405279ec49f8"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a89d9b7f6e802eee842a4405279ec49f8">mfem::OptionsParser::AddOption</a></div><div class="ttdeci">void AddOption(bool *var, const char *enable_short_name, const char *enable_long_name, const char *disable_short_name, const char *disable_long_name, const char *description, bool required=false)</div><div class="ttdef"><b>Definition:</b> <a href="optparser_8hpp_source.html#l00076">optparser.hpp:76</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a3d4aaa3646cd2868f1ead0d7cfed86f2"><div class="ttname"><a href="classmfem_1_1Mesh.html#a3d4aaa3646cd2868f1ead0d7cfed86f2">mfem::Mesh::AddQuad</a></div><div class="ttdeci">void AddQuad(const int *vi, int attr=1)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l01181">mesh.cpp:1181</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html_a755a478e79bbde6b7a65f45983f84c4d"><div class="ttname"><a href="classmfem_1_1Vector.html#a755a478e79bbde6b7a65f45983f84c4d">mfem::Vector::Set</a></div><div class="ttdeci">Vector &amp; Set(const double a, const Vector &amp;x)</div><div class="ttdoc">(*this) = a * x </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00205">vector.cpp:205</a></div></div>
-<div class="ttc" id="classmfem_1_1SIAVSolver_html_a9802ab6a09e44f4f6bf29b38c9080ef9"><div class="ttname"><a href="classmfem_1_1SIAVSolver.html#a9802ab6a09e44f4f6bf29b38c9080ef9">mfem::SIAVSolver::Step</a></div><div class="ttdeci">void Step(Vector &amp;q, Vector &amp;p, double &amp;t, double &amp;dt)</div><div class="ttdef"><b>Definition:</b> <a href="ode_8cpp_source.html#l00792">ode.cpp:792</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a825fc276238967619094d0c100b87006"><div class="ttname"><a href="classmfem_1_1Mesh.html#a825fc276238967619094d0c100b87006">mfem::Mesh::FinalizeQuadMesh</a></div><div class="ttdeci">void FinalizeQuadMesh(int generate_edges=0, int refine=0, bool fix_orientation=true)</div><div class="ttdoc">Finalize the construction of a quadrilateral Mesh. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l01357">mesh.cpp:1357</a></div></div>
-<div class="ttc" id="classmfem_1_1OptionsParser_html_a8aa607c1f15b1385489ebaf588b7ffa1"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a8aa607c1f15b1385489ebaf588b7ffa1">mfem::OptionsParser::PrintOptions</a></div><div class="ttdeci">void PrintOptions(std::ostream &amp;out) const </div><div class="ttdef"><b>Definition:</b> <a href="optparser_8cpp_source.html#l00304">optparser.cpp:304</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00048">vector.hpp:48</a></div></div>
-<div class="ttc" id="classmfem_1_1H1__FECollection_html"><div class="ttname"><a href="classmfem_1_1H1__FECollection.html">mfem::H1_FECollection</a></div><div class="ttdoc">Arbitrary order H1-conforming (continuous) finite elements. </div><div class="ttdef"><b>Definition:</b> <a href="fe__coll_8hpp_source.html#l00083">fe_coll.hpp:83</a></div></div>
+<div class="ttc" id="classmfem_1_1OptionsParser_html_a89d9b7f6e802eee842a4405279ec49f8"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a89d9b7f6e802eee842a4405279ec49f8">mfem::OptionsParser::AddOption</a></div><div class="ttdeci">void AddOption(bool *var, const char *enable_short_name, const char *enable_long_name, const char *disable_short_name, const char *disable_long_name, const char *description, bool required=false)</div><div class="ttdoc">Add a boolean option and set &amp;#39;var&amp;#39; to receive the value. Enable/disable tags are used to set the bool...</div><div class="ttdef"><b>Definition:</b> <a href="optparser_8hpp_source.html#l00082">optparser.hpp:82</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html_a755a478e79bbde6b7a65f45983f84c4d"><div class="ttname"><a href="classmfem_1_1Vector.html#a755a478e79bbde6b7a65f45983f84c4d">mfem::Vector::Set</a></div><div class="ttdeci">Vector &amp; Set(const double a, const Vector &amp;x)</div><div class="ttdoc">(*this) = a * x </div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00228">vector.cpp:228</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a825fc276238967619094d0c100b87006"><div class="ttname"><a href="classmfem_1_1Mesh.html#a825fc276238967619094d0c100b87006">mfem::Mesh::FinalizeQuadMesh</a></div><div class="ttdeci">void FinalizeQuadMesh(int generate_edges=0, int refine=0, bool fix_orientation=true)</div><div class="ttdoc">Finalize the construction of a quadrilateral Mesh. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l01547">mesh.cpp:1547</a></div></div>
+<div class="ttc" id="classmfem_1_1OptionsParser_html_a8aa607c1f15b1385489ebaf588b7ffa1"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#a8aa607c1f15b1385489ebaf588b7ffa1">mfem::OptionsParser::PrintOptions</a></div><div class="ttdeci">void PrintOptions(std::ostream &amp;out) const </div><div class="ttdoc">Print the options. </div><div class="ttdef"><b>Definition:</b> <a href="optparser_8cpp_source.html#l00304">optparser.cpp:304</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00051">vector.hpp:51</a></div></div>
+<div class="ttc" id="classmfem_1_1H1__FECollection_html"><div class="ttname"><a href="classmfem_1_1H1__FECollection.html">mfem::H1_FECollection</a></div><div class="ttdoc">Arbitrary order H1-conforming (continuous) finite elements. </div><div class="ttdef"><b>Definition:</b> <a href="fe__coll_8hpp_source.html#l00159">fe_coll.hpp:159</a></div></div>
 <div class="ttc" id="classmfem_1_1ParGridFunction_html"><div class="ttname"><a href="classmfem_1_1ParGridFunction.html">mfem::ParGridFunction</a></div><div class="ttdoc">Class for parallel grid function. </div><div class="ttdef"><b>Definition:</b> <a href="pgridfunc_8hpp_source.html#l00032">pgridfunc.hpp:32</a></div></div>
 <div class="ttc" id="classmfem_1_1Operator_html"><div class="ttname"><a href="classmfem_1_1Operator.html">mfem::Operator</a></div><div class="ttdoc">Abstract operator. </div><div class="ttdef"><b>Definition:</b> <a href="operator_8hpp_source.html#l00024">operator.hpp:24</a></div></div>
 <div class="ttc" id="classmfem_1_1ParMesh_html"><div class="ttname"><a href="classmfem_1_1ParMesh.html">mfem::ParMesh</a></div><div class="ttdoc">Class for parallel meshes. </div><div class="ttdef"><b>Definition:</b> <a href="pmesh_8hpp_source.html#l00032">pmesh.hpp:32</a></div></div>
-<div class="ttc" id="classmfem_1_1SIAVSolver_html"><div class="ttname"><a href="classmfem_1_1SIAVSolver.html">mfem::SIAVSolver</a></div><div class="ttdef"><b>Definition:</b> <a href="ode_8hpp_source.html#l00512">ode.hpp:512</a></div></div>
-<div class="ttc" id="classmfem_1_1OptionsParser_html_aaa9687aac8aa3a1fc78534191ada68a3"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#aaa9687aac8aa3a1fc78534191ada68a3">mfem::OptionsParser::Good</a></div><div class="ttdeci">bool Good() const </div><div class="ttdef"><b>Definition:</b> <a href="optparser_8hpp_source.html#l00125">optparser.hpp:125</a></div></div>
+<div class="ttc" id="classmfem_1_1SIAVSolver_html"><div class="ttname"><a href="classmfem_1_1SIAVSolver.html">mfem::SIAVSolver</a></div><div class="ttdoc">Variable order Symplectic Integration Algorithm (orders 1-4) </div><div class="ttdef"><b>Definition:</b> <a href="ode_8hpp_source.html#l00547">ode.hpp:547</a></div></div>
+<div class="ttc" id="classmfem_1_1OptionsParser_html_aaa9687aac8aa3a1fc78534191ada68a3"><div class="ttname"><a href="classmfem_1_1OptionsParser.html#aaa9687aac8aa3a1fc78534191ada68a3">mfem::OptionsParser::Good</a></div><div class="ttdeci">bool Good() const </div><div class="ttdoc">Return true if the command line options were parsed successfully. </div><div class="ttdef"><b>Definition:</b> <a href="optparser_8hpp_source.html#l00145">optparser.hpp:145</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:12 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:47:58 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

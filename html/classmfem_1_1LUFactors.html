@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -272,7 +273,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Given <a class="el" href="classmfem_1_1LUFactors.html#a60be139fd8e83bd5d2d10ced2cd7f3fc">BlockFactor()</a>'d data, perform the backward block solve in | U U12 | | X1 | = | Y1 | | 0 S22 | | X2 | | Y2 |. The input is the solution block X2 and the block Y1 resulting from <a class="el" href="classmfem_1_1LUFactors.html#a4cdaa56290e658aecb5d97e435ae1fe8">BlockForwSolve()</a>. The result block X1 overwrites input block Y1: Y1 &lt;- X1 = U^{-1} (Y1 - U12 X2). </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03209">3209</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03208">3208</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +320,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming P.A = L.U factored data of size (m x m), compute the 2x2 block decomposition: | P 0 | | A A12 | = | L 0 | | U U12 | | 0 I | | A21 A22 | | L21 I | | 0 S22 | where A12, A21, and A22 are matrices of size (m x n), (n x m), and (n x n), respectively. The blocks are overwritten as follows: A12 &lt;- U12 = L^{-1} P A12 A21 &lt;- L21 = A21 U^{-1} A22 &lt;- S22 = A22 - L21 U12. The block S22 is the Schur complement. </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03173">3173</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03172">3172</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -372,7 +373,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Given <a class="el" href="classmfem_1_1LUFactors.html#a60be139fd8e83bd5d2d10ced2cd7f3fc">BlockFactor()</a>'d data, perform the forward block solve for the linear system: | A A12 | | X1 | = | B1 | | A21 A22 | | X2 | | B2 | written in the factored form: | L 0 | | U U12 | | X1 | = | P 0 | | B1 | | L21 I | | 0 S22 | | X2 | | 0 I | | B2 |. The resulting blocks Y1, Y2 solve the system: | L 0 | | Y1 | = | P 0 | | B1 | | L21 I | | Y2 | | 0 I | | B2 | The blocks are overwritten as follows: B1 &lt;- Y1 = L^{-1} P B1 B2 &lt;- Y2 = B2 - L21 Y1 = B2 - A21 A^{-1} B1 The blocks B1/Y1 and B2/Y2 are of size (m x r) and (n x r), respectively. The Schur complement system is given by: S22 X2 = Y2. </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03200">3200</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03199">3199</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +392,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming L.U = P.A factored data of size (m x m), compute |A| from the diagonal values of U and the permutation information. </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02922">2922</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02924">2924</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +431,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>status set to true if successful, otherwise, false. </dd></dl>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02863">2863</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02865">2865</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +461,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Assuming L.U = P.A factored data of size (m x m), compute X &lt;- A^{-1}. </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03091">3091</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03090">3090</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -495,7 +496,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming L.U = P.A factored data of size (m x m), compute X &lt;- L^{-1} P X, for a matrix X of size (m x n). </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02975">2975</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02977">2977</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -530,7 +531,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming L.U = P.A factored data of size (m x m), compute X &lt;- A X, for a matrix X of size (m x n). </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02939">2939</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l02941">2941</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -565,7 +566,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming L.U = P.A factored data of size (m x m), compute X &lt;- X A^{-1}, for a matrix X of size (n x m). </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03033">3033</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03035">3035</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -600,7 +601,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming L.U = P.A factored data of size (m x m), compute X &lt;- A^{-1} X, for a matrix X of size (m x n). </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03019">3019</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03021">3021</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -661,7 +662,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Given an (n x m) matrix A21, compute X2 &lt;- X2 - A21 X1, for matrices X1, and X2 of size (m x r) and (n x r), respectively. </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03156">3156</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03155">3155</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -696,7 +697,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assuming L.U = P.A factored data of size (m x m), compute X &lt;- U^{-1} X, for a matrix X of size (m x n). </p>
 
-<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03000">3000</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
+<p>Definition at line <a class="el" href="densemat_8cpp_source.html#l03002">3002</a> of file <a class="el" href="densemat_8cpp_source.html">densemat.cpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +759,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

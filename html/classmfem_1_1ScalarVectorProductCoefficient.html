@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -102,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> coefficient defined as a product of a scalar and a vector.  
+<p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> coefficient defined as a product of scalar and vector coefficients.  
  <a href="classmfem_1_1ScalarVectorProductCoefficient.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>&gt;</code></p>
@@ -121,17 +122,42 @@ Collaboration diagram for mfem::ScalarVectorProductCoefficient:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae6bed29b51aa646acf4248bde3a60cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#ae6bed29b51aa646acf4248bde3a60cc7">ScalarVectorProductCoefficient</a> (double A, <a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;B)</td></tr>
+<tr class="memdesc:ae6bed29b51aa646acf4248bde3a60cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with constant and vector coefficient. Result is A * B.  <a href="#ae6bed29b51aa646acf4248bde3a60cc7">More...</a><br/></td></tr>
+<tr class="separator:ae6bed29b51aa646acf4248bde3a60cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a260778e8306bde161d3d7f7cee3522ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#a260778e8306bde161d3d7f7cee3522ec">ScalarVectorProductCoefficient</a> (<a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;A, <a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;B)</td></tr>
+<tr class="memdesc:a260778e8306bde161d3d7f7cee3522ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with two coefficients. Result is A * B.  <a href="#a260778e8306bde161d3d7f7cee3522ec">More...</a><br/></td></tr>
 <tr class="separator:a260778e8306bde161d3d7f7cee3522ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6c59ef3cbb3432f66af684298f67c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#a2d6c59ef3cbb3432f66af684298f67c5">SetAConst</a> (double A)</td></tr>
+<tr class="memdesc:a2d6c59ef3cbb3432f66af684298f67c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the scalar factor as a constant.  <a href="#a2d6c59ef3cbb3432f66af684298f67c5">More...</a><br/></td></tr>
+<tr class="separator:a2d6c59ef3cbb3432f66af684298f67c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e6ad428affbb0d7bbce351a4ac966a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#a94e6ad428affbb0d7bbce351a4ac966a">GetAConst</a> () const </td></tr>
+<tr class="memdesc:a94e6ad428affbb0d7bbce351a4ac966a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scalar factor.  <a href="#a94e6ad428affbb0d7bbce351a4ac966a">More...</a><br/></td></tr>
+<tr class="separator:a94e6ad428affbb0d7bbce351a4ac966a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58ca788e5ee9a18224fcd773d1cbb9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#ac58ca788e5ee9a18224fcd773d1cbb9b">SetACoef</a> (<a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;A)</td></tr>
+<tr class="memdesc:ac58ca788e5ee9a18224fcd773d1cbb9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the scalar factor.  <a href="#ac58ca788e5ee9a18224fcd773d1cbb9b">More...</a><br/></td></tr>
+<tr class="separator:ac58ca788e5ee9a18224fcd773d1cbb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fe01b9ce1d014ddf6d9f0afc03bead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#a75fe01b9ce1d014ddf6d9f0afc03bead">GetACoef</a> () const </td></tr>
+<tr class="memdesc:a75fe01b9ce1d014ddf6d9f0afc03bead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scalar factor.  <a href="#a75fe01b9ce1d014ddf6d9f0afc03bead">More...</a><br/></td></tr>
+<tr class="separator:a75fe01b9ce1d014ddf6d9f0afc03bead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2133c6334431b4e01294c29b23a6394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#aa2133c6334431b4e01294c29b23a6394">SetBCoef</a> (<a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;B)</td></tr>
+<tr class="memdesc:aa2133c6334431b4e01294c29b23a6394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the vector factor.  <a href="#aa2133c6334431b4e01294c29b23a6394">More...</a><br/></td></tr>
+<tr class="separator:aa2133c6334431b4e01294c29b23a6394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207d926198ba84da27e47b98e6867171"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#a207d926198ba84da27e47b98e6867171">GetBCoef</a> () const </td></tr>
+<tr class="memdesc:a207d926198ba84da27e47b98e6867171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the vector factor.  <a href="#a207d926198ba84da27e47b98e6867171">More...</a><br/></td></tr>
+<tr class="separator:a207d926198ba84da27e47b98e6867171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e3a06f17d2bea8de9482052cacb701"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarVectorProductCoefficient.html#ae7e3a06f17d2bea8de9482052cacb701">Eval</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;V, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
-<tr class="memdesc:ae7e3a06f17d2bea8de9482052cacb701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the vector coefficient in the element described by <em>T</em> at the point <em>ip</em>, storing the result in <em>V</em>.  <a href="#ae7e3a06f17d2bea8de9482052cacb701">More...</a><br/></td></tr>
+<tr class="memdesc:ae7e3a06f17d2bea8de9482052cacb701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the coefficient at <em>ip</em>.  <a href="#ae7e3a06f17d2bea8de9482052cacb701">More...</a><br/></td></tr>
 <tr class="separator:ae7e3a06f17d2bea8de9482052cacb701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1VectorCoefficient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1VectorCoefficient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1VectorCoefficient.html">mfem::VectorCoefficient</a></td></tr>
 <tr class="memitem:a7ade618123af0f0d32f6a4a6e95552ca inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#a7ade618123af0f0d32f6a4a6e95552ca">VectorCoefficient</a> (int vd)</td></tr>
+<tr class="memdesc:a7ade618123af0f0d32f6a4a6e95552ca inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classmfem_1_1VectorCoefficient.html" title="Base class for vector Coefficients that optionally depend on time and space. ">VectorCoefficient</a> with vector dimension <em>vd</em>.  <a href="#a7ade618123af0f0d32f6a4a6e95552ca">More...</a><br/></td></tr>
 <tr class="separator:a7ade618123af0f0d32f6a4a6e95552ca inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648fc730a13a7faca1515309c89eabf5 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#a648fc730a13a7faca1515309c89eabf5">SetTime</a> (double t)</td></tr>
+<tr class="memdesc:a648fc730a13a7faca1515309c89eabf5 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time for time dependent coefficients.  <a href="#a648fc730a13a7faca1515309c89eabf5">More...</a><br/></td></tr>
 <tr class="separator:a648fc730a13a7faca1515309c89eabf5 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5022bc578464dea2c84506812b806f4 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#ac5022bc578464dea2c84506812b806f4">GetTime</a> ()</td></tr>
+<tr class="memdesc:ac5022bc578464dea2c84506812b806f4 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time for time dependent coefficients.  <a href="#ac5022bc578464dea2c84506812b806f4">More...</a><br/></td></tr>
 <tr class="separator:ac5022bc578464dea2c84506812b806f4 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47cd974a280f20e0d4b7f8ce43ea1597 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1VectorCoefficient.html#a47cd974a280f20e0d4b7f8ce43ea1597">GetVDim</a> ()</td></tr>
 <tr class="memdesc:a47cd974a280f20e0d4b7f8ce43ea1597 inherit pub_methods_classmfem_1_1VectorCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns dimension of the vector.  <a href="#a47cd974a280f20e0d4b7f8ce43ea1597">More...</a><br/></td></tr>
@@ -151,10 +177,40 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3a39c0e23f4ad9446aa2dfc7fb342b32 inherit pro_attribs_classmfem_1_1VectorCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> coefficient defined as a product of a scalar and a vector. </p>
+<div class="textblock"><p><a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> coefficient defined as a product of scalar and vector coefficients. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00806">806</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01225">1225</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae6bed29b51aa646acf4248bde3a60cc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mfem::ScalarVectorProductCoefficient::ScalarVectorProductCoefficient </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor with constant and vector coefficient. Result is A * B. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00529">529</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a260778e8306bde161d3d7f7cee3522ec"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +235,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00439">439</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+<p>Constructor with two coefficients. Result is A * B. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00535">535</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,12 +280,176 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Evaluate the vector coefficient in the element described by <em>T</em> at the point <em>ip</em>, storing the result in <em>V</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>When this method is called, the caller must make sure that the <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a> associated with <em>T</em> is the same as <em>ip</em>. This can be achieved by calling T.SetIntPoint(&amp;ip). </dd></dl>
+<p>Evaluate the coefficient at <em>ip</em>. </p>
 
 <p>Implements <a class="el" href="classmfem_1_1VectorCoefficient.html#ac85f5bb9e09019b15c9543f4f41b37d5">mfem::VectorCoefficient</a>.</p>
 
-<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00445">445</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00541">541</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75fe01b9ce1d014ddf6d9f0afc03bead"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a>* mfem::ScalarVectorProductCoefficient::GetACoef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the scalar factor. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01247">1247</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94e6ad428affbb0d7bbce351a4ac966a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double mfem::ScalarVectorProductCoefficient::GetAConst </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the scalar factor. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01242">1242</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a207d926198ba84da27e47b98e6867171"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a>* mfem::ScalarVectorProductCoefficient::GetBCoef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the vector factor. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01252">1252</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac58ca788e5ee9a18224fcd773d1cbb9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ScalarVectorProductCoefficient::SetACoef </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Coefficient.html">Coefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the scalar factor. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01245">1245</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d6c59ef3cbb3432f66af684298f67c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ScalarVectorProductCoefficient::SetAConst </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the scalar factor as a constant. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01240">1240</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2133c6334431b4e01294c29b23a6394"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ScalarVectorProductCoefficient::SetBCoef </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;&#160;</td>
+          <td class="paramname"><em>B</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the vector factor. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01250">1250</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +460,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

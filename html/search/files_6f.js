@@ -8,6 +8,8 @@ var searchData=
   ['operator_2ehpp',['operator.hpp',['../operator_8hpp.html',1,'']]],
   ['optparser_2ecpp',['optparser.cpp',['../optparser_8cpp.html',1,'']]],
   ['optparser_2ehpp',['optparser.hpp',['../optparser_8hpp.html',1,'']]],
+  ['ortho_5fsolver_2ecpp',['ortho_solver.cpp',['../ortho__solver_8cpp.html',1,'']]],
+  ['ortho_5fsolver_2ehpp',['ortho_solver.hpp',['../ortho__solver_8hpp.html',1,'']]],
   ['osockstream_2ecpp',['osockstream.cpp',['../osockstream_8cpp.html',1,'']]],
   ['osockstream_2ehpp',['osockstream.hpp',['../osockstream_8hpp.html',1,'']]]
 ];

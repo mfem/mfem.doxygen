@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -125,6 +126,12 @@ Public Types</h2></td></tr>
 <tr class="memdesc:a78f2385941a0b95326ec8cfbcfac6da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reordering method used by the <a class="el" href="classmfem_1_1BlockILU.html">BlockILU</a> factorization.  <a href="classmfem_1_1BlockILU.html#a78f2385941a0b95326ec8cfbcfac6da2">More...</a><br/></td></tr>
 <tr class="separator:a78f2385941a0b95326ec8cfbcfac6da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
+<tr class="memitem:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">DiagonalPolicy</a> { <a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1">DIAG_ZERO</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2">DIAG_ONE</a>, 
+<a class="el" href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373">DIAG_KEEP</a>
+ }</td></tr>
+<tr class="memdesc:a7f3e99434bf268ccbaae6863fe5e6bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines operator diagonal policy upon elimination of rows and/or columns.  <a href="classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5">More...</a><br/></td></tr>
+<tr class="separator:a7f3e99434bf268ccbaae6863fe5e6bb5 inherit pub_types_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa033bcf10ca8783218f5d98d8c54288 inherit pub_types_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Type</a> { <br/>
 &#160;&#160;<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78">ANY_TYPE</a>, 
 <a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a1149a94d7b60f7432d9106f29bea24ac">MFEM_SPARSEMAT</a>, 
@@ -269,7 +276,7 @@ Additional Inherited Members</h2></td></tr>
 <p>In the case of DG discretizations, the block size should usually be set to either ndofs_per_element or vdim*ndofs_per_element (if the finite element space has <a class="el" href="classmfem_1_1Ordering.html#ad543b8eddc91d2d282374bd9cf44818ca144c090b834bdc63082b3e959fb0f93f">Ordering::byVDIM</a>). The block size must evenly divide the size of the matrix.</p>
 <p>Renumbering the blocks is also supported by specifying a reordering method. Currently greedy minimum discarded fill ordering and no reordering are supported. Renumbering the blocks can lead to a much better approximate factorization. </p>
 
-<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00492">492</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00624">624</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a78f2385941a0b95326ec8cfbcfac6da2"></a>
 <div class="memitem">
@@ -297,7 +304,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00497">497</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00629">629</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +340,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Create an "empty" <a class="el" href="classmfem_1_1BlockILU.html">BlockILU</a> solver. SetOperator must be called later to actually form the factorization </p>
 
-<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l01969">1969</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l02369">2369</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
 
 </div>
 </div>
@@ -374,7 +381,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Create a block ILU approximate factorization for the matrix <em>op</em>. <em>op</em> should be of type either <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> or <a class="el" href="classmfem_1_1HypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class. ">HypreParMatrix</a>. In the case that <em>op</em> is a <a class="el" href="classmfem_1_1HypreParMatrix.html" title="Wrapper for hypre&#39;s ParCSR matrix class. ">HypreParMatrix</a>, the ILU factorization is performed on the diagonal blocks of the parallel decomposition. </p>
 
-<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l01978">1978</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l02378">2378</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the data array for the block CSR representation of the factorization. Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#a16766c2bed3766c4d0caadf30cc6e715" title="Return the element data, i.e. the array A. ">SparseMatrix::GetData()</a>. Mostly used for testing. </p>
 
-<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00541">541</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00673">673</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,7 +434,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the I array for the block CSR representation of the factorization. Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#a745a08784d1bff95e366d7d29eb8010e" title="Return the array I. ">SparseMatrix::GetI()</a>. Mostly used for testing. </p>
 
-<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00531">531</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00663">663</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +460,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the J array for the block CSR representation of the factorization. Similar to <a class="el" href="classmfem_1_1SparseMatrix.html#a0cf68563a56068c0873a975b0d05f9e2" title="Return the array J. ">SparseMatrix::GetJ()</a>. Mostly used for testing. </p>
 
-<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00536">536</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8hpp_source.html#l00668">668</a> of file <a class="el" href="solvers_8hpp_source.html">solvers.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,7 +500,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Operator.html#a700c3008b5ab43155cdfd279c8360472">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l02218">2218</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l02618">2618</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
 
 </div>
 </div>
@@ -522,7 +529,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1Solver.html#ab70f2a66818a847fb6fcd9b119e22f59">mfem::Solver</a>.</p>
 
-<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l01987">1987</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solvers_8cpp_source.html#l02387">2387</a> of file <a class="el" href="solvers_8cpp_source.html">solvers.cpp</a>.</p>
 
 </div>
 </div>
@@ -533,7 +540,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:17 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:04 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

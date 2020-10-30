@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -115,6 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf95619946d4df17b602718541356f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee10afb6c228ec598570c37430bb2bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParSesquilinearForm.html#aee10afb6c228ec598570c37430bb2bba">SetConvention</a> (const <a class="el" href="classmfem_1_1ComplexOperator.html#ac3f1afa81d23559eb9341b71ac0ed393">ComplexOperator::Convention</a> &amp;convention)</td></tr>
 <tr class="separator:aee10afb6c228ec598570c37430bb2bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba407d50aa8658dc6580585d2483148b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParSesquilinearForm.html#aba407d50aa8658dc6580585d2483148b">SetAssemblyLevel</a> (<a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310">AssemblyLevel</a> assembly_level)</td></tr>
+<tr class="memdesc:aba407d50aa8658dc6580585d2483148b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the desired assembly level.  <a href="#aba407d50aa8658dc6580585d2483148b">More...</a><br/></td></tr>
+<tr class="separator:aba407d50aa8658dc6580585d2483148b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f312298e84377ca1125b793fd583e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ParBilinearForm.html">ParBilinearForm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParSesquilinearForm.html#aa0f312298e84377ca1125b793fd583e3">real</a> ()</td></tr>
 <tr class="separator:aa0f312298e84377ca1125b793fd583e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d41944a1764ca8fd47746674f9acb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ParBilinearForm.html">ParBilinearForm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParSesquilinearForm.html#a81d41944a1764ca8fd47746674f9acb2">imag</a> ()</td></tr>
@@ -166,12 +170,12 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for a parallel sesquilinear form</p>
-<p>A sesquilinear form is a generalization of a bilinear form to complex-valued fields. Sesquilinear forms are linear in the second argument but but the first argument involves a complex conjugate in the sense that: </p>
+<p>A sesquilinear form is a generalization of a bilinear form to complex-valued fields. Sesquilinear forms are linear in the second argument but the first argument involves a complex conjugate in the sense that: </p>
 <pre class="fragment">        a(alpha u, beta v) = conj(alpha) beta a(u, v)
 </pre><p>The <em>convention</em> argument in the class's constructor is documented in the <a class="el" href="classmfem_1_1ComplexOperator.html" title="Mimic the action of a complex operator using two real operators. ">mfem::ComplexOperator</a> class found in <a class="el" href="complex__operator_8hpp.html">linalg/complex_operator.hpp</a>.</p>
 <p>When supplying integrators to the <a class="el" href="classmfem_1_1ParSesquilinearForm.html">ParSesquilinearForm</a> either the real or imaginary integrator can be NULL. This indicates that the corresponding portion of the complex-valued material coefficient is equal to zero. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00493">493</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00542">542</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a179f646a0d1ceb469d971c3de00de3db"></a>
 <div class="memitem">
@@ -197,7 +201,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00811">811</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01013">1013</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +245,7 @@ Public Member Functions</h2></td></tr>
 <p>The pointer <em>pf</em> is not owned by the newly constructed object.</p>
 <p>The integrators are copied as pointers and they are not owned by the newly constructed <a class="el" href="classmfem_1_1ParSesquilinearForm.html">ParSesquilinearForm</a>. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00819">819</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01021">1021</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +270,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00827">827</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01030">1030</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +301,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds new boundary Face Integrator. Assumes ownership of <em>bfi</em>. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00866">866</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01069">1069</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -335,7 +339,7 @@ Public Member Functions</h2></td></tr>
 <p>Assumes ownership of <em>bfi</em>.</p>
 <p>The array <em>bdr_marker</em> is stored internally as a pointer to the given <a class="el" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> object. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00874">874</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01077">1077</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +369,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds new Boundary Integrator. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00841">841</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01044">1044</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -403,7 +407,7 @@ Public Member Functions</h2></td></tr>
 <p>Assumes ownership of <em>bfi</em>.</p>
 <p>The array <em>bdr_marker</em> is stored internally as a pointer to the given <a class="el" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> object. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00849">849</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01052">1052</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +437,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds new Domain Integrator. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00833">833</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01036">1036</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -463,7 +467,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds new interior Face Integrator. Assumes ownership of <em>bfi</em>. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00858">858</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01061">1061</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +487,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Assemble the local matrix. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00883">883</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01086">1086</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +507,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Finalizes the matrix initialization. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00890">890</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01093">1093</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -561,7 +565,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00906">906</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01108">1108</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -589,7 +593,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01029">1029</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01269">1269</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +618,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00523">523</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00572">572</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +643,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00528">528</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00593">593</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +668,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00530">530</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00595">595</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +688,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the matrix assembled on the true dofs, i.e. P^t A P. </p>
 <p>The returned matrix has to be deleted by the caller. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l00897">897</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01100">1100</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -711,7 +715,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the parallel FE space associated with the <a class="el" href="classmfem_1_1ParBilinearForm.html" title="Class for parallel bilinear form. ">ParBilinearForm</a>. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00581">581</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00646">646</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +740,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00527">527</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00592">592</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -761,7 +765,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00529">529</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00594">594</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +808,44 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Call this method after solving a linear system constructed using the FormLinearSystem method to recover the solution as a ParGridFunction-size vector in x. Use the same arguments as in the FormLinearSystem call. </p>
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01093">1093</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01337">1337</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba407d50aa8658dc6580585d2483148b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParSesquilinearForm::SetAssemblyLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310">AssemblyLevel</a>&#160;</td>
+          <td class="paramname"><em>assembly_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the desired assembly level. </p>
+<p>Valid choices are:</p>
+<ul>
+<li><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310ac5e32ded5a6cb3015c3efa1db5be8d4d">AssemblyLevel::LEGACYFULL</a> (default)</li>
+<li><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310aba7de5bc6888294e5884b024a4c894f1">AssemblyLevel::FULL</a></li>
+<li><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310afba5cdfa4bcb408f641c743519a0fe19">AssemblyLevel::PARTIAL</a></li>
+<li><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310a88be69b0577a14f4fa3bbfa0ff17a41d">AssemblyLevel::ELEMENT</a></li>
+<li><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310ab50339a10e1de285ac99d4c3990b8693">AssemblyLevel::NONE</a></li>
+</ul>
+<p>This method must be called before assembly. </p>
+
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00586">586</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +871,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00524">524</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8hpp_source.html#l00573">573</a> of file <a class="el" href="complex__fem_8hpp_source.html">complex_fem.hpp</a>.</p>
 
 </div>
 </div>
@@ -856,7 +897,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01115">1115</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="complex__fem_8cpp_source.html#l01364">1364</a> of file <a class="el" href="complex__fem_8cpp_source.html">complex_fem.cpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +908,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

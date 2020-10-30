@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -181,6 +182,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>batch
 : <a class="el" href="classmfem_1_1BilinearForm.html#ac020dd70b832019e527ae3831b590d19">mfem::BilinearForm</a>
 </li>
+<li>batch_size
+: <a class="el" href="structmfem_1_1AutoSIMDTraits.html#af3f1106a5d3359258b9bb6e6700a8203">mfem::AutoSIMDTraits&lt; complex_t, real_t &gt;</a>
+, <a class="el" href="structmfem_1_1NoSIMDTraits.html#aa3aa4c0279030c35c8e97b2e528a286e">mfem::NoSIMDTraits&lt; complex_t, real_t &gt;</a>
+</li>
 <li>bbfi
 : <a class="el" href="classmfem_1_1BilinearForm.html#a76f21d429887c496c99627c481bd780d">mfem::BilinearForm</a>
 , <a class="el" href="classmfem_1_1MixedBilinearForm.html#a509ff36ca589b256ae5ed127fc5e4d0a">mfem::MixedBilinearForm</a>
@@ -192,6 +197,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>bchandler
 : <a class="el" href="classmfem_1_1PetscSolver.html#acc8d27f43bb6945aaa42454a9e37f4af">mfem::PetscSolver</a>
 </li>
+<li>bd0
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#a4f215b4062ee2b66620c733ffc1f3e1c">mfem::navier::NavierSolver</a>
+</li>
+<li>bd1
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#aba0ee65679db02358742ce066957fc7f">mfem::navier::NavierSolver</a>
+</li>
+<li>bd2
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#ae8e167e2228d3b6ce3947bf103fe79ea">mfem::navier::NavierSolver</a>
+</li>
+<li>bd3
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#a16a447e4907d218d4d6876fe5f190b76">mfem::navier::NavierSolver</a>
+</li>
 <li>bdofs
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#a3a2f72da57ca9bba6202de3770a4e3b5">mfem::FiniteElementSpace</a>
 </li>
@@ -200,12 +217,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>bdr_face_restrict_lex
 : <a class="el" href="classmfem_1_1PABilinearFormExtension.html#aff097e6f5aaa14c353d9bc25e4a9db50">mfem::PABilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a1fdb2954936848f4d45700f22c2879be">mfem::MFBilinearFormExtension</a>
 </li>
 <li>bdrElem_dof
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#a1a48dd598a95e8baf8ffe5d4dc866fcf">mfem::FiniteElementSpace</a>
 </li>
 <li>BdrTransformation
 : <a class="el" href="classmfem_1_1Mesh.html#ab3d351bf7d5dda1242e0eec0cbaf7c8b">mfem::Mesh</a>
+</li>
+<li>BE
+: <a class="el" href="classmfem_1_1TBilinearForm.html#a230a06437ddc7b3813a174683c9a0b65">mfem::TBilinearForm&lt; meshType, solFESpace, IR, IntegratorType, solVecLayout_t, complex_t, real_t, impl_traits_t &gt;</a>
 </li>
 <li>be_to_edge
 : <a class="el" href="classmfem_1_1Mesh.html#a27b274dcab25a4606c9995f5d1607ff8">mfem::Mesh</a>
@@ -243,8 +264,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1BlockNonlinearForm.html#ad126e0576bd34b21c9ee91cda024ca96">mfem::BlockNonlinearForm</a>
 </li>
 <li>bfnfi_marker
-: <a class="el" href="classmfem_1_1NonlinearForm.html#a9fa7bdfe1a5c9bab18621519531405e3">mfem::NonlinearForm</a>
-, <a class="el" href="classmfem_1_1BlockNonlinearForm.html#aaeadbc98a20befc67246753a0074fd69">mfem::BlockNonlinearForm</a>
+: <a class="el" href="classmfem_1_1BlockNonlinearForm.html#aaeadbc98a20befc67246753a0074fd69">mfem::BlockNonlinearForm</a>
+, <a class="el" href="classmfem_1_1NonlinearForm.html#a9fa7bdfe1a5c9bab18621519531405e3">mfem::NonlinearForm</a>
+</li>
+<li>bfs
+: <a class="el" href="classmfem_1_1Multigrid.html#a5ebd5f956096b1c7fb9973a0287460a9">mfem::Multigrid</a>
 </li>
 <li>blfi
 : <a class="el" href="classmfem_1_1LinearForm.html#a37d7f85f80ac8358f7e8adeb4a43b213">mfem::LinearForm</a>
@@ -254,6 +278,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>block_offsets
 : <a class="el" href="classmfem_1_1BlockNonlinearForm.html#afea3fd00c06b85c10303fd5922fc99b0">mfem::BlockNonlinearForm</a>
+</li>
+<li>block_size
+: <a class="el" href="structmfem_1_1NoSIMDTraits.html#a2fca2f9d603d38d69ffaab76976ad70c">mfem::NoSIMDTraits&lt; complex_t, real_t &gt;</a>
+, <a class="el" href="structmfem_1_1AutoSIMDTraits.html#aa1e24f07fc3e8c8ad237d0597aa357ea">mfem::AutoSIMDTraits&lt; complex_t, real_t &gt;</a>
 </li>
 <li>block_trueOffsets
 : <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a2e93ca4cde118ecf608d9c3d00bcc476">mfem::BlockNonlinearForm</a>
@@ -268,6 +296,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1BlockArray.html#a11322f355246ff69e8fd4c3ab36e09c9">mfem::BlockArray&lt; T &gt;</a>
 , <a class="el" href="classmfem_1_1BlockVector.html#abe8cb0a93af534e70d79438a9706054d">mfem::BlockVector</a>
 </li>
+<li>bond
+: <a class="el" href="classGecko_1_1Graph.html#a9b7067d6ea421a4ae2a83241f10457a1">Gecko::Graph</a>
+</li>
 <li>boundary
 : <a class="el" href="classmfem_1_1Mesh.html#ac9063d444be89252ed9479011d01fa08">mfem::Mesh</a>
 </li>
@@ -278,13 +309,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1ParNCMesh.html#a74edf36293f755a81839837d08832982">mfem::ParNCMesh</a>
 </li>
 <li>Bt
-: <a class="el" href="classmfem_1_1DofToQuad.html#a748accd4c5f5ea66398d9ef60c63a57a">mfem::DofToQuad</a>
-, <a class="el" href="classmfem_1_1ShapeEvaluator__base_3_01FE_00_01IR_00_01false_00_01real__t_01_4.html#ae84a17dc14a23512210d3db72d335ce9">mfem::ShapeEvaluator_base&lt; FE, IR, false, real_t &gt;</a>
+: <a class="el" href="classmfem_1_1ShapeEvaluator__base_3_01FE_00_01IR_00_01false_00_01real__t_01_4.html#ae84a17dc14a23512210d3db72d335ce9">mfem::ShapeEvaluator_base&lt; FE, IR, false, real_t &gt;</a>
+, <a class="el" href="classmfem_1_1DofToQuad.html#a748accd4c5f5ea66398d9ef60c63a57a">mfem::DofToQuad</a>
 </li>
 <li>Bt_1d
 : <a class="el" href="classmfem_1_1TProductShapeEvaluator_3_012_00_01DOF_00_01NIP_00_01real__t_01_4.html#a12704b2c24c139cbd924b40d62ee89ef">mfem::TProductShapeEvaluator&lt; 2, DOF, NIP, real_t &gt;</a>
-, <a class="el" href="classmfem_1_1TProductShapeEvaluator_3_013_00_01DOF_00_01NIP_00_01real__t_01_4.html#a17884681cf78b83dc29bab7775acdb59">mfem::TProductShapeEvaluator&lt; 3, DOF, NIP, real_t &gt;</a>
 , <a class="el" href="classmfem_1_1TProductShapeEvaluator_3_011_00_01DOF_00_01NIP_00_01real__t_01_4.html#a200ecd0929d20d8b33a2a86858315b94">mfem::TProductShapeEvaluator&lt; 1, DOF, NIP, real_t &gt;</a>
+, <a class="el" href="classmfem_1_1TProductShapeEvaluator_3_013_00_01DOF_00_01NIP_00_01real__t_01_4.html#a17884681cf78b83dc29bab7775acdb59">mfem::TProductShapeEvaluator&lt; 3, DOF, NIP, real_t &gt;</a>
 </li>
 <li>btfbfi
 : <a class="el" href="classmfem_1_1MixedBilinearForm.html#a4ace6092653179a96a792a5fcb227258">mfem::MixedBilinearForm</a>
@@ -301,6 +332,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>buf_offsets
 : <a class="el" href="classmfem_1_1GroupCommunicator.html#a6bdac2af5ba72bcaf9b824bb7481a663">mfem::GroupCommunicator</a>
 </li>
+<li>bufferSize
+: <a class="el" href="classmfem_1_1SparseMatrix.html#a78dca9feb06ed30c37ed99cf2624cedf">mfem::SparseMatrix</a>
+</li>
 <li>buflen
 : <a class="el" href="classmfem_1_1socketbuf.html#a3f5aaa023943f919e51975b9c9536630">mfem::socketbuf</a>
 </li>
@@ -310,14 +344,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>byvdim
 : <a class="el" href="classmfem_1_1L2FaceRestriction.html#a70c5feddf1599bc4d206482260301542">mfem::L2FaceRestriction</a>
 , <a class="el" href="classmfem_1_1H1FaceRestriction.html#aec098f9041a9d701997e3ea7ec1fc9c5">mfem::H1FaceRestriction</a>
-, <a class="el" href="classmfem_1_1ParL2FaceRestriction.html#a3064206ef129a09da5a1225fcd3201fa">mfem::ParL2FaceRestriction</a>
 , <a class="el" href="classmfem_1_1ElementRestriction.html#a9bca7b14c47246d9593eab5c25fbcb8d">mfem::ElementRestriction</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:22 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

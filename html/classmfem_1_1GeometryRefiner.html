@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -118,12 +119,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02322fb06b6129c5d2170fff4de16155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e425ad596feb5c0c0a5695c18665c27"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeometryRefiner.html#a1e425ad596feb5c0c0a5695c18665c27">RefineInterior</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> Geom, int Times)</td></tr>
 <tr class="separator:a1e425ad596feb5c0c0a5695c18665c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47ad5934f26a36a28ee7e0c4dd9a477"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeometryRefiner.html#ab47ad5934f26a36a28ee7e0c4dd9a477">GetRefinementLevelFromPoints</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> Geom, int Npts)</td></tr>
+<tr class="memdesc:ab47ad5934f26a36a28ee7e0c4dd9a477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> level based on number of points.  <a href="#ab47ad5934f26a36a28ee7e0c4dd9a477">More...</a><br/></td></tr>
+<tr class="separator:ab47ad5934f26a36a28ee7e0c4dd9a477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf307d98038cc17a3393ae5da5da3fb6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeometryRefiner.html#aaf307d98038cc17a3393ae5da5da3fb6">GetRefinementLevelFromElems</a> (<a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>, int Npts)</td></tr>
+<tr class="memdesc:aaf307d98038cc17a3393ae5da5da3fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> level based on number of elements.  <a href="#aaf307d98038cc17a3393ae5da5da3fb6">More...</a><br/></td></tr>
+<tr class="separator:aaf307d98038cc17a3393ae5da5da3fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ecd1be5c10857dfdbe880268b35836d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GeometryRefiner.html#a2ecd1be5c10857dfdbe880268b35836d">~GeometryRefiner</a> ()</td></tr>
 <tr class="separator:a2ecd1be5c10857dfdbe880268b35836d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00248">248</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00252">252</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a533303f1f97e234011ffcb9549768f15"></a>
 <div class="memitem">
@@ -138,7 +145,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00884">884</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00901">901</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 </div>
 </div>
@@ -155,11 +162,87 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00889">889</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00906">906</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aaf307d98038cc17a3393ae5da5da3fb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::GeometryRefiner::GetRefinementLevelFromElems </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td>
+          <td class="paramname"><em>geom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Npts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> level based on number of elements. </p>
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l01479">1479</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab47ad5934f26a36a28ee7e0c4dd9a477"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::GeometryRefiner::GetRefinementLevelFromPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a>&#160;</td>
+          <td class="paramname"><em>Geom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Npts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="structmfem_1_1Refinement.html">Refinement</a> level based on number of points. </p>
+
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l01412">1412</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1969baafcb8b87da1023409c7789190a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +266,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the <a class="el" href="classmfem_1_1Quadrature1D.html" title="A class container for 1D quadrature type constants. ">Quadrature1D</a> type of points used for subdivision. </p>
 
-<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00265">265</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00269">269</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,7 +300,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00925">925</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l00942">942</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,9 +327,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section note"><dt>Note</dt><dd>This method always uses <a class="el" href="classmfem_1_1Quadrature1D.html#a175d807ee9ed50731dbef229f4c45096ae2889b0fb52720c072a9f0b2dabb9241" title="aka open Newton-Cotes ">Quadrature1D::OpenUniform</a> points. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method always uses <a class="el" href="classmfem_1_1Quadrature1D.html#aa5c1e05282f9ed29e744c23b44f7faffae2889b0fb52720c072a9f0b2dabb9241" title="aka open Newton-Cotes ">Quadrature1D::OpenUniform</a> points. </dd></dl>
 
-<p>Definition at line <a class="el" href="geom_8cpp_source.html#l01316">1316</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8cpp_source.html#l01333">1333</a> of file <a class="el" href="geom_8cpp_source.html">geom.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +357,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set the <a class="el" href="classmfem_1_1Quadrature1D.html" title="A class container for 1D quadrature type constants. ">Quadrature1D</a> type of points to use for subdivision. </p>
 
-<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00263">263</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
+<p>Definition at line <a class="el" href="geom_8hpp_source.html#l00267">267</a> of file <a class="el" href="geom_8hpp_source.html">geom.hpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +368,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:20 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

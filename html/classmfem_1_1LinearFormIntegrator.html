@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -108,8 +109,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classmfem_1_1LinearFormIntegrator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>&gt;</code></p>
-
-<p>Inherited by <a class="el" href="classmfem_1_1BoundaryFlowIntegrator.html">mfem::BoundaryFlowIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryLFIntegrator.html">mfem::BoundaryLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryNormalLFIntegrator.html">mfem::BoundaryNormalLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryTangentialLFIntegrator.html">mfem::BoundaryTangentialLFIntegrator</a>, <a class="el" href="classmfem_1_1DeltaLFIntegrator.html">mfem::DeltaLFIntegrator</a>, <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html">mfem::DGDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html">mfem::DGElasticityDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryFluxLFIntegrator.html">mfem::VectorBoundaryFluxLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryLFIntegrator.html">mfem::VectorBoundaryLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEBoundaryFluxLFIntegrator.html">mfem::VectorFEBoundaryFluxLFIntegrator</a>, and <a class="el" href="classmfem_1_1VectorFEBoundaryTangentLFIntegrator.html">mfem::VectorFEBoundaryTangentLFIntegrator</a>.</p>
+<div class="dynheader">
+Inheritance diagram for mfem::LinearFormIntegrator:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1LinearFormIntegrator__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for mfem::LinearFormIntegrator:</div>
 <div class="dyncontent">
@@ -123,8 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a25be9f6c995fd44c3c29fed7cfd807d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72ce8d5f7a33bd02c27372f9495dfe1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearFormIntegrator.html#aa72ce8d5f7a33bd02c27372f9495dfe1">AssembleRHSElementVect</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el, <a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> &amp;Tr, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;elvect)</td></tr>
 <tr class="separator:aa72ce8d5f7a33bd02c27372f9495dfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73f1dbbbaf58c4e41512851b21dfae5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearFormIntegrator.html#a73f1dbbbaf58c4e41512851b21dfae5e">SetIntRule</a> (const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *ir)</td></tr>
-<tr class="separator:a73f1dbbbaf58c4e41512851b21dfae5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ec9dc6e41d78da8e16a8e754274898"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearFormIntegrator.html#a49ec9dc6e41d78da8e16a8e754274898">SetIntRule</a> (const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *ir)</td></tr>
+<tr class="separator:a49ec9dc6e41d78da8e16a8e754274898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45d72c29562a518c86fe10341ba193c9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearFormIntegrator.html#a45d72c29562a518c86fe10341ba193c9">GetIntRule</a> ()</td></tr>
 <tr class="separator:a45d72c29562a518c86fe10341ba193c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef0c54c4ab1a9fe7fcebf732034f3ac"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1LinearFormIntegrator.html#a5ef0c54c4ab1a9fe7fcebf732034f3ac">~LinearFormIntegrator</a> ()</td></tr>
@@ -236,7 +241,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Given a particular Finite <a class="el" href="classmfem_1_1Element.html" title="Abstract data type element. ">Element</a> and a transformation (Tr) computes the element vector, elvect. </p>
 
-<p>Implemented in <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html#a8e12f7ab1f28ad340319f717c99a5f8e">mfem::DGElasticityDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html#a95f520dced35130e460b0627ff91a2c2">mfem::DGDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryFlowIntegrator.html#a8783a57d1a02399aac1ff2ce7454c9ba">mfem::BoundaryFlowIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEBoundaryTangentLFIntegrator.html#a0c79df65badf9a4bbd2211db60b2342a">mfem::VectorFEBoundaryTangentLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEBoundaryFluxLFIntegrator.html#a5b9c3cf439e71b53b806ea7d69df316a">mfem::VectorFEBoundaryFluxLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryFluxLFIntegrator.html#a5f6589b441fc9bb0c7cfa8bda2745450">mfem::VectorBoundaryFluxLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEDomainLFIntegrator.html#a67512189c22a56417983b88652bc8da7">mfem::VectorFEDomainLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryLFIntegrator.html#a43cba86e3f062223daf372cec5713844">mfem::VectorBoundaryLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorDomainLFIntegrator.html#a707cd5aa72837762e9eb0423c19ac8de">mfem::VectorDomainLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryTangentialLFIntegrator.html#a2fef561586815110f97c16aee3e7427c">mfem::BoundaryTangentialLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryNormalLFIntegrator.html#ae470ba3d6bb8b6b9bc9993282a29b083">mfem::BoundaryNormalLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryLFIntegrator.html#a1b684bcecbe382fb9f2d526a320e9c53">mfem::BoundaryLFIntegrator</a>, and <a class="el" href="classmfem_1_1DomainLFIntegrator.html#adf0edef83c7166ba50f7fc27e1b0e12f">mfem::DomainLFIntegrator</a>.</p>
+<p>Implemented in <a class="el" href="classmfem_1_1QuadratureLFIntegrator.html#a914ecd2ef9943ac45fb844629bfcfc53">mfem::QuadratureLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorQuadratureLFIntegrator.html#acf4f3388a08ad77e4b7ce21e6837e221">mfem::VectorQuadratureLFIntegrator</a>, <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html#a8e12f7ab1f28ad340319f717c99a5f8e">mfem::DGElasticityDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html#a95f520dced35130e460b0627ff91a2c2">mfem::DGDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryFlowIntegrator.html#a8783a57d1a02399aac1ff2ce7454c9ba">mfem::BoundaryFlowIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEBoundaryTangentLFIntegrator.html#a0c79df65badf9a4bbd2211db60b2342a">mfem::VectorFEBoundaryTangentLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEBoundaryFluxLFIntegrator.html#a5b9c3cf439e71b53b806ea7d69df316a">mfem::VectorFEBoundaryFluxLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryFluxLFIntegrator.html#a5f6589b441fc9bb0c7cfa8bda2745450">mfem::VectorBoundaryFluxLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEDomainLFDivIntegrator.html#a4fb3fb88dd1b3189b1866e099a4badf7">mfem::VectorFEDomainLFDivIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEDomainLFCurlIntegrator.html#a171485602950c05653c3c4b828ab5cfd">mfem::VectorFEDomainLFCurlIntegrator</a>, <a class="el" href="classmfem_1_1VectorFEDomainLFIntegrator.html#a67512189c22a56417983b88652bc8da7">mfem::VectorFEDomainLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryLFIntegrator.html#a43cba86e3f062223daf372cec5713844">mfem::VectorBoundaryLFIntegrator</a>, <a class="el" href="classmfem_1_1VectorDomainLFIntegrator.html#a707cd5aa72837762e9eb0423c19ac8de">mfem::VectorDomainLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryTangentialLFIntegrator.html#a2fef561586815110f97c16aee3e7427c">mfem::BoundaryTangentialLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryNormalLFIntegrator.html#ae470ba3d6bb8b6b9bc9993282a29b083">mfem::BoundaryNormalLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryLFIntegrator.html#a1b684bcecbe382fb9f2d526a320e9c53">mfem::BoundaryLFIntegrator</a>, <a class="el" href="classmfem_1_1DomainLFGradIntegrator.html#a3db9a791dab12ebdae30e58921f81cc9">mfem::DomainLFGradIntegrator</a>, and <a class="el" href="classmfem_1_1DomainLFIntegrator.html#adf0edef83c7166ba50f7fc27e1b0e12f">mfem::DomainLFIntegrator</a>.</p>
 
 </div>
 </div>
@@ -278,7 +283,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html#adbfbdd3b7479a11e064ae1a6d5f3813d">mfem::DGElasticityDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html#ac574ab3dfbc0057bc32ea41b10f5cde7">mfem::DGDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryFlowIntegrator.html#a2de96cfa8b851af7dcc6e50917926664">mfem::BoundaryFlowIntegrator</a>, and <a class="el" href="classmfem_1_1VectorBoundaryLFIntegrator.html#aedf8d5981a9541fc8152d60b2e7a61a0">mfem::VectorBoundaryLFIntegrator</a>.</p>
+<p>Reimplemented in <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html#adbfbdd3b7479a11e064ae1a6d5f3813d">mfem::DGElasticityDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html#ac574ab3dfbc0057bc32ea41b10f5cde7">mfem::DGDirichletLFIntegrator</a>, <a class="el" href="classmfem_1_1BoundaryFlowIntegrator.html#a2de96cfa8b851af7dcc6e50917926664">mfem::BoundaryFlowIntegrator</a>, <a class="el" href="classmfem_1_1VectorBoundaryLFIntegrator.html#aedf8d5981a9541fc8152d60b2e7a61a0">mfem::VectorBoundaryLFIntegrator</a>, and <a class="el" href="classmfem_1_1BoundaryLFIntegrator.html#a71f0b2eccd62455eb231e7395e84e83c">mfem::BoundaryLFIntegrator</a>.</p>
 
 <p>Definition at line <a class="el" href="lininteg_8cpp_source.html#l00019">19</a> of file <a class="el" href="lininteg_8cpp_source.html">lininteg.cpp</a>.</p>
 
@@ -309,7 +314,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a73f1dbbbaf58c4e41512851b21dfae5e"></a>
+<a class="anchor" id="a49ec9dc6e41d78da8e16a8e754274898"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -317,7 +322,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mfem::LinearFormIntegrator::SetIntRule </td>
+          <td class="memname">virtual void mfem::LinearFormIntegrator::SetIntRule </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *&#160;</td>
           <td class="paramname"><em>ir</em></td><td>)</td>
@@ -326,10 +331,12 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classmfem_1_1QuadratureLFIntegrator.html#a01d1414567aeb3c4df5fcd8b2024af86">mfem::QuadratureLFIntegrator</a>, and <a class="el" href="classmfem_1_1VectorQuadratureLFIntegrator.html#a393555d9b5af1d7ac944751ba35a0bc4">mfem::VectorQuadratureLFIntegrator</a>.</p>
 
 <p>Definition at line <a class="el" href="lininteg_8hpp_source.html#l00039">39</a> of file <a class="el" href="lininteg_8hpp_source.html">lininteg.hpp</a>.</p>
 
@@ -365,7 +372,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:21 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -35,6 +35,7 @@ var searchData=
   ['l2zienkiewiczzhuestimator',['L2ZienkiewiczZhuEstimator',['../classmfem_1_1L2ZienkiewiczZhuEstimator.html',1,'mfem']]],
   ['lagrange1dfiniteelement',['Lagrange1DFiniteElement',['../classmfem_1_1Lagrange1DFiniteElement.html',1,'mfem']]],
   ['lagrangehexfiniteelement',['LagrangeHexFiniteElement',['../classmfem_1_1LagrangeHexFiniteElement.html',1,'mfem']]],
+  ['lbfgssolver',['LBFGSSolver',['../classmfem_1_1LBFGSSolver.html',1,'mfem']]],
   ['linear1dfiniteelement',['Linear1DFiniteElement',['../classmfem_1_1Linear1DFiniteElement.html',1,'mfem']]],
   ['linear2dfiniteelement',['Linear2DFiniteElement',['../classmfem_1_1Linear2DFiniteElement.html',1,'mfem']]],
   ['linear3dfiniteelement',['Linear3DFiniteElement',['../classmfem_1_1Linear3DFiniteElement.html',1,'mfem']]],
@@ -47,6 +48,7 @@ var searchData=
   ['linearnonconf3dfecollection',['LinearNonConf3DFECollection',['../classmfem_1_1LinearNonConf3DFECollection.html',1,'mfem']]],
   ['listofintegersets',['ListOfIntegerSets',['../classmfem_1_1ListOfIntegerSets.html',1,'mfem']]],
   ['local_5ffecollection',['Local_FECollection',['../classmfem_1_1Local__FECollection.html',1,'mfem']]],
+  ['lperrorestimator',['LpErrorEstimator',['../classmfem_1_1LpErrorEstimator.html',1,'mfem']]],
   ['lufactors',['LUFactors',['../classmfem_1_1LUFactors.html',1,'mfem']]],
   ['lumpedintegrator',['LumpedIntegrator',['../classmfem_1_1LumpedIntegrator.html',1,'mfem']]]
 ];

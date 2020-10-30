@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -116,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../config/config.hpp&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../general/cuda.hpp&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../general/backends.hpp&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../general/globals.hpp&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix_8hpp.html">matrix.hpp</a>&quot;</span></div>
@@ -218,7 +219,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> dim, <span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespacemfem_1_1kernels.html#ac8266bd809ccb8b2175151c6b8f60de4">  121</a></span>&#160;MFEM_HOST_DEVICE <span class="keyword">inline</span> T <a class="code" href="namespacemfem_1_1kernels.html#ac8266bd809ccb8b2175151c6b8f60de4">Det</a>(<span class="keyword">const</span> T *data)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="keywordflow">return</span> TDet&lt;T&gt;(<a class="code" href="structmfem_1_1ColumnMajorLayout2D.html">ColumnMajorLayout2D&lt;dim,dim&gt;</a>(), data);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="keywordflow">return</span> TDetHD&lt;T&gt;(<a class="code" href="structmfem_1_1ColumnMajorLayout2D.html">ColumnMajorLayout2D&lt;dim,dim&gt;</a>(), data);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/** @brief Return the inverse a matrix with given @a size and @a data into the</span></div>
@@ -228,8 +229,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="namespacemfem_1_1kernels.html#a0a8c521f0c2554c75493f5cfc67d5d1a">  130</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#a0a8c521f0c2554c75493f5cfc67d5d1a">CalcInverse</a>(<span class="keyword">const</span> T *data, T *inv_data)</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keyword">typedef</span> <a class="code" href="structmfem_1_1ColumnMajorLayout2D.html">ColumnMajorLayout2D&lt;dim,dim&gt;</a> layout_t;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   <span class="keyword">const</span> T det = TAdjDet&lt;T&gt;(layout_t(), data, layout_t(), inv_data);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   TAssign&lt;AssignOp::Mult&gt;(layout_t(), inv_data, <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(1.0)/det);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   <span class="keyword">const</span> T det = TAdjDetHD&lt;T&gt;(layout_t(), data, layout_t(), inv_data);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   TAssignHD&lt;AssignOp::Mult&gt;(layout_t(), inv_data, <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(1.0)/det);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">/** @brief Compute C = A + alpha*B, where the matrices A, B and C are of size @a</span></div>
@@ -301,12 +302,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">/// Compute the spectrum of the matrix of size dim with given @a data, returning</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">/// the eigenvalues in the array @a lambda and the eigenvectors in the array @a</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">/// vec (listed consecutively).</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#a4f46677ebde466631f20ef99f2de3d41">CalcEigenvalues</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *data, <span class="keywordtype">double</span> *lambda, <span class="keywordtype">double</span> *vec);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> dim&gt; MFEM_HOST_DEVICE</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#af65466fa8fa1a8f84e23ba16fd21e8fa">CalcEigenvalues</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *data, <span class="keywordtype">double</span> *lambda, <span class="keywordtype">double</span> *vec);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">/// Return the i&#39;th singular value of the matrix of size dim with given @a data.</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem_1_1kernels.html#afdf7240d1290002f16f30b1845164a78">CalcSingularvalue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *data, <span class="keyword">const</span> <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> dim&gt; MFEM_HOST_DEVICE</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">double</span> <a class="code" href="namespacemfem_1_1kernels.html#ac4bfbfcb50282a199d91dc73f50e54a6">CalcSingularvalue</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *data, <span class="keyword">const</span> <span class="keywordtype">int</span> i);</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">// Utility functions for CalcEigenvalues and CalcSingularvalue</span></div>
@@ -323,7 +324,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   b = tmp;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> Epsilon = <a class="code" href="maxwell_8cpp.html#acf630a4146d91af5f9420d91bb359d55">std::numeric_limits&lt;double&gt;::epsilon</a>();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> Epsilon = <a class="code" href="ex25_8cpp.html#a4904cc82627458fdf6672ccc0b2802c7">std::numeric_limits&lt;double&gt;::epsilon</a>();</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">/// Utility function used in CalcSingularvalue&lt;3&gt;.</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"></span>MFEM_HOST_DEVICE <span class="keyword">static</span> <span class="keyword">inline</span></div>
@@ -422,7 +423,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;   <span class="keywordtype">double</span> n2 = fabs(d2) + fabs(d12);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;   <span class="keywordtype">bool</span> swap_columns = (n2 &gt; n1);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;   <span class="keywordtype">double</span> mu;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;   <span class="keywordtype">double</span> <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;   <span class="keywordflow">if</span> (!swap_columns)</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;   {</div>
@@ -486,8 +487,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <span class="comment">// v = (n1, n2)^t,  |v| = 1</span></div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <span class="comment">// Q = I - 2 v v^t,  Q (d1, d21)^t = (mu, 0)^t</span></div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      mu = copysign(n1, d1);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      n1 = -d21*(d21/(d1 + mu)); <span class="comment">// = d1 - mu</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      d1 = mu;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      n1 = -d21*(d21/(d1 + <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>)); <span class="comment">// = d1 - mu</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      d1 = <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="comment">// normalize (n1,d21) to avoid overflow/underflow</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="comment">// normalize (n1,d21) by the max-norm to avoid the sqrt call</span></div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      <span class="keywordflow">if</span> (fabs(n1) &lt;= fabs(d21))</div>
@@ -495,7 +496,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;         <span class="comment">// (n1,n2) &lt;-- (n1/d21,1)</span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;         n1 = n1/d21;</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;         mu = (2./(1. + n1*n1))*(n1*d12 + d2);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;         d2  = d2  - mu;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;         d2  = d2  - <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;         d12 = d12 - mu*n1;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      }</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      <span class="keywordflow">else</span></div>
@@ -504,7 +505,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;         n2 = d21/n1;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;         mu = (2./(1. + n2*n2))*(d12 + n2*d2);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;         d2  = d2  - mu*n2;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;         d12 = d12 - mu;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;         d12 = d12 - <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      }</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;   }</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
@@ -602,7 +603,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                       <span class="keywordtype">double</span> &amp;c21, <span class="keywordtype">double</span> &amp;c31, <span class="keywordtype">double</span> &amp;c32)</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;{</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;   <span class="keywordtype">int</span> kdim;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;   <span class="keywordtype">double</span> mu, n1, n2, n3, s1, s2, s3;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;   <span class="keywordtype">double</span> <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>, n1, n2, n3, s1, s2, s3;</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;   s1 = hypot(c21, c31);</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;   n1 = hypot(d1, s1);</div>
@@ -612,8 +613,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      <span class="comment">// v = (s1, s2, s3)^t,  |v| = 1</span></div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      <span class="comment">// Q = I - 2 v v^t,  Q (d1, c12, c13)^t = (mu, 0, 0)^t</span></div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;      mu = copysign(n1, d1);</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;      n1 = -s1*(s1/(d1 + mu)); <span class="comment">// = d1 - mu</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;      d1 = mu;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;      n1 = -s1*(s1/(d1 + <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>)); <span class="comment">// = d1 - mu</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;      d1 = <a class="code" href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;      <span class="comment">// normalize (n1,c21,c31) to avoid overflow/underflow</span></div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      <span class="comment">// normalize (n1,c21,c31) by the max-norm to avoid the sqrt call</span></div>
@@ -933,7 +934,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;      d2  -= 2*v2*w2;</div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;      d23 -= v2*w3 + v3*w2;</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;      d3  -= 2*v3*w3;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;      <span class="comment">// compute the offdiagonal entries on the first row/column of B which</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;      <span class="comment">// compute the off-diagonal entries on the first row/column of B which</span></div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;      <span class="comment">// should be zero (for debugging):</span></div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;<span class="preprocessor"></span>      s = d12 - v1*w2 - v2*w1;  <span class="comment">// b12 = 0</span></div>
@@ -1474,38 +1475,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;   <span class="keywordflow">return</span> sqrt(fabs(aa))*mult; <span class="comment">// take abs before we sort?</span></div>
 <div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;}</div>
 <div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;</div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;} <span class="comment">// namespace kernels</span></div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;</div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;} <span class="comment">// namespace mfem</span></div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;</div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;<span class="preprocessor">#endif // MFEM_KERNELS_HPP</span></div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;<span class="comment">/// Assuming L.U = P.A for a factored matrix (m x m),</span></div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;<span class="comment"></span><span class="comment">//  compute x &lt;- A x</span></div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;<span class="comment">// @param [in] data LU factorization of A</span></div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;<span class="comment">// @param [in] m square matrix height</span></div>
+<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;<span class="comment">// @param [in] ipiv array storing pivot information</span></div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;<span class="comment">// @param [in, out] x vector storing right-hand side and then solution</span></div>
+<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;MFEM_HOST_DEVICE</div>
+<div class="line"><a name="l01388"></a><span class="lineno"><a class="line" href="namespacemfem_1_1kernels.html#aecaffa8713871184f3ef84a4762ece12"> 1388</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#aecaffa8713871184f3ef84a4762ece12">LUSolve</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> *data, <span class="keyword">const</span> <span class="keywordtype">int</span> m, <span class="keyword">const</span> <span class="keywordtype">int</span> *ipiv,</div>
+<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;                    <span class="keywordtype">double</span> *x)</div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;{</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;   <span class="comment">// X &lt;- P X</span></div>
+<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; i++)</div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;   {</div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;      internal::Swap&lt;double&gt;(x[i], x[ipiv[i]]);</div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;   }</div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;</div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;   <span class="comment">// X &lt;- L^{-1} X</span></div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; m; j++)</div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;   {</div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> x_j = x[j];</div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = j + 1; i &lt; m; i++)</div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;      {</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;         x[i] -= data[i + j * m] * x_j;</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;      }</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;   }</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;</div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;   <span class="comment">// X &lt;- U^{-1} X</span></div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = m - 1; j &gt;= 0; j--)</div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;   {</div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> x_j = (x[j] /= data[j + j * m]);</div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; j; i++)</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;      {</div>
+<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;         x[i] -= data[i + j * m] * x_j;</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;      }</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;   }</div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;}</div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;} <span class="comment">// namespace kernels</span></div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;} <span class="comment">// namespace mfem</span></div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;<span class="preprocessor">#endif // MFEM_KERNELS_HPP</span></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_ac8266bd809ccb8b2175151c6b8f60de4"><div class="ttname"><a href="namespacemfem_1_1kernels.html#ac8266bd809ccb8b2175151c6b8f60de4">mfem::kernels::Det</a></div><div class="ttdeci">MFEM_HOST_DEVICE T Det(const T *data)</div><div class="ttdoc">Compute the determinant of a square matrix of size dim with given data. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00121">kernels.hpp:121</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a647f7768429f9612c3c16a40020a3ab3"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a647f7768429f9612c3c16a40020a3ab3">mfem::kernels::MultABt</a></div><div class="ttdeci">MFEM_HOST_DEVICE void MultABt(const int Aheight, const int Awidth, const int Bheight, const TA *Adata, const TB *Bdata, TC *ABtdata)</div><div class="ttdoc">Multiply a matrix of size Aheight x Awidth and data Adata with the transpose of a matrix of size Bhei...</div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00181">kernels.hpp:181</a></div></div>
+<div class="ttc" id="ex25_8cpp_html_a4904cc82627458fdf6672ccc0b2802c7"><div class="ttname"><a href="ex25_8cpp.html#a4904cc82627458fdf6672ccc0b2802c7">epsilon</a></div><div class="ttdeci">double epsilon</div><div class="ttdef"><b>Definition:</b> <a href="ex25_8cpp_source.html#l00136">ex25.cpp:136</a></div></div>
 <div class="ttc" id="tlayout_8hpp_html"><div class="ttname"><a href="tlayout_8hpp.html">tlayout.hpp</a></div></div>
 <div class="ttc" id="matrix_8hpp_html"><div class="ttname"><a href="matrix_8hpp.html">matrix.hpp</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a306edb67e82f5e63f02f768021206743"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a306edb67e82f5e63f02f768021206743">mfem::kernels::Add</a></div><div class="ttdeci">MFEM_HOST_DEVICE void Add(const int height, const int width, const TALPHA alpha, const TA *Adata, const TB *Bdata, TC *Cdata)</div><div class="ttdoc">Compute C = A + alpha*B, where the matrices A, B and C are of size height x width with data Adata...</div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00141">kernels.hpp:141</a></div></div>
-<div class="ttc" id="namespacemfem_1_1kernels_html_afdf7240d1290002f16f30b1845164a78"><div class="ttname"><a href="namespacemfem_1_1kernels.html#afdf7240d1290002f16f30b1845164a78">mfem::kernels::CalcSingularvalue</a></div><div class="ttdeci">double CalcSingularvalue(const double *data, const int i)</div><div class="ttdoc">Return the i&amp;#39;th singular value of the matrix of size dim with given data. </div></div>
 <div class="ttc" id="tmatrix_8hpp_html"><div class="ttname"><a href="tmatrix_8hpp.html">tmatrix.hpp</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_afb0f7c785e52abc7eb8ce26c2776a493"><div class="ttname"><a href="namespacemfem_1_1kernels.html#afb0f7c785e52abc7eb8ce26c2776a493">mfem::kernels::CalcSingularvalue&lt; 3 &gt;</a></div><div class="ttdeci">MFEM_HOST_DEVICE double CalcSingularvalue&lt; 3 &gt;(const double *data, const int i)</div><div class="ttdoc">Return the i&amp;#39;th singular value of the matrix of size 3 with given data. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l01147">kernels.hpp:1147</a></div></div>
+<div class="ttc" id="namespacemfem_1_1kernels_html_af65466fa8fa1a8f84e23ba16fd21e8fa"><div class="ttname"><a href="namespacemfem_1_1kernels.html#af65466fa8fa1a8f84e23ba16fd21e8fa">mfem::kernels::CalcEigenvalues</a></div><div class="ttdeci">MFEM_HOST_DEVICE void CalcEigenvalues(const double *data, double *lambda, double *vec)</div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a46baf5b16a971cb68dd9638df53c79e8"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a46baf5b16a971cb68dd9638df53c79e8">mfem::kernels::CalcEigenvalues&lt; 2 &gt;</a></div><div class="ttdeci">MFEM_HOST_DEVICE void CalcEigenvalues&lt; 2 &gt;(const double *data, double *lambda, double *vec)</div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00866">kernels.hpp:866</a></div></div>
 <div class="ttc" id="lissajous_8cpp_html_a1510a66dacf9cf3586de5fc89ae2a073"><div class="ttname"><a href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a></div><div class="ttdeci">double b</div><div class="ttdef"><b>Definition:</b> <a href="lissajous_8cpp_source.html#l00042">lissajous.cpp:42</a></div></div>
+<div class="ttc" id="namespacemfem_1_1kernels_html_aecaffa8713871184f3ef84a4762ece12"><div class="ttname"><a href="namespacemfem_1_1kernels.html#aecaffa8713871184f3ef84a4762ece12">mfem::kernels::LUSolve</a></div><div class="ttdeci">MFEM_HOST_DEVICE void LUSolve(const double *data, const int m, const int *ipiv, double *x)</div><div class="ttdoc">Assuming L.U = P.A for a factored matrix (m x m),. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l01388">kernels.hpp:1388</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a308317342422b5f1789bfccc062edf38"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a308317342422b5f1789bfccc062edf38">mfem::kernels::Norml2</a></div><div class="ttdeci">MFEM_HOST_DEVICE double Norml2(const int size, const T *data)</div><div class="ttdoc">Returns the l2 norm of the Vector with given size and data. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00046">kernels.hpp:46</a></div></div>
 <div class="ttc" id="ttensor_8hpp_html"><div class="ttname"><a href="ttensor_8hpp.html">ttensor.hpp</a></div></div>
-<div class="ttc" id="namespacemfem_html_a005eac4b7840fa2691b6e57be1546d14"><div class="ttname"><a href="namespacemfem.html#a005eac4b7840fa2691b6e57be1546d14">mfem::Swap</a></div><div class="ttdeci">void Swap(Array&lt; T &gt; &amp;, Array&lt; T &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00592">array.hpp:592</a></div></div>
+<div class="ttc" id="namespacemfem_html_a005eac4b7840fa2691b6e57be1546d14"><div class="ttname"><a href="namespacemfem.html#a005eac4b7840fa2691b6e57be1546d14">mfem::Swap</a></div><div class="ttdeci">void Swap(Array&lt; T &gt; &amp;, Array&lt; T &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00611">array.hpp:611</a></div></div>
+<div class="ttc" id="namespacemfem_1_1kernels_html_ac4bfbfcb50282a199d91dc73f50e54a6"><div class="ttname"><a href="namespacemfem_1_1kernels.html#ac4bfbfcb50282a199d91dc73f50e54a6">mfem::kernels::CalcSingularvalue</a></div><div class="ttdeci">MFEM_HOST_DEVICE double CalcSingularvalue(const double *data, const int i)</div><div class="ttdoc">Return the i&amp;#39;th singular value of the matrix of size dim with given data. </div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a2db0caa75ada3e6946924f680ba158b4"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a2db0caa75ada3e6946924f680ba158b4">mfem::kernels::CalcSingularvalue&lt; 2 &gt;</a></div><div class="ttdeci">MFEM_HOST_DEVICE double CalcSingularvalue&lt; 2 &gt;(const double *data, const int i)</div><div class="ttdoc">Return the i&amp;#39;th singular value of the matrix of size 2 with given data. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l01099">kernels.hpp:1099</a></div></div>
 <div class="ttc" id="lissajous_8cpp_html_a1031d0e0a97a340abfe0a6ab9e831045"><div class="ttname"><a href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a></div><div class="ttdeci">double a</div><div class="ttdef"><b>Definition:</b> <a href="lissajous_8cpp_source.html#l00041">lissajous.cpp:41</a></div></div>
-<div class="ttc" id="structmfem_1_1ColumnMajorLayout2D_html"><div class="ttname"><a href="structmfem_1_1ColumnMajorLayout2D.html">mfem::ColumnMajorLayout2D</a></div><div class="ttdef"><b>Definition:</b> <a href="tlayout_8hpp_source.html#l00451">tlayout.hpp:451</a></div></div>
+<div class="ttc" id="structmfem_1_1ColumnMajorLayout2D_html"><div class="ttname"><a href="structmfem_1_1ColumnMajorLayout2D.html">mfem::ColumnMajorLayout2D</a></div><div class="ttdef"><b>Definition:</b> <a href="tlayout_8hpp_source.html#l00450">tlayout.hpp:450</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_aac439ac75791b5807c623bc7ef95c3e4"><div class="ttname"><a href="namespacemfem_1_1kernels.html#aac439ac75791b5807c623bc7ef95c3e4">mfem::kernels::CalcEigenvalues&lt; 3 &gt;</a></div><div class="ttdeci">MFEM_HOST_DEVICE void CalcEigenvalues&lt; 3 &gt;(const double *data, double *lambda, double *vec)</div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00897">kernels.hpp:897</a></div></div>
+<div class="ttc" id="ex25_8cpp_html_a74577585cf12d1712ab9c57616d49205"><div class="ttname"><a href="ex25_8cpp.html#a74577585cf12d1712ab9c57616d49205">mu</a></div><div class="ttdeci">double mu</div><div class="ttdef"><b>Definition:</b> <a href="ex25_8cpp_source.html#l00135">ex25.cpp:135</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a0a8c521f0c2554c75493f5cfc67d5d1a"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a0a8c521f0c2554c75493f5cfc67d5d1a">mfem::kernels::CalcInverse</a></div><div class="ttdeci">MFEM_HOST_DEVICE void CalcInverse(const T *data, T *inv_data)</div><div class="ttdoc">Return the inverse a matrix with given size and data into the matrix with data inv_data. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00130">kernels.hpp:130</a></div></div>
-<div class="ttc" id="maxwell_8cpp_html_acf630a4146d91af5f9420d91bb359d55"><div class="ttname"><a href="maxwell_8cpp.html#acf630a4146d91af5f9420d91bb359d55">epsilon</a></div><div class="ttdeci">double epsilon(const Vector &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="maxwell_8cpp_source.html#l00090">maxwell.cpp:90</a></div></div>
 <div class="ttc" id="ex15_8cpp_html_adeedc97114c5a704906c8e26bdbd2451"><div class="ttname"><a href="ex15_8cpp.html#adeedc97114c5a704906c8e26bdbd2451">alpha</a></div><div class="ttdeci">const double alpha</div><div class="ttdef"><b>Definition:</b> <a href="ex15_8cpp_source.html#l00336">ex15.cpp:336</a></div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a52535d41f1df1dcf6b46274f4ba451ff"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a52535d41f1df1dcf6b46274f4ba451ff">mfem::kernels::Mult</a></div><div class="ttdeci">MFEM_HOST_DEVICE void Mult(const int height, const int width, TA *data, const TX *x, TY *y)</div><div class="ttdoc">Matrix vector multiplication: y = A x, where the matrix A is of size height x width with given data...</div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00076">kernels.hpp:76</a></div></div>
-<div class="ttc" id="namespacemfem_1_1kernels_html_a4f46677ebde466631f20ef99f2de3d41"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a4f46677ebde466631f20ef99f2de3d41">mfem::kernels::CalcEigenvalues</a></div><div class="ttdeci">void CalcEigenvalues(const double *data, double *lambda, double *vec)</div></div>
 <div class="ttc" id="namespacemfem_1_1kernels_html_a799a2e37944ce606dc5175df81c169e0"><div class="ttname"><a href="namespacemfem_1_1kernels.html#a799a2e37944ce606dc5175df81c169e0">mfem::kernels::Symmetrize</a></div><div class="ttdeci">MFEM_HOST_DEVICE void Symmetrize(const int size, T *data)</div><div class="ttdoc">Symmetrize a square matrix with given size and data: A -&amp;gt; (A+A^T)/2. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00107">kernels.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:14 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:01 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

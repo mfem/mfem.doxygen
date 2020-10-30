@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -95,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -196,6 +198,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a109d0d1215affe85a413f182f7c1e829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Memory.html#a109d0d1215affe85a413f182f7c1e829">Wrap</a> (T *ptr, int size, <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a> mt, bool own)</td></tr>
 <tr class="memdesc:a109d0d1215affe85a413f182f7c1e829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap an externally allocated pointer, <em>ptr</em>, of the given MemoryType.  <a href="#a109d0d1215affe85a413f182f7c1e829">More...</a><br/></td></tr>
 <tr class="separator:a109d0d1215affe85a413f182f7c1e829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061123542e60412e191106a36d4cb6f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Memory.html#a061123542e60412e191106a36d4cb6f4">Wrap</a> (T *<a class="el" href="classmfem_1_1Memory.html#ab74d8712d2e64510cf8bfd256b656c16">h_ptr</a>, T *d_ptr, int size, <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a> <a class="el" href="classmfem_1_1Memory.html#a465ea2a53d95684f97d8554dc80d8c95">h_mt</a>, bool own)</td></tr>
+<tr class="separator:a061123542e60412e191106a36d4cb6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c80c40247a6a501cbc892063c19410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Memory.html#a54c80c40247a6a501cbc892063c19410">MakeAlias</a> (const <a class="el" href="classmfem_1_1Memory.html">Memory</a> &amp;base, int offset, int size)</td></tr>
 <tr class="memdesc:a54c80c40247a6a501cbc892063c19410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a memory object that points inside the memory object <em>base</em>.  <a href="#a54c80c40247a6a501cbc892063c19410">More...</a><br/></td></tr>
 <tr class="separator:a54c80c40247a6a501cbc892063c19410"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,7 +314,7 @@ class mfem::Memory&lt; T &gt;</h3>
 <p>Access to the content of the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object can be requested with any given MemoryClass through the methods <a class="el" href="classmfem_1_1Memory.html#a41c5196970fcdb804fda39b12ce33a89" title="Get read-write access to the memory with the given MemoryClass. ">ReadWrite()</a>, <a class="el" href="classmfem_1_1Memory.html#a8a5c11ddc964f3e9828e9a2049a5210d" title="Get read-only access to the memory with the given MemoryClass. ">Read()</a>, and <a class="el" href="classmfem_1_1Memory.html#a0e426fd5bdf03fced16e7fc748e618b3" title="Get write-only access to the memory with the given MemoryClass. ">Write()</a>. Requesting such access may result in additional (internally handled) memory allocation and/or memory copy. When <a class="el" href="classmfem_1_1Memory.html#a41c5196970fcdb804fda39b12ce33a89" title="Get read-write access to the memory with the given MemoryClass. ">ReadWrite()</a> is called, the returned pointer becomes the only valid pointer. When <a class="el" href="classmfem_1_1Memory.html#a8a5c11ddc964f3e9828e9a2049a5210d" title="Get read-only access to the memory with the given MemoryClass. ">Read()</a> is called, the returned pointer becomes valid, however the other pointer (host or device) may remain valid as well. When <a class="el" href="classmfem_1_1Memory.html#a0e426fd5bdf03fced16e7fc748e618b3" title="Get write-only access to the memory with the given MemoryClass. ">Write()</a> is called, the returned pointer becomes the only valid pointer, however, unlike <a class="el" href="classmfem_1_1Memory.html#a41c5196970fcdb804fda39b12ce33a89" title="Get read-write access to the memory with the given MemoryClass. ">ReadWrite()</a>, no memory copy will be performed.</p>
 <p>The host memory (pointer from <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5" title="Host memory; using new[] and delete[]. ">MemoryClass::HOST</a>) can be accessed through the inline methods: <code><a class="el" href="classmfem_1_1Memory.html#a2fe83db8e05919fc63ddba24b823bf7b" title="Array subscript operator for host memory. ">operator[]()</a></code>, <code><a class="el" href="namespacemfem.html#a1dd8fb57059a48b1904c99f33ed3ad5f" title="Return a suitable MemoryClass from a pair of MemoryClasses. ">operator*()</a></code>, the implicit conversion functions <code>operator T*()</code>, <code>operator const T*()</code>, and the explicit conversion template functions <code>operator U*()</code>, <code>operator const U*()</code> (with any suitable type U). In certain cases, using these methods may have undefined behavior, e.g. if the host pointer is not currently valid. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00121">121</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00122">122</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a3d0f39428ffcae585ee8a5e07d6293c8"></a>
 <div class="memitem">
@@ -333,7 +337,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a3d0f39428ffcae585ee8a5e07d6293c8a71f2794e3bbd9eaa78d79f8674247d35"></a>REGISTERED</em>&nbsp;</td><td class="fielddoc">
-<p>The host pointer is registered with the <a class="el" href="classmfem_1_1MemoryManager.html" title="The memory manager class. ">MemoryManager</a> </p>
+<p>The host pointer is registered with the <a class="el" href="classmfem_1_1MemoryManager.html">MemoryManager</a> </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a3d0f39428ffcae585ee8a5e07d6293c8a82221cef35fabed8dfcbf4535e32f98e"></a>OWNS_HOST</em>&nbsp;</td><td class="fielddoc">
 <p>The host pointer will be deleted by <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a> </p>
@@ -358,7 +362,7 @@ template&lt;typename T&gt; </div>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00127">127</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00128">128</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +392,7 @@ template&lt;typename T&gt; </div>
 
 <p>Default constructor: no initialization. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00154">154</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00155">155</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +479,7 @@ template&lt;typename T&gt; </div>
 <p>Allocate host memory for <em>size</em> entries. </p>
 <p>The allocation uses the current host memory type returned by <a class="el" href="classmfem_1_1MemoryManager.html#a8242b5d31866354a39a9499aaceb1e10">MemoryManager::GetHostMemoryType()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00171">171</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00172">172</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +520,7 @@ template&lt;typename T&gt; </div>
 <p>Allocate memory for <em>size</em> entries with the given MemoryType <em>mt</em>. </p>
 <p>The newly allocated memory is not initialized, however the given MemoryType is still set as valid. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00177">177</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00178">178</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +567,7 @@ template&lt;typename T&gt; </div>
 <p>Wrap an externally allocated host pointer, <em>ptr</em> with the current host memory type returned by <a class="el" href="classmfem_1_1MemoryManager.html#a8242b5d31866354a39a9499aaceb1e10">MemoryManager::GetHostMemoryType()</a>. </p>
 <p>The parameter <em>own</em> determines whether <em>ptr</em> will be deleted when the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00183">183</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00184">184</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -618,7 +622,7 @@ template&lt;typename T&gt; </div>
 <p>The given <em>ptr</em> must be allocated appropriately for the given MemoryType.</p>
 <p>The parameter <em>own</em> determines whether <em>ptr</em> will be deleted when the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00193">193</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00194">194</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -665,7 +669,7 @@ template&lt;typename T&gt; </div>
 <p>Alias constructor. Create a <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object that points inside the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object <em>base</em>. </p>
 <p>The new <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object uses the same MemoryType(s) as <em>base</em>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00199">199</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00200">200</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -723,7 +727,7 @@ template&lt;typename T&gt; </div>
 
 <p>Return the size of the allocated memory. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00237">237</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00238">238</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -752,7 +756,7 @@ template&lt;typename T&gt; </div>
 
 <p>Clear the ownership flags for the host and device pointers, as well as any internal data allocated by the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00226">226</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00227">227</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +787,7 @@ template&lt;typename T &gt; </div>
 <p>If both the host and the device data are valid, compare their contents. </p>
 <p>This method can be useful for debugging. It is explicitly instantiated for Memory&lt;T&gt; with T = int and T = double. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00904">904</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00976">976</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +828,7 @@ template&lt;typename T &gt; </div>
 <p>Copy <em>size</em> entries from <em>src</em> to <em>*this</em>. </p>
 <p>The given <em>size</em> should not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a> of the source <em>src</em> and the destination, <em>*this</em>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00836">836</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00908">908</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -865,7 +869,7 @@ template&lt;typename T&gt; </div>
 <p>Copy <em>size</em> entries from the host pointer <em>src</em> to <em>*this</em>. </p>
 <p>The given <em>size</em> should not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a> of <em>*this</em>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00855">855</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00927">927</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -906,7 +910,7 @@ template&lt;typename T&gt; </div>
 <p>Copy <em>size</em> entries from <em>*this</em> to <em>dest</em>. </p>
 <p>The given <em>size</em> should not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a> of <em>*this</em> and the destination, <em>dest</em>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00400">400</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00423">423</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -947,7 +951,7 @@ template&lt;typename T&gt; </div>
 <p>Copy <em>size</em> entries from <em>*this</em> to the host pointer <em>dest</em>. </p>
 <p>The given <em>size</em> should not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a> of <em>*this</em>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00874">874</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00946">946</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +980,7 @@ template&lt;typename T &gt; </div>
 
 <p>Delete the owned pointers. The <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> is not reset by this method, i.e. it will, generally, not be <a class="el" href="classmfem_1_1Memory.html#afa7fedbcdbd7866b6b00ff87b062214e" title="Return true if the Memory object is empty, see Reset(). ">Empty()</a> after this call. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00702">702</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00774">774</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1006,7 +1010,7 @@ template&lt;typename T&gt; </div>
 <p>Return true if the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object is empty, see <a class="el" href="classmfem_1_1Memory.html#ae0cb658936a2f7ef0033e7144b8f2ded" title="Reset the memory to be empty, ensuring that Delete() will be a no-op. ">Reset()</a>. </p>
 <p>Default-constructed objects are uninitialized, so they are not guaranteed to be empty. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00252">252</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00253">253</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1039,7 @@ template&lt;typename T &gt; </div>
 
 <p>Return a MemoryType that is currently valid. If both the host and the device pointers are currently valid, then the device memory type is returned. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00829">829</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00901">901</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1087,7 @@ template&lt;typename T &gt; </div>
 <p>The new <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object uses the same MemoryType(s) as <em>base</em>.</p>
 <dl class="section note"><dt>Note</dt><dd>The current memory is NOT deleted by this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00686">686</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00758">758</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1114,7 +1118,7 @@ template&lt;typename T &gt; </div>
 <p>Allocate host memory for <em>size</em> entries with the current host memory type returned by <a class="el" href="classmfem_1_1MemoryManager.html#a8242b5d31866354a39a9499aaceb1e10">MemoryManager::GetHostMemoryType()</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>The current memory is NOT deleted by this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00623">623</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00681">681</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1160,7 @@ template&lt;typename T &gt; </div>
 <p>The newly allocated memory is not initialized, however the given MemoryType is still set as valid.</p>
 <dl class="section note"><dt>Note</dt><dd>The current memory is NOT deleted by this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00633">633</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00691">691</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1187,7 +1191,7 @@ template&lt;typename T &gt; </div>
 <p>This method can be used only if the host pointer is currently valid (the device pointer may be valid or invalid).</p>
 <p>When the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> is empty, this method can be used and it returns NULL. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00741">741</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00813">813</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1221,7 +1225,7 @@ template&lt;typename U &gt; </div>
 <p>This method can be used only if the host pointer is currently valid (the device pointer may be valid or invalid).</p>
 <p>When the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> is empty, this method can be used and it returns NULL. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00758">758</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00830">830</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1253,7 +1257,7 @@ template&lt;typename T &gt; </div>
 <p>When the type T is not const-qualified, this method can be used only if the host pointer is the only valid pointer.</p>
 <p>When the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> is empty, this method can be used and it returns NULL. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00731">731</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00803">803</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1288,7 +1292,7 @@ template&lt;typename U &gt; </div>
 <p>When the type U is not const-qualified, this method can be used only if the host pointer is the only valid pointer.</p>
 <p>When the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> is empty, this method can be used and it returns NULL. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00748">748</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00820">820</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1374,7 +1378,7 @@ template&lt;typename T &gt; </div>
 
 <p><a class="el" href="classmfem_1_1Array.html">Array</a> subscript operator for host memory. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00716">716</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00788">788</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1408,7 @@ template&lt;typename T &gt; </div>
 
 <p><a class="el" href="classmfem_1_1Array.html">Array</a> subscript operator for host memory, const version. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00724">724</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00796">796</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1433,7 +1437,7 @@ template&lt;typename T&gt; </div>
 
 <p>Return true if the device pointer is owned. Ownership indicates whether the pointer will be deleted by the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00217">217</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00218">218</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1462,7 +1466,7 @@ template&lt;typename T&gt; </div>
 
 <p>Return true if the host pointer is owned. Ownership indicates whether the pointer will be deleted by the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00208">208</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00209">209</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1492,7 +1496,7 @@ template&lt;typename T &gt; </div>
 <p>Print the internal flags. </p>
 <p>This method can be useful for debugging. It is explicitly instantiated for Memory&lt;T&gt; with T = int and T = double. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00898">898</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00970">970</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +1537,7 @@ template&lt;typename T &gt; </div>
 <p>Get read-only access to the memory with the given MemoryClass. </p>
 <p>The parameter <em>size</em> must not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00778">778</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00850">850</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1575,7 +1579,7 @@ template&lt;typename T &gt; </div>
 <p>If only read or only write access is needed, then the methods <a class="el" href="classmfem_1_1Memory.html#a8a5c11ddc964f3e9828e9a2049a5210d" title="Get read-only access to the memory with the given MemoryClass. ">Read()</a> or <a class="el" href="classmfem_1_1Memory.html#a0e426fd5bdf03fced16e7fc748e618b3" title="Get write-only access to the memory with the given MemoryClass. ">Write()</a> should be used instead of this method.</p>
 <p>The parameter <em>size</em> must not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00765">765</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00837">837</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1606,7 +1610,7 @@ template&lt;typename T &gt; </div>
 <p>This is the <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> class equivalent to setting a pointer to NULL, see <a class="el" href="classmfem_1_1Memory.html#afa7fedbcdbd7866b6b00ff87b062214e" title="Return true if the Memory object is empty, see Reset(). ">Empty()</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>The current memory is NOT deleted by this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00605">605</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00663">663</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1636,7 +1640,7 @@ template&lt;typename T &gt; </div>
 
 <p>Reset the memory and set the host memory type. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00614">614</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00672">672</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1666,7 +1670,7 @@ template&lt;typename T&gt; </div>
 
 <p>Set/clear the ownership flag for the device pointer. Ownership indicates whether the pointer will be deleted by the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00221">221</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00222">222</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1696,7 +1700,7 @@ template&lt;typename T&gt; </div>
 
 <p>Set/clear the ownership flag for the host pointer. Ownership indicates whether the pointer will be deleted by the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00212">212</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00213">213</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1727,7 +1731,7 @@ template&lt;typename T &gt; </div>
 <p>Copy the host/device pointer validity flags from <em>other</em> to <em>*this</em>. </p>
 <p>This method synchronizes the pointer validity flags of two <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> objects that use the same host/device pointers, or when <em>*this</em> is an alias (sub-Memory) of <em>other</em>. Typically, this method should be called after <em>other</em> is manipulated in a way that changes its pointer validity flags (e.g. it was moved from device to host memory). </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00804">804</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00876">876</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1768,7 +1772,7 @@ template&lt;typename T &gt; </div>
 <p>Update the alias <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> <em>*this</em> to match the memory location (all valid locations) of its base <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a>, <em>base</em>. </p>
 <p>This method is useful when alias <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> is moved and manipulated in a different memory space. Such operations render the pointer validity flags of the base incorrect. Calling this method will ensure that <em>base</em> is up-to-date. Note that this is achieved by moving/copying <em>*this</em> (if necessary), and not <em>base</em>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00818">818</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00890">890</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1797,7 +1801,7 @@ template&lt;typename T&gt; </div>
 
 <p>Read the internal device flag. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00230">230</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00231">231</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1827,7 +1831,7 @@ template&lt;typename T&gt; </div>
 
 <p>Set the internal device flag. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00233">233</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00234">234</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1875,7 +1879,7 @@ template&lt;typename T&gt; </div>
 <p>The parameter <em>own</em> determines whether <em>ptr</em> will be deleted when the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a> is called.</p>
 <dl class="section note"><dt>Note</dt><dd>The current memory is NOT deleted by this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00645">645</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00704">704</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1931,7 +1935,80 @@ template&lt;typename T&gt; </div>
 <p>The parameter <em>own</em> determines whether <em>ptr</em> will be deleted when the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a> is called.</p>
 <dl class="section note"><dt>Note</dt><dd>The current memory is NOT deleted by this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00661">661</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00720">720</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a061123542e60412e191106a36d4cb6f4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmfem_1_1Memory.html">mfem::Memory</a>&lt; T &gt;::Wrap </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>h_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>d_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a>&#160;</td>
+          <td class="paramname"><em>h_mt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>own</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Wrap an externally pair of allocated pointers, <em>h_ptr</em> and @ d_ptr, of the given host MemoryType <em>h_mt</em>. The new memory object will have the device MemoryType set as valid.</p>
+<p>The given <em>h_ptr</em> and <em>d_ptr</em> must be allocated appropriately for the given host MemoryType and its associated device MemoryType:</p>
+<ul>
+<li>MANAGED =&gt; MANAGED,</li>
+<li>HOST_DEBUG =&gt; DEVICE_DEBUG,</li>
+<li>HOST_UMPIRE =&gt; DEVICE_UMPIRE,</li>
+<li>HOST, HOST_32, HOST_64 =&gt; DEVICE.</li>
+</ul>
+<p>The parameter <em>own</em> determines whether both <em>h_ptr</em> and <em>d_ptr</em> will be deleted when the method <a class="el" href="classmfem_1_1Memory.html#ae561fa2849413502ad438425d430ab3e" title="Delete the owned pointers. The Memory is not reset by this method, i.e. it will, generally, not be Empty() after this call. ">Delete()</a> is called.</p>
+<dl class="section note"><dt>Note</dt><dd>Ownership can also be controlled by using the following methods:<ul>
+<li>ClearOwnerFlags,</li>
+<li>SetHostPtrOwner,</li>
+<li>SetDevicePtrOwner.</li>
+</ul>
+</dd>
+<dd>
+The current memory is NOT deleted by this method. </dd></dl>
+
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00745">745</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1973,7 +2050,7 @@ template&lt;typename T &gt; </div>
 <p>The parameter <em>size</em> must not exceed the <a class="el" href="classmfem_1_1Memory.html#ab5ad0de14bbbd20a93e4f1c9215b2179" title="Return the size of the allocated memory. ">Capacity()</a>.</p>
 <p>The contents of the returned pointer is undefined, unless it was validated by a previous call to <a class="el" href="classmfem_1_1Memory.html#a8a5c11ddc964f3e9828e9a2049a5210d" title="Get read-only access to the memory with the given MemoryClass. ">Read()</a> or <a class="el" href="classmfem_1_1Memory.html#a41c5196970fcdb804fda39b12ce33a89" title="Get read-write access to the memory with the given MemoryClass. ">ReadWrite()</a> with the same MemoryClass. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00791">791</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00863">863</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1998,7 +2075,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00124">124</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00125">125</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -2028,7 +2105,7 @@ template&lt;typename T&gt; </div>
 
 <p>Print the state of a <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> object based on its internal flags. Useful in a debugger. See also <a class="el" href="classmfem_1_1Memory.html#a72eb3b9526fbdcb4813204695d9f90aa" title="Print the internal flags. ">Memory&lt;T&gt;::PrintFlags()</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01352">1352</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8cpp_source.html#l01361">1361</a> of file <a class="el" href="mem__manager_8cpp_source.html">mem_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -2055,7 +2132,7 @@ template&lt;typename T&gt; </div>
 
 <p>Size of the allocated memory. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00146">146</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00147">147</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -2081,7 +2158,7 @@ template&lt;typename T&gt; </div>
 
 <p>Bit flags defined from the <a class="el" href="classmfem_1_1Memory.html#a3d0f39428ffcae585ee8a5e07d6293c8">FlagMask</a> enum. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00148">148</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00149">149</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -2107,7 +2184,7 @@ template&lt;typename T&gt; </div>
 
 <p>Host memory type. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00147">147</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00148">148</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -2134,7 +2211,7 @@ template&lt;typename T&gt; </div>
 <p>Pointer to host memory. Not owned. </p>
 <p>The type of the pointer is given by the field <a class="el" href="classmfem_1_1Memory.html#a465ea2a53d95684f97d8554dc80d8c95" title="Host memory type. ">h_mt</a>; it can be any type from <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5" title="Host memory; using new[] and delete[]. ">MemoryClass::HOST</a>. </p>
 
-<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00145">145</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="mem__manager_8hpp_source.html#l00146">146</a> of file <a class="el" href="mem__manager_8hpp_source.html">mem_manager.hpp</a>.</p>
 
 </div>
 </div>
@@ -2145,7 +2222,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:16 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

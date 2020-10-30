@@ -1,6 +1,9 @@
 var searchData=
 [
   ['barycentric',['Barycentric',['../classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3ac89080a0ecee7b658d553dbdf13449a8',1,'mfem::Poly_1D']]],
+  ['bdr_5felement',['BDR_ELEMENT',['../classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418ac2abcd0ef85a005bc4cefe88710b6bae',1,'mfem::ElementTransformation']]],
+  ['bdr_5fface',['BDR_FACE',['../classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418a4e03a9086649ddf8ed7b23e2cf3d1f55',1,'mfem::ElementTransformation']]],
+  ['beam',['beam',['../ex25_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2ac2c12a2c4780728a04ffee9b0ff57f57',1,'beam():&#160;ex25.cpp'],['../ex25p_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2ac2c12a2c4780728a04ffee9b0ff57f57',1,'beam():&#160;ex25p.cpp']]],
   ['binary',['BINARY',['../namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850a98ad0e8750ae10ad556ed7a62affb452',1,'mfem']]],
   ['binary32',['BINARY32',['../namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850a88131bfe59ca59720a89255e8857db09',1,'mfem']]],
   ['block_5fsymmetric',['BLOCK_SYMMETRIC',['../classmfem_1_1ComplexOperator.html#ac3f1afa81d23559eb9341b71ac0ed393aa18a1db8aa16cd12afa99e3fddbefcd1',1,'mfem::ComplexOperator']]],

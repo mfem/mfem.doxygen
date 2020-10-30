@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -154,6 +155,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6fe3936d7a51f4b3573e09a7c6f0903e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a088e44810ba0277a3ef58052b644aa65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a088e44810ba0277a3ef58052b644aa65">GetMyRank</a> () const </td></tr>
 <tr class="separator:a088e44810ba0277a3ef58052b644aa65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5710cb3f7e03e0e29884c6c1ec2336de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a5710cb3f7e03e0e29884c6c1ec2336de">GetLocalElementNum</a> (long global_element_num) const </td></tr>
+<tr class="separator:a5710cb3f7e03e0e29884c6c1ec2336de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9013ad057b45d6f81d35a9bceeed17c8"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a9013ad057b45d6f81d35a9bceeed17c8">GetGlobalElementNum</a> (int local_element_num) const </td></tr>
+<tr class="memdesc:a9013ad057b45d6f81d35a9bceeed17c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map a local element number to a global element number.  <a href="#a9013ad057b45d6f81d35a9bceeed17c8">More...</a><br/></td></tr>
+<tr class="separator:a9013ad057b45d6f81d35a9bceeed17c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acad8338cf336920b5a0030cbd1de3f34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#acad8338cf336920b5a0030cbd1de3f34">GetNGroups</a> () const </td></tr>
 <tr class="separator:acad8338cf336920b5a0030cbd1de3f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17e8b728656d4da0fd070a43bf3d1112"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a17e8b728656d4da0fd070a43bf3d1112">GenerateOffsets</a> (int N, HYPRE_Int loc_sizes[], <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; HYPRE_Int &gt; *offsets[]) const </td></tr>
@@ -174,6 +180,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3fc6dbc8e0f0d3118f67a5276b5014fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f90bec4d091ae5adc160fb74d89ca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ae6f90bec4d091ae5adc160fb74d89ca1">GetSharedFaceTransformations</a> (int sf, bool fill2=true)</td></tr>
 <tr class="separator:ae6f90bec4d091ae5adc160fb74d89ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd96bade3acfe385bec8cdb2b649a018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#acd96bade3acfe385bec8cdb2b649a018">GetFaceNbrElementTransformation</a> (int i)</td></tr>
+<tr class="separator:acd96bade3acfe385bec8cdb2b649a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc1182af5d97959e831ae78462720156"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#adc1182af5d97959e831ae78462720156">GetNSharedFaces</a> () const </td></tr>
 <tr class="memdesc:adc1182af5d97959e831ae78462720156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of shared faces (3D), edges (2D), vertices (1D)  <a href="#adc1182af5d97959e831ae78462720156">More...</a><br/></td></tr>
 <tr class="separator:adc1182af5d97959e831ae78462720156"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +200,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a54b3f168f4380ebfe4d70e7de234a3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484f9cd829aeb465bdd4837d6080da5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a484f9cd829aeb465bdd4837d6080da5e">Print</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>) const </td></tr>
 <tr class="separator:a484f9cd829aeb465bdd4837d6080da5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc7d75f212e59d4bddbb2a2c1c5f0c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#adbc7d75f212e59d4bddbb2a2c1c5f0c8">Print</a> (<a class="el" href="classmfem_1_1adios2stream.html">adios2stream</a> &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
+<tr class="separator:adbc7d75f212e59d4bddbb2a2c1c5f0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac703e9661f8aa3e37ba458bf6e853292"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ac703e9661f8aa3e37ba458bf6e853292">PrintXG</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>) const </td></tr>
 <tr class="separator:ac703e9661f8aa3e37ba458bf6e853292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee2f3bd7eb6d484b36cfedd481d349d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a6ee2f3bd7eb6d484b36cfedd481d349d">PrintAsOne</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>=<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">mfem::out</a>)</td></tr>
@@ -209,6 +219,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52c35d5d3a884affdcf50dca8bd095d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a52c35d5d3a884affdcf50dca8bd095d1">ParPrint</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>) const </td></tr>
 <tr class="memdesc:a52c35d5d3a884affdcf50dca8bd095d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the mesh in a parallel mesh format.  <a href="#a52c35d5d3a884affdcf50dca8bd095d1">More...</a><br/></td></tr>
 <tr class="separator:a52c35d5d3a884affdcf50dca8bd095d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbedd02945b264aca720fceeeaef8bbe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#acbedd02945b264aca720fceeeaef8bbe">PrintVTU</a> (std::string pathname, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0, bool bdr=false)</td></tr>
+<tr class="separator:acbedd02945b264aca720fceeeaef8bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac45000bb042ab1cac2be7a8d09a1c504"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ac45000bb042ab1cac2be7a8d09a1c504">FindPoints</a> (<a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;point_mat, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elem_ids, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &gt; &amp;ips, bool warn=true, <a class="el" href="classmfem_1_1InverseElementTransformation.html">InverseElementTransformation</a> *inv_trans=NULL)</td></tr>
 <tr class="memdesc:ac45000bb042ab1cac2be7a8d09a1c504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the ids of the elements that contain the given points, and their corresponding reference coordinates.  <a href="#ac45000bb042ab1cac2be7a8d09a1c504">More...</a><br/></td></tr>
 <tr class="separator:ac45000bb042ab1cac2be7a8d09a1c504"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,8 +260,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d5f2a1b3e88520e2063feac1ec006ab inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5d5f2a1b3e88520e2063feac1ec006ab">FinalizeTopology</a> (bool generate_bdr=true)</td></tr>
 <tr class="memdesc:a5d5f2a1b3e88520e2063feac1ec006ab inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize the construction of the secondary topology (connectivity) data of a <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>.  <a href="#a5d5f2a1b3e88520e2063feac1ec006ab">More...</a><br/></td></tr>
 <tr class="separator:a5d5f2a1b3e88520e2063feac1ec006ab inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368a9423113a4efb78c542758a87d0e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a368a9423113a4efb78c542758a87d0e3">GetGeckoElementOrdering</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering, int iterations=1, int window=2, int period=1, int seed=0)</td></tr>
-<tr class="separator:a368a9423113a4efb78c542758a87d0e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3835cd0ffbe86a2e3f2cf63eaa83138 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad3835cd0ffbe86a2e3f2cf63eaa83138">GetGeckoElementOrdering</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering, int iterations=4, int window=4, int period=2, int seed=0, bool verbose=false, double time_limit=0)</td></tr>
+<tr class="separator:ad3835cd0ffbe86a2e3f2cf63eaa83138 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa55f419dcf535780b56285ac17b2c39f inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa55f419dcf535780b56285ac17b2c39f">GetHilbertElementOrdering</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering)</td></tr>
 <tr class="separator:aa55f419dcf535780b56285ac17b2c39f inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c20ae2bb169beb667dd3321f5c5bce8 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a6c20ae2bb169beb667dd3321f5c5bce8">ReorderElements</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;ordering, bool reorder_vertices=true)</td></tr>
@@ -535,7 +547,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a242e73d6b3c5a08f583be64337d39d51 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaefc2612b26b0e4a6de3ca00d64c0851 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aaefc2612b26b0e4a6de3ca00d64c0851">GeneralRefinement</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;el_to_refine, int nonconforming=-1, int nc_limit=0)</td></tr>
 <tr class="separator:aaefc2612b26b0e4a6de3ca00d64c0851 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a78aef6a688b0e30e5ddd4c594cf372ed">RandomRefinement</a> (double prob, bool aniso=false, int nonconforming=-1, int nc_limit=0)</td></tr>
+<tr class="memitem:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a78aef6a688b0e30e5ddd4c594cf372ed">RandomRefinement</a> (double <a class="el" href="ex25p_8cpp.html#ad4a94974c059a3834c510611331e5ca0">prob</a>, bool aniso=false, int nonconforming=-1, int nc_limit=0)</td></tr>
 <tr class="memdesc:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refine each element with given probability. Uses GeneralRefinement.  <a href="#a78aef6a688b0e30e5ddd4c594cf372ed">More...</a><br/></td></tr>
 <tr class="separator:a78aef6a688b0e30e5ddd4c594cf372ed inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81f424e53aff1017c1b36e34aea52511 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a81f424e53aff1017c1b36e34aea52511">RefineAtVertex</a> (const <a class="el" href="classmfem_1_1Vertex.html">Vertex</a> &amp;vert, double eps=0.0, int nonconforming=-1)</td></tr>
@@ -567,10 +579,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae0739a8d419536651ba0a22694fcd7b7 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeb41cd6df28d1d9351cb4cbf9c35a2a inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#adeb41cd6df28d1d9351cb4cbf9c35a2a">PrintVTK</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int ref, int field_data=0)</td></tr>
 <tr class="separator:adeb41cd6df28d1d9351cb4cbf9c35a2a inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac67435e50c0e20ff695c309eb06f54a0 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ac67435e50c0e20ff695c309eb06f54a0">PrintVTU</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int ref=1, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0)</td></tr>
-<tr class="separator:ac67435e50c0e20ff695c309eb06f54a0 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f48de9274f0cefed1edbbcf198e52f6 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a4f48de9274f0cefed1edbbcf198e52f6">PrintVTU</a> (std::string fname, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0)</td></tr>
-<tr class="separator:a4f48de9274f0cefed1edbbcf198e52f6 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7830040f4679102c682f933563cf545b inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a7830040f4679102c682f933563cf545b">PrintVTU</a> (std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int ref=1, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0, bool bdr_elements=false)</td></tr>
+<tr class="separator:a7830040f4679102c682f933563cf545b inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa086182bab5e6c3685aba2815db44ca4 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa086182bab5e6c3685aba2815db44ca4">PrintBdrVTU</a> (std::string fname, <a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a> format=<a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a>, bool high_order_output=false, int compression_level=0)</td></tr>
+<tr class="separator:aa086182bab5e6c3685aba2815db44ca4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f57b75ca04a92bf52c2c398a2fbcd9 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a14f57b75ca04a92bf52c2c398a2fbcd9">GetElementColoring</a> (<a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;colors, int el0=0)</td></tr>
 <tr class="separator:a14f57b75ca04a92bf52c2c398a2fbcd9 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f2e04303a4931b4da081f1f5fcc7ec8 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2f2e04303a4931b4da081f1f5fcc7ec8">PrintWithPartitioning</a> (int *partitioning, std::ostream &amp;<a class="el" href="namespacemfem.html#a0e01b55edfba5e7b3e4d6913cee6be45">out</a>, int elem_attr=0) const </td></tr>
@@ -585,7 +597,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8f129df1053897eb48a358b98a9ce31f inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac564ba7b08adfad5aadbe24cd96bb8a1 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ac564ba7b08adfad5aadbe24cd96bb8a1">ScaleElements</a> (double sf)</td></tr>
 <tr class="separator:ac564ba7b08adfad5aadbe24cd96bb8a1 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb0d76e6b659cf5b5380dad50b6e2853 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aeb0d76e6b659cf5b5380dad50b6e2853">Transform</a> (void(*f)(const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;))</td></tr>
+<tr class="memitem:aeb0d76e6b659cf5b5380dad50b6e2853 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aeb0d76e6b659cf5b5380dad50b6e2853">Transform</a> (void(*<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>)(const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;))</td></tr>
 <tr class="separator:aeb0d76e6b659cf5b5380dad50b6e2853 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96590a6c47bdc1b6c0289c71755c4d66 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a96590a6c47bdc1b6c0289c71755c4d66">Transform</a> (<a class="el" href="classmfem_1_1VectorCoefficient.html">VectorCoefficient</a> &amp;deformation)</td></tr>
 <tr class="separator:a96590a6c47bdc1b6c0289c71755c4d66 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -601,6 +613,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af9c36780cf75d57cebbb92ab4ea20dd4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006667bb20af5915348cf9c7d7db7cfc inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a006667bb20af5915348cf9c7d7db7cfc">GetElementVolume</a> (int i)</td></tr>
 <tr class="separator:a006667bb20af5915348cf9c7d7db7cfc inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9752bc7b7140fecb7733a9742c96b1 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aba9752bc7b7140fecb7733a9742c96b1">GetElementCenter</a> (int i, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;center)</td></tr>
+<tr class="separator:aba9752bc7b7140fecb7733a9742c96b1 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66adc8ca8fb91fbe3684ae31fd1b3255 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a66adc8ca8fb91fbe3684ae31fd1b3255">GetBoundingBox</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;min, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;max, int ref=2)</td></tr>
 <tr class="memdesc:a66adc8ca8fb91fbe3684ae31fd1b3255 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum and maximum corners of the mesh bounding box.  <a href="#a66adc8ca8fb91fbe3684ae31fd1b3255">More...</a><br/></td></tr>
 <tr class="separator:a66adc8ca8fb91fbe3684ae31fd1b3255 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -619,37 +633,60 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b6c8e426828c7f0d42c05fe350bbe59 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a085464fbf2a801f2a98a724af938b5ba inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Element.html">Element</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a085464fbf2a801f2a98a724af938b5ba">NewElement</a> (int <a class="el" href="miniapps_2performance_2ex1p_8cpp.html#a784b7cbb4c28f5c0b15e7c6f949b24d0">geom</a>)</td></tr>
 <tr class="separator:a085464fbf2a801f2a98a724af938b5ba inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe28779bbf2ddacf27e8d74cf3ac6087 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#abe28779bbf2ddacf27e8d74cf3ac6087">AddVertex</a> (const double *)</td></tr>
-<tr class="separator:abe28779bbf2ddacf27e8d74cf3ac6087 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a28fc4b9763fb49a136c46e4ee6f33c inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1a28fc4b9763fb49a136c46e4ee6f33c">AddSegment</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a1a28fc4b9763fb49a136c46e4ee6f33c inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cefc9878092cdd4a017d5e4bab96918 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5cefc9878092cdd4a017d5e4bab96918">AddTri</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a5cefc9878092cdd4a017d5e4bab96918 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00e79fa33fedf9714806651b46d6a81c inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a00e79fa33fedf9714806651b46d6a81c">AddTriangle</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a00e79fa33fedf9714806651b46d6a81c inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d4aaa3646cd2868f1ead0d7cfed86f2 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3d4aaa3646cd2868f1ead0d7cfed86f2">AddQuad</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a3d4aaa3646cd2868f1ead0d7cfed86f2 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bfbe43c0b5841bee8e90d65cbff6da4 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2bfbe43c0b5841bee8e90d65cbff6da4">AddTet</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a2bfbe43c0b5841bee8e90d65cbff6da4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430f319c21f14ee0301de535eb949255 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a430f319c21f14ee0301de535eb949255">AddWedge</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a430f319c21f14ee0301de535eb949255 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcdf2d9a98ea1cb20ccfeddc79075918 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#abcdf2d9a98ea1cb20ccfeddc79075918">AddHex</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:abcdf2d9a98ea1cb20ccfeddc79075918 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9950e1768fac1c8ee0a54f219c4a9ba inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad9950e1768fac1c8ee0a54f219c4a9ba">AddVertex</a> (double x, double y=0.0, double z=0.0)</td></tr>
+<tr class="separator:ad9950e1768fac1c8ee0a54f219c4a9ba inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0528b0d460641fb20527a1353a03092 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa0528b0d460641fb20527a1353a03092">AddVertex</a> (const double *coords)</td></tr>
+<tr class="separator:aa0528b0d460641fb20527a1353a03092 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83cdaa00a258633c9d09419d3a627970 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a83cdaa00a258633c9d09419d3a627970">AddVertexParents</a> (int i, int p1, int p2)</td></tr>
+<tr class="memdesc:a83cdaa00a258633c9d09419d3a627970 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark vertex <em>i</em> as non-conforming, with parent vertices <em>p1</em> and <em>p2</em>.  <a href="#a83cdaa00a258633c9d09419d3a627970">More...</a><br/></td></tr>
+<tr class="separator:a83cdaa00a258633c9d09419d3a627970 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122d0897fc1f61d6d3e5f98a48442eb9 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a122d0897fc1f61d6d3e5f98a48442eb9">AddSegment</a> (int v1, int v2, int attr=1)</td></tr>
+<tr class="separator:a122d0897fc1f61d6d3e5f98a48442eb9 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e0e246837652a4a0ed5a6fa0e7228b inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a05e0e246837652a4a0ed5a6fa0e7228b">AddSegment</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a05e0e246837652a4a0ed5a6fa0e7228b inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4755087b6a10d3dd3a05d05390d3562e inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a4755087b6a10d3dd3a05d05390d3562e">AddTriangle</a> (int v1, int v2, int v3, int attr=1)</td></tr>
+<tr class="separator:a4755087b6a10d3dd3a05d05390d3562e inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adddf671adddd53108aa7b1129743ce51 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#adddf671adddd53108aa7b1129743ce51">AddTriangle</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:adddf671adddd53108aa7b1129743ce51 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28276e4d5e0bd9869aad0a5eb733ca34 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a28276e4d5e0bd9869aad0a5eb733ca34">AddTri</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a28276e4d5e0bd9869aad0a5eb733ca34 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5fa142fea0b8b987b62093217c2ff1 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2b5fa142fea0b8b987b62093217c2ff1">AddQuad</a> (int v1, int v2, int v3, int v4, int attr=1)</td></tr>
+<tr class="separator:a2b5fa142fea0b8b987b62093217c2ff1 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fe5f724c5d68c9c1ddd18d938ccf17 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a92fe5f724c5d68c9c1ddd18d938ccf17">AddQuad</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a92fe5f724c5d68c9c1ddd18d938ccf17 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6675ff9b61ab5482719380789f1c3aa6 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a6675ff9b61ab5482719380789f1c3aa6">AddTet</a> (int v1, int v2, int v3, int v4, int attr=1)</td></tr>
+<tr class="separator:a6675ff9b61ab5482719380789f1c3aa6 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2d1272dfde6f48f586b443dca511b7 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5e2d1272dfde6f48f586b443dca511b7">AddTet</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a5e2d1272dfde6f48f586b443dca511b7 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312f687de40dca4c6dc9159be8dea1e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a312f687de40dca4c6dc9159be8dea1e3">AddWedge</a> (int v1, int v2, int v3, int v4, int v5, int v6, int attr=1)</td></tr>
+<tr class="separator:a312f687de40dca4c6dc9159be8dea1e3 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ba3c242549f474f2a29a834449b097 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af1ba3c242549f474f2a29a834449b097">AddWedge</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:af1ba3c242549f474f2a29a834449b097 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7f6391e632b8acb1d3edadb805102a inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#abc7f6391e632b8acb1d3edadb805102a">AddHex</a> (int v1, int v2, int v3, int v4, int v5, int v6, int v7, int v8, int attr=1)</td></tr>
+<tr class="separator:abc7f6391e632b8acb1d3edadb805102a inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860e8fd136897e6172ffc0a5c1f64f5a inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a860e8fd136897e6172ffc0a5c1f64f5a">AddHex</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a860e8fd136897e6172ffc0a5c1f64f5a inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add065f637bf3bacb430a5835d98c45fb inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#add065f637bf3bacb430a5835d98c45fb">AddHexAsTets</a> (const int *vi, int attr=1)</td></tr>
 <tr class="separator:add065f637bf3bacb430a5835d98c45fb inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39b817f304b7d346634ac6c38e46c20 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ae39b817f304b7d346634ac6c38e46c20">AddHexAsWedges</a> (const int *vi, int attr=1)</td></tr>
 <tr class="separator:ae39b817f304b7d346634ac6c38e46c20 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68750229940dc13b9d914ea01cd98ef3 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a68750229940dc13b9d914ea01cd98ef3">AddElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
-<tr class="memdesc:a68750229940dc13b9d914ea01cd98ef3 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parameter <em>elem</em> should be allocated using the <a class="el" href="classmfem_1_1Mesh.html#a085464fbf2a801f2a98a724af938b5ba">NewElement()</a> method.  <a href="#a68750229940dc13b9d914ea01cd98ef3">More...</a><br/></td></tr>
-<tr class="separator:a68750229940dc13b9d914ea01cd98ef3 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b90dbc229329e9ea5808e53fb7c5608 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1b90dbc229329e9ea5808e53fb7c5608">AddBdrElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
-<tr class="separator:a1b90dbc229329e9ea5808e53fb7c5608 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6a866f0fdb25eb6b3f2281fa9c79b2 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3d6a866f0fdb25eb6b3f2281fa9c79b2">AddBdrSegment</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a3d6a866f0fdb25eb6b3f2281fa9c79b2 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa1500f32ab77d4156b3837cf14ae79 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#affa1500f32ab77d4156b3837cf14ae79">AddBdrTriangle</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:affa1500f32ab77d4156b3837cf14ae79 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff3f5c8145ec249b47326f04d709234 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a2ff3f5c8145ec249b47326f04d709234">AddBdrQuad</a> (const int *vi, int attr=1)</td></tr>
-<tr class="separator:a2ff3f5c8145ec249b47326f04d709234 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0ebfbab71ebba875e7b45223899167 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a7b0ebfbab71ebba875e7b45223899167">AddElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
+<tr class="memdesc:a7b0ebfbab71ebba875e7b45223899167 inherit pub_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parameter <em>elem</em> should be allocated using the <a class="el" href="classmfem_1_1Mesh.html#a085464fbf2a801f2a98a724af938b5ba">NewElement()</a> method.  <a href="#a7b0ebfbab71ebba875e7b45223899167">More...</a><br/></td></tr>
+<tr class="separator:a7b0ebfbab71ebba875e7b45223899167 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143ec47e53707b29accd8994058830b9 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a143ec47e53707b29accd8994058830b9">AddBdrElement</a> (<a class="el" href="classmfem_1_1Element.html">Element</a> *elem)</td></tr>
+<tr class="separator:a143ec47e53707b29accd8994058830b9 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ce98b7ed0452cbf4bfde3b8f04a0c7 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a78ce98b7ed0452cbf4bfde3b8f04a0c7">AddBdrSegment</a> (int v1, int v2, int attr=1)</td></tr>
+<tr class="separator:a78ce98b7ed0452cbf4bfde3b8f04a0c7 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13297de7ba2d6f13f5f56acb0836e79d inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a13297de7ba2d6f13f5f56acb0836e79d">AddBdrSegment</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a13297de7ba2d6f13f5f56acb0836e79d inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2abf2f67b36ea9c7812d439cde7808e inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aa2abf2f67b36ea9c7812d439cde7808e">AddBdrTriangle</a> (int v1, int v2, int v3, int attr=1)</td></tr>
+<tr class="separator:aa2abf2f67b36ea9c7812d439cde7808e inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b9762208dd505999bfc4c8f5d6001c inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab4b9762208dd505999bfc4c8f5d6001c">AddBdrTriangle</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:ab4b9762208dd505999bfc4c8f5d6001c inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc124a3649da13fba481c724d8d7032 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1dc124a3649da13fba481c724d8d7032">AddBdrQuad</a> (int v1, int v2, int v3, int v4, int attr=1)</td></tr>
+<tr class="separator:a1dc124a3649da13fba481c724d8d7032 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3854131e552758a9908311d1043e8dfd inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3854131e552758a9908311d1043e8dfd">AddBdrQuad</a> (const int *vi, int attr=1)</td></tr>
+<tr class="separator:a3854131e552758a9908311d1043e8dfd inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a355361d950038e4d4d8ea52f66fbb1b4 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a355361d950038e4d4d8ea52f66fbb1b4">AddBdrQuadAsTriangles</a> (const int *vi, int attr=1)</td></tr>
 <tr class="separator:a355361d950038e4d4d8ea52f66fbb1b4 inherit pub_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0cc30875ce9544e6b0205b1f8d67f80 inherit pub_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab0cc30875ce9544e6b0205b1f8d67f80">GenerateBoundaryElements</a> ()</td></tr>
@@ -720,11 +757,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1FaceGeometricFactors.html">FaceGeometricFactors</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a71f60a4e8458c236511235cab1104768">face_geom_factors</a></td></tr>
 <tr class="memdesc:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional face geometric factors.  <a href="#a71f60a4e8458c236511235cab1104768">More...</a><br/></td></tr>
 <tr class="separator:a71f60a4e8458c236511235cab1104768 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c306a7dc941acd91aecd1c4f7361a7 inherit pub_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Triple.html">Triple</a>&lt; int, int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab0c306a7dc941acd91aecd1c4f7361a7">tmp_vertex_parents</a></td></tr>
+<tr class="memdesc:ab0c306a7dc941acd91aecd1c4f7361a7 inherit pub_attribs_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used during initialization only.  <a href="#ab0c306a7dc941acd91aecd1c4f7361a7">More...</a><br/></td></tr>
+<tr class="separator:ab0c306a7dc941acd91aecd1c4f7361a7 inherit pub_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a894c32c7197aa5864be115b6f3a3b967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a894c32c7197aa5864be115b6f3a3b967">ParMesh</a> ()</td></tr>
 <tr class="separator:a894c32c7197aa5864be115b6f3a3b967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcca1e61ae29e29a54da410df348479e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#afcca1e61ae29e29a54da410df348479e">ComputeGlobalElementOffset</a> () const </td></tr>
+<tr class="separator:afcca1e61ae29e29a54da410df348479e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a186366645d4778f9c3156af8697f17a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a186366645d4778f9c3156af8697f17a7">ParMesh</a> (const <a class="el" href="classmfem_1_1ParNCMesh.html">ParNCMesh</a> &amp;<a class="el" href="classmfem_1_1ParMesh.html#ae130412ac93da80414fa47ad93902bc1">pncmesh</a>)</td></tr>
 <tr class="memdesc:a186366645d4778f9c3156af8697f17a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create from a nonconforming mesh.  <a href="#a186366645d4778f9c3156af8697f17a7">More...</a><br/></td></tr>
 <tr class="separator:a186366645d4778f9c3156af8697f17a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -744,8 +786,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a9079e68a3e311bef9d312a464d1c385a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c8bc6cc12e67bd8a952b6bb94a415b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a95c8bc6cc12e67bd8a952b6bb94a415b">GetFaceNbrElementTransformation</a> (int i, <a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> *ElTr)</td></tr>
 <tr class="separator:a95c8bc6cc12e67bd8a952b6bb94a415b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c310ce9ec41c8cc90451fd876bf8cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a33c310ce9ec41c8cc90451fd876bf8cc">GetGhostFaceTransformation</a> (<a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *FETr, <a class="el" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a> face_type, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> face_geom)</td></tr>
-<tr class="separator:a33c310ce9ec41c8cc90451fd876bf8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d29bf3cd15d1796cb8c78d5805c2c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a57d29bf3cd15d1796cb8c78d5805c2c5">GetGhostFaceTransformation</a> (<a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *FETr, <a class="el" href="classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78">Element::Type</a> face_type, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> face_geom)</td></tr>
+<tr class="separator:a57d29bf3cd15d1796cb8c78d5805c2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a778ec440848d25becb69798b48e781"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a1a778ec440848d25becb69798b48e781">RefineGroups</a> (const <a class="el" href="classmfem_1_1DSTable.html">DSTable</a> &amp;v_to_v, int *middle)</td></tr>
 <tr class="memdesc:a1a778ec440848d25becb69798b48e781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the groups after triangle refinement.  <a href="#a1a778ec440848d25becb69798b48e781">More...</a><br/></td></tr>
 <tr class="separator:a1a778ec440848d25becb69798b48e781"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -849,8 +891,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ac10ae07acb09a411ac9ca121d50a15fc inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32eff618d74bb0f37affb9b46adad238 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a32eff618d74bb0f37affb9b46adad238">ReadInlineMesh</a> (std::istream &amp;input, bool generate_edges=false)</td></tr>
 <tr class="separator:a32eff618d74bb0f37affb9b46adad238 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af057846e77c36c7752004498c485f816 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af057846e77c36c7752004498c485f816">ReadGmshMesh</a> (std::istream &amp;input)</td></tr>
-<tr class="separator:af057846e77c36c7752004498c485f816 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030075788ddeaa63adb29fcd064887c8 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a030075788ddeaa63adb29fcd064887c8">ReadGmshMesh</a> (std::istream &amp;input, int &amp;curved, int &amp;read_gf)</td></tr>
+<tr class="separator:a030075788ddeaa63adb29fcd064887c8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f1a1462a795bab6670f8f89a5baaa62 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5f1a1462a795bab6670f8f89a5baaa62">ReadCubit</a> (const char *filename, int &amp;curved, int &amp;read_gf)</td></tr>
 <tr class="separator:a5f1a1462a795bab6670f8f89a5baaa62 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad96a1f7ebda1728b3683893b16671eae inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ad96a1f7ebda1728b3683893b16671eae">SetMeshGen</a> ()</td></tr>
@@ -861,8 +903,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:acda2175292624c5c8c94162f5fad93d6 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c463f733d1052e424c2b0c26cd46591 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a5c463f733d1052e424c2b0c26cd46591">GetElementJacobian</a> (int i, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;J)</td></tr>
 <tr class="separator:a5c463f733d1052e424c2b0c26cd46591 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba9752bc7b7140fecb7733a9742c96b1 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#aba9752bc7b7140fecb7733a9742c96b1">GetElementCenter</a> (int i, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;center)</td></tr>
-<tr class="separator:aba9752bc7b7140fecb7733a9742c96b1 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ac1602edd994f6b98418f2cc8462167 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a0ac1602edd994f6b98418f2cc8462167">MarkForRefinement</a> ()</td></tr>
 <tr class="separator:a0ac1602edd994f6b98418f2cc8462167 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af881801f296de0385d9cb466839634b4 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#af881801f296de0385d9cb466839634b4">MarkTriMeshForRefinement</a> ()</td></tr>
@@ -935,8 +975,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4e19bab06aa9b76f283e023ee6a91be9 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a4e19bab06aa9b76f283e023ee6a91be9">GetLocalQuadToWdgTransformation</a> (<a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> &amp;loc, int i)</td></tr>
 <tr class="memdesc:a4e19bab06aa9b76f283e023ee6a91be9 inherit pro_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used in GetFaceElementTransformations (...)  <a href="#a4e19bab06aa9b76f283e023ee6a91be9">More...</a><br/></td></tr>
 <tr class="separator:a4e19bab06aa9b76f283e023ee6a91be9 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc75593f1e2daeec779f4b816730bd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#afdc75593f1e2daeec779f4b816730bd8">ApplyLocalSlaveTransformation</a> (<a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> &amp;transf, const <a class="el" href="structmfem_1_1Mesh_1_1FaceInfo.html">FaceInfo</a> &amp;fi)</td></tr>
-<tr class="separator:afdc75593f1e2daeec779f4b816730bd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81129a94d35bb7bf3746e92fc61cdff9 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a81129a94d35bb7bf3746e92fc61cdff9">ApplyLocalSlaveTransformation</a> (<a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> &amp;FT, const <a class="el" href="structmfem_1_1Mesh_1_1FaceInfo.html">FaceInfo</a> &amp;fi, bool is_ghost)</td></tr>
+<tr class="separator:a81129a94d35bb7bf3746e92fc61cdff9 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66fb23d317596ad65c29fd917cdcccd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a66fb23d317596ad65c29fd917cdcccd8">IsSlaveFace</a> (const <a class="el" href="structmfem_1_1Mesh_1_1FaceInfo.html">FaceInfo</a> &amp;fi) const </td></tr>
 <tr class="separator:a66fb23d317596ad65c29fd917cdcccd8 inherit pro_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae208486fb87568e8c8cd6a756c0433ec inherit pro_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ae208486fb87568e8c8cd6a756c0433ec">GetVertexToVertexTable</a> (<a class="el" href="classmfem_1_1DSTable.html">DSTable</a> &amp;) const </td></tr>
@@ -1017,6 +1057,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9f7b4db97a116cc7d2b988f3b74e50f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a230d2d88bbb44659679eba0c7d389bf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a230d2d88bbb44659679eba0c7d389bf2">sface_lface</a></td></tr>
 <tr class="separator:a230d2d88bbb44659679eba0c7d389bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50948e61dfd47d8d1742e551ae4b3ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a50948e61dfd47d8d1742e551ae4b3ffd">FaceNbrTransformation</a></td></tr>
+<tr class="separator:a50948e61dfd47d8d1742e551ae4b3ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3098097a5fbd54dcbf306b039638263"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#aa3098097a5fbd54dcbf306b039638263">glob_elem_offset</a></td></tr>
+<tr class="separator:aa3098097a5fbd54dcbf306b039638263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668bf760c232f6ddbaeb0fa94909ca3c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a668bf760c232f6ddbaeb0fa94909ca3c">glob_offset_sequence</a></td></tr>
+<tr class="separator:a668bf760c232f6ddbaeb0fa94909ca3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
 <tr class="memitem:a3c3a04ba890632835c2d766bab361970 inherit pro_attribs_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a3c3a04ba890632835c2d766bab361970">Dim</a></td></tr>
 <tr class="separator:a3c3a04ba890632835c2d766bab361970 inherit pro_attribs_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1099,6 +1145,8 @@ Friends</h2></td></tr>
 <tr class="separator:a1c24b1592e32e5365209d28d121e8c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a288bb65059e92a7bccaea9e038aed6f2"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#a288bb65059e92a7bccaea9e038aed6f2">ParPumiMesh</a></td></tr>
 <tr class="separator:a288bb65059e92a7bccaea9e038aed6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e9decdd78ebff47af7a5a19a7de9a9"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParMesh.html#ac1e9decdd78ebff47af7a5a19a7de9a9">adios2stream</a></td></tr>
+<tr class="separator:ac1e9decdd78ebff47af7a5a19a7de9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1147,6 +1195,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a1e1467c385205e8958089ae090156c9d inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a1e1467c385205e8958089ae090156c9d">GetQuadOrientation</a> (const int *base, const int *test)</td></tr>
 <tr class="memdesc:a1e1467c385205e8958089ae090156c9d inherit pro_static_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the orientation of "test" relative to "base".  <a href="#a1e1467c385205e8958089ae090156c9d">More...</a><br/></td></tr>
 <tr class="separator:a1e1467c385205e8958089ae090156c9d inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553919924b4f237da6f8a754be12b1d3 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#a553919924b4f237da6f8a754be12b1d3">GetTetOrientation</a> (const int *base, const int *test)</td></tr>
+<tr class="memdesc:a553919924b4f237da6f8a754be12b1d3 inherit pro_static_methods_classmfem_1_1Mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the orientation of "test" relative to "base".  <a href="#a553919924b4f237da6f8a754be12b1d3">More...</a><br/></td></tr>
+<tr class="separator:a553919924b4f237da6f8a754be12b1d3 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1765ca57a981387500e2d4a7afecb31 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Mesh.html#ab1765ca57a981387500e2d4a7afecb31">GetElementArrayEdgeTable</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Element.html">Element</a> * &gt; &amp;elem_array, const <a class="el" href="classmfem_1_1DSTable.html">DSTable</a> &amp;v_to_v, <a class="el" href="classmfem_1_1Table.html">Table</a> &amp;<a class="el" href="classmfem_1_1Mesh.html#a7c806ae04b773836db7c9493b0d4b6e5">el_to_edge</a>)</td></tr>
 <tr class="separator:ab1765ca57a981387500e2d4a7afecb31 inherit pro_static_methods_classmfem_1_1Mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classmfem_1_1Mesh"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classmfem_1_1Mesh')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classmfem_1_1Mesh.html">mfem::Mesh</a></td></tr>
@@ -1211,7 +1262,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Create from a nonconforming mesh. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00832">832</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00836">836</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1288,7 +1339,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00093">93</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00095">95</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1376,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Read a parallel mesh, each MPI rank from its own file/stream. </p>
 <p>The <em>refine</em> parameter is passed to the method <a class="el" href="classmfem_1_1Mesh.html#ac039f2cf162a535455b4f02fa4df7f06" title="Finalize the construction of a general Mesh. ">Mesh::Finalize()</a>. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00887">887</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00905">905</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1364,14 +1415,14 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">orig_mesh</td><td>The starting coarse mesh. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ref_factor</td><td>The refinement factor, an integer &gt; 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ref_type</td><td>Specify the positions of the new vertices. The options are <a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4afc8182a534bb4bff698ae7f5d280e15f" title="Nodes: x_i = i/(n-1), i=0,...,n-1. ">BasisType::ClosedUniform</a> or <a class="el" href="classmfem_1_1BasisType.html#a7449eb889275afc0f824f3b1b88d2eb4a5289400991b692469b59ad94accfe75b" title="Closed type. ">BasisType::GaussLobatto</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ref_type</td><td>Specify the positions of the new vertices. The options are <a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954dafc8182a534bb4bff698ae7f5d280e15f" title="Nodes: x_i = i/(n-1), i=0,...,n-1. ">BasisType::ClosedUniform</a> or <a class="el" href="classmfem_1_1BasisType.html#afec50f8dcc88612ed7e9c7bb6d4b954da5289400991b692469b59ad94accfe75b" title="Closed type. ">BasisType::GaussLobatto</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <p>The refinement data which can be accessed with <a class="el" href="classmfem_1_1Mesh.html#a357ff2322e146313f549f2e6bf10cd15">GetRefinementTransforms()</a> is set to reflect the performed refinements.</p>
 <dl class="section note"><dt>Note</dt><dd>The constructed <a class="el" href="classmfem_1_1ParMesh.html" title="Class for parallel meshes. ">ParMesh</a> is linear, i.e. it does not have nodes. </dd></dl>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01060">1060</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01080">1080</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1396,7 +1447,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05430">5430</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05571">5571</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1433,7 +1484,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00647">647</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00651">651</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1487,7 +1538,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00601">601</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00605">605</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1594,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Fills out partitioned <a class="el" href="classmfem_1_1Mesh.html#ac9063d444be89252ed9479011d01fa08">Mesh::boundary</a>. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00362">362</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00366">366</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1638,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Fills out partitioned <a class="el" href="classmfem_1_1Mesh.html#af9007b5f05f3309bb84ec20d133eeea7">Mesh::elements</a>. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00329">329</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00333">333</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1631,7 +1682,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Fills out partitioned <a class="el" href="classmfem_1_1Mesh.html#a004c7eff16b8b8a5e4a2a055dbe1eef2">Mesh::vertices</a>. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00281">281</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00285">285</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1679,7 +1730,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00776">776</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00780">780</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1745,7 +1796,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00699">699</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00703">703</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1787,7 +1838,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00813">813</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00817">817</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1823,7 +1874,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00673">673</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00677">677</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afcca1e61ae29e29a54da410df348479e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParMesh::ComputeGlobalElementOffset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00850">850</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1871,7 +1947,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01563">1563</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01606">1606</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1896,7 +1972,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01694">1694</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01738">1738</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +2000,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Ensure that bdr_attributes and attributes agree across processors. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01295">1295</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01338">1338</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1960,7 +2036,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01820">1820</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01864">1864</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1977,7 +2053,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01735">1735</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01779">1779</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -1994,7 +2070,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02189">2189</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02233">2233</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2048,7 +2124,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#ac039f2cf162a535455b4f02fa4df7f06">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01281">1281</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01310">1310</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2073,7 +2149,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00850">850</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00868">868</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2137,7 +2213,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#ac4a77cf819f394d9e5097d5f4edc3845">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05294">5294</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05435">5435</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2185,7 +2261,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00510">510</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00514">514</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2233,7 +2309,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00483">483</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00487">487</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2275,7 +2351,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00564">564</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00568">568</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2309,7 +2385,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01599">1599</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01642">1642</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2344,7 +2420,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </div><div class="memdoc">
 <p>Returns the minimum and maximum corners of the mesh bounding box. For high-order meshes, the geometry is refined first "ref" times. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05070">5070</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05144">5144</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2384,7 +2460,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05086">5086</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05160">5160</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2409,7 +2485,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00230">230</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00236">236</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2453,7 +2529,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Return a number(0-1) identifying how the given edge has been split. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01513">1513</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01556">1556</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2489,7 +2565,33 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01642">1642</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01685">1685</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd96bade3acfe385bec8cdb2b649a018"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a>* mfem::ParMesh::GetFaceNbrElementTransformation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00301">301</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2515,7 +2617,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00274">274</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00287">287</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2533,7 +2635,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02249">2249</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02293">2293</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2577,7 +2679,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Append codes identifying how the given face has been split to <em>codes</em>. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01528">1528</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01571">1571</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2595,11 +2697,11 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </div><div class="memdoc">
 <p>Similar to <a class="el" href="classmfem_1_1Mesh.html#aae7889540a3473203be895c798aa7b5a">Mesh::GetFaceToElementTable</a> with added face-neighbor elements with indices offset by the local number of elements. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02266">2266</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02310">2310</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a33c310ce9ec41c8cc90451fd876bf8cc"></a>
+<a class="anchor" id="a57d29bf3cd15d1796cb8c78d5805c2c5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2607,7 +2709,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> * mfem::ParMesh::GetGhostFaceTransformation </td>
+          <td class="memname">void mfem::ParMesh::GetGhostFaceTransformation </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> *&#160;</td>
           <td class="paramname"><em>FETr</em>, </td>
@@ -2637,7 +2739,46 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02324">2324</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02368">2368</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9013ad057b45d6f81d35a9bceeed17c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long mfem::ParMesh::GetGlobalElementNum </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>local_element_num</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Map a local element number to a global element number. </p>
+
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01332">1332</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5710cb3f7e03e0e29884c6c1ec2336de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mfem::ParMesh::GetLocalElementNum </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>global_element_num</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a global element number to a local element number. If the global element is not on this processor, return -1. </p>
+
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01324">1324</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2662,7 +2803,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00232">232</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00238">238</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2687,7 +2828,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00273">273</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00286">286</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2712,7 +2853,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00249">249</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00262">262</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2737,7 +2878,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00231">231</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00237">237</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2756,7 +2897,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Return the number of shared faces (3D), edges (2D), vertices (1D) </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02441">2441</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02508">2508</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2776,7 +2917,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Return the local face index for the given shared face. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02460">2460</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02527">2527</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2803,9 +2944,9 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the <a class="el" href="classmfem_1_1FaceElementTransformations.html">FaceElementTransformations</a> for the given shared face (edge 2D). In the returned object, 1 and 2 refer to the local and the neighbor elements, respectively. </p>
+<p>Get the <a class="el" href="classmfem_1_1FaceElementTransformations.html" title="A specialized ElementTransformation class representing a face and its two neighboring elements...">FaceElementTransformations</a> for the given shared face (edge 2D). In the returned object, 1 and 2 refer to the local and the neighbor elements, respectively. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02356">2356</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02399">2399</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2845,7 +2986,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01355">1355</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01398">1398</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -2871,7 +3012,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00253">253</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00266">266</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2897,7 +3038,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00255">255</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00268">268</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2923,7 +3064,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00254">254</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00267">267</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2949,7 +3090,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00252">252</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00265">265</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -2989,7 +3130,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01374">1374</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01417">1417</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3029,7 +3170,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01363">1363</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01406">1406</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3065,7 +3206,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00257">257</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00270">270</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3105,7 +3246,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#a64199ab71b5b4ea7413e6a0144812105">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02698">2698</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02765">2765</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3133,7 +3274,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#ad6d5ffeec2de0aa6e9b5fd2061fa2dfa">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01385">1385</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01428">1428</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3185,7 +3326,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#abb2307653053a67801edbc76a0ca9a76">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03254">3254</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03321">3321</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3225,7 +3366,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#afb4aa7d6477b2b510a4c9204c6da0fa9">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03202">3202</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03269">3269</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3254,7 +3395,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#a7f685cc4a34c3edfd8cc4b9188edab91">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03880">3880</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03947">3947</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3274,7 +3415,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Save the mesh in a parallel mesh format. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05218">5218</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05292">5292</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3303,7 +3444,36 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#a08d26101d5339389adaa278627b41364">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04102">4102</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04169">4169</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adbc7d75f212e59d4bddbb2a2c1c5f0c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParMesh::Print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1adios2stream.html">adios2stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the part of the mesh in the calling processor using adios2 bp format. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#aa701af4b00f24858349f9e0464bafc9c">mfem::Mesh</a>.</p>
+
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04287">4287</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3322,7 +3492,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </div><div class="memdoc">
 <p>Write the mesh to the stream 'out' on Process 0 in a form suitable for visualization: the mesh is written as a disjoint mesh and the shared boundary is added to the actual boundary; both the element and boundary attributes are set to the processor number. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04231">4231</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04305">4305</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3342,7 +3512,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Old mesh format (Netgen/Truegrid) version of 'PrintAsOne'. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04540">4540</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04614">4614</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3372,7 +3542,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#aeaf2d2781dacfcaef9e18267adbe6119">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05099">5099</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05173">5173</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3392,7 +3562,64 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Debugging method. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05343">5343</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05484">5484</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acbedd02945b264aca720fceeeaef8bbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParMesh::PrintVTU </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850">VTKFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em> = <code><a class="el" href="namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc">VTKFormat::ASCII</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>high_order_output</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>compression_level</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bdr</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the mesh in parallel PVTU format. The PVTU and VTU files will be stored in the directory specified by <em>pathname</em>. If the directory does not exist, it will be created. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#a28d66789af0183d019f3fe01d859a9fc">mfem::Mesh</a>.</p>
+
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05368">5368</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3421,7 +3648,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#a5a76c4bdc401d86be119f90779e84fc4">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03888">3888</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03955">3955</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3439,7 +3666,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </div><div class="memdoc">
 <p>Load balance the mesh by equipartitioning the global space-filling sequence of elements. Works for nonconforming meshes only. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03312">3312</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03379">3379</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3458,7 +3685,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </div><div class="memdoc">
 <p>Load balance a nonconforming mesh using a user-defined partition. Each local element 'i' is migrated to processor rank 'partition[i]', for 0 &lt;= i &lt; <a class="el" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51" title="Returns number of elements. ">GetNE()</a>. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03317">3317</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03384">3384</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3484,7 +3711,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03322">3322</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03389">3389</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3514,7 +3741,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#aeb8c41461250f20dcc636c1654b51f70">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05211">5211</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l05285">5285</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3539,7 +3766,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00844">844</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l00862">862</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3577,7 +3804,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Update the groups after triangle refinement. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03370">3370</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03437">3437</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3615,7 +3842,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Update the groups after tetrahedron refinement. </p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03443">3443</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03510">3510</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3644,7 +3871,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#ad7cc7f3ba1e0ff02031add9966be889f">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02508">2508</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l02575">2575</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3671,7 +3898,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#afb720c1a8d716f98e6ed23e6822b2b13">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01337">1337</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01380">1380</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3722,7 +3949,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#ae4113e6e1838d76dd3e85f3399adc7da">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01715">1715</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l01759">1759</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3748,7 +3975,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03627">3627</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03694">3694</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3802,7 +4029,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03678">3678</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03745">3745</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3831,7 +4058,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#aaa5f6eb9b28e0f84c405b11bd8eccb81">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03827">3827</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03894">3894</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3860,7 +4087,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Mesh.html#a9d6f7860ff53354f809ff1423c8ee9be">mfem::Mesh</a>.</p>
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03851">3851</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l03918">3918</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -3886,11 +4113,33 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04089">4089</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8cpp_source.html#l04156">4156</a> of file <a class="el" href="pmesh_8cpp_source.html">pmesh.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ac1e9decdd78ebff47af7a5a19a7de9a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classmfem_1_1adios2stream.html">adios2stream</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00389">389</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1c24b1592e32e5365209d28d121e8c6b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3909,7 +4158,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00347">347</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00383">383</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3931,7 +4180,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00349">349</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00385">385</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3946,7 +4195,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00241">241</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00254">254</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3960,7 +4209,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00239">239</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00252">252</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3974,7 +4223,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00238">238</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00251">251</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -3988,7 +4237,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00242">242</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00255">255</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4002,7 +4251,73 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00240">240</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00253">253</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50948e61dfd47d8d1742e551ae4b3ffd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmfem_1_1IsoparametricTransformation.html">IsoparametricTransformation</a> mfem::ParMesh::FaceNbrTransformation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00081">81</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3098097a5fbd54dcbf306b039638263"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long mfem::ParMesh::glob_elem_offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00084">84</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a668bf760c232f6ddbaeb0fa94909ca3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long mfem::ParMesh::glob_offset_sequence</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00084">84</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4106,7 +4421,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00234">234</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00247">247</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4120,7 +4435,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00237">237</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00250">250</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4200,7 +4515,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00247">247</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00260">260</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4236,7 +4551,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00244">244</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00257">257</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4250,7 +4565,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00245">245</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pmesh_8hpp_source.html#l00258">258</a> of file <a class="el" href="pmesh_8hpp_source.html">pmesh.hpp</a>.</p>
 
 </div>
 </div>
@@ -4373,7 +4688,7 @@ Before calling this method, call <a class="el" href="classmfem_1_1Mesh.html#a5d5
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:18 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:05 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

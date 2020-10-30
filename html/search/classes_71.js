@@ -11,8 +11,10 @@ var searchData=
   ['quadraticposfecollection',['QuadraticPosFECollection',['../classmfem_1_1QuadraticPosFECollection.html',1,'mfem']]],
   ['quadrature1d',['Quadrature1D',['../classmfem_1_1Quadrature1D.html',1,'mfem']]],
   ['quadraturefunction',['QuadratureFunction',['../classmfem_1_1QuadratureFunction.html',1,'mfem']]],
+  ['quadraturefunctioncoefficient',['QuadratureFunctionCoefficient',['../classmfem_1_1QuadratureFunctionCoefficient.html',1,'mfem']]],
   ['quadraturefunctions1d',['QuadratureFunctions1D',['../classmfem_1_1QuadratureFunctions1D.html',1,'mfem']]],
   ['quadratureinterpolator',['QuadratureInterpolator',['../classmfem_1_1QuadratureInterpolator.html',1,'mfem']]],
+  ['quadraturelfintegrator',['QuadratureLFIntegrator',['../classmfem_1_1QuadratureLFIntegrator.html',1,'mfem']]],
   ['quadraturespace',['QuadratureSpace',['../classmfem_1_1QuadratureSpace.html',1,'mfem']]],
   ['quadrilateral',['Quadrilateral',['../classmfem_1_1Quadrilateral.html',1,'mfem']]]
 ];

@@ -9,7 +9,10 @@ var searchData=
   ['fem_5fextras_2ehpp',['fem_extras.hpp',['../fem__extras_8hpp.html',1,'']]],
   ['fespace_2ecpp',['fespace.cpp',['../fespace_8cpp.html',1,'']]],
   ['fespace_2ehpp',['fespace.hpp',['../fespace_8hpp.html',1,'']]],
+  ['fespacehierarchy_2ecpp',['fespacehierarchy.cpp',['../fespacehierarchy_8cpp.html',1,'']]],
+  ['fespacehierarchy_2ehpp',['fespacehierarchy.hpp',['../fespacehierarchy_8hpp.html',1,'']]],
   ['field_2ddiff_2ecpp',['field-diff.cpp',['../field-diff_8cpp.html',1,'']]],
+  ['field_2dinterp_2ecpp',['field-interp.cpp',['../field-interp_8cpp.html',1,'']]],
   ['findpts_2ecpp',['findpts.cpp',['../findpts_8cpp.html',1,'']]],
   ['forall_2ehpp',['forall.hpp',['../forall_8hpp.html',1,'']]]
 ];

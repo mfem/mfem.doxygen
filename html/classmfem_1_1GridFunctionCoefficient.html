@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -102,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classmfem_1_1Coefficient.html" title="Base class Coefficient that may optionally depend on time. ">Coefficient</a> defined by a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. This coefficient is mesh dependent.  
+<p><a class="el" href="classmfem_1_1Coefficient.html" title="Base class Coefficients that optionally depend on space and time. These are used by the BilinearFormI...">Coefficient</a> defined by a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. This coefficient is mesh dependent.  
  <a href="classmfem_1_1GridFunctionCoefficient.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>&gt;</code></p>
@@ -123,21 +124,25 @@ Collaboration diagram for mfem::GridFunctionCoefficient:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a195cabe4954c0c6dde2a42fcdaab0c1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#a195cabe4954c0c6dde2a42fcdaab0c1e">GridFunctionCoefficient</a> ()</td></tr>
 <tr class="separator:a195cabe4954c0c6dde2a42fcdaab0c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97078c57c40dae44991a25ce83d44233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#a97078c57c40dae44991a25ce83d44233">GridFunctionCoefficient</a> (<a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf, int comp=1)</td></tr>
-<tr class="separator:a97078c57c40dae44991a25ce83d44233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e9b8d5c7e1bb821195252a6bf6017aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#a1e9b8d5c7e1bb821195252a6bf6017aa">SetGridFunction</a> (<a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf)</td></tr>
-<tr class="separator:a1e9b8d5c7e1bb821195252a6bf6017aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19a8e29dff2d02a16bd410e45c42503"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#aa19a8e29dff2d02a16bd410e45c42503">GetGridFunction</a> () const </td></tr>
-<tr class="separator:aa19a8e29dff2d02a16bd410e45c42503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae05a53338113212c9b3f68239b415d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#aeae05a53338113212c9b3f68239b415d">GridFunctionCoefficient</a> (const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf, int comp=1)</td></tr>
+<tr class="separator:aeae05a53338113212c9b3f68239b415d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5029f74bd00c7607ba5f5e015ecc3e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#a5029f74bd00c7607ba5f5e015ecc3e25">SetGridFunction</a> (const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *gf)</td></tr>
+<tr class="memdesc:a5029f74bd00c7607ba5f5e015ecc3e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the internal <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>.  <a href="#a5029f74bd00c7607ba5f5e015ecc3e25">More...</a><br/></td></tr>
+<tr class="separator:a5029f74bd00c7607ba5f5e015ecc3e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc53f9d7d12812294045635bbf9fb68a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#abc53f9d7d12812294045635bbf9fb68a">GetGridFunction</a> () const </td></tr>
+<tr class="memdesc:abc53f9d7d12812294045635bbf9fb68a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the internal <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>.  <a href="#abc53f9d7d12812294045635bbf9fb68a">More...</a><br/></td></tr>
+<tr class="separator:abc53f9d7d12812294045635bbf9fb68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc4547220fb76029f1bcb7ab8393447"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridFunctionCoefficient.html#a4fc4547220fb76029f1bcb7ab8393447">Eval</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
-<tr class="memdesc:a4fc4547220fb76029f1bcb7ab8393447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the coefficient in the element described by <em>T</em> at the point <em>ip</em>.  <a href="#a4fc4547220fb76029f1bcb7ab8393447">More...</a><br/></td></tr>
+<tr class="memdesc:a4fc4547220fb76029f1bcb7ab8393447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the coefficient at <em>ip</em>.  <a href="#a4fc4547220fb76029f1bcb7ab8393447">More...</a><br/></td></tr>
 <tr class="separator:a4fc4547220fb76029f1bcb7ab8393447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1Coefficient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1Coefficient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1Coefficient.html">mfem::Coefficient</a></td></tr>
 <tr class="memitem:ae6a76db346e90674977bb965b05ca160 inherit pub_methods_classmfem_1_1Coefficient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Coefficient.html#ae6a76db346e90674977bb965b05ca160">Coefficient</a> ()</td></tr>
 <tr class="separator:ae6a76db346e90674977bb965b05ca160 inherit pub_methods_classmfem_1_1Coefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e829395deeb6dcc93e21ee8f26017b inherit pub_methods_classmfem_1_1Coefficient"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Coefficient.html#ad5e829395deeb6dcc93e21ee8f26017b">SetTime</a> (double t)</td></tr>
+<tr class="memdesc:ad5e829395deeb6dcc93e21ee8f26017b inherit pub_methods_classmfem_1_1Coefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time for time dependent coefficients.  <a href="#ad5e829395deeb6dcc93e21ee8f26017b">More...</a><br/></td></tr>
 <tr class="separator:ad5e829395deeb6dcc93e21ee8f26017b inherit pub_methods_classmfem_1_1Coefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25ebaf4fbbc7dd8b02de9916b76d9ba inherit pub_methods_classmfem_1_1Coefficient"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Coefficient.html#ae25ebaf4fbbc7dd8b02de9916b76d9ba">GetTime</a> ()</td></tr>
+<tr class="memdesc:ae25ebaf4fbbc7dd8b02de9916b76d9ba inherit pub_methods_classmfem_1_1Coefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time for time dependent coefficients.  <a href="#ae25ebaf4fbbc7dd8b02de9916b76d9ba">More...</a><br/></td></tr>
 <tr class="separator:ae25ebaf4fbbc7dd8b02de9916b76d9ba inherit pub_methods_classmfem_1_1Coefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09726b5f8dddaf0102ffadc5f6b08232 inherit pub_methods_classmfem_1_1Coefficient"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Coefficient.html#a09726b5f8dddaf0102ffadc5f6b08232">Eval</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip, double t)</td></tr>
 <tr class="memdesc:a09726b5f8dddaf0102ffadc5f6b08232 inherit pub_methods_classmfem_1_1Coefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the coefficient in the element described by <em>T</em> at the point <em>ip</em> at time <em>t</em>.  <a href="#a09726b5f8dddaf0102ffadc5f6b08232">More...</a><br/></td></tr>
@@ -152,9 +157,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a47040fc07c2b580ecf4718d1b614d5e5 inherit pro_attribs_classmfem_1_1Coefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classmfem_1_1Coefficient.html" title="Base class Coefficient that may optionally depend on time. ">Coefficient</a> defined by a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. This coefficient is mesh dependent. </p>
+<div class="textblock"><p><a class="el" href="classmfem_1_1Coefficient.html" title="Base class Coefficients that optionally depend on space and time. These are used by the BilinearFormI...">Coefficient</a> defined by a <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. This coefficient is mesh dependent. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00164">164</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00174">174</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a195cabe4954c0c6dde2a42fcdaab0c1e"></a>
 <div class="memitem">
@@ -177,11 +182,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00171">171</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00181">181</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a97078c57c40dae44991a25ce83d44233"></a>
+<a class="anchor" id="aeae05a53338113212c9b3f68239b415d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -191,7 +196,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">mfem::GridFunctionCoefficient::GridFunctionCoefficient </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *&#160;</td>
           <td class="paramname"><em>gf</em>, </td>
         </tr>
         <tr>
@@ -214,7 +219,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Construct <a class="el" href="classmfem_1_1GridFunctionCoefficient.html" title="Coefficient defined by a GridFunction. This coefficient is mesh dependent. ">GridFunctionCoefficient</a> from a given <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>, and optionally specify a component to use if it is a vector <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00174">174</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00184">184</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -251,8 +256,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Evaluate the coefficient in the element described by <em>T</em> at the point <em>ip</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>When this method is called, the caller must make sure that the <a class="el" href="classmfem_1_1IntegrationPoint.html" title="Class for integration point with weight. ">IntegrationPoint</a> associated with <em>T</em> is the same as <em>ip</em>. This can be achieved by calling T.SetIntPoint(&amp;ip). </dd></dl>
+<p>Evaluate the coefficient at <em>ip</em>. </p>
 
 <p>Implements <a class="el" href="classmfem_1_1Coefficient.html#ad31b5210ced46820cc4ea9240ff32f69">mfem::Coefficient</a>.</p>
 
@@ -262,7 +266,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa19a8e29dff2d02a16bd410e45c42503"></a>
+<a class="anchor" id="abc53f9d7d12812294045635bbf9fb68a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -270,7 +274,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a>* mfem::GridFunctionCoefficient::GetGridFunction </td>
+          <td class="memname">const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a>* mfem::GridFunctionCoefficient::GetGridFunction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -283,11 +287,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00178">178</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Get the internal <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00191">191</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1e9b8d5c7e1bb821195252a6bf6017aa"></a>
+<a class="anchor" id="a5029f74bd00c7607ba5f5e015ecc3e25"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -297,7 +303,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void mfem::GridFunctionCoefficient::SetGridFunction </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1GridFunction.html">GridFunction</a> *&#160;</td>
           <td class="paramname"><em>gf</em></td><td>)</td>
           <td></td>
         </tr>
@@ -309,7 +315,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00177">177</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Set the internal <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>. </p>
+
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00188">188</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +328,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:19 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:06 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

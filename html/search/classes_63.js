@@ -13,11 +13,13 @@ var searchData=
   ['columnmajorlayout2d',['ColumnMajorLayout2D',['../structmfem_1_1ColumnMajorLayout2D.html',1,'mfem']]],
   ['columnmajorlayout3d',['ColumnMajorLayout3D',['../structmfem_1_1ColumnMajorLayout3D.html',1,'mfem']]],
   ['columnmajorlayout4d',['ColumnMajorLayout4D',['../structmfem_1_1ColumnMajorLayout4D.html',1,'mfem']]],
+  ['comparator',['Comparator',['../classGecko_1_1Node_1_1Comparator.html',1,'Gecko::Node']]],
   ['complexgridfunction',['ComplexGridFunction',['../classmfem_1_1ComplexGridFunction.html',1,'mfem']]],
   ['complexhypreparmatrix',['ComplexHypreParMatrix',['../classmfem_1_1ComplexHypreParMatrix.html',1,'mfem']]],
   ['complexlinearform',['ComplexLinearForm',['../classmfem_1_1ComplexLinearForm.html',1,'mfem']]],
   ['complexoperator',['ComplexOperator',['../classmfem_1_1ComplexOperator.html',1,'mfem']]],
   ['complexsparsematrix',['ComplexSparseMatrix',['../classmfem_1_1ComplexSparseMatrix.html',1,'mfem']]],
+  ['complexumfpacksolver',['ComplexUMFPackSolver',['../classmfem_1_1ComplexUMFPackSolver.html',1,'mfem']]],
   ['conduitdatacollection',['ConduitDataCollection',['../classmfem_1_1ConduitDataCollection.html',1,'mfem']]],
   ['conformingprolongationoperator',['ConformingProlongationOperator',['../classmfem_1_1ConformingProlongationOperator.html',1,'mfem']]],
   ['connection',['Connection',['../structmfem_1_1Connection.html',1,'mfem']]],
@@ -36,6 +38,9 @@ var searchData=
   ['constants_3c_20geometry_3a_3atriangle_20_3e',['Constants&lt; Geometry::TRIANGLE &gt;',['../structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1TRIANGLE_01_4.html',1,'mfem::Geometry']]],
   ['constrainedoperator',['ConstrainedOperator',['../classmfem_1_1ConstrainedOperator.html',1,'mfem']]],
   ['convectionintegrator',['ConvectionIntegrator',['../classmfem_1_1ConvectionIntegrator.html',1,'mfem']]],
+  ['convergencestudy',['ConvergenceStudy',['../classmfem_1_1ConvergenceStudy.html',1,'mfem']]],
+  ['cpardisosolver',['CPardisoSolver',['../classmfem_1_1CPardisoSolver.html',1,'mfem']]],
+  ['crosscrosscoefficient',['CrossCrossCoefficient',['../classmfem_1_1CrossCrossCoefficient.html',1,'mfem']]],
   ['crouzeixraviartfecollection',['CrouzeixRaviartFECollection',['../classmfem_1_1CrouzeixRaviartFECollection.html',1,'mfem']]],
   ['crouzeixraviartfiniteelement',['CrouzeixRaviartFiniteElement',['../classmfem_1_1CrouzeixRaviartFiniteElement.html',1,'mfem']]],
   ['crouzeixraviartquadfiniteelement',['CrouzeixRaviartQuadFiniteElement',['../classmfem_1_1CrouzeixRaviartQuadFiniteElement.html',1,'mfem']]],
@@ -47,5 +52,6 @@ var searchData=
   ['curlcurlintegrator',['CurlCurlIntegrator',['../classmfem_1_1CurlCurlIntegrator.html',1,'mfem']]],
   ['curlgridfunctioncoefficient',['CurlGridFunctionCoefficient',['../classmfem_1_1CurlGridFunctionCoefficient.html',1,'mfem']]],
   ['curlinterpolator',['CurlInterpolator',['../classmfem_1_1CurlInterpolator.html',1,'mfem']]],
-  ['cvodesolver',['CVODESolver',['../classmfem_1_1CVODESolver.html',1,'mfem']]]
+  ['cvodesolver',['CVODESolver',['../classmfem_1_1CVODESolver.html',1,'mfem']]],
+  ['cvodessolver',['CVODESSolver',['../classmfem_1_1CVODESSolver.html',1,'mfem']]]
 ];

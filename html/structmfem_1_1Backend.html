@@ -18,7 +18,7 @@
     extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script src="https://cdn.llnl.gov/mathjax/2.7.2/MathJax.js"></script>
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.1.0</span>
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -125,20 +126,21 @@ Public Types</h2></td></tr>
 <a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3ab880a7cc7a8999d2112bdd241667031c">CEED_CPU</a> = 1 &lt;&lt; 10, 
 <a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3acc106ad3c2c639b60294382a9b0c0828">CEED_CUDA</a> = 1 &lt;&lt; 11, 
 <br/>
-&#160;&#160;<a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3af508386b0977b5197585263eada0abf0">DEBUG</a> = 1 &lt;&lt; 12
+&#160;&#160;<a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3af6180b0c283b90d344cc72e546440473">CEED_HIP</a> = 1 &lt;&lt; 12, 
+<a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3a3a8c2c5cbd423120c6bc29fec392f49c">DEBUG_DEVICE</a> = 1 &lt;&lt; 13
 <br/>
  }</td></tr>
 <tr class="memdesc:a025be0c74e6276c0a9f7607baa786ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">In the documentation below, we use square brackets to indicate the type of the backend: host or device.  <a href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3">More...</a><br/></td></tr>
 <tr class="separator:a025be0c74e6276c0a9f7607baa786ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36df3998c76d1e5de8ac50ff50988ff1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br/>
-&#160;&#160;<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1ade8ce6650e70bf1ff528734cfc1f2b47">NUM_BACKENDS</a> = 13, 
+&#160;&#160;<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1ade8ce6650e70bf1ff528734cfc1f2b47">NUM_BACKENDS</a> = 14, 
 <a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a9521e6a6a7423cac17f010046eea6f20">CPU_MASK</a> = CPU | RAJA_CPU | OCCA_CPU | CEED_CPU, 
 <a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1ae4c0daf8daa803bae1ed0d46a5f3ae31">CUDA_MASK</a> = CUDA | RAJA_CUDA | OCCA_CUDA | CEED_CUDA, 
-<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a84574f112b17af9e41bf268dcee8cecf">HIP_MASK</a> = HIP, 
+<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a84574f112b17af9e41bf268dcee8cecf">HIP_MASK</a> = HIP | CEED_HIP, 
 <br/>
 &#160;&#160;<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1af096ef00bc1d2b24da5b823a4a2a771e">OMP_MASK</a> = OMP | RAJA_OMP | OCCA_OMP, 
-<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a54f224ad7ac977bc1b4d93e471241980">CEED_MASK</a> = CEED_CPU | CEED_CUDA, 
-<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a4d1226fa48fe5756376f6e40daffd228">DEVICE_MASK</a> = CUDA_MASK | HIP_MASK | DEBUG, 
+<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a54f224ad7ac977bc1b4d93e471241980">CEED_MASK</a> = CEED_CPU | CEED_CUDA | CEED_HIP, 
+<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a4d1226fa48fe5756376f6e40daffd228">DEVICE_MASK</a> = CUDA_MASK | HIP_MASK | DEBUG_DEVICE, 
 <a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a3d3436360ccc0311734c0fb63c9f009b">RAJA_MASK</a> = RAJA_CPU | RAJA_OMP | RAJA_CUDA, 
 <br/>
 &#160;&#160;<a class="el" href="structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a5b7534e355079275ea3fe9e26a07af3c">OCCA_MASK</a> = OCCA_CPU | OCCA_OMP | OCCA_CUDA
@@ -194,7 +196,7 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00073">73</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00077">77</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,10 +246,13 @@ Public Types</h2></td></tr>
 <p>[host] CEED CPU backend. GPU backends can still be used, but with expensive memory transfers. Enabled when MFEM_USE_CEED = YES. </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a025be0c74e6276c0a9f7607baa786ea3acc106ad3c2c639b60294382a9b0c0828"></a>CEED_CUDA</em>&nbsp;</td><td class="fielddoc">
-<p>[device] CEED CUDA backend working together with the CUDA backend. Enabled when MFEM_USE_CEED = YES and MFEM_USE_CUDA = YES. NOTE: The current default libCEED GPU backend is non-deterministic! </p>
+<p>[device] CEED CUDA backend working together with the CUDA backend. Enabled when MFEM_USE_CEED = YES and MFEM_USE_CUDA = YES. NOTE: The current default libCEED CUDA backend is non-deterministic! </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a025be0c74e6276c0a9f7607baa786ea3af508386b0977b5197585263eada0abf0"></a>DEBUG</em>&nbsp;</td><td class="fielddoc">
-<p>[device] Debug backend: host memory is READ/WRITE protected while a device is in use. It allows to test the "device" code-path (using separate host/device memory pools and host &lt;-&gt; device transfers) without any GPU hardware. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="a025be0c74e6276c0a9f7607baa786ea3af6180b0c283b90d344cc72e546440473"></a>CEED_HIP</em>&nbsp;</td><td class="fielddoc">
+<p>[device] CEED HIP backend working together with the HIP backend. Enabled when MFEM_USE_CEED = YES and MFEM_USE_HIP = YES. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a025be0c74e6276c0a9f7607baa786ea3a3a8c2c5cbd423120c6bc29fec392f49c"></a>DEBUG_DEVICE</em>&nbsp;</td><td class="fielddoc">
+<p>[device] Debug backend: host memory is READ/WRITE protected while a device is in use. It allows to test the "device" code-path (using separate host/device memory pools and host &lt;-&gt; device transfers) without any GPU hardware. As 'DEBUG' is sometimes used as a macro, <code>_DEVICE</code> has been added to avoid conflicts. </p>
 </td></tr>
 </table>
 
@@ -261,7 +266,7 @@ Public Types</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 10 2020 19:56:15 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
