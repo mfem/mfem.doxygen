@@ -5,10 +5,11 @@ var searchData=
   ['additive_5fterm_5f1',['ADDITIVE_TERM_1',['../classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08ab0fcfd0d2e135afa508e561776526936',1,'mfem::TimeDependentOperator']]],
   ['additive_5fterm_5f2',['ADDITIVE_TERM_2',['../classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08a6e7e5efebfedaa7c09ae24a592650952',1,'mfem::TimeDependentOperator']]],
   ['adjugate_5fmask',['ADJUGATE_MASK',['../classmfem_1_1ElementTransformation.html#a78dc6cc15c2f240fc976acd5470be0e0a9d0fda7d77ec64c0596e84bec4293f80',1,'mfem::ElementTransformation']]],
+  ['air',['AIR',['../ex9p_8cpp.html#a66a11ec58f6cfd64cd3d5144ea3e20efa2582dd863c1c50525a267e1cbe656929',1,'ex9p.cpp']]],
   ['alias',['ALIAS',['../classmfem_1_1Memory.html#a3d0f39428ffcae585ee8a5e07d6293c8ada467ac084790b0980b43e91c3af13b7',1,'mfem::Memory']]],
   ['any_5ftype',['ANY_TYPE',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78',1,'mfem::Operator']]],
   ['app',['app',['../classmfem_1_1adios2stream.html#afe7fe7ac1183ebcf7157d89808bcb3dcad2a57dc1d883fd21fb9951699df71cc7',1,'mfem::adios2stream']]],
-  ['area',['AREA',['../minimal-surface_8cpp.html#a05589fbab0657f08285ebdfe93f5ec9ea64099015ff7fbb8fc154086eaebb1957',1,'AREA():&#160;minimal-surface.cpp'],['../pminimal-surface_8cpp.html#a16af7b253440dadd46a80a4b9fddba4da64099015ff7fbb8fc154086eaebb1957',1,'AREA():&#160;pminimal-surface.cpp']]],
+  ['area',['AREA',['../minimal-surface_8cpp.html#a16af7b253440dadd46a80a4b9fddba4da64099015ff7fbb8fc154086eaebb1957',1,'AREA():&#160;minimal-surface.cpp'],['../pminimal-surface_8cpp.html#aba01db17f4a2bfbc3db60dc172972a25a64099015ff7fbb8fc154086eaebb1957',1,'AREA():&#160;pminimal-surface.cpp']]],
   ['arithmetic',['ARITHMETIC',['../classmfem_1_1GridFunction.html#ad90ba935602718b9365f0a8341e72afda2c62e39e27ffdf696bc7e06be53d2359',1,'mfem::GridFunction::ARITHMETIC()'],['../classmfem_1_1FindPointsGSLIB.html#ac77a667b69b8b51cf4f66135e3cc28daa627515da12324b46935bc342f361b047',1,'mfem::FindPointsGSLIB::ARITHMETIC()']]],
   ['array',['ARRAY',['../classmfem_1_1OptionsParser.html#a8e019726685c70129ff26db19af9c319af87186992263086be879c896b9a350c9',1,'mfem::OptionsParser']]],
   ['ascii',['ASCII',['../namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc',1,'mfem']]]

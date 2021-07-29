@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">tmatrix.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="tmatrix_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="tmatrix_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -168,10 +168,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// C(a1,b2) = A(a1,0) * B(0,b2);</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            c_a1_b2.mul(A_data[A_layout.ind(a1,0)], B_data[B_layout.ind(0,b2)]);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;         }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 1; s &lt; A2; s++)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a> = 1; <a class="code" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a> &lt; A2; <a class="code" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>++)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;         {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">// C(a1,b2) += A(a1,s) * B(s,b2);</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            c_a1_b2.fma(A_data[A_layout.ind(a1,s)], B_data[B_layout.ind(s,b2)]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            c_a1_b2.fma(A_data[A_layout.ind(a1,<a class="code" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>)], B_data[B_layout.ind(<a class="code" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>,b2)]);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;         }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;         C_data[C_layout.ind(a1,b2)] = c_a1_b2;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
@@ -481,7 +481,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;{</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t, <span class="keyword">typename</span> scalar_t&gt;</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> MFEM_ALWAYS_INLINE</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;   <span class="keywordtype">void</span> Set(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">Set</a>(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="keyword">const</span> scalar_t a11, <span class="keyword">const</span> scalar_t a21, <span class="keyword">const</span> scalar_t a22)</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;   {</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      A[a.ind(0)] = a11;</div>
@@ -495,7 +495,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;{</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t, <span class="keyword">typename</span> scalar_t&gt;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> MFEM_ALWAYS_INLINE</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;   <span class="keywordtype">void</span> Set(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">Set</a>(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            <span class="keyword">const</span> scalar_t a11, <span class="keyword">const</span> scalar_t a21, <span class="keyword">const</span> scalar_t a22)</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;   {</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      A[a.ind(0,0)] = a11;</div>
@@ -631,7 +631,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;{</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t, <span class="keyword">typename</span> scalar_t&gt;</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> MFEM_ALWAYS_INLINE</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;   <span class="keywordtype">void</span> Set(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">Set</a>(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            <span class="keyword">const</span> scalar_t a11, <span class="keyword">const</span> scalar_t a21, <span class="keyword">const</span> scalar_t a31,</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;            <span class="keyword">const</span> scalar_t a22, <span class="keyword">const</span> scalar_t a32, <span class="keyword">const</span> scalar_t a33)</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;   {</div>
@@ -649,7 +649,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;{</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t, <span class="keyword">typename</span> scalar_t&gt;</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;   <span class="keyword">static</span> <span class="keyword">inline</span> MFEM_ALWAYS_INLINE</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;   <span class="keywordtype">void</span> Set(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">Set</a>(<span class="keyword">const</span> A_layout_t &amp;a, A_data_t &amp;A,</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keyword">const</span> scalar_t a11, <span class="keyword">const</span> scalar_t a21, <span class="keyword">const</span> scalar_t a31,</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            <span class="keyword">const</span> scalar_t a22, <span class="keyword">const</span> scalar_t a32, <span class="keyword">const</span> scalar_t a33)</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;   {</div>
@@ -725,55 +725,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;   template Adjugate&lt;scalar_t&gt;(<a class="code" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, A, <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, B);</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;}</div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="comment">// Compute the adjugate and the determinant of a (small) matrix: B = adj(A),</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment">// return det(A).</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="comment">// Compute the adjugate matrix of a (small) matrix: B = adj(A).</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment">// Host+device version.</span></div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> scalar_t,</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;          <span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t,</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;          <span class="keyword">typename</span> B_layout_t, <span class="keyword">typename</span> B_data_t&gt;</div>
-<div class="line"><a name="l00634"></a><span class="lineno"><a class="line" href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">  634</a></span>&#160;<span class="keyword">inline</span> scalar_t <a class="code" href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">TAdjDet</a>(<span class="keyword">const</span> A_layout_t &amp;a, <span class="keyword">const</span> A_data_t &amp;A,</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;                        <span class="keyword">const</span> B_layout_t &amp;b, B_data_t &amp;B)</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;{</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;   MFEM_STATIC_ASSERT(A_layout_t::rank == 2 &amp;&amp; B_layout_t::rank == 2,</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                      <span class="stringliteral">&quot;invalid ranks&quot;</span>);</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;   <span class="keywordflow">return</span> internal::MatrixOps&lt;A_layout_t::dim_1,A_layout_t::dim_2&gt;::</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;          template AdjDet&lt;scalar_t&gt;(<a class="code" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, A, <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, B);</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;}</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<span class="comment">// Compute the adjugate and the determinant of a (small) matrix: B = adj(A),</span></div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="comment">// return det(A). Host+device version.</span></div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> scalar_t,</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;          <span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t,</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;          <span class="keyword">typename</span> B_layout_t, <span class="keyword">typename</span> B_data_t&gt;</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;MFEM_HOST_DEVICE</div>
-<div class="line"><a name="l00649"></a><span class="lineno"><a class="line" href="namespacemfem.html#a1fdf24d38e36ea435a51441ed97c9b2f">  649</a></span>&#160;<span class="keyword">inline</span> scalar_t <a class="code" href="namespacemfem.html#a1fdf24d38e36ea435a51441ed97c9b2f">TAdjDetHD</a>(<span class="keyword">const</span> A_layout_t &amp;a, <span class="keyword">const</span> A_data_t &amp;A,</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                          <span class="keyword">const</span> B_layout_t &amp;b, B_data_t &amp;B)</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;MFEM_HOST_DEVICE</div>
+<div class="line"><a name="l00635"></a><span class="lineno"><a class="line" href="namespacemfem.html#aecd3992b4c8468e84283127cd61f181d">  635</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacemfem.html#aecd3992b4c8468e84283127cd61f181d">TAdjugateHD</a>(<span class="keyword">const</span> A_layout_t &amp;a, <span class="keyword">const</span> A_data_t &amp;A,</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;                        <span class="keyword">const</span> B_layout_t &amp;b, B_data_t &amp;B)</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;{</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;   MFEM_STATIC_ASSERT(A_layout_t::rank == 2 &amp;&amp; B_layout_t::rank == 2,</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                      <span class="stringliteral">&quot;invalid ranks&quot;</span>);</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;   internal::MatrixOps&lt;A_layout_t::dim_1,A_layout_t::dim_2&gt;::</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;   template AdjugateHD&lt;scalar_t&gt;(<a class="code" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, A, <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, B);</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;}</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="comment">// Compute the adjugate and the determinant of a (small) matrix: B = adj(A),</span></div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="comment">// return det(A).</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> scalar_t,</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;          <span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t,</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;          <span class="keyword">typename</span> B_layout_t, <span class="keyword">typename</span> B_data_t&gt;</div>
+<div class="line"><a name="l00649"></a><span class="lineno"><a class="line" href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">  649</a></span>&#160;<span class="keyword">inline</span> scalar_t <a class="code" href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">TAdjDet</a>(<span class="keyword">const</span> A_layout_t &amp;a, <span class="keyword">const</span> A_data_t &amp;A,</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                        <span class="keyword">const</span> B_layout_t &amp;b, B_data_t &amp;B)</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;{</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;   MFEM_STATIC_ASSERT(A_layout_t::rank == 2 &amp;&amp; B_layout_t::rank == 2,</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                      <span class="stringliteral">&quot;invalid ranks&quot;</span>);</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;   <span class="keywordflow">return</span> internal::MatrixOps&lt;A_layout_t::dim_1,A_layout_t::dim_2&gt;::</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;          template AdjDetHD&lt;scalar_t&gt;(<a class="code" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, A, <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, B);</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;          template AdjDet&lt;scalar_t&gt;(<a class="code" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, A, <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, B);</div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;}</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;} <span class="comment">// namespace mfem</span></div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;<span class="preprocessor">#endif // MFEM_TEMPLATE_MATRIX</span></div>
-<div class="ttc" id="namespacemfem_1_1kernels_html_ac8266bd809ccb8b2175151c6b8f60de4"><div class="ttname"><a href="namespacemfem_1_1kernels.html#ac8266bd809ccb8b2175151c6b8f60de4">mfem::kernels::Det</a></div><div class="ttdeci">MFEM_HOST_DEVICE T Det(const T *data)</div><div class="ttdoc">Compute the determinant of a square matrix of size dim with given data. </div><div class="ttdef"><b>Definition:</b> <a href="kernels_8hpp_source.html#l00121">kernels.hpp:121</a></div></div>
-<div class="ttc" id="namespacemfem_html_a1fdf24d38e36ea435a51441ed97c9b2f"><div class="ttname"><a href="namespacemfem.html#a1fdf24d38e36ea435a51441ed97c9b2f">mfem::TAdjDetHD</a></div><div class="ttdeci">MFEM_HOST_DEVICE scalar_t TAdjDetHD(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00649">tmatrix.hpp:649</a></div></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;<span class="comment">// Compute the adjugate and the determinant of a (small) matrix: B = adj(A),</span></div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;<span class="comment">// return det(A). Host+device version.</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> scalar_t,</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;          <span class="keyword">typename</span> A_layout_t, <span class="keyword">typename</span> A_data_t,</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;          <span class="keyword">typename</span> B_layout_t, <span class="keyword">typename</span> B_data_t&gt;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;MFEM_HOST_DEVICE</div>
+<div class="line"><a name="l00664"></a><span class="lineno"><a class="line" href="namespacemfem.html#a1fdf24d38e36ea435a51441ed97c9b2f">  664</a></span>&#160;<span class="keyword">inline</span> scalar_t <a class="code" href="namespacemfem.html#a1fdf24d38e36ea435a51441ed97c9b2f">TAdjDetHD</a>(<span class="keyword">const</span> A_layout_t &amp;a, <span class="keyword">const</span> A_data_t &amp;A,</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                          <span class="keyword">const</span> B_layout_t &amp;b, B_data_t &amp;B)</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;{</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;   MFEM_STATIC_ASSERT(A_layout_t::rank == 2 &amp;&amp; B_layout_t::rank == 2,</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;                      <span class="stringliteral">&quot;invalid ranks&quot;</span>);</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;   <span class="keywordflow">return</span> internal::MatrixOps&lt;A_layout_t::dim_1,A_layout_t::dim_2&gt;::</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;          template AdjDetHD&lt;scalar_t&gt;(<a class="code" href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, A, <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, B);</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;}</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;} <span class="comment">// namespace mfem</span></div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="preprocessor">#endif // MFEM_TEMPLATE_MATRIX</span></div>
+<div class="ttc" id="namespacemfem_1_1kernels_html_ac8266bd809ccb8b2175151c6b8f60de4"><div class="ttname"><a href="namespacemfem_1_1kernels.html#ac8266bd809ccb8b2175151c6b8f60de4">mfem::kernels::Det</a></div><div class="ttdeci">MFEM_HOST_DEVICE T Det(const T *data)</div><div class="ttdoc">Compute the determinant of a square matrix of size dim with given data. </div><div class="ttdef"><b>Definition:</b> <a href="linalg_2kernels_8hpp_source.html#l00208">kernels.hpp:208</a></div></div>
+<div class="ttc" id="namespacemfem_html_a1fdf24d38e36ea435a51441ed97c9b2f"><div class="ttname"><a href="namespacemfem.html#a1fdf24d38e36ea435a51441ed97c9b2f">mfem::TAdjDetHD</a></div><div class="ttdeci">MFEM_HOST_DEVICE scalar_t TAdjDetHD(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00664">tmatrix.hpp:664</a></div></div>
 <div class="ttc" id="namespacemfem_html_a418fa01f905444069c657642549f2671"><div class="ttname"><a href="namespacemfem.html#a418fa01f905444069c657642549f2671">mfem::TDet</a></div><div class="ttdeci">scalar_t TDet(const layout_t &amp;a, const data_t &amp;A)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00573">tmatrix.hpp:573</a></div></div>
 <div class="ttc" id="structmfem_1_1AssignOp_html_ae5272e4ffd01ce0b65a236210ade7627"><div class="ttname"><a href="structmfem_1_1AssignOp.html#ae5272e4ffd01ce0b65a236210ade7627">mfem::AssignOp::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="tassign_8hpp_source.html#l00025">tassign.hpp:25</a></div></div>
 <div class="ttc" id="namespacemfem_html_ac8013bb03ef7822e3db644f455dd9716"><div class="ttname"><a href="namespacemfem.html#ac8013bb03ef7822e3db644f455dd9716">mfem::bMult_AB</a></div><div class="ttdeci">MFEM_ALWAYS_INLINE void bMult_AB(const A_layout_t &amp;A_layout, const A_data_t &amp;A_data, const B_layout_t &amp;B_layout, const B_data_t &amp;B_data, const C_layout_t &amp;C_layout, C_data_t &amp;C_data)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00089">tmatrix.hpp:89</a></div></div>
-<div class="ttc" id="namespacemfem_html_ac5874634cc5090321fec06ef2fce9332"><div class="ttname"><a href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">mfem::TAdjDet</a></div><div class="ttdeci">scalar_t TAdjDet(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00634">tmatrix.hpp:634</a></div></div>
-<div class="ttc" id="namespacemfem_html_acaef685c3b2cfa9cb35a7af6956a7b67"><div class="ttname"><a href="namespacemfem.html#acaef685c3b2cfa9cb35a7af6956a7b67">mfem::Add</a></div><div class="ttdeci">void Add(const DenseMatrix &amp;A, const DenseMatrix &amp;B, double alpha, DenseMatrix &amp;C)</div><div class="ttdoc">C = A + alpha*B. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8cpp_source.html#l01928">densemat.cpp:1928</a></div></div>
+<div class="ttc" id="namespacemfem_html_ac5874634cc5090321fec06ef2fce9332"><div class="ttname"><a href="namespacemfem.html#ac5874634cc5090321fec06ef2fce9332">mfem::TAdjDet</a></div><div class="ttdeci">scalar_t TAdjDet(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00649">tmatrix.hpp:649</a></div></div>
+<div class="ttc" id="namespacemfem_html_acaef685c3b2cfa9cb35a7af6956a7b67"><div class="ttname"><a href="namespacemfem.html#acaef685c3b2cfa9cb35a7af6956a7b67">mfem::Add</a></div><div class="ttdeci">void Add(const DenseMatrix &amp;A, const DenseMatrix &amp;B, double alpha, DenseMatrix &amp;C)</div><div class="ttdoc">C = A + alpha*B. </div><div class="ttdef"><b>Definition:</b> <a href="densemat_8cpp_source.html#l01931">densemat.cpp:1931</a></div></div>
 <div class="ttc" id="lissajous_8cpp_html_a1510a66dacf9cf3586de5fc89ae2a073"><div class="ttname"><a href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a></div><div class="ttdeci">double b</div><div class="ttdef"><b>Definition:</b> <a href="lissajous_8cpp_source.html#l00042">lissajous.cpp:42</a></div></div>
 <div class="ttc" id="namespacemfem_html_aa948b76fdb8a35262dc45e9d2bc9059d"><div class="ttname"><a href="namespacemfem.html#aa948b76fdb8a35262dc45e9d2bc9059d">mfem::TAdjugate</a></div><div class="ttdeci">void TAdjugate(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00620">tmatrix.hpp:620</a></div></div>
 <div class="ttc" id="namespacemfem_html_a9b80e32adbad1254e291eb951eced73b"><div class="ttname"><a href="namespacemfem.html#a9b80e32adbad1254e291eb951eced73b">mfem::TDetHD</a></div><div class="ttdeci">MFEM_HOST_DEVICE scalar_t TDetHD(const layout_t &amp;a, const data_t &amp;A)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00588">tmatrix.hpp:588</a></div></div>
 <div class="ttc" id="namespacemfem_html_a4b15ab982abe0cb06b61c0f034350835"><div class="ttname"><a href="namespacemfem.html#a4b15ab982abe0cb06b61c0f034350835">mfem::Mult_AB</a></div><div class="ttdeci">MFEM_ALWAYS_INLINE void Mult_AB(const A_layout_t &amp;A_layout, const A_data_t &amp;A_data, const B_layout_t &amp;B_layout, const B_data_t &amp;B_data, const C_layout_t &amp;C_layout, C_data_t &amp;C_data)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00230">tmatrix.hpp:230</a></div></div>
 <div class="ttc" id="lissajous_8cpp_html_a1031d0e0a97a340abfe0a6ab9e831045"><div class="ttname"><a href="lissajous_8cpp.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a></div><div class="ttdeci">double a</div><div class="ttdef"><b>Definition:</b> <a href="lissajous_8cpp_source.html#l00041">lissajous.cpp:41</a></div></div>
+<div class="ttc" id="namespacemfem_html_aecd3992b4c8468e84283127cd61f181d"><div class="ttname"><a href="namespacemfem.html#aecd3992b4c8468e84283127cd61f181d">mfem::TAdjugateHD</a></div><div class="ttdeci">MFEM_HOST_DEVICE void TAdjugateHD(const A_layout_t &amp;a, const A_data_t &amp;A, const B_layout_t &amp;b, B_data_t &amp;B)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00635">tmatrix.hpp:635</a></div></div>
 <div class="ttc" id="namespacemfem_html_a247229dddbe157a9a4afd961a8f48f6e"><div class="ttname"><a href="namespacemfem.html#a247229dddbe157a9a4afd961a8f48f6e">mfem::sMult_AB</a></div><div class="ttdeci">MFEM_ALWAYS_INLINE void sMult_AB(const A_layout_t &amp;A_layout, const A_data_t &amp;A_data, const B_layout_t &amp;B_layout, const B_data_t &amp;B_data, const C_layout_t &amp;C_layout, C_data_t &amp;C_data)</div><div class="ttdef"><b>Definition:</b> <a href="tmatrix_8hpp_source.html#l00040">tmatrix.hpp:40</a></div></div>
+<div class="ttc" id="namespacemfem_1_1kernels_html_afbefd254025329d27699defc8408b0bc"><div class="ttname"><a href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">mfem::kernels::Set</a></div><div class="ttdeci">MFEM_HOST_DEVICE void Set(const int height, const int width, const double alpha, const TA *Adata, TB *Bdata)</div><div class="ttdoc">Compute B = alpha*A, where the matrices A and B are of size height x width with data Adata and Bdata...</div><div class="ttdef"><b>Definition:</b> <a href="linalg_2kernels_8hpp_source.html#l00297">kernels.hpp:297</a></div></div>
+<div class="ttc" id="ncmesh__tables_8hpp_html_aa9bbc8c2be6976cfc6ce9759a9012e39"><div class="ttname"><a href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a></div><div class="ttdeci">RefCoord s[3]</div><div class="ttdef"><b>Definition:</b> <a href="ncmesh__tables_8hpp_source.html#l00158">ncmesh_tables.hpp:158</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:01 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:40 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

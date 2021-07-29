@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">tbilininteg.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="tbilininteg_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="tbilininteg_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -481,7 +481,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;         <span class="keyword">const</span> real_t J21 = F.Jt(i,0,1,k);</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;         <span class="keyword">const</span> real_t J22 = F.Jt(i,1,1,k);</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;         <span class="keyword">const</span> complex_t w_det_J = Q.get(q,i,k) / (J11 * J22 - J21 * J12);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;         internal::MatrixOps&lt;2,2&gt;::Symm&lt;Symm&gt;::Set(</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;         <a class="code" href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">internal::MatrixOps&lt;2,2&gt;::Symm&lt;Symm&gt;::Set</a>(</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            A.layout.ind1(i), A,</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            + w_det_J * (J12*J12 + J22*J22), <span class="comment">// (1,1)</span></div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            - w_det_J * (J11*J12 + J21*J22), <span class="comment">// (2,1)</span></div>
@@ -620,11 +620,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; M; i++)</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;      {</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;         <a class="code" href="structmfem_1_1TMatrix.html">TMatrix&lt;3,3,real_t&gt;</a> B; <span class="comment">// = adj(J)</span></div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;         <span class="keyword">const</span> complex_t u =</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;         <span class="keyword">const</span> complex_t <a class="code" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a> =</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            (Q.get(q,i,k) /</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;             TAdjDet&lt;real_t&gt;(F.Jt.layout.ind14(i,k).transpose_12(), F.Jt,</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                             B.<a class="code" href="structmfem_1_1TMatrix.html#a095ffe92fcec8ca0765634ccc0d4c583">layout</a>, B));</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;         internal::MatrixOps&lt;3,3&gt;::Symm&lt;Symm&gt;::Set(</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;         <a class="code" href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">internal::MatrixOps&lt;3,3&gt;::Symm&lt;Symm&gt;::Set</a>(</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            A.layout.ind1(i), A,</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;            u*(B(0,0)*B(0,0)+B(0,1)*B(0,1)+B(0,2)*B(0,2)), <span class="comment">// 1,1</span></div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;            u*(B(0,0)*B(1,0)+B(0,1)*B(1,1)+B(0,2)*B(1,2)), <span class="comment">// 2,1</span></div>
@@ -723,7 +723,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="structmfem_1_1TDiffusionKernel_html"><div class="ttname"><a href="structmfem_1_1TDiffusionKernel.html">mfem::TDiffusionKernel</a></div><div class="ttdoc">Diffusion kernel. </div><div class="ttdef"><b>Definition:</b> <a href="tbilininteg_8hpp_source.html#l00160">tbilininteg.hpp:160</a></div></div>
 <div class="ttc" id="structmfem_1_1TDiffusionKernel_3_012_00_012_00_01complex__t_01_4_html_a63251e4f1bc5ba9c15754e82ca88dddd"><div class="ttname"><a href="structmfem_1_1TDiffusionKernel_3_012_00_012_00_01complex__t_01_4.html#a63251e4f1bc5ba9c15754e82ca88dddd">mfem::TDiffusionKernel&lt; 2, 2, complex_t &gt;::Action</a></div><div class="ttdeci">static MFEM_ALWAYS_INLINE void Action(const int k, const T_result_t &amp;F, const Q_t &amp;Q, const q_t &amp;q, S_data_t &amp;R)</div><div class="ttdoc">Method used for un-assembled (matrix free) action. </div><div class="ttdef"><b>Definition:</b> <a href="tbilininteg_8hpp_source.html#l00326">tbilininteg.hpp:326</a></div></div>
 <div class="ttc" id="structmfem_1_1IntRuleCoefficient_1_1Aux_html"><div class="ttname"><a href="structmfem_1_1IntRuleCoefficient_1_1Aux.html">mfem::IntRuleCoefficient::Aux</a></div><div class="ttdef"><b>Definition:</b> <a href="tcoefficient_8hpp_source.html#l00275">tcoefficient.hpp:275</a></div></div>
+<div class="ttc" id="namespacemfem_1_1kernels_html_afbefd254025329d27699defc8408b0bc"><div class="ttname"><a href="namespacemfem_1_1kernels.html#afbefd254025329d27699defc8408b0bc">mfem::kernels::Set</a></div><div class="ttdeci">MFEM_HOST_DEVICE void Set(const int height, const int width, const double alpha, const TA *Adata, TB *Bdata)</div><div class="ttdoc">Compute B = alpha*A, where the matrices A and B are of size height x width with data Adata and Bdata...</div><div class="ttdef"><b>Definition:</b> <a href="linalg_2kernels_8hpp_source.html#l00297">kernels.hpp:297</a></div></div>
 <div class="ttc" id="structmfem_1_1TMassKernel_html_a5505c31e05c8b9426c17a8a4e42daa66"><div class="ttname"><a href="structmfem_1_1TMassKernel.html#a5505c31e05c8b9426c17a8a4e42daa66">mfem::TMassKernel::MultAssembled</a></div><div class="ttdeci">static MFEM_ALWAYS_INLINE void MultAssembled(const int k, const TVector&lt; qpts, complex_t &gt; &amp;A, S_data_t &amp;R)</div><div class="ttdoc">Method for partially assembled action. </div><div class="ttdef"><b>Definition:</b> <a href="tbilininteg_8hpp_source.html#l00139">tbilininteg.hpp:139</a></div></div>
+<div class="ttc" id="namespacemfem_html_a602b817d5a403240b59b6eb51d349406"><div class="ttname"><a href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">mfem::u</a></div><div class="ttdeci">double u(const Vector &amp;xvec)</div><div class="ttdef"><b>Definition:</b> <a href="lor__mms_8hpp_source.html#l00024">lor_mms.hpp:24</a></div></div>
 <div class="ttc" id="structmfem_1_1TDiffusionKernel_3_013_00_013_00_01complex__t_01_4_1_1CoefficientEval_html_a9cc6e76498f04bbe704dd0be14e4e457"><div class="ttname"><a href="structmfem_1_1TDiffusionKernel_3_013_00_013_00_01complex__t_01_4_1_1CoefficientEval.html#a9cc6e76498f04bbe704dd0be14e4e457">mfem::TDiffusionKernel&lt; 3, 3, complex_t &gt;::CoefficientEval::Type</a></div><div class="ttdeci">IntRuleCoefficient&lt; IR, coeff_t, impl_traits_t &gt;::Type Type</div><div class="ttdef"><b>Definition:</b> <a href="tbilininteg_8hpp_source.html#l00458">tbilininteg.hpp:458</a></div></div>
 <div class="ttc" id="structmfem_1_1TDiffusionKernel_3_013_00_013_00_01complex__t_01_4_1_1f__asm__data_html_a404e05ed27b02f5bbee81a14fed3c339"><div class="ttname"><a href="structmfem_1_1TDiffusionKernel_3_013_00_013_00_01complex__t_01_4_1_1f__asm__data.html#a404e05ed27b02f5bbee81a14fed3c339">mfem::TDiffusionKernel&lt; 3, 3, complex_t &gt;::f_asm_data::type</a></div><div class="ttdeci">TTensor3&lt; qpts, 3, 3, complex_t &gt; type</div><div class="ttdef"><b>Definition:</b> <a href="tbilininteg_8hpp_source.html#l00453">tbilininteg.hpp:453</a></div></div>
 <div class="ttc" id="structmfem_1_1TVector_html_a0e2da3d9952adf1dc3b4573311cf1719"><div class="ttname"><a href="structmfem_1_1TVector.html#a0e2da3d9952adf1dc3b4573311cf1719">mfem::TVector&lt; N1 *N2, data_t, align &gt;::Scale</a></div><div class="ttdeci">void Scale(const data_t scale)</div><div class="ttdef"><b>Definition:</b> <a href="ttensor_8hpp_source.html#l00337">ttensor.hpp:337</a></div></div>
@@ -731,7 +733,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:00 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:38 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

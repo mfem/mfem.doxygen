@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">bilininteg_vecmass_mf.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="bilininteg__vecmass__mf_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="bilininteg__vecmass__mf_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../general/forall.hpp&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bilininteg_8hpp.html">bilininteg.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gridfunc_8hpp.html">gridfunc.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;libceed/mass.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ceed/mass.hpp&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
@@ -123,71 +123,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// MF Mass Assemble kernel</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classmfem_1_1VectorMassIntegrator.html#afe6c1dbd00930ad42bdbb59e13689cd2">   25</a></span>&#160;<span class="keywordtype">void</span> VectorMassIntegrator::AssembleMF(<span class="keyword">const</span> <a class="code" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fes)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CEED</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span>   <span class="comment">// Assuming the same element type</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> *mesh = fes.<a class="code" href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">GetMesh</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   <span class="keywordflow">if</span> (mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">GetNE</a>() == 0) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <span class="keyword">const</span> <a class="code" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el = *fes.<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(0);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *T = mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">GetElementTransformation</a>(0);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *ir</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      = IntRule ? IntRule : &amp;MassIntegrator::GetRule(el, el, *T);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <span class="keywordflow">if</span> (DeviceCanUseCeed())</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">delete</span> ceedDataPtr;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      ceedDataPtr = <span class="keyword">new</span> CeedData;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      InitCeedCoeff(Q, *mesh, *ir, ceedDataPtr);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordflow">return</span> CeedMFMassAssemble(fes, *ir, *ceedDataPtr);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span>   <a class="code" href="namespacemfem.html#abd1b6105cb4110752ec41c956c18d198">mfem_error</a>(<span class="stringliteral">&quot;Error: VectorMassIntegrator::AssembleMF only implemented with libCEED&quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classmfem_1_1VectorMassIntegrator.html#aef54bc382cf24b7e0bc4ff79ba0adff2">   46</a></span>&#160;<span class="keywordtype">void</span> VectorMassIntegrator::AddMultMF(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;y)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CEED</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span>   <span class="keywordflow">if</span> (DeviceCanUseCeed())</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      CeedAddMult(ceedDataPtr, x, y);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span>   {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="namespacemfem.html#abd1b6105cb4110752ec41c956c18d198">mfem_error</a>(<span class="stringliteral">&quot;Error: VectorMassIntegrator::AssembleDiagonalMF only implemented with libCEED&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classmfem_1_1VectorMassIntegrator.html#a5460f07a1cc63a1f83972add6b561514">   60</a></span>&#160;<span class="keywordtype">void</span> VectorMassIntegrator::AssembleDiagonalMF(<a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;diag)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CEED</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span>   <span class="keywordflow">if</span> (DeviceCanUseCeed())</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <span class="comment">// Assuming the same element type</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <a class="code" href="classmfem_1_1Mesh.html">Mesh</a> *mesh = fes.<a class="code" href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">GetMesh</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <span class="keywordflow">if</span> (mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">GetNE</a>() == 0) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   <span class="keyword">const</span> <a class="code" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;el = *fes.<a class="code" href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">GetFE</a>(0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <a class="code" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> *T = mesh-&gt;<a class="code" href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">GetElementTransformation</a>(0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <span class="keyword">const</span> <a class="code" href="classmfem_1_1IntegrationRule.html">IntegrationRule</a> *ir</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      = IntRule ? IntRule : &amp;MassIntegrator::GetRule(el, el, *T);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <span class="keywordflow">if</span> (DeviceCanUseCeed())</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keyword">delete</span> ceedOp;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      ceedOp = <span class="keyword">new</span> ceed::MFMassIntegrator(fes, *ir, Q);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   MFEM_ABORT(<span class="stringliteral">&quot;Error: VectorMassIntegrator::AssembleMF only implemented with&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;              <span class="stringliteral">&quot; libCEED&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classmfem_1_1VectorMassIntegrator.html#aef54bc382cf24b7e0bc4ff79ba0adff2">   44</a></span>&#160;<span class="keywordtype">void</span> VectorMassIntegrator::AddMultMF(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;y)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keywordflow">if</span> (DeviceCanUseCeed())</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      ceedOp-&gt;AddMult(x, y);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      MFEM_ABORT(<span class="stringliteral">&quot;Error: VectorMassIntegrator::AddMultMF only implemented with&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                 <span class="stringliteral">&quot; libCEED&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classmfem_1_1VectorMassIntegrator.html#a5460f07a1cc63a1f83972add6b561514">   57</a></span>&#160;<span class="keywordtype">void</span> VectorMassIntegrator::AssembleDiagonalMF(<a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;diag)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keywordflow">if</span> (DeviceCanUseCeed())</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      ceedOp-&gt;GetDiagonal(diag);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      CeedAssembleDiagonal(ceedDataPtr, diag);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span>   {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="namespacemfem.html#abd1b6105cb4110752ec41c956c18d198">mfem_error</a>(<span class="stringliteral">&quot;Error: VectorMassIntegrator::AddMultMF only implemented with libCEED&quot;</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <span class="comment">// namespace mfem</span></div>
-<div class="ttc" id="classmfem_1_1FiniteElement_html"><div class="ttname"><a href="classmfem_1_1FiniteElement.html">mfem::FiniteElement</a></div><div class="ttdoc">Abstract class for all finite elements. </div><div class="ttdef"><b>Definition:</b> <a href="fe_8hpp_source.html#l00235">fe.hpp:235</a></div></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      MFEM_ABORT(<span class="stringliteral">&quot;Error: VectorMassIntegrator::AssembleDiagonalMF only&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                 <span class="stringliteral">&quot; implemented with libCEED&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} <span class="comment">// namespace mfem</span></div>
+<div class="ttc" id="classmfem_1_1FiniteElement_html"><div class="ttname"><a href="classmfem_1_1FiniteElement.html">mfem::FiniteElement</a></div><div class="ttdoc">Abstract class for all finite elements. </div><div class="ttdef"><b>Definition:</b> <a href="fe_8hpp_source.html#l00243">fe.hpp:243</a></div></div>
 <div class="ttc" id="classmfem_1_1Mesh_html"><div class="ttname"><a href="classmfem_1_1Mesh.html">mfem::Mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00052">mesh.hpp:52</a></div></div>
 <div class="ttc" id="classmfem_1_1IntegrationRule_html"><div class="ttname"><a href="classmfem_1_1IntegrationRule.html">mfem::IntegrationRule</a></div><div class="ttdoc">Class for an integration rule - an Array of IntegrationPoint. </div><div class="ttdef"><b>Definition:</b> <a href="intrules_8hpp_source.html#l00090">intrules.hpp:90</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_af1d1c5110a2cd10105c3ae093c9f7b51"><div class="ttname"><a href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">mfem::Mesh::GetNE</a></div><div class="ttdeci">int GetNE() const </div><div class="ttdoc">Returns number of elements. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00737">mesh.hpp:737</a></div></div>
-<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a103a8ea2e2ec93e0fba94cfb7c0b1111"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">mfem::FiniteElementSpace::GetMesh</a></div><div class="ttdeci">Mesh * GetMesh() const </div><div class="ttdoc">Returns the mesh. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00314">fespace.hpp:314</a></div></div>
-<div class="ttc" id="namespacemfem_html_abd1b6105cb4110752ec41c956c18d198"><div class="ttname"><a href="namespacemfem.html#abd1b6105cb4110752ec41c956c18d198">mfem::mfem_error</a></div><div class="ttdeci">void mfem_error(const char *msg)</div><div class="ttdoc">Function called when an error is encountered. Used by the macros MFEM_ABORT, MFEM_ASSERT, MFEM_VERIFY. </div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00153">error.cpp:153</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_af1d1c5110a2cd10105c3ae093c9f7b51"><div class="ttname"><a href="classmfem_1_1Mesh.html#af1d1c5110a2cd10105c3ae093c9f7b51">mfem::Mesh::GetNE</a></div><div class="ttdeci">int GetNE() const </div><div class="ttdoc">Returns number of elements. </div><div class="ttdef"><b>Definition:</b> <a href="mesh_8hpp_source.html#l00846">mesh.hpp:846</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a103a8ea2e2ec93e0fba94cfb7c0b1111"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a103a8ea2e2ec93e0fba94cfb7c0b1111">mfem::FiniteElementSpace::GetMesh</a></div><div class="ttdeci">Mesh * GetMesh() const </div><div class="ttdoc">Returns the mesh. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00410">fespace.hpp:410</a></div></div>
 <div class="ttc" id="bilininteg_8hpp_html"><div class="ttname"><a href="bilininteg_8hpp.html">bilininteg.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1FiniteElementSpace_html"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html">mfem::FiniteElementSpace</a></div><div class="ttdoc">Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...</div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00087">fespace.hpp:87</a></div></div>
 <div class="ttc" id="classmfem_1_1ElementTransformation_html"><div class="ttname"><a href="classmfem_1_1ElementTransformation.html">mfem::ElementTransformation</a></div><div class="ttdef"><b>Definition:</b> <a href="eltrans_8hpp_source.html#l00023">eltrans.hpp:23</a></div></div>
-<div class="ttc" id="classmfem_1_1Mesh_html_a72dd2c8c7e70b3c766b72b25e2bfbb26"><div class="ttname"><a href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">mfem::Mesh::GetElementTransformation</a></div><div class="ttdeci">void GetElementTransformation(int i, IsoparametricTransformation *ElTr)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l00336">mesh.cpp:336</a></div></div>
-<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a28ed193224e108a8616e62843d507836"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">mfem::FiniteElementSpace::GetFE</a></div><div class="ttdeci">const FiniteElement * GetFE(int i) const </div><div class="ttdoc">Returns pointer to the FiniteElement in the FiniteElementCollection associated with i&amp;#39;th element in t...</div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l01798">fespace.cpp:1798</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00051">vector.hpp:51</a></div></div>
+<div class="ttc" id="classmfem_1_1Mesh_html_a72dd2c8c7e70b3c766b72b25e2bfbb26"><div class="ttname"><a href="classmfem_1_1Mesh.html#a72dd2c8c7e70b3c766b72b25e2bfbb26">mfem::Mesh::GetElementTransformation</a></div><div class="ttdeci">void GetElementTransformation(int i, IsoparametricTransformation *ElTr)</div><div class="ttdef"><b>Definition:</b> <a href="mesh_8cpp_source.html#l00347">mesh.cpp:347</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a28ed193224e108a8616e62843d507836"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a28ed193224e108a8616e62843d507836">mfem::FiniteElementSpace::GetFE</a></div><div class="ttdeci">virtual const FiniteElement * GetFE(int i) const </div><div class="ttdoc">Returns pointer to the FiniteElement in the FiniteElementCollection associated with i&amp;#39;th element in t...</div><div class="ttdef"><b>Definition:</b> <a href="fespace_8cpp_source.html#l02388">fespace.cpp:2388</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00060">vector.hpp:60</a></div></div>
 <div class="ttc" id="gridfunc_8hpp_html"><div class="ttname"><a href="gridfunc_8hpp.html">gridfunc.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:47:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:37 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

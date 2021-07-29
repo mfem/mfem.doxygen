@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">bilininteg_dgtrace_ea.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="bilininteg__dgtrace__ea_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="bilininteg__dgtrace__ea_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -125,26 +125,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   <span class="keyword">auto</span> D = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(padata.Read(), 2, 2, NF);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <span class="keyword">auto</span> A_int = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_int.ReadWrite(), 2, NF);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <span class="keyword">auto</span> A_ext = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_ext.ReadWrite(), 2, NF);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   MFEM_FORALL(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, NF,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   MFEM_FORALL(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, NF,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordtype">double</span> val_int0, val_int1, val_ext01, val_ext10;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      val_int0  = D(0, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      val_ext10 = D(1, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      val_ext01 = D(0, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      val_int1  = D(1, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      val_int0  = D(0, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      val_ext10 = D(1, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      val_ext01 = D(0, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      val_int1  = D(1, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">if</span> (add)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;         A_int(0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_int0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;         A_int(1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_int1;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;         A_ext(0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_ext01;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         A_ext(1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_ext10;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;         A_int(0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_int0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;         A_int(1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_int1;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;         A_ext(0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_ext01;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         A_ext(1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_ext10;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;         A_int(0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_int0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         A_int(1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_int1;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         A_ext(0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_ext01;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         A_ext(1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_ext10;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;         A_int(0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_int0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         A_int(1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_int1;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         A_ext(0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_ext01;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         A_ext(1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_ext10;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   });</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
@@ -157,15 +157,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keyword">auto</span> D = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(padata.Read(), 2, 2, NF);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keyword">auto</span> A_bdr = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_bdr.ReadWrite(), NF);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   MFEM_FORALL(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, NF,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   MFEM_FORALL(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, NF,</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">if</span> (add)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         A_bdr(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += D(0, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         A_bdr(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += D(0, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;         A_bdr(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = D(0, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;         A_bdr(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = D(0, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   });</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
@@ -188,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   <span class="keyword">auto</span> D = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(padata.Read(), Q1D, 2, 2, NF);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   <span class="keyword">auto</span> A_int = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_int.ReadWrite(), D1D, D1D, 2, NF);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   <span class="keyword">auto</span> A_ext = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_ext.ReadWrite(), D1D, D1D, 2, NF);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;   MFEM_FORALL_3D(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, NF, D1D, D1D, 1,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;   MFEM_FORALL_3D(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, NF, D1D, D1D, 1,</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> D1D = T_D1D ? T_D1D : d1d;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> Q1D = T_Q1D ? T_Q1D : q1d;</div>
@@ -202,24 +202,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">double</span> val_ext10 = 0.0;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k1 = 0; k1 &lt; Q1D; ++k1)</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;               val_int0  += B(k1,i1) * B(k1,j1) * D(k1, 0, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               val_ext01 += B(k1,i1) * B(k1,j1) * D(k1, 0, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;               val_ext10 += B(k1,i1) * B(k1,j1) * D(k1, 1, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;               val_int1  += B(k1,i1) * B(k1,j1) * D(k1, 1, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;               val_int0  += B(k1,i1) * B(k1,j1) * D(k1, 0, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               val_ext01 += B(k1,i1) * B(k1,j1) * D(k1, 0, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;               val_ext10 += B(k1,i1) * B(k1,j1) * D(k1, 1, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;               val_int1  += B(k1,i1) * B(k1,j1) * D(k1, 1, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (add)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;               A_int(i1, j1, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_int0;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;               A_int(i1, j1, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_int1;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;               A_ext(i1, j1, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_ext01;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;               A_ext(i1, j1, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_ext10;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;               A_int(i1, j1, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_int0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;               A_int(i1, j1, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_int1;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;               A_ext(i1, j1, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_ext01;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;               A_ext(i1, j1, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_ext10;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;               A_int(i1, j1, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_int0;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;               A_int(i1, j1, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_int1;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;               A_ext(i1, j1, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_ext01;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;               A_ext(i1, j1, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_ext10;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;               A_int(i1, j1, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_int0;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;               A_int(i1, j1, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_int1;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;               A_ext(i1, j1, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_ext01;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;               A_ext(i1, j1, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_ext10;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;         }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      }</div>
@@ -242,7 +242,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   <span class="keyword">auto</span> B = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(basis.Read(), Q1D, D1D);</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   <span class="keyword">auto</span> D = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(padata.Read(), Q1D, 2, 2, NF);</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   <span class="keyword">auto</span> A_bdr = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_bdr.ReadWrite(), D1D, D1D, NF);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   MFEM_FORALL_3D(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, NF, D1D, D1D, 1,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   MFEM_FORALL_3D(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, NF, D1D, D1D, 1,</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;   {</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> D1D = T_D1D ? T_D1D : d1d;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> Q1D = T_Q1D ? T_Q1D : q1d;</div>
@@ -253,15 +253,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">double</span> val_bdr = 0.0;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k1 = 0; k1 &lt; Q1D; ++k1)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;               val_bdr  += B(k1,i1) * B(k1,j1) * D(k1, 0, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;               val_bdr  += B(k1,i1) * B(k1,j1) * D(k1, 0, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">if</span> (add)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;               A_bdr(i1, j1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_bdr;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;               A_bdr(i1, j1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_bdr;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;               A_bdr(i1, j1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_bdr;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;               A_bdr(i1, j1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_bdr;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;         }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      }</div>
@@ -286,7 +286,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;   <span class="keyword">auto</span> D = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(padata.Read(), Q1D, Q1D, 2, 2, NF);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   <span class="keyword">auto</span> A_int = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_int.ReadWrite(), D1D, D1D, D1D, D1D, 2, NF);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   <span class="keyword">auto</span> A_ext = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_ext.ReadWrite(), D1D, D1D, D1D, D1D, 2, NF);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;   MFEM_FORALL_3D(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, NF, D1D, D1D, 1,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;   MFEM_FORALL_3D(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, NF, D1D, D1D, 1,</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;   {</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> D1D = T_D1D ? T_D1D : d1d;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> Q1D = T_Q1D ? T_Q1D : q1d;</div>
@@ -309,7 +309,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            {</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;               MFEM_FOREACH_THREAD(k2,y,Q1D)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;               {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                  s_D[k1][k2][i][j] = D(k1,k2,i,j,<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                  s_D[k1][k2][i][j] = D(k1,k2,i,j,<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;               }</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;         }</div>
@@ -347,17 +347,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                  }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                  <span class="keywordflow">if</span> (add)</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                  {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                     A_int(i1, i2, j1, j2, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_int0;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                     A_int(i1, i2, j1, j2, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_int1;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                     A_ext(i1, i2, j1, j2, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_ext01;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                     A_ext(i1, i2, j1, j2, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_ext10;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                     A_int(i1, i2, j1, j2, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_int0;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                     A_int(i1, i2, j1, j2, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_int1;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                     A_ext(i1, i2, j1, j2, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_ext01;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                     A_ext(i1, i2, j1, j2, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_ext10;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                  }</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                  <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                  {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                     A_int(i1, i2, j1, j2, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_int0;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                     A_int(i1, i2, j1, j2, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_int1;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                     A_ext(i1, i2, j1, j2, 0, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_ext01;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                     A_ext(i1, i2, j1, j2, 1, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_ext10;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                     A_int(i1, i2, j1, j2, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_int0;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                     A_int(i1, i2, j1, j2, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_int1;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                     A_ext(i1, i2, j1, j2, 0, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_ext01;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                     A_ext(i1, i2, j1, j2, 1, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_ext10;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                  }</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;               }</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            }</div>
@@ -382,7 +382,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;   <span class="keyword">auto</span> B = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(basis.Read(), Q1D, D1D);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;   <span class="keyword">auto</span> D = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(padata.Read(), Q1D, Q1D, 2, 2, NF);</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;   <span class="keyword">auto</span> A_bdr = <a class="code" href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">Reshape</a>(eadata_bdr.ReadWrite(), D1D, D1D, D1D, D1D, NF);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;   MFEM_FORALL_3D(<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, NF, D1D, D1D, 1,</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;   MFEM_FORALL_3D(<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, NF, D1D, D1D, 1,</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;   {</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> D1D = T_D1D ? T_D1D : d1d;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> Q1D = T_Q1D ? T_Q1D : q1d;</div>
@@ -405,7 +405,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            {</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;               MFEM_FOREACH_THREAD(k2,y,Q1D)</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;               {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                  s_D[k1][k2][i][j] = D(k1,k2,i,j,<a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                  s_D[k1][k2][i][j] = D(k1,k2,i,j,<a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;               }</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            }</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;         }</div>
@@ -431,11 +431,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                  }</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                  <span class="keywordflow">if</span> (add)</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                  {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                     A_bdr(i1, i2, j1, j2, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) += val_bdr;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                     A_bdr(i1, i2, j1, j2, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) += val_bdr;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                  }</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                  <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                  {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                     A_bdr(i1, i2, j1, j2, <a class="code" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>) = val_bdr;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                     A_bdr(i1, i2, j1, j2, <a class="code" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>) = val_bdr;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                  }</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;               }</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
@@ -570,32 +570,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;}</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
-<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a7b7801ac163bb9044e327d2ae704abaf"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a7b7801ac163bb9044e327d2ae704abaf">mfem::FiniteElementSpace::GetNFbyType</a></div><div class="ttdeci">int GetNFbyType(FaceType type) const </div><div class="ttdoc">Returns the number of faces according to the requested type. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00444">fespace.hpp:444</a></div></div>
-<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_ace4f2881ff9cfa1b86630ee154d3d7ae"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#ace4f2881ff9cfa1b86630ee154d3d7ae">mfem::DGTraceIntegrator::pa_data</a></div><div class="ttdeci">Vector pa_data</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02669">bilininteg.hpp:2669</a></div></div>
-<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_a50ed880f66a4ae80fef931837c2ce4f9"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#a50ed880f66a4ae80fef931837c2ce4f9">mfem::DGTraceIntegrator::dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02672">bilininteg.hpp:2672</a></div></div>
-<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_abcf71e6b56281b84e7cc4cbb61779308"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#abcf71e6b56281b84e7cc4cbb61779308">mfem::DGTraceIntegrator::dofs1D</a></div><div class="ttdeci">int dofs1D</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02672">bilininteg.hpp:2672</a></div></div>
-<div class="ttc" id="namespacemfem_html_a480ada169fcfa4214d92548e77737f3a"><div class="ttname"><a href="namespacemfem.html#a480ada169fcfa4214d92548e77737f3a">mfem::add</a></div><div class="ttdeci">void add(const Vector &amp;v1, const Vector &amp;v2, Vector &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00261">vector.cpp:261</a></div></div>
-<div class="ttc" id="namespacemfem_html_aa380b93b2cc55312f925ed6e1fc1c53c"><div class="ttname"><a href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">mfem::Reshape</a></div><div class="ttdeci">DeviceTensor&lt; sizeof...(Dims), T &gt; Reshape(T *ptr, Dims...dims)</div><div class="ttdoc">Wrap a pointer as a DeviceTensor with automatically deduced template parameters. </div><div class="ttdef"><b>Definition:</b> <a href="dtensor_8hpp_source.html#l00134">dtensor.hpp:134</a></div></div>
-<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_ae6363a29dc325fdce96accf668dc0ccb"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#ae6363a29dc325fdce96accf668dc0ccb">mfem::DGTraceIntegrator::quad1D</a></div><div class="ttdeci">int quad1D</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02672">bilininteg.hpp:2672</a></div></div>
+<div class="ttc" id="classmfem_1_1FiniteElementSpace_html_a7b7801ac163bb9044e327d2ae704abaf"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html#a7b7801ac163bb9044e327d2ae704abaf">mfem::FiniteElementSpace::GetNFbyType</a></div><div class="ttdeci">int GetNFbyType(FaceType type) const </div><div class="ttdoc">Returns the number of faces according to the requested type. </div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00584">fespace.hpp:584</a></div></div>
+<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_ace4f2881ff9cfa1b86630ee154d3d7ae"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#ace4f2881ff9cfa1b86630ee154d3d7ae">mfem::DGTraceIntegrator::pa_data</a></div><div class="ttdeci">Vector pa_data</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02812">bilininteg.hpp:2812</a></div></div>
+<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_a50ed880f66a4ae80fef931837c2ce4f9"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#a50ed880f66a4ae80fef931837c2ce4f9">mfem::DGTraceIntegrator::dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02815">bilininteg.hpp:2815</a></div></div>
+<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_abcf71e6b56281b84e7cc4cbb61779308"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#abcf71e6b56281b84e7cc4cbb61779308">mfem::DGTraceIntegrator::dofs1D</a></div><div class="ttdeci">int dofs1D</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02815">bilininteg.hpp:2815</a></div></div>
+<div class="ttc" id="namespacemfem_html_a480ada169fcfa4214d92548e77737f3a"><div class="ttname"><a href="namespacemfem.html#a480ada169fcfa4214d92548e77737f3a">mfem::add</a></div><div class="ttdeci">void add(const Vector &amp;v1, const Vector &amp;v2, Vector &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00291">vector.cpp:291</a></div></div>
+<div class="ttc" id="namespacemfem_html_aa380b93b2cc55312f925ed6e1fc1c53c"><div class="ttname"><a href="namespacemfem.html#aa380b93b2cc55312f925ed6e1fc1c53c">mfem::Reshape</a></div><div class="ttdeci">DeviceTensor&lt; sizeof...(Dims), T &gt; Reshape(T *ptr, Dims...dims)</div><div class="ttdoc">Wrap a pointer as a DeviceTensor with automatically deduced template parameters. </div><div class="ttdef"><b>Definition:</b> <a href="dtensor_8hpp_source.html#l00136">dtensor.hpp:136</a></div></div>
+<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_ae6363a29dc325fdce96accf668dc0ccb"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#ae6363a29dc325fdce96accf668dc0ccb">mfem::DGTraceIntegrator::quad1D</a></div><div class="ttdeci">int quad1D</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02815">bilininteg.hpp:2815</a></div></div>
+<div class="ttc" id="namespacemfem_html_a6ca5c7837c048d0c2692cfe31c1b88ba"><div class="ttname"><a href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">mfem::f</a></div><div class="ttdeci">double f(const Vector &amp;xvec)</div><div class="ttdef"><b>Definition:</b> <a href="lor__mms_8hpp_source.html#l00032">lor_mms.hpp:32</a></div></div>
 <div class="ttc" id="namespacemfem_html_af736ce0d62a2894982a1eda9dbe93fb7aebbcc9b3b8fc5c7d79d0126910b82a69"><div class="ttname"><a href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7aebbcc9b3b8fc5c7d79d0126910b82a69">mfem::FaceType::Interior</a></div></div>
-<div class="ttc" id="namespacemfem_html_a9e5e61b8655c24492141bdee04eeb871"><div class="ttname"><a href="namespacemfem.html#a9e5e61b8655c24492141bdee04eeb871">mfem::MAX_Q1D</a></div><div class="ttdeci">const int MAX_Q1D</div><div class="ttdef"><b>Definition:</b> <a href="forall_8hpp_source.html#l00027">forall.hpp:27</a></div></div>
+<div class="ttc" id="namespacemfem_html_a9e5e61b8655c24492141bdee04eeb871"><div class="ttname"><a href="namespacemfem.html#a9e5e61b8655c24492141bdee04eeb871">mfem::MAX_Q1D</a></div><div class="ttdeci">const int MAX_Q1D</div><div class="ttdef"><b>Definition:</b> <a href="forall_8hpp_source.html#l00028">forall.hpp:28</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array&lt; double &gt;</a></div></div>
-<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_a5f3cce8ca0531e099f6860a7ece49cc1"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#a5f3cce8ca0531e099f6860a7ece49cc1">mfem::DGTraceIntegrator::nf</a></div><div class="ttdeci">int nf</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02672">bilininteg.hpp:2672</a></div></div>
+<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_a5f3cce8ca0531e099f6860a7ece49cc1"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#a5f3cce8ca0531e099f6860a7ece49cc1">mfem::DGTraceIntegrator::nf</a></div><div class="ttdeci">int nf</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02815">bilininteg.hpp:2815</a></div></div>
 <div class="ttc" id="bilininteg_8hpp_html"><div class="ttname"><a href="bilininteg_8hpp.html">bilininteg.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1FiniteElementSpace_html"><div class="ttname"><a href="classmfem_1_1FiniteElementSpace.html">mfem::FiniteElementSpace</a></div><div class="ttdoc">Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...</div><div class="ttdef"><b>Definition:</b> <a href="fespace_8hpp_source.html#l00087">fespace.hpp:87</a></div></div>
 <div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_a55798b7206c8ad7de1ceadac9d087269"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#a55798b7206c8ad7de1ceadac9d087269">mfem::DGTraceIntegrator::AssembleEAInteriorFaces</a></div><div class="ttdeci">virtual void AssembleEAInteriorFaces(const FiniteElementSpace &amp;fes, Vector &amp;ea_data_int, Vector &amp;ea_data_ext, const bool add)</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg__dgtrace__ea_8cpp_source.html#l00348">bilininteg_dgtrace_ea.cpp:348</a></div></div>
 <div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_ac3b0097c43ea070839f2a2717b4bd961"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#ac3b0097c43ea070839f2a2717b4bd961">mfem::DGTraceIntegrator::AssembleEABoundaryFaces</a></div><div class="ttdeci">virtual void AssembleEABoundaryFaces(const FiniteElementSpace &amp;fes, Vector &amp;ea_data_bdr, const bool add)</div><div class="ttdef"><b>Definition:</b> <a href="bilininteg__dgtrace__ea_8cpp_source.html#l00427">bilininteg_dgtrace_ea.cpp:427</a></div></div>
-<div class="ttc" id="classmfem_1_1DofToQuad_html_adc721058849c2ed203148f8304dd96a7"><div class="ttname"><a href="classmfem_1_1DofToQuad.html#adc721058849c2ed203148f8304dd96a7">mfem::DofToQuad::B</a></div><div class="ttdeci">Array&lt; double &gt; B</div><div class="ttdoc">Basis functions evaluated at quadrature points. </div><div class="ttdef"><b>Definition:</b> <a href="fe_8hpp_source.html#l00180">fe.hpp:180</a></div></div>
-<div class="ttc" id="namespacemfem_html_a5aebd4a4c03683152fecdddeadeea063"><div class="ttname"><a href="namespacemfem.html#a5aebd4a4c03683152fecdddeadeea063">mfem::MAX_D1D</a></div><div class="ttdeci">const int MAX_D1D</div><div class="ttdef"><b>Definition:</b> <a href="forall_8hpp_source.html#l00026">forall.hpp:26</a></div></div>
-<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_adcd3b0e63738702d5b01a169b845f26e"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#adcd3b0e63738702d5b01a169b845f26e">mfem::DGTraceIntegrator::maps</a></div><div class="ttdeci">const DofToQuad * maps</div><div class="ttdoc">Not owned. </div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02670">bilininteg.hpp:2670</a></div></div>
+<div class="ttc" id="classmfem_1_1DofToQuad_html_adc721058849c2ed203148f8304dd96a7"><div class="ttname"><a href="classmfem_1_1DofToQuad.html#adc721058849c2ed203148f8304dd96a7">mfem::DofToQuad::B</a></div><div class="ttdeci">Array&lt; double &gt; B</div><div class="ttdoc">Basis functions evaluated at quadrature points. </div><div class="ttdef"><b>Definition:</b> <a href="fe_8hpp_source.html#l00188">fe.hpp:188</a></div></div>
+<div class="ttc" id="namespacemfem_html_a5aebd4a4c03683152fecdddeadeea063"><div class="ttname"><a href="namespacemfem.html#a5aebd4a4c03683152fecdddeadeea063">mfem::MAX_D1D</a></div><div class="ttdeci">const int MAX_D1D</div><div class="ttdef"><b>Definition:</b> <a href="forall_8hpp_source.html#l00027">forall.hpp:27</a></div></div>
+<div class="ttc" id="classmfem_1_1DGTraceIntegrator_html_adcd3b0e63738702d5b01a169b845f26e"><div class="ttname"><a href="classmfem_1_1DGTraceIntegrator.html#adcd3b0e63738702d5b01a169b845f26e">mfem::DGTraceIntegrator::maps</a></div><div class="ttdeci">const DofToQuad * maps</div><div class="ttdoc">Not owned. </div><div class="ttdef"><b>Definition:</b> <a href="bilininteg_8hpp_source.html#l02813">bilininteg.hpp:2813</a></div></div>
 <div class="ttc" id="namespacemfem_html_af736ce0d62a2894982a1eda9dbe93fb7ae234de581c9c5ef91322f1469a585f9e"><div class="ttname"><a href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7ae234de581c9c5ef91322f1469a585f9e">mfem::FaceType::Boundary</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00051">vector.hpp:51</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00060">vector.hpp:60</a></div></div>
 <div class="ttc" id="gridfunc_8hpp_html"><div class="ttname"><a href="gridfunc_8hpp.html">gridfunc.hpp</a></div></div>
-<div class="ttc" id="mesh-explorer_8cpp_html_a620b8493380888fec82a33ea41571a2e"><div class="ttname"><a href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a></div><div class="ttdeci">double f(const Vector &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="mesh-explorer_8cpp_source.html#l00076">mesh-explorer.cpp:76</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:47:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:37 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

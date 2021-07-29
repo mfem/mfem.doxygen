@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -105,10 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Transfer data between a coarse mesh and an embedded refined mesh using L2 projection.  
+<p>Transfer data in L2 and H1 finite element spaces between a coarse mesh and an embedded refined mesh using L2 projection.  
  <a href="classmfem_1_1L2ProjectionGridTransfer.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="transfer_8hpp_source.html">transfer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for mfem::L2ProjectionGridTransfer:</div>
 <div class="dyncontent">
@@ -126,13 +126,19 @@ Collaboration diagram for mfem::L2ProjectionGridTransfer:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2Projection.html">L2Projection</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2ProjectionH1Space.html">L2ProjectionH1Space</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2ProjectionL2Space.html">L2ProjectionL2Space</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2Prolongation.html">L2Prolongation</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acbd9982547ea0aaa9b021a2d2c98d4de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#acbd9982547ea0aaa9b021a2d2c98d4de">L2ProjectionGridTransfer</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;coarse_fes, <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fine_fes)</td></tr>
-<tr class="separator:acbd9982547ea0aaa9b021a2d2c98d4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97540361af649e306eca2c92bdbcd75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#aa97540361af649e306eca2c92bdbcd75">L2ProjectionGridTransfer</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;coarse_fes_, <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;fine_fes_, bool force_l2_space_=false)</td></tr>
+<tr class="separator:aa97540361af649e306eca2c92bdbcd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea33e7db7184fdb84a019438ae52a95e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#aea33e7db7184fdb84a019438ae52a95e">~L2ProjectionGridTransfer</a> ()</td></tr>
+<tr class="separator:aea33e7db7184fdb84a019438ae52a95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8bd4e016aac2f6f3ef3051d82125efa"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#ab8bd4e016aac2f6f3ef3051d82125efa">ForwardOperator</a> ()</td></tr>
 <tr class="memdesc:ab8bd4e016aac2f6f3ef3051d82125efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> that transfers <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>s from the domain FE space to <a class="el" href="classmfem_1_1GridFunction.html" title="Class for grid function - Vector with associated FE space. ">GridFunction</a>s in the range FE space.  <a href="#ab8bd4e016aac2f6f3ef3051d82125efa">More...</a><br/></td></tr>
 <tr class="separator:ab8bd4e016aac2f6f3ef3051d82125efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +169,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad75d42f47a949348bf701072f2de62ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2Prolongation.html">L2Prolongation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#ad75d42f47a949348bf701072f2de62ae">B</a></td></tr>
 <tr class="memdesc:ad75d42f47a949348bf701072f2de62ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backward, fine-to-coarse, operator.  <a href="#ad75d42f47a949348bf701072f2de62ae">More...</a><br/></td></tr>
 <tr class="separator:ad75d42f47a949348bf701072f2de62ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96fa678399a062ef3927c80cd6a682e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#ac96fa678399a062ef3927c80cd6a682e">force_l2_space</a></td></tr>
+<tr class="separator:ac96fa678399a062ef3927c80cd6a682e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1GridTransfer"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1GridTransfer')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1GridTransfer.html">mfem::GridTransfer</a></td></tr>
 <tr class="memitem:a93cb8a8ed45b00f6402a0a9cba3f9eff inherit pro_attribs_classmfem_1_1GridTransfer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1GridTransfer.html#a93cb8a8ed45b00f6402a0a9cba3f9eff">dom_fes</a></td></tr>
 <tr class="memdesc:a93cb8a8ed45b00f6402a0a9cba3f9eff inherit pro_attribs_classmfem_1_1GridTransfer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Domain FE space.  <a href="#a93cb8a8ed45b00f6402a0a9cba3f9eff">More...</a><br/></td></tr>
@@ -191,14 +199,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:af095b5dd18d51142d041382efb0164ef inherit pro_methods_classmfem_1_1GridTransfer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Transfer data between a coarse mesh and an embedded refined mesh using L2 projection. </p>
-<p>The forward, coarse-to-fine, transfer uses L2 projection. The backward, fine-to-coarse, transfer is defined locally (on a coarse element) as B = (F^t M_f F)^{-1} F^t M_f, where F is the forward transfer matrix, and M_f is the mass matrix on the union of all fine elements comprising the coarse element. Note that the backward transfer operator, B, is a left inverse of the forward transfer operator, F, i.e. B F = I. Both F and B are defined in physical space and, generally, vary between different mesh elements.</p>
-<p>This class currently only fully supports L2 finite element spaces and fine meshes that are a uniform refinement of the coarse mesh. Generally, the coarse and fine FE spaces can have different orders, however, in order for the backward operator to be well-defined, the number of the fine dofs (in a coarse element) should not be smaller than the number of coarse dofs.</p>
-<p>If used on H1 finite element spaces, the transfer will be performed locally, and the value of shared (interface) degrees of freedom will be determined by the value of the last transfer to be performed (according to the element numbering in the finite element space). As a consequence, the mass conservation properties for this operator from the L2 case do not carry over to H1 spaces. </p>
+<div class="textblock"><p>Transfer data in L2 and H1 finite element spaces between a coarse mesh and an embedded refined mesh using L2 projection. </p>
+<p>The forward, coarse-to-fine, transfer uses L2 projection. The backward, fine-to-coarse, transfer is defined as B = (F^t M_f F)^{-1} F^t M_f, where F is the forward transfer matrix, and M_f is the mass matrix on the coarse element. For L2 spaces, M_f is the mass matrix on the union of all fine elements comprising the coarse element. For H1 spaces, M_f is a diagonal (lumped) mass matrix computed through row-summation. Note that the backward transfer operator, B, is a left inverse of the forward transfer operator, F, i.e. B F = I. Both F and B are defined in physical space and, generally for L2 spaces, vary between different mesh elements.</p>
+<p>This class supports H1 and L2 finite element spaces. Fine meshes are a uniform refinement of the coarse mesh, usually created through <a class="el" href="classmfem_1_1Mesh.html#a76185090b32afc576fc011c8f1b4d919" title="Create a refined (by any factor) version of orig_mesh. ">Mesh::MakeRefined</a>. Generally, the coarse and fine FE spaces can have different orders, however, in order for the backward operator to be well-defined, the number of fine dofs (in a coarse element) should not be smaller than the number of coarse dofs. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00922">922</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="transfer_8hpp_source.html#l00168">168</a> of file <a class="el" href="transfer_8hpp_source.html">transfer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="acbd9982547ea0aaa9b021a2d2c98d4de"></a>
+<a class="anchor" id="aa97540361af649e306eca2c92bdbcd75"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -209,13 +216,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">mfem::L2ProjectionGridTransfer::L2ProjectionGridTransfer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;&#160;</td>
-          <td class="paramname"><em>coarse_fes</em>, </td>
+          <td class="paramname"><em>coarse_fes_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;&#160;</td>
-          <td class="paramname"><em>fine_fes</em>&#160;</td>
+          <td class="paramname"><em>fine_fes_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force_l2_space_</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -230,7 +243,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00972">972</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="transfer_8hpp_source.html#l00338">338</a> of file <a class="el" href="transfer_8hpp_source.html">transfer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea33e7db7184fdb84a019438ae52a95e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mfem::L2ProjectionGridTransfer::~L2ProjectionGridTransfer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="transfer_8cpp_source.html#l00865">865</a> of file <a class="el" href="transfer_8cpp_source.html">transfer.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +298,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1GridTransfer.html#acfbaca790e4a2858ae1c9c9541b7e7b2">mfem::GridTransfer</a>.</p>
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02922">2922</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="transfer_8cpp_source.html#l00877">877</a> of file <a class="el" href="transfer_8cpp_source.html">transfer.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +327,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1GridTransfer.html#aaa83ed7c7541d450943778e451f931c1">mfem::GridTransfer</a>.</p>
 
-<p>Definition at line <a class="el" href="fespace_8cpp_source.html#l02916">2916</a> of file <a class="el" href="fespace_8cpp_source.html">fespace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="transfer_8cpp_source.html#l00871">871</a> of file <a class="el" href="transfer_8cpp_source.html">transfer.cpp</a>.</p>
 
 </div>
 </div>
@@ -314,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Backward, fine-to-coarse, operator. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00969">969</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="transfer_8hpp_source.html#l00334">334</a> of file <a class="el" href="transfer_8hpp_source.html">transfer.hpp</a>.</p>
 
 </div>
 </div>
@@ -338,18 +376,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Forward, coarse-to-fine, operator. </p>
 
-<p>Definition at line <a class="el" href="fespace_8hpp_source.html#l00968">968</a> of file <a class="el" href="fespace_8hpp_source.html">fespace.hpp</a>.</p>
+<p>Definition at line <a class="el" href="transfer_8hpp_source.html#l00333">333</a> of file <a class="el" href="transfer_8hpp_source.html">transfer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac96fa678399a062ef3927c80cd6a682e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mfem::L2ProjectionGridTransfer::force_l2_space</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="transfer_8hpp_source.html#l00335">335</a> of file <a class="el" href="transfer_8hpp_source.html">transfer.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>fem/<a class="el" href="fespace_8hpp_source.html">fespace.hpp</a></li>
-<li>fem/<a class="el" href="fespace_8cpp_source.html">fespace.cpp</a></li>
+<li>fem/<a class="el" href="transfer_8hpp_source.html">transfer.hpp</a></li>
+<li>fem/<a class="el" href="transfer_8cpp_source.html">transfer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:52 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

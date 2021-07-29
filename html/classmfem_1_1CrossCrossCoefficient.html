@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -154,7 +154,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a84f24d2e77c86dbf2a2e8a82340d4845 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a84f24d2e77c86dbf2a2e8a82340d4845">MatrixCoefficient</a> (int h, int w, bool symm=false)</td></tr>
 <tr class="memdesc:a84f24d2e77c86dbf2a2e8a82340d4845 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a h x w matrix coefficient.  <a href="#a84f24d2e77c86dbf2a2e8a82340d4845">More...</a><br/></td></tr>
 <tr class="separator:a84f24d2e77c86dbf2a2e8a82340d4845 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa873d34c1fa3755ae99c2f43b9163ea6 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#aa873d34c1fa3755ae99c2f43b9163ea6">SetTime</a> (double t)</td></tr>
+<tr class="memitem:aa873d34c1fa3755ae99c2f43b9163ea6 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#aa873d34c1fa3755ae99c2f43b9163ea6">SetTime</a> (double <a class="el" href="ncmesh__tables_8hpp.html#a01ac4cd1acc7bf8b1571ba06004fc928">t</a>)</td></tr>
 <tr class="memdesc:aa873d34c1fa3755ae99c2f43b9163ea6 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time for time dependent coefficients.  <a href="#aa873d34c1fa3755ae99c2f43b9163ea6">More...</a><br/></td></tr>
 <tr class="separator:aa873d34c1fa3755ae99c2f43b9163ea6 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296ff78faeb06268281544dd3b553a15 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a296ff78faeb06268281544dd3b553a15">GetTime</a> ()</td></tr>
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a22a9a4eed1d9e58a76c69ccff9eeca2e inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a22a9a4eed1d9e58a76c69ccff9eeca2e">IsSymmetric</a> () const </td></tr>
 <tr class="separator:a22a9a4eed1d9e58a76c69ccff9eeca2e inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85cd2919ab0f3354bc61932b48e4892 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#ad85cd2919ab0f3354bc61932b48e4892">EvalSymmetric</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;K, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
-<tr class="memdesc:ad85cd2919ab0f3354bc61932b48e4892 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the upper triangular entries of the matrix coefficient in the symmetric case, similarly to Eval. <a class="el" href="classmfem_1_1Matrix.html" title="Abstract data type matrix. ">Matrix</a> entry (i,j) is stored in K[j - i + os_i] for 0 &lt;= i &lt;= j &lt; width, os_0 = 0, os_{i+1} = os_i + width - i. That is, K = {M(0,0), ..., M(0,w-1), M(1,1), ..., M(1,w-1), ..., M(w-1,w-1) with w = width.  <a href="#ad85cd2919ab0f3354bc61932b48e4892">More...</a><br/></td></tr>
+<tr class="memdesc:ad85cd2919ab0f3354bc61932b48e4892 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Evaluate a symmetric matrix coefficient.  <a href="#ad85cd2919ab0f3354bc61932b48e4892">More...</a><br/></td></tr>
 <tr class="separator:ad85cd2919ab0f3354bc61932b48e4892 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a6d44555029e9bcd3b74b0d28f7bc69 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a3a6d44555029e9bcd3b74b0d28f7bc69">~MatrixCoefficient</a> ()</td></tr>
 <tr class="separator:a3a6d44555029e9bcd3b74b0d28f7bc69 inherit pub_methods_classmfem_1_1MatrixCoefficient"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,7 +193,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classmfem_1_1Matrix.html" title="Abstract data type matrix. ">Matrix</a> coefficient defined as -a k x k x, for a vector k and scalar a. </p>
 <p>This coefficient returns \(a * (|k|^2 I - k \otimes k)\), where I is the identity matrix and \(\otimes\) indicates the outer product. This can be evaluated for vectors of any dimension but in three dimensions it corresponds to computing the cross product with k twice. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01522">1522</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01627">1627</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a706359e0b34023ba140a6505071c4a6b"></a>
 <div class="memitem">
@@ -218,6 +218,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00731">731</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +247,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00700">700</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00736">736</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +294,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1MatrixCoefficient.html#a9026dc9110645d2b4700b8f75107b647">mfem::MatrixCoefficient</a>.</p>
 
-<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00706">706</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8cpp_source.html#l00742">742</a> of file <a class="el" href="coefficient_8cpp_source.html">coefficient.cpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +321,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the scalar factor. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01543">1543</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01648">1648</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -346,7 +348,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the scalar factor. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01538">1538</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01643">1643</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +375,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the vector factor. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01548">1548</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01653">1653</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +403,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the scalar factor. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01541">1541</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01646">1646</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +431,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the scalar factor as a constant. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01536">1536</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01641">1641</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +459,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the vector factor. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01546">1546</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l01651">1651</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +470,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:49 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

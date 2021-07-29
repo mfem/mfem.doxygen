@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">fem.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="fem_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="fem_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -140,30 +140,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="transfer_8hpp.html">transfer.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fespacehierarchy_8hpp.html">fespacehierarchy.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="multigrid_8hpp.html">multigrid.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="pfespace_8hpp.html">pfespace.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pgridfunc_8hpp.html">pgridfunc.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="plinearform_8hpp.html">plinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pbilinearform_8hpp.html">pbilinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pnonlinearform_8hpp.html">pnonlinearform.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_SIDRE</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="sidredatacollection_8hpp.html">sidredatacollection.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CONDUIT</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="conduitdatacollection_8hpp.html">conduitdatacollection.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_ADIOS2</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="adios2datacollection_8hpp.html">adios2datacollection.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;ceed/algebraic.hpp&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lor_8hpp.html">lor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="pfespace_8hpp.html">pfespace.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pgridfunc_8hpp.html">pgridfunc.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="plinearform_8hpp.html">plinearform.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pbilinearform_8hpp.html">pbilinearform.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pnonlinearform_8hpp.html">pnonlinearform.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_SIDRE</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="sidredatacollection_8hpp.html">sidredatacollection.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_CONDUIT</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="conduitdatacollection_8hpp.html">conduitdatacollection.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_ADIOS2</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="adios2datacollection_8hpp.html">adios2datacollection.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_FMS</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="fmsconvert_8hpp.html">fmsconvert.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fmsdatacollection_8hpp.html">fmsdatacollection.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="fespacehierarchy_8hpp_html"><div class="ttname"><a href="fespacehierarchy_8hpp.html">fespacehierarchy.hpp</a></div></div>
 <div class="ttc" id="pnonlinearform_8hpp_html"><div class="ttname"><a href="pnonlinearform_8hpp.html">pnonlinearform.hpp</a></div></div>
+<div class="ttc" id="fmsconvert_8hpp_html"><div class="ttname"><a href="fmsconvert_8hpp.html">fmsconvert.hpp</a></div></div>
 <div class="ttc" id="lininteg_8hpp_html"><div class="ttname"><a href="lininteg_8hpp.html">lininteg.hpp</a></div></div>
 <div class="ttc" id="fe__coll_8hpp_html"><div class="ttname"><a href="fe__coll_8hpp.html">fe_coll.hpp</a></div></div>
 <div class="ttc" id="gslib_8hpp_html"><div class="ttname"><a href="gslib_8hpp.html">gslib.hpp</a></div></div>
@@ -185,6 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="linearform_8hpp_html"><div class="ttname"><a href="linearform_8hpp.html">linearform.hpp</a></div></div>
 <div class="ttc" id="pbilinearform_8hpp_html"><div class="ttname"><a href="pbilinearform_8hpp.html">pbilinearform.hpp</a></div></div>
 <div class="ttc" id="hybridization_8hpp_html"><div class="ttname"><a href="hybridization_8hpp.html">hybridization.hpp</a></div></div>
+<div class="ttc" id="fmsdatacollection_8hpp_html"><div class="ttname"><a href="fmsdatacollection_8hpp.html">fmsdatacollection.hpp</a></div></div>
 <div class="ttc" id="quadinterpolator_8hpp_html"><div class="ttname"><a href="quadinterpolator_8hpp.html">quadinterpolator.hpp</a></div></div>
 <div class="ttc" id="intrules_8hpp_html"><div class="ttname"><a href="intrules_8hpp.html">intrules.hpp</a></div></div>
 <div class="ttc" id="eltrans_8hpp_html"><div class="ttname"><a href="eltrans_8hpp.html">eltrans.hpp</a></div></div>
@@ -196,13 +205,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="pgridfunc_8hpp_html"><div class="ttname"><a href="pgridfunc_8hpp.html">pgridfunc.hpp</a></div></div>
 <div class="ttc" id="nonlininteg_8hpp_html"><div class="ttname"><a href="nonlininteg_8hpp.html">nonlininteg.hpp</a></div></div>
 <div class="ttc" id="estimators_8hpp_html"><div class="ttname"><a href="estimators_8hpp.html">estimators.hpp</a></div></div>
+<div class="ttc" id="lor_8hpp_html"><div class="ttname"><a href="lor_8hpp.html">lor.hpp</a></div></div>
 <div class="ttc" id="coefficient_8hpp_html"><div class="ttname"><a href="coefficient_8hpp.html">coefficient.hpp</a></div></div>
 <div class="ttc" id="complex__fem_8hpp_html"><div class="ttname"><a href="complex__fem_8hpp.html">complex_fem.hpp</a></div></div>
 <div class="ttc" id="bilinearform_8hpp_html"><div class="ttname"><a href="bilinearform_8hpp.html">bilinearform.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:47:59 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:38 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

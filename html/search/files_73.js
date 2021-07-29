@@ -1,7 +1,13 @@
 var searchData=
 [
+  ['sbm_5faux_2ehpp',['sbm_aux.hpp',['../sbm__aux_8hpp.html',1,'']]],
+  ['sbm_5fsolver_2ecpp',['sbm_solver.cpp',['../sbm__solver_8cpp.html',1,'']]],
+  ['sbm_5fsolver_2ehpp',['sbm_solver.hpp',['../sbm__solver_8hpp.html',1,'']]],
+  ['schwarz_5fex1_2ecpp',['schwarz_ex1.cpp',['../schwarz__ex1_8cpp.html',1,'']]],
+  ['schwarz_5fex1p_2ecpp',['schwarz_ex1p.cpp',['../schwarz__ex1p_8cpp.html',1,'']]],
   ['segment_2ecpp',['segment.cpp',['../segment_8cpp.html',1,'']]],
   ['segment_2ehpp',['segment.hpp',['../segment_8hpp.html',1,'']]],
+  ['seqheat_2ecpp',['seqheat.cpp',['../seqheat_8cpp.html',1,'']]],
   ['sets_2ecpp',['sets.cpp',['../sets_8cpp.html',1,'']]],
   ['sets_2ehpp',['sets.hpp',['../sets_8hpp.html',1,'']]],
   ['shaper_2ecpp',['shaper.cpp',['../shaper_8cpp.html',1,'']]],
@@ -29,5 +35,7 @@ var searchData=
   ['sundials_2ecpp',['sundials.cpp',['../sundials_8cpp.html',1,'']]],
   ['sundials_2ehpp',['sundials.hpp',['../sundials_8hpp.html',1,'']]],
   ['superlu_2ecpp',['superlu.cpp',['../superlu_8cpp.html',1,'']]],
-  ['superlu_2ehpp',['superlu.hpp',['../superlu_8hpp.html',1,'']]]
+  ['superlu_2ehpp',['superlu.hpp',['../superlu_8hpp.html',1,'']]],
+  ['symmat_2ecpp',['symmat.cpp',['../symmat_8cpp.html',1,'']]],
+  ['symmat_2ehpp',['symmat.hpp',['../symmat_8hpp.html',1,'']]]
 ];

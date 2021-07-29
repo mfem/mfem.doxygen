@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -124,8 +124,8 @@ Collaboration diagram for mfem::HypreBoomerAMG:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a26136b6259dca5603b846b979a7705c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a26136b6259dca5603b846b979a7705c3">HypreBoomerAMG</a> ()</td></tr>
 <tr class="separator:a26136b6259dca5603b846b979a7705c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf86862705d0843b3fb91f835736f206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#acf86862705d0843b3fb91f835736f206">HypreBoomerAMG</a> (<a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;<a class="el" href="classmfem_1_1HypreSolver.html#ae4cf8c571546a3efdf06db5059ea4a2d">A</a>)</td></tr>
-<tr class="separator:acf86862705d0843b3fb91f835736f206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460336c8179247d8287235dc3b6cb141"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a460336c8179247d8287235dc3b6cb141">HypreBoomerAMG</a> (const <a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;<a class="el" href="classmfem_1_1HypreSolver.html#a1eb55b779d1fc44f2a68cb33367b89bb">A</a>)</td></tr>
+<tr class="separator:a460336c8179247d8287235dc3b6cb141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d61825dde9a121aa31eaeaa92032297"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a1d61825dde9a121aa31eaeaa92032297">SetOperator</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;op)</td></tr>
 <tr class="memdesc:a1d61825dde9a121aa31eaeaa92032297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set/update the solver for the given operator.  <a href="#a1d61825dde9a121aa31eaeaa92032297">More...</a><br/></td></tr>
 <tr class="separator:a1d61825dde9a121aa31eaeaa92032297"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +133,59 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a466cae67fb59c5211368a207483aa957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b0b31ef6bb310f1c42d17cbc6085bd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a3b0b31ef6bb310f1c42d17cbc6085bd0">SetElasticityOptions</a> (<a class="el" href="classmfem_1_1ParFiniteElementSpace.html">ParFiniteElementSpace</a> *fespace)</td></tr>
 <tr class="separator:a3b0b31ef6bb310f1c42d17cbc6085bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce86f2bda044e0cedb9ef73fef8c5bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a7ce86f2bda044e0cedb9ef73fef8c5bc">SetAdvectiveOptions</a> (int distance=15, const std::string &amp;prerelax=&quot;&quot;, const std::string &amp;postrelax=&quot;FFC&quot;)</td></tr>
+<tr class="separator:a7ce86f2bda044e0cedb9ef73fef8c5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195a07225de5ad18c21185c3aa9877e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a195a07225de5ad18c21185c3aa9877e0">SetStrongThresholdR</a> (double strengthR)</td></tr>
+<tr class="memdesc:a195a07225de5ad18c21185c3aa9877e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a195a07225de5ad18c21185c3aa9877e0">More...</a><br/></td></tr>
+<tr class="separator:a195a07225de5ad18c21185c3aa9877e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be5c84448fea184646480e3a526ed86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a5be5c84448fea184646480e3a526ed86">SetFilterThresholdR</a> (double filterR)</td></tr>
+<tr class="memdesc:a5be5c84448fea184646480e3a526ed86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a5be5c84448fea184646480e3a526ed86">More...</a><br/></td></tr>
+<tr class="separator:a5be5c84448fea184646480e3a526ed86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6471328217d970a245d6c276989f2eee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a6471328217d970a245d6c276989f2eee">SetRestriction</a> (int restrict_type)</td></tr>
+<tr class="memdesc:a6471328217d970a245d6c276989f2eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a6471328217d970a245d6c276989f2eee">More...</a><br/></td></tr>
+<tr class="separator:a6471328217d970a245d6c276989f2eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c2a72e0bf0ee22d856681002258de1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a45c2a72e0bf0ee22d856681002258de1">SetIsTriangular</a> ()</td></tr>
+<tr class="memdesc:a45c2a72e0bf0ee22d856681002258de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a45c2a72e0bf0ee22d856681002258de1">More...</a><br/></td></tr>
+<tr class="separator:a45c2a72e0bf0ee22d856681002258de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fcc54f2777311d72ec73c2535a6748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a89fcc54f2777311d72ec73c2535a6748">SetGMRESSwitchR</a> (int gmres_switch)</td></tr>
+<tr class="memdesc:a89fcc54f2777311d72ec73c2535a6748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a89fcc54f2777311d72ec73c2535a6748">More...</a><br/></td></tr>
+<tr class="separator:a89fcc54f2777311d72ec73c2535a6748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c7cfe96a7e4762f37335bcbfccbe48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a20c7cfe96a7e4762f37335bcbfccbe48">SetCycleNumSweeps</a> (int prerelax, int postrelax)</td></tr>
+<tr class="memdesc:a20c7cfe96a7e4762f37335bcbfccbe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a20c7cfe96a7e4762f37335bcbfccbe48">More...</a><br/></td></tr>
+<tr class="separator:a20c7cfe96a7e4762f37335bcbfccbe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf9264f77009f115b90d3073a454831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a5bf9264f77009f115b90d3073a454831">SetPrintLevel</a> (int print_level)</td></tr>
 <tr class="separator:a5bf9264f77009f115b90d3073a454831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1349ccf6a6a365ad70f54d0644e8db5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#ae1349ccf6a6a365ad70f54d0644e8db5">SetMaxIter</a> (int max_iter)</td></tr>
+<tr class="separator:ae1349ccf6a6a365ad70f54d0644e8db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7957785cda994f1b47c278d9f2ed8ebd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a7957785cda994f1b47c278d9f2ed8ebd">SetMaxLevels</a> (int max_levels)</td></tr>
+<tr class="memdesc:a7957785cda994f1b47c278d9f2ed8ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a7957785cda994f1b47c278d9f2ed8ebd">More...</a><br/></td></tr>
+<tr class="separator:a7957785cda994f1b47c278d9f2ed8ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c3cec7d03a9251de4a49d054fb8e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#ac4c3cec7d03a9251de4a49d054fb8e60">SetTol</a> (double tol)</td></tr>
+<tr class="memdesc:ac4c3cec7d03a9251de4a49d054fb8e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#ac4c3cec7d03a9251de4a49d054fb8e60">More...</a><br/></td></tr>
+<tr class="separator:ac4c3cec7d03a9251de4a49d054fb8e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6013f15ff30b4bc5ba4012cec7d2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a4f6013f15ff30b4bc5ba4012cec7d2d6">SetStrengthThresh</a> (double strength)</td></tr>
+<tr class="memdesc:a4f6013f15ff30b4bc5ba4012cec7d2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a4f6013f15ff30b4bc5ba4012cec7d2d6">More...</a><br/></td></tr>
+<tr class="separator:a4f6013f15ff30b4bc5ba4012cec7d2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be8431bf026f1a4c1ac37aaa8f520b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a1be8431bf026f1a4c1ac37aaa8f520b2">SetInterpolation</a> (int interp_type)</td></tr>
+<tr class="memdesc:a1be8431bf026f1a4c1ac37aaa8f520b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a1be8431bf026f1a4c1ac37aaa8f520b2">More...</a><br/></td></tr>
+<tr class="separator:a1be8431bf026f1a4c1ac37aaa8f520b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a0261f714b927ffabf760ac83d6bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a53a0261f714b927ffabf760ac83d6bbd">SetCoarsening</a> (int coarsen_type)</td></tr>
+<tr class="memdesc:a53a0261f714b927ffabf760ac83d6bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a53a0261f714b927ffabf760ac83d6bbd">More...</a><br/></td></tr>
+<tr class="separator:a53a0261f714b927ffabf760ac83d6bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab791251cf484e6c8ee90934fddcc9539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#ab791251cf484e6c8ee90934fddcc9539">SetRelaxType</a> (int relax_type)</td></tr>
+<tr class="memdesc:ab791251cf484e6c8ee90934fddcc9539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#ab791251cf484e6c8ee90934fddcc9539">More...</a><br/></td></tr>
+<tr class="separator:ab791251cf484e6c8ee90934fddcc9539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a71ea2dd5023aede26b06819eb1c5c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a7a71ea2dd5023aede26b06819eb1c5c6">SetCycleType</a> (int cycle_type)</td></tr>
+<tr class="memdesc:a7a71ea2dd5023aede26b06819eb1c5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a7a71ea2dd5023aede26b06819eb1c5c6">More...</a><br/></td></tr>
+<tr class="separator:a7a71ea2dd5023aede26b06819eb1c5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c464275629574f57e1edad6472fc5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a14c464275629574f57e1edad6472fc5b">GetNumIterations</a> (int &amp;num_iterations) const </td></tr>
+<tr class="separator:a14c464275629574f57e1edad6472fc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c9c0687a4c4e10c064d34d4d5aaccf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#ac5c9c0687a4c4e10c064d34d4d5aaccf">SetNodal</a> (int blocksize)</td></tr>
+<tr class="memdesc:ac5c9c0687a4c4e10c064d34d4d5aaccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#ac5c9c0687a4c4e10c064d34d4d5aaccf">More...</a><br/></td></tr>
+<tr class="separator:ac5c9c0687a4c4e10c064d34d4d5aaccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035b666e4e448a388a202094b8dfb1a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a035b666e4e448a388a202094b8dfb1a4">SetAggressiveCoarsening</a> (int num_levels)</td></tr>
+<tr class="memdesc:a035b666e4e448a388a202094b8dfb1a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expert option - consult hypre documentation/team.  <a href="#a035b666e4e448a388a202094b8dfb1a4">More...</a><br/></td></tr>
+<tr class="separator:a035b666e4e448a388a202094b8dfb1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0153198fa96e9146178355dc80f5c625"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreBoomerAMG.html#a0153198fa96e9146178355dc80f5c625">operator HYPRE_Solver</a> () const </td></tr>
 <tr class="memdesc:a0153198fa96e9146178355dc80f5c625"><td class="mdescLeft">&#160;</td><td class="mdescRight">The typecast to HYPRE_Solver returns the internal amg_precond.  <a href="#a0153198fa96e9146178355dc80f5c625">More...</a><br/></td></tr>
 <tr class="separator:a0153198fa96e9146178355dc80f5c625"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,8 +200,11 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1HypreSolver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1HypreSolver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1HypreSolver.html">mfem::HypreSolver</a></td></tr>
 <tr class="memitem:ad33537c7c8ad7a32d3c4e835dcbc2be1 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#ad33537c7c8ad7a32d3c4e835dcbc2be1">HypreSolver</a> ()</td></tr>
 <tr class="separator:ad33537c7c8ad7a32d3c4e835dcbc2be1 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a7d4c586fb1ec248fed7a4d28d4733d inherit pub_methods_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a9a7d4c586fb1ec248fed7a4d28d4733d">HypreSolver</a> (<a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> *_A)</td></tr>
-<tr class="separator:a9a7d4c586fb1ec248fed7a4d28d4733d inherit pub_methods_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bfd7e4ccdfa9935ff7fcedafffaafbb inherit pub_methods_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a6bfd7e4ccdfa9935ff7fcedafffaafbb">HypreSolver</a> (const <a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> *A_)</td></tr>
+<tr class="separator:a6bfd7e4ccdfa9935ff7fcedafffaafbb inherit pub_methods_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2580edb51f5319dd080e9dd0aadf5c04 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacemfem.html#a4c3f8b89617067ca6e03323849eec9ad">MemoryClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a2580edb51f5319dd080e9dd0aadf5c04">GetMemoryClass</a> () const </td></tr>
+<tr class="memdesc:a2580edb51f5319dd080e9dd0aadf5c04 inherit pub_methods_classmfem_1_1HypreSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MemoryClass preferred by the <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>.  <a href="#a2580edb51f5319dd080e9dd0aadf5c04">More...</a><br/></td></tr>
+<tr class="separator:a2580edb51f5319dd080e9dd0aadf5c04 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e0d9e3fe200f525e1f6fa3996d6cd5 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#af5e0d9e3fe200f525e1f6fa3996d6cd5">Mult</a> (const <a class="el" href="classmfem_1_1HypreParVector.html">HypreParVector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1HypreParVector.html">HypreParVector</a> &amp;x) const </td></tr>
 <tr class="memdesc:af5e0d9e3fe200f525e1f6fa3996d6cd5 inherit pub_methods_classmfem_1_1HypreSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the linear system Ax=b.  <a href="#af5e0d9e3fe200f525e1f6fa3996d6cd5">More...</a><br/></td></tr>
 <tr class="separator:af5e0d9e3fe200f525e1f6fa3996d6cd5 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +217,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf0016f0c67d6c7690ca492fc4add2b4 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#adf0016f0c67d6c7690ca492fc4add2b4">~HypreSolver</a> ()</td></tr>
 <tr class="separator:adf0016f0c67d6c7690ca492fc4add2b4 inherit pub_methods_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1Solver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1Solver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1Solver.html">mfem::Solver</a></td></tr>
-<tr class="memitem:ad66ea63ce6173c3573010be54b9d4511 inherit pub_methods_classmfem_1_1Solver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Solver.html#ad66ea63ce6173c3573010be54b9d4511">Solver</a> (int s=0, bool iter_mode=false)</td></tr>
+<tr class="memitem:ad66ea63ce6173c3573010be54b9d4511 inherit pub_methods_classmfem_1_1Solver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Solver.html#ad66ea63ce6173c3573010be54b9d4511">Solver</a> (int <a class="el" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>=0, bool iter_mode=false)</td></tr>
 <tr class="memdesc:ad66ea63ce6173c3573010be54b9d4511 inherit pub_methods_classmfem_1_1Solver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a square <a class="el" href="classmfem_1_1Solver.html" title="Base class for solvers. ">Solver</a> with size <em>s</em>.  <a href="#ad66ea63ce6173c3573010be54b9d4511">More...</a><br/></td></tr>
 <tr class="separator:ad66ea63ce6173c3573010be54b9d4511 inherit pub_methods_classmfem_1_1Solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d48a87e6c6e8a2109b131bd592d041d inherit pub_methods_classmfem_1_1Solver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Solver.html#a1d48a87e6c6e8a2109b131bd592d041d">Solver</a> (int h, int w, bool iter_mode=false)</td></tr>
@@ -173,7 +227,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#af05141bf6d86d28444889d58216dc7ed">InitTVectors</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Ri, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B) const </td></tr>
 <tr class="memdesc:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes memory for true vectors of linear system.  <a href="#af05141bf6d86d28444889d58216dc7ed">More...</a><br/></td></tr>
 <tr class="separator:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int s=0)</td></tr>
+<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int <a class="el" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>=0)</td></tr>
 <tr class="memdesc:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a square <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> with given size s (default 0).  <a href="#a527f8d742df2102735a094a357cecaaa">More...</a><br/></td></tr>
 <tr class="separator:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae973ad9936ef147f0f1862849221f324 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ae973ad9936ef147f0f1862849221f324">Operator</a> (int h, int w)</td></tr>
@@ -191,15 +245,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f13f4f5ffa402f7f7cc103c72ebde39 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a1f13f4f5ffa402f7f7cc103c72ebde39">NumCols</a> () const </td></tr>
 <tr class="memdesc:a1f13f4f5ffa402f7f7cc103c72ebde39 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of columns (size of input) of the <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>. Synonym with <a class="el" href="classmfem_1_1Operator.html#ab0eaacccbad37071f14d9bc9431acbce" title="Get the width (size of input) of the Operator. Synonym with NumCols(). ">Width()</a>.  <a href="#a1f13f4f5ffa402f7f7cc103c72ebde39">More...</a><br/></td></tr>
 <tr class="separator:a1f13f4f5ffa402f7f7cc103c72ebde39 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99d91417c9690ac2c8fe708b7b52f789 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacemfem.html#a4c3f8b89617067ca6e03323849eec9ad">MemoryClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a99d91417c9690ac2c8fe708b7b52f789">GetMemoryClass</a> () const </td></tr>
-<tr class="memdesc:a99d91417c9690ac2c8fe708b7b52f789 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MemoryClass preferred by the <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>.  <a href="#a99d91417c9690ac2c8fe708b7b52f789">More...</a><br/></td></tr>
-<tr class="separator:a99d91417c9690ac2c8fe708b7b52f789 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d8a7d98fd35870efb23db6e0472894b inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a2d8a7d98fd35870efb23db6e0472894b">MultTranspose</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
 <tr class="memdesc:a2d8a7d98fd35870efb23db6e0472894b inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action of the transpose operator: <code>y=A^t(x)</code>. The default behavior in class <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> is to generate an error.  <a href="#a2d8a7d98fd35870efb23db6e0472894b">More...</a><br/></td></tr>
 <tr class="separator:a2d8a7d98fd35870efb23db6e0472894b inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a3293101bbcc0db4f4011a49027e29857">GetGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x) const </td></tr>
 <tr class="memdesc:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the gradient operator at the point <em>x</em>. The default behavior in class <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> is to generate an error.  <a href="#a3293101bbcc0db4f4011a49027e29857">More...</a><br/></td></tr>
 <tr class="separator:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a241b3c491eb58783bdbb3daf01cc2ab6">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
+<tr class="memdesc:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the diagonal entries into <em>diag</em>. Typically, this operation only makes sense for linear <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>s. In some cases, only an approximation of the diagonal is computed.  <a href="#a241b3c491eb58783bdbb3daf01cc2ab6">More...</a><br/></td></tr>
+<tr class="separator:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a84b566f740fe45068a8b54f595aa3b4e">GetProlongation</a> () const </td></tr>
 <tr class="memdesc:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to input vectors for the operator. <code>NULL</code> means identity.  <a href="#a84b566f740fe45068a8b54f595aa3b4e">More...</a><br/></td></tr>
 <tr class="separator:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,6 +263,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a680658a766b75b188ea3d87fb8a1c759">GetOutputProlongation</a> () const </td></tr>
 <tr class="memdesc:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to output vectors for the operator. <code>NULL</code> means identity.  <a href="#a680658a766b75b188ea3d87fb8a1c759">More...</a><br/></td></tr>
 <tr class="separator:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a6c26b948bb4f447d981361f94527661d">GetOutputRestrictionTranspose</a> () const </td></tr>
+<tr class="memdesc:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose of GetOutputRestriction, directly available in this form to facilitate matrix-free RAP-type operators.  <a href="#a6c26b948bb4f447d981361f94527661d">More...</a><br/></td></tr>
+<tr class="separator:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ad595ad2ea6e806fafa14141b4591b98f">GetOutputRestriction</a> () const </td></tr>
 <tr class="memdesc:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restriction operator from output vectors for the operator to linear algebra (linear system) vectors. <code>NULL</code> means identity.  <a href="#ad595ad2ea6e806fafa14141b4591b98f">More...</a><br/></td></tr>
 <tr class="separator:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -287,17 +344,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19" title="Return in A a parallel (on truedofs) version of this rectangular operator (including constraints)...">FormRectangularSystemOperator()</a>  <a href="#ae17b1734b2b2bbbc3b13810f90f3f398">More...</a><br/></td></tr>
 <tr class="separator:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab860076188a32acbd2f1a7d428aba00d">SetupRAP</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po)</td></tr>
-<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, taking in input/output Prolongation matrices.  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
+<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, using input/output Prolongation matrices <em>Pi</em> corresponds to "P", <em>Po</em> corresponds to "Rt".  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
 <tr class="separator:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1HypreSolver"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1HypreSolver')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1HypreSolver.html">mfem::HypreSolver</a></td></tr>
-<tr class="memitem:ae4cf8c571546a3efdf06db5059ea4a2d inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#ae4cf8c571546a3efdf06db5059ea4a2d">A</a></td></tr>
-<tr class="memdesc:ae4cf8c571546a3efdf06db5059ea4a2d inherit pro_attribs_classmfem_1_1HypreSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">The linear system matrix.  <a href="#ae4cf8c571546a3efdf06db5059ea4a2d">More...</a><br/></td></tr>
-<tr class="separator:ae4cf8c571546a3efdf06db5059ea4a2d inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb55b779d1fc44f2a68cb33367b89bb inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a1eb55b779d1fc44f2a68cb33367b89bb">A</a></td></tr>
+<tr class="memdesc:a1eb55b779d1fc44f2a68cb33367b89bb inherit pro_attribs_classmfem_1_1HypreSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">The linear system matrix.  <a href="#a1eb55b779d1fc44f2a68cb33367b89bb">More...</a><br/></td></tr>
+<tr class="separator:a1eb55b779d1fc44f2a68cb33367b89bb inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98c30740cb7e221e8d4e76aa83055ee2 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a98c30740cb7e221e8d4e76aa83055ee2">B</a></td></tr>
 <tr class="memdesc:a98c30740cb7e221e8d4e76aa83055ee2 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right-hand side and solution vector.  <a href="#a98c30740cb7e221e8d4e76aa83055ee2">More...</a><br/></td></tr>
 <tr class="separator:a98c30740cb7e221e8d4e76aa83055ee2 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7440472919a61dee6d1f900413662117 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HypreParVector.html">HypreParVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a7440472919a61dee6d1f900413662117">X</a></td></tr>
 <tr class="separator:a7440472919a61dee6d1f900413662117 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05f4c7c51f5c423f87140f846ba0ffa inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Memory.html">Memory</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#ad05f4c7c51f5c423f87140f846ba0ffa">auxB</a></td></tr>
+<tr class="separator:ad05f4c7c51f5c423f87140f846ba0ffa inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623a47959443478bec138846e1b13be1 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Memory.html">Memory</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a623a47959443478bec138846e1b13be1">auxX</a></td></tr>
+<tr class="separator:a623a47959443478bec138846e1b13be1 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437e473e0a6088b54ff9af691a470ef1 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HypreSolver.html#a437e473e0a6088b54ff9af691a470ef1">setup_called</a></td></tr>
 <tr class="memdesc:a437e473e0a6088b54ff9af691a470ef1 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Was hypre's Setup function called already?  <a href="#a437e473e0a6088b54ff9af691a470ef1">More...</a><br/></td></tr>
 <tr class="separator:a437e473e0a6088b54ff9af691a470ef1 inherit pro_attribs_classmfem_1_1HypreSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The BoomerAMG solver in hypre. </p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01079">1079</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01387">1387</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a26136b6259dca5603b846b979a7705c3"></a>
 <div class="memitem">
@@ -330,25 +391,25 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l03323">3323</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04306">4306</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acf86862705d0843b3fb91f835736f206"></a>
+<a class="anchor" id="a460336c8179247d8287235dc3b6cb141"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">mfem::HypreBoomerAMG::HypreBoomerAMG </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;&#160;</td>
           <td class="paramname"><em>A</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l03329">3329</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04312">4312</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
 
 </div>
 </div>
@@ -373,11 +434,37 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l03603">3603</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04725">4725</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a14c464275629574f57e1edad6472fc5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::GetNumIterations </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_iterations</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01501">1501</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0153198fa96e9146178355dc80f5c625"></a>
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +490,165 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1HypreSolver.html#ae4d2821c644c0c53289d92f494c43e83">mfem::HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01123">1123</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01520">1520</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ce86f2bda044e0cedb9ef73fef8c5bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetAdvectiveOptions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>15</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prerelax</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>postrelax</em> = <code>&quot;FFC&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Hypre parameters to use AIR AMG solve for advection-dominated problems. See "Nonsymmetric Algebraic Multigrid Based on Local Approximate Ideal
+Restriction (AIR)," Manteuffel, Ruge, Southworth, SISC (2018), DOI:/10.1137/17M1144350. Options: "distanceR" -&gt; distance of neighbor DOFs for the restriction operator; options include 1, 2, and 15 (1.5). Strings "prerelax" and "postrelax" indicate points to relax on: F = F-points, C = C-points, A = all points. E.g., FFC -&gt; relax on F-points, relax again on F-points, then relax on C-points. </p>
+
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04617">4617</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a035b666e4e448a388a202094b8dfb1a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetAggressiveCoarsening </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_levels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01516">1516</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53a0261f714b927ffabf760ac83d6bbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetCoarsening </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>coarsen_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01490">1490</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20c7cfe96a7e4762f37335bcbfccbe48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetCycleNumSweeps </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prerelax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>postrelax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01460">1460</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a71ea2dd5023aede26b06819eb1c5c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetCycleType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cycle_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01498">1498</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -423,7 +668,200 @@ Additional Inherited Members</h2></td></tr>
 <p>A special elasticity version of BoomerAMG that takes advantage of geometric rigid body modes and could perform better on some problems, see "Improving algebraic multigrid interpolation operators for linear
 elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This solver assumes <a class="el" href="classmfem_1_1Ordering.html#ad543b8eddc91d2d282374bd9cf44818ca144c090b834bdc63082b3e959fb0f93f">Ordering::byVDIM</a> in the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> used to construct A. </p>
 
-<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l03561">3561</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04569">4569</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5be5c84448fea184646480e3a526ed86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetFilterThresholdR </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>filterR</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01444">1444</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a89fcc54f2777311d72ec73c2535a6748"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetGMRESSwitchR </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gmres_switch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01456">1456</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1be8431bf026f1a4c1ac37aaa8f520b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetInterpolation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interp_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01486">1486</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a45c2a72e0bf0ee22d856681002258de1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetIsTriangular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01452">1452</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1349ccf6a6a365ad70f54d0644e8db5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetMaxIter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01470">1470</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7957785cda994f1b47c278d9f2ed8ebd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetMaxLevels </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_levels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01474">1474</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5c9c0687a4c4e10c064d34d4d5aaccf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetNodal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blocksize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01509">1509</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +891,7 @@ elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This s
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1HypreSolver.html#ae55c06412ab1ae2f169f28dde89b962e">mfem::HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l03441">3441</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04447">4447</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +917,119 @@ elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This s
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01119">1119</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01467">1467</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab791251cf484e6c8ee90934fddcc9539"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetRelaxType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>relax_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01494">1494</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6471328217d970a245d6c276989f2eee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetRestriction </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>restrict_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01448">1448</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f6013f15ff30b4bc5ba4012cec7d2d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetStrengthThresh </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>strength</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01482">1482</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a195a07225de5ad18c21185c3aa9877e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetStrongThresholdR </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>strengthR</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01440">1440</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +1058,35 @@ elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This s
 </div><div class="memdoc">
 <p>More robust options for systems, such as elasticity. </p>
 
-<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l03458">3458</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8cpp_source.html#l04466">4466</a> of file <a class="el" href="hypre_8cpp_source.html">hypre.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4c3cec7d03a9251de4a49d054fb8e60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::HypreBoomerAMG::SetTol </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expert option - consult hypre documentation/team. </p>
+
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01478">1478</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,7 +1115,7 @@ elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This s
 
 <p>Implements <a class="el" href="classmfem_1_1HypreSolver.html#aebd25e205396d4eeed9b085db6dcc6d8">mfem::HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01125">1125</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01522">1522</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +1144,7 @@ elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This s
 
 <p>Implements <a class="el" href="classmfem_1_1HypreSolver.html#a8ed40e015039e84cebcbe188b1e63be1">mfem::HypreSolver</a>.</p>
 
-<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01127">1127</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hypre_8hpp_source.html#l01524">1524</a> of file <a class="el" href="hypre_8hpp_source.html">hypre.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +1155,7 @@ elasticity problems", Baker, Kolev, Yang, NLAA 2009, DOI:10.1002/nla.688. This s
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:44 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

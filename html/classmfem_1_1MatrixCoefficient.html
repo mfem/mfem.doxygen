@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -123,7 +123,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a84f24d2e77c86dbf2a2e8a82340d4845"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a84f24d2e77c86dbf2a2e8a82340d4845">MatrixCoefficient</a> (int h, int w, bool symm=false)</td></tr>
 <tr class="memdesc:a84f24d2e77c86dbf2a2e8a82340d4845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a h x w matrix coefficient.  <a href="#a84f24d2e77c86dbf2a2e8a82340d4845">More...</a><br/></td></tr>
 <tr class="separator:a84f24d2e77c86dbf2a2e8a82340d4845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa873d34c1fa3755ae99c2f43b9163ea6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#aa873d34c1fa3755ae99c2f43b9163ea6">SetTime</a> (double t)</td></tr>
+<tr class="memitem:aa873d34c1fa3755ae99c2f43b9163ea6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#aa873d34c1fa3755ae99c2f43b9163ea6">SetTime</a> (double <a class="el" href="ncmesh__tables_8hpp.html#a01ac4cd1acc7bf8b1571ba06004fc928">t</a>)</td></tr>
 <tr class="memdesc:aa873d34c1fa3755ae99c2f43b9163ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time for time dependent coefficients.  <a href="#aa873d34c1fa3755ae99c2f43b9163ea6">More...</a><br/></td></tr>
 <tr class="separator:aa873d34c1fa3755ae99c2f43b9163ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296ff78faeb06268281544dd3b553a15"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a296ff78faeb06268281544dd3b553a15">GetTime</a> ()</td></tr>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9026dc9110645d2b4700b8f75107b647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the matrix coefficient in the element described by <em>T</em> at the point <em>ip</em>, storing the result in <em>K</em>.  <a href="#a9026dc9110645d2b4700b8f75107b647">More...</a><br/></td></tr>
 <tr class="separator:a9026dc9110645d2b4700b8f75107b647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85cd2919ab0f3354bc61932b48e4892"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#ad85cd2919ab0f3354bc61932b48e4892">EvalSymmetric</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;K, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;T, const <a class="el" href="classmfem_1_1IntegrationPoint.html">IntegrationPoint</a> &amp;ip)</td></tr>
-<tr class="memdesc:ad85cd2919ab0f3354bc61932b48e4892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the upper triangular entries of the matrix coefficient in the symmetric case, similarly to Eval. <a class="el" href="classmfem_1_1Matrix.html" title="Abstract data type matrix. ">Matrix</a> entry (i,j) is stored in K[j - i + os_i] for 0 &lt;= i &lt;= j &lt; width, os_0 = 0, os_{i+1} = os_i + width - i. That is, K = {M(0,0), ..., M(0,w-1), M(1,1), ..., M(1,w-1), ..., M(w-1,w-1) with w = width.  <a href="#ad85cd2919ab0f3354bc61932b48e4892">More...</a><br/></td></tr>
+<tr class="memdesc:ad85cd2919ab0f3354bc61932b48e4892"><td class="mdescLeft">&#160;</td><td class="mdescRight">(DEPRECATED) Evaluate a symmetric matrix coefficient.  <a href="#ad85cd2919ab0f3354bc61932b48e4892">More...</a><br/></td></tr>
 <tr class="separator:ad85cd2919ab0f3354bc61932b48e4892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a6d44555029e9bcd3b74b0d28f7bc69"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1MatrixCoefficient.html#a3a6d44555029e9bcd3b74b0d28f7bc69">~MatrixCoefficient</a> ()</td></tr>
 <tr class="separator:a3a6d44555029e9bcd3b74b0d28f7bc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +163,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for <a class="el" href="classmfem_1_1Matrix.html" title="Abstract data type matrix. ">Matrix</a> Coefficients that optionally depend on time and space. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00693">693</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00694">694</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a40686042c723f31c955a56705fb6c525"></a>
 <div class="memitem">
@@ -199,7 +199,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Construct a dim x dim matrix coefficient. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00702">702</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00703">703</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Construct a h x w matrix coefficient. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00706">706</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00707">707</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00743">743</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00747">747</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,11 +356,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>(DEPRECATED) Evaluate a symmetric matrix coefficient. </p>
 <p>Evaluate the upper triangular entries of the matrix coefficient in the symmetric case, similarly to Eval. <a class="el" href="classmfem_1_1Matrix.html" title="Abstract data type matrix. ">Matrix</a> entry (i,j) is stored in K[j - i + os_i] for 0 &lt;= i &lt;= j &lt; width, os_0 = 0, os_{i+1} = os_i + width - i. That is, K = {M(0,0), ..., M(0,w-1), M(1,1), ..., M(1,w-1), ..., M(w-1,w-1) with w = width. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1MatrixCoefficient.html#a9026dc9110645d2b4700b8f75107b647" title="Evaluate the matrix coefficient in the element described by T at the point ip, storing the result in ...">Eval()</a> instead. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classmfem_1_1MatrixFunctionCoefficient.html#a170edc977e745788086447f2192b1dc3">mfem::MatrixFunctionCoefficient</a>.</p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00739">739</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00743">743</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +389,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the height of the matrix. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00716">716</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00717">717</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -414,7 +416,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the time for time dependent coefficients. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00713">713</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00714">714</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -441,7 +443,7 @@ Protected Attributes</h2></td></tr>
 
 <p>For backward compatibility get the width of the matrix. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00722">722</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00723">723</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +470,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the width of the matrix. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00719">719</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00720">720</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -492,8 +494,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1SymmetricMatrixCoefficient.html" title="Base class for symmetric matrix coefficients that optionally depend on time and space. ">SymmetricMatrixCoefficient</a> instead </dd></dl>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00724">724</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00726">726</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +524,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Set the time for time dependent coefficients. </p>
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00710">710</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00711">711</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +547,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00696">696</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00697">697</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +569,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00698">698</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00699">699</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -588,7 +591,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00697">697</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00698">698</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +613,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00696">696</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coefficient_8hpp_source.html#l00697">697</a> of file <a class="el" href="coefficient_8hpp_source.html">coefficient.hpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +623,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:06 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:48 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

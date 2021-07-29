@@ -20,5 +20,7 @@ var searchData=
   ['sr_5fdof_5fmap',['Sr_DOF_MAP',['../classmfem_1_1TensorBasisElement.html#a43fc42f250c0b45defd904902475bb3ea03cdf0a26350d638e6b4007f612b03f6',1,'mfem::TensorBasisElement']]],
   ['stop',['STOP',['../classmfem_1_1MeshOperator.html#a89136204becccd73a1b4645374e53a0fab126964b8b6f054db86fc0cf5fb3db3a',1,'mfem::MeshOperator']]],
   ['string',['STRING',['../classmfem_1_1OptionsParser.html#a8e019726685c70129ff26db19af9c319a79a65c2eed68601c6e3228fc68c37f47',1,'mfem::OptionsParser']]],
+  ['symmetric_5findefinite',['SYMMETRIC_INDEFINITE',['../classmfem_1_1MUMPSSolver.html#ab884ff06f73956c08c8ee2ca7db676a2a36fbdb4bf8cf944f22f38a9583448ffb',1,'mfem::MUMPSSolver']]],
+  ['symmetric_5fpositive_5fdefinite',['SYMMETRIC_POSITIVE_DEFINITE',['../classmfem_1_1MUMPSSolver.html#ab884ff06f73956c08c8ee2ca7db676a2ae1932c4852158e3865ec49c6731cae99',1,'mfem::MUMPSSolver']]],
   ['sync',['sync',['../classmfem_1_1adios2stream.html#ad6ac8c1c56b3ae2e0468e975282d08f0a63ad9d34f3503826e5f649ae6b7ac92c',1,'mfem::adios2stream']]]
 ];

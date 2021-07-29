@@ -1,6 +1,7 @@
 var searchData=
 [
   ['debug_5fdevice',['DEBUG_DEVICE',['../structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3a3a8c2c5cbd423120c6bc29fec392f49c',1,'mfem::Backend']]],
+  ['default',['DEFAULT',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a5b39c8b553c821e7cddc6da64b5bd2ee',1,'mfem']]],
   ['deferred',['deferred',['../classmfem_1_1adios2stream.html#ad6ac8c1c56b3ae2e0468e975282d08f0a43fff3df3fc0b3417c86dc3040fb2d86',1,'mfem::adios2stream']]],
   ['derefine',['DEREFINE',['../classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294baa1fafee4d375682ea8c579adfbaffd61',1,'mfem::Mesh']]],
   ['derefined',['DEREFINED',['../classmfem_1_1MeshOperator.html#acd132269e7e6fb22f306e77e5541c7beaeb8cdba669d66a380e9459f0eca698b6',1,'mfem::MeshOperator']]],
@@ -10,6 +11,7 @@ var searchData=
   ['device_5fdebug',['DEVICE_DEBUG',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6afd3a46f7c1afcd3c71943286ac7626ed',1,'mfem']]],
   ['device_5fmask',['DEVICE_MASK',['../structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a4d1226fa48fe5756376f6e40daffd228',1,'mfem::Backend']]],
   ['device_5fumpire',['DEVICE_UMPIRE',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a649401484dfadbb672e2e02127ec2df1',1,'mfem']]],
+  ['device_5fumpire_5f2',['DEVICE_UMPIRE_2',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a49aeb221b5e4c765c9f89960e9f9d48a',1,'mfem']]],
   ['diag_5fkeep',['DIAG_KEEP',['../classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373',1,'mfem::Operator']]],
   ['diag_5fone',['DIAG_ONE',['../classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2',1,'mfem::Operator']]],
   ['diag_5fzero',['DIAG_ZERO',['../classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1',1,'mfem::Operator']]],

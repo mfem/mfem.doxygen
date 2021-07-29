@@ -7,5 +7,6 @@ var searchData=
   ['evalmasks',['EvalMasks',['../classmfem_1_1InvariantsEvaluator2D.html#a7cf33c9172d4d080a33f240aa0d140c4',1,'mfem::InvariantsEvaluator2D::EvalMasks()'],['../classmfem_1_1InvariantsEvaluator3D.html#a363c7705af90d48184de3ebd59052576',1,'mfem::InvariantsEvaluator3D::EvalMasks()']]],
   ['evalmode',['EvalMode',['../classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08',1,'mfem::TimeDependentOperator']]],
   ['evaloperations',['EvalOperations',['../classmfem_1_1TElementTransformation.html#a6e567765c4de90cff852d7adee4187ab',1,'mfem::TElementTransformation']]],
-  ['evaltype',['EvalType',['../classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3',1,'mfem::Poly_1D']]]
+  ['evaltype',['EvalType',['../classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3',1,'mfem::Poly_1D']]],
+  ['exectype',['ExecType',['../classmfem_1_1Ginkgo_1_1GinkgoExecutor.html#ad2c536ae8a62e8476ebcb41fa79036bb',1,'mfem::Ginkgo::GinkgoExecutor']]]
 ];

@@ -1,6 +1,10 @@
 var searchData=
 [
   ['s_5fspec',['S_spec',['../structmfem_1_1TBilinearForm_1_1S__spec.html',1,'mfem::TBilinearForm']]],
+  ['saddleschwarzsmoother',['SaddleSchwarzSmoother',['../classmfem_1_1blocksolvers_1_1SaddleSchwarzSmoother.html',1,'mfem::blocksolvers']]],
+  ['sbm2dirichletintegrator',['SBM2DirichletIntegrator',['../classmfem_1_1SBM2DirichletIntegrator.html',1,'mfem']]],
+  ['sbm2dirichletlfintegrator',['SBM2DirichletLFIntegrator',['../classmfem_1_1SBM2DirichletLFIntegrator.html',1,'mfem']]],
+  ['scalarcrossproductinterpolator',['ScalarCrossProductInterpolator',['../classmfem_1_1ScalarCrossProductInterpolator.html',1,'mfem']]],
   ['scalarfiniteelement',['ScalarFiniteElement',['../classmfem_1_1ScalarFiniteElement.html',1,'mfem']]],
   ['scalarlayout',['ScalarLayout',['../classmfem_1_1ScalarLayout.html',1,'mfem']]],
   ['scalarmatrixproductcoefficient',['ScalarMatrixProductCoefficient',['../classmfem_1_1ScalarMatrixProductCoefficient.html',1,'mfem']]],
@@ -10,6 +14,9 @@ var searchData=
   ['scalarvectorproductinterpolator',['ScalarVectorProductInterpolator',['../classmfem_1_1ScalarVectorProductInterpolator.html',1,'mfem']]],
   ['scaledgfcoefficient',['ScaledGFCoefficient',['../classmfem_1_1electromagnetics_1_1ScaledGFCoefficient.html',1,'mfem::electromagnetics']]],
   ['scaledoperator',['ScaledOperator',['../classmfem_1_1ScaledOperator.html',1,'mfem']]],
+  ['schurconstrainedhypresolver',['SchurConstrainedHypreSolver',['../classmfem_1_1SchurConstrainedHypreSolver.html',1,'mfem']]],
+  ['schurconstrainedsolver',['SchurConstrainedSolver',['../classmfem_1_1SchurConstrainedSolver.html',1,'mfem']]],
+  ['screenedpoisson',['ScreenedPoisson',['../classmfem_1_1ScreenedPoisson.html',1,'mfem']]],
   ['sdirk23solver',['SDIRK23Solver',['../classmfem_1_1SDIRK23Solver.html',1,'mfem']]],
   ['sdirk33solver',['SDIRK33Solver',['../classmfem_1_1SDIRK33Solver.html',1,'mfem']]],
   ['sdirk34solver',['SDIRK34Solver',['../classmfem_1_1SDIRK34Solver.html',1,'mfem']]],
@@ -29,11 +36,14 @@ var searchData=
   ['shapeevaluator_5fbase_3c_20fe_5ftype_2c_20ir_2c_20fe_5ftype_3a_3atensor_5fprod_20_26_26ir_3a_3atensor_5fprod_2c_20real_5ft_20_3e',['ShapeEvaluator_base&lt; FE_type, IR, FE_type::tensor_prod &amp;&amp;IR::tensor_prod, real_t &gt;',['../classmfem_1_1ShapeEvaluator__base.html',1,'mfem']]],
   ['shapeevaluator_5fbase_3c_20meshfe_5ftype_2c_20ir_2c_20meshfe_5ftype_3a_3atensor_5fprod_20_26_26ir_3a_3atensor_5fprod_2c_20real_5ft_20_3e',['ShapeEvaluator_base&lt; meshFE_type, IR, meshFE_type::tensor_prod &amp;&amp;IR::tensor_prod, real_t &gt;',['../classmfem_1_1ShapeEvaluator__base.html',1,'mfem']]],
   ['shapeevaluator_5fbase_3c_20solfe_5ftype_2c_20ir_2c_20solfe_5ftype_3a_3atensor_5fprod_20_26_26ir_3a_3atensor_5fprod_2c_20real_5ft_20_3e',['ShapeEvaluator_base&lt; solFE_type, IR, solFE_type::tensor_prod &amp;&amp;IR::tensor_prod, real_t &gt;',['../classmfem_1_1ShapeEvaluator__base.html',1,'mfem']]],
+  ['shiftedfacemarker',['ShiftedFaceMarker',['../classmfem_1_1ShiftedFaceMarker.html',1,'mfem']]],
+  ['shiftedfunctioncoefficient',['ShiftedFunctionCoefficient',['../classmfem_1_1ShiftedFunctionCoefficient.html',1,'mfem']]],
   ['sia1solver',['SIA1Solver',['../classmfem_1_1SIA1Solver.html',1,'mfem']]],
   ['sia2solver',['SIA2Solver',['../classmfem_1_1SIA2Solver.html',1,'mfem']]],
   ['siasolver',['SIASolver',['../classmfem_1_1SIASolver.html',1,'mfem']]],
   ['siavsolver',['SIAVSolver',['../classmfem_1_1SIAVSolver.html',1,'mfem']]],
   ['sidredatacollection',['SidreDataCollection',['../classmfem_1_1SidreDataCollection.html',1,'mfem']]],
+  ['skewsymmetricvectorconvectionnlfintegrator',['SkewSymmetricVectorConvectionNLFIntegrator',['../classmfem_1_1SkewSymmetricVectorConvectionNLFIntegrator.html',1,'mfem']]],
   ['slave',['Slave',['../structmfem_1_1NCMesh_1_1Slave.html',1,'mfem::NCMesh']]],
   ['slbqpoptimizer',['SLBQPOptimizer',['../classmfem_1_1SLBQPOptimizer.html',1,'mfem']]],
   ['slepceigensolver',['SlepcEigenSolver',['../classmfem_1_1SlepcEigenSolver.html',1,'mfem']]],
@@ -79,5 +89,9 @@ var searchData=
   ['sundialssolver',['SundialsSolver',['../classmfem_1_1SundialsSolver.html',1,'mfem']]],
   ['superlurowlocmatrix',['SuperLURowLocMatrix',['../classmfem_1_1SuperLURowLocMatrix.html',1,'mfem']]],
   ['superlusolver',['SuperLUSolver',['../classmfem_1_1SuperLUSolver.html',1,'mfem']]],
-  ['surfacecurrent',['SurfaceCurrent',['../classmfem_1_1electromagnetics_1_1SurfaceCurrent.html',1,'mfem::electromagnetics']]]
+  ['surfacecurrent',['SurfaceCurrent',['../classmfem_1_1electromagnetics_1_1SurfaceCurrent.html',1,'mfem::electromagnetics']]],
+  ['symdirectsubblocksolver',['SymDirectSubBlockSolver',['../classmfem_1_1blocksolvers_1_1SymDirectSubBlockSolver.html',1,'mfem::blocksolvers']]],
+  ['symmetricmatrixcoefficient',['SymmetricMatrixCoefficient',['../classmfem_1_1SymmetricMatrixCoefficient.html',1,'mfem']]],
+  ['symmetricmatrixconstantcoefficient',['SymmetricMatrixConstantCoefficient',['../classmfem_1_1SymmetricMatrixConstantCoefficient.html',1,'mfem']]],
+  ['symmetricmatrixfunctioncoefficient',['SymmetricMatrixFunctionCoefficient',['../classmfem_1_1SymmetricMatrixFunctionCoefficient.html',1,'mfem']]]
 ];

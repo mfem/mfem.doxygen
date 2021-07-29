@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -167,12 +167,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>d2xdt2
 : <a class="el" href="classmfem_1_1GeneralizedAlpha2Solver.html#ae3ce7dee55c9d4dcb77fea855511fb72">mfem::GeneralizedAlpha2Solver</a>
 </li>
+<li>d_buffer
+: <a class="el" href="classmfem_1_1QuadratureInterpolator.html#adcb399423ea52f60b6d138c1d267c0d8">mfem::QuadratureInterpolator</a>
+</li>
 <li>D_form
 : <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#a992f80b0a75fe1a54b07b76bc44b7276">mfem::navier::NavierSolver</a>
 </li>
 <li>D_height
-: <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#a8c2dace32461d4099dd8027ce6e3e671">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
-, <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a6a6ce83c5813c3097bf0feef2c6ea5d5">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
+: <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a6a6ce83c5813c3097bf0feef2c6ea5d5">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
+, <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#a8c2dace32461d4099dd8027ce6e3e671">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
 </li>
 <li>d_hi
 : <a class="el" href="classmfem_1_1OptimizationProblem.html#a8ffd57dfed5f34071c72987911f3a480">mfem::OptimizationProblem</a>
@@ -192,6 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structmfem_1_1VarMessage.html#adf355940c12f1e396e0868f7922ae468">mfem::VarMessage&lt; Tag &gt;</a>
 , <a class="el" href="classmfem_1_1LUFactors.html#ac99900b35f520c77f175a2b14d7c565d">mfem::LUFactors</a>
 , <a class="el" href="classmfem_1_1DeviceTensor.html#a59819a6b98cad11d2f9085cc639baa37">mfem::DeviceTensor&lt; Dim, Scalar &gt;</a>
+, <a class="el" href="structmfem_1_1MemoryIJData.html#a57b502c2f19d02ff9a6e2672583c756d">mfem::MemoryIJData</a>
 , <a class="el" href="structmfem_1_1TVector.html#a295d15fd2429a636e0d1e24a661ff0c7">mfem::TVector&lt; S, data_t, align &gt;</a>
 , <a class="el" href="classmfem_1_1Vector.html#adc2dd421332811f1a80da7aef2524281">mfem::Vector</a>
 , <a class="el" href="classmfem_1_1NURBSPatch.html#a480dc1901f74f44d0a5eb79181185365">mfem::NURBSPatch</a>
@@ -202,10 +206,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>data_out
 : <a class="el" href="classmfem_1_1FieldEvaluator.html#a3fcef7331882ca1a5e49e40ceb5e6017">mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
-</li>
-<li>dbfi
-: <a class="el" href="classmfem_1_1BilinearForm.html#a21c2816d5a1c694e0b0d97623a6f27e5">mfem::BilinearForm</a>
-, <a class="el" href="classmfem_1_1MixedBilinearForm.html#a55586d68dc3e8b5bc1887f910eac4ee1">mfem::MixedBilinearForm</a>
 </li>
 <li>dBuffer
 : <a class="el" href="classmfem_1_1SparseMatrix.html#adbf45a13384db38fcdd0ee301d556220">mfem::SparseMatrix</a>
@@ -233,6 +233,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>default_rel_tolB
 : <a class="el" href="classmfem_1_1CVODESSolver.html#ab127ec271eca7deb1578b154960a8754">mfem::CVODESSolver</a>
+</li>
+<li>default_type
+: <a class="el" href="classmfem_1_1HypreSmoother.html#ab8dfe00beacd0fbd5f11a368bd46eec2">mfem::HypreSmoother</a>
 </li>
 <li>defaultValue
 : <a class="el" href="structmfem_1_1MesquiteMesh_1_1MeshTags_1_1TagData.html#ab6a9d290428c98de93ce7b31ca3a36b1">mfem::MesquiteMesh::MeshTags::TagData</a>
@@ -281,8 +284,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#a1edfae2417ed7d1ec0b0cce6bd91419e">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
 </li>
 <li>dI1b
-: <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#ae0c9a8fbc4ea6aa3e9847cc40df16e20">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
-, <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a588d7fa9bece4e62818b9bae1c0d6c1c">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
+: <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a588d7fa9bece4e62818b9bae1c0d6c1c">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
+, <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#ae0c9a8fbc4ea6aa3e9847cc40df16e20">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
 </li>
 <li>dI2
 : <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a7c7f039d175527f7965b7772a0a344e3">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
@@ -302,6 +305,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1ConstrainedOperator.html#a9d771af745d54b54e82b23a3d983f910">mfem::ConstrainedOperator</a>
 , <a class="el" href="classmfem_1_1BilinearForm.html#a4f3ef80b5eeb042566e3edaa4578f66f">mfem::BilinearForm</a>
 </li>
+<li>diffcoef
+: <a class="el" href="classmfem_1_1ScreenedPoisson.html#a119d75db955ee62e310057e7a14d74a5">mfem::ScreenedPoisson</a>
+</li>
+<li>diffuse_iter
+: <a class="el" href="classmfem_1_1HeatDistanceSolver.html#a11527384a597dd49f26807a5d402ff50">mfem::HeatDistanceSolver</a>
+</li>
+<li>Dim
+: <a class="el" href="classmfem_1_1Mesh.html#a3c3a04ba890632835c2d766bab361970">mfem::Mesh</a>
+, <a class="el" href="classmfem_1_1NCMesh.html#aca9b36e87d22d52742a2793282e8c77d">mfem::NCMesh</a>
+, <a class="el" href="classmfem_1_1NURBSPatch.html#a3b6ca37f6cbd13ed8a11b9cfd3ee6332">mfem::NURBSPatch</a>
+</li>
 <li>DIM
 : <a class="el" href="classmfem_1_1ShapeEvaluator__base_3_01FE_00_01IR_00_01false_00_01real__t_01_4.html#ade1d40a10271773d02d1042981c66d11">mfem::ShapeEvaluator_base&lt; FE, IR, false, real_t &gt;</a>
 </li>
@@ -315,7 +329,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1VectorFEMassIntegrator.html#afe66b46f8f06efee0a5b2678a7017e56">mfem::VectorFEMassIntegrator</a>
 , <a class="el" href="classmfem_1_1VectorDiffusionIntegrator.html#aa1ad3065ec47efb5dd1d88e539891e13">mfem::VectorDiffusionIntegrator</a>
 , <a class="el" href="classmfem_1_1DGTraceIntegrator.html#a50ed880f66a4ae80fef931837c2ce4f9">mfem::DGTraceIntegrator</a>
+, <a class="el" href="classmfem_1_1SymmetricMatrixCoefficient.html#a50b41103a91c006893d64dc633cd2502">mfem::SymmetricMatrixCoefficient</a>
 , <a class="el" href="classmfem_1_1FiniteElement.html#afd60746585287dab0cf84850c1853f71">mfem::FiniteElement</a>
+, <a class="el" href="classmfem_1_1H1__FECollection.html#a49bf4bcbdd963ce9b031b3adf22d3312">mfem::H1_FECollection</a>
+, <a class="el" href="classmfem_1_1RT__FECollection.html#a950d87c95733b470e745c374f17dc605">mfem::RT_FECollection</a>
+, <a class="el" href="classmfem_1_1ND__FECollection.html#a4cc446a159b6dc42ffc2cbaa48810834">mfem::ND_FECollection</a>
 , <a class="el" href="classmfem_1_1FindPointsGSLIB.html#aada68247b242f5a689b76b124d35db0b">mfem::FindPointsGSLIB</a>
 , <a class="el" href="classmfem_1_1TBilinearForm.html#a193108d3a9df0dbe2ce7fb6db0f807bc">mfem::TBilinearForm&lt; meshType, solFESpace, IR, IntegratorType, solVecLayout_t, complex_t, real_t, impl_traits_t &gt;</a>
 , <a class="el" href="classmfem_1_1TElementTransformation.html#a0479f55d1ac8b7177c31fd4c0db74c50">mfem::TElementTransformation&lt; Mesh_t, IR, real_t &gt;</a>
@@ -330,11 +348,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1GenericIntegrationRule.html#abc54ed8f34082111672aeba5bbb96041">mfem::GenericIntegrationRule&lt; G, Q, Order, real_t &gt;</a>
 , <a class="el" href="classmfem_1_1TProductIntegrationRule.html#a2357ae5a439e1b07ce575da1b132fca3">mfem::TProductIntegrationRule&lt; Dim, Q, Order, real_t &gt;</a>
 , <a class="el" href="classmfem_1_1AdaptivityEvaluator.html#a0c5c0de4a771db461279806ab81182bd">mfem::AdaptivityEvaluator</a>
-</li>
-<li>Dim
-: <a class="el" href="classmfem_1_1Mesh.html#a3c3a04ba890632835c2d766bab361970">mfem::Mesh</a>
-, <a class="el" href="classmfem_1_1NCMesh.html#aca9b36e87d22d52742a2793282e8c77d">mfem::NCMesh</a>
-, <a class="el" href="classmfem_1_1NURBSPatch.html#a3b6ca37f6cbd13ed8a11b9cfd3ee6332">mfem::NURBSPatch</a>
+, <a class="el" href="classmfem_1_1TMOP__Integrator.html#a5e05e0344300826ff8358d52ab1559de">mfem::TMOP_Integrator</a>
 </li>
 <li>dim_1
 : <a class="el" href="structmfem_1_1StridedLayout1D.html#aef0d4b51ceae7b8817ae255945a682ca">mfem::StridedLayout1D&lt; N1, S1 &gt;</a>
@@ -361,18 +375,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structmfem_1_1OffsetStridedLayout4D.html#aa157f4cfb478aa1f9ae6571ee4625f0b">mfem::OffsetStridedLayout4D&lt; N1, S1, N2, S2, N3, S3, N4, S4 &gt;</a>
 </li>
 <li>dim_4
-: <a class="el" href="structmfem_1_1StridedLayout4D.html#abb9fbebf61168272cd066f9248a87c9c">mfem::StridedLayout4D&lt; N1, S1, N2, S2, N3, S3, N4, S4 &gt;</a>
-, <a class="el" href="structmfem_1_1OffsetStridedLayout4D.html#adc94613adbde2bc22cc8a0ef1cf1f905">mfem::OffsetStridedLayout4D&lt; N1, S1, N2, S2, N3, S3, N4, S4 &gt;</a>
+: <a class="el" href="structmfem_1_1OffsetStridedLayout4D.html#adc94613adbde2bc22cc8a0ef1cf1f905">mfem::OffsetStridedLayout4D&lt; N1, S1, N2, S2, N3, S3, N4, S4 &gt;</a>
+, <a class="el" href="structmfem_1_1StridedLayout4D.html#abb9fbebf61168272cd066f9248a87c9c">mfem::StridedLayout4D&lt; N1, S1, N2, S2, N3, S3, N4, S4 &gt;</a>
 </li>
 <li>Dimension
-: <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1PRISM_01_4.html#a9c13c0cfeaef837935b2b9632632dc83">mfem::Geometry::Constants&lt; Geometry::PRISM &gt;</a>
-, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1CUBE_01_4.html#a6de639aec17e50f638911e80032bd910">mfem::Geometry::Constants&lt; Geometry::CUBE &gt;</a>
-, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1SEGMENT_01_4.html#a46a3c81bf5e1d245896ff2901e12d1a7">mfem::Geometry::Constants&lt; Geometry::SEGMENT &gt;</a>
-, <a class="el" href="classmfem_1_1Geometry.html#a1375497423eaf82f5ed180e6012ad002">mfem::Geometry</a>
+: <a class="el" href="classmfem_1_1Geometry.html#a1375497423eaf82f5ed180e6012ad002">mfem::Geometry</a>
 , <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1POINT_01_4.html#abe595961caa5f886cc35d12f8929e3ad">mfem::Geometry::Constants&lt; Geometry::POINT &gt;</a>
+, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1SEGMENT_01_4.html#a46a3c81bf5e1d245896ff2901e12d1a7">mfem::Geometry::Constants&lt; Geometry::SEGMENT &gt;</a>
 , <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1TRIANGLE_01_4.html#a7e035b9e582b41e517a6e6701fbee692">mfem::Geometry::Constants&lt; Geometry::TRIANGLE &gt;</a>
 , <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1SQUARE_01_4.html#ab41f980bd52f58d4f95437be3113d88c">mfem::Geometry::Constants&lt; Geometry::SQUARE &gt;</a>
 , <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1TETRAHEDRON_01_4.html#a0f4a408a57e635667946a8b3ccf0a13a">mfem::Geometry::Constants&lt; Geometry::TETRAHEDRON &gt;</a>
+, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1PRISM_01_4.html#a9c13c0cfeaef837935b2b9632632dc83">mfem::Geometry::Constants&lt; Geometry::PRISM &gt;</a>
+, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1CUBE_01_4.html#a6de639aec17e50f638911e80032bd910">mfem::Geometry::Constants&lt; Geometry::CUBE &gt;</a>
 </li>
 <li>DimStart
 : <a class="el" href="classmfem_1_1Geometry.html#ad5502d0c8a91e0560889ae11a80d7d0c">mfem::Geometry</a>
@@ -383,38 +397,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>discr_tc
 : <a class="el" href="classmfem_1_1TMOP__Integrator.html#a37a0adb22c57028da839581a56479168">mfem::TMOP_Integrator</a>
 </li>
+<li>distfint
+: <a class="el" href="classmfem_1_1OversetFindPointsGSLIB.html#a4586a8562c39a62f3245d9c0b8858a5f">mfem::OversetFindPointsGSLIB</a>
+</li>
 <li>DJt
 : <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a856f9e9fc28c9b55820ca4fa0f7ec9e5">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
 , <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#ac1a2c3746c610c58257c12ad2b7c7d25">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
 </li>
-<li>dlfi
-: <a class="el" href="classmfem_1_1LinearForm.html#a760522f71e39767cdf5fad7b3734e817">mfem::LinearForm</a>
-</li>
-<li>dlfi_delta
-: <a class="el" href="classmfem_1_1LinearForm.html#a94a167b363bf5c2b4ecd2ae36a12a285">mfem::LinearForm</a>
-</li>
-<li>dlfi_delta_elem_id
-: <a class="el" href="classmfem_1_1LinearForm.html#a32a449d34552b528bfece70f27785c8d">mfem::LinearForm</a>
-</li>
-<li>dlfi_delta_ip
-: <a class="el" href="classmfem_1_1LinearForm.html#a3dd4ae5a9551d08837eabff81555bc79">mfem::LinearForm</a>
-</li>
 <li>dnfi
-: <a class="el" href="classmfem_1_1NonlinearForm.html#a64e5e5a6efa86b0e6fe6047b5d93e2f8">mfem::NonlinearForm</a>
-, <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a160eccbe7c59a81d25e8c044ec557ee0">mfem::BlockNonlinearForm</a>
+: <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a160eccbe7c59a81d25e8c044ec557ee0">mfem::BlockNonlinearForm</a>
+, <a class="el" href="classmfem_1_1PANonlinearFormExtension.html#ac2f81ff5604ce1c25e2575d52b0a2551">mfem::PANonlinearFormExtension</a>
+, <a class="el" href="classmfem_1_1ParametricBNLForm.html#aea8eeff4093892cc45c85f9238f5a6f8">mfem::ParametricBNLForm</a>
+, <a class="el" href="classmfem_1_1NonlinearForm.html#a64e5e5a6efa86b0e6fe6047b5d93e2f8">mfem::NonlinearForm</a>
 </li>
 <li>Do
 : <a class="el" href="classmfem_1_1ScalarFiniteElement.html#aa63484a03aa7dcf57e3ae5b351c043cf">mfem::ScalarFiniteElement</a>
 </li>
 <li>dof
-: <a class="el" href="classmfem_1_1ElementRestriction.html#ac76145d1b251b0bc0ded3ac615b596fa">mfem::ElementRestriction</a>
+: <a class="el" href="classmfem_1_1H1FaceRestriction.html#afa73adc42aba5fb18070c3faf334df96">mfem::H1FaceRestriction</a>
 </li>
 <li>DOF
 : <a class="el" href="classmfem_1_1ShapeEvaluator__base_3_01FE_00_01IR_00_01false_00_01real__t_01_4.html#af480d3df6a16d5623961338456a3bca3">mfem::ShapeEvaluator_base&lt; FE, IR, false, real_t &gt;</a>
 </li>
 <li>dof
 : <a class="el" href="classmfem_1_1FiniteElement.html#a0f49daf74a0250bbcee8678a5ffd6afc">mfem::FiniteElement</a>
-, <a class="el" href="classmfem_1_1H1FaceRestriction.html#afa73adc42aba5fb18070c3faf334df96">mfem::H1FaceRestriction</a>
+, <a class="el" href="classmfem_1_1ElementRestriction.html#ac76145d1b251b0bc0ded3ac615b596fa">mfem::ElementRestriction</a>
 , <a class="el" href="classmfem_1_1L2FaceRestriction.html#a637b87dad8a6862eff22adaf690f0fdc">mfem::L2FaceRestriction</a>
 </li>
 <li>dof2quad_array
@@ -427,56 +434,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#a0f86bab112a5645d9023b60c8ef9864d">mfem::FiniteElementSpace</a>
 </li>
 <li>dof_map
-: <a class="el" href="classmfem_1_1H1Pos__TetrahedronElement.html#a316830903b98dd696be4d5257c124d17">mfem::H1Pos_TetrahedronElement</a>
-, <a class="el" href="classmfem_1_1TensorBasisElement.html#abbc81d28f8bec0eede522a02f7da5ac0">mfem::TensorBasisElement</a>
+: <a class="el" href="classmfem_1_1TensorBasisElement.html#abbc81d28f8bec0eede522a02f7da5ac0">mfem::TensorBasisElement</a>
 , <a class="el" href="classmfem_1_1H1Pos__TriangleElement.html#afdd16d4a18c43a778c9871cb5bd03151">mfem::H1Pos_TriangleElement</a>
+, <a class="el" href="classmfem_1_1H1Pos__TetrahedronElement.html#a316830903b98dd696be4d5257c124d17">mfem::H1Pos_TetrahedronElement</a>
 </li>
 <li>dof_offset
 : <a class="el" href="classmfem_1_1ParNCMesh_1_1RebalanceDofMessage.html#a75cd8a6b6415730db23106753e78da3a">mfem::ParNCMesh::RebalanceDofMessage</a>
 </li>
 <li>dofs
-: <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1TRIANGLE_00_01P_01_4.html#adb118b5e88c4ac906fd3c1a852a35be1">mfem::H1_FiniteElement&lt; Geometry::TRIANGLE, P &gt;</a>
-, <a class="el" href="classmfem_1_1ParNCMesh_1_1RebalanceDofMessage.html#ae280123a6660cb10c779de3b43ffc189">mfem::ParNCMesh::RebalanceDofMessage</a>
+: <a class="el" href="classmfem_1_1ParNCMesh_1_1RebalanceDofMessage.html#ae280123a6660cb10c779de3b43ffc189">mfem::ParNCMesh::RebalanceDofMessage</a>
+, <a class="el" href="classmfem_1_1TFiniteElementSpace__simple.html#ac10f862845a075631e521ce144fb7e3c">mfem::TFiniteElementSpace_simple&lt; FE, IndexType &gt;</a>
 , <a class="el" href="classmfem_1_1TBilinearForm.html#a840d8303dd24b3fced64eb63e4ae1714">mfem::TBilinearForm&lt; meshType, solFESpace, IR, IntegratorType, solVecLayout_t, complex_t, real_t, impl_traits_t &gt;</a>
-, <a class="el" href="classmfem_1_1FieldEvaluator.html#a278733a880f3d4fc9a2ba5dbdd78eb4f">mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
-, <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1TETRAHEDRON_00_01P_01_4.html#a3d48d295baf1b3f4884e704a61ff5a44">mfem::H1_FiniteElement&lt; Geometry::TETRAHEDRON, P &gt;</a>
-, <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1CUBE_00_01P_01_4.html#a92fa08b7ea0f662f0c2bf019e9354e12">mfem::H1_FiniteElement&lt; Geometry::CUBE, P &gt;</a>
-, <a class="el" href="classmfem_1_1L2__FiniteElement__base.html#a6ebaf500a95b2c7102bfa5d3bbe9c345">mfem::L2_FiniteElement_base&lt; G, P, L2_FE_type, L2Pos_FE_type, DOFS, TP &gt;</a>
 , <a class="el" href="classmfem_1_1TElementTransformation.html#a82570fb2dba4149bb7b5038322bb6848">mfem::TElementTransformation&lt; Mesh_t, IR, real_t &gt;</a>
+, <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1TETRAHEDRON_00_01P_01_4.html#a3d48d295baf1b3f4884e704a61ff5a44">mfem::H1_FiniteElement&lt; Geometry::TETRAHEDRON, P &gt;</a>
 , <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1SEGMENT_00_01P_01_4.html#ad78c3ec48677071a9106361fe85ffa34">mfem::H1_FiniteElement&lt; Geometry::SEGMENT, P &gt;</a>
 , <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1SQUARE_00_01P_01_4.html#aeb502fa47a3797fa98b2901e2d8a8279">mfem::H1_FiniteElement&lt; Geometry::SQUARE, P &gt;</a>
-, <a class="el" href="classmfem_1_1TFiniteElementSpace__simple.html#ac10f862845a075631e521ce144fb7e3c">mfem::TFiniteElementSpace_simple&lt; FE, IndexType &gt;</a>
+, <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1TRIANGLE_00_01P_01_4.html#adb118b5e88c4ac906fd3c1a852a35be1">mfem::H1_FiniteElement&lt; Geometry::TRIANGLE, P &gt;</a>
+, <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1CUBE_00_01P_01_4.html#a92fa08b7ea0f662f0c2bf019e9354e12">mfem::H1_FiniteElement&lt; Geometry::CUBE, P &gt;</a>
+, <a class="el" href="classmfem_1_1FieldEvaluator.html#a278733a880f3d4fc9a2ba5dbdd78eb4f">mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
+, <a class="el" href="classmfem_1_1L2__FiniteElement__base.html#a6ebaf500a95b2c7102bfa5d3bbe9c345">mfem::L2_FiniteElement_base&lt; G, P, L2_FE_type, L2Pos_FE_type, DOFS, TP &gt;</a>
 </li>
 <li>dofs1D
-: <a class="el" href="classmfem_1_1MassIntegrator.html#af28eefb670574d34db223ce6ba509c09">mfem::MassIntegrator</a>
+: <a class="el" href="classmfem_1_1CurlCurlIntegrator.html#ac89fcb07e7eaf1947abb55cb2e7a7387">mfem::CurlCurlIntegrator</a>
 , <a class="el" href="classmfem_1_1VectorMassIntegrator.html#a8d1c91844d8d16cde6c66e4fc369cc3d">mfem::VectorMassIntegrator</a>
-, <a class="el" href="classmfem_1_1VectorFEMassIntegrator.html#a9840e3355ce5bc24d0a200d6198afb36">mfem::VectorFEMassIntegrator</a>
-, <a class="el" href="classmfem_1_1DGTraceIntegrator.html#abcf71e6b56281b84e7cc4cbb61779308">mfem::DGTraceIntegrator</a>
-, <a class="el" href="classmfem_1_1CurlCurlIntegrator.html#ac89fcb07e7eaf1947abb55cb2e7a7387">mfem::CurlCurlIntegrator</a>
 , <a class="el" href="classmfem_1_1ConvectionIntegrator.html#a8fee74b4c92e424c0f779659f89be38e">mfem::ConvectionIntegrator</a>
 , <a class="el" href="classmfem_1_1VectorDiffusionIntegrator.html#aee5b0c5bb2be28cee14a4edc6ba8df1f">mfem::VectorDiffusionIntegrator</a>
+, <a class="el" href="classmfem_1_1DGTraceIntegrator.html#abcf71e6b56281b84e7cc4cbb61779308">mfem::DGTraceIntegrator</a>
+, <a class="el" href="classmfem_1_1MassIntegrator.html#af28eefb670574d34db223ce6ba509c09">mfem::MassIntegrator</a>
+, <a class="el" href="classmfem_1_1VectorFEMassIntegrator.html#a9840e3355ce5bc24d0a200d6198afb36">mfem::VectorFEMassIntegrator</a>
 </li>
 <li>dofs1Dtest
 : <a class="el" href="classmfem_1_1VectorFEMassIntegrator.html#a000136e663b09b84cedf943709657747">mfem::VectorFEMassIntegrator</a>
 </li>
 <li>dofs_1d
-: <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1SEGMENT_00_01P_01_4.html#a090e4f13d126296292a578fb97785e9e">mfem::H1_FiniteElement&lt; Geometry::SEGMENT, P &gt;</a>
+: <a class="el" href="classmfem_1_1L2__FiniteElement__base.html#af89c231bedbb34b2613a08b59c3219c2">mfem::L2_FiniteElement_base&lt; G, P, L2_FE_type, L2Pos_FE_type, DOFS, TP &gt;</a>
 , <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1CUBE_00_01P_01_4.html#aef77f15d45f73bedf2e631ea82a43d15">mfem::H1_FiniteElement&lt; Geometry::CUBE, P &gt;</a>
 , <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1SQUARE_00_01P_01_4.html#a3cd0572be14dfbe30b4c5e6e802ea7fe">mfem::H1_FiniteElement&lt; Geometry::SQUARE, P &gt;</a>
-, <a class="el" href="classmfem_1_1L2__FiniteElement__base.html#af89c231bedbb34b2613a08b59c3219c2">mfem::L2_FiniteElement_base&lt; G, P, L2_FE_type, L2Pos_FE_type, DOFS, TP &gt;</a>
+, <a class="el" href="classmfem_1_1H1__FiniteElement_3_01Geometry_1_1SEGMENT_00_01P_01_4.html#a090e4f13d126296292a578fb97785e9e">mfem::H1_FiniteElement&lt; Geometry::SEGMENT, P &gt;</a>
 </li>
 <li>dom_fes
 : <a class="el" href="classmfem_1_1GridTransfer.html#a93cb8a8ed45b00f6402a0a9cba3f9eff">mfem::GridTransfer</a>
 </li>
+<li>domain_delta_integs
+: <a class="el" href="classmfem_1_1LinearForm.html#a9b9bf6b4ac05182b621cdd5e32fdce2c">mfem::LinearForm</a>
+</li>
+<li>domain_delta_integs_elem_id
+: <a class="el" href="classmfem_1_1LinearForm.html#a41027a1169db034b1c194f255ce891f0">mfem::LinearForm</a>
+</li>
+<li>domain_delta_integs_ip
+: <a class="el" href="classmfem_1_1LinearForm.html#ac0494f267242e901f77b40ecc9d52c58">mfem::LinearForm</a>
+</li>
 <li>domain_fes
 : <a class="el" href="classmfem_1_1ParDiscreteLinearOperator.html#ab16a47e3f0bffd5b656dd45cb4a4416d">mfem::ParDiscreteLinearOperator</a>
+</li>
+<li>domain_integs
+: <a class="el" href="classmfem_1_1BilinearForm.html#a07305b700d43efebad58754414118729">mfem::BilinearForm</a>
+, <a class="el" href="classmfem_1_1MixedBilinearForm.html#a8a346a03a171842111a3c2359a4a0a2f">mfem::MixedBilinearForm</a>
+, <a class="el" href="classmfem_1_1LinearForm.html#a9c555c6529bc0981d43c9999b3b11a73">mfem::LinearForm</a>
+</li>
+<li>domain_integs_marker
+: <a class="el" href="classmfem_1_1LinearForm.html#a7fb761eb85b8ba6003c7869b0ac8b071">mfem::LinearForm</a>
+, <a class="el" href="classmfem_1_1BilinearForm.html#a0bddbbf29ae0ac7667c88a7a037b0c4b">mfem::BilinearForm</a>
 </li>
 <li>dp_
 : <a class="el" href="classmfem_1_1SIASolver.html#a24cd06df7446db93b7ce40a1a2979414">mfem::SIASolver</a>
 </li>
 <li>DQ
-: <a class="el" href="classmfem_1_1CurlCurlIntegrator.html#ae4e0143aa194ec2fcc8553376221ed11">mfem::CurlCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedVectorIntegrator.html#adb79626aa0653d9b93966a0d68cd2a58">mfem::MixedVectorIntegrator</a>
+: <a class="el" href="classmfem_1_1MixedVectorIntegrator.html#ae984574549d39b58e503c720a4787123">mfem::MixedVectorIntegrator</a>
+, <a class="el" href="classmfem_1_1VectorFEMassIntegrator.html#aea154d5cdd435af243b2ef2d878cae31">mfem::VectorFEMassIntegrator</a>
+, <a class="el" href="classmfem_1_1CurlCurlIntegrator.html#ade1a2eb31d3f6aa2e4b86c995d9ea2b0">mfem::CurlCurlIntegrator</a>
 </li>
 <li>dq_
 : <a class="el" href="classmfem_1_1SIASolver.html#a22ed0acf26592b3b86412f03c3c3b0ee">mfem::SIASolver</a>
@@ -490,10 +516,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>dshape
 : <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html#a6284dc6f0c57cef0b8c2b6d612e1f729">mfem::DGElasticityDirichletLFIntegrator</a>
 , <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html#a35441983dd3518d6c4dabf655486ab67">mfem::DGDirichletLFIntegrator</a>
+, <a class="el" href="classmfem_1_1SBM2DirichletLFIntegrator.html#a3e360d3df2b42f5f4814dd78efd3c7ff">mfem::SBM2DirichletLFIntegrator</a>
+, <a class="el" href="classmfem_1_1SBM2DirichletIntegrator.html#a536b80ad1a496e4e455cb4a95e06b0db">mfem::SBM2DirichletIntegrator</a>
 </li>
 <li>dshape1
-: <a class="el" href="classmfem_1_1DGDiffusionIntegrator.html#aea86f9f106a3888031ab3e6cb38479a6">mfem::DGDiffusionIntegrator</a>
-, <a class="el" href="classmfem_1_1DGElasticityIntegrator.html#af66dba99e7ed4a051b37bdd6ce5f9cba">mfem::DGElasticityIntegrator</a>
+: <a class="el" href="classmfem_1_1DGElasticityIntegrator.html#af66dba99e7ed4a051b37bdd6ce5f9cba">mfem::DGElasticityIntegrator</a>
+, <a class="el" href="classmfem_1_1DGDiffusionIntegrator.html#aea86f9f106a3888031ab3e6cb38479a6">mfem::DGDiffusionIntegrator</a>
 </li>
 <li>dshape1_dnM
 : <a class="el" href="classmfem_1_1DGElasticityIntegrator.html#a2c1c3a0b5ceb39a08abcb175a8562ebe">mfem::DGElasticityIntegrator</a>
@@ -505,8 +533,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1DGDiffusionIntegrator.html#a5a2d4a856e78d67f1e9dfe6efedd37dd">mfem::DGDiffusionIntegrator</a>
 </li>
 <li>dshape2
-: <a class="el" href="classmfem_1_1DGElasticityIntegrator.html#adbf2516b81276d6cb315edaca8fd7990">mfem::DGElasticityIntegrator</a>
-, <a class="el" href="classmfem_1_1DGDiffusionIntegrator.html#a9dc916b8ad408a1d46d6d76877c98327">mfem::DGDiffusionIntegrator</a>
+: <a class="el" href="classmfem_1_1DGDiffusionIntegrator.html#a9dc916b8ad408a1d46d6d76877c98327">mfem::DGDiffusionIntegrator</a>
+, <a class="el" href="classmfem_1_1DGElasticityIntegrator.html#adbf2516b81276d6cb315edaca8fd7990">mfem::DGElasticityIntegrator</a>
 </li>
 <li>dshape2_dnM
 : <a class="el" href="classmfem_1_1DGElasticityIntegrator.html#adac0558be4af5ed438c1c335c80fa1a4">mfem::DGElasticityIntegrator</a>
@@ -518,11 +546,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1DGDiffusionIntegrator.html#a8682348bd3f92eb55f501efe54edea05">mfem::DGDiffusionIntegrator</a>
 </li>
 <li>dshape_1d
-: <a class="el" href="classmfem_1_1H1Pos__TriangleElement.html#a8105687203bdb20feb90c145b0d9a8f1">mfem::H1Pos_TriangleElement</a>
-, <a class="el" href="classmfem_1_1H1Pos__TetrahedronElement.html#a05da222a9875fe0c92da32529c7529af">mfem::H1Pos_TetrahedronElement</a>
+: <a class="el" href="classmfem_1_1H1Pos__TetrahedronElement.html#a05da222a9875fe0c92da32529c7529af">mfem::H1Pos_TetrahedronElement</a>
+, <a class="el" href="classmfem_1_1H1Pos__TriangleElement.html#a8105687203bdb20feb90c145b0d9a8f1">mfem::H1Pos_TriangleElement</a>
+</li>
+<li>dshape_dd
+: <a class="el" href="classmfem_1_1SBM2DirichletLFIntegrator.html#affcd88b577ebcdb0cb7a24b7358148ce">mfem::SBM2DirichletLFIntegrator</a>
 </li>
 <li>dshape_dn
 : <a class="el" href="classmfem_1_1DGDirichletLFIntegrator.html#a090719d076f9d355dcff5f90b3d69208">mfem::DGDirichletLFIntegrator</a>
+, <a class="el" href="classmfem_1_1SBM2DirichletLFIntegrator.html#a23443e1ae5373e9641cae565b8601154">mfem::SBM2DirichletLFIntegrator</a>
 , <a class="el" href="classmfem_1_1DGElasticityDirichletLFIntegrator.html#a3523d6c1f72524b01da5b2c3304ac787">mfem::DGElasticityDirichletLFIntegrator</a>
 </li>
 <li>dshape_du
@@ -536,11 +568,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1NURBS2DFiniteElement.html#aaa919ae973d4b4c7f7e3cd2dc26e8132">mfem::NURBS2DFiniteElement</a>
 </li>
 <li>dshape_y
-: <a class="el" href="classmfem_1_1NURBS2DFiniteElement.html#a1e5f8966e683f0a87c7bd7d7bb2c3140">mfem::NURBS2DFiniteElement</a>
-, <a class="el" href="classmfem_1_1NURBS3DFiniteElement.html#a17070338d68a73ac978b3b63334de3cb">mfem::NURBS3DFiniteElement</a>
+: <a class="el" href="classmfem_1_1NURBS3DFiniteElement.html#a17070338d68a73ac978b3b63334de3cb">mfem::NURBS3DFiniteElement</a>
+, <a class="el" href="classmfem_1_1NURBS2DFiniteElement.html#a1e5f8966e683f0a87c7bd7d7bb2c3140">mfem::NURBS2DFiniteElement</a>
 </li>
 <li>dshape_z
 : <a class="el" href="classmfem_1_1NURBS3DFiniteElement.html#adf1d23154eec6ca10e2f790c7401fada">mfem::NURBS3DFiniteElement</a>
+</li>
+<li>dshapedn
+: <a class="el" href="classmfem_1_1SBM2DirichletIntegrator.html#a1b1e36e359e653388f86e778132d29e4">mfem::SBM2DirichletIntegrator</a>
+</li>
+<li>dshapephys
+: <a class="el" href="classmfem_1_1SBM2DirichletIntegrator.html#ad88a3feef90226238def9e399c2d4076">mfem::SBM2DirichletIntegrator</a>
+</li>
+<li>dshapephysdn
+: <a class="el" href="classmfem_1_1SBM2DirichletIntegrator.html#a00e18078cf2193a717b7d84a4825c36b">mfem::SBM2DirichletIntegrator</a>
 </li>
 <li>dsp_m1
 : <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#a6a60f8f08d4cdf2022e2ac378c299dab">mfem::electromagnetics::MagneticDiffusionEOperator</a>
@@ -557,9 +598,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>dt_A2
 : <a class="el" href="classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#a659037db244ca3499362c96c03415147">mfem::electromagnetics::MagneticDiffusionEOperator</a>
 </li>
+<li>dthist
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#af89d5568a1a31337b5708d595c7bb90c">mfem::navier::NavierSolver</a>
+</li>
 <li>du
-: <a class="el" href="classmfem_1_1NURBS2DFiniteElement.html#a3eef200e85d4b095ae2d6caadee4a431">mfem::NURBS2DFiniteElement</a>
-, <a class="el" href="classmfem_1_1NURBS3DFiniteElement.html#a63438b038da9592ba9bc487e71ccacff">mfem::NURBS3DFiniteElement</a>
+: <a class="el" href="classmfem_1_1NURBS3DFiniteElement.html#a63438b038da9592ba9bc487e71ccacff">mfem::NURBS3DFiniteElement</a>
+, <a class="el" href="classmfem_1_1NURBS2DFiniteElement.html#a3eef200e85d4b095ae2d6caadee4a431">mfem::NURBS2DFiniteElement</a>
+</li>
+<li>dual_pc
+: <a class="el" href="classmfem_1_1SchurConstrainedSolver.html#a7275f7eed5ba882d7a37d4af0930cd79">mfem::SchurConstrainedSolver</a>
 </li>
 <li>dx
 : <a class="el" href="classmfem_1_1TMOP__Integrator.html#a988b45c65c2c8bc34fa68ea9b9b9fb5e">mfem::TMOP_Integrator</a>
@@ -572,14 +619,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#a19c549f2035cb558dfd5e899a8b0df6a">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
 </li>
 <li>DYt
-: <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#ac37c38ee96fa5ffcab42d58c6da06ca3">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
-, <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#abf1128c8a337ce079b19965046129d64">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
+: <a class="el" href="classmfem_1_1InvariantsEvaluator2D.html#abf1128c8a337ce079b19965046129d64">mfem::InvariantsEvaluator2D&lt; scalar_t, scalar_ops &gt;</a>
+, <a class="el" href="classmfem_1_1InvariantsEvaluator3D.html#ac37c38ee96fa5ffcab42d58c6da06ca3">mfem::InvariantsEvaluator3D&lt; scalar_t, scalar_ops &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:53 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

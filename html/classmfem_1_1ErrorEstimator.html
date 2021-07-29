@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for mfem::ErrorEstimator:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1ErrorEstimator__inherit__graph.svg" width="100%" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classmfem_1_1ErrorEstimator__inherit__graph.svg" width="100%" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -122,6 +122,9 @@ Collaboration diagram for mfem::ErrorEstimator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6faefbaad4d85f486f190ac3cfb68aad"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ErrorEstimator.html#a6faefbaad4d85f486f190ac3cfb68aad">GetTotalError</a> () const </td></tr>
+<tr class="memdesc:a6faefbaad4d85f486f190ac3cfb68aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total error from the last error estimate.  <a href="#a6faefbaad4d85f486f190ac3cfb68aad">More...</a><br/></td></tr>
+<tr class="separator:a6faefbaad4d85f486f190ac3cfb68aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ac1924cc37f719b8bd79059b0b2795"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ErrorEstimator.html#a11ac1924cc37f719b8bd79059b0b2795">GetLocalErrors</a> ()=0</td></tr>
 <tr class="memdesc:a11ac1924cc37f719b8bd79059b0b2795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with all element errors.  <a href="#a11ac1924cc37f719b8bd79059b0b2795">More...</a><br/></td></tr>
 <tr class="separator:a11ac1924cc37f719b8bd79059b0b2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Base class for all element based error estimators. </p>
 <p>At a minimum, an <a class="el" href="classmfem_1_1ErrorEstimator.html" title="Base class for all element based error estimators. ">ErrorEstimator</a> must be able compute one non-negative real (double) number for each element in the <a class="el" href="classmfem_1_1Mesh.html">Mesh</a>. </p>
 
-<p>Definition at line <a class="el" href="estimators_8hpp_source.html#l00039">39</a> of file <a class="el" href="estimators_8hpp_source.html">estimators.hpp</a>.</p>
+<p>Definition at line <a class="el" href="estimators_8hpp_source.html#l00041">41</a> of file <a class="el" href="estimators_8hpp_source.html">estimators.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac959a5c7f80ea02d016da6fcb817fb62"></a>
 <div class="memitem">
@@ -164,7 +167,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Destruct the error estimator. </p>
 
-<p>Definition at line <a class="el" href="estimators_8hpp_source.html#l00049">49</a> of file <a class="el" href="estimators_8hpp_source.html">estimators.hpp</a>.</p>
+<p>Definition at line <a class="el" href="estimators_8hpp_source.html#l00056">56</a> of file <a class="el" href="estimators_8hpp_source.html">estimators.hpp</a>.</p>
 
 </div>
 </div>
@@ -192,7 +195,37 @@ Public Member Functions</h2></td></tr>
 
 <p>Get a <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a> with all element errors. </p>
 
-<p>Implemented in <a class="el" href="classmfem_1_1LpErrorEstimator.html#ac2dbf9215fcafc4108b98851637ba5bd">mfem::LpErrorEstimator</a>, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#ac9eed3c423d83dd6b656e54a9e5661d5">mfem::L2ZienkiewiczZhuEstimator</a>, and <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a6003d4c3a5a5288bdfab0fe008faa324">mfem::ZienkiewiczZhuEstimator</a>.</p>
+<p>Implemented in <a class="el" href="classmfem_1_1KellyErrorEstimator.html#a4550a78c3dee3cef8dff92adb8b589cd">mfem::KellyErrorEstimator</a>, <a class="el" href="classmfem_1_1LpErrorEstimator.html#a6eb539f7b546308d3f0762391e70ef25">mfem::LpErrorEstimator</a>, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#a0a63d945208119c1281eef9d5842ba11">mfem::L2ZienkiewiczZhuEstimator</a>, and <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a5ec9f003ab425fbf639727592d421456">mfem::ZienkiewiczZhuEstimator</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6faefbaad4d85f486f190ac3cfb68aad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double mfem::ErrorEstimator::GetTotalError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the total error from the last error estimate. </p>
+<dl class="section note"><dt>Note</dt><dd>This method is optional for derived classes to override and the base class implementation simply returns 0. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classmfem_1_1KellyErrorEstimator.html#aa40610c5cb21e59577aa2f23c8f6fc28">mfem::KellyErrorEstimator</a>, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#aed397de51b01909484d79c6b454ac774">mfem::L2ZienkiewiczZhuEstimator</a>, and <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a1b409e165c21a6e31043dc50dd1bbfc5">mfem::ZienkiewiczZhuEstimator</a>.</p>
+
+<p>Definition at line <a class="el" href="estimators_8hpp_source.html#l00047">47</a> of file <a class="el" href="estimators_8hpp_source.html">estimators.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +252,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Force recomputation of the estimates on the next call to GetLocalErrors. </p>
 
-<p>Implemented in <a class="el" href="classmfem_1_1LpErrorEstimator.html#a95323b1ab490ff95f61a7bb600431fc7">mfem::LpErrorEstimator</a>, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#ae315d4f96cd1da1ea59bcc85fbd60a64">mfem::L2ZienkiewiczZhuEstimator</a>, and <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a41f824779601ce2f8db2dcca478a450f">mfem::ZienkiewiczZhuEstimator</a>.</p>
+<p>Implemented in <a class="el" href="classmfem_1_1KellyErrorEstimator.html#a2dea712565a9f1afcfd93719c756bfdb">mfem::KellyErrorEstimator</a>, <a class="el" href="classmfem_1_1LpErrorEstimator.html#ab19f6f8ee776161be7fdc43b3b0377f0">mfem::LpErrorEstimator</a>, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#a9e0ce1cc0e185f063d486eddcf47ead9">mfem::L2ZienkiewiczZhuEstimator</a>, and <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#ac8acdfb9a8e078d9116dfedc9a69a92d">mfem::ZienkiewiczZhuEstimator</a>.</p>
 
 </div>
 </div>
@@ -229,7 +262,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:07 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:49 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

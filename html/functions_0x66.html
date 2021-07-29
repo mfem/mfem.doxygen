@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -142,10 +142,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1SecondOrderODESolver.html#a0833d6350859ffaa4ce16ba400f94159">mfem::SecondOrderODESolver</a>
 </li>
 <li>F
-: <a class="el" href="classmfem_1_1InterpolationGridTransfer.html#ab26f22494dae6d08b5048e6ff7ff52e5">mfem::InterpolationGridTransfer</a>
-, <a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#a14890f277101269a6e85e3f55720381a">mfem::L2ProjectionGridTransfer</a>
+: <a class="el" href="classmfem_1_1TFunctionCoefficient.html#acd216e2d898dddb52df657c1610035be">mfem::TFunctionCoefficient&lt; Func, complex_t &gt;</a>
+, <a class="el" href="classmfem_1_1InterpolationGridTransfer.html#ab26f22494dae6d08b5048e6ff7ff52e5">mfem::InterpolationGridTransfer</a>
 , <a class="el" href="classmfem_1_1ScalarFiniteElement.html#a428d163051270947e336fa233d62fce9">mfem::ScalarFiniteElement</a>
-, <a class="el" href="classmfem_1_1TFunctionCoefficient.html#acd216e2d898dddb52df657c1610035be">mfem::TFunctionCoefficient&lt; Func, complex_t &gt;</a>
+, <a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#a14890f277101269a6e85e3f55720381a">mfem::L2ProjectionGridTransfer</a>
 </li>
 <li>F_
 : <a class="el" href="classmfem_1_1SIASolver.html#a12d204037461f9c4d46b38b74ac54205">mfem::SIASolver</a>
@@ -168,15 +168,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FABilinearFormExtension()
 : <a class="el" href="classmfem_1_1FABilinearFormExtension.html#a79099c325291ddfb303fe1a087e07490">mfem::FABilinearFormExtension</a>
 </li>
+<li>Face()
+: <a class="el" href="structmfem_1_1NCMesh_1_1Face.html#a9b3980ff124860723e0daf70fbf451fb">mfem::NCMesh::Face</a>
+</li>
 <li>FACE
 : <a class="el" href="classmfem_1_1ElementTransformation.html#a834c0aad85673c58221bba458c50b418a3f54c9a05b9831b2540cb50d7c9df78d">mfem::ElementTransformation</a>
 </li>
 <li>Face
 : <a class="el" href="classmfem_1_1FaceElementTransformations.html#a4cd6e8ddd9baa4fb3b2eaa085c28cb48">mfem::FaceElementTransformations</a>
-, <a class="el" href="structmfem_1_1NCMesh_1_1Face.html#a9b3980ff124860723e0daf70fbf451fb">mfem::NCMesh::Face</a>
-</li>
-<li>face_const_iterator
-: <a class="el" href="classmfem_1_1NCMesh.html#aaa9af24b14170472e75b2fbbdecba5b9">mfem::NCMesh</a>
 </li>
 <li>face_dof
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#af65f6588c9d5de77598ecefcd7051ee3">mfem::FiniteElementSpace</a>
@@ -189,9 +188,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>face_geom_factors
 : <a class="el" href="classmfem_1_1Mesh.html#a71f60a4e8458c236511235cab1104768">mfem::Mesh</a>
-</li>
-<li>face_iterator
-: <a class="el" href="classmfem_1_1NCMesh.html#ab3da9f63cd63a2d4bfd204e691ea1943">mfem::NCMesh</a>
 </li>
 <li>face_list
 : <a class="el" href="classmfem_1_1NCMesh.html#af1edef0f62170bbbcb9a82baf4bf5341">mfem::NCMesh</a>
@@ -209,7 +205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1ParMesh.html#ab7843d6f686e1e85227238b19965ba12">mfem::ParMesh</a>
 </li>
 <li>face_nbr_glob_dof_map
-: <a class="el" href="classmfem_1_1ParFiniteElementSpace.html#aa49b502a6ed60d0a6a7aefcab043ffc9">mfem::ParFiniteElementSpace</a>
+: <a class="el" href="classmfem_1_1ParFiniteElementSpace.html#a707bf08b5a206b2cadc437096055a949">mfem::ParFiniteElementSpace</a>
 </li>
 <li>face_nbr_group
 : <a class="el" href="classmfem_1_1ParMesh.html#ab759883803589739cc115f96d4e78a8b">mfem::ParMesh</a>
@@ -236,6 +232,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>faceBdrY
 : <a class="el" href="classmfem_1_1PABilinearFormExtension.html#a7d4f78e4f2aef08cea09319eaaea5edb">mfem::PABilinearFormExtension</a>
 , <a class="el" href="classmfem_1_1MFBilinearFormExtension.html#a149f4086b55dd076398c30a65664eefe">mfem::MFBilinearFormExtension</a>
+</li>
+<li>FaceCoefficientFunction
+: <a class="el" href="classmfem_1_1KellyErrorEstimator.html#a15a8e2e84a75864fd57ba3124b76f00b">mfem::KellyErrorEstimator</a>
 </li>
 <li>faceDofs
 : <a class="el" href="classmfem_1_1EABilinearFormExtension.html#acd0c730c483851417d5abc793aeb5294">mfem::EABilinearFormExtension</a>
@@ -281,6 +280,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FaceQuadratureInterpolator()
 : <a class="el" href="classmfem_1_1FaceQuadratureInterpolator.html#a72e2e06c191041d52c3f27eb79adaed2">mfem::FaceQuadratureInterpolator</a>
 </li>
+<li>FaceRestriction()
+: <a class="el" href="classmfem_1_1FaceRestriction.html#abbbf10730e1982dff863f53972c6a484">mfem::FaceRestriction</a>
+</li>
 <li>faces
 : <a class="el" href="classmfem_1_1Mesh.html#a3bde3e4be1041da56e0ede94fd5575e8">mfem::Mesh</a>
 , <a class="el" href="classmfem_1_1NCMesh.html#a450ca38b2c425eef740b2c0730c8e3d5">mfem::NCMesh</a>
@@ -293,9 +295,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1Mesh.html#a2da0bd6a49b7ce0371d007a2f314f839">mfem::Mesh</a>
 </li>
 <li>FaceTypes
-: <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1TETRAHEDRON_01_4.html#a8a3bde584ae71364366b4a348e9e4eed">mfem::Geometry::Constants&lt; Geometry::TETRAHEDRON &gt;</a>
+: <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1PRISM_01_4.html#a48e8eea592a07120bd5301315ef927c1">mfem::Geometry::Constants&lt; Geometry::PRISM &gt;</a>
+, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1TETRAHEDRON_01_4.html#a8a3bde584ae71364366b4a348e9e4eed">mfem::Geometry::Constants&lt; Geometry::TETRAHEDRON &gt;</a>
 , <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1CUBE_01_4.html#ae0e675436d6a52a5bc6e5d2925ea097c">mfem::Geometry::Constants&lt; Geometry::CUBE &gt;</a>
-, <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1PRISM_01_4.html#a48e8eea592a07120bd5301315ef927c1">mfem::Geometry::Constants&lt; Geometry::PRISM &gt;</a>
 </li>
 <li>FaceVert
 : <a class="el" href="structmfem_1_1Geometry_1_1Constants_3_01Geometry_1_1TRIANGLE_01_4.html#a159f15c4e3b159d20b6ecbcaa96812b4">mfem::Geometry::Constants&lt; Geometry::TRIANGLE &gt;</a>
@@ -318,26 +320,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>factorize_face_terms
 : <a class="el" href="classmfem_1_1EABilinearFormExtension.html#a97f7a49878e35f789b0125fea631266e">mfem::EABilinearFormExtension</a>
 </li>
-<li>fbfi
-: <a class="el" href="classmfem_1_1BilinearForm.html#a385d4b40bb478e9dafc0219cb861a050">mfem::BilinearForm</a>
-</li>
 <li>FCGSolver()
-: <a class="el" href="classmfem_1_1GinkgoWrappers_1_1FCGSolver.html#af3efbe9a54905ace892c8590d0194dd4">mfem::GinkgoWrappers::FCGSolver</a>
+: <a class="el" href="classmfem_1_1Ginkgo_1_1FCGSolver.html#a1e6723b8a63da6a0a40a42689541005f">mfem::Ginkgo::FCGSolver</a>
 </li>
 <li>fd_call_flag
 : <a class="el" href="classmfem_1_1TMOP__Integrator.html#a8d4a4107bc144b1e987ac8f443795ad2">mfem::TMOP_Integrator</a>
 </li>
 <li>fdata2D
-: <a class="el" href="classmfem_1_1FindPointsGSLIB.html#ad6069089b3c44f30088d4c5d52f82853">mfem::FindPointsGSLIB</a>
+: <a class="el" href="classmfem_1_1FindPointsGSLIB.html#a0e2cd4cb8c081f0c6efc14147c1b1142">mfem::FindPointsGSLIB</a>
 </li>
 <li>fdata3D
-: <a class="el" href="classmfem_1_1FindPointsGSLIB.html#a009b44d695cfebd4ad84fbb9370677b7">mfem::FindPointsGSLIB</a>
+: <a class="el" href="classmfem_1_1FindPointsGSLIB.html#acfa7433d4f66a72d1b1730fa0104648f">mfem::FindPointsGSLIB</a>
 </li>
 <li>fdflag
 : <a class="el" href="classmfem_1_1TMOP__Integrator.html#a16cd01a48bcf218e9ac052e7613992a2">mfem::TMOP_Integrator</a>
-</li>
-<li>fdofs
-: <a class="el" href="classmfem_1_1FiniteElementSpace.html#a538b3f6029ec99c48e35932ea9dbbf21">mfem::FiniteElementSpace</a>
 </li>
 <li>fe
 : <a class="el" href="classmfem_1_1TMesh.html#a3d4694772a3f8419b2bca63bb8fe1ae1">mfem::TMesh&lt; FESpace, nodeLayout &gt;</a>
@@ -346,7 +342,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1DofToQuad.html#a32ce9458178e4fe5c5b1f70fdf76ebbc">mfem::DofToQuad</a>
 </li>
 <li>FE_Evolution()
-: <a class="el" href="classFE__Evolution.html#a5222a6536bb66199a0b0a023c76a33ec">FE_Evolution</a>
+: <a class="el" href="classFE__Evolution.html#aedd5f2def1c203bb3d069c5bf959ee74">FE_Evolution</a>
 </li>
 <li>FE_type
 : <a class="el" href="classmfem_1_1TMesh.html#a7e5187f14277e6a7f21140c9599c1042">mfem::TMesh&lt; FESpace, nodeLayout &gt;</a>
@@ -363,6 +359,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>fec
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#a67ae218964cc10e338deea705e7daa8d">mfem::FiniteElementSpace</a>
 , <a class="el" href="classmfem_1_1GridFunction.html#a1ebbeeebcd77385f9532954b490853ed">mfem::GridFunction</a>
+, <a class="el" href="classmfem_1_1LORBase.html#a5bf68a44b08ac6914cd0fa9f4bbb3255">mfem::LORBase</a>
 </li>
 <li>FEColl()
 : <a class="el" href="classmfem_1_1FiniteElementSpace.html#ae75c2a8bc61e4f86b859cc7848b027f0">mfem::FiniteElementSpace</a>
@@ -373,28 +370,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1GridFunction.html#a9f3983e42d6b904e003164a51beacb4b">mfem::GridFunction</a>
 , <a class="el" href="classmfem_1_1Hybridization.html#a1e4713b6d5b2b2f3ccd337e89729c9d4">mfem::Hybridization</a>
 , <a class="el" href="classmfem_1_1LinearForm.html#a7a4c4ec7f6005e34d0bffd3d5c4362c6">mfem::LinearForm</a>
+, <a class="el" href="classmfem_1_1LORBase.html#a41b96523c8e903d9952c8c568a5358b9">mfem::LORBase</a>
 , <a class="el" href="classmfem_1_1NonlinearForm.html#a1c2d5e9b2c0e6c0b21ebaebcc630dfbb">mfem::NonlinearForm</a>
 , <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a57d46158a5e9c2c5af4af4c7c525d92a">mfem::BlockNonlinearForm</a>
 , <a class="el" href="classmfem_1_1PANonlinearFormExtension.html#a736de24d231a73f31606a181104ff76c">mfem::PANonlinearFormExtension</a>
+, <a class="el" href="classmfem_1_1MFNonlinearFormExtension.html#a69554aa2432e48fe0759d5a83f3068a2">mfem::MFNonlinearFormExtension</a>
 , <a class="el" href="classmfem_1_1ElementRestriction.html#a1624e9b5e8738f2355f13a8ace0cb5ce">mfem::ElementRestriction</a>
 , <a class="el" href="classmfem_1_1H1FaceRestriction.html#a3db2683246167b87565c1cd0f46ed553">mfem::H1FaceRestriction</a>
 , <a class="el" href="classmfem_1_1L2FaceRestriction.html#ac54e63fd5b16d46a1f879466f4f5f848">mfem::L2FaceRestriction</a>
 , <a class="el" href="classmfem_1_1TElementTransformation.html#a4b72b705c315534e28a9599d666e92bc">mfem::TElementTransformation&lt; Mesh_t, IR, real_t &gt;</a>
 , <a class="el" href="classmfem_1_1AdaptivityEvaluator.html#a8f475c2b0a847c9efd241c8781b71182">mfem::AdaptivityEvaluator</a>
+, <a class="el" href="classmfem_1_1TMOP__Integrator.html#a7dbff667fca68ed12b5064dff83ab013">mfem::TMOP_Integrator</a>
+, <a class="el" href="classmfem_1_1ParametricBNLForm.html#a93fed28312db6ec8e4b4cca261222e9b">mfem::ParametricBNLForm</a>
 </li>
-<li>FESpace()
-: <a class="el" href="classmfem_1_1GridFunction.html#aed2615302e7e8a1111b268a4dea20027">mfem::GridFunction</a>
-, <a class="el" href="classmfem_1_1LinearForm.html#a6db9cc8f3c56425638d69b7c16a18709">mfem::LinearForm</a>
-, <a class="el" href="classmfem_1_1NonlinearForm.html#a53f7167ef5c3a053685d62c0176f61dd">mfem::NonlinearForm</a>
-, <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a4b65b17aa8035cd502e7ac8ff1971250">mfem::BlockNonlinearForm</a>
-, <a class="el" href="classmfem_1_1FieldEvaluator.html#a26f43f187efaff4730dc9c6182c3c6a9">mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
+<li>fes_ho
+: <a class="el" href="classmfem_1_1LORBase.html#a6ce994f9617eacc576e85de4ac34e789">mfem::LORBase</a>
+, <a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2Projection.html#a4fdeb3a23ad9dafa6bc06ebb7ae20f4a">mfem::L2ProjectionGridTransfer::L2Projection</a>
 </li>
-<li>fespace
-: <a class="el" href="classmfem_1_1PetscBDDCSolverParams.html#aa51ae32b9fc5cee51615d7b850aaeb6b">mfem::PetscBDDCSolverParams</a>
-, <a class="el" href="classmfem_1_1MassIntegrator.html#a024880b4388967304d679cc72180fbbe">mfem::MassIntegrator</a>
-, <a class="el" href="classmfem_1_1QuadratureInterpolator.html#add3c584785abc7c643e31810acb8252f">mfem::QuadratureInterpolator</a>
-, <a class="el" href="classmfem_1_1FaceQuadratureInterpolator.html#a4593789e38a35def62b362abcff08180">mfem::FaceQuadratureInterpolator</a>
-, <a class="el" href="classmfem_1_1FieldEvaluator__base.html#a73f18c737d4dc5b1431bf1120957a881">mfem::FieldEvaluator_base&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
+<li>fes_lor
+: <a class="el" href="classmfem_1_1L2ProjectionGridTransfer_1_1L2Projection.html#a8be89d5cb62a20fdf82e254ff5ceac9f">mfem::L2ProjectionGridTransfer::L2Projection</a>
+</li>
+<li>fes_sequence
+: <a class="el" href="classmfem_1_1GridFunction.html#ad73c63f3a4c3e7fa0fd8f2ab507be947">mfem::GridFunction</a>
 </li>
 <li>FESpace()
 : <a class="el" href="classmfem_1_1BilinearForm.html#a65ff7e5f5c1d17d5b7c5cb7e2b99f871">mfem::BilinearForm</a>
@@ -402,6 +399,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classmfem_1_1ComplexLinearForm.html#a182cd8b9258c197d6443a263073fa12c">mfem::ComplexLinearForm</a>
 , <a class="el" href="classmfem_1_1SesquilinearForm.html#a9c91ad7149346b04ea1378a9cdf899f2">mfem::SesquilinearForm</a>
 , <a class="el" href="classmfem_1_1ParComplexGridFunction.html#a104b80a325b0e8832f8dcde1a55e437b">mfem::ParComplexGridFunction</a>
+, <a class="el" href="classmfem_1_1GridFunction.html#aed2615302e7e8a1111b268a4dea20027">mfem::GridFunction</a>
+, <a class="el" href="classmfem_1_1LinearForm.html#a6db9cc8f3c56425638d69b7c16a18709">mfem::LinearForm</a>
+, <a class="el" href="classmfem_1_1NonlinearForm.html#a53f7167ef5c3a053685d62c0176f61dd">mfem::NonlinearForm</a>
+, <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a4b65b17aa8035cd502e7ac8ff1971250">mfem::BlockNonlinearForm</a>
+, <a class="el" href="classmfem_1_1FieldEvaluator.html#a26f43f187efaff4730dc9c6182c3c6a9">mfem::FieldEvaluator&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
+, <a class="el" href="classmfem_1_1ParametricBNLForm.html#ac8268fafb03a67bcb52916214824ab4e">mfem::ParametricBNLForm</a>
+</li>
+<li>fespace
+: <a class="el" href="classmfem_1_1PetscBDDCSolverParams.html#aa51ae32b9fc5cee51615d7b850aaeb6b">mfem::PetscBDDCSolverParams</a>
+, <a class="el" href="classmfem_1_1MassIntegrator.html#a024880b4388967304d679cc72180fbbe">mfem::MassIntegrator</a>
+, <a class="el" href="classmfem_1_1QuadratureInterpolator.html#add3c584785abc7c643e31810acb8252f">mfem::QuadratureInterpolator</a>
+, <a class="el" href="classmfem_1_1FaceQuadratureInterpolator.html#a4593789e38a35def62b362abcff08180">mfem::FaceQuadratureInterpolator</a>
+, <a class="el" href="classmfem_1_1FieldEvaluator__base.html#a73f18c737d4dc5b1431bf1120957a881">mfem::FieldEvaluator_base&lt; FESpace_t, VecLayout_t, IR, complex_t, real_t &gt;</a>
 </li>
 <li>FESpace_type
 : <a class="el" href="classmfem_1_1TMesh.html#a2a1f24daf68c5548d2de4ace90c80b57">mfem::TMesh&lt; FESpace, nodeLayout &gt;</a>
@@ -411,13 +421,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>fespaces
 : <a class="el" href="classmfem_1_1FiniteElementSpaceHierarchy.html#ae442af48ef632a583b7b0d1c882a02b6">mfem::FiniteElementSpaceHierarchy</a>
-, <a class="el" href="classmfem_1_1Multigrid.html#ae785f14953893316bfc1e42327d5fbf1">mfem::Multigrid</a>
+, <a class="el" href="classmfem_1_1GeometricMultigrid.html#ab26a4c7a3756347a49879f2cf85afce7">mfem::GeometricMultigrid</a>
+</li>
+<li>FESpaceType
+: <a class="el" href="classmfem_1_1LORBase.html#a41c01a115c075253950b53edaa62489c">mfem::LORBase</a>
 </li>
 <li>Fext
 : <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#a9c70473a0948dc8ca094da9dd96a3a1a">mfem::navier::NavierSolver</a>
 </li>
 <li>FGMRESSolver()
 : <a class="el" href="classmfem_1_1FGMRESSolver.html#adb59ad685f89cfc1b751942828428776">mfem::FGMRESSolver</a>
+</li>
+<li>fgrad
+: <a class="el" href="classmfem_1_1PUMPLaplacian.html#a6cf41af6224ff9c23671bd4242c394c3">mfem::PUMPLaplacian</a>
 </li>
 <li>field_info_map
 : <a class="el" href="classmfem_1_1VisItDataCollection.html#aec919ed685d6a68ba57ff9a349be6da7">mfem::VisItDataCollection</a>
@@ -457,26 +473,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1named__ifgzstream.html#a175f34f929d256de5e22c16974c1ccb7">mfem::named_ifgzstream</a>
 </li>
 <li>FillI()
-: <a class="el" href="classmfem_1_1ParL2FaceRestriction.html#af0653dbb668b10aac9313459011e66c4">mfem::ParL2FaceRestriction</a>
+: <a class="el" href="classmfem_1_1ParL2FaceRestriction.html#ac2bffe33b83d343bc22eff3447778f03">mfem::ParL2FaceRestriction</a>
 , <a class="el" href="classmfem_1_1ElementRestriction.html#abd367c3bbc08718930b92a787707f306">mfem::ElementRestriction</a>
 , <a class="el" href="classmfem_1_1L2ElementRestriction.html#afdd88f4c230ab8b10925fff9919db5ef">mfem::L2ElementRestriction</a>
-, <a class="el" href="classmfem_1_1L2FaceRestriction.html#aa7f803d1651733b05d0385d361cb1e6a">mfem::L2FaceRestriction</a>
+, <a class="el" href="classmfem_1_1L2FaceRestriction.html#a67cef4f690aad63357de7a43f5999ef2">mfem::L2FaceRestriction</a>
 </li>
 <li>FillJAndData()
 : <a class="el" href="classmfem_1_1ParL2FaceRestriction.html#a999f49a0d78981a3376c01281e18c0bf">mfem::ParL2FaceRestriction</a>
 , <a class="el" href="classmfem_1_1ElementRestriction.html#a96a8384dd7ea12e847241177952ae5ad">mfem::ElementRestriction</a>
 , <a class="el" href="classmfem_1_1L2ElementRestriction.html#ab79385f5f3c9e6eda384edb3be3912d6">mfem::L2ElementRestriction</a>
-, <a class="el" href="classmfem_1_1L2FaceRestriction.html#a5a83084b8a77663229760926f804fc08">mfem::L2FaceRestriction</a>
+, <a class="el" href="classmfem_1_1L2FaceRestriction.html#ad6415389c4a66979ef5054f1786c0c62">mfem::L2FaceRestriction</a>
 </li>
 <li>FillSparseMatrix()
 : <a class="el" href="classmfem_1_1ElementRestriction.html#a077fff139b9740d5d3b219cf66aa47f1">mfem::ElementRestriction</a>
 </li>
+<li>Filter()
+: <a class="el" href="classmfem_1_1PDEFilter.html#a09f9f41cd4ffbd8491a179fc57390d63">mfem::PDEFilter</a>
+</li>
+<li>filter_alpha
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#abdeac41c4034e1ec9bfc26896ef88937">mfem::navier::NavierSolver</a>
+</li>
+<li>filter_cutoff_modes
+: <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#a18adff74cd7784287a9d86b1cbd41c62">mfem::navier::NavierSolver</a>
+</li>
 <li>final_iter
-: <a class="el" href="classmfem_1_1GinkgoWrappers_1_1GinkgoIterativeSolverBase.html#acea46dfa205313e5ebc9e3dd10a1a3fe">mfem::GinkgoWrappers::GinkgoIterativeSolverBase</a>
+: <a class="el" href="classmfem_1_1Ginkgo_1_1GinkgoIterativeSolver.html#a216404690a33bdaad2621c0e853758f8">mfem::Ginkgo::GinkgoIterativeSolver</a>
 , <a class="el" href="classmfem_1_1IterativeSolver.html#ac2b5b97308bb9a085ff17376090d12c2">mfem::IterativeSolver</a>
 </li>
 <li>final_norm
-: <a class="el" href="classmfem_1_1GinkgoWrappers_1_1GinkgoIterativeSolverBase.html#a165f64d0705331976f46af151ed82fc7">mfem::GinkgoWrappers::GinkgoIterativeSolverBase</a>
+: <a class="el" href="classmfem_1_1Ginkgo_1_1GinkgoIterativeSolver.html#ad6c4d1e662b12250c2b08b7d5ae2aed3">mfem::Ginkgo::GinkgoIterativeSolver</a>
 , <a class="el" href="classmfem_1_1IterativeSolver.html#a257e1c590cca3371b4b247c3c40911a4">mfem::IterativeSolver</a>
 </li>
 <li>Finalize()
@@ -534,15 +559,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FinalizeWedgeMesh()
 : <a class="el" href="classmfem_1_1Mesh.html#a517802862d1538822337fe2aa2e0119a">mfem::Mesh</a>
 </li>
-<li>find()
-: <a class="el" href="classmfem_1_1NamedFieldsMap.html#ab93f36dece34ef37b5e348e1229574fd">mfem::NamedFieldsMap&lt; T &gt;</a>
-</li>
 <li>Find()
-: <a class="el" href="classmfem_1_1Array.html#ae34ff5104ab26897a75d09b4f0452d04">mfem::Array&lt; T &gt;</a>
+: <a class="el" href="classmfem_1_1HashTable.html#a5eaed0095cb2e36b46ee0c6abf2b1a29">mfem::HashTable&lt; T &gt;</a>
+, <a class="el" href="classmfem_1_1Array.html#ae34ff5104ab26897a75d09b4f0452d04">mfem::Array&lt; T &gt;</a>
 , <a class="el" href="classmfem_1_1HashTable.html#a2d385c423aa07fc05a3a867669be8fc3">mfem::HashTable&lt; T &gt;</a>
 </li>
 <li>find()
-: <a class="el" href="classmfem_1_1NamedFieldsMap.html#af48de2dd1cb40da9bf0120e607eeec8e">mfem::NamedFieldsMap&lt; T &gt;</a>
+: <a class="el" href="classmfem_1_1NamedFieldsMap.html#ab93f36dece34ef37b5e348e1229574fd">mfem::NamedFieldsMap&lt; T &gt;</a>
 </li>
 <li>find_element_edge()
 : <a class="el" href="classmfem_1_1NCMesh.html#a3b5f570f87003bca08f366ee279b19cf">mfem::NCMesh</a>
@@ -562,14 +585,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FindCoarseElement()
 : <a class="el" href="classmfem_1_1Mesh.html#ab9ab9b657a90691f9721d0048153f27c">mfem::Mesh</a>
 </li>
+<li>FindDofs()
+: <a class="el" href="classmfem_1_1FiniteElementSpace.html#a09dfbe11025c77c24863dafd9d85ff3d">mfem::FiniteElementSpace</a>
+</li>
+<li>FindEdgeDof()
+: <a class="el" href="classmfem_1_1FiniteElementSpace.html#acc38a2c98d37abe91d5f9f1769ba6ab5">mfem::FiniteElementSpace</a>
+</li>
 <li>FindEdgeElements()
 : <a class="el" href="classmfem_1_1NCMesh.html#a6db73bae7fda9aef6dd839dd237e21f3">mfem::NCMesh</a>
+</li>
+<li>FindFaceDof()
+: <a class="el" href="classmfem_1_1FiniteElementSpace.html#a8b02cc67050410e68cfa446387cf902e">mfem::FiniteElementSpace</a>
 </li>
 <li>FindFaceNodes()
 : <a class="el" href="classmfem_1_1NCMesh.html#a05db1b202d1989758fb4a1cb87389dbe">mfem::NCMesh</a>
 </li>
 <li>FindId()
-: <a class="el" href="classmfem_1_1HashTable.html#aabf8f0c083830a06fe4fe67073ed7702">mfem::HashTable&lt; T &gt;</a>
+: <a class="el" href="classmfem_1_1HashTable.html#a6b887097d9b0a0768aa6c48e460c4ed7">mfem::HashTable&lt; T &gt;</a>
 </li>
 <li>findKnotSpan()
 : <a class="el" href="classmfem_1_1KnotVector.html#ae2671623778f9b180004e55b9a9db106">mfem::KnotVector</a>
@@ -584,7 +616,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1NCMesh.html#a59357a4af171acdb72039db96e5de76f">mfem::NCMesh</a>
 </li>
 <li>FindPoints()
-: <a class="el" href="classmfem_1_1Mesh.html#ac4a77cf819f394d9e5097d5f4edc3845">mfem::Mesh</a>
+: <a class="el" href="classmfem_1_1OversetFindPointsGSLIB.html#aa51d4f93e1aeed92514d218e365a755c">mfem::OversetFindPointsGSLIB</a>
+, <a class="el" href="classmfem_1_1FindPointsGSLIB.html#a3b5a7be160954809f544cefa7baeca0f">mfem::FindPointsGSLIB</a>
+, <a class="el" href="classmfem_1_1Mesh.html#ac4a77cf819f394d9e5097d5f4edc3845">mfem::Mesh</a>
 , <a class="el" href="classmfem_1_1ParMesh.html#ac45000bb042ab1cac2be7a8d09a1c504">mfem::ParMesh</a>
 , <a class="el" href="classmfem_1_1FindPointsGSLIB.html#a8b95e8f843ce31c951197ef2682886b7">mfem::FindPointsGSLIB</a>
 </li>
@@ -613,41 +647,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1FiniteElement.html#a83cef6d1604ca400e7286351f1d3c121">mfem::FiniteElement</a>
 , <a class="el" href="classmfem_1_1VectorFiniteElement.html#ab10d30aa6e1fe348c239549543f13e82">mfem::VectorFiniteElement</a>
 </li>
+<li>FiniteElementCollection()
+: <a class="el" href="classmfem_1_1FiniteElementCollection.html#a5ea8cdcce63fb0531f97368f02a6359c">mfem::FiniteElementCollection</a>
+</li>
 <li>FiniteElementForGeometry()
-: <a class="el" href="classmfem_1_1CrouzeixRaviartFECollection.html#a0e7b295d86766bb41a526bc596dcca4b">mfem::CrouzeixRaviartFECollection</a>
+: <a class="el" href="classmfem_1_1FiniteElementCollection.html#ab8f117fa1884d4276daf171172e2c7aa">mfem::FiniteElementCollection</a>
+, <a class="el" href="classmfem_1_1H1__FECollection.html#a9fb3a4b1f615763867b1ab7cfafb0e39">mfem::H1_FECollection</a>
+, <a class="el" href="classmfem_1_1RT__FECollection.html#a56ea88c185dfc3cf25e460b83e73e379">mfem::RT_FECollection</a>
+, <a class="el" href="classmfem_1_1ND__FECollection.html#a87bcb7eaacadf82a3a75c7672c2d1e4e">mfem::ND_FECollection</a>
+, <a class="el" href="classmfem_1_1NURBSFECollection.html#a570aedec32a0b1c37f76260d6d621ed4">mfem::NURBSFECollection</a>
+, <a class="el" href="classmfem_1_1LinearFECollection.html#a03be3b8c196e0a474049bb9ef12872ad">mfem::LinearFECollection</a>
+, <a class="el" href="classmfem_1_1QuadraticFECollection.html#a34079cee3e457da08c82e307f2807106">mfem::QuadraticFECollection</a>
+, <a class="el" href="classmfem_1_1QuadraticPosFECollection.html#aa69d6cf26c5828d1aa270f8dddd9eecf">mfem::QuadraticPosFECollection</a>
+, <a class="el" href="classmfem_1_1CubicFECollection.html#a203f6a782fa90809717df7773cb30037">mfem::CubicFECollection</a>
 , <a class="el" href="classmfem_1_1LinearNonConf3DFECollection.html#a71dda19231ec917b276b942e89149be7">mfem::LinearNonConf3DFECollection</a>
 , <a class="el" href="classmfem_1_1RT0__2DFECollection.html#a43a09166e2c259557fbc25f4a79b7a6c">mfem::RT0_2DFECollection</a>
 , <a class="el" href="classmfem_1_1RT1__2DFECollection.html#af1b897006d6f66ee65af97ed182a87b7">mfem::RT1_2DFECollection</a>
-, <a class="el" href="classmfem_1_1RT2__2DFECollection.html#a8a281d769ef2e1861354f2248aedd168">mfem::RT2_2DFECollection</a>
 , <a class="el" href="classmfem_1_1Const2DFECollection.html#ad2e1e1bbc83ca9cd7a23975cacb2ee40">mfem::Const2DFECollection</a>
 , <a class="el" href="classmfem_1_1LinearDiscont2DFECollection.html#a91980326850989319088f70d0afd2372">mfem::LinearDiscont2DFECollection</a>
 , <a class="el" href="classmfem_1_1GaussLinearDiscont2DFECollection.html#a1d8b83558292700ce1ba484308dc08a6">mfem::GaussLinearDiscont2DFECollection</a>
 , <a class="el" href="classmfem_1_1QuadraticDiscont2DFECollection.html#ae519cc87853285f33ebbfbbd6693c43b">mfem::QuadraticDiscont2DFECollection</a>
 , <a class="el" href="classmfem_1_1QuadraticPosDiscont2DFECollection.html#a35d73030c71c520fdde1e94fbee083eb">mfem::QuadraticPosDiscont2DFECollection</a>
 , <a class="el" href="classmfem_1_1GaussQuadraticDiscont2DFECollection.html#a12bbe2ec97832a30c5b9c156d4a16084">mfem::GaussQuadraticDiscont2DFECollection</a>
+, <a class="el" href="classmfem_1_1CubicDiscont2DFECollection.html#a522d6243626de288616669edb82fefe3">mfem::CubicDiscont2DFECollection</a>
 , <a class="el" href="classmfem_1_1Const3DFECollection.html#add01c9ce67529208c1e85878158322cb">mfem::Const3DFECollection</a>
 , <a class="el" href="classmfem_1_1LinearDiscont3DFECollection.html#afe2c7fab7827cfb69baf4ffe1470bcb8">mfem::LinearDiscont3DFECollection</a>
 , <a class="el" href="classmfem_1_1QuadraticDiscont3DFECollection.html#af73e953c166e55fc2195b24a08af5e11">mfem::QuadraticDiscont3DFECollection</a>
 , <a class="el" href="classmfem_1_1ND1__3DFECollection.html#a44156abea60cfbac026d0a0e26c10d0d">mfem::ND1_3DFECollection</a>
 , <a class="el" href="classmfem_1_1RT0__3DFECollection.html#a2c2fbf68755a4a3c577028774cad50bf">mfem::RT0_3DFECollection</a>
 , <a class="el" href="classmfem_1_1RT1__3DFECollection.html#a0a1463b82195ad7cc1abb6457f6c1ebf">mfem::RT1_3DFECollection</a>
-, <a class="el" href="classmfem_1_1Local__FECollection.html#a54c1b1bde370afe177e39fe5b6df2ced">mfem::Local_FECollection</a>
+, <a class="el" href="classmfem_1_1Local__FECollection.html#a752e93b17b663a6793b6204683fd7289">mfem::Local_FECollection</a>
 , <a class="el" href="classmfem_1_1RefinedLinearFECollection.html#aa317cdaa6bfab2fadef51c1b691801ce">mfem::RefinedLinearFECollection</a>
-, <a class="el" href="classmfem_1_1CubicDiscont2DFECollection.html#a522d6243626de288616669edb82fefe3">mfem::CubicDiscont2DFECollection</a>
 , <a class="el" href="classmfem_1_1P1OnQuadFECollection.html#a140e6b938064af7b52fbaf9f8760f1d7">mfem::P1OnQuadFECollection</a>
-, <a class="el" href="classmfem_1_1LinearFECollection.html#a03be3b8c196e0a474049bb9ef12872ad">mfem::LinearFECollection</a>
+, <a class="el" href="classmfem_1_1RT2__2DFECollection.html#a8a281d769ef2e1861354f2248aedd168">mfem::RT2_2DFECollection</a>
+, <a class="el" href="classmfem_1_1CrouzeixRaviartFECollection.html#a0e7b295d86766bb41a526bc596dcca4b">mfem::CrouzeixRaviartFECollection</a>
 , <a class="el" href="classmfem_1_1L2__FECollection.html#a7cdc87fef7859755bdd0fb12810254ea">mfem::L2_FECollection</a>
-, <a class="el" href="classmfem_1_1FiniteElementCollection.html#ab8f117fa1884d4276daf171172e2c7aa">mfem::FiniteElementCollection</a>
-, <a class="el" href="classmfem_1_1H1__FECollection.html#a9fb3a4b1f615763867b1ab7cfafb0e39">mfem::H1_FECollection</a>
-, <a class="el" href="classmfem_1_1RT__FECollection.html#a56ea88c185dfc3cf25e460b83e73e379">mfem::RT_FECollection</a>
-, <a class="el" href="classmfem_1_1ND__FECollection.html#a87bcb7eaacadf82a3a75c7672c2d1e4e">mfem::ND_FECollection</a>
-, <a class="el" href="classmfem_1_1NURBSFECollection.html#a570aedec32a0b1c37f76260d6d621ed4">mfem::NURBSFECollection</a>
-, <a class="el" href="classmfem_1_1QuadraticFECollection.html#a34079cee3e457da08c82e307f2807106">mfem::QuadraticFECollection</a>
-, <a class="el" href="classmfem_1_1QuadraticPosFECollection.html#aa69d6cf26c5828d1aa270f8dddd9eecf">mfem::QuadraticPosFECollection</a>
-, <a class="el" href="classmfem_1_1CubicFECollection.html#a203f6a782fa90809717df7773cb30037">mfem::CubicFECollection</a>
 </li>
-<li>FiniteElementSpace
-: <a class="el" href="classmfem_1_1QuadratureInterpolator.html#a9b03cf4b5eb50419208039161ed60862">mfem::QuadratureInterpolator</a>
+<li>FiniteElementSpace()
+: <a class="el" href="classmfem_1_1FiniteElementSpace.html#ab52d2fb1716737540a5d61c56459c24a">mfem::FiniteElementSpace</a>
+, <a class="el" href="classmfem_1_1QuadratureInterpolator.html#a9b03cf4b5eb50419208039161ed60862">mfem::QuadratureInterpolator</a>
 , <a class="el" href="classmfem_1_1FaceQuadratureInterpolator.html#a9b03cf4b5eb50419208039161ed60862">mfem::FaceQuadratureInterpolator</a>
 , <a class="el" href="classmfem_1_1FiniteElementSpace.html#a446f0331f494c423de97a104fe657cdc">mfem::FiniteElementSpace</a>
 </li>
@@ -655,41 +693,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1FiniteElementSpaceHierarchy.html#a6916ab4ad18205bc398312b1a35104c9">mfem::FiniteElementSpaceHierarchy</a>
 </li>
 <li>FiniteElementTypeFailureMessage()
-: <a class="el" href="classmfem_1_1MixedDotProductIntegrator.html#a561432cbf7434392b9aa1d2a7b9d32db">mfem::MixedDotProductIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCurlCurlIntegrator.html#a503bd8b7e04663813749063b15b0fb27">mfem::MixedCurlCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarDerivativeIntegrator.html#adfb9cc84b2515d027a23595116ef3dae">mfem::MixedScalarDerivativeIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarCrossCurlIntegrator.html#a31a5eb91ef8cc67d0a59d637bbb33484">mfem::MixedScalarCrossCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarIntegrator.html#aab089eae90d1e12e9b355c3c10d2d480">mfem::MixedScalarIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarDivergenceIntegrator.html#abd7c02548dae9a604e3c01f7bd9aa09b">mfem::MixedScalarDivergenceIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedVectorDivergenceIntegrator.html#a5249ff08e1b6bc7641f43af2381f480e">mfem::MixedVectorDivergenceIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarWeakGradientIntegrator.html#a786acaf38e22cbe53ea8c1a27c6ea23f">mfem::MixedScalarWeakGradientIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarWeakCurlIntegrator.html#a56c380ce4f805248c8b6db808341655e">mfem::MixedScalarWeakCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarCurlIntegrator.html#a37ed22d88153dc823c48fb76e4e84e1e">mfem::MixedScalarCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedGradGradIntegrator.html#ad2a124e35322058e73d26e398473ff1d">mfem::MixedGradGradIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCrossCurlGradIntegrator.html#a488c5f93ca9e7228f923a0e14f31b178">mfem::MixedCrossCurlGradIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCrossGradIntegrator.html#a120aa2a0efe2c3ea8c8df100cc8d139a">mfem::MixedCrossGradIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCrossCurlIntegrator.html#a1d55d94b3d412632d61257d858a15f70">mfem::MixedCrossCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarCrossProductIntegrator.html#a49dc40130d7562c27c2103959127607c">mfem::MixedScalarCrossProductIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedDivGradIntegrator.html#a9b1853876fa74a11f4682c3054fbe1bb">mfem::MixedDivGradIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedVectorGradientIntegrator.html#ac8753ae76a151ecf23ed571c1312d0bb">mfem::MixedVectorGradientIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedVectorWeakCurlIntegrator.html#ad1678f8bd370c60a655af056e25d94f1">mfem::MixedVectorWeakCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedWeakGradDotIntegrator.html#a85f8cc7273f998ba9c8ea1e52551d3aa">mfem::MixedWeakGradDotIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarWeakDerivativeIntegrator.html#abeb8bede95e452286ab538a6159365f9">mfem::MixedScalarWeakDerivativeIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedWeakDivCrossIntegrator.html#a342edc809dcedc869b353f93dfce5914">mfem::MixedWeakDivCrossIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarCrossGradIntegrator.html#a8c1190f98b9ad948d19baea7b01313bb">mfem::MixedScalarCrossGradIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCrossCurlCurlIntegrator.html#a0ec0393245b92f2a1fcb95ca142a7a50">mfem::MixedCrossCurlCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedWeakCurlCrossIntegrator.html#ace226b04f7420e64a63e347e79676b9b">mfem::MixedWeakCurlCrossIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedVectorWeakDivergenceIntegrator.html#a1a9cd49db11a1fa22d4b6f36586dacff">mfem::MixedVectorWeakDivergenceIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarWeakCurlCrossIntegrator.html#afe8f570313f69d9aba3ce3ea71888ad5">mfem::MixedScalarWeakCurlCrossIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarWeakDivergenceIntegrator.html#a981528ea2a664c75207294e99b929312">mfem::MixedScalarWeakDivergenceIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedGradDivIntegrator.html#a6ffd5cea6df37e3e50de3be15cb0261a">mfem::MixedGradDivIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedDirectionalDerivativeIntegrator.html#a56fca08bba670a2cc881492b28176e4a">mfem::MixedDirectionalDerivativeIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedVectorCurlIntegrator.html#a799e3865caaa0a1b05fdbc817cc6aa90">mfem::MixedVectorCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarWeakCrossProductIntegrator.html#a79608c9b5e6a9e05863ae52f252e4a91">mfem::MixedScalarWeakCrossProductIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCrossGradCurlIntegrator.html#a2142e46a5cf18b5af6e00b462d61da63">mfem::MixedCrossGradCurlIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedCrossGradGradIntegrator.html#ac3b2a93b815d989b8e1ed5012521d75e">mfem::MixedCrossGradGradIntegrator</a>
-, <a class="el" href="classmfem_1_1MixedScalarVectorIntegrator.html#a10d3d5559d5804cd2154ce3455c6bdfe">mfem::MixedScalarVectorIntegrator</a>
+: <a class="el" href="classmfem_1_1MixedScalarWeakDivergenceIntegrator.html#a981528ea2a664c75207294e99b929312">mfem::MixedScalarWeakDivergenceIntegrator</a>
 , <a class="el" href="classmfem_1_1MixedVectorIntegrator.html#afed39f6feee730bbeb73ad3e167e5d44">mfem::MixedVectorIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedDotProductIntegrator.html#a561432cbf7434392b9aa1d2a7b9d32db">mfem::MixedDotProductIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedWeakGradDotIntegrator.html#a85f8cc7273f998ba9c8ea1e52551d3aa">mfem::MixedWeakGradDotIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarWeakGradientIntegrator.html#a786acaf38e22cbe53ea8c1a27c6ea23f">mfem::MixedScalarWeakGradientIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarDerivativeIntegrator.html#adfb9cc84b2515d027a23595116ef3dae">mfem::MixedScalarDerivativeIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedDivGradIntegrator.html#a9b1853876fa74a11f4682c3054fbe1bb">mfem::MixedDivGradIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCrossCurlIntegrator.html#a1d55d94b3d412632d61257d858a15f70">mfem::MixedCrossCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCrossCurlGradIntegrator.html#a488c5f93ca9e7228f923a0e14f31b178">mfem::MixedCrossCurlGradIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCrossGradCurlIntegrator.html#a2142e46a5cf18b5af6e00b462d61da63">mfem::MixedCrossGradCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarIntegrator.html#aab089eae90d1e12e9b355c3c10d2d480">mfem::MixedScalarIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarWeakDerivativeIntegrator.html#abeb8bede95e452286ab538a6159365f9">mfem::MixedScalarWeakDerivativeIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedVectorDivergenceIntegrator.html#a5249ff08e1b6bc7641f43af2381f480e">mfem::MixedVectorDivergenceIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarCurlIntegrator.html#a37ed22d88153dc823c48fb76e4e84e1e">mfem::MixedScalarCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedWeakDivCrossIntegrator.html#a342edc809dcedc869b353f93dfce5914">mfem::MixedWeakDivCrossIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedGradGradIntegrator.html#ad2a124e35322058e73d26e398473ff1d">mfem::MixedGradGradIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCrossGradGradIntegrator.html#ac3b2a93b815d989b8e1ed5012521d75e">mfem::MixedCrossGradGradIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCrossCurlCurlIntegrator.html#a0ec0393245b92f2a1fcb95ca142a7a50">mfem::MixedCrossCurlCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarDivergenceIntegrator.html#abd7c02548dae9a604e3c01f7bd9aa09b">mfem::MixedScalarDivergenceIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarWeakCurlCrossIntegrator.html#afe8f570313f69d9aba3ce3ea71888ad5">mfem::MixedScalarWeakCurlCrossIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarCrossGradIntegrator.html#a8c1190f98b9ad948d19baea7b01313bb">mfem::MixedScalarCrossGradIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarWeakCurlIntegrator.html#a56c380ce4f805248c8b6db808341655e">mfem::MixedScalarWeakCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedGradDivIntegrator.html#a6ffd5cea6df37e3e50de3be15cb0261a">mfem::MixedGradDivIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedVectorCurlIntegrator.html#a799e3865caaa0a1b05fdbc817cc6aa90">mfem::MixedVectorCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarVectorIntegrator.html#a10d3d5559d5804cd2154ce3455c6bdfe">mfem::MixedScalarVectorIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCurlCurlIntegrator.html#a503bd8b7e04663813749063b15b0fb27">mfem::MixedCurlCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarCrossCurlIntegrator.html#a31a5eb91ef8cc67d0a59d637bbb33484">mfem::MixedScalarCrossCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedWeakCurlCrossIntegrator.html#ace226b04f7420e64a63e347e79676b9b">mfem::MixedWeakCurlCrossIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedVectorWeakCurlIntegrator.html#ad1678f8bd370c60a655af056e25d94f1">mfem::MixedVectorWeakCurlIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedVectorGradientIntegrator.html#ac8753ae76a151ecf23ed571c1312d0bb">mfem::MixedVectorGradientIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedVectorWeakDivergenceIntegrator.html#a1a9cd49db11a1fa22d4b6f36586dacff">mfem::MixedVectorWeakDivergenceIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedDirectionalDerivativeIntegrator.html#a56fca08bba670a2cc881492b28176e4a">mfem::MixedDirectionalDerivativeIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarCrossProductIntegrator.html#a49dc40130d7562c27c2103959127607c">mfem::MixedScalarCrossProductIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedScalarWeakCrossProductIntegrator.html#a79608c9b5e6a9e05863ae52f252e4a91">mfem::MixedScalarWeakCrossProductIntegrator</a>
+, <a class="el" href="classmfem_1_1MixedCrossGradIntegrator.html#a120aa2a0efe2c3ea8c8df100cc8d139a">mfem::MixedCrossGradIntegrator</a>
 </li>
 <li>FIR
 : <a class="el" href="classmfem_1_1HypreSmoother.html#abc485b064d2d5a19f17cf403195d32aaa6fd6b7473b8bce6f4bce6cf8307850ee">mfem::HypreSmoother</a>
@@ -700,6 +738,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>first_elem_idx
 : <a class="el" href="structmfem_1_1TElementTransformation_1_1Result_3_0110_00_01it__t_01_4.html#a707a60b1531bad3d42075f9d786b27fb">mfem::TElementTransformation&lt; Mesh_t, IR, real_t &gt;::Result&lt; 10, it_t &gt;</a>
 </li>
+<li>FirstFaceDof()
+: <a class="el" href="classmfem_1_1FiniteElementSpace.html#a377f319a8d146e77f4d7aea7c76d0c65">mfem::FiniteElementSpace</a>
+</li>
 <li>firstSolveWithThisA_
 : <a class="el" href="classmfem_1_1SuperLUSolver.html#a226c09495a200fbc47c8b7d43adc00e8">mfem::SuperLUSolver</a>
 </li>
@@ -707,8 +748,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1PetscBCHandler.html#abc162a93c6286bf54c3a31b5d14f4913">mfem::PetscBCHandler</a>
 </li>
 <li>flag
-: <a class="el" href="structmfem_1_1NCMesh_1_1Element.html#ab568441dd5a72a6d984bfa00df5ddbaa">mfem::NCMesh::Element</a>
-, <a class="el" href="classmfem_1_1SundialsSolver.html#a67cd8b430ba8807d09e8b9acda1c73f1">mfem::SundialsSolver</a>
+: <a class="el" href="classmfem_1_1SundialsSolver.html#a67cd8b430ba8807d09e8b9acda1c73f1">mfem::SundialsSolver</a>
+, <a class="el" href="structmfem_1_1NCMesh_1_1Element.html#ab568441dd5a72a6d984bfa00df5ddbaa">mfem::NCMesh::Element</a>
 </li>
 <li>FlagElements()
 : <a class="el" href="classmfem_1_1ParNCMesh_1_1ElementSet.html#a6287e71f51173f57ad4f3cb59a2a32ef">mfem::ParNCMesh::ElementSet</a>
@@ -718,12 +759,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>flags
 : <a class="el" href="classmfem_1_1Memory.html#ac929fdb65bbfc48a96dc53479c680a6f">mfem::Memory&lt; T &gt;</a>
-</li>
-<li>flfi
-: <a class="el" href="classmfem_1_1LinearForm.html#a10a96cdc0ebe3ca189ff17201390b5a4">mfem::LinearForm</a>
-</li>
-<li>flfi_marker
-: <a class="el" href="classmfem_1_1LinearForm.html#a13640caa4a62a20e4d53d919cef574cc">mfem::LinearForm</a>
 </li>
 <li>Flip()
 : <a class="el" href="classmfem_1_1KnotVector.html#ad07458c5850147261a1f818cb97fbac7">mfem::KnotVector</a>
@@ -738,21 +773,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a2e08051c1c313c6b4733b229900ffbb7">mfem::ZienkiewiczZhuEstimator</a>
 </li>
 <li>flux_space
-: <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#a3c06592bef4e616343b1d5f5f267a439">mfem::L2ZienkiewiczZhuEstimator</a>
-, <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a85f08e0db32f4c792981f2b4d4f7da78">mfem::ZienkiewiczZhuEstimator</a>
+: <a class="el" href="classmfem_1_1ZienkiewiczZhuEstimator.html#a85f08e0db32f4c792981f2b4d4f7da78">mfem::ZienkiewiczZhuEstimator</a>
+, <a class="el" href="classmfem_1_1L2ZienkiewiczZhuEstimator.html#a3c06592bef4e616343b1d5f5f267a439">mfem::L2ZienkiewiczZhuEstimator</a>
+</li>
+<li>fms_protocol
+: <a class="el" href="classmfem_1_1FMSDataCollection.html#a47117f071a29cec884dc5edec9c7340d">mfem::FMSDataCollection</a>
+</li>
+<li>FMSDataCollection()
+: <a class="el" href="classmfem_1_1FMSDataCollection.html#a9d2743c8f524de60b207ff5619f18fb1">mfem::FMSDataCollection</a>
 </li>
 <li>fn
 : <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#a67c17631f1ecd32ab4bfcea6fe55fe21">mfem::navier::NavierSolver</a>
 </li>
 <li>fnfi
-: <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a94641733f6242ec5dfbe87ec24d65647">mfem::BlockNonlinearForm</a>
-, <a class="el" href="classmfem_1_1NonlinearForm.html#adac8ad94b8e426b28bfee7ae40ab8690">mfem::NonlinearForm</a>
+: <a class="el" href="classmfem_1_1NonlinearForm.html#adac8ad94b8e426b28bfee7ae40ab8690">mfem::NonlinearForm</a>
+, <a class="el" href="classmfem_1_1BlockNonlinearForm.html#a94641733f6242ec5dfbe87ec24d65647">mfem::BlockNonlinearForm</a>
+, <a class="el" href="classmfem_1_1ParametricBNLForm.html#afd83ec4840a3f34bb4eedfb0b1c8c63e">mfem::ParametricBNLForm</a>
 </li>
 <li>FNorm()
 : <a class="el" href="classmfem_1_1DenseMatrix.html#a896b06326b2d19c8be725bd218995517">mfem::DenseMatrix</a>
 </li>
 <li>FNorm2()
 : <a class="el" href="classmfem_1_1DenseMatrix.html#a6a848e5a7994a2f50babf9deb2cdde14">mfem::DenseMatrix</a>
+</li>
+<li>fnorm_last
+: <a class="el" href="classmfem_1_1NewtonSolver.html#aa8cb66d04c0fa77564342b2a1369231e">mfem::NewtonSolver</a>
+</li>
+<li>force_l2_space
+: <a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#ac96fa678399a062ef3927c80cd6a682e">mfem::L2ProjectionGridTransfer</a>
 </li>
 <li>ForceRefinement()
 : <a class="el" href="classmfem_1_1NCMesh.html#a93a9e86595e6b4d6ad5b08d3841cbc98">mfem::NCMesh</a>
@@ -773,55 +821,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1Operator.html#a4626fca8e92c602f67122b283860db93">mfem::Operator</a>
 </li>
 <li>FormFineLinearSystem()
-: <a class="el" href="classmfem_1_1Multigrid.html#a9a6c897639cb395320f1aa062fd978c8">mfem::Multigrid</a>
+: <a class="el" href="classmfem_1_1GeometricMultigrid.html#acbb04936ebd80c6a473e44a1bb9f2542">mfem::GeometricMultigrid</a>
 </li>
 <li>FormLinearSystem()
-: <a class="el" href="classmfem_1_1Operator.html#a110b300f31b8142d809fc32a37b1547e">mfem::Operator</a>
-, <a class="el" href="classmfem_1_1MFBilinearFormExtension.html#abd10a5cc49643e2d3f2d881027fa956a">mfem::MFBilinearFormExtension</a>
-, <a class="el" href="classmfem_1_1BilinearForm.html#ac6075c6642a0ffbb991c3b604b6858f7">mfem::BilinearForm</a>
+: <a class="el" href="classmfem_1_1PABilinearFormExtension.html#a3088b29c16db9c4dc139e09f85ab5fe3">mfem::PABilinearFormExtension</a>
 , <a class="el" href="classmfem_1_1ParSesquilinearForm.html#a43d94391a16de332884c52cc8b0b1748">mfem::ParSesquilinearForm</a>
-, <a class="el" href="classmfem_1_1PABilinearFormExtension.html#a3088b29c16db9c4dc139e09f85ab5fe3">mfem::PABilinearFormExtension</a>
-, <a class="el" href="classmfem_1_1ParBilinearForm.html#a18f85598df86e54ed8e629c523315b94">mfem::ParBilinearForm</a>
 , <a class="el" href="classmfem_1_1BilinearFormExtension.html#a382863af6e2667b73e084ef56b3831cf">mfem::BilinearFormExtension</a>
-, <a class="el" href="classmfem_1_1BilinearForm.html#aeab219d57f1fa7e670f115a80585adb2">mfem::BilinearForm</a>
+, <a class="el" href="classmfem_1_1MFBilinearFormExtension.html#abd10a5cc49643e2d3f2d881027fa956a">mfem::MFBilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1Operator.html#a110b300f31b8142d809fc32a37b1547e">mfem::Operator</a>
+, <a class="el" href="classmfem_1_1BilinearForm.html#ac6075c6642a0ffbb991c3b604b6858f7">mfem::BilinearForm</a>
 , <a class="el" href="classmfem_1_1SesquilinearForm.html#af1d2dc0142dbbc15aa5828a4cdce64c2">mfem::SesquilinearForm</a>
+, <a class="el" href="classmfem_1_1ParBilinearForm.html#a18f85598df86e54ed8e629c523315b94">mfem::ParBilinearForm</a>
 </li>
 <li>FormRectangularConstrainedSystemOperator()
 : <a class="el" href="classmfem_1_1Operator.html#ae17b1734b2b2bbbc3b13810f90f3f398">mfem::Operator</a>
 </li>
 <li>FormRectangularLinearSystem()
-: <a class="el" href="classmfem_1_1ParMixedBilinearForm.html#a363104e5c29307af9860bfcdcce98faf">mfem::ParMixedBilinearForm</a>
-, <a class="el" href="classmfem_1_1MixedBilinearFormExtension.html#aefab0b335b97ce37c0e8f4343b879603">mfem::MixedBilinearFormExtension</a>
+: <a class="el" href="classmfem_1_1Operator.html#a059ebb07070744a542a6fec3ea04a84b">mfem::Operator</a>
 , <a class="el" href="classmfem_1_1PAMixedBilinearFormExtension.html#af288fa7d6c6055783859b2d3cd23610a">mfem::PAMixedBilinearFormExtension</a>
-, <a class="el" href="classmfem_1_1MixedBilinearForm.html#ab5e9b0ff5dc7fa7063fbce7a5b5816e5">mfem::MixedBilinearForm</a>
-, <a class="el" href="classmfem_1_1Operator.html#a059ebb07070744a542a6fec3ea04a84b">mfem::Operator</a>
+, <a class="el" href="classmfem_1_1MixedBilinearFormExtension.html#aefab0b335b97ce37c0e8f4343b879603">mfem::MixedBilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1MixedBilinearForm.html#aff1292470eff1a4cbf0dc9e356f714e7">mfem::MixedBilinearForm</a>
+, <a class="el" href="classmfem_1_1ParMixedBilinearForm.html#a363104e5c29307af9860bfcdcce98faf">mfem::ParMixedBilinearForm</a>
 </li>
 <li>FormRectangularSystemMatrix()
-: <a class="el" href="classmfem_1_1ParMixedBilinearForm.html#a59c23f8a559ab35d364cd5bb5c74a96f">mfem::ParMixedBilinearForm</a>
-, <a class="el" href="classmfem_1_1MixedBilinearForm.html#ac0ca4fb05aa50056e864e73b672b4a76">mfem::MixedBilinearForm</a>
+: <a class="el" href="classmfem_1_1MixedBilinearForm.html#ac0ca4fb05aa50056e864e73b672b4a76">mfem::MixedBilinearForm</a>
+, <a class="el" href="classmfem_1_1ParDiscreteLinearOperator.html#ac74197ee8c194a234b5aa8a01b1e3b1b">mfem::ParDiscreteLinearOperator</a>
+, <a class="el" href="classmfem_1_1ParMixedBilinearForm.html#a59c23f8a559ab35d364cd5bb5c74a96f">mfem::ParMixedBilinearForm</a>
+, <a class="el" href="classmfem_1_1MixedBilinearForm.html#a44494ff3d03bbd32d3fb7ff332c7dd91">mfem::MixedBilinearForm</a>
 </li>
 <li>FormRectangularSystemOperator()
-: <a class="el" href="classmfem_1_1MixedBilinearFormExtension.html#a64b553a9fa1a2fe0ee0b37d5fe2f1d8c">mfem::MixedBilinearFormExtension</a>
+: <a class="el" href="classmfem_1_1PAMixedBilinearFormExtension.html#a98473e9a00e0416da66ec9783d1365bf">mfem::PAMixedBilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1PADiscreteLinearOperatorExtension.html#a65890ae7cc592fb831c5f76dbaef3223">mfem::PADiscreteLinearOperatorExtension</a>
 , <a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19">mfem::Operator</a>
-, <a class="el" href="classmfem_1_1PAMixedBilinearFormExtension.html#a98473e9a00e0416da66ec9783d1365bf">mfem::PAMixedBilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1MixedBilinearFormExtension.html#a64b553a9fa1a2fe0ee0b37d5fe2f1d8c">mfem::MixedBilinearFormExtension</a>
 </li>
 <li>FormSystemMatrix()
 : <a class="el" href="classmfem_1_1PABilinearFormExtension.html#aae8808deead1a657f882d4466c09b6cc">mfem::PABilinearFormExtension</a>
-, <a class="el" href="classmfem_1_1ParSesquilinearForm.html#a4180f7e84993624f68e8be70e6e8953f">mfem::ParSesquilinearForm</a>
-, <a class="el" href="classmfem_1_1SesquilinearForm.html#a7ec03d8969c7f5285c0c16a8b2d9f7eb">mfem::SesquilinearForm</a>
 , <a class="el" href="classmfem_1_1MFBilinearFormExtension.html#ad8f0f3d594e880cb89f4bd86e15c5927">mfem::MFBilinearFormExtension</a>
-, <a class="el" href="classmfem_1_1BilinearForm.html#af5c517465d727fc7b969bfac112689da">mfem::BilinearForm</a>
-, <a class="el" href="classmfem_1_1BilinearFormExtension.html#a1cfae8584acd8e5465755ea3ea9bff00">mfem::BilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1SesquilinearForm.html#a7ec03d8969c7f5285c0c16a8b2d9f7eb">mfem::SesquilinearForm</a>
 , <a class="el" href="classmfem_1_1BilinearForm.html#a80d6a586b352a0072c26b341e69c8478">mfem::BilinearForm</a>
 , <a class="el" href="classmfem_1_1ParBilinearForm.html#aef5fff300083baee2fc557ad6e5c26e5">mfem::ParBilinearForm</a>
+, <a class="el" href="classmfem_1_1BilinearFormExtension.html#a1cfae8584acd8e5465755ea3ea9bff00">mfem::BilinearFormExtension</a>
+, <a class="el" href="classmfem_1_1ParSesquilinearForm.html#a4180f7e84993624f68e8be70e6e8953f">mfem::ParSesquilinearForm</a>
+, <a class="el" href="classmfem_1_1BilinearForm.html#af5c517465d727fc7b969bfac112689da">mfem::BilinearForm</a>
 </li>
 <li>FormSystemOperator()
 : <a class="el" href="classmfem_1_1Operator.html#a22c2496db1f13189e4c915627c12d94a">mfem::Operator</a>
 </li>
 <li>ForwardOperator()
-: <a class="el" href="classmfem_1_1GridTransfer.html#aaa83ed7c7541d450943778e451f931c1">mfem::GridTransfer</a>
-, <a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#ab8bd4e016aac2f6f3ef3051d82125efa">mfem::L2ProjectionGridTransfer</a>
+: <a class="el" href="classmfem_1_1L2ProjectionGridTransfer.html#ab8bd4e016aac2f6f3ef3051d82125efa">mfem::L2ProjectionGridTransfer</a>
 , <a class="el" href="classmfem_1_1InterpolationGridTransfer.html#af020493b793bc7c7ad6b02229f7b982c">mfem::InterpolationGridTransfer</a>
+, <a class="el" href="classmfem_1_1GridTransfer.html#aaa83ed7c7541d450943778e451f931c1">mfem::GridTransfer</a>
 </li>
 <li>FoxGoodwinSolver()
 : <a class="el" href="classmfem_1_1FoxGoodwinSolver.html#af9512e13b39d2d7dcc15df2fd66fb245">mfem::FoxGoodwinSolver</a>
@@ -836,8 +886,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classmfem_1_1FindPointsGSLIB.html#aa4450fb243a28ad69eaf50b9efb2f080">mfem::FindPointsGSLIB</a>
 </li>
 <li>FreeElement()
-: <a class="el" href="classmfem_1_1NCMesh.html#a098aa084b66fd0f4fdf30e25ff522645">mfem::NCMesh</a>
-, <a class="el" href="classmfem_1_1Mesh.html#ac8d75c3d28255c7153c2b72f7811058a">mfem::Mesh</a>
+: <a class="el" href="classmfem_1_1Mesh.html#ac8d75c3d28255c7153c2b72f7811058a">mfem::Mesh</a>
+, <a class="el" href="classmfem_1_1NCMesh.html#a098aa084b66fd0f4fdf30e25ff522645">mfem::NCMesh</a>
 </li>
 <li>FreeElementMatrices()
 : <a class="el" href="classmfem_1_1BilinearForm.html#a38cd3255e18e75304aa811b24b59adb3">mfem::BilinearForm</a>
@@ -851,8 +901,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>from
 : <a class="el" href="structmfem_1_1Connection.html#a6d14fcfa22d22f49f72681397a66b29f">mfem::Connection</a>
 </li>
+<li>fs_
+: <a class="el" href="structzstr_1_1detail_1_1strict__fstream__holder.html#a5d938ca10088b1830b681239d74f86ea">zstr::detail::strict_fstream_holder&lt; FStream_Type &gt;</a>
+</li>
 <li>fstream()
-: <a class="el" href="classstrict__fstream_1_1fstream.html#a11d570c92528f9258ca8b24d5b8c32c1">strict_fstream::fstream</a>
+: <a class="el" href="classstrict__fstream_1_1fstream.html#aec97ecda6f91082b9470f553dde1919d">strict_fstream::fstream</a>
 </li>
 <li>FText
 : <a class="el" href="classmfem_1_1navier_1_1NavierSolver.html#aeb7c6770df83cc9f30f33d3fcdc3d3e1">mfem::navier::NavierSolver</a>
@@ -884,17 +937,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>FullMult()
 : <a class="el" href="classmfem_1_1BilinearForm.html#a4bf3232f3c7013b63a6f290ad87a5e91">mfem::BilinearForm</a>
 </li>
+<li>func
+: <a class="el" href="classmfem_1_1PUMPLaplacian.html#a4699206b8934861284858e1443c90996">mfem::PUMPLaplacian</a>
+, <a class="el" href="classmfem_1_1ScreenedPoisson.html#a7c6fbe4bcbad2b02c2c6a7961a34c4eb">mfem::ScreenedPoisson</a>
+</li>
+<li>func_dof_marking
+: <a class="el" href="classmfem_1_1ShiftedFaceMarker.html#a9c6837ddecfb816cc4d011ef22f5c925">mfem::ShiftedFaceMarker</a>
+</li>
 <li>func_space
 : <a class="el" href="classmfem_1_1FiniteElement.html#a1f81231389c34a72a76ba9b3d07de85b">mfem::FiniteElement</a>
 </li>
 <li>Function
 : <a class="el" href="classmfem_1_1FunctionCoefficient.html#a2da5688290643cd74ff18d306d6d8da1">mfem::FunctionCoefficient</a>
+, <a class="el" href="classmfem_1_1ShiftedFunctionCoefficient.html#aa8ddc50210c96bf95eaffd2ea6c68fb8">mfem::ShiftedFunctionCoefficient</a>
 </li>
 <li>functional
 : <a class="el" href="classGecko_1_1Graph.html#aef934689006ca479e9d140115247a665">Gecko::Graph</a>
 </li>
 <li>FunctionCoefficient()
-: <a class="el" href="classmfem_1_1FunctionCoefficient.html#af1ea6640d7568d97421d2b9eaf9bccb5">mfem::FunctionCoefficient</a>
+: <a class="el" href="classmfem_1_1FunctionCoefficient.html#a393622cc307f8ab9d483ee127ef29a7a">mfem::FunctionCoefficient</a>
 </li>
 <li>fw_t_oper
 : <a class="el" href="classmfem_1_1GridTransfer.html#aa0596ca07139c27b05d345c2cd6b5bc1">mfem::GridTransfer</a>
@@ -903,7 +964,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:53 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

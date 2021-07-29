@@ -2,10 +2,13 @@ var searchData=
 [
   ['backend',['Backend',['../structmfem_1_1Backend.html',1,'mfem']]],
   ['backwardeulersolver',['BackwardEulerSolver',['../classmfem_1_1BackwardEulerSolver.html',1,'mfem']]],
+  ['baseqfunction',['BaseQFunction',['../classmfem_1_1BaseQFunction.html',1,'mfem']]],
   ['basis',['Basis',['../classmfem_1_1Poly__1D_1_1Basis.html',1,'mfem::Poly_1D']]],
   ['basistype',['BasisType',['../classmfem_1_1BasisType.html',1,'mfem']]],
+  ['bbtsolver',['BBTSolver',['../classmfem_1_1blocksolvers_1_1BBTSolver.html',1,'mfem::blocksolvers']]],
   ['bdata',['BData',['../structmfem_1_1FieldEvaluator_1_1BData.html',1,'mfem::FieldEvaluator']]],
-  ['bicgstabsolver',['BICGSTABSolver',['../classmfem_1_1GinkgoWrappers_1_1BICGSTABSolver.html',1,'mfem::GinkgoWrappers']]],
+  ['bdpminressolver',['BDPMinresSolver',['../classmfem_1_1blocksolvers_1_1BDPMinresSolver.html',1,'mfem::blocksolvers']]],
+  ['bicgstabsolver',['BICGSTABSolver',['../classmfem_1_1Ginkgo_1_1BICGSTABSolver.html',1,'mfem::Ginkgo']]],
   ['bicgstabsolver',['BiCGSTABSolver',['../classmfem_1_1BiCGSTABSolver.html',1,'mfem']]],
   ['bicubic2dfiniteelement',['BiCubic2DFiniteElement',['../classmfem_1_1BiCubic2DFiniteElement.html',1,'mfem']]],
   ['bicubic3dfiniteelement',['BiCubic3DFiniteElement',['../classmfem_1_1BiCubic3DFiniteElement.html',1,'mfem']]],
@@ -33,5 +36,7 @@ var searchData=
   ['boundarylfintegrator',['BoundaryLFIntegrator',['../classmfem_1_1BoundaryLFIntegrator.html',1,'mfem']]],
   ['boundarymassintegrator',['BoundaryMassIntegrator',['../classmfem_1_1BoundaryMassIntegrator.html',1,'mfem']]],
   ['boundarynormallfintegrator',['BoundaryNormalLFIntegrator',['../classmfem_1_1BoundaryNormalLFIntegrator.html',1,'mfem']]],
-  ['boundarytangentiallfintegrator',['BoundaryTangentialLFIntegrator',['../classmfem_1_1BoundaryTangentialLFIntegrator.html',1,'mfem']]]
+  ['boundarytangentiallfintegrator',['BoundaryTangentialLFIntegrator',['../classmfem_1_1BoundaryTangentialLFIntegrator.html',1,'mfem']]],
+  ['buffers',['Buffers',['../classmfem_1_1kernels_1_1InvariantsEvaluator2D_1_1Buffers.html',1,'mfem::kernels::InvariantsEvaluator2D']]],
+  ['buffers',['Buffers',['../classmfem_1_1kernels_1_1InvariantsEvaluator3D_1_1Buffers.html',1,'mfem::kernels::InvariantsEvaluator3D']]]
 ];

@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['kappa_5ffun',['kappa_fun',['../navier__cht_8cpp.html#a43d49c570733d9bd3734dd3baea89a6a',1,'navier_cht.cpp']]],
   ['kdtreesort',['KdTreeSort',['../namespacemfem.html#a7ece3e3e2a3c7c10c5a1b63c578354aa',1,'mfem']]],
   ['keepnbrblock',['KeepNbrBlock',['../classmfem_1_1ParBilinearForm.html#ac1f8069100848de1b659781c42a6dfd8',1,'mfem::ParBilinearForm']]],
+  ['kellyerrorestimator',['KellyErrorEstimator',['../classmfem_1_1KellyErrorEstimator.html#a994f06953e4fe175deeb30bdf25e5e2c',1,'mfem::KellyErrorEstimator::KellyErrorEstimator(BilinearFormIntegrator &amp;di_, GridFunction &amp;sol_, FiniteElementSpace &amp;flux_fes_, const Array&lt; int &gt; &amp;attributes_=Array&lt; int &gt;())'],['../classmfem_1_1KellyErrorEstimator.html#a3696fa8442797838a45af74445f28c81',1,'mfem::KellyErrorEstimator::KellyErrorEstimator(BilinearFormIntegrator &amp;di_, GridFunction &amp;sol_, FiniteElementSpace *flux_fes_, const Array&lt; int &gt; &amp;attributes_=Array&lt; int &gt;())']]],
   ['kinsolver',['KINSolver',['../classmfem_1_1KINSolver.html#a04794de83f2bf43b5be283c7e35c7d64',1,'mfem::KINSolver::KINSolver(int strategy, bool oper_grad=true)'],['../classmfem_1_1KINSolver.html#ad038b0cbf43e0be5a203766edb4aba26',1,'mfem::KINSolver::KINSolver(MPI_Comm comm, int strategy, bool oper_grad=true)']]],
   ['klusolver',['KLUSolver',['../classmfem_1_1KLUSolver.html#a34340a787a8b6fbec5e1ff39f41d951e',1,'mfem::KLUSolver::KLUSolver()'],['../classmfem_1_1KLUSolver.html#a9d52ac36ab787647c8fce5d0af64cc2f',1,'mfem::KLUSolver::KLUSolver(SparseMatrix &amp;A)']]],
   ['knotind',['KnotInd',['../classmfem_1_1NURBSExtension.html#ae5f9d8d1ebb89a4adf1cdc5f78ca77a0',1,'mfem::NURBSExtension']]],

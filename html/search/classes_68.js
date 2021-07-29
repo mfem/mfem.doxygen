@@ -29,9 +29,11 @@ var searchData=
   ['h1ser_5fquadrilateralelement',['H1Ser_QuadrilateralElement',['../classmfem_1_1H1Ser__QuadrilateralElement.html',1,'mfem']]],
   ['hashed2',['Hashed2',['../structmfem_1_1Hashed2.html',1,'mfem']]],
   ['hashed4',['Hashed4',['../structmfem_1_1Hashed4.html',1,'mfem']]],
+  ['hashfunction',['HashFunction',['../classmfem_1_1HashFunction.html',1,'mfem']]],
   ['hashtable',['HashTable',['../classmfem_1_1HashTable.html',1,'mfem']]],
   ['hashtable_3c_20mfem_3a_3ancmesh_3a_3aface_20_3e',['HashTable&lt; mfem::NCMesh::Face &gt;',['../classmfem_1_1HashTable.html',1,'mfem']]],
   ['hashtable_3c_20mfem_3a_3ancmesh_3a_3anode_20_3e',['HashTable&lt; mfem::NCMesh::Node &gt;',['../classmfem_1_1HashTable.html',1,'mfem']]],
+  ['heatdistancesolver',['HeatDistanceSolver',['../classmfem_1_1HeatDistanceSolver.html',1,'mfem']]],
   ['hessiancoefficient',['HessianCoefficient',['../classHessianCoefficient.html',1,'']]],
   ['hexahedron',['Hexahedron',['../classmfem_1_1Hexahedron.html',1,'mfem']]],
   ['hhtalphasolver',['HHTAlphaSolver',['../classmfem_1_1HHTAlphaSolver.html',1,'mfem']]],
@@ -56,5 +58,6 @@ var searchData=
   ['hypreparvector',['HypreParVector',['../classmfem_1_1HypreParVector.html',1,'mfem']]],
   ['hyprepcg',['HyprePCG',['../classmfem_1_1HyprePCG.html',1,'mfem']]],
   ['hypresmoother',['HypreSmoother',['../classmfem_1_1HypreSmoother.html',1,'mfem']]],
-  ['hypresolver',['HypreSolver',['../classmfem_1_1HypreSolver.html',1,'mfem']]]
+  ['hypresolver',['HypreSolver',['../classmfem_1_1HypreSolver.html',1,'mfem']]],
+  ['hypretrisolve',['HypreTriSolve',['../classmfem_1_1HypreTriSolve.html',1,'mfem']]]
 ];

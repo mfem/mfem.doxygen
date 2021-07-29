@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['qlineardiffusion',['QLinearDiffusion',['../classmfem_1_1QLinearDiffusion.html',1,'mfem']]],
   ['quad1dfiniteelement',['Quad1DFiniteElement',['../classmfem_1_1Quad1DFiniteElement.html',1,'mfem']]],
   ['quad2dfiniteelement',['Quad2DFiniteElement',['../classmfem_1_1Quad2DFiniteElement.html',1,'mfem']]],
   ['quadpos1dfiniteelement',['QuadPos1DFiniteElement',['../classmfem_1_1QuadPos1DFiniteElement.html',1,'mfem']]],

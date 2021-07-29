@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['kellyerrorestimator',['KellyErrorEstimator',['../classmfem_1_1KellyErrorEstimator.html',1,'mfem']]],
   ['kernel',['kernel',['../structmfem_1_1TIntegrator_1_1kernel.html',1,'mfem::TIntegrator']]],
   ['key_5fhash',['key_hash',['../structmfem_1_1FiniteElementSpace_1_1key__hash.html',1,'mfem::FiniteElementSpace']]],
   ['kinsolver',['KINSolver',['../classmfem_1_1KINSolver.html',1,'mfem']]],

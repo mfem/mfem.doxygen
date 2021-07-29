@@ -15,9 +15,13 @@ var searchData=
   ['width',['width',['../classmfem_1_1Operator.html#a19823327e636510bfcd9f8c5e4bf48fa',1,'mfem::Operator::width()'],['../classmfem_1_1MatrixCoefficient.html#af5c9f05abebfc5d4fa46d9bc589cba1b',1,'mfem::MatrixCoefficient::width()']]],
   ['window_5fparams',['window_params',['../classmfem_1_1HypreSmoother.html#a7309c6ae1c64a7354894483cc699ff69',1,'mfem::HypreSmoother']]],
   ['with_5fcoeff',['with_coeff',['../classmfem_1_1ZienkiewiczZhuEstimator.html#a6dee7e6263ebfd3608b3b82917ebb3e9',1,'mfem::ZienkiewiczZhuEstimator']]],
+  ['workb',['workb',['../classmfem_1_1ConstrainedSolver.html#ab50c8754e3205d22636b0f540e749078',1,'mfem::ConstrainedSolver']]],
+  ['workx',['workx',['../classmfem_1_1ConstrainedSolver.html#a02978cd22771cfaadc9dac3d76c4ad18',1,'mfem::ConstrainedSolver']]],
   ['world_5frank',['world_rank',['../classmfem_1_1MPI__Session.html#a28caef8fbcd9bc330c0cf33f2a8aeab0',1,'mfem::MPI_Session']]],
   ['world_5fsize',['world_size',['../classmfem_1_1MPI__Session.html#a5e8b1948979256a993f547a450aa8c6c',1,'mfem::MPI_Session']]],
+  ['wrapped_5fvec',['wrapped_vec',['../classmfem_1_1Ginkgo_1_1VectorWrapper.html#a74907e2f10dd829d8df6197667726a53',1,'mfem::Ginkgo::VectorWrapper']]],
   ['wrk',['wrk',['../classmfem_1_1KINSolver.html#a8d8305a60e20c00db250f428c4e98b74',1,'mfem::KINSolver']]],
+  ['wt_5farr',['wt_arr',['../classmfem_1_1TMOP__Combo__QualityMetric.html#a46a0cfcc3e484e0967080cd597a442db',1,'mfem::TMOP_Combo_QualityMetric']]],
   ['ww',['Ww',['../lor-transfer_8cpp.html#a14b667219a30b9d672dd3989fcf02999',1,'lor-transfer.cpp']]],
   ['wx',['Wx',['../lor-transfer_8cpp.html#a477a84cb70067187e60ad47b09af1da0',1,'lor-transfer.cpp']]],
   ['wy',['Wy',['../lor-transfer_8cpp.html#a2c5ef592ade23a58f3dc2f237510b42a',1,'lor-transfer.cpp']]]

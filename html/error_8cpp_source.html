@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">error.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="error_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="error_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -191,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">err</a> = unw_getcontext(&amp;uc);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   err = err ? err : unw_init_local(&amp;cursor, &amp;uc);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   <a class="code" href="classmfem_1_1Array.html">Array&lt;unw_word_t&gt;</a> addrs;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   <a class="code" href="classmfem_1_1Array.html">Array&lt;unw_word_t&gt;</a> addrs(<a class="code" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5">MemoryType::HOST</a>);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <span class="keywordflow">while</span> (unw_step(&amp;cursor) &gt; 0 &amp;&amp; addrs.<a class="code" href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">Size</a>() != depth)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      err = err ? err : unw_get_proc_name(&amp;cursor, name, UNW_NAME_LEN, &amp;offp);</div>
@@ -292,11 +292,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
-<div class="ttc" id="classmfem_1_1Array_html_a813eda5c8de9bfcbf06f89adaff1f8ff"><div class="ttname"><a href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">mfem::Array::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Return the logical size of the array. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00124">array.hpp:124</a></div></div>
+<div class="ttc" id="classmfem_1_1Array_html_a813eda5c8de9bfcbf06f89adaff1f8ff"><div class="ttname"><a href="classmfem_1_1Array.html#a813eda5c8de9bfcbf06f89adaff1f8ff">mfem::Array::Size</a></div><div class="ttdeci">int Size() const </div><div class="ttdoc">Return the logical size of the array. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00134">array.hpp:134</a></div></div>
 <div class="ttc" id="classmfem_1_1ErrorException_html_a9c170279f8b7b03295aa57db032ccbdf"><div class="ttname"><a href="classmfem_1_1ErrorException.html#a9c170279f8b7b03295aa57db032ccbdf">mfem::ErrorException::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00039">error.cpp:39</a></div></div>
 <div class="ttc" id="namespacemfem_html_ac0098a0cf48a5a043828e12d258999e9"><div class="ttname"><a href="namespacemfem.html#ac0098a0cf48a5a043828e12d258999e9">mfem::get_error_action</a></div><div class="ttdeci">ErrorAction get_error_action()</div><div class="ttdoc">Get the action MFEM takes when an error is encountered. </div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00072">error.cpp:72</a></div></div>
 <div class="ttc" id="classmfem_1_1ErrorException_html"><div class="ttname"><a href="classmfem_1_1ErrorException.html">mfem::ErrorException</a></div><div class="ttdoc">Exception class thrown when MFEM encounters an error and the current ErrorAction is set to MFEM_ERROR...</div><div class="ttdef"><b>Definition:</b> <a href="error_8hpp_source.html#l00044">error.hpp:44</a></div></div>
-<div class="ttc" id="classmfem_1_1Array_html_a89b4efb149e79a30a8dd194279154dd6"><div class="ttname"><a href="classmfem_1_1Array.html#a89b4efb149e79a30a8dd194279154dd6">mfem::Array::Append</a></div><div class="ttdeci">int Append(const T &amp;el)</div><div class="ttdoc">Append element &amp;#39;el&amp;#39; to array, resize if necessary. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00726">array.hpp:726</a></div></div>
+<div class="ttc" id="classmfem_1_1Array_html_a89b4efb149e79a30a8dd194279154dd6"><div class="ttname"><a href="classmfem_1_1Array.html#a89b4efb149e79a30a8dd194279154dd6">mfem::Array::Append</a></div><div class="ttdeci">int Append(const T &amp;el)</div><div class="ttdoc">Append element &amp;#39;el&amp;#39; to array, resize if necessary. </div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00746">array.hpp:746</a></div></div>
 <div class="ttc" id="namespacemfem_html_abd1b6105cb4110752ec41c956c18d198"><div class="ttname"><a href="namespacemfem.html#abd1b6105cb4110752ec41c956c18d198">mfem::mfem_error</a></div><div class="ttdeci">void mfem_error(const char *msg)</div><div class="ttdoc">Function called when an error is encountered. Used by the macros MFEM_ABORT, MFEM_ASSERT, MFEM_VERIFY. </div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00153">error.cpp:153</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array</a></div><div class="ttdef"><b>Definition:</b> <a href="adios2stream_8hpp_source.html#l00044">adios2stream.hpp:44</a></div></div>
 <div class="ttc" id="namespacemfem_html_a9999206063f50266ac7021590b04ba72aa3025f545c4c822b0756e5bb3a126e8e"><div class="ttname"><a href="namespacemfem.html#a9999206063f50266ac7021590b04ba72aa3025f545c4c822b0756e5bb3a126e8e">mfem::MFEM_ERROR_ABORT</a></div><div class="ttdef"><b>Definition:</b> <a href="error_8hpp_source.html#l00028">error.hpp:28</a></div></div>
@@ -305,6 +305,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="array_8hpp_html"><div class="ttname"><a href="array_8hpp.html">array.hpp</a></div></div>
 <div class="ttc" id="namespacemfem_html_afe45941924fb90ca83973228a5fb8c64"><div class="ttname"><a href="namespacemfem.html#afe45941924fb90ca83973228a5fb8c64">mfem::err</a></div><div class="ttdeci">OutStream err(std::cerr)</div><div class="ttdoc">Global stream used by the library for standard error output. Initially it uses the same std::streambu...</div><div class="ttdef"><b>Definition:</b> <a href="globals_8hpp_source.html#l00071">globals.hpp:71</a></div></div>
 <div class="ttc" id="error_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="namespacemfem_html_adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5"><div class="ttname"><a href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ab9361011891280a44d85b967739cc6a5">mfem::MemoryType::HOST</a></div><div class="ttdoc">Host memory; using new[] and delete[]. </div></div>
 <div class="ttc" id="namespacemfem_html_add21ff4717ddce3623df131cfac126ab"><div class="ttname"><a href="namespacemfem.html#add21ff4717ddce3623df131cfac126ab">mfem::mfem_warning</a></div><div class="ttdeci">void mfem_warning(const char *msg)</div><div class="ttdoc">Function called by the macro MFEM_WARNING. </div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00186">error.cpp:186</a></div></div>
 <div class="ttc" id="namespacemfem_html_a5320e5cf033925fc715edce93ec67825"><div class="ttname"><a href="namespacemfem.html#a5320e5cf033925fc715edce93ec67825">mfem::mfem_backtrace</a></div><div class="ttdeci">void mfem_backtrace(int mode, int depth)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00083">error.cpp:83</a></div></div>
 <div class="ttc" id="namespacemfem_html_a9999206063f50266ac7021590b04ba72aab11c3e7f44a6246c0e927ebc8728942"><div class="ttname"><a href="namespacemfem.html#a9999206063f50266ac7021590b04ba72aab11c3e7f44a6246c0e927ebc8728942">mfem::MFEM_ERROR_THROW</a></div><div class="ttdef"><b>Definition:</b> <a href="error_8hpp_source.html#l00031">error.hpp:31</a></div></div>
@@ -314,7 +315,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:00 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:39 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

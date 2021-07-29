@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -130,6 +130,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aaeb7f71b8cfee6cf9f203ab05bad6d3c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Device.html#aaeb7f71b8cfee6cf9f203ab05bad6d3c">SetMemoryTypes</a> (<a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a> h_mt, <a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a> d_mt)</td></tr>
+<tr class="memdesc:aaeb7f71b8cfee6cf9f203ab05bad6d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default host and device MemoryTypes, <em>h_mt</em> and <em>d_mt</em>.  <a href="#aaeb7f71b8cfee6cf9f203ab05bad6d3c">More...</a><br/></td></tr>
+<tr class="separator:aaeb7f71b8cfee6cf9f203ab05bad6d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6326e3ae081ffd49e021cceb1a2791f1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Device.html#a6326e3ae081ffd49e021cceb1a2791f1">IsConfigured</a> ()</td></tr>
 <tr class="memdesc:a6326e3ae081ffd49e021cceb1a2791f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if <a class="el" href="classmfem_1_1Device.html#a646eeeb722f797e76c95947f1c0337c7" title="Configure the Device backends. ">Configure()</a> has been called previously.  <a href="#a6326e3ae081ffd49e021cceb1a2791f1">More...</a><br/></td></tr>
 <tr class="separator:a6326e3ae081ffd49e021cceb1a2791f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +145,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afa70a0ea46d11ec3a0f7e3ddbba1d095"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Device.html#afa70a0ea46d11ec3a0f7e3ddbba1d095">IsDisabled</a> ()</td></tr>
 <tr class="memdesc:afa70a0ea46d11ec3a0f7e3ddbba1d095"><td class="mdescLeft">&#160;</td><td class="mdescRight">The opposite of <a class="el" href="classmfem_1_1Device.html#aed9f070e70c34fc31376de48128f8d9c" title="Return true if any backend other than Backend::CPU is enabled. ">IsEnabled()</a>.  <a href="#afa70a0ea46d11ec3a0f7e3ddbba1d095">More...</a><br/></td></tr>
 <tr class="separator:afa70a0ea46d11ec3a0f7e3ddbba1d095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac730052e9056a8c038f6f9cba19b6b82"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Device.html#ac730052e9056a8c038f6f9cba19b6b82">GetId</a> ()</td></tr>
+<tr class="memdesc:ac730052e9056a8c038f6f9cba19b6b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the device id of the configured device.  <a href="#ac730052e9056a8c038f6f9cba19b6b82">More...</a><br/></td></tr>
+<tr class="separator:ac730052e9056a8c038f6f9cba19b6b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83c6e8a0e52e6034b4e5ca7e31688fba"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Device.html#a83c6e8a0e52e6034b4e5ca7e31688fba">Allows</a> (unsigned long b_mask)</td></tr>
 <tr class="memdesc:a83c6e8a0e52e6034b4e5ca7e31688fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if any of the backends in the backend mask, <em>b_mask</em>, are allowed.  <a href="#a83c6e8a0e52e6034b4e5ca7e31688fba">More...</a><br/></td></tr>
 <tr class="separator:a83c6e8a0e52e6034b4e5ca7e31688fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,7 +190,7 @@ Friends</h2></td></tr>
 <li>Multiple backends can be configured at the same time; currently, a fixed priority order is used to select a specific backend from the list of configured backends. See the <a class="el" href="structmfem_1_1Backend.html" title="MFEM backends. ">Backend</a> class and the <a class="el" href="classmfem_1_1Device.html#a646eeeb722f797e76c95947f1c0337c7" title="Configure the Device backends. ">Configure()</a> method in this class for details. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00118">118</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00121">121</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aefe55995548736c8ec297344d3ff6a54"></a>
 <div class="memitem">
@@ -204,7 +210,7 @@ Friends</h2></td></tr>
 <dd>
 This object should be destroyed after all other MFEM objects that use the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> are destroyed. </dd></dl>
 
-<p>Definition at line <a class="el" href="device_8cpp_source.html#l00069">69</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8cpp_source.html#l00070">70</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +251,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 <dd>
 This object should be destroyed after all other MFEM objects that use the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> are destroyed. </dd></dl>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00179">179</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00185">185</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +270,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Destructor. </p>
 
-<p>Definition at line <a class="el" href="device_8cpp_source.html#l00154">154</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8cpp_source.html#l00148">148</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +300,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 <p>Return true if any of the backends in the backend mask, <em>b_mask</em>, are allowed. </p>
 <p>This method can be used with any of the <a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3" title="In the documentation below, we use square brackets to indicate the type of the backend: host or devic...">Backend::Id</a> constants, the <a class="el" href="structmfem_1_1Backend.html" title="MFEM backends. ">Backend</a>::*_MASK, or combinations of those. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00246">246</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00258">258</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +331,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 <p>Configure the <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> backends. </p>
 <p>The string parameter <em>device</em> must be a comma-separated list of backend string names (see below). The <em>dev</em> argument specifies the ID of the actual devices (e.g. GPU) to use. The available backends are described by the <a class="el" href="structmfem_1_1Backend.html" title="MFEM backends. ">Backend</a> class. The string name of a backend is the lowercase version of the <a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3" title="In the documentation below, we use square brackets to indicate the type of the backend: host or devic...">Backend::Id</a> enumeration constant with '_' replaced by '-', e.g. the string name of 'RAJA_CPU' is 'raja-cpu'. The string name of the debug backend (<a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3" title="In the documentation below, we use square brackets to indicate the type of the backend: host or devic...">Backend::Id</a> 'DEBUG_DEVICE') is exceptionally set to 'debug'. The 'cpu' backend is always enabled with lowest priority. The current backend priority from highest to lowest is: 'ceed-cuda', 'occa-cuda', 'raja-cuda', 'cuda', 'ceed-hip', 'hip', 'debug', 'occa-omp', 'raja-omp', 'omp', 'ceed-cpu', 'occa-cpu', 'raja-cpu', 'cpu'. Multiple backends can be configured at the same time. Only one 'occa-*' backend can be configured at a time. The backend 'occa-cuda' enables the 'cuda' backend unless 'raja-cuda' is already enabled. The backend 'occa-omp' enables the 'omp' backend (if MFEM was built with MFEM_USE_OPENMP=YES) unless 'raja-omp' is already enabled. Only one 'ceed-*' backend can be configured at a time. The backend 'ceed-cpu' delegates to a libCEED CPU backend the setup and evaluation of the operator. The backend 'ceed-cuda' delegates to a libCEED CUDA backend the setup and evaluation of operators and enables the 'cuda' backend to avoid transfers between host and device. The backend 'ceed-hip' delegates to a libCEED HIP backend the setup and evaluation of operators and enables the 'hip' backend to avoid transfers between host and device. The 'debug' backend should not be combined with other device backends. </p>
 
-<p>Definition at line <a class="el" href="device_8cpp_source.html#l00186">186</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8cpp_source.html#l00180">180</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 </div>
 </div>
@@ -352,7 +358,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Get the current <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> MemoryClass. This is the MemoryClass used by most MFEM device kernels to access <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> objects. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00269">269</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00281">281</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +385,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Get the current <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> MemoryType. This is the MemoryType used by most MFEM classes when allocating memory to be used with device kernels. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00261">261</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00273">273</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +410,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00278">278</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00290">290</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -431,7 +437,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Get the current Host MemoryClass. This is the MemoryClass used by most MFEM host <a class="el" href="classmfem_1_1Memory.html" title="Class used by MFEM to store pointers to host and/or device memory. ">Memory</a> objects. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00256">256</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00268">268</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,6 +463,33 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 </div><div class="memdoc">
 
 <p>Get the current Host MemoryType. This is the MemoryType used by most MFEM classes when allocating memory used on the host. </p>
+
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00264">264</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac730052e9056a8c038f6f9cba19b6b82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int mfem::Device::GetId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the device id of the configured device. </p>
 
 <p>Definition at line <a class="el" href="device_8hpp_source.html#l00252">252</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
@@ -486,7 +519,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 <p>(DEPRECATED) Equivalent to <a class="el" href="classmfem_1_1Device.html#abd8048091a97559d782a9d069ee1e53c" title="Get the current Device MemoryClass. This is the MemoryClass used by most MFEM device kernels to acces...">GetDeviceMemoryClass()</a>. </p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1Device.html#abd8048091a97559d782a9d069ee1e53c" title="Get the current Device MemoryClass. This is the MemoryClass used by most MFEM device kernels to acces...">GetDeviceMemoryClass()</a> instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00273">273</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00285">285</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +547,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 <p>(DEPRECATED) Equivalent to <a class="el" href="classmfem_1_1Device.html#af0f3f17fbed718d58c003a3cd3dde698" title="Get the current Device MemoryType. This is the MemoryType used by most MFEM classes when allocating m...">GetDeviceMemoryType()</a>. </p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use <a class="el" href="classmfem_1_1Device.html#af0f3f17fbed718d58c003a3cd3dde698" title="Get the current Device MemoryType. This is the MemoryType used by most MFEM classes when allocating m...">GetDeviceMemoryType()</a> instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00265">265</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00277">277</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -541,7 +574,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Return true if an actual device (e.g. GPU) has been configured. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00234">234</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00243">243</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +601,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Return true if <a class="el" href="classmfem_1_1Device.html#a646eeeb722f797e76c95947f1c0337c7" title="Configure the Device backends. ">Configure()</a> has been called previously. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00231">231</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00240">240</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -595,7 +628,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>The opposite of <a class="el" href="classmfem_1_1Device.html#aed9f070e70c34fc31376de48128f8d9c" title="Return true if any backend other than Backend::CPU is enabled. ">IsEnabled()</a>. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00240">240</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00249">249</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -622,7 +655,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Return true if any backend other than <a class="el" href="structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3acf3dcf8dc1d82d9a7e74e1bdeb11c447" title="[host] Default CPU backend: sequential execution on each MPI rank. ">Backend::CPU</a> is enabled. </p>
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00237">237</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00246">246</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +675,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 
 <p>Print the configuration of the MFEM virtual device object. </p>
 
-<p>Definition at line <a class="el" href="device_8cpp_source.html#l00261">261</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8cpp_source.html#l00279">279</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 </div>
 </div>
@@ -668,7 +701,48 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00275">275</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00287">287</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaeb7f71b8cfee6cf9f203ab05bad6d3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::Device::SetMemoryTypes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a>&#160;</td>
+          <td class="paramname"><em>h_mt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6">MemoryType</a>&#160;</td>
+          <td class="paramname"><em>d_mt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the default host and device MemoryTypes, <em>h_mt</em> and <em>d_mt</em>. </p>
+<p>The host and device MemoryTypes are also set to be dual to each other.</p>
+<p>These two MemoryTypes are used by most MFEM classes when allocating memory used on host and device, respectively.</p>
+<p>This method can only be called before <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> construction and configuration, and the specified memory types must be compatible with the subsequent <a class="el" href="classmfem_1_1Device.html" title="The MFEM Device class abstracts hardware devices such as GPUs, as well as programming models such as ...">Device</a> configuration. </p>
+
+<p>Definition at line <a class="el" href="device_8cpp_source.html#l00256">256</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 </div>
 </div>
@@ -691,7 +765,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="device_8hpp_source.html#l00121">121</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p>Definition at line <a class="el" href="device_8hpp_source.html#l00124">124</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>
@@ -702,7 +776,7 @@ This object should be destroyed after all other MFEM objects that use the <a cla
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:42 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

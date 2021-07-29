@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for mfem::ParL2FaceRestriction:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1ParL2FaceRestriction__inherit__graph.svg" width="296" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmfem_1_1ParL2FaceRestriction__inherit__graph.svg" width="296" height="283"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -125,26 +125,43 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96404e6563b2dce46757b484c2ab9d83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#a96404e6563b2dce46757b484c2ab9d83">ParL2FaceRestriction</a> (const <a class="el" href="classmfem_1_1ParFiniteElementSpace.html">ParFiniteElementSpace</a> &amp;, <a class="el" href="namespacemfem.html#ae38367d8c093a856f2f59919954dc73e">ElementDofOrdering</a>, <a class="el" href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7">FaceType</a> type, <a class="el" href="namespacemfem.html#a313cb900f24df1e2ee423923e1a73aab">L2FaceValues</a> <a class="el" href="classmfem_1_1L2FaceRestriction.html#ab579c9511284b2668b92614245577fb7">m</a>=<a class="el" href="namespacemfem.html#a313cb900f24df1e2ee423923e1a73aaba316b98db77802dd6d05e5d883dbbcae3">L2FaceValues::DoubleValued</a>)</td></tr>
 <tr class="separator:a96404e6563b2dce46757b484c2ab9d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaacf28e879b44b77cd2f6c49135a1066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#aaacf28e879b44b77cd2f6c49135a1066">Mult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
-<tr class="memdesc:aaacf28e879b44b77cd2f6c49135a1066"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> application: <code>y=A(x)</code>.  <a href="#aaacf28e879b44b77cd2f6c49135a1066">More...</a><br/></td></tr>
+<tr class="memdesc:aaacf28e879b44b77cd2f6c49135a1066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the face degrees of freedom from <em>x</em> into <em>y</em>.  <a href="#aaacf28e879b44b77cd2f6c49135a1066">More...</a><br/></td></tr>
 <tr class="separator:aaacf28e879b44b77cd2f6c49135a1066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0653dbb668b10aac9313459011e66c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#af0653dbb668b10aac9313459011e66c4">FillI</a> (<a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;mat, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;face_mat) const </td></tr>
+<tr class="memitem:ac2bffe33b83d343bc22eff3447778f03"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#ac2bffe33b83d343bc22eff3447778f03">FillI</a> (<a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;mat, const bool keep_nbr_block=false) const </td></tr>
+<tr class="separator:ac2bffe33b83d343bc22eff3447778f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0653dbb668b10aac9313459011e66c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#af0653dbb668b10aac9313459011e66c4">FillI</a> (<a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;mat, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;face_mat) const </td></tr>
 <tr class="separator:af0653dbb668b10aac9313459011e66c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a999f49a0d78981a3376c01281e18c0bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#a999f49a0d78981a3376c01281e18c0bf">FillJAndData</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;ea_data, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;mat, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;face_mat) const </td></tr>
+<tr class="memitem:a999f49a0d78981a3376c01281e18c0bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#a999f49a0d78981a3376c01281e18c0bf">FillJAndData</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;ea_data, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;mat, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;face_mat) const </td></tr>
 <tr class="separator:a999f49a0d78981a3376c01281e18c0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ef59b32db65fd8578bca89cffc2986"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParL2FaceRestriction.html#aa1ef59b32db65fd8578bca89cffc2986">FillJAndData</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;ea_data, <a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;mat, const bool keep_nbr_block=false) const </td></tr>
+<tr class="separator:aa1ef59b32db65fd8578bca89cffc2986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1L2FaceRestriction"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1L2FaceRestriction')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1L2FaceRestriction.html">mfem::L2FaceRestriction</a></td></tr>
 <tr class="memitem:aaf18adba548e422c211a57ab393e13c2 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2FaceRestriction.html#aaf18adba548e422c211a57ab393e13c2">L2FaceRestriction</a> (const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;, const <a class="el" href="namespacemfem.html#ae38367d8c093a856f2f59919954dc73e">ElementDofOrdering</a>, const <a class="el" href="namespacemfem.html#af736ce0d62a2894982a1eda9dbe93fb7">FaceType</a>, const <a class="el" href="namespacemfem.html#a313cb900f24df1e2ee423923e1a73aab">L2FaceValues</a> <a class="el" href="classmfem_1_1L2FaceRestriction.html#ab579c9511284b2668b92614245577fb7">m</a>=<a class="el" href="namespacemfem.html#a313cb900f24df1e2ee423923e1a73aaba316b98db77802dd6d05e5d883dbbcae3">L2FaceValues::DoubleValued</a>)</td></tr>
 <tr class="separator:aaf18adba548e422c211a57ab393e13c2 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c8eded4aee59bf167452c3d4abbd560 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2FaceRestriction.html#a2c8eded4aee59bf167452c3d4abbd560">MultTranspose</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const </td></tr>
-<tr class="memdesc:a2c8eded4aee59bf167452c3d4abbd560 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action of the transpose operator: <code>y=A^t(x)</code>. The default behavior in class <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> is to generate an error.  <a href="#a2c8eded4aee59bf167452c3d4abbd560">More...</a><br/></td></tr>
-<tr class="separator:a2c8eded4aee59bf167452c3d4abbd560 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad0917b84c8ef6deeebb5d4953b1dcf inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2FaceRestriction.html#a6ad0917b84c8ef6deeebb5d4953b1dcf">Mult</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const override</td></tr>
+<tr class="memdesc:a6ad0917b84c8ef6deeebb5d4953b1dcf inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the face degrees of freedom from <em>x</em> into <em>y</em>.  <a href="#a6ad0917b84c8ef6deeebb5d4953b1dcf">More...</a><br/></td></tr>
+<tr class="separator:a6ad0917b84c8ef6deeebb5d4953b1dcf inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f0c39b0aedc8f7d78f40dc07a21175 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2FaceRestriction.html#ad5f0c39b0aedc8f7d78f40dc07a21175">AddMultTranspose</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const override</td></tr>
+<tr class="memdesc:ad5f0c39b0aedc8f7d78f40dc07a21175 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the face degrees of freedom <em>x</em> to the element degrees of freedom <em>y</em>.  <a href="#ad5f0c39b0aedc8f7d78f40dc07a21175">More...</a><br/></td></tr>
+<tr class="separator:ad5f0c39b0aedc8f7d78f40dc07a21175 inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54050ac4ae4929d468a5167247ab802a inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2FaceRestriction.html#a54050ac4ae4929d468a5167247ab802a">AddFaceMatricesToElementMatrices</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;fea_data, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;ea_data) const </td></tr>
 <tr class="memdesc:a54050ac4ae4929d468a5167247ab802a inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods adds the DG face matrices to the element matrices.  <a href="#a54050ac4ae4929d468a5167247ab802a">More...</a><br/></td></tr>
 <tr class="separator:a54050ac4ae4929d468a5167247ab802a inherit pub_methods_classmfem_1_1L2FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmfem_1_1FaceRestriction"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1FaceRestriction')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1FaceRestriction.html">mfem::FaceRestriction</a></td></tr>
+<tr class="memitem:abbbf10730e1982dff863f53972c6a484 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FaceRestriction.html#abbbf10730e1982dff863f53972c6a484">FaceRestriction</a> ()</td></tr>
+<tr class="separator:abbbf10730e1982dff863f53972c6a484 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be3a4182195aa1f748a10765926f7d0 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FaceRestriction.html#a9be3a4182195aa1f748a10765926f7d0">FaceRestriction</a> (int h, int w)</td></tr>
+<tr class="separator:a9be3a4182195aa1f748a10765926f7d0 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93ddb29bfec08b6ddbe0abab0c0825d inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FaceRestriction.html#af93ddb29bfec08b6ddbe0abab0c0825d">~FaceRestriction</a> ()</td></tr>
+<tr class="separator:af93ddb29bfec08b6ddbe0abab0c0825d inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71c4567c7c46c52fde2b4f45eb0cb24 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FaceRestriction.html#ad71c4567c7c46c52fde2b4f45eb0cb24">MultTranspose</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;y) const override</td></tr>
+<tr class="memdesc:ad71c4567c7c46c52fde2b4f45eb0cb24 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the face degrees of freedom in the element degrees of freedom <em>y</em> to the values given in <em>x</em>.  <a href="#ad71c4567c7c46c52fde2b4f45eb0cb24">More...</a><br/></td></tr>
+<tr class="separator:ad71c4567c7c46c52fde2b4f45eb0cb24 inherit pub_methods_classmfem_1_1FaceRestriction"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1Operator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1Operator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1Operator.html">mfem::Operator</a></td></tr>
 <tr class="memitem:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#af05141bf6d86d28444889d58216dc7ed">InitTVectors</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Ri, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B) const </td></tr>
 <tr class="memdesc:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes memory for true vectors of linear system.  <a href="#af05141bf6d86d28444889d58216dc7ed">More...</a><br/></td></tr>
 <tr class="separator:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int s=0)</td></tr>
+<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int <a class="el" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>=0)</td></tr>
 <tr class="memdesc:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a square <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> with given size s (default 0).  <a href="#a527f8d742df2102735a094a357cecaaa">More...</a><br/></td></tr>
 <tr class="separator:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae973ad9936ef147f0f1862849221f324 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ae973ad9936ef147f0f1862849221f324">Operator</a> (int h, int w)</td></tr>
@@ -168,6 +185,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a3293101bbcc0db4f4011a49027e29857">GetGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x) const </td></tr>
 <tr class="memdesc:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the gradient operator at the point <em>x</em>. The default behavior in class <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> is to generate an error.  <a href="#a3293101bbcc0db4f4011a49027e29857">More...</a><br/></td></tr>
 <tr class="separator:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a241b3c491eb58783bdbb3daf01cc2ab6">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
+<tr class="memdesc:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the diagonal entries into <em>diag</em>. Typically, this operation only makes sense for linear <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>s. In some cases, only an approximation of the diagonal is computed.  <a href="#a241b3c491eb58783bdbb3daf01cc2ab6">More...</a><br/></td></tr>
+<tr class="separator:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a84b566f740fe45068a8b54f595aa3b4e">GetProlongation</a> () const </td></tr>
 <tr class="memdesc:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to input vectors for the operator. <code>NULL</code> means identity.  <a href="#a84b566f740fe45068a8b54f595aa3b4e">More...</a><br/></td></tr>
 <tr class="separator:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a680658a766b75b188ea3d87fb8a1c759">GetOutputProlongation</a> () const </td></tr>
 <tr class="memdesc:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to output vectors for the operator. <code>NULL</code> means identity.  <a href="#a680658a766b75b188ea3d87fb8a1c759">More...</a><br/></td></tr>
 <tr class="separator:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a6c26b948bb4f447d981361f94527661d">GetOutputRestrictionTranspose</a> () const </td></tr>
+<tr class="memdesc:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose of GetOutputRestriction, directly available in this form to facilitate matrix-free RAP-type operators.  <a href="#a6c26b948bb4f447d981361f94527661d">More...</a><br/></td></tr>
+<tr class="separator:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ad595ad2ea6e806fafa14141b4591b98f">GetOutputRestriction</a> () const </td></tr>
 <tr class="memdesc:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restriction operator from output vectors for the operator to linear algebra (linear system) vectors. <code>NULL</code> means identity.  <a href="#ad595ad2ea6e806fafa14141b4591b98f">More...</a><br/></td></tr>
 <tr class="separator:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,7 +270,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19" title="Return in A a parallel (on truedofs) version of this rectangular operator (including constraints)...">FormRectangularSystemOperator()</a>  <a href="#ae17b1734b2b2bbbc3b13810f90f3f398">More...</a><br/></td></tr>
 <tr class="separator:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab860076188a32acbd2f1a7d428aba00d">SetupRAP</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po)</td></tr>
-<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, taking in input/output Prolongation matrices.  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
+<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, using input/output Prolongation matrices <em>Pi</em> corresponds to "P", <em>Po</em> corresponds to "Rt".  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
 <tr class="separator:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmfem_1_1L2FaceRestriction"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmfem_1_1L2FaceRestriction')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmfem_1_1L2FaceRestriction.html">mfem::L2FaceRestriction</a></td></tr>
 <tr class="memitem:ac54e63fd5b16d46a1f879466f4f5f848 inherit pro_attribs_classmfem_1_1L2FaceRestriction"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1L2FaceRestriction.html#ac54e63fd5b16d46a1f879466f4f5f848">fes</a></td></tr>
@@ -288,7 +311,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> that extracts Face degrees of freedom in parallel. </p>
-<p>Objects of this type are typically created and owned by <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> objects, see <a class="el" href="classmfem_1_1FiniteElementSpace.html#af2bd069ad65a68cd5e9e2fb655ca50b3" title="Return an Operator that converts L-vectors to E-vectors on each face. ">FiniteElementSpace::GetFaceRestriction()</a>. </p>
+<p>Objects of this type are typically created and owned by <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> objects, see <a class="el" href="classmfem_1_1FiniteElementSpace.html#a7045c340ed1797ef067798d6ee8e3044" title="Return an Operator that converts L-vectors to E-vectors on each face. ">FiniteElementSpace::GetFaceRestriction()</a>. </p>
 
 <p>Definition at line <a class="el" href="prestriction_8hpp_source.html#l00029">29</a> of file <a class="el" href="prestriction_8hpp_source.html">prestriction.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -333,6 +356,45 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac2bffe33b83d343bc22eff3447778f03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParL2FaceRestriction::FillI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>keep_nbr_block</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fill the I array of <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> corresponding to the sparsity pattern given by this <a class="el" href="classmfem_1_1L2FaceRestriction.html" title="Operator that extracts Face degrees of freedom on L2 FiniteElementSpaces. ">L2FaceRestriction</a>. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1L2FaceRestriction.html#a67cef4f690aad63357de7a43f5999ef2">mfem::L2FaceRestriction</a>.</p>
+
+<p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00338">338</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af0653dbb668b10aac9313459011e66c4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -364,11 +426,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Fill the I array of <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> corresponding to the sparsity pattern given by this <a class="el" href="classmfem_1_1ParL2FaceRestriction.html" title="Operator that extracts Face degrees of freedom in parallel. ">ParL2FaceRestriction</a>. </p>
+<p>Fill the I array of <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> corresponding to the sparsity pattern given by this <a class="el" href="classmfem_1_1L2FaceRestriction.html" title="Operator that extracts Face degrees of freedom on L2 FiniteElementSpaces. ">L2FaceRestriction</a>. <em>mat</em> contains the interior dofs contribution, the <em>face_mat</em> contains the shared dofs contribution. </p>
 
-<p>Reimplemented from <a class="el" href="classmfem_1_1L2FaceRestriction.html#aa7f803d1651733b05d0385d361cb1e6a">mfem::L2FaceRestriction</a>.</p>
-
-<p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00337">337</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00367">367</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
 
 </div>
 </div>
@@ -409,11 +469,54 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Fill the J and Data arrays of <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> corresponding to the sparsity pattern given by this <a class="el" href="classmfem_1_1ParL2FaceRestriction.html" title="Operator that extracts Face degrees of freedom in parallel. ">ParL2FaceRestriction</a>, and the values of ea_data. </p>
+<p>Fill the J and Data arrays of <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> corresponding to the sparsity pattern given by this <a class="el" href="classmfem_1_1L2FaceRestriction.html" title="Operator that extracts Face degrees of freedom on L2 FiniteElementSpaces. ">L2FaceRestriction</a>, and the values of ea_data. <em>mat</em> contains the interior dofs contribution, the <em>face_mat</em> contains the shared dofs contribution. </p>
 
-<p>Reimplemented from <a class="el" href="classmfem_1_1L2FaceRestriction.html#a5a83084b8a77663229760926f804fc08">mfem::L2FaceRestriction</a>.</p>
+<p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00464">464</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
 
-<p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00389">389</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
+</div>
+</div>
+<a class="anchor" id="aa1ef59b32db65fd8578bca89cffc2986"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParL2FaceRestriction::FillJAndData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>ea_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>keep_nbr_block</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fill the J and Data arrays of <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> corresponding to the sparsity pattern given by this <a class="el" href="classmfem_1_1L2FaceRestriction.html" title="Operator that extracts Face degrees of freedom on L2 FiniteElementSpaces. ">L2FaceRestriction</a>, and the values of ea_data. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1L2FaceRestriction.html#ad6415389c4a66979ef5054f1786c0c62">mfem::L2FaceRestriction</a>.</p>
+
+<p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00419">419</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
 
 </div>
 </div>
@@ -449,9 +552,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> application: <code>y=A(x)</code>. </p>
+<p>Extract the face degrees of freedom from <em>x</em> into <em>y</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The L-vector of degrees of freedom. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>The degrees of freedom on the face, corresponding to a face E-vector. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Reimplemented from <a class="el" href="classmfem_1_1L2FaceRestriction.html#aeac557d117b9fddfeb2757df9a8d0bfe">mfem::L2FaceRestriction</a>.</p>
+<p>Implements <a class="el" href="classmfem_1_1FaceRestriction.html#afda111b0494f1e797fb6d2a7e99ab080">mfem::FaceRestriction</a>.</p>
 
 <p>Definition at line <a class="el" href="prestriction_8cpp_source.html#l00262">262</a> of file <a class="el" href="prestriction_8cpp_source.html">prestriction.cpp</a>.</p>
 
@@ -464,7 +574,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:52 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

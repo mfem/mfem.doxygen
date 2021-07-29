@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -147,6 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3849c51ac8a7e4501cfb767a657307a inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PositiveFiniteElement.html#af3849c51ac8a7e4501cfb767a657307a">GetLocalInterpolation</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;I) const </td></tr>
 <tr class="memdesc:af3849c51ac8a7e4501cfb767a657307a inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the local interpolation matrix <em>I</em> (Dof x Dof) where the fine element is the image of the base geometry under the given transformation.  <a href="#af3849c51ac8a7e4501cfb767a657307a">More...</a><br/></td></tr>
 <tr class="separator:af3849c51ac8a7e4501cfb767a657307a inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43482fd5dc035a310fe60f63e8074b3 inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PositiveFiniteElement.html#ab43482fd5dc035a310fe60f63e8074b3">GetLocalRestriction</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;R) const </td></tr>
+<tr class="memdesc:ab43482fd5dc035a310fe60f63e8074b3 inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a local restriction matrix <em>R</em> (Dof x Dof) mapping fine dofs to coarse dofs.  <a href="#ab43482fd5dc035a310fe60f63e8074b3">More...</a><br/></td></tr>
+<tr class="separator:ab43482fd5dc035a310fe60f63e8074b3 inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa38ffc5efc126a4fd4c5a408779fc7bd inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1PositiveFiniteElement.html#aa38ffc5efc126a4fd4c5a408779fc7bd">GetTransferMatrix</a> (const <a class="el" href="classmfem_1_1FiniteElement.html">FiniteElement</a> &amp;fe, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;I) const </td></tr>
 <tr class="memdesc:aa38ffc5efc126a4fd4c5a408779fc7bd inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return interpolation matrix, <em>I</em>, which maps dofs from a coarse element, <em>fe</em>, to the fine dofs on <em>this</em> finite element.  <a href="#aa38ffc5efc126a4fd4c5a408779fc7bd">More...</a><br/></td></tr>
 <tr class="separator:aa38ffc5efc126a4fd4c5a408779fc7bd inherit pub_methods_classmfem_1_1PositiveFiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +177,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af05f53cad958a692bf875f835c9372a3 inherit pub_methods_classmfem_1_1ScalarFiniteElement"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarFiniteElement.html#af05f53cad958a692bf875f835c9372a3">ScalarLocalInterpolation</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;I, const <a class="el" href="classmfem_1_1ScalarFiniteElement.html">ScalarFiniteElement</a> &amp;fine_fe) const </td></tr>
 <tr class="memdesc:af05f53cad958a692bf875f835c9372a3 inherit pub_methods_classmfem_1_1ScalarFiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get matrix <em>I</em> "Interpolation" defined through local L2-projection in the space defined by the <em>fine_fe</em>.  <a href="#af05f53cad958a692bf875f835c9372a3">More...</a><br/></td></tr>
 <tr class="separator:af05f53cad958a692bf875f835c9372a3 inherit pub_methods_classmfem_1_1ScalarFiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ee785d836fd74d76cb2a2699095886 inherit pub_methods_classmfem_1_1ScalarFiniteElement"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ScalarFiniteElement.html#a14ee785d836fd74d76cb2a2699095886">ScalarLocalRestriction</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;R, const <a class="el" href="classmfem_1_1ScalarFiniteElement.html">ScalarFiniteElement</a> &amp;coarse_fe) const </td></tr>
+<tr class="memdesc:a14ee785d836fd74d76cb2a2699095886 inherit pub_methods_classmfem_1_1ScalarFiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get restriction matrix <em>R</em> defined through local L2-projection in the space defined by the <em>coarse_fe</em>.  <a href="#a14ee785d836fd74d76cb2a2699095886">More...</a><br/></td></tr>
+<tr class="separator:a14ee785d836fd74d76cb2a2699095886 inherit pub_methods_classmfem_1_1ScalarFiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1FiniteElement"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1FiniteElement')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1FiniteElement.html">mfem::FiniteElement</a></td></tr>
 <tr class="memitem:a83cef6d1604ca400e7286351f1d3c121 inherit pub_methods_classmfem_1_1FiniteElement"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElement.html#a83cef6d1604ca400e7286351f1d3c121">FiniteElement</a> (int D, <a class="el" href="classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805">Geometry::Type</a> G, int Do, int O, int F=<a class="el" href="classmfem_1_1FunctionSpace.html#a88237c8d023369d111c4d355243b979aa33cffc7e121ebea682963cfd4308f3b7">FunctionSpace::Pk</a>)</td></tr>
 <tr class="memdesc:a83cef6d1604ca400e7286351f1d3c121 inherit pub_methods_classmfem_1_1FiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classmfem_1_1FiniteElement.html" title="Abstract class for all finite elements. ">FiniteElement</a> with given.  <a href="#a83cef6d1604ca400e7286351f1d3c121">More...</a><br/></td></tr>
@@ -258,9 +264,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab6f306dc8ee8bb57ee095bcb55012aa6 inherit pub_methods_classmfem_1_1FiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9aea57df57463cf7acae56a92f532e5 inherit pub_methods_classmfem_1_1FiniteElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElement.html#aa9aea57df57463cf7acae56a92f532e5">CalcPhysLinLaplacian</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;Laplacian) const </td></tr>
 <tr class="separator:aa9aea57df57463cf7acae56a92f532e5 inherit pub_methods_classmfem_1_1FiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8091b89b6e1ff72868c8a402062c4e56 inherit pub_methods_classmfem_1_1FiniteElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElement.html#a8091b89b6e1ff72868c8a402062c4e56">GetLocalRestriction</a> (<a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a> &amp;R) const </td></tr>
-<tr class="memdesc:a8091b89b6e1ff72868c8a402062c4e56 inherit pub_methods_classmfem_1_1FiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a local restriction matrix <em>R</em> (Dof x Dof) mapping fine dofs to coarse dofs.  <a href="#a8091b89b6e1ff72868c8a402062c4e56">More...</a><br/></td></tr>
-<tr class="separator:a8091b89b6e1ff72868c8a402062c4e56 inherit pub_methods_classmfem_1_1FiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397941889228d91df6c6bfbd619e0d1e inherit pub_methods_classmfem_1_1FiniteElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1FiniteElement.html#a397941889228d91df6c6bfbd619e0d1e">ProjectFromNodes</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;vc, <a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a> &amp;Trans, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;dofs) const </td></tr>
 <tr class="memdesc:a397941889228d91df6c6bfbd619e0d1e inherit pub_methods_classmfem_1_1FiniteElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a vector of values at the finite element nodes and a transformation, compute its projection (approximation) in the local finite dimensional space in terms of the degrees of freedom. Valid for VectorFiniteElements.  <a href="#a397941889228d91df6c6bfbd619e0d1e">More...</a><br/></td></tr>
 <tr class="separator:a397941889228d91df6c6bfbd619e0d1e inherit pub_methods_classmfem_1_1FiniteElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -408,7 +411,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arbitrary order L2 elements in 1D utilizing the Bernstein basis on a segment. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02442">2442</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02586">2586</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a15282564eaaa5bbbd176026a01cd835c"></a>
 <div class="memitem">
@@ -426,7 +429,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct the <a class="el" href="classmfem_1_1L2Pos__SegmentElement.html" title="Arbitrary order L2 elements in 1D utilizing the Bernstein basis on a segment. ">L2Pos_SegmentElement</a> of order <em>p</em>. </p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09464">9464</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09801">9801</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +471,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1FiniteElement.html#a9a8a2eac81f0b47bef65923aec6253cf">mfem::FiniteElement</a>.</p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09491">9491</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09828">9828</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +512,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classmfem_1_1FiniteElement.html#ae2e53c5bf6e8bf96acb06352e8dfc9b5">mfem::FiniteElement</a>.</p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09485">9485</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09822">9822</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -549,7 +552,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1FiniteElement.html#a20a6757574386a5dc4f560ee992bc84b">mfem::FiniteElement</a>.</p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09502">9502</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l09839">9839</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -560,7 +563,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:09 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:51 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

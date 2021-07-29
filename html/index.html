@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>Main mesh classes</h3>
 <ul>
 <li><a class="el" href="classmfem_1_1Mesh.html">Mesh</a></li>
-<li><a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR on higher-order hexahedral, prismatic, quadrilateral or triangular mes...">NCMesh</a></li>
+<li><a class="el" href="classmfem_1_1NCMesh.html" title="A class for non-conforming AMR. The class is not used directly by the user, rather it is an extension...">NCMesh</a></li>
 <li><a class="el" href="classmfem_1_1Element.html" title="Abstract data type element. ">Element</a></li>
 <li><a class="el" href="classmfem_1_1ElementTransformation.html">ElementTransformation</a></li>
 </ul>
@@ -129,8 +129,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h3>Example codes</h3>
 <ul>
-<li><a href="examples_2ex1_8cpp_source.html" class="el">Example 1</a>: nodal H1 FEM for the Laplace problem</li>
-<li><a href="examples_2ex1p_8cpp_source.html" class="el">Example 1p</a>: parallel nodal H1 FEM for the Laplace problem</li>
+<li><a href="ex0_8cpp_source.html" class="el">Example 0</a>: simplest example, nodal H1 FEM for the Laplace problem</li>
+<li><a href="ex0p_8cpp_source.html" class="el">Example 0p</a>: simplest parallel example, nodal H1 FEM for the Laplace problem</li>
+<li><a href="examples_2ex1_8cpp_source.html" class="el">Example 1</a>: nodal H1 FEM for the Laplace problem (same discretization as ex0 but with more sophisticated options)</li>
+<li><a href="examples_2ex1p_8cpp_source.html" class="el">Example 1p</a>: parallel nodal H1 FEM for the Laplace problem (same discretization as ex0p but with more sophisticated options)</li>
 <li><a href="ex2_8cpp_source.html" class="el">Example 2</a>: vector FEM for linear elasticity</li>
 <li><a href="ex2p_8cpp_source.html" class="el">Example 2p</a>: parallel vector FEM for linear elasticity</li>
 <li><a href="ex3_8cpp_source.html" class="el">Example 3</a>: Nedelec H(curl) FEM for the definite Maxwell problem</li>
@@ -179,12 +181,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a href="ex26p_8cpp_source.html" class="el">Example 26p</a>: parallel multigrid preconditioner for the Laplace problem using nodal H1 FEM</li>
 <li><a href="ex27_8cpp_source.html" class="el">Example 27</a>: boundary conditions for the Laplace problem</li>
 <li><a href="ex27p_8cpp_source.html" class="el">Example 27p</a>: parallel boundary conditions for the Laplace problem</li>
+<li><a href="ex28_8cpp_source.html" class="el">Example 28</a>: sliding contact in elasticity</li>
+<li><a href="ex28p_8cpp_source.html" class="el">Example 28p</a>: parallel sliding contact in elasticity</li>
+<li><a href="ex29_8cpp_source.html" class="el">Example 29</a>: Laplace solve on a 3D-embedded surface</li>
+<li><a href="ex29p_8cpp_source.html" class="el">Example 29p</a>: parallel Laplace solve on a 3D-embedded surface</li>
 </ul>
 <h4>AmgX Examples</h4>
 <ul>
 <li>Variants of Examples <a href="examples_2amgx_2ex1_8cpp_source.html" class="el">1</a> and <a href="examples_2amgx_2ex1p_8cpp_source.html" class="el">1p</a>, demonstrating the use of MFEM's <a class="el" href="amgxsolver_8hpp.html">AmgX integration</a>.</li>
 </ul>
-<h4>Ginkgo Examples</h4>
+<h4>Caliper Examples</h4>
+<ul>
+<li>Variants of Example <a href="examples_2caliper_2ex1_8cpp_source.html" class="el">1</a> and <a href="examples_2caliper_2ex1p_8cpp_source.html" class="el">1p</a>, demonstrating the use of MFEM's <a class="el" href="annotation_8hpp.html">Ginkgo integration</a>.</li>
+</ul>
+<h4><a class="el" href="namespacemfem_1_1Ginkgo.html">Ginkgo</a> Examples</h4>
 <ul>
 <li>Variants of Example <a href="examples_2ginkgo_2ex1_8cpp_source.html" class="el">1</a>, demonstrating the use of MFEM's <a class="el" href="ginkgo_8hpp.html">Ginkgo integration</a>.</li>
 </ul>
@@ -235,6 +245,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a href="findpts_8cpp_source.html" class="el">Find Points</a>: evaluate grid function in physical space, <a href="findpts_8cpp_source.html" class="el">serial</a> and <a href="pfindpts_8cpp_source.html" class="el">parallel</a> versions</li>
 <li><a href="field-diff_8cpp_source.html" class="el">Field Diff</a>: compare grid functions on different meshes</li>
 <li><a href="field-interp_8cpp_source.html" class="el">Field Interp</a>: transfer a grid functions between meshes</li>
+<li><a href="distance_8cpp_source.html" class="el">Distance</a>: finite element distance function solver</li>
+<li><a href="diffusion_8cpp_source.html" class="el">Shifted Diffusion</a>: shifted boundary diffusion solver</li>
+<li><a href="distance_8cpp_source.html" class="el">Block Solvers</a>: comparison of saddle point system solvers</li>
+<li><a href="parheat_8cpp_source.html" class="el">Optimization gradients</a>: Gradients of PDE-constrained function</li>
 <li><a href="miniapps_2performance_2ex1_8cpp_source.html" class="el">HPC Example 1</a>: high-performance nodal H1 FEM for the Laplace problem</li>
 <li><a href="miniapps_2performance_2ex1p_8cpp_source.html" class="el">HPC Example 1p</a>: high-performance parallel nodal H1 FEM for the Laplace problem</li>
 </ul>
@@ -242,7 +256,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:11 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:53 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

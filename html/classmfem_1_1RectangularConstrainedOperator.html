@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#af05141bf6d86d28444889d58216dc7ed">InitTVectors</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Ri, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B) const </td></tr>
 <tr class="memdesc:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes memory for true vectors of linear system.  <a href="#af05141bf6d86d28444889d58216dc7ed">More...</a><br/></td></tr>
 <tr class="separator:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int s=0)</td></tr>
+<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int <a class="el" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>=0)</td></tr>
 <tr class="memdesc:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a square <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> with given size s (default 0).  <a href="#a527f8d742df2102735a094a357cecaaa">More...</a><br/></td></tr>
 <tr class="separator:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae973ad9936ef147f0f1862849221f324 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ae973ad9936ef147f0f1862849221f324">Operator</a> (int h, int w)</td></tr>
@@ -165,6 +165,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmfem_1_1Operator.html">Operator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a3293101bbcc0db4f4011a49027e29857">GetGradient</a> (const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x) const </td></tr>
 <tr class="memdesc:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the gradient operator at the point <em>x</em>. The default behavior in class <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> is to generate an error.  <a href="#a3293101bbcc0db4f4011a49027e29857">More...</a><br/></td></tr>
 <tr class="separator:a3293101bbcc0db4f4011a49027e29857 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a241b3c491eb58783bdbb3daf01cc2ab6">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
+<tr class="memdesc:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the diagonal entries into <em>diag</em>. Typically, this operation only makes sense for linear <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>s. In some cases, only an approximation of the diagonal is computed.  <a href="#a241b3c491eb58783bdbb3daf01cc2ab6">More...</a><br/></td></tr>
+<tr class="separator:a241b3c491eb58783bdbb3daf01cc2ab6 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a84b566f740fe45068a8b54f595aa3b4e">GetProlongation</a> () const </td></tr>
 <tr class="memdesc:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to input vectors for the operator. <code>NULL</code> means identity.  <a href="#a84b566f740fe45068a8b54f595aa3b4e">More...</a><br/></td></tr>
 <tr class="separator:a84b566f740fe45068a8b54f595aa3b4e inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +177,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a680658a766b75b188ea3d87fb8a1c759">GetOutputProlongation</a> () const </td></tr>
 <tr class="memdesc:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prolongation operator from linear algebra (linear system) vectors, to output vectors for the operator. <code>NULL</code> means identity.  <a href="#a680658a766b75b188ea3d87fb8a1c759">More...</a><br/></td></tr>
 <tr class="separator:a680658a766b75b188ea3d87fb8a1c759 inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a6c26b948bb4f447d981361f94527661d">GetOutputRestrictionTranspose</a> () const </td></tr>
+<tr class="memdesc:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose of GetOutputRestriction, directly available in this form to facilitate matrix-free RAP-type operators.  <a href="#a6c26b948bb4f447d981361f94527661d">More...</a><br/></td></tr>
+<tr class="separator:a6c26b948bb4f447d981361f94527661d inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ad595ad2ea6e806fafa14141b4591b98f">GetOutputRestriction</a> () const </td></tr>
 <tr class="memdesc:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restriction operator from output vectors for the operator to linear algebra (linear system) vectors. <code>NULL</code> means identity.  <a href="#ad595ad2ea6e806fafa14141b4591b98f">More...</a><br/></td></tr>
 <tr class="separator:ad595ad2ea6e806fafa14141b4591b98f inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,14 +271,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19" title="Return in A a parallel (on truedofs) version of this rectangular operator (including constraints)...">FormRectangularSystemOperator()</a>  <a href="#ae17b1734b2b2bbbc3b13810f90f3f398">More...</a><br/></td></tr>
 <tr class="separator:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab860076188a32acbd2f1a7d428aba00d">SetupRAP</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po)</td></tr>
-<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, taking in input/output Prolongation matrices.  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
+<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, using input/output Prolongation matrices <em>Pi</em> corresponds to "P", <em>Po</em> corresponds to "Rt".  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
 <tr class="separator:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Rectangular <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> for imposing essential boundary conditions on the input space using only the action, <a class="el" href="classmfem_1_1RectangularConstrainedOperator.html#a0ee61333333244753c73e76ce65f139d" title="Rectangular-constrained operator action. ">Mult()</a>, of a given unconstrained <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a>. </p>
 <p>Rectangular operator constrained by fixing certain entries in the solution to given "essential boundary condition" values. This class is used by the general matrix-free formulation of <a class="el" href="classmfem_1_1Operator.html#a059ebb07070744a542a6fec3ea04a84b" title="Form a column-constrained linear system using a matrix-free approach. ">Operator::FormRectangularLinearSystem</a>. </p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00861">861</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00898">898</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a099439bf8bf7dd0f685f3d113083e917"></a>
 <div class="memitem">
@@ -313,7 +319,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor from a general <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> and a list of essential indices/dofs. </p>
 <p>Specify the unconstrained operator <em>*A</em> and two lists of indices to constrain, i.e. each entry <em>trial_list</em>[i] represents an essential trial dof. If the ownership flag <em>own_A</em> is true, the operator <em>*A</em> will be destroyed when this object is destroyed. </p>
 
-<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00495">495</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00526">526</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +344,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00904">904</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00941">941</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +379,7 @@ Additional Inherited Members</h2></td></tr>
 b_j = 0
 </pre><p>where the "_b" subscripts denote the essential (boundary) indices and the "_j" subscript denotes the essential test indices </p>
 
-<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00514">514</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00545">545</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
@@ -402,7 +408,7 @@ b_j = 0
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Operator.html#a99d91417c9690ac2c8fe708b7b52f789">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00881">881</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00918">918</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +452,7 @@ y_j = 0
 
 <p>Implements <a class="el" href="classmfem_1_1Operator.html#a700c3008b5ab43155cdfd279c8360472">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00539">539</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00570">570</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
@@ -486,7 +492,7 @@ y_j = 0
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1Operator.html#a2d8a7d98fd35870efb23db6e0472894b">mfem::Operator</a>.</p>
 
-<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00567">567</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8cpp_source.html#l00598">598</a> of file <a class="el" href="operator_8cpp_source.html">operator.cpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +515,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00865">865</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00902">902</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +537,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00868">868</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00905">905</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -553,7 +559,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00866">866</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00903">903</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +581,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00864">864</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00901">901</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -597,7 +603,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00864">864</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00901">901</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -619,7 +625,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00867">867</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00904">904</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -641,7 +647,7 @@ y_j = 0
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00867">867</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
+<p>Definition at line <a class="el" href="operator_8hpp_source.html#l00904">904</a> of file <a class="el" href="operator_8hpp_source.html">operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -652,7 +658,7 @@ y_j = 0
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:44 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['qenergy',['QEnergy',['../classmfem_1_1BaseQFunction.html#ac451fa9c808ef8e77201b1bc652d83b8',1,'mfem::BaseQFunction::QEnergy()'],['../classmfem_1_1QLinearDiffusion.html#ada834d8e8c65b07ff0f70baad087e229',1,'mfem::QLinearDiffusion::QEnergy()']]],
+  ['qgradresidual',['QGradResidual',['../classmfem_1_1BaseQFunction.html#ab05cdd3d52de6553f9571d9f49888509',1,'mfem::BaseQFunction::QGradResidual()'],['../classmfem_1_1QLinearDiffusion.html#a45809b682e3cb4a93ad8411847373401',1,'mfem::QLinearDiffusion::QGradResidual()']]],
+  ['qlineardiffusion',['QLinearDiffusion',['../classmfem_1_1QLinearDiffusion.html#adfb98ef244e20c8f2297192c6b41a34e',1,'mfem::QLinearDiffusion']]],
+  ['qresidual',['QResidual',['../classmfem_1_1BaseQFunction.html#a15697700f2fd0ac00dd7289d1ae2f575',1,'mfem::BaseQFunction::QResidual()'],['../classmfem_1_1QLinearDiffusion.html#a80692781e26f791d50185ecd0be9c7ac',1,'mfem::QLinearDiffusion::QResidual()']]],
   ['quad1dfiniteelement',['Quad1DFiniteElement',['../classmfem_1_1Quad1DFiniteElement.html#ac5d9b2695547bbd6145ba94c0d7777da',1,'mfem::Quad1DFiniteElement']]],
   ['quad2dfiniteelement',['Quad2DFiniteElement',['../classmfem_1_1Quad2DFiniteElement.html#a9331e67b4a7d59312bbc397a8e2143f6',1,'mfem::Quad2DFiniteElement']]],
   ['quad_5ftrans',['quad_trans',['../ex27_8cpp.html#a9fb008da31b3e8e81b455857ab9f7e77',1,'quad_trans(double u, double v, double &amp;x, double &amp;y, bool log=false):&#160;ex27.cpp'],['../ex27p_8cpp.html#a9fb008da31b3e8e81b455857ab9f7e77',1,'quad_trans(double u, double v, double &amp;x, double &amp;y, bool log=false):&#160;ex27p.cpp']]],

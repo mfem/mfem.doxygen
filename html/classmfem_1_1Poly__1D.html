@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -115,10 +115,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a70d87208b246f91f817f7178eb778da3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3">EvalType</a> { <a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3a28421b5483f236b7d1109b99f0f70510">ChangeOfBasis</a> = 0, 
+<tr class="memitem:a70d87208b246f91f817f7178eb778da3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3">EvalType</a> { <br/>
+&#160;&#160;<a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3a28421b5483f236b7d1109b99f0f70510">ChangeOfBasis</a> = 0, 
 <a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3ac89080a0ecee7b658d553dbdf13449a8">Barycentric</a> = 1, 
 <a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3a934ad89f597417efe9fc9eab72ed20de">Positive</a> = 2, 
-<a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3ab73630b9de5036d5e893942490cf3ee2">NumEvalTypes</a> = 3
+<a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3a48ca7194706d18ebe804923e55648a15">Integrated</a> = 3, 
+<br/>
+&#160;&#160;<a class="el" href="classmfem_1_1Poly__1D.html#a70d87208b246f91f817f7178eb778da3ab73630b9de5036d5e893942490cf3ee2">NumEvalTypes</a> = 4
+<br/>
  }</td></tr>
 <tr class="separator:a70d87208b246f91f817f7178eb778da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -147,13 +151,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3943094b44b98f0492d78c1ec7c66811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to an array containing the binomial coefficients "p
 choose k" for k=0,...,p for the given p.  <a href="#a3943094b44b98f0492d78c1ec7c66811">More...</a><br/></td></tr>
 <tr class="separator:a3943094b44b98f0492d78c1ec7c66811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee7a206ed7164bf8808e71158af91c78"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aee7a206ed7164bf8808e71158af91c78">CalcBasis</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u)</td></tr>
+<tr class="memitem:aee7a206ed7164bf8808e71158af91c78"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aee7a206ed7164bf8808e71158af91c78">CalcBasis</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>)</td></tr>
 <tr class="memdesc:aee7a206ed7164bf8808e71158af91c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the values of a hierarchical 1D basis at point x hierarchical = k-th basis function is degree k polynomial.  <a href="#aee7a206ed7164bf8808e71158af91c78">More...</a><br/></td></tr>
 <tr class="separator:aee7a206ed7164bf8808e71158af91c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af14951819b249a2790c91dce24ac3ac5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#af14951819b249a2790c91dce24ac3ac5">CalcBasis</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u, double *d)</td></tr>
+<tr class="memitem:af14951819b249a2790c91dce24ac3ac5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#af14951819b249a2790c91dce24ac3ac5">CalcBasis</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>, double *d)</td></tr>
 <tr class="memdesc:af14951819b249a2790c91dce24ac3ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the values and derivatives of a hierarchical 1D basis at point <em>x</em>.  <a href="#af14951819b249a2790c91dce24ac3ac5">More...</a><br/></td></tr>
 <tr class="separator:af14951819b249a2790c91dce24ac3ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5761e1a42d3d264f73ea9b37c3a81b8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a5761e1a42d3d264f73ea9b37c3a81b8d">CalcBasis</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u, double *d, double *dd)</td></tr>
+<tr class="memitem:a5761e1a42d3d264f73ea9b37c3a81b8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a5761e1a42d3d264f73ea9b37c3a81b8d">CalcBasis</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>, double *d, double *dd)</td></tr>
 <tr class="memdesc:a5761e1a42d3d264f73ea9b37c3a81b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the values, derivatives and second derivatives of a hierarchical 1D basis at point x.  <a href="#a5761e1a42d3d264f73ea9b37c3a81b8d">More...</a><br/></td></tr>
 <tr class="separator:a5761e1a42d3d264f73ea9b37c3a81b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac83d5acc5d6dcb21f1b8f46a8138834b"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#ac83d5acc5d6dcb21f1b8f46a8138834b">CalcDelta</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x)</td></tr>
@@ -162,30 +166,30 @@ choose k" for k=0,...,p for the given p.  <a href="#a3943094b44b98f0492d78c1ec7c
 <tr class="memitem:ac15a87d09af05be3f4b01f6d4fa11e73"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#ac15a87d09af05be3f4b01f6d4fa11e73">ChebyshevPoints</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, double *x)</td></tr>
 <tr class="memdesc:ac15a87d09af05be3f4b01f6d4fa11e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the points for the Chebyshev polynomials of order <em>p</em> and place them in the already allocated <em>x</em> array.  <a href="#ac15a87d09af05be3f4b01f6d4fa11e73">More...</a><br/></td></tr>
 <tr class="separator:ac15a87d09af05be3f4b01f6d4fa11e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa35ce3537b7dfa48646d701dcd6ae691"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aa35ce3537b7dfa48646d701dcd6ae691">CalcBinomTerms</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, const double y, double *u)</td></tr>
+<tr class="memitem:aa35ce3537b7dfa48646d701dcd6ae691"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aa35ce3537b7dfa48646d701dcd6ae691">CalcBinomTerms</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, const double y, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>)</td></tr>
 <tr class="memdesc:aa35ce3537b7dfa48646d701dcd6ae691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the <em>p</em> terms in the expansion of the binomial (x + y)^p and store them in the already allocated <em>u</em> array.  <a href="#aa35ce3537b7dfa48646d701dcd6ae691">More...</a><br/></td></tr>
 <tr class="separator:aa35ce3537b7dfa48646d701dcd6ae691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1aab8dcaf5e9b709fcbd038393215bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aa1aab8dcaf5e9b709fcbd038393215bc">CalcBinomTerms</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, const double y, double *u, double *d)</td></tr>
+<tr class="memitem:aa1aab8dcaf5e9b709fcbd038393215bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aa1aab8dcaf5e9b709fcbd038393215bc">CalcBinomTerms</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, const double y, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>, double *d)</td></tr>
 <tr class="memdesc:aa1aab8dcaf5e9b709fcbd038393215bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the terms in the expansion of the binomial (x + y)^p and their derivatives with respect to x assuming that dy/dx = -1. Store the results in the already allocated <em>u</em> and <em>d</em> arrays.  <a href="#aa1aab8dcaf5e9b709fcbd038393215bc">More...</a><br/></td></tr>
 <tr class="separator:aa1aab8dcaf5e9b709fcbd038393215bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d02aa325acaaf520fce8afdebc1be9f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a8d02aa325acaaf520fce8afdebc1be9f">CalcDBinomTerms</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, const double y, double *d)</td></tr>
 <tr class="memdesc:a8d02aa325acaaf520fce8afdebc1be9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the derivatives (w.r.t. x) of the terms in the expansion of the binomial (x + y)^p assuming that dy/dx = -1. Store the results in the already allocated <em>d</em> array.  <a href="#a8d02aa325acaaf520fce8afdebc1be9f">More...</a><br/></td></tr>
 <tr class="separator:a8d02aa325acaaf520fce8afdebc1be9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99932781e3722a47f475f1e022a6238"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aa99932781e3722a47f475f1e022a6238">CalcBernstein</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u)</td></tr>
+<tr class="memitem:aa99932781e3722a47f475f1e022a6238"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#aa99932781e3722a47f475f1e022a6238">CalcBernstein</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>)</td></tr>
 <tr class="memdesc:aa99932781e3722a47f475f1e022a6238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the values of the Bernstein basis functions of order <em>p</em> at coordinate <em>x</em> and store the results in the already allocated <em>u</em> array.  <a href="#aa99932781e3722a47f475f1e022a6238">More...</a><br/></td></tr>
 <tr class="separator:aa99932781e3722a47f475f1e022a6238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50fa0a335ffa1107027191d29103afb5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a50fa0a335ffa1107027191d29103afb5">CalcBernstein</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u, double *d)</td></tr>
+<tr class="memitem:a50fa0a335ffa1107027191d29103afb5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a50fa0a335ffa1107027191d29103afb5">CalcBernstein</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>, double *d)</td></tr>
 <tr class="memdesc:a50fa0a335ffa1107027191d29103afb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the values and derivatives of the Bernstein basis functions of order <em>p</em> at coordinate <em>x</em> and store the results in the already allocated <em>u</em> and <em>d</em> arrays.  <a href="#a50fa0a335ffa1107027191d29103afb5">More...</a><br/></td></tr>
 <tr class="separator:a50fa0a335ffa1107027191d29103afb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add078b5b8fc7f48ee0b53d650c9ff3f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#add078b5b8fc7f48ee0b53d650c9ff3f1">CalcLegendre</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u)</td></tr>
+<tr class="memitem:add078b5b8fc7f48ee0b53d650c9ff3f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#add078b5b8fc7f48ee0b53d650c9ff3f1">CalcLegendre</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>)</td></tr>
 <tr class="separator:add078b5b8fc7f48ee0b53d650c9ff3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe774319f2a6ba70187e1556f4701df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a6fe774319f2a6ba70187e1556f4701df">CalcLegendre</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *u, double *d)</td></tr>
+<tr class="memitem:a6fe774319f2a6ba70187e1556f4701df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Poly__1D.html#a6fe774319f2a6ba70187e1556f4701df">CalcLegendre</a> (const int <a class="el" href="navier__mms_8cpp.html#aad69e558efc20c74b91561cc5721ca1a">p</a>, const double x, double *<a class="el" href="namespacemfem.html#a602b817d5a403240b59b6eb51d349406">u</a>, double *d)</td></tr>
 <tr class="separator:a6fe774319f2a6ba70187e1556f4701df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for computing 1D special polynomials and their associated basis functions </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01847">1847</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01961">1961</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a70d87208b246f91f817f7178eb778da3"></a>
 <div class="memitem">
@@ -203,11 +207,13 @@ choose k" for k=0,...,p for the given p.  <a href="#a3943094b44b98f0492d78c1ec7c
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a70d87208b246f91f817f7178eb778da3a934ad89f597417efe9fc9eab72ed20de"></a>Positive</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a70d87208b246f91f817f7178eb778da3a48ca7194706d18ebe804923e55648a15"></a>Integrated</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a70d87208b246f91f817f7178eb778da3ab73630b9de5036d5e893942490cf3ee2"></a>NumEvalTypes</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01850">1850</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01964">1964</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -233,7 +239,7 @@ choose k" for k=0,...,p for the given p.  <a href="#a3943094b44b98f0492d78c1ec7c
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01894">1894</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02019">2019</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -250,7 +256,7 @@ choose k" for k=0,...,p for the given p.  <a href="#a3943094b44b98f0492d78c1ec7c
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07450">7450</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07692">7692</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +286,7 @@ choose k" for k=0,...,p for the given p.  <a href="#a3943094b44b98f0492d78c1ec7c
 <p>Get a pointer to an array containing the binomial coefficients "p
 choose k" for k=0,...,p for the given p. </p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07162">7162</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07401">7401</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +330,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Evaluate the values of a hierarchical 1D basis at point x hierarchical = k-th basis function is degree k polynomial. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01933">1933</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02058">2058</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -374,7 +380,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Evaluate the values and derivatives of a hierarchical 1D basis at point <em>x</em>. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01942">1942</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02067">2067</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +436,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Evaluate the values, derivatives and second derivatives of a hierarchical 1D basis at point x. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01949">1949</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02074">2074</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +480,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Compute the values of the Bernstein basis functions of order <em>p</em> at coordinate <em>x</em> and store the results in the already allocated <em>u</em> array. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01982">1982</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02107">2107</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -524,7 +530,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Compute the values and derivatives of the Bernstein basis functions of order <em>p</em> at coordinate <em>x</em> and store the results in the already allocated <em>u</em> and <em>d</em> arrays. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01988">1988</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02113">2113</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -574,7 +580,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Compute the <em>p</em> terms in the expansion of the binomial (x + y)^p and store them in the already allocated <em>u</em> array. </p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07211">7211</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07450">7450</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -630,7 +636,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Compute the terms in the expansion of the binomial (x + y)^p and their derivatives with respect to x assuming that dy/dx = -1. Store the results in the already allocated <em>u</em> and <em>d</em> arrays. </p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07240">7240</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07479">7479</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -680,7 +686,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Compute the derivatives (w.r.t. x) of the terms in the expansion of the binomial (x + y)^p assuming that dy/dx = -1. Store the results in the already allocated <em>d</em> array. </p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07275">7275</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07514">7514</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +724,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Evaluate a representation of a Delta function at point x. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01957">1957</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02082">2082</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,7 +766,7 @@ choose k" for k=0,...,p for the given p. </p>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07305">7305</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07544">7544</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +814,7 @@ choose k" for k=0,...,p for the given p. </p>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07319">7319</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07558">7558</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -846,7 +852,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Compute the points for the Chebyshev polynomials of order <em>p</em> and place them in the already allocated <em>x</em> array. </p>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07179">7179</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07418">7418</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -884,7 +890,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Get coordinates of a closed (GaussLegendre) set of points if degree <em>p</em>. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01917">1917</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02042">2042</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -922,7 +928,7 @@ choose k" for k=0,...,p for the given p. </p>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to an object of type <a class="el" href="classmfem_1_1Poly__1D_1_1Basis.html">Poly_1D::Basis</a> that represents the requested basis type. </dd></dl>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07428">7428</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07667">7667</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -960,7 +966,7 @@ choose k" for k=0,...,p for the given p. </p>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to an array containing the <code>p+1</code> coordinates of the points. Returns NULL if the <a class="el" href="classmfem_1_1BasisType.html" title="Possible basis types. Note that not all elements can use all BasisType(s). ">BasisType</a> has no associated set of points. </dd></dl>
 
-<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07404">7404</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8cpp_source.html#l07643">7643</a> of file <a class="el" href="fe_8cpp_source.html">fe.cpp</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1004,7 @@ choose k" for k=0,...,p for the given p. </p>
 
 <p>Get coordinates of an open (GaussLegendre) set of points if degree <em>p</em>. </p>
 
-<p>Definition at line <a class="el" href="fe_8hpp_source.html#l01912">1912</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
+<p>Definition at line <a class="el" href="fe_8hpp_source.html#l02037">2037</a> of file <a class="el" href="fe_8hpp_source.html">fe.hpp</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1015,7 @@ choose k" for k=0,...,p for the given p. </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:08 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:50 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

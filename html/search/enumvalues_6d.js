@@ -4,6 +4,8 @@ var searchData=
   ['mask_5faction',['MASK_ACTION',['../classmfem_1_1MeshOperator.html#a89136204becccd73a1b4645374e53a0fa532e74a012f92fc75d28bb1d6f164ae8',1,'mfem::MeshOperator']]],
   ['mask_5finfo',['MASK_INFO',['../classmfem_1_1MeshOperator.html#acd132269e7e6fb22f306e77e5541c7bea1c7129a60d379c20dd4c94113b706747',1,'mfem::MeshOperator']]],
   ['mask_5fupdate',['MASK_UPDATE',['../classmfem_1_1MeshOperator.html#a89136204becccd73a1b4645374e53a0fab3dced9678049ca8eb06eaba38bd6ea9',1,'mfem::MeshOperator']]],
+  ['matrix_5fand_5frhs',['MATRIX_AND_RHS',['../namespacemfem.html#a92e6148f970d73b0f646b64da558c31faf2ceec1fddae00d5ae573af08386d76b',1,'mfem']]],
+  ['matrix_5fonly',['MATRIX_ONLY',['../namespacemfem.html#a92e6148f970d73b0f646b64da558c31faaf82e81c4bf0e5f8d76df18ceb289375',1,'mfem']]],
   ['metis_5fat_5fplus_5fa',['METIS_AT_PLUS_A',['../namespacemfem_1_1superlu.html#a1b4995f6996ce77a7ebf44b5b5b31c75a592b34cc194dedfde03e94eeb8d77253',1,'mfem::superlu']]],
   ['mfem_5fcomplexsparsemat',['MFEM_ComplexSparseMat',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a3c58ec3f81eb14bd6711d09801ea288d',1,'mfem::Operator']]],
   ['mfem_5ferror_5fabort',['MFEM_ERROR_ABORT',['../namespacemfem.html#a9999206063f50266ac7021590b04ba72aa3025f545c4c822b0756e5bb3a126e8e',1,'mfem']]],

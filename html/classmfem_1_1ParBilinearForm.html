@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -133,11 +133,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1f8069100848de1b659781c42a6dfd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#ac1f8069100848de1b659781c42a6dfd8">KeepNbrBlock</a> (bool knb=true)</td></tr>
 <tr class="separator:ac1f8069100848de1b659781c42a6dfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00f4263104e844e97dd4f1f7a722d7e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a00f4263104e844e97dd4f1f7a722d7e7">SetOperatorType</a> (<a class="el" href="classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288">Operator::Type</a> tid)</td></tr>
-<tr class="memdesc:a00f4263104e844e97dd4f1f7a722d7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the operator type id for the parallel matrix/operator when using <a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310ac5e32ded5a6cb3015c3efa1db5be8d4d">AssemblyLevel::LEGACYFULL</a>.  <a href="#a00f4263104e844e97dd4f1f7a722d7e7">More...</a><br/></td></tr>
+<tr class="memdesc:a00f4263104e844e97dd4f1f7a722d7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the operator type id for the parallel matrix/operator when using <a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310a456d016bd133625e5036aa9a556f2730">AssemblyLevel::LEGACY</a>.  <a href="#a00f4263104e844e97dd4f1f7a722d7e7">More...</a><br/></td></tr>
 <tr class="separator:a00f4263104e844e97dd4f1f7a722d7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5445000c7687dc4a80e3e5ee6963cca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a5445000c7687dc4a80e3e5ee6963cca9">Assemble</a> (int skip_zeros=1)</td></tr>
 <tr class="memdesc:a5445000c7687dc4a80e3e5ee6963cca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the local matrix.  <a href="#a5445000c7687dc4a80e3e5ee6963cca9">More...</a><br/></td></tr>
 <tr class="separator:a5445000c7687dc4a80e3e5ee6963cca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3868bccb51a55550d003fa7dcf9c64ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a3868bccb51a55550d003fa7dcf9c64ef">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
+<tr class="memdesc:a3868bccb51a55550d003fa7dcf9c64ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the diagonal of the bilinear form into <em>diag</em>. Note that <em>diag</em> is a true-dof <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>.  <a href="#a3868bccb51a55550d003fa7dcf9c64ef">More...</a><br/></td></tr>
+<tr class="separator:a3868bccb51a55550d003fa7dcf9c64ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ffbaf1e8a969aec7bf03aa6d7599f67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a9ffbaf1e8a969aec7bf03aa6d7599f67">ParallelAssemble</a> ()</td></tr>
 <tr class="memdesc:a9ffbaf1e8a969aec7bf03aa6d7599f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix assembled on the true dofs, i.e. P^t A P.  <a href="#a9ffbaf1e8a969aec7bf03aa6d7599f67">More...</a><br/></td></tr>
 <tr class="separator:a9ffbaf1e8a969aec7bf03aa6d7599f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +178,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73319f94e04969fbbec6e74fa67007be"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a73319f94e04969fbbec6e74fa67007be">GetProlongation</a> () const </td></tr>
 <tr class="memdesc:a73319f94e04969fbbec6e74fa67007be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parallel finite element space prolongation matrix.  <a href="#a73319f94e04969fbbec6e74fa67007be">More...</a><br/></td></tr>
 <tr class="separator:a73319f94e04969fbbec6e74fa67007be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7945697b39119ba96e5778b837bdd0"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#aaf7945697b39119ba96e5778b837bdd0">GetRestrictionTranspose</a> () const </td></tr>
+<tr class="memdesc:aaf7945697b39119ba96e5778b837bdd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transpose of GetRestriction, useful for matrix-free RAP.  <a href="#aaf7945697b39119ba96e5778b837bdd0">More...</a><br/></td></tr>
+<tr class="separator:aaf7945697b39119ba96e5778b837bdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bb5df378b32698f6b52b812a60b6069"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a2bb5df378b32698f6b52b812a60b6069">GetRestriction</a> () const </td></tr>
 <tr class="memdesc:a2bb5df378b32698f6b52b812a60b6069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parallel finite element space restriction matrix.  <a href="#a2bb5df378b32698f6b52b812a60b6069">More...</a><br/></td></tr>
 <tr class="separator:a2bb5df378b32698f6b52b812a60b6069"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,13 +195,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c4594d6077f014d3c3a919149102896"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#a7c4594d6077f014d3c3a919149102896">Update</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *nfes=NULL)</td></tr>
 <tr class="memdesc:a7c4594d6077f014d3c3a919149102896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the <em><a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a></em> and delete all data associated with the old one.  <a href="#a7c4594d6077f014d3c3a919149102896">More...</a><br/></td></tr>
 <tr class="separator:a7c4594d6077f014d3c3a919149102896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2c28d7151480ea239c41edf3a19f0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#afd2c28d7151480ea239c41edf3a19f0d">EliminateVDofsInRHS</a> (const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;<a class="el" href="classmfem_1_1BilinearForm.html#ae3ad7f3dbb28c34b26aec6f4189f88cb">vdofs</a>, const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>)</td></tr>
+<tr class="separator:afd2c28d7151480ea239c41edf3a19f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada87aa86fd6c192e2f8eb996256546dc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1ParBilinearForm.html#ada87aa86fd6c192e2f8eb996256546dc">~ParBilinearForm</a> ()</td></tr>
 <tr class="separator:ada87aa86fd6c192e2f8eb996256546dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1BilinearForm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1BilinearForm')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1BilinearForm.html">mfem::BilinearForm</a></td></tr>
-<tr class="memitem:a20355554d539d9cfbba36430e5856125 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a20355554d539d9cfbba36430e5856125">BilinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>)</td></tr>
+<tr class="memitem:a20355554d539d9cfbba36430e5856125 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a20355554d539d9cfbba36430e5856125">BilinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>)</td></tr>
 <tr class="memdesc:a20355554d539d9cfbba36430e5856125 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates bilinear form associated with FE space <em>*f</em>.  <a href="#a20355554d539d9cfbba36430e5856125">More...</a><br/></td></tr>
 <tr class="separator:a20355554d539d9cfbba36430e5856125 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30577a71f556a9ce49c6e5b8498042ee inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a30577a71f556a9ce49c6e5b8498042ee">BilinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="mesh-explorer_8cpp.html#a620b8493380888fec82a33ea41571a2e">f</a>, <a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a> *bf, int ps=0)</td></tr>
+<tr class="memitem:a30577a71f556a9ce49c6e5b8498042ee inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a30577a71f556a9ce49c6e5b8498042ee">BilinearForm</a> (<a class="el" href="classmfem_1_1FiniteElementSpace.html">FiniteElementSpace</a> *<a class="el" href="namespacemfem.html#a6ca5c7837c048d0c2692cfe31c1b88ba">f</a>, <a class="el" href="classmfem_1_1BilinearForm.html">BilinearForm</a> *bf, int ps=0)</td></tr>
 <tr class="memdesc:a30577a71f556a9ce49c6e5b8498042ee inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classmfem_1_1BilinearForm.html" title="A &quot;square matrix&quot; operator for the associated FE space and BLFIntegrators The sum of all the BLFInteg...">BilinearForm</a> on the <a class="el" href="classmfem_1_1FiniteElementSpace.html" title="Class FiniteElementSpace - responsible for providing FEM view of the mesh, mainly managing the set of...">FiniteElementSpace</a> <em>f</em>, using the same integrators as the <a class="el" href="classmfem_1_1BilinearForm.html" title="A &quot;square matrix&quot; operator for the associated FE space and BLFIntegrators The sum of all the BLFInteg...">BilinearForm</a> <em>bf</em>.  <a href="#a30577a71f556a9ce49c6e5b8498042ee">More...</a><br/></td></tr>
 <tr class="separator:a30577a71f556a9ce49c6e5b8498042ee inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b63d5b2b20a5b1cca28df0eb3b2eef inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a19b63d5b2b20a5b1cca28df0eb3b2eef">Size</a> () const </td></tr>
@@ -207,6 +215,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc9cb61b02030deca2d4493fc26a2315 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310">AssemblyLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#afc9cb61b02030deca2d4493fc26a2315">GetAssemblyLevel</a> () const </td></tr>
 <tr class="memdesc:afc9cb61b02030deca2d4493fc26a2315 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the assembly level.  <a href="#afc9cb61b02030deca2d4493fc26a2315">More...</a><br/></td></tr>
 <tr class="separator:afc9cb61b02030deca2d4493fc26a2315 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96969f54344870f05951a64b9848b27a inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Hybridization.html">Hybridization</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a96969f54344870f05951a64b9848b27a">GetHybridization</a> () const </td></tr>
+<tr class="separator:a96969f54344870f05951a64b9848b27a inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168ec9236604a7744d7963f1c06454e7 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a168ec9236604a7744d7963f1c06454e7">EnableStaticCondensation</a> ()</td></tr>
 <tr class="memdesc:a168ec9236604a7744d7963f1c06454e7 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the use of static condensation. For details see the description for class <a class="el" href="classmfem_1_1StaticCondensation.html">StaticCondensation</a> in <a class="el" href="staticcond_8hpp.html">fem/staticcond.hpp</a> This method should be called before assembly. If the number of unknowns after static condensation is not reduced, it is not enabled.  <a href="#a168ec9236604a7744d7963f1c06454e7">More...</a><br/></td></tr>
 <tr class="separator:a168ec9236604a7744d7963f1c06454e7 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,6 +316,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ac313b9d213af233e4d9155666bded8 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a2ac313b9d213af233e4d9155666bded8">AddDomainIntegrator</a> (<a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> *bfi)</td></tr>
 <tr class="memdesc:a2ac313b9d213af233e4d9155666bded8 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new Domain Integrator. Assumes ownership of <em>bfi</em>.  <a href="#a2ac313b9d213af233e4d9155666bded8">More...</a><br/></td></tr>
 <tr class="separator:a2ac313b9d213af233e4d9155666bded8 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fc7f679041e83efd2a7cd6666623af inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a57fc7f679041e83efd2a7cd6666623af">AddDomainIntegrator</a> (<a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> *bfi, <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;elem_marker)</td></tr>
+<tr class="separator:a57fc7f679041e83efd2a7cd6666623af inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522d16a045ff5cf84d2b2b4125d75aca inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a522d16a045ff5cf84d2b2b4125d75aca">AddBoundaryIntegrator</a> (<a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> *bfi)</td></tr>
 <tr class="memdesc:a522d16a045ff5cf84d2b2b4125d75aca inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new Boundary Integrator. Assumes ownership of <em>bfi</em>.  <a href="#a522d16a045ff5cf84d2b2b4125d75aca">More...</a><br/></td></tr>
 <tr class="separator:a522d16a045ff5cf84d2b2b4125d75aca inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,12 +339,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6289de43fcf8c775f6326f951adda412 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a6289de43fcf8c775f6326f951adda412">Assemble</a> (int skip_zeros=1)</td></tr>
 <tr class="memdesc:a6289de43fcf8c775f6326f951adda412 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assembles the form i.e. sums over all domain/bdr integrators.  <a href="#a6289de43fcf8c775f6326f951adda412">More...</a><br/></td></tr>
 <tr class="separator:a6289de43fcf8c775f6326f951adda412 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705287818d8cc177fba009688b4e3ec6 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a705287818d8cc177fba009688b4e3ec6">AssembleDiagonal</a> (<a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;diag) const </td></tr>
-<tr class="memdesc:a705287818d8cc177fba009688b4e3ec6 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the diagonal of the bilinear form into diag.  <a href="#a705287818d8cc177fba009688b4e3ec6">More...</a><br/></td></tr>
-<tr class="separator:a705287818d8cc177fba009688b4e3ec6 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb7ecd4ebb8f8dc286b1749f3667966 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a8eb7ecd4ebb8f8dc286b1749f3667966">GetOutputProlongation</a> () const </td></tr>
 <tr class="memdesc:a8eb7ecd4ebb8f8dc286b1749f3667966 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the output finite element space prolongation matrix.  <a href="#a8eb7ecd4ebb8f8dc286b1749f3667966">More...</a><br/></td></tr>
 <tr class="separator:a8eb7ecd4ebb8f8dc286b1749f3667966 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8972fa8b9312e3db473b41932fb996 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#ada8972fa8b9312e3db473b41932fb996">GetOutputRestrictionTranspose</a> () const </td></tr>
+<tr class="memdesc:ada8972fa8b9312e3db473b41932fb996 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output fe space restriction matrix, transposed.  <a href="#ada8972fa8b9312e3db473b41932fb996">More...</a><br/></td></tr>
+<tr class="separator:ada8972fa8b9312e3db473b41932fb996 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c3f15bff25ae3fb3b16bf77979b7190 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a4c3f15bff25ae3fb3b16bf77979b7190">GetOutputRestriction</a> () const </td></tr>
 <tr class="memdesc:a4c3f15bff25ae3fb3b16bf77979b7190 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the output finite element space restriction matrix.  <a href="#a4c3f15bff25ae3fb3b16bf77979b7190">More...</a><br/></td></tr>
 <tr class="separator:a4c3f15bff25ae3fb3b16bf77979b7190 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,7 +430,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a41b105f08b1c9703b1e9443257aef201 inherit pub_methods_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys bilinear form.  <a href="#a41b105f08b1c9703b1e9443257aef201">More...</a><br/></td></tr>
 <tr class="separator:a41b105f08b1c9703b1e9443257aef201 inherit pub_methods_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmfem_1_1Matrix"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmfem_1_1Matrix')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmfem_1_1Matrix.html">mfem::Matrix</a></td></tr>
-<tr class="memitem:a87695fcabfb3ee897c0aecbda2a262c8 inherit pub_methods_classmfem_1_1Matrix"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Matrix.html#a87695fcabfb3ee897c0aecbda2a262c8">Matrix</a> (int s)</td></tr>
+<tr class="memitem:a87695fcabfb3ee897c0aecbda2a262c8 inherit pub_methods_classmfem_1_1Matrix"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Matrix.html#a87695fcabfb3ee897c0aecbda2a262c8">Matrix</a> (int <a class="el" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>)</td></tr>
 <tr class="memdesc:a87695fcabfb3ee897c0aecbda2a262c8 inherit pub_methods_classmfem_1_1Matrix"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a square matrix of size s.  <a href="#a87695fcabfb3ee897c0aecbda2a262c8">More...</a><br/></td></tr>
 <tr class="separator:a87695fcabfb3ee897c0aecbda2a262c8 inherit pub_methods_classmfem_1_1Matrix"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad620407dc8b4755ea62b2ab814011e1c inherit pub_methods_classmfem_1_1Matrix"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Matrix.html#ad620407dc8b4755ea62b2ab814011e1c">Matrix</a> (int h, int w)</td></tr>
@@ -437,7 +449,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#af05141bf6d86d28444889d58216dc7ed">InitTVectors</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Ri, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;x, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;<a class="el" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;X, <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;B) const </td></tr>
 <tr class="memdesc:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes memory for true vectors of linear system.  <a href="#af05141bf6d86d28444889d58216dc7ed">More...</a><br/></td></tr>
 <tr class="separator:af05141bf6d86d28444889d58216dc7ed inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int s=0)</td></tr>
+<tr class="memitem:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#a527f8d742df2102735a094a357cecaaa">Operator</a> (int <a class="el" href="ncmesh__tables_8hpp.html#aa9bbc8c2be6976cfc6ce9759a9012e39">s</a>=0)</td></tr>
 <tr class="memdesc:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a square <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> with given size s (default 0).  <a href="#a527f8d742df2102735a094a357cecaaa">More...</a><br/></td></tr>
 <tr class="separator:a527f8d742df2102735a094a357cecaaa inherit pub_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae973ad9936ef147f0f1862849221f324 inherit pub_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ae973ad9936ef147f0f1862849221f324">Operator</a> (int h, int w)</td></tr>
@@ -507,7 +519,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">see <a class="el" href="classmfem_1_1Operator.html#ab275cd1cdcff5ce31e8ea1842585dd19" title="Return in A a parallel (on truedofs) version of this rectangular operator (including constraints)...">FormRectangularSystemOperator()</a>  <a href="#ae17b1734b2b2bbbc3b13810f90f3f398">More...</a><br/></td></tr>
 <tr class="separator:ae17b1734b2b2bbbc3b13810f90f3f398 inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Operator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1Operator.html#ab860076188a32acbd2f1a7d428aba00d">SetupRAP</a> (const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Pi, const <a class="el" href="classmfem_1_1Operator.html">Operator</a> *Po)</td></tr>
-<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, taking in input/output Prolongation matrices.  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
+<tr class="memdesc:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RAP <a class="el" href="classmfem_1_1Operator.html" title="Abstract operator. ">Operator</a> of this, using input/output Prolongation matrices <em>Pi</em> corresponds to "P", <em>Po</em> corresponds to "Rt".  <a href="#ab860076188a32acbd2f1a7d428aba00d">More...</a><br/></td></tr>
 <tr class="separator:ab860076188a32acbd2f1a7d428aba00d inherit pro_methods_classmfem_1_1Operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -549,26 +561,28 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a8d831dffb761e64bd6d4e9f06d83fc51 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the <a class="el" href="classmfem_1_1Mesh.html#a71907c5055e2815e8926a8322cf2eb43">Mesh::sequence</a> corresponding to the current state of the <a class="el" href="classmfem_1_1BilinearForm.html" title="A &quot;square matrix&quot; operator for the associated FE space and BLFIntegrators The sum of all the BLFInteg...">BilinearForm</a>.  <a href="#a8d831dffb761e64bd6d4e9f06d83fc51">More...</a><br/></td></tr>
 <tr class="separator:a8d831dffb761e64bd6d4e9f06d83fc51 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b7c7984a00627f5ca6e6283d9e778c3 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a7b7c7984a00627f5ca6e6283d9e778c3">extern_bfs</a></td></tr>
-<tr class="memdesc:a7b7c7984a00627f5ca6e6283d9e778c3 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the <a class="el" href="classmfem_1_1BilinearFormIntegrator.html" title="Abstract base class BilinearFormIntegrator. ">BilinearFormIntegrator</a>s stored in <a class="el" href="classmfem_1_1BilinearForm.html#a21c2816d5a1c694e0b0d97623a6f27e5" title="Set of Domain Integrators to be applied. ">dbfi</a>, <a class="el" href="classmfem_1_1BilinearForm.html#a76f21d429887c496c99627c481bd780d" title="Set of Boundary Integrators to be applied. ">bbfi</a>, <a class="el" href="classmfem_1_1BilinearForm.html#a385d4b40bb478e9dafc0219cb861a050" title="Set of interior face Integrators to be applied. ">fbfi</a>, and <a class="el" href="classmfem_1_1BilinearForm.html#aaf721e489eceb0aee46c943a611503f7" title="Set of boundary face Integrators to be applied. ">bfbfi</a> are owned by another <a class="el" href="classmfem_1_1BilinearForm.html" title="A &quot;square matrix&quot; operator for the associated FE space and BLFIntegrators The sum of all the BLFInteg...">BilinearForm</a>.  <a href="#a7b7c7984a00627f5ca6e6283d9e778c3">More...</a><br/></td></tr>
+<tr class="memdesc:a7b7c7984a00627f5ca6e6283d9e778c3 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the <a class="el" href="classmfem_1_1BilinearFormIntegrator.html" title="Abstract base class BilinearFormIntegrator. ">BilinearFormIntegrator</a>s stored in <a class="el" href="classmfem_1_1BilinearForm.html#a07305b700d43efebad58754414118729" title="Set of Domain Integrators to be applied. ">domain_integs</a>, <a class="el" href="classmfem_1_1BilinearForm.html#ae4fe0806076f1b7682da0d9160496cc7" title="Set of Boundary Integrators to be applied. ">boundary_integs</a>, <a class="el" href="classmfem_1_1BilinearForm.html#a8e24dceeb5e18ccca630faff9499da90" title="Set of interior face Integrators to be applied. ">interior_face_integs</a>, and <a class="el" href="classmfem_1_1BilinearForm.html#a2e4e3383cdd47588afedc98c51221063" title="Set of boundary face Integrators to be applied. ">boundary_face_integs</a> are owned by another <a class="el" href="classmfem_1_1BilinearForm.html" title="A &quot;square matrix&quot; operator for the associated FE space and BLFIntegrators The sum of all the BLFInteg...">BilinearForm</a>.  <a href="#a7b7c7984a00627f5ca6e6283d9e778c3">More...</a><br/></td></tr>
 <tr class="separator:a7b7c7984a00627f5ca6e6283d9e778c3 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c2816d5a1c694e0b0d97623a6f27e5 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a21c2816d5a1c694e0b0d97623a6f27e5">dbfi</a></td></tr>
-<tr class="memdesc:a21c2816d5a1c694e0b0d97623a6f27e5 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of Domain Integrators to be applied.  <a href="#a21c2816d5a1c694e0b0d97623a6f27e5">More...</a><br/></td></tr>
-<tr class="separator:a21c2816d5a1c694e0b0d97623a6f27e5 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76f21d429887c496c99627c481bd780d inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a76f21d429887c496c99627c481bd780d">bbfi</a></td></tr>
-<tr class="memdesc:a76f21d429887c496c99627c481bd780d inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of Boundary Integrators to be applied.  <a href="#a76f21d429887c496c99627c481bd780d">More...</a><br/></td></tr>
-<tr class="separator:a76f21d429887c496c99627c481bd780d inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a695b7235d690655d2030056b3294b620 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a695b7235d690655d2030056b3294b620">bbfi_marker</a></td></tr>
-<tr class="memdesc:a695b7235d690655d2030056b3294b620 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entries are not owned.  <a href="#a695b7235d690655d2030056b3294b620">More...</a><br/></td></tr>
-<tr class="separator:a695b7235d690655d2030056b3294b620 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a385d4b40bb478e9dafc0219cb861a050 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a385d4b40bb478e9dafc0219cb861a050">fbfi</a></td></tr>
-<tr class="memdesc:a385d4b40bb478e9dafc0219cb861a050 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of interior face Integrators to be applied.  <a href="#a385d4b40bb478e9dafc0219cb861a050">More...</a><br/></td></tr>
-<tr class="separator:a385d4b40bb478e9dafc0219cb861a050 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf721e489eceb0aee46c943a611503f7 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#aaf721e489eceb0aee46c943a611503f7">bfbfi</a></td></tr>
-<tr class="memdesc:aaf721e489eceb0aee46c943a611503f7 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of boundary face Integrators to be applied.  <a href="#aaf721e489eceb0aee46c943a611503f7">More...</a><br/></td></tr>
-<tr class="separator:aaf721e489eceb0aee46c943a611503f7 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31efbb4fa6fc5b400e296d101de07765 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a31efbb4fa6fc5b400e296d101de07765">bfbfi_marker</a></td></tr>
-<tr class="memdesc:a31efbb4fa6fc5b400e296d101de07765 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entries are not owned.  <a href="#a31efbb4fa6fc5b400e296d101de07765">More...</a><br/></td></tr>
-<tr class="separator:a31efbb4fa6fc5b400e296d101de07765 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07305b700d43efebad58754414118729 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a07305b700d43efebad58754414118729">domain_integs</a></td></tr>
+<tr class="memdesc:a07305b700d43efebad58754414118729 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of Domain Integrators to be applied.  <a href="#a07305b700d43efebad58754414118729">More...</a><br/></td></tr>
+<tr class="separator:a07305b700d43efebad58754414118729 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bddbbf29ae0ac7667c88a7a037b0c4b inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a0bddbbf29ae0ac7667c88a7a037b0c4b">domain_integs_marker</a></td></tr>
+<tr class="separator:a0bddbbf29ae0ac7667c88a7a037b0c4b inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fe0806076f1b7682da0d9160496cc7 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#ae4fe0806076f1b7682da0d9160496cc7">boundary_integs</a></td></tr>
+<tr class="memdesc:ae4fe0806076f1b7682da0d9160496cc7 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of Boundary Integrators to be applied.  <a href="#ae4fe0806076f1b7682da0d9160496cc7">More...</a><br/></td></tr>
+<tr class="separator:ae4fe0806076f1b7682da0d9160496cc7 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c20c487862490b5cee8c280e56a7b39 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a8c20c487862490b5cee8c280e56a7b39">boundary_integs_marker</a></td></tr>
+<tr class="memdesc:a8c20c487862490b5cee8c280e56a7b39 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entries are not owned.  <a href="#a8c20c487862490b5cee8c280e56a7b39">More...</a><br/></td></tr>
+<tr class="separator:a8c20c487862490b5cee8c280e56a7b39 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e24dceeb5e18ccca630faff9499da90 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a8e24dceeb5e18ccca630faff9499da90">interior_face_integs</a></td></tr>
+<tr class="memdesc:a8e24dceeb5e18ccca630faff9499da90 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of interior face Integrators to be applied.  <a href="#a8e24dceeb5e18ccca630faff9499da90">More...</a><br/></td></tr>
+<tr class="separator:a8e24dceeb5e18ccca630faff9499da90 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4e3383cdd47588afedc98c51221063 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1BilinearFormIntegrator.html">BilinearFormIntegrator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a2e4e3383cdd47588afedc98c51221063">boundary_face_integs</a></td></tr>
+<tr class="memdesc:a2e4e3383cdd47588afedc98c51221063 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of boundary face Integrators to be applied.  <a href="#a2e4e3383cdd47588afedc98c51221063">More...</a><br/></td></tr>
+<tr class="separator:a2e4e3383cdd47588afedc98c51221063 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d46f26de0ce1a7a708fe79c8c079aaf inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a1d46f26de0ce1a7a708fe79c8c079aaf">boundary_face_integs_marker</a></td></tr>
+<tr class="memdesc:a1d46f26de0ce1a7a708fe79c8c079aaf inherit pro_attribs_classmfem_1_1BilinearForm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entries are not owned.  <a href="#a1d46f26de0ce1a7a708fe79c8c079aaf">More...</a><br/></td></tr>
+<tr class="separator:a1d46f26de0ce1a7a708fe79c8c079aaf inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69002cce397497d4cebdfde4932e1314 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1DenseMatrix.html">DenseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#a69002cce397497d4cebdfde4932e1314">elemmat</a></td></tr>
 <tr class="separator:a69002cce397497d4cebdfde4932e1314 inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ad7f3dbb28c34b26aec6f4189f88cb inherit pro_attribs_classmfem_1_1BilinearForm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1BilinearForm.html#ae3ad7f3dbb28c34b26aec6f4189f88cb">vdofs</a></td></tr>
@@ -653,7 +667,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates parallel bilinear form associated with the FE space <em>*pf</em>. </p>
 <p>The pointer <em>pf</em> is not owned by the newly constructed object. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00055">55</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00056">56</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -693,7 +707,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The pointer <em>pf</em> is not owned by the newly constructed object.</p>
 <p>The integrators in <em>bf</em> are copied as pointers and they are not owned by the newly constructed <a class="el" href="classmfem_1_1ParBilinearForm.html" title="Class for parallel bilinear form. ">ParBilinearForm</a>. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00067">67</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00068">68</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +732,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00184">184</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00201">201</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -739,7 +753,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Assemble the local matrix. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00234">234</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00235">235</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3868bccb51a55550d003fa7dcf9c64ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParBilinearForm::AssembleDiagonal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>diag</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assemble the diagonal of the bilinear form into <em>diag</em>. Note that <em>diag</em> is a true-dof <a class="el" href="classmfem_1_1Vector.html" title="Vector data type. ">Vector</a>. </p>
+<p>When the AssemblyLevel is not LEGACY, and the mesh is nonconforming, this method returns |P^T| d_l, where d_l is the local diagonal of the form before applying parallel/conforming assembly, P^T is the transpose of the parallel/conforming prolongation, and |.| denotes the entry-wise absolute value. In general, this is just an approximation of the exact diagonal for this case. </p>
+
+<p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#a705287818d8cc177fba009688b4e3ec6">mfem::BilinearForm</a>.</p>
+
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00254">254</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -766,6 +811,40 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00190">190</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd2c28d7151480ea239c41edf3a19f0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mfem::ParBilinearForm::EliminateVDofsInRHS </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Array.html">Array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vdofs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmfem_1_1Vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00392">392</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -841,7 +920,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#ac6075c6642a0ffbb991c3b604b6858f7">mfem::BilinearForm</a>.</p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00298">298</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00342">342</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +960,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#af5c517465d727fc7b969bfac112689da">mfem::BilinearForm</a>.</p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00348">348</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00398">398</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -910,7 +989,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#aad6637c863d71421c946d62549c6573b">mfem::BilinearForm</a>.</p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00161">161</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00173">173</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -939,7 +1018,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#a5562dacaba259ae067e8fa15179b0ce3">mfem::BilinearForm</a>.</p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00164">164</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00179">179</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf7945697b39119ba96e5778b837bdd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classmfem_1_1Operator.html">Operator</a>* mfem::ParBilinearForm::GetRestrictionTranspose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the transpose of GetRestriction, useful for matrix-free RAP. </p>
+
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00176">176</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +1072,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>When set to true and the <a class="el" href="classmfem_1_1ParBilinearForm.html" title="Class for parallel bilinear form. ">ParBilinearForm</a> has interior face integrators, the local <a class="el" href="classmfem_1_1SparseMatrix.html" title="Data type sparse matrix. ">SparseMatrix</a> will include the rows (in addition to the columns) corresponding to face-neighbor dofs. The default behavior is to disregard those rows. Must be called before the first Assemble call. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00076">76</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00077">77</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +1125,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the matrix assembled on the true dofs, i.e. P^t A P. </p>
 <p>The returned matrix has to be deleted by the caller. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00094">94</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00106">106</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +1174,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the matrix assembled on the true dofs, i.e. <em>A</em> = P^t A_local P, in the format (type id) specified by <em>A</em>. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00106">106</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00118">118</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1125,7 +1231,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the eliminated matrix assembled on the true dofs, i.e. P^t A_e P. </p>
 <p>The returned matrix has to be deleted by the caller. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00098">98</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00110">110</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1152,7 +1258,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the eliminated matrix assembled on the true dofs, i.e. <em>A_elim</em> = P^t A_elim_local P in the format (type id) specified by <em>A</em>. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00111">111</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00123">123</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1195,7 +1301,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Eliminate essential boundary DOFs from a parallel assembled system. </p>
 <p>The array <em>bdr_attr_is_ess</em> marks boundary attributes that constitute the essential part of the boundary. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00251">251</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00294">294</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1224,9 +1330,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Eliminate essential boundary DOFs from a parallel assembled matrix <em>A</em>. </p>
-<p>The array <em>bdr_attr_is_ess</em> marks boundary attributes that constitute the essential part of the boundary. The eliminated part is stored in a matrix A_elim such that A_original = A_new + A_elim. Returns a pointer to the newly allocated matrix A_elim which should be deleted by the caller. The matrices <em>A</em> and A_elim can be used to eliminate boundary conditions in multiple right-hand sides, by calling the function <a class="el" href="namespacemfem.html#a46b51adafc242d43a21c7229dcee53dd">EliminateBC()</a> (from <a class="el" href="hypre_8hpp.html">hypre.hpp</a>). </p>
+<p>The array <em>bdr_attr_is_ess</em> marks boundary attributes that constitute the essential part of the boundary. The eliminated part is stored in a matrix A_elim such that A_original = A_new + A_elim. Returns a pointer to the newly allocated matrix A_elim which should be deleted by the caller. The matrices <em>A</em> and A_elim can be used to eliminate boundary conditions in multiple right-hand sides, by calling the function <a class="el" href="namespacemfem.html#adc02afe9fa3e53631de6c496796d3496" title="Eliminate essential BC specified by ess_dof_list from the solution X to the r.h.s. B. ">EliminateBC()</a> (from <a class="el" href="hypre_8hpp.html">hypre.hpp</a>). </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00264">264</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00307">307</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1263,9 +1369,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Eliminate essential true DOFs from a parallel assembled matrix <em>A</em>. </p>
-<p>Given a list of essential true dofs and the parallel assembled matrix <em>A</em>, eliminate the true dofs from the matrix, storing the eliminated part in a matrix A_elim such that A_original = A_new + A_elim. Returns a pointer to the newly allocated matrix A_elim which should be deleted by the caller. The matrices <em>A</em> and A_elim can be used to eliminate boundary conditions in multiple right-hand sides, by calling the function <a class="el" href="namespacemfem.html#a46b51adafc242d43a21c7229dcee53dd">EliminateBC()</a> (from <a class="el" href="hypre_8hpp.html">hypre.hpp</a>). </p>
+<p>Given a list of essential true dofs and the parallel assembled matrix <em>A</em>, eliminate the true dofs from the matrix, storing the eliminated part in a matrix A_elim such that A_original = A_new + A_elim. Returns a pointer to the newly allocated matrix A_elim which should be deleted by the caller. The matrices <em>A</em> and A_elim can be used to eliminate boundary conditions in multiple right-hand sides, by calling the function <a class="el" href="namespacemfem.html#adc02afe9fa3e53631de6c496796d3496" title="Eliminate essential BC specified by ess_dof_list from the solution X to the r.h.s. B. ">EliminateBC()</a> (from <a class="el" href="hypre_8hpp.html">hypre.hpp</a>). </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00145">145</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00157">157</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1292,7 +1398,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the parallel FE space associated with the <a class="el" href="classmfem_1_1ParBilinearForm.html" title="Class for parallel bilinear form. ">ParBilinearForm</a>. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00154">154</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00166">166</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1337,7 +1443,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#a66cf7872bc97ad5729cb8b5df5869f68">mfem::BilinearForm</a>.</p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00396">396</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00446">446</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1470,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the parallel trace FE space associated with static condensation. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00157">157</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00169">169</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1390,10 +1496,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the operator type id for the parallel matrix/operator when using <a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310ac5e32ded5a6cb3015c3efa1db5be8d4d">AssemblyLevel::LEGACYFULL</a>. </p>
+<p>Set the operator type id for the parallel matrix/operator when using <a class="el" href="namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310a456d016bd133625e5036aa9a556f2730">AssemblyLevel::LEGACY</a>. </p>
 <p>If using static condensation or hybridization, call this method <em>after</em> enabling it. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00082">82</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00083">83</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1535,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Compute <em>y</em> += <em>a</em> (P^t A P) <em>x</em>, where <em>x</em> and <em>y</em> are vectors on the true dofs. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00274">274</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00317">317</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1565,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmfem_1_1BilinearForm.html#a338b62893006d9d35aec7f21d1a4c278">mfem::BilinearForm</a>.</p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00431">431</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8cpp_source.html#l00481">481</a> of file <a class="el" href="pbilinearform_8cpp_source.html">pbilinearform.cpp</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1588,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00038">38</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00039">39</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1504,7 +1610,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00036">36</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00037">37</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1632,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00036">36</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00037">37</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1550,7 +1656,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Points to the same object as <a class="el" href="classmfem_1_1BilinearForm.html#abf98b1c20f7e1ebc97431b577a822f13" title="FE space on which the form lives. Not owned. ">fes</a>. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00031">31</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00032">32</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1680,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Auxiliary objects used in <a class="el" href="classmfem_1_1ParBilinearForm.html#af31264818dda400b067c3dad9a7d76cd" title="Compute y += a (P^t A P) x, where x and y are vectors on the true dofs. ">TrueAddMult()</a>. </p>
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00034">34</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00035">35</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1596,7 +1702,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00034">34</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
+<p>Definition at line <a class="el" href="pbilinearform_8hpp_source.html#l00035">35</a> of file <a class="el" href="pbilinearform_8hpp_source.html">pbilinearform.hpp</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1713,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:10 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:52 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -178,6 +178,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ce645354c6ed9b5215739d95714dffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HashTable.html#a2ce645354c6ed9b5215739d95714dffe">DeleteAll</a> ()</td></tr>
 <tr class="memdesc:a2ce645354c6ed9b5215739d95714dffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all items.  <a href="#a2ce645354c6ed9b5215739d95714dffe">More...</a><br/></td></tr>
 <tr class="separator:a2ce645354c6ed9b5215739d95714dffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37bba5f5f4edd971a393c9171b64844"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HashTable.html#ad37bba5f5f4edd971a393c9171b64844">Alloc</a> (int id, int p1, int p2)</td></tr>
+<tr class="memdesc:ad37bba5f5f4edd971a393c9171b64844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate an item at 'id'. Enlarge the underlying <a class="el" href="classmfem_1_1BlockArray.html">BlockArray</a> if necessary.  <a href="#ad37bba5f5f4edd971a393c9171b64844">More...</a><br/></td></tr>
+<tr class="separator:ad37bba5f5f4edd971a393c9171b64844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b5c44ad7e4ab4142f65184e55d2565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HashTable.html#ae8b5c44ad7e4ab4142f65184e55d2565">UpdateUnused</a> ()</td></tr>
+<tr class="memdesc:ae8b5c44ad7e4ab4142f65184e55d2565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitialize the internal list of unallocated items.  <a href="#ae8b5c44ad7e4ab4142f65184e55d2565">More...</a><br/></td></tr>
+<tr class="separator:ae8b5c44ad7e4ab4142f65184e55d2565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f4dca745d7c7cced286292b1f9bd28d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfem_1_1HashTable.html#a4f4dca745d7c7cced286292b1f9bd28d">Reparent</a> (int id, int new_p1, int new_p2)</td></tr>
 <tr class="memdesc:a4f4dca745d7c7cced286292b1f9bd28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make an item hashed under different parent IDs.  <a href="#a4f4dca745d7c7cced286292b1f9bd28d">More...</a><br/></td></tr>
 <tr class="separator:a4f4dca745d7c7cced286292b1f9bd28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,7 +315,7 @@ class mfem::HashTable&lt; T &gt;</h3>
 <p>The item type (T) needs to follow either the <a class="el" href="structmfem_1_1Hashed2.html">Hashed2</a> or the <a class="el" href="structmfem_1_1Hashed4.html">Hashed4</a> concept. It is easiest to just inherit from these structs.</p>
 <p>All items in the container can also be accessed sequentially using the provided iterator. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00070">70</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00071">71</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a5148e2463ecf3bb036b0b689a2157f2f"></a>
 <div class="memitem">
@@ -331,7 +337,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00073">73</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00074">74</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -362,7 +368,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00209">209</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00297">297</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +388,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00220">220</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00311">311</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -401,11 +407,50 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00230">230</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00321">321</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad37bba5f5f4edd971a393c9171b64844"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmfem_1_1HashTable.html">mfem::HashTable</a>&lt; T &gt;::Alloc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate an item at 'id'. Enlarge the underlying <a class="el" href="classmfem_1_1BlockArray.html">BlockArray</a> if necessary. </p>
+<p>This is a special purpose method used when loading data from a file. Does nothing if the slot 'id' has already been allocated. </p>
+
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00578">578</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a447977bc702e3fea2548f445944a2543"></a>
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +474,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00169">169</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00179">179</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -456,7 +501,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00172">172</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00182">182</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +528,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00173">173</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00183">183</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +557,7 @@ template&lt;typename T &gt; </div>
 
 <p>Check table load factor and resize if necessary. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00409">409</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00500">500</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -535,7 +580,7 @@ template&lt;typename T &gt; </div>
 <p>Remove an item from the hash table. </p>
 <p>Its id will be reused by newly added items. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00470">470</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00561">561</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +601,7 @@ template&lt;typename T &gt; </div>
 
 <p>Remove all items. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00479">479</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00570">570</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -583,7 +628,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00421">421</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00512">512</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +655,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00170">170</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00180">180</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -650,7 +695,7 @@ template&lt;typename T &gt; </div>
 
 <p>Find item whose parents are p1, p2... Return NULL if it doesn't exist. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00343">343</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00434">434</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -700,7 +745,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00350">350</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00441">441</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -738,7 +783,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00357">357</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00448">448</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +833,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00364">364</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00455">455</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -820,7 +865,7 @@ template&lt;typename T &gt; </div>
 
 <p>Find id of item whose parents are p1, p2... Return -1 if it doesn't exist. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00371">371</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00462">462</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +907,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00378">378</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00469">469</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -902,7 +947,7 @@ template&lt;typename T &gt; </div>
 
 <p>Get item whose parents are 'p1', 'p2'... Create it if it doesn't exist. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00268">268</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00359">359</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -952,7 +997,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00274">274</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00365">365</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -984,7 +1029,7 @@ template&lt;typename T &gt; </div>
 
 <p>Get id of item whose parents are p1, p2... Create it if it doesn't exist. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00280">280</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00371">371</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1071,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00311">311</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00402">402</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1064,7 +1109,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00181">181</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00191">191</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1153,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00184">184</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00194">194</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1136,7 +1181,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00188">188</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00198">198</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1164,7 +1209,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00191">191</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00201">201</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1195,7 +1240,7 @@ template&lt;typename T&gt; </div>
 <p>Return true if item 'id' exists in (is used by) the container. </p>
 <p>It is assumed that 0 &lt;= id &lt; <a class="el" href="classmfem_1_1HashTable.html#a708b7874271ec45ed948ca016e6d1036" title="Return the total number of ids (used and unused) in the HashTable. ">NumIds()</a>. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00110">110</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00111">111</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1239,7 +1284,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00444">444</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00535">535</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1260,7 +1305,7 @@ template&lt;typename T &gt; </div>
 
 <p>Return total size of allocated memory (tables plus items), in bytes. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00519">519</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00640">640</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1334,7 @@ template&lt;typename T&gt; </div>
 
 <p>Return the number of free/unused ids in the <a class="el" href="classmfem_1_1HashTable.html">HashTable</a>. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00106">106</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00107">107</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1318,7 +1363,7 @@ template&lt;typename T&gt; </div>
 
 <p>Return the total number of ids (used and unused) in the <a class="el" href="classmfem_1_1HashTable.html">HashTable</a>. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00103">103</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00104">104</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1339,7 +1384,7 @@ template&lt;typename T &gt; </div>
 
 <p>Write details of the memory usage to the mfem output stream. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00525">525</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00646">646</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1377,7 +1422,7 @@ template&lt;typename T &gt; </div>
 
 <p>Make an item hashed under different parent IDs. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00487">487</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00608">608</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1425,7 +1470,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00502">502</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00623">623</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1469,7 +1514,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00385">385</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00476">476</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1519,7 +1564,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00397">397</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00488">488</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1548,7 +1593,7 @@ template&lt;typename T&gt; </div>
 
 <p>Return the number of elements currently stored in the <a class="el" href="classmfem_1_1HashTable.html">HashTable</a>. </p>
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00100">100</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00101">101</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1586,7 +1631,29 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00452">452</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00543">543</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8b5c44ad7e4ab4142f65184e55d2565"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmfem_1_1HashTable.html">mfem::HashTable</a>&lt; T &gt;::UpdateUnused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reinitialize the internal list of unallocated items. </p>
+<p>This is a special purpose method used when loading data from a file. </p>
+
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00598">598</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1678,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00177">177</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00187">187</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1635,7 +1702,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00176">176</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00186">186</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1659,7 +1726,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00178">178</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hash_8hpp_source.html#l00188">188</a> of file <a class="el" href="hash_8hpp_source.html">hash.hpp</a>.</p>
 
 </div>
 </div>
@@ -1669,7 +1736,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:03 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:42 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

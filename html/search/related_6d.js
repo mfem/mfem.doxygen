@@ -6,5 +6,6 @@ var searchData=
   ['memorymanager',['MemoryManager',['../classmfem_1_1Device.html#a714d9445184f29c663c1c02da59e9727',1,'mfem::Device::MemoryManager()'],['../classmfem_1_1Memory.html#a714d9445184f29c663c1c02da59e9727',1,'mfem::Memory::MemoryManager()']]],
   ['memoryprintflags',['MemoryPrintFlags',['../classmfem_1_1Memory.html#aa80ea4d950a39cb98da7a6da3cf862bc',1,'mfem::Memory']]],
   ['mesh',['Mesh',['../classmfem_1_1adios2stream.html#aa41a130f156b145bffb3f4b5172c4c93',1,'mfem::adios2stream::Mesh()'],['../classmfem_1_1NCMesh.html#aa41a130f156b145bffb3f4b5172c4c93',1,'mfem::NCMesh::Mesh()'],['../classmfem_1_1FaceElementTransformations.html#aa41a130f156b145bffb3f4b5172c4c93',1,'mfem::FaceElementTransformations::Mesh()']]],
-  ['meshoperatorsequence',['MeshOperatorSequence',['../classmfem_1_1MeshOperator.html#a51568489b0e34d28e4b52fd5ce8c91b0',1,'mfem::MeshOperator']]]
+  ['meshoperatorsequence',['MeshOperatorSequence',['../classmfem_1_1MeshOperator.html#a51568489b0e34d28e4b52fd5ce8c91b0',1,'mfem::MeshOperator']]],
+  ['swap',['Swap',['../classmfem_1_1FiniteElementSpace.html#a02f534bc675733705bd28eec82cafeba',1,'mfem::FiniteElementSpace']]]
 ];

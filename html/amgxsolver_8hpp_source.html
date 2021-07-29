@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MFEM
-   &#160;<span id="projectnumber">v4.2.0</span>
+   &#160;<span id="projectnumber">v4.3.0</span>
    </div>
    <div id="projectbrief">Finite element discretization library</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">amgxsolver.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="amgxsolver_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced</span></div>
+<a href="amgxsolver_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-806117.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -172,279 +172,287 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">   /// Flags to configure AmgXSolver as a solver or preconditioner</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752cae833eebaaef842ff2639069ec568b2c7">   74</a></span>&#160;<span class="comment"></span>   <span class="keyword">enum</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> {<a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752cae833eebaaef842ff2639069ec568b2c7">SOLVER</a>, <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752caf7bc0614eb0effa62a53b6799a87f554">PRECONDITIONER</a>};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">      Flags to determine whether user solver settings are defined internally in</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">      the source code or will be read through an external JSON file.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">   80</a></span>&#160;   <span class="keyword">enum</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">CONFIG_SRC</a> {<a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a62959275e2c5b6e76efc2f969873b392">INTERNAL</a>, <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a0ccf63c071b521277393fcaf498a8633">EXTERNAL</a>, <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">UNDEFINED</a>};</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a011d80266c1810333f375b9320b14f88">AmgXSolver</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">      Configures AmgX with a default configuration based on the AmgX mode, and</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">      verbosity. Assumes no MPI parallism.</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a011d80266c1810333f375b9320b14f88">AmgXSolver</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">      Once the solver configuration has been established through either the</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">      ReadParameters method or the constructor, InitSerial will initalize the</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">      library. If configuring with constructor, the constructor will make this</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">      call.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a796f9fc1771f96a4e7a04241014d4095">InitSerial</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor"></span><span class="comment"></span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">      Configures AmgX with a default configuration based on the AmgX mode, and</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">      verbosity. Pairs each MPI rank with one GPU.</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a011d80266c1810333f375b9320b14f88">AmgXSolver</a>(<span class="keyword">const</span> MPI_Comm &amp;comm, <span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">      Configures AmgX with a default configuration based on the AmgX mode, and</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">      verbosity. Creates MPI teams around GPUs to support MPI ranks &gt;</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">      GPUs. Consolidates linear solver data to avoid multiple ranks sharing</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">      GPUs. Requires specifying number of devices in each compute node.</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a011d80266c1810333f375b9320b14f88">AmgXSolver</a>(<span class="keyword">const</span> MPI_Comm &amp;comm, <span class="keyword">const</span> <span class="keywordtype">int</span> nDevs,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;              <span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgx_Mode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">      Once the solver configuration has been established, either through the</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">      constructor or the ReadParameters method, InitSerial will initalize the</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">      library. If configuring with constructor, the constructor will make this</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">      call.</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#ae94c512c1587e04ea421fa68af9df3a5">InitExclusiveGPU</a>(<span class="keyword">const</span> MPI_Comm &amp;comm);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">      Once the solver configuration has been established, either through the</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">      ReadParameters method, InitMPITeams will initialize the library and create</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">      MPI teams based on the number of devices on each node (nDevs). If</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">      configuring with constructor, the constructor will make this call.</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#aa7b9914286b7df6144e9c5c01bae52dd">InitMPITeams</a>(<span class="keyword">const</span> MPI_Comm &amp;comm,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">int</span> nDevs);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor"></span><span class="comment"></span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">      Sets Operator for AmgX library, either MFEM SparseMatrix or HypreParMatrix</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a7704c63c622e2d0c6d719332b74d1a17">SetOperator</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Operator.html">Operator</a> &amp;op);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">      Replaces the matrix coefficients in the AmgX solver.</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#af720485af2f2b22de2023643560625dc">UpdateOperator</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Operator.html">Operator</a> &amp;op);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#ae365c5bd01f30010ac2bfe031824d174">Mult</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a>&amp; <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="code" href="classmfem_1_1Vector.html">Vector</a>&amp; x) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a0f01eb69c61485a394e98ee794a08624">GetNumIterations</a>();</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#ab55d8190a4305532e025dab81362503d">ReadParameters</a>(<span class="keyword">const</span> std::string config, <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">CONFIG_SRC</a> <a class="code" href="ex25_8cpp.html#aafef765e6aa140d0a04f5bedd532dc19">source</a>);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">   /**</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">      @param [in] amgxMode_ AmgXSolver::PRECONDITIONER,</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">                            AmgXSolver::SOLVER.</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">      @param [in] verbose  true, false. Specifies the level</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">                           of verbosity.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">   /// Flag to check for convergence</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classmfem_1_1AmgXSolver.html#a1088fe38c4f36f22ea70550e4272a450">   77</a></span>&#160;<span class="comment"></span>   <span class="keywordtype">bool</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a1088fe38c4f36f22ea70550e4272a450">ConvergenceCheck</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">      Flags to determine whether user solver settings are defined internally in</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">      the source code or will be read through an external JSON file.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">   83</a></span>&#160;   <span class="keyword">enum</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">CONFIG_SRC</a> {<a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a62959275e2c5b6e76efc2f969873b392">INTERNAL</a>, <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a0ccf63c071b521277393fcaf498a8633">EXTERNAL</a>, <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">UNDEFINED</a>};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#aed974448d0c033b937e1401959eeacd7">AmgXSolver</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">      Configures AmgX with a default configuration based on the AmgX mode, and</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">      verbosity. Assumes no MPI parallism.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#aed974448d0c033b937e1401959eeacd7">AmgXSolver</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">      Once the solver configuration has been established through either the</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">      ReadParameters method or the constructor, InitSerial will initalize the</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">      library. If configuring with constructor, the constructor will make this</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">      call.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a796f9fc1771f96a4e7a04241014d4095">InitSerial</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor"></span><span class="comment"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">      Configures AmgX with a default configuration based on the AmgX mode, and</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">      verbosity. Pairs each MPI rank with one GPU.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#aed974448d0c033b937e1401959eeacd7">AmgXSolver</a>(<span class="keyword">const</span> MPI_Comm &amp;comm, <span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">      Configures AmgX with a default configuration based on the AmgX mode, and</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">      verbosity. Creates MPI teams around GPUs to support MPI ranks &gt;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">      GPUs. Consolidates linear solver data to avoid multiple ranks sharing</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">      GPUs. Requires specifying number of devices in each compute node.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#aed974448d0c033b937e1401959eeacd7">AmgXSolver</a>(<span class="keyword">const</span> MPI_Comm &amp;comm, <span class="keyword">const</span> <span class="keywordtype">int</span> nDevs,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;              <span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgx_Mode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">      Once the solver configuration has been established, either through the</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">      constructor or the ReadParameters method, InitSerial will initalize the</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">      library. If configuring with constructor, the constructor will make this</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">      call.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#ae94c512c1587e04ea421fa68af9df3a5">InitExclusiveGPU</a>(<span class="keyword">const</span> MPI_Comm &amp;comm);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">      Once the solver configuration has been established, either through the</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">      ReadParameters method, InitMPITeams will initialize the library and create</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">      MPI teams based on the number of devices on each node (nDevs). If</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">      configuring with constructor, the constructor will make this call.</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#aa7b9914286b7df6144e9c5c01bae52dd">InitMPITeams</a>(<span class="keyword">const</span> MPI_Comm &amp;comm,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">int</span> nDevs);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor"></span><span class="comment"></span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">      Sets Operator for AmgX library, either MFEM SparseMatrix or HypreParMatrix</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a7704c63c622e2d0c6d719332b74d1a17">SetOperator</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Operator.html">Operator</a> &amp;op);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">      Replaces the matrix coefficients in the AmgX solver.</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#af720485af2f2b22de2023643560625dc">UpdateOperator</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Operator.html">Operator</a> &amp;op);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#ae365c5bd01f30010ac2bfe031824d174">Mult</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a>&amp; <a class="code" href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, <a class="code" href="classmfem_1_1Vector.html">Vector</a>&amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a0f01eb69c61485a394e98ee794a08624">GetNumIterations</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#ab55d8190a4305532e025dab81362503d">ReadParameters</a>(<span class="keyword">const</span> std::string config, <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">CONFIG_SRC</a> <a class="code" href="ex25_8cpp.html#aafef765e6aa140d0a04f5bedd532dc19">source</a>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">   /**</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">      @param [in] amgxMode_ AmgXSolver::PRECONDITIONER,</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">                            AmgXSolver::SOLVER.</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">      When configured as a preconditioner, the default configuration is to apply</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">      two iterations of an AMG V cycle with AmgX&#39;s default smoother (block</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">      Jacobi).</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">      As a solver the preconditioned conjugate gradient method is used. The AMG</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">      V-cycle with a block Jacobi smoother is used as a preconditioner.</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a5e521c91e81fe2e883608d9e1976c7a5">DefaultParameters</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a62817c3f75f4a82320109a0e41c7c3a9">~AmgXSolver</a>();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a14c1e13d205932df6677b30611db747a">Finalize</a>();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">      @param [in] verbose  true, false. Specifies the level</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">                           of verbosity.</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">      When configured as a preconditioner, the default configuration is to apply</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">      two iterations of an AMG V cycle with AmgX&#39;s default smoother (block</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">      Jacobi).</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">      As a solver the preconditioned conjugate gradient method is used. The AMG</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">      V-cycle with a block Jacobi smoother is used as a preconditioner.</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a5e521c91e81fe2e883608d9e1976c7a5">DefaultParameters</a>(<span class="keyword">const</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode_, <span class="keyword">const</span> <span class="keywordtype">bool</span> verbose);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">   /// Add a check for convergence after applying Mult.</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#aa629f0dc1ab3e1e7f4fe7871d1d61bec">SetConvergenceCheck</a>(<span class="keywordtype">bool</span> setConvergenceCheck_=<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a62817c3f75f4a82320109a0e41c7c3a9">~AmgXSolver</a>();</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;   std::string amgx_config = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classmfem_1_1AmgXSolver.html#a14c1e13d205932df6677b30611db747a">Finalize</a>();</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">CONFIG_SRC</a> configSrc = <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">UNDEFINED</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor"></span>   <span class="comment">// Consolidates matrix diagonal and off diagonal data and uploads matrix to</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;   <span class="comment">// AmgX.</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   <span class="keywordtype">void</span> SetMatrixMPIGPUExclusive(<span class="keyword">const</span> <a class="code" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;A,</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;loc_A,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;loc_I, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;loc_J,</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                 <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;   <span class="comment">// Consolidates matrix diagonal and off diagonal data for all ranks in an MPI</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   <span class="comment">// team. Root rank of each MPI team holds the the consolidated data and sets</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;   <span class="comment">// matrix.</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   <span class="keywordtype">void</span> SetMatrixMPITeams(<span class="keyword">const</span> <a class="code" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;A, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;loc_A,</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                          <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;loc_I, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;loc_J,</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   <span class="comment">// The following methods consolidate array data to the root node in a MPI</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;   <span class="comment">// team.</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;inArr, <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;outArr,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeam) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;inArr, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;outArr,</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeam) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;inArr, <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;outArr,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">AMGX_MODE</a> amgxMode;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;   std::string amgx_config = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;   <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">CONFIG_SRC</a> configSrc = <a class="code" href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">UNDEFINED</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor"></span>   <span class="comment">// Consolidates matrix diagonal and off diagonal data and uploads matrix to</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;   <span class="comment">// AmgX.</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   <span class="keywordtype">void</span> SetMatrixMPIGPUExclusive(<span class="keyword">const</span> <a class="code" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;A,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;loc_A,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;loc_I, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;loc_J,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                 <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;   <span class="comment">// Consolidates matrix diagonal and off diagonal data for all ranks in an MPI</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   <span class="comment">// team. Root rank of each MPI team holds the the consolidated data and sets</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;   <span class="comment">// matrix.</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   <span class="keywordtype">void</span> SetMatrixMPITeams(<span class="keyword">const</span> <a class="code" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;A, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;loc_A,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                          <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;loc_I, <span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;loc_J,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;   <span class="comment">// The following methods consolidate array data to the root node in a MPI</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;   <span class="comment">// team.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;inArr, <a class="code" href="classmfem_1_1Array.html">Array&lt;double&gt;</a> &amp;outArr,</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeam) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;inArr, <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;outArr,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;inArr, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;outArr,</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeam) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;   <span class="comment">// The following methods consolidate array data to the root node in a MPI</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;   <span class="comment">// team as well as store array partitions and displacements.</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;inArr, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;outArr,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeamComm,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Apart, <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Adisp) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;inArr, <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;outArr,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeam) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;inArr, <a class="code" href="classmfem_1_1Array.html">Array&lt;int64_t&gt;</a> &amp;outArr,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeam) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   <span class="keywordtype">void</span> ScatterArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;inArr, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;outArr,</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpi_comm,</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                     <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Apart, <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Adisp) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;   <span class="keywordtype">void</span> SetMatrix(<span class="keyword">const</span> <a class="code" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;A, <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   <span class="keywordtype">void</span> SetMatrix(<span class="keyword">const</span> <a class="code" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;A, <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">int</span>              count;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;   <span class="comment">// Indicate if this instance has been initialized.</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;   <span class="keywordtype">bool</span>                    isInitialized = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor"></span>   <span class="comment">// The name of the node that this MPI process belongs to.</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;   std::string             nodeName;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   <span class="comment">// Number of local GPU devices used by AmgX.</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;   <span class="keywordtype">int</span>                     nDevs;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;   <span class="comment">// The ID of corresponding GPU device used by this MPI process.</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   <span class="keywordtype">int</span>                     devID;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   <span class="comment">// The following methods consolidate array data to the root node in a MPI</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;   <span class="comment">// team as well as store array partitions and displacements.</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;   <span class="keywordtype">void</span> GatherArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;inArr, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;outArr,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpiTeamComm,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Apart, <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Adisp) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;   <span class="keywordtype">void</span> ScatterArray(<span class="keyword">const</span> <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;inArr, <a class="code" href="classmfem_1_1Vector.html">Vector</a> &amp;outArr,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">int</span> mpiTeamSz, <span class="keyword">const</span> MPI_Comm &amp;mpi_comm,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                     <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Apart, <a class="code" href="classmfem_1_1Array.html">Array&lt;int&gt;</a> &amp;Adisp) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   <span class="keywordtype">void</span> SetMatrix(<span class="keyword">const</span> <a class="code" href="classmfem_1_1HypreParMatrix.html">HypreParMatrix</a> &amp;A, <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   <span class="keywordtype">void</span> SetMatrix(<span class="keyword">const</span> <a class="code" href="classmfem_1_1SparseMatrix.html">SparseMatrix</a> &amp;A, <span class="keyword">const</span> <span class="keywordtype">bool</span> update_mat = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">int</span>              count;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;   <span class="comment">// Indicate if this instance has been initialized.</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   <span class="keywordtype">bool</span>                    isInitialized = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor"></span>   <span class="comment">// The name of the node that this MPI process belongs to.</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   std::string             nodeName;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;   <span class="comment">// A flag indicating if this process will invoke AmgX</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;   <span class="keywordtype">int</span>                     gpuProc = MPI_UNDEFINED;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;   <span class="comment">// Number of local GPU devices used by AmgX.</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;   <span class="keywordtype">int</span>                     nDevs;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;   <span class="comment">// Communicator for all MPI ranks</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;   MPI_Comm                globalCpuWorld = MPI_COMM_NULL;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;   <span class="comment">// The ID of corresponding GPU device used by this MPI process.</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;   <span class="keywordtype">int</span>                     devID;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;   <span class="comment">// Communicator for ranks in same node</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   MPI_Comm                localCpuWorld;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;   <span class="comment">// A flag indicating if this process will invoke AmgX</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordtype">int</span>                     gpuProc = MPI_UNDEFINED;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   <span class="comment">// Communicator for ranks sharing a device</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   MPI_Comm                devWorld;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   <span class="comment">// Communicator for all MPI ranks</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   MPI_Comm                globalCpuWorld = MPI_COMM_NULL;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;   <span class="comment">// A communicator for MPI processes that will launch AmgX (root of devWorld)</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   MPI_Comm                gpuWorld;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;   <span class="comment">// Communicator for ranks in same node</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   MPI_Comm                localCpuWorld;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   <span class="comment">// Global number of MPI procs + rank id</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;   <span class="keywordtype">int</span>                     globalSize;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   <span class="comment">// Communicator for ranks sharing a device</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;   MPI_Comm                devWorld;</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;   <span class="keywordtype">int</span>                     myGlobalRank;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;   <span class="comment">// Total number of MPI procs in a node + rank id</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   <span class="keywordtype">int</span>                     localSize;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;   <span class="keywordtype">int</span>                     myLocalRank;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;   <span class="comment">// Total number of MPI ranks sharing a device + rank id</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   <span class="keywordtype">int</span>                     devWorldSize;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   <span class="keywordtype">int</span>                     myDevWorldRank;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   <span class="comment">// Total number of MPI procs calling AmgX + rank id</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   <span class="keywordtype">int</span>                     gpuWorldSize;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;   <span class="keywordtype">int</span>                     myGpuWorldRank;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;   <span class="comment">// A parameter used by AmgX.</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;   <span class="keywordtype">int</span>                     ring;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;   <span class="comment">// A communicator for MPI processes that will launch AmgX (root of devWorld)</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;   MPI_Comm                gpuWorld;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   <span class="comment">// Global number of MPI procs + rank id</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;   <span class="keywordtype">int</span>                     globalSize;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;   <span class="keywordtype">int</span>                     myGlobalRank;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   <span class="comment">// Total number of MPI procs in a node + rank id</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;   <span class="keywordtype">int</span>                     localSize;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   <span class="keywordtype">int</span>                     myLocalRank;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   <span class="comment">// Total number of MPI ranks sharing a device + rank id</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;   <span class="keywordtype">int</span>                     devWorldSize;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   <span class="keywordtype">int</span>                     myDevWorldRank;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;   <span class="comment">// Total number of MPI procs calling AmgX + rank id</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;   <span class="keywordtype">int</span>                     gpuWorldSize;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;   <span class="comment">// Sets AmgX precision (currently on double is supported)</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;   AMGX_Mode               precision_mode = AMGX_mode_dDDI;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="comment">// AmgX config object.</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   AMGX_config_handle      cfg = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;   <span class="keywordtype">int</span>                     myGpuWorldRank;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="comment">// A parameter used by AmgX.</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   <span class="keywordtype">int</span>                     ring;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   <span class="comment">// AmgX matrix object.</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   AMGX_matrix_handle      AmgXA = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   <span class="comment">// Sets AmgX precision (currently on double is supported)</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   AMGX_Mode               precision_mode = AMGX_mode_dDDI;</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;   <span class="comment">// AmgX vector object representing unknowns.</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;   AMGX_vector_handle      AmgXP = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;   <span class="comment">// AmgX config object.</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;   AMGX_config_handle      cfg = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;   <span class="comment">// AmgX vector object representing RHS.</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;   AMGX_vector_handle      AmgXRHS = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;   <span class="comment">// AmgX matrix object.</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;   AMGX_matrix_handle      AmgXA = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;   <span class="comment">// AmgX solver object.</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   AMGX_solver_handle      solver = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;   <span class="comment">// AmgX vector object representing unknowns.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   AMGX_vector_handle      AmgXP = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;   <span class="comment">// AmgX resource object.</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;   <span class="keyword">static</span> AMGX_resources_handle   rsrc;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;   <span class="comment">// AmgX vector object representing RHS.</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;   AMGX_vector_handle      AmgXRHS = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;   <span class="comment">// Set the ID of the corresponding GPU used by this process.</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   <span class="keywordtype">void</span> SetDeviceIDs(<span class="keyword">const</span> <span class="keywordtype">int</span> nDevs);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;   <span class="comment">// AmgX solver object.</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   AMGX_solver_handle      solver = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;   <span class="comment">// Initialize all MPI communicators.</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> InitMPIcomms(<span class="keyword">const</span> MPI_Comm &amp;comm, <span class="keyword">const</span> <span class="keywordtype">int</span> nDevs);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;   <span class="keywordtype">void</span> InitAmgX();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;   <span class="comment">// Row partition for the HypreParMatrix</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;   int64_t mat_local_rows;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;   std::string mpi_gpu_mode;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;};</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#endif // MFEM_USE_AMGX</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // MFEM_AMGX_SOLVER</span></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a011d80266c1810333f375b9320b14f88"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a011d80266c1810333f375b9320b14f88">mfem::AmgXSolver::AmgXSolver</a></div><div class="ttdeci">AmgXSolver()=default</div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7a0ccf63c071b521277393fcaf498a8633"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a0ccf63c071b521277393fcaf498a8633">mfem::AmgXSolver::EXTERNAL</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00080">amgxsolver.hpp:80</a></div></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;   <span class="comment">// AmgX resource object.</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;   <span class="keyword">static</span> AMGX_resources_handle   rsrc;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;   <span class="comment">// Set the ID of the corresponding GPU used by this process.</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;   <span class="keywordtype">void</span> SetDeviceIDs(<span class="keyword">const</span> <span class="keywordtype">int</span> nDevs);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;   <span class="comment">// Initialize all MPI communicators.</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">#ifdef MFEM_USE_MPI</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor"></span>   <span class="keywordtype">void</span> InitMPIcomms(<span class="keyword">const</span> MPI_Comm &amp;comm, <span class="keyword">const</span> <span class="keywordtype">int</span> nDevs);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   <span class="keywordtype">void</span> InitAmgX();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   <span class="comment">// Row partition for the HypreParMatrix</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;   int64_t mat_local_rows;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;   std::string mpi_gpu_mode;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;};</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">#endif // MFEM_USE_AMGX</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // MFEM_AMGX_SOLVER</span></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1088fe38c4f36f22ea70550e4272a450"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1088fe38c4f36f22ea70550e4272a450">mfem::AmgXSolver::ConvergenceCheck</a></div><div class="ttdeci">bool ConvergenceCheck</div><div class="ttdoc">Flag to check for convergence. </div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00077">amgxsolver.hpp:77</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7a0ccf63c071b521277393fcaf498a8633"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a0ccf63c071b521277393fcaf498a8633">mfem::AmgXSolver::EXTERNAL</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00083">amgxsolver.hpp:83</a></div></div>
 <div class="ttc" id="classmfem_1_1AmgXSolver_html_a928145b29da0d55511c56c0e3068752cae833eebaaef842ff2639069ec568b2c7"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752cae833eebaaef842ff2639069ec568b2c7">mfem::AmgXSolver::SOLVER</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00074">amgxsolver.hpp:74</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">mfem::AmgXSolver::CONFIG_SRC</a></div><div class="ttdeci">CONFIG_SRC</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00080">amgxsolver.hpp:80</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7">mfem::AmgXSolver::CONFIG_SRC</a></div><div class="ttdeci">CONFIG_SRC</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00083">amgxsolver.hpp:83</a></div></div>
 <div class="ttc" id="operator_8hpp_html"><div class="ttname"><a href="operator_8hpp.html">operator.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1AmgXSolver_html_a928145b29da0d55511c56c0e3068752caf7bc0614eb0effa62a53b6799a87f554"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752caf7bc0614eb0effa62a53b6799a87f554">mfem::AmgXSolver::PRECONDITIONER</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00074">amgxsolver.hpp:74</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_aa7b9914286b7df6144e9c5c01bae52dd"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#aa7b9914286b7df6144e9c5c01bae52dd">mfem::AmgXSolver::InitMPITeams</a></div><div class="ttdeci">void InitMPITeams(const MPI_Comm &amp;comm, const int nDevs)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00137">amgxsolver.cpp:137</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_ab55d8190a4305532e025dab81362503d"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#ab55d8190a4305532e025dab81362503d">mfem::AmgXSolver::ReadParameters</a></div><div class="ttdeci">void ReadParameters(const std::string config, CONFIG_SRC source)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00174">amgxsolver.cpp:174</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_ae365c5bd01f30010ac2bfe031824d174"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#ae365c5bd01f30010ac2bfe031824d174">mfem::AmgXSolver::Mult</a></div><div class="ttdeci">virtual void Mult(const Vector &amp;b, Vector &amp;x) const </div><div class="ttdoc">Operator application: y=A(x). </div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00864">amgxsolver.cpp:864</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a14c1e13d205932df6677b30611db747a"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a14c1e13d205932df6677b30611db747a">mfem::AmgXSolver::Finalize</a></div><div class="ttdeci">void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00952">amgxsolver.cpp:952</a></div></div>
-<div class="ttc" id="ex25_8cpp_html_aafef765e6aa140d0a04f5bedd532dc19"><div class="ttname"><a href="ex25_8cpp.html#aafef765e6aa140d0a04f5bedd532dc19">source</a></div><div class="ttdeci">void source(const Vector &amp;x, Vector &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="ex25_8cpp_source.html#l00581">ex25.cpp:581</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a62817c3f75f4a82320109a0e41c7c3a9"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a62817c3f75f4a82320109a0e41c7c3a9">mfem::AmgXSolver::~AmgXSolver</a></div><div class="ttdeci">~AmgXSolver()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00068">amgxsolver.cpp:68</a></div></div>
-<div class="ttc" id="classmfem_1_1SparseMatrix_html"><div class="ttname"><a href="classmfem_1_1SparseMatrix.html">mfem::SparseMatrix</a></div><div class="ttdoc">Data type sparse matrix. </div><div class="ttdef"><b>Definition:</b> <a href="sparsemat_8hpp_source.html#l00046">sparsemat.hpp:46</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a796f9fc1771f96a4e7a04241014d4095"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a796f9fc1771f96a4e7a04241014d4095">mfem::AmgXSolver::InitSerial</a></div><div class="ttdeci">void InitSerial()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00073">amgxsolver.cpp:73</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_aa7b9914286b7df6144e9c5c01bae52dd"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#aa7b9914286b7df6144e9c5c01bae52dd">mfem::AmgXSolver::InitMPITeams</a></div><div class="ttdeci">void InitMPITeams(const MPI_Comm &amp;comm, const int nDevs)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00149">amgxsolver.cpp:149</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_ab55d8190a4305532e025dab81362503d"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#ab55d8190a4305532e025dab81362503d">mfem::AmgXSolver::ReadParameters</a></div><div class="ttdeci">void ReadParameters(const std::string config, CONFIG_SRC source)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00186">amgxsolver.cpp:186</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_aed974448d0c033b937e1401959eeacd7"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#aed974448d0c033b937e1401959eeacd7">mfem::AmgXSolver::AmgXSolver</a></div><div class="ttdeci">AmgXSolver()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00033">amgxsolver.cpp:33</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_ae365c5bd01f30010ac2bfe031824d174"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#ae365c5bd01f30010ac2bfe031824d174">mfem::AmgXSolver::Mult</a></div><div class="ttdeci">virtual void Mult(const Vector &amp;b, Vector &amp;x) const </div><div class="ttdoc">Operator application: y=A(x). </div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00897">amgxsolver.cpp:897</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a14c1e13d205932df6677b30611db747a"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a14c1e13d205932df6677b30611db747a">mfem::AmgXSolver::Finalize</a></div><div class="ttdeci">void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00985">amgxsolver.cpp:985</a></div></div>
+<div class="ttc" id="ex25_8cpp_html_aafef765e6aa140d0a04f5bedd532dc19"><div class="ttname"><a href="ex25_8cpp.html#aafef765e6aa140d0a04f5bedd532dc19">source</a></div><div class="ttdeci">void source(const Vector &amp;x, Vector &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="ex25_8cpp_source.html#l00622">ex25.cpp:622</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_aa629f0dc1ab3e1e7f4fe7871d1d61bec"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#aa629f0dc1ab3e1e7f4fe7871d1d61bec">mfem::AmgXSolver::SetConvergenceCheck</a></div><div class="ttdeci">void SetConvergenceCheck(bool setConvergenceCheck_=true)</div><div class="ttdoc">Add a check for convergence after applying Mult. </div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00193">amgxsolver.cpp:193</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a62817c3f75f4a82320109a0e41c7c3a9"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a62817c3f75f4a82320109a0e41c7c3a9">mfem::AmgXSolver::~AmgXSolver</a></div><div class="ttdeci">~AmgXSolver()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00080">amgxsolver.cpp:80</a></div></div>
+<div class="ttc" id="classmfem_1_1SparseMatrix_html"><div class="ttname"><a href="classmfem_1_1SparseMatrix.html">mfem::SparseMatrix</a></div><div class="ttdoc">Data type sparse matrix. </div><div class="ttdef"><b>Definition:</b> <a href="sparsemat_8hpp_source.html#l00041">sparsemat.hpp:41</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a796f9fc1771f96a4e7a04241014d4095"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a796f9fc1771f96a4e7a04241014d4095">mfem::AmgXSolver::InitSerial</a></div><div class="ttdeci">void InitSerial()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00085">amgxsolver.cpp:85</a></div></div>
 <div class="ttc" id="lissajous_8cpp_html_a1510a66dacf9cf3586de5fc89ae2a073"><div class="ttname"><a href="lissajous_8cpp.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a></div><div class="ttdeci">double b</div><div class="ttdef"><b>Definition:</b> <a href="lissajous_8cpp_source.html#l00042">lissajous.cpp:42</a></div></div>
 <div class="ttc" id="classmfem_1_1Array_html"><div class="ttname"><a href="classmfem_1_1Array.html">mfem::Array&lt; double &gt;</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">mfem::AmgXSolver::UNDEFINED</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00080">amgxsolver.hpp:80</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_af720485af2f2b22de2023643560625dc"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#af720485af2f2b22de2023643560625dc">mfem::AmgXSolver::UpdateOperator</a></div><div class="ttdeci">void UpdateOperator(const Operator &amp;op)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00844">amgxsolver.cpp:844</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7a62959275e2c5b6e76efc2f969873b392"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a62959275e2c5b6e76efc2f969873b392">mfem::AmgXSolver::INTERNAL</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00080">amgxsolver.hpp:80</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a7704c63c622e2d0c6d719332b74d1a17"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a7704c63c622e2d0c6d719332b74d1a17">mfem::AmgXSolver::SetOperator</a></div><div class="ttdeci">virtual void SetOperator(const Operator &amp;op)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00821">amgxsolver.cpp:821</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a8992692012c523ccbaf88e41c2524588">mfem::AmgXSolver::UNDEFINED</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00083">amgxsolver.hpp:83</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_af720485af2f2b22de2023643560625dc"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#af720485af2f2b22de2023643560625dc">mfem::AmgXSolver::UpdateOperator</a></div><div class="ttdeci">void UpdateOperator(const Operator &amp;op)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00877">amgxsolver.cpp:877</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a1159aab911bcfd9c5b6d2cbe842987a7a62959275e2c5b6e76efc2f969873b392"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a1159aab911bcfd9c5b6d2cbe842987a7a62959275e2c5b6e76efc2f969873b392">mfem::AmgXSolver::INTERNAL</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00083">amgxsolver.hpp:83</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a7704c63c622e2d0c6d719332b74d1a17"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a7704c63c622e2d0c6d719332b74d1a17">mfem::AmgXSolver::SetOperator</a></div><div class="ttdeci">virtual void SetOperator(const Operator &amp;op)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00854">amgxsolver.cpp:854</a></div></div>
 <div class="ttc" id="classmfem_1_1AmgXSolver_html"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html">mfem::AmgXSolver</a></div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00069">amgxsolver.hpp:69</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a5e521c91e81fe2e883608d9e1976c7a5"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a5e521c91e81fe2e883608d9e1976c7a5">mfem::AmgXSolver::DefaultParameters</a></div><div class="ttdeci">void DefaultParameters(const AMGX_MODE amgxMode_, const bool verbose)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00181">amgxsolver.cpp:181</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_ae94c512c1587e04ea421fa68af9df3a5"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#ae94c512c1587e04ea421fa68af9df3a5">mfem::AmgXSolver::InitExclusiveGPU</a></div><div class="ttdeci">void InitExclusiveGPU(const MPI_Comm &amp;comm)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00108">amgxsolver.cpp:108</a></div></div>
-<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00051">vector.hpp:51</a></div></div>
-<div class="ttc" id="classmfem_1_1Solver_html"><div class="ttname"><a href="classmfem_1_1Solver.html">mfem::Solver</a></div><div class="ttdoc">Base class for solvers. </div><div class="ttdef"><b>Definition:</b> <a href="operator_8hpp_source.html#l00634">operator.hpp:634</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a5e521c91e81fe2e883608d9e1976c7a5"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a5e521c91e81fe2e883608d9e1976c7a5">mfem::AmgXSolver::DefaultParameters</a></div><div class="ttdeci">void DefaultParameters(const AMGX_MODE amgxMode_, const bool verbose)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00198">amgxsolver.cpp:198</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_ae94c512c1587e04ea421fa68af9df3a5"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#ae94c512c1587e04ea421fa68af9df3a5">mfem::AmgXSolver::InitExclusiveGPU</a></div><div class="ttdeci">void InitExclusiveGPU(const MPI_Comm &amp;comm)</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00120">amgxsolver.cpp:120</a></div></div>
+<div class="ttc" id="classmfem_1_1Vector_html"><div class="ttname"><a href="classmfem_1_1Vector.html">mfem::Vector</a></div><div class="ttdoc">Vector data type. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hpp_source.html#l00060">vector.hpp:60</a></div></div>
+<div class="ttc" id="classmfem_1_1Solver_html"><div class="ttname"><a href="classmfem_1_1Solver.html">mfem::Solver</a></div><div class="ttdoc">Base class for solvers. </div><div class="ttdef"><b>Definition:</b> <a href="operator_8hpp_source.html#l00648">operator.hpp:648</a></div></div>
 <div class="ttc" id="hypre_8hpp_html"><div class="ttname"><a href="hypre_8hpp.html">hypre.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1Operator_html"><div class="ttname"><a href="classmfem_1_1Operator.html">mfem::Operator</a></div><div class="ttdoc">Abstract operator. </div><div class="ttdef"><b>Definition:</b> <a href="operator_8hpp_source.html#l00024">operator.hpp:24</a></div></div>
-<div class="ttc" id="classmfem_1_1HypreParMatrix_html"><div class="ttname"><a href="classmfem_1_1HypreParMatrix.html">mfem::HypreParMatrix</a></div><div class="ttdoc">Wrapper for hypre&amp;#39;s ParCSR matrix class. </div><div class="ttdef"><b>Definition:</b> <a href="hypre_8hpp_source.html#l00181">hypre.hpp:181</a></div></div>
+<div class="ttc" id="classmfem_1_1HypreParMatrix_html"><div class="ttname"><a href="classmfem_1_1HypreParMatrix.html">mfem::HypreParMatrix</a></div><div class="ttdoc">Wrapper for hypre&amp;#39;s ParCSR matrix class. </div><div class="ttdef"><b>Definition:</b> <a href="hypre_8hpp_source.html#l00277">hypre.hpp:277</a></div></div>
 <div class="ttc" id="sparsemat_8hpp_html"><div class="ttname"><a href="sparsemat_8hpp.html">sparsemat.hpp</a></div></div>
 <div class="ttc" id="classmfem_1_1AmgXSolver_html_a928145b29da0d55511c56c0e3068752c"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a928145b29da0d55511c56c0e3068752c">mfem::AmgXSolver::AMGX_MODE</a></div><div class="ttdeci">AMGX_MODE</div><div class="ttdoc">Flags to configure AmgXSolver as a solver or preconditioner. </div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8hpp_source.html#l00074">amgxsolver.hpp:74</a></div></div>
-<div class="ttc" id="classmfem_1_1AmgXSolver_html_a0f01eb69c61485a394e98ee794a08624"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a0f01eb69c61485a394e98ee794a08624">mfem::AmgXSolver::GetNumIterations</a></div><div class="ttdeci">int GetNumIterations()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00945">amgxsolver.cpp:945</a></div></div>
+<div class="ttc" id="classmfem_1_1AmgXSolver_html_a0f01eb69c61485a394e98ee794a08624"><div class="ttname"><a href="classmfem_1_1AmgXSolver.html#a0f01eb69c61485a394e98ee794a08624">mfem::AmgXSolver::GetNumIterations</a></div><div class="ttdeci">int GetNumIterations()</div><div class="ttdef"><b>Definition:</b> <a href="amgxsolver_8cpp_source.html#l00978">amgxsolver.cpp:978</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 30 2020 15:48:00 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 29 2021 15:58:39 for MFEM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
