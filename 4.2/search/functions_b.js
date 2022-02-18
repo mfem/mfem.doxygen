@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['kdtreesort',['KdTreeSort',['../namespacemfem.html#a7ece3e3e2a3c7c10c5a1b63c578354aa',1,'mfem']]],
+  ['keepnbrblock',['KeepNbrBlock',['../classmfem_1_1ParBilinearForm.html#ac1f8069100848de1b659781c42a6dfd8',1,'mfem::ParBilinearForm']]],
+  ['kernelvector2g',['KernelVector2G',['../namespacemfem.html#a98a8fa0326184fcc291769ffa84c43ea',1,'mfem']]],
+  ['kernelvector3g_5faux',['KernelVector3G_aux',['../namespacemfem.html#a74d163a5387bd134c340e03b31b92182',1,'mfem']]],
+  ['kernelvector3s',['KernelVector3S',['../namespacemfem.html#abe5fb8112748ae4625f1e9b2d8744988',1,'mfem']]],
+  ['kinsolver',['KinSolver',['../classmfem_1_1KinSolver.html#a5931b3037dc2d3dd5f5ae08405afcbd9',1,'mfem::KinSolver::KinSolver(int strategy, bool oper_grad=true)'],['../classmfem_1_1KinSolver.html#a79e011613097f11a2a479d16bfb5d857',1,'mfem::KinSolver::KinSolver(MPI_Comm comm, int strategy, bool oper_grad=true)']]],
+  ['klusolver',['KLUSolver',['../classmfem_1_1KLUSolver.html#a34340a787a8b6fbec5e1ff39f41d951e',1,'mfem::KLUSolver::KLUSolver()'],['../classmfem_1_1KLUSolver.html#a9d52ac36ab787647c8fce5d0af64cc2f',1,'mfem::KLUSolver::KLUSolver(SparseMatrix &amp;A)']]],
+  ['knotind',['KnotInd',['../classmfem_1_1NURBSExtension.html#a554f8c327505ac66b1cda22788873e62',1,'mfem::NURBSExtension']]],
+  ['knotinsert',['KnotInsert',['../classmfem_1_1Mesh.html#ae6ee0fd19f4182f8cadc739cba9dd800',1,'mfem::Mesh::KnotInsert()'],['../classmfem_1_1NURBSPatch.html#a40ac7bb0c1ad93db273c91c242985742',1,'mfem::NURBSPatch::KnotInsert(int dir, const KnotVector &amp;knot)'],['../classmfem_1_1NURBSPatch.html#a6344a64f615fa67a95aed22c199347a5',1,'mfem::NURBSPatch::KnotInsert(int dir, const Vector &amp;knot)'],['../classmfem_1_1NURBSPatch.html#a60fff4124e8e3e7c8f8ca50e8825d119',1,'mfem::NURBSPatch::KnotInsert(Array&lt; KnotVector *&gt; &amp;knot)'],['../classmfem_1_1NURBSExtension.html#a83b3cdf98ce398c5ffc60f74250baeea',1,'mfem::NURBSExtension::KnotInsert()']]],
+  ['knotvec',['KnotVec',['../classmfem_1_1NURBSExtension.html#a65b8369555a4945ec292eda1a65623cd',1,'mfem::NURBSExtension::KnotVec(int edge)'],['../classmfem_1_1NURBSExtension.html#a8cc62231bb98cff7af3a1b64907d371f',1,'mfem::NURBSExtension::KnotVec(int edge) const'],['../classmfem_1_1NURBSExtension.html#afce10d269f0cf8b532a697d8dc0b7c2f',1,'mfem::NURBSExtension::KnotVec(int edge, int oedge, int *okv) const']]],
+  ['knotvector',['KnotVector',['../classmfem_1_1KnotVector.html#a94af1f91d710ce5b121d705a4f8f3442',1,'mfem::KnotVector::KnotVector()'],['../classmfem_1_1KnotVector.html#a4343c46baecdc6758f3bad397f0424e7',1,'mfem::KnotVector::KnotVector(std::istream &amp;input)'],['../classmfem_1_1KnotVector.html#ae69a23151a7b311434afdbceb7226418',1,'mfem::KnotVector::KnotVector(int Order_, int NCP)'],['../classmfem_1_1KnotVector.html#af3c091125993cc8bfd7f287a2be15b6f',1,'mfem::KnotVector::KnotVector(const KnotVector &amp;kv)']]],
+  ['knotvectors',['KnotVectors',['../classmfem_1_1NURBSFiniteElement.html#a1a3064a08c08fc558b4ac862f0f1317f',1,'mfem::NURBSFiniteElement']]]
+];
