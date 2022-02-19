@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['b',['B',['../classmfem_1_1HypreSmoother.html#a9fa7a05e4c1b72a46838ca791d67e0c7',1,'mfem::HypreSmoother::B()'],['../classmfem_1_1HypreSolver.html#a98c30740cb7e221e8d4e76aa83055ee2',1,'mfem::HypreSolver::B()']]],
+  ['base_5fgeom',['base_geom',['../classmfem_1_1Element.html#a30a5ef319f0ff50687ccfe67e6f9ffa0',1,'mfem::Element']]],
+  ['bbfi',['bbfi',['../classmfem_1_1BilinearForm.html#a76f21d429887c496c99627c481bd780d',1,'mfem::BilinearForm']]],
+  ['bdofs',['bdofs',['../classmfem_1_1FiniteElementSpace.html#a3a2f72da57ca9bba6202de3770a4e3b5',1,'mfem::FiniteElementSpace']]],
+  ['bdr',['bdr',['../classmfem_1_1MixedBilinearForm.html#a4c54def08a295a1658b44ef15e2ee919',1,'mfem::MixedBilinearForm']]],
+  ['bdr_5fattributes',['bdr_attributes',['../classmfem_1_1Mesh.html#a16254ab9e08be6fa84e8b12cb551271a',1,'mfem::Mesh']]],
+  ['bdrelem_5fdof',['bdrElem_dof',['../classmfem_1_1FiniteElementSpace.html#a1a48dd598a95e8baf8ffe5d4dc866fcf',1,'mfem::FiniteElementSpace']]],
+  ['be_5fto_5fedge',['be_to_edge',['../classmfem_1_1Mesh.html#a27b274dcab25a4606c9995f5d1607ff8',1,'mfem::Mesh']]],
+  ['be_5fto_5fface',['be_to_face',['../classmfem_1_1Mesh.html#a9e478ef55935fcb13d3b075eb7f8ea81',1,'mfem::Mesh']]],
+  ['bel_5fdof',['bel_dof',['../classmfem_1_1NURBSExtension.html#abef2769467bdad8287212bc000e8f1f9',1,'mfem::NURBSExtension']]],
+  ['bel_5fto_5fedge',['bel_to_edge',['../classmfem_1_1Mesh.html#a73b1647757c9c19a3a0711ff41a13012',1,'mfem::Mesh']]],
+  ['bel_5fto_5fijk',['bel_to_IJK',['../classmfem_1_1NURBSExtension.html#a84bd792489d58e5713c10e6c5e0b161f',1,'mfem::NURBSExtension']]],
+  ['bel_5fto_5fpatch',['bel_to_patch',['../classmfem_1_1NURBSExtension.html#aa8ec10517f02e0e4cb74475ee3556890',1,'mfem::NURBSExtension']]],
+  ['bememory',['BEMemory',['../classmfem_1_1Mesh.html#ae84f35ae280dd8e8008b4cf77437cb1a',1,'mfem::Mesh::BEMemory()'],['../namespacemfem.html#ac6d4d62aca0273cb583769d3f46e7c8f',1,'mfem::BEMemory()']]],
+  ['bfbfi',['bfbfi',['../classmfem_1_1BilinearForm.html#aaf721e489eceb0aee46c943a611503f7',1,'mfem::BilinearForm']]],
+  ['blockoffsets',['blockOffsets',['../classmfem_1_1BlockVector.html#a592280793b82a2ea892a1941a14d3159',1,'mfem::BlockVector']]],
+  ['boundary',['boundary',['../classmfem_1_1Mesh.html#ac9063d444be89252ed9479011d01fa08',1,'mfem::Mesh']]],
+  ['boundary_5fedges',['boundary_edges',['../classmfem_1_1NCMesh.html#a53b9fb76922d0b11637d6622e8194c31',1,'mfem::NCMesh']]],
+  ['boundary_5ffaces',['boundary_faces',['../classmfem_1_1NCMesh.html#aa975185bf69e1ce48f1101227d085a31',1,'mfem::NCMesh']]],
+  ['buf',['buf',['../structmfem_1_1GroupCommunicator_1_1OpData.html#a4efbdd0171def83bb0ac1233437c9391',1,'mfem::GroupCommunicator::OpData']]]
+];

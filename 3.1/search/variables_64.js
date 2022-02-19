@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['d',['d',['../classmfem_1_1CGSolver.html#a1f1341112e9435d1381cc87d8d1c477c',1,'mfem::CGSolver']]],
+  ['data',['data',['../classmfem_1_1BaseArray.html#a18f41a77d4b94560d135f54bffa12e2a',1,'mfem::BaseArray::data()'],['../structmfem_1_1VarMessage.html#adf355940c12f1e396e0868f7922ae468',1,'mfem::VarMessage::data()'],['../classmfem_1_1LUFactors.html#ac99900b35f520c77f175a2b14d7c565d',1,'mfem::LUFactors::data()'],['../classmfem_1_1Vector.html#ac9acbbb2a995e87d242a5bd39a588eed',1,'mfem::Vector::data()'],['../classmfem_1_1NURBSPatch.html#a480dc1901f74f44d0a5eb79181185365',1,'mfem::NURBSPatch::data()'],['../classmfem_1_1ParNCMesh_1_1ElementSet.html#a1da31c475344b0275624dc847c0dba6e',1,'mfem::ParNCMesh::ElementSet::data()']]],
+  ['dbfi',['dbfi',['../classmfem_1_1BilinearForm.html#a21c2816d5a1c694e0b0d97623a6f27e5',1,'mfem::BilinearForm']]],
+  ['defaultvalue',['defaultValue',['../structmfem_1_1MesquiteMesh_1_1MeshTags_1_1TagData.html#ab6a9d290428c98de93ce7b31ca3a36b1',1,'mfem::MesquiteMesh::MeshTags::TagData']]],
+  ['desc',['desc',['../structmfem_1_1MesquiteMesh_1_1MeshTags_1_1TagData.html#a78f6dc9ed681a570ed27e249374ff454',1,'mfem::MesquiteMesh::MeshTags::TagData']]],
+  ['dfi',['dfi',['../classmfem_1_1NonlinearForm.html#a948b5d6acf6f9ebde9581be12ff4c4b4',1,'mfem::NonlinearForm']]],
+  ['dim',['Dim',['../classmfem_1_1Mesh.html#a3c3a04ba890632835c2d766bab361970',1,'mfem::Mesh::Dim()'],['../classmfem_1_1NCMesh.html#aca9b36e87d22d52742a2793282e8c77d',1,'mfem::NCMesh::Dim()'],['../classmfem_1_1NURBSPatch.html#a3b6ca37f6cbd13ed8a11b9cfd3ee6332',1,'mfem::NURBSPatch::Dim()'],['../classmfem_1_1FiniteElement.html#a3b44f161bea941cbadda7cb098569c79',1,'mfem::FiniteElement::Dim()'],['../structmfem_1_1NCMesh_1_1Point.html#a3b938e741358fae600f3cd5f1e021396',1,'mfem::NCMesh::Point::dim()'],['../ex3_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837',1,'dim():&#160;ex3.cpp'],['../ex3p_8cpp.html#a70b5e28b5bc3d1b63a7435c5fe50b837',1,'dim():&#160;ex3p.cpp']]],
+  ['dof',['Dof',['../classmfem_1_1FiniteElement.html#a4cd8d441273fe4e8179312eae466e7ff',1,'mfem::FiniteElement']]],
+  ['dof_5felem_5farray',['dof_elem_array',['../classmfem_1_1FiniteElementSpace.html#a44fbe6109bbdd77f424b1ed79c3f99a1',1,'mfem::FiniteElementSpace']]],
+  ['dof_5fldof_5farray',['dof_ldof_array',['../classmfem_1_1FiniteElementSpace.html#a0f86bab112a5645d9023b60c8ef9864d',1,'mfem::FiniteElementSpace']]],
+  ['dom',['dom',['../classmfem_1_1MixedBilinearForm.html#ac9f7ef514fa0bdd7408adf8433c90491',1,'mfem::MixedBilinearForm']]],
+  ['domain_5ffes',['domain_fes',['../classmfem_1_1ParDiscreteLinearOperator.html#ab16a47e3f0bffd5b656dd45cb4a4416d',1,'mfem::ParDiscreteLinearOperator']]],
+  ['dshape',['dshape',['../classmfem_1_1DGDirichletLFIntegrator.html#a35441983dd3518d6c4dabf655486ab67',1,'mfem::DGDirichletLFIntegrator']]],
+  ['dshape1',['dshape1',['../classmfem_1_1DGDiffusionIntegrator.html#aea86f9f106a3888031ab3e6cb38479a6',1,'mfem::DGDiffusionIntegrator']]],
+  ['dshape1dn',['dshape1dn',['../classmfem_1_1DGDiffusionIntegrator.html#a5a2d4a856e78d67f1e9dfe6efedd37dd',1,'mfem::DGDiffusionIntegrator']]],
+  ['dshape2',['dshape2',['../classmfem_1_1DGDiffusionIntegrator.html#a9dc916b8ad408a1d46d6d76877c98327',1,'mfem::DGDiffusionIntegrator']]],
+  ['dshape2dn',['dshape2dn',['../classmfem_1_1DGDiffusionIntegrator.html#a8682348bd3f92eb55f501efe54edea05',1,'mfem::DGDiffusionIntegrator']]],
+  ['dshape_5fdn',['dshape_dn',['../classmfem_1_1DGDirichletLFIntegrator.html#a090719d076f9d355dcff5f90b3d69208',1,'mfem::DGDirichletLFIntegrator']]],
+  ['dshape_5fx',['dshape_x',['../classmfem_1_1NURBS2DFiniteElement.html#aaa919ae973d4b4c7f7e3cd2dc26e8132',1,'mfem::NURBS2DFiniteElement::dshape_x()'],['../classmfem_1_1NURBS3DFiniteElement.html#ae2dae3f7a0bb12665288346539bf4274',1,'mfem::NURBS3DFiniteElement::dshape_x()']]],
+  ['dshape_5fy',['dshape_y',['../classmfem_1_1NURBS2DFiniteElement.html#a1e5f8966e683f0a87c7bd7d7bb2c3140',1,'mfem::NURBS2DFiniteElement::dshape_y()'],['../classmfem_1_1NURBS3DFiniteElement.html#a17070338d68a73ac978b3b63334de3cb',1,'mfem::NURBS3DFiniteElement::dshape_y()']]],
+  ['dshape_5fz',['dshape_z',['../classmfem_1_1NURBS3DFiniteElement.html#adf1d23154eec6ca10e2f790c7401fada',1,'mfem::NURBS3DFiniteElement']]]
+];
