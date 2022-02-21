@@ -10,7 +10,7 @@
 ### 🗓️ Older Releases
 
 - [`mfem-4.2`](http://docs.mfem.org/4.2), released in Oct 2020, documented at [`docs.mfem.org/4.2`](http://docs.mfem.org/4.2)
-- [`mfem-4.1`](http://docs.mfem.org/4.1), released in Mar 2020, documented at [docs.mfem.org/4.1](http://docs.mfem.org/4.1)
+- [`mfem-4.1`](http://docs.mfem.org/4.1), released in Mar 2020, documented at [`docs.mfem.org/4.1`](http://docs.mfem.org/4.1)
 - [`mfem-4.0`](http://docs.mfem.org/4.0), released in May 2019, documented at [`docs.mfem.org/4.0`](http://docs.mfem.org/4.0)
 - [`mfem-3.4`](http://docs.mfem.org/3.4), released in May 2018, documented at [`docs.mfem.org/3.4`](http://docs.mfem.org/3.4)
 - [`mfem-3.3.2`](http://docs.mfem.org/3.3.2), released in Nov 2017, documented at [`docs.mfem.org/3.3.2`](http://docs.mfem.org/3.3.2)
