@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['abort_5fhypre_5ferrors',['ABORT_HYPRE_ERRORS',['../classmfem_1_1HypreSolver.html#a83555bd7876faa0e890f1fe0ece60fe9a5d7aa4adbe965dbdf1b5036b56517d70',1,'mfem::HypreSolver']]],
+  ['add',['Add',['../structmfem_1_1AssignOp.html#ae5272e4ffd01ce0b65a236210ade7627adfe7ae9f616bbd4bea1b2b32dd01008d',1,'mfem::AssignOp']]],
+  ['additive_5fterm_5f1',['ADDITIVE_TERM_1',['../classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08ab0fcfd0d2e135afa508e561776526936',1,'mfem::TimeDependentOperator']]],
+  ['additive_5fterm_5f2',['ADDITIVE_TERM_2',['../classmfem_1_1TimeDependentOperator.html#a0b5c1e2def3399f0f992d1acd9ecfd08a6e7e5efebfedaa7c09ae24a592650952',1,'mfem::TimeDependentOperator']]],
+  ['adhessianintegrator',['ADHessianIntegrator',['../par__example_8cpp.html#a28cf2b95be260823e923f9471e07aadea7b7ca6d950f590cca5a5a47acbef0e7a',1,'ADHessianIntegrator():&#160;par_example.cpp'],['../seq__example_8cpp.html#a28cf2b95be260823e923f9471e07aadea7b7ca6d950f590cca5a5a47acbef0e7a',1,'ADHessianIntegrator():&#160;seq_example.cpp']]],
+  ['adjacobianintegrator',['ADJacobianIntegrator',['../par__example_8cpp.html#a28cf2b95be260823e923f9471e07aadea42133cad2785f7d6c6a0689942ed23c6',1,'ADJacobianIntegrator():&#160;par_example.cpp'],['../seq__example_8cpp.html#a28cf2b95be260823e923f9471e07aadea42133cad2785f7d6c6a0689942ed23c6',1,'ADJacobianIntegrator():&#160;seq_example.cpp']]],
+  ['adjugate_5fmask',['ADJUGATE_MASK',['../classmfem_1_1ElementTransformation.html#a78dc6cc15c2f240fc976acd5470be0e0a9d0fda7d77ec64c0596e84bec4293f80',1,'mfem::ElementTransformation']]],
+  ['air',['AIR',['../ex9p_8cpp.html#a66a11ec58f6cfd64cd3d5144ea3e20efa2582dd863c1c50525a267e1cbe656929',1,'ex9p.cpp']]],
+  ['alias',['ALIAS',['../classmfem_1_1Memory.html#a3d0f39428ffcae585ee8a5e07d6293c8ada467ac084790b0980b43e91c3af13b7',1,'mfem::Memory']]],
+  ['any_5ftype',['ANY_TYPE',['../classmfem_1_1Operator.html#aaa033bcf10ca8783218f5d98d8c54288a11080935c2fa8b22609b47b14e5bde78',1,'mfem::Operator']]],
+  ['app',['app',['../classmfem_1_1adios2stream.html#afe7fe7ac1183ebcf7157d89808bcb3dcad2a57dc1d883fd21fb9951699df71cc7',1,'mfem::adios2stream']]],
+  ['area',['AREA',['../minimal-surface_8cpp.html#aaf105ae5beaca1dee30ae54530691fcea64099015ff7fbb8fc154086eaebb1957',1,'AREA():&#160;minimal-surface.cpp'],['../pminimal-surface_8cpp.html#a80155586fa275b28773c9b203f52cabaa64099015ff7fbb8fc154086eaebb1957',1,'AREA():&#160;pminimal-surface.cpp']]],
+  ['arithmetic',['ARITHMETIC',['../classmfem_1_1GridFunction.html#ad90ba935602718b9365f0a8341e72afda2c62e39e27ffdf696bc7e06be53d2359',1,'mfem::GridFunction::ARITHMETIC()'],['../classmfem_1_1FindPointsGSLIB.html#ac77a667b69b8b51cf4f66135e3cc28daa627515da12324b46935bc342f361b047',1,'mfem::FindPointsGSLIB::ARITHMETIC()']]],
+  ['array',['ARRAY',['../classmfem_1_1OptionsParser.html#a8e019726685c70129ff26db19af9c319af87186992263086be879c896b9a350c9',1,'mfem::OptionsParser']]],
+  ['ascii',['ASCII',['../namespacemfem.html#aa1cc5701e3e695b09a013e7f6301a850ad2cd8253361a9c732d21ca1d336599cc',1,'mfem']]],
+  ['aslam',['ASLAM',['../classmfem_1_1Extrapolator.html#a552cd55d0458f2769a14882941d36a0aadc5260c0e16969d161568aca5af6b103',1,'mfem::Extrapolator']]]
+];
