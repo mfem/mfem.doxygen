@@ -5,10 +5,11 @@
 
 ### 🌟 Latest Release
 
-- **[`mfem-4.4`](http://docs.mfem.org/4.4)**, released in Mar 2022, documented at **[`docs.mfem.org/4.4`](http://docs.mfem.org/4.4)**
+- **[`mfem-4.5`](http://docs.mfem.org/4.5)**, released in Oct 2022, documented at **[`docs.mfem.org/4.5`](http://docs.mfem.org/4.5)**
 
 ### 🗓️ Older Releases
 
+- [`mfem-4.4`](http://docs.mfem.org/4.4), released in Mar 2022, documented at [`docs.mfem.org/4.4`](http://docs.mfem.org/4.4)
 - [`mfem-4.3`](http://docs.mfem.org/4.3), released in Jul 2021, documented at [`docs.mfem.org/4.3`](http://docs.mfem.org/4.3)
 - [`mfem-4.2`](http://docs.mfem.org/4.2), released in Oct 2020, documented at [`docs.mfem.org/4.2`](http://docs.mfem.org/4.2)
 - [`mfem-4.1`](http://docs.mfem.org/4.1), released in Mar 2020, documented at [`docs.mfem.org/4.1`](http://docs.mfem.org/4.1)

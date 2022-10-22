@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['debug_5fdevice',['DEBUG_DEVICE',['../structmfem_1_1Backend.html#a025be0c74e6276c0a9f7607baa786ea3a3a8c2c5cbd423120c6bc29fec392f49c',1,'mfem::Backend']]],
+  ['default',['DEFAULT',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a5b39c8b553c821e7cddc6da64b5bd2ee',1,'mfem']]],
+  ['deferred',['deferred',['../classmfem_1_1adios2stream.html#ad6ac8c1c56b3ae2e0468e975282d08f0a43fff3df3fc0b3417c86dc3040fb2d86',1,'mfem::adios2stream']]],
+  ['derefine',['DEREFINE',['../classmfem_1_1Mesh.html#a2fd34bafce89dcad12039f80760c294baa1fafee4d375682ea8c579adfbaffd61',1,'mfem::Mesh']]],
+  ['derefined',['DEREFINED',['../classmfem_1_1MeshOperator.html#acd132269e7e6fb22f306e77e5541c7beaeb8cdba669d66a380e9459f0eca698b6',1,'mfem::MeshOperator']]],
+  ['derivatives',['DERIVATIVES',['../classmfem_1_1QuadratureInterpolator.html#a1bbad2359b602892105e24d8d6e814caa66ea7b8517e99bbab4ab0966abae1fb7',1,'mfem::QuadratureInterpolator::DERIVATIVES()'],['../classmfem_1_1FaceQuadratureInterpolator.html#a06699483c3b6d190114cae1a8f46e9fda08c18b3bf5a5c48ba63aeb7990e7267a',1,'mfem::FaceQuadratureInterpolator::DERIVATIVES()']]],
+  ['determinants',['DETERMINANTS',['../classmfem_1_1GeometricFactors.html#a7701b042b533d57e69533290d4efb287a7f1d976e72ce237007f2a66111185a30',1,'mfem::GeometricFactors::DETERMINANTS()'],['../classmfem_1_1FaceGeometricFactors.html#a92dbf5b36cbe5d7f49607501b10e28a6a3b1d8ee25b90ce347602e7f572be6dec',1,'mfem::FaceGeometricFactors::DETERMINANTS()'],['../classmfem_1_1QuadratureInterpolator.html#a1bbad2359b602892105e24d8d6e814caafa315c645a3379563dd22c8fd875a761',1,'mfem::QuadratureInterpolator::DETERMINANTS()'],['../classmfem_1_1FaceQuadratureInterpolator.html#a06699483c3b6d190114cae1a8f46e9fda4cc73b87839a212219ce5ee80789004d',1,'mfem::FaceQuadratureInterpolator::DETERMINANTS()']]],
+  ['device',['DEVICE',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6ae10b6ab6a278644ce40631f62f360b6d',1,'mfem::DEVICE()'],['../namespacemfem.html#a4c3f8b89617067ca6e03323849eec9adae10b6ab6a278644ce40631f62f360b6d',1,'mfem::DEVICE()']]],
+  ['device_5fdebug',['DEVICE_DEBUG',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6afd3a46f7c1afcd3c71943286ac7626ed',1,'mfem']]],
+  ['device_5fmask',['DEVICE_MASK',['../structmfem_1_1Backend.html#a36df3998c76d1e5de8ac50ff50988ff1a4d1226fa48fe5756376f6e40daffd228',1,'mfem::Backend']]],
+  ['device_5fumpire',['DEVICE_UMPIRE',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a649401484dfadbb672e2e02127ec2df1',1,'mfem']]],
+  ['device_5fumpire_5f2',['DEVICE_UMPIRE_2',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6a49aeb221b5e4c765c9f89960e9f9d48a',1,'mfem']]],
+  ['diag_5fkeep',['DIAG_KEEP',['../classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5acef0ffcbba7e9a349433b39fda7f9373',1,'mfem::Operator']]],
+  ['diag_5fone',['DIAG_ONE',['../classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5a3aa9b65b076574e05157430abf4b76e2',1,'mfem::Operator']]],
+  ['diag_5fzero',['DIAG_ZERO',['../classmfem_1_1Operator.html#a7f3e99434bf268ccbaae6863fe5e6bb5aff3f5ed6e5c730828cd33f138ec3ada1',1,'mfem::Operator']]],
+  ['disable',['DISABLE',['../classmfem_1_1OptionsParser.html#a8e019726685c70129ff26db19af9c319a007622f187240c792c8a35eda44717fa',1,'mfem::OptionsParser']]],
+  ['disc',['disc',['../ex25_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a62ed5831c875c810e9663f268e8e5aee',1,'disc():&#160;ex25.cpp'],['../ex25p_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a62ed5831c875c810e9663f268e8e5aee',1,'disc():&#160;ex25p.cpp']]],
+  ['discontinuous',['DISCONTINUOUS',['../classmfem_1_1FiniteElementCollection.html#a9aeaa2b626d565a06380af9c927ce48da14bf72f096dab054cd2603534c07e28b',1,'mfem::FiniteElementCollection']]],
+  ['div',['DIV',['../classmfem_1_1FiniteElement.html#ab7ae7da193fe65973414ec536da20cdaa118d283745876a6f9ea04c59d48b6205',1,'mfem::FiniteElement::DIV()'],['../structmfem_1_1AssignOp.html#ae5272e4ffd01ce0b65a236210ade7627a432304b250c4c3ad8eb908c72ad7ced6',1,'mfem::AssignOp::Div()']]],
+  ['double',['DOUBLE',['../classmfem_1_1OptionsParser.html#a8e019726685c70129ff26db19af9c319a24e7ff2cc0ad36e2130ed92090deea48',1,'mfem::OptionsParser']]],
+  ['doublevalued',['DoubleValued',['../namespacemfem.html#a313cb900f24df1e2ee423923e1a73aaba316b98db77802dd6d05e5d883dbbcae3',1,'mfem']]]
+];
