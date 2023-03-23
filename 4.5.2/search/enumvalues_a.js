@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['l1gs',['l1GS',['../classmfem_1_1HypreSmoother.html#abc485b064d2d5a19f17cf403195d32aaa6eec49e0e0bd41c4f530e200e33b8abd',1,'mfem::HypreSmoother']]],
+  ['l1gstr',['l1GStr',['../classmfem_1_1HypreSmoother.html#abc485b064d2d5a19f17cf403195d32aaafa0e072bcb9e6b26357101b080f303cc',1,'mfem::HypreSmoother']]],
+  ['l1jacobi',['l1Jacobi',['../classmfem_1_1HypreSmoother.html#abc485b064d2d5a19f17cf403195d32aaafc5f342241fef2dfe3d1c8233427c9cb',1,'mfem::HypreSmoother']]],
+  ['l2',['L2',['../classmfem_1_1LORBase.html#a41c01a115c075253950b53edaa62489ca7680bc365b5ef730b1dda12eb6a63b30',1,'mfem::LORBase']]],
+  ['l2_5fdof_5fmap',['L2_DOF_MAP',['../classmfem_1_1TensorBasisElement.html#a43fc42f250c0b45defd904902475bb3eaeb27d167c218e801cf2efe279c46e5f9',1,'mfem::TensorBasisElement']]],
+  ['largediag',['LargeDiag',['../namespacemfem_1_1superlu.html#a8765532204c46371fd0240492ce001f1a1e1b10abe0d1ae289071b4580f50a42a',1,'mfem::superlu']]],
+  ['largediag_5fhwpm',['LargeDiag_HWPM',['../namespacemfem_1_1superlu.html#a8765532204c46371fd0240492ce001f1add06f2f98bbf270502e4784db18a9bb0',1,'mfem::superlu']]],
+  ['largediag_5fmc64',['LargeDiag_MC64',['../namespacemfem_1_1superlu.html#a8765532204c46371fd0240492ce001f1a781fc5abe4885e2cb26cdfdb8031b426',1,'mfem::superlu']]],
+  ['largest_5fimaginary',['LARGEST_IMAGINARY',['../classmfem_1_1SlepcEigenSolver.html#a1b888dffa476d23c36ad1ef76b20fbd1abc8c5e0f4d1d7172aa8b30ae44cc7727',1,'mfem::SlepcEigenSolver']]],
+  ['largest_5fmagnitude',['LARGEST_MAGNITUDE',['../classmfem_1_1SlepcEigenSolver.html#a1b888dffa476d23c36ad1ef76b20fbd1a685f33f7c991dcb8691a4055b7289b55',1,'mfem::SlepcEigenSolver']]],
+  ['largest_5freal',['LARGEST_REAL',['../classmfem_1_1SlepcEigenSolver.html#a1b888dffa476d23c36ad1ef76b20fbd1a1443bb09fc606d07e360a46267978ba3',1,'mfem::SlepcEigenSolver']]],
+  ['legacy',['LEGACY',['../namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310a456d016bd133625e5036aa9a556f2730',1,'mfem']]],
+  ['legacyfull',['LEGACYFULL',['../namespacemfem.html#a58cbf32dd7ab86b58af6ec281d312310ac5e32ded5a6cb3015c3efa1db5be8d4d',1,'mfem']]],
+  ['lexicographic',['LEXICOGRAPHIC',['../namespacemfem.html#ae38367d8c093a856f2f59919954dc73ea06fba3a25c767643d40c906ef14801d5',1,'mfem']]],
+  ['lo',['LO',['../classmfem_1_1AdvectionOper.html#aab43293b127225f033811d720575b427a8c83b94387494c0c38bd0d381110fff0',1,'mfem::AdvectionOper']]],
+  ['load_5fsrc',['load_src',['../ex25_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a30e11ec74da27d2a4800940fbcc48269',1,'load_src():&#160;ex25.cpp'],['../ex25p_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a30e11ec74da27d2a4800940fbcc48269',1,'load_src():&#160;ex25p.cpp']]],
+  ['loadattributes',['LoadAttributes',['../classmfem_1_1TElementTransformation.html#a6e567765c4de90cff852d7adee4187aba98ac1ee82cd6a7ae44eb79990d3fc599',1,'mfem::TElementTransformation']]],
+  ['loadelementidxs',['LoadElementIdxs',['../classmfem_1_1TElementTransformation.html#a6e567765c4de90cff852d7adee4187abab0abe47f56825f9691e9441f35338634',1,'mfem::TElementTransformation']]],
+  ['local',['Local',['../classmfem_1_1Mesh.html#a9abeee0e7d8184295519399b34f6c4d3a509820290d57f333403f490dde7316f4',1,'mfem::Mesh']]],
+  ['localconforming',['LocalConforming',['../classmfem_1_1Mesh.html#aeea781d52bff16722bd49b9a872c4790a0d183e29d029c3329cdfb4513df7b615',1,'mfem::Mesh']]],
+  ['localslavenonconforming',['LocalSlaveNonconforming',['../classmfem_1_1Mesh.html#aeea781d52bff16722bd49b9a872c4790a7e42899bbb9bcef732182127516435bb',1,'mfem::Mesh']]],
+  ['lor',['LOR',['../miniapps_2performance_2ex1_8cpp.html#ad2008dd033ba7a48e7968bdf797604d0ad3335c358811cfc353257e21b1d38229',1,'LOR():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#ad2008dd033ba7a48e7968bdf797604d0ad3335c358811cfc353257e21b1d38229',1,'LOR():&#160;ex1p.cpp'],['../miniapps_2performance_2ex1_8cpp.html#ad2008dd033ba7a48e7968bdf797604d0ad3335c358811cfc353257e21b1d38229',1,'LOR():&#160;ex1.cpp'],['../miniapps_2performance_2ex1p_8cpp.html#ad2008dd033ba7a48e7968bdf797604d0ad3335c358811cfc353257e21b1d38229',1,'LOR():&#160;ex1p.cpp']]],
+  ['lshape',['lshape',['../ex25_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a802b2472261dbb2107937c6818d4f38f',1,'lshape():&#160;ex25.cpp'],['../ex25p_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a802b2472261dbb2107937c6818d4f38f',1,'lshape():&#160;ex25p.cpp']]],
+  ['lumpedjacobi',['lumpedJacobi',['../classmfem_1_1HypreSmoother.html#abc485b064d2d5a19f17cf403195d32aaa0497cd5a7547ad1b05b28308236715d0',1,'mfem::HypreSmoother']]]
+];
