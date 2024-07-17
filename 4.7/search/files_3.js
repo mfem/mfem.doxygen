@@ -15,7 +15,7 @@ var searchData=
   ['dgmassinv_5fkernels_2ehpp_12',['dgmassinv_kernels.hpp',['../dgmassinv__kernels_8hpp.html',1,'']]],
   ['diagonal_5fpreconditioner_2ecpp_13',['diagonal_preconditioner.cpp',['../diagonal__preconditioner_8cpp.html',1,'']]],
   ['diagonal_5fpreconditioner_2ehpp_14',['diagonal_preconditioner.hpp',['../diagonal__preconditioner_8hpp.html',1,'']]],
-  ['diffusion_2ecpp_15',['diffusion.cpp',['../fem_2ceed_2integrators_2diffusion_2diffusion_8cpp.html',1,'(Global Namespace)'],['../miniapps_2shifted_2diffusion_8cpp.html',1,'(Global Namespace)'],['../miniapps_2dpg_2diffusion_8cpp.html',1,'(Global Namespace)']]],
+  ['diffusion_2ecpp_15',['diffusion.cpp',['../fem_2ceed_2integrators_2diffusion_2diffusion_8cpp.html',1,'(Global Namespace)'],['../miniapps_2dpg_2diffusion_8cpp.html',1,'(Global Namespace)'],['../miniapps_2shifted_2diffusion_8cpp.html',1,'(Global Namespace)']]],
   ['diffusion_2ehpp_16',['diffusion.hpp',['../diffusion_8hpp.html',1,'']]],
   ['dinvariants_2ehpp_17',['dinvariants.hpp',['../dinvariants_8hpp.html',1,'']]],
   ['discrete_5fdivergence_2ecpp_18',['discrete_divergence.cpp',['../discrete__divergence_8cpp.html',1,'']]],

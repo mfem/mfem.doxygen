@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['j_0',['J',['../classmfem_1_1kernels_1_1InvariantsEvaluator3D_1_1Buffers.html#a58d97f1232eb5b427a7efd67feffd839',1,'mfem::kernels::InvariantsEvaluator3D::Buffers::J()'],['../classmfem_1_1kernels_1_1InvariantsEvaluator2D_1_1Buffers.html#a9e4fc9272380db5bbbdd8d9e51d8386e',1,'mfem::kernels::InvariantsEvaluator2D::Buffers::J()']]],
+  ['j_0',['J',['../classmfem_1_1kernels_1_1InvariantsEvaluator2D_1_1Buffers.html#a9e4fc9272380db5bbbdd8d9e51d8386e',1,'mfem::kernels::InvariantsEvaluator2D::Buffers::J()'],['../classmfem_1_1kernels_1_1InvariantsEvaluator3D_1_1Buffers.html#a58d97f1232eb5b427a7efd67feffd839',1,'mfem::kernels::InvariantsEvaluator3D::Buffers::J()']]],
   ['j_5fsrc_1',['j_src',['../electromagnetics_2maxwell_8cpp.html#a65c3ebe83aa53b350d767635befeeb65',1,'maxwell.cpp']]],
   ['jacobi_2',['Jacobi',['../classmfem_1_1SparseMatrix.html#a3d691c4d1c6adc58ca206967230554b8',1,'mfem::SparseMatrix']]],
   ['jacobi2_3',['Jacobi2',['../classmfem_1_1SparseMatrix.html#af297ec7dc85727bcd2192f64ac18d5eb',1,'mfem::SparseMatrix']]],

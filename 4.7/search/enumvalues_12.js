@@ -4,7 +4,7 @@ var searchData=
   ['samepattern_5fsamerowperm_1',['SamePattern_SameRowPerm',['../namespacemfem_1_1superlu.html#aedb9be44c39e9227cbdf06f2e28c9ae4aa66008262a10335d81b416a42aeef4ae',1,'mfem::superlu']]],
   ['scalar_2',['SCALAR',['../classmfem_1_1FiniteElement.html#a335850adafcb37495a09136650d17ccba09b2d6025de1295f08a11fcd91ed40ce',1,'mfem::FiniteElement']]],
   ['scotch_3',['SCOTCH',['../classmfem_1_1MUMPSSolver.html#a0a518ededd5d3b24a68f5597dc3f4740ac96520858601ef0e472817c203eef5a5',1,'mfem::MUMPSSolver']]],
-  ['segment_4',['SEGMENT',['../classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78a53e8c9c7ef521e07b0613d4a552fe0e2',1,'mfem::Element::SEGMENT()'],['../classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805a8f7e0d60f1bd0d6fb536dd2ab2536ed5',1,'mfem::Geometry::SEGMENT()']]],
+  ['segment_4',['SEGMENT',['../classmfem_1_1Element.html#aaac293c18ce91216ee202754eed37a78a53e8c9c7ef521e07b0613d4a552fe0e2',1,'mfem::Element::SEGMENT'],['../classmfem_1_1Geometry.html#a2c101bb5c270ab5eeffb510e2c274805a8f7e0d60f1bd0d6fb536dd2ab2536ed5',1,'mfem::Geometry::SEGMENT']]],
   ['serendipity_5',['Serendipity',['../classmfem_1_1BasisType.html#a595200afdb6ca6e3fda75896071ef3efa3a90be9235c1db34c2332f00dfdbaf5e',1,'mfem::BasisType']]],
   ['serial_5fformat_6',['SERIAL_FORMAT',['../classmfem_1_1DataCollection.html#aa818f30a7ff0c9615cc83fe180194135a1a741abef0089dac18ce087d9b26b1fc',1,'mfem::DataCollection']]],
   ['set_7',['Set',['../structmfem_1_1AssignOp.html#ae5272e4ffd01ce0b65a236210ade7627a2d9dd1966d22127229e7fbe3a8bd8b11',1,'mfem::AssignOp']]],

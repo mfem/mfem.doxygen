@@ -1,9 +1,9 @@
 var searchData=
 [
   ['gaussian_0',['GAUSSIAN',['../namespacemfem.html#a5b0394cd6e7e997a3b7b026d87dcc6afa0fceff26ae86a047835cafbb6cadb1b9',1,'mfem']]],
-  ['gaussian_5fbeam_1',['gaussian_beam',['../acoustics_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a9bd3002884d70e98eb79422c22be0d90',1,'gaussian_beam():&#160;acoustics.cpp'],['../pacoustics_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a9bd3002884d70e98eb79422c22be0d90',1,'gaussian_beam():&#160;pacoustics.cpp']]],
-  ['gausslegendre_2',['GaussLegendre',['../classmfem_1_1Quadrature1D.html#a1271a49cdef60d6e937fb804c1234466a38024cca3341bda16c336f5466f064cd',1,'mfem::Quadrature1D::GaussLegendre()'],['../classmfem_1_1BasisType.html#a595200afdb6ca6e3fda75896071ef3efa5a0697a53a2e7e071279142753913464',1,'mfem::BasisType::GaussLegendre()']]],
-  ['gausslobatto_3',['GaussLobatto',['../classmfem_1_1Quadrature1D.html#a1271a49cdef60d6e937fb804c1234466a8adf2512d7e224fbb136166cdc911296',1,'mfem::Quadrature1D::GaussLobatto()'],['../classmfem_1_1BasisType.html#a595200afdb6ca6e3fda75896071ef3efa5289400991b692469b59ad94accfe75b',1,'mfem::BasisType::GaussLobatto()']]],
+  ['gaussian_5fbeam_1',['gaussian_beam',['../acoustics_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a9bd3002884d70e98eb79422c22be0d90',1,'gaussian_beam:&#160;acoustics.cpp'],['../pacoustics_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a9bd3002884d70e98eb79422c22be0d90',1,'gaussian_beam:&#160;pacoustics.cpp']]],
+  ['gausslegendre_2',['GaussLegendre',['../classmfem_1_1Quadrature1D.html#a1271a49cdef60d6e937fb804c1234466a38024cca3341bda16c336f5466f064cd',1,'mfem::Quadrature1D::GaussLegendre'],['../classmfem_1_1BasisType.html#a595200afdb6ca6e3fda75896071ef3efa5a0697a53a2e7e071279142753913464',1,'mfem::BasisType::GaussLegendre']]],
+  ['gausslobatto_3',['GaussLobatto',['../classmfem_1_1Quadrature1D.html#a1271a49cdef60d6e937fb804c1234466a8adf2512d7e224fbb136166cdc911296',1,'mfem::Quadrature1D::GaussLobatto'],['../classmfem_1_1BasisType.html#a595200afdb6ca6e3fda75896071ef3efa5289400991b692469b59ad94accfe75b',1,'mfem::BasisType::GaussLobatto']]],
   ['general_4',['general',['../miniapps_2dpg_2diffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a132c313022974a87e1a962e64bade8d3',1,'diffusion.cpp']]],
   ['geometric_5',['GEOMETRIC',['../namespacemfem.html#a5b0394cd6e7e997a3b7b026d87dcc6afa5202c67f624b4ec6ddd60f69394c80b5',1,'mfem']]],
   ['ghostmaster_6',['GhostMaster',['../classmfem_1_1Mesh.html#aeea781d52bff16722bd49b9a872c4790ad10082ca5d6fb66850fdc92d6af84b26',1,'mfem::Mesh']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['managed_0',['MANAGED',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6af59a25f2594f469f0bfccad7f8f13744',1,'mfem::MANAGED()'],['../namespacemfem.html#a4c3f8b89617067ca6e03323849eec9adaf59a25f2594f469f0bfccad7f8f13744',1,'mfem::MANAGED()']]],
-  ['manufactured_1',['manufactured',['../pdiffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a4064cd447aafff7ee377ef105f0905e8',1,'manufactured():&#160;pdiffusion.cpp'],['../miniapps_2dpg_2diffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a4064cd447aafff7ee377ef105f0905e8',1,'manufactured():&#160;diffusion.cpp'],['../convection-diffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a4064cd447aafff7ee377ef105f0905e8',1,'manufactured():&#160;convection-diffusion.cpp']]],
+  ['managed_0',['MANAGED',['../namespacemfem.html#adb01975babc73b14adfe02bf6a7c77f6af59a25f2594f469f0bfccad7f8f13744',1,'mfem::MANAGED'],['../namespacemfem.html#a4c3f8b89617067ca6e03323849eec9adaf59a25f2594f469f0bfccad7f8f13744',1,'mfem::MANAGED']]],
+  ['manufactured_1',['manufactured',['../convection-diffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a4064cd447aafff7ee377ef105f0905e8',1,'manufactured:&#160;convection-diffusion.cpp'],['../miniapps_2dpg_2diffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a4064cd447aafff7ee377ef105f0905e8',1,'manufactured:&#160;diffusion.cpp'],['../pdiffusion_8cpp.html#ad584bea3b8a5d453a624e92b682b05a2a4064cd447aafff7ee377ef105f0905e8',1,'manufactured:&#160;pdiffusion.cpp']]],
   ['mask_5faction_2',['MASK_ACTION',['../classmfem_1_1MeshOperator.html#a89136204becccd73a1b4645374e53a0fa532e74a012f92fc75d28bb1d6f164ae8',1,'mfem::MeshOperator']]],
   ['mask_5finfo_3',['MASK_INFO',['../classmfem_1_1MeshOperator.html#acd132269e7e6fb22f306e77e5541c7bea1c7129a60d379c20dd4c94113b706747',1,'mfem::MeshOperator']]],
   ['mask_5fupdate_4',['MASK_UPDATE',['../classmfem_1_1MeshOperator.html#a89136204becccd73a1b4645374e53a0fab3dced9678049ca8eb06eaba38bd6ea9',1,'mfem::MeshOperator']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['h_0',['H',['../classmfem_1_1Hybridization.html#af6e013d37cc6461a38c7657d8baa7130',1,'mfem::Hybridization::H()'],['../classmfem_1_1TMOP__Integrator.html#a5eac75aff029fcfde2c4981c2339c1d7',1,'mfem::TMOP_Integrator::H()'],['../classmfem_1_1navier_1_1NavierSolver.html#a2938b782e90c7d9cf4eda54a5078fbd6',1,'mfem::navier::NavierSolver::H()']]],
+  ['h_0',['H',['../classmfem_1_1Hybridization.html#af6e013d37cc6461a38c7657d8baa7130',1,'mfem::Hybridization::H'],['../classmfem_1_1TMOP__Integrator.html#a5eac75aff029fcfde2c4981c2339c1d7',1,'mfem::TMOP_Integrator::H'],['../classmfem_1_1navier_1_1NavierSolver.html#a2938b782e90c7d9cf4eda54a5078fbd6',1,'mfem::navier::NavierSolver::H']]],
   ['h0_1',['H0',['../classmfem_1_1TMOP__Integrator.html#a10ffadff6a160fa7e34cf013c654e8f8',1,'mfem::TMOP_Integrator']]],
   ['h1_5fdof_2',['H1_dof',['../classmfem_1_1H1__FECollection.html#ac4f863588574a9d677a12677d1a121cb',1,'mfem::H1_FECollection']]],
   ['h1_5felement_5frestriction_5f_3',['h1_element_restriction_',['../classmfem_1_1ElasticityOperator.html#a21be4877abdf972aba3e0de6d3b67d0b',1,'mfem::ElasticityOperator']]],
@@ -18,7 +18,7 @@ var searchData=
   ['h_5fper_5fr_5fiter_15',['h_per_r_iter',['../classmfem_1_1TMOPHRSolver.html#a0410e6b47bab37f917c629204bce9abb',1,'mfem::TMOPHRSolver']]],
   ['h_5fptr_16',['h_ptr',['../classmfem_1_1Memory.html#ab74d8712d2e64510cf8bfd256b656c16',1,'mfem::Memory']]],
   ['ha_17',['hA',['../classmfem_1_1EliminationSolver.html#a7e748b0ef55a4ea4b96f90d983cd0984',1,'mfem::EliminationSolver']]],
-  ['handle_18',['handle',['../classmfem_1_1SparseMatrix.html#ab051e02ffbd218ff58bf31c78c087ccb',1,'mfem::SparseMatrix::handle()'],['../classmfem_1_1SparseMatrix.html#a27d69662ad56222bdd6b284bfb03b69b',1,'mfem::SparseMatrix::handle()']]],
+  ['handle_18',['handle',['../classmfem_1_1SparseMatrix.html#ab051e02ffbd218ff58bf31c78c087ccb',1,'mfem::SparseMatrix::handle'],['../classmfem_1_1SparseMatrix.html#a27d69662ad56222bdd6b284bfb03b69b',1,'mfem::SparseMatrix::handle']]],
   ['has_5fgenerated_5fprecond_19',['has_generated_precond',['../classmfem_1_1Ginkgo_1_1GinkgoPreconditioner.html#ad573ded7ea0d4f75af8a5386c27b8f03',1,'mfem::Ginkgo::GinkgoPreconditioner']]],
   ['hash_5falgorithm_20',['HASH_ALGORITHM',['../namespacemfem.html#a3652b3d28aeac7d06de91901fe5963e6',1,'mfem']]],
   ['hash_5fdata_21',['hash_data',['../classmfem_1_1HashFunction.html#a803b1fde72dd6ed0c53c2b289c84c781',1,'mfem::HashFunction']]],
@@ -33,7 +33,7 @@ var searchData=
   ['hdiv_5fmax_5fq1d_30',['HDIV_MAX_Q1D',['../structmfem_1_1DeviceDofQuadLimits.html#a3dd6c488661c6ec7755de0f804be558c',1,'mfem::DeviceDofQuadLimits']]],
   ['hdivfespace_31',['HDivFESpace',['../classmfem_1_1electromagnetics_1_1MagneticDiffusionEOperator.html#aeef481a90dc52e46e9c5166e725e0ec2',1,'mfem::electromagnetics::MagneticDiffusionEOperator']]],
   ['header_32',['header',['../structmfem_1_1ceed_1_1OperatorInfo.html#a493f37002234b94806722aabc71f29a5',1,'mfem::ceed::OperatorInfo']]],
-  ['height_33',['height',['../classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6',1,'mfem::Operator::height()'],['../classmfem_1_1MatrixCoefficient.html#a249212bf0eb0aa5ba9f3b43ddd0031b3',1,'mfem::MatrixCoefficient::height()'],['../classmfem_1_1ComplexDPGWeakForm.html#a5a95b14761be0ec0412df2017c80685f',1,'mfem::ComplexDPGWeakForm::height()'],['../classmfem_1_1DPGWeakForm.html#a30f6ba1e86a03bb169acf3d1911a55c4',1,'mfem::DPGWeakForm::height()']]],
+  ['height_33',['height',['../classmfem_1_1Operator.html#a62d74ad697f481c1e139404ca892afa6',1,'mfem::Operator::height'],['../classmfem_1_1MatrixCoefficient.html#a249212bf0eb0aa5ba9f3b43ddd0031b3',1,'mfem::MatrixCoefficient::height'],['../classmfem_1_1ComplexDPGWeakForm.html#a5a95b14761be0ec0412df2017c80685f',1,'mfem::ComplexDPGWeakForm::height'],['../classmfem_1_1DPGWeakForm.html#a30f6ba1e86a03bb169acf3d1911a55c4',1,'mfem::DPGWeakForm::height']]],
   ['hexahedronfe_34',['HexahedronFE',['../namespacemfem.html#a1582ef51b558e5cf7041be552a89fd7c',1,'mfem']]],
   ['hexintrule_35',['HexIntRule',['../classmfem_1_1TMOPRefinerEstimator.html#a37afa3a2113cf07388216c813df309d7',1,'mfem::TMOPRefinerEstimator']]],
   ['hgrad_36',['hGrad',['../classmfem_1_1NonlinearForm.html#a6789926111af3e31dcc1272d2e885b44',1,'mfem::NonlinearForm']]],

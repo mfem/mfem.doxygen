@@ -12,7 +12,7 @@ var searchData=
   ['material_5fmetrics_2ehpp_9',['material_metrics.hpp',['../material__metrics_8hpp.html',1,'']]],
   ['matrix_2ecpp_10',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
   ['matrix_2ehpp_11',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
-  ['maxwell_2ecpp_12',['maxwell.cpp',['../electromagnetics_2maxwell_8cpp.html',1,'(Global Namespace)'],['../dpg_2maxwell_8cpp.html',1,'(Global Namespace)']]],
+  ['maxwell_2ecpp_12',['maxwell.cpp',['../dpg_2maxwell_8cpp.html',1,'(Global Namespace)'],['../electromagnetics_2maxwell_8cpp.html',1,'(Global Namespace)']]],
   ['maxwell_5fsolver_2ecpp_13',['maxwell_solver.cpp',['../maxwell__solver_8cpp.html',1,'']]],
   ['maxwell_5fsolver_2ehpp_14',['maxwell_solver.hpp',['../maxwell__solver_8hpp.html',1,'']]],
   ['mem_5falloc_2ehpp_15',['mem_alloc.hpp',['../mem__alloc_8hpp.html',1,'']]],
